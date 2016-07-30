@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="./js/coder_app.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="./rtwreport_utils.js"></script>
+<script type="text/javascript" src="./rtwannotate.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/coder_app.css"/>
+</head>
+<body onload="srcFileOnload();">
+<pre id="code">
+<table class="code" id="codeTbl">
+<tr name="1" id="1">
+<td>1</td><td><span class="ct">// Autor: Michael Meindl</span></td></tr>
+<tr name="2" id="2">
+<td>2</td><td><span class="ct">// Datum: 28.07</span></td></tr>
+<tr name="3" id="3">
+<td>3</td><td><span class="ct">// Einfache Funktionen fuer eine LED zum testen von Custom Simulink Bloecken</span></td></tr>
+<tr name="4" id="4">
+<td>4</td><td><span class="pp">#include "LED.h"</span></td></tr>
+<tr name="5" id="5">
+<td>5</td><td><span class="pp">#include "stm32f4xx.h"</span></td></tr>
+<tr name="6" id="6">
+<td>6</td><td><span class="pp">#include "stm32f4xx_rcc.h"</span></td></tr>
+<tr name="7" id="7">
+<td>7</td><td><span class="pp">#include "stm32f4xx_gpio.h"</span></td></tr>
+<tr name="8" id="8">
+<td>8</td><td></td></tr>
+<tr name="9" id="9">
+<td>9</td><td><span class="kw">void</span> <a id="9c6" class="tk">initLED</a>()</td></tr>
+<tr name="10" id="10">
+<td>10</td><td><span class="br">{</span></td></tr>
+<tr name="11" id="11">
+<td>11</td><td>	  <a id="11c4" class="tk">GPIO_InitTypeDef</a>  <a id="11c22" class="tk">GPIO_InitStructure</a>;</td></tr>
+<tr name="12" id="12">
+<td>12</td><td>	  <a id="12c4" class="tk">RCC_AHB1PeriphClockCmd</a>(<a id="12c27" class="tk">RCC_AHB1Periph_GPIOD</a>, <a id="12c49" class="tk">ENABLE</a>);</td></tr>
+<tr name="13" id="13">
+<td>13</td><td>	  <span class="ct">// Config PD12 als Digital-Ausgang</span></td></tr>
+<tr name="14" id="14">
+<td>14</td><td>	  <a id="14c4" class="tk">GPIO_InitStructure</a>.<a id="14c23" class="tk">GPIO_Pin</a> 	= <a id="14c35" class="tk">GPIO_Pin_12</a>;</td></tr>
+<tr name="15" id="15">
+<td>15</td><td>	  <a id="15c4" class="tk">GPIO_InitStructure</a>.<a id="15c23" class="tk">GPIO_Mode</a> 	= <a id="15c36" class="tk">GPIO_Mode_OUT</a>;</td></tr>
+<tr name="16" id="16">
+<td>16</td><td>	  <a id="16c4" class="tk">GPIO_InitStructure</a>.<a id="16c23" class="tk">GPIO_OType</a> = <a id="16c36" class="tk">GPIO_OType_PP</a>;</td></tr>
+<tr name="17" id="17">
+<td>17</td><td>	  <a id="17c4" class="tk">GPIO_InitStructure</a>.<a id="17c23" class="tk">GPIO_PuPd</a> 	= <a id="17c36" class="tk">GPIO_PuPd_UP</a>;</td></tr>
+<tr name="18" id="18">
+<td>18</td><td>	  <a id="18c4" class="tk">GPIO_InitStructure</a>.<a id="18c23" class="tk">GPIO_Speed</a> = <a id="18c36" class="tk">GPIO_Speed_50MHz</a>;</td></tr>
+<tr name="19" id="19">
+<td>19</td><td>	  <a id="19c4" class="tk">GPIO_Init</a>(<a id="19c14" class="tk">GPIOD</a>, <a id="19c21" class="tk">&amp;</a><a id="19c22" class="tk">GPIO_InitStructure</a>);</td></tr>
+<tr name="20" id="20">
+<td>20</td><td><span class="br">}</span></td></tr>
+<tr name="21" id="21">
+<td>21</td><td><span class="kw">void</span> <a id="21c6" class="tk">setLED</a>(<span class="kw">bool</span> <a id="21c18" class="tk">ledState</a>)</td></tr>
+<tr name="22" id="22">
+<td>22</td><td><span class="br">{</span></td></tr>
+<tr name="23" id="23">
+<td>23</td><td>	<a id="23c2" class="tk">ledState</a> <a id="23c11" class="tk">?</a> <a id="23c13" class="tk">GPIO_SetBits</a>(<a id="23c26" class="tk">GPIOD</a>, <a id="23c33" class="tk">GPIO_Pin_12</a>) <a id="23c46" class="tk">:</a> <a id="23c48" class="tk">GPIO_ResetBits</a>(<a id="23c63" class="tk">GPIOD</a>, <a id="23c70" class="tk">GPIO_Pin_12</a>);</td></tr>
+<tr name="24" id="24">
+<td>24</td><td><span class="br">}</span></td></tr>
+<tr name="25" id="25">
+<td>25</td><td></td></tr>
+</table>
+</pre>
+</body>
+</html>
