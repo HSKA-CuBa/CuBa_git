@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TestMPU6050'.
  *
- * Model version                  : 1.51
+ * Model version                  : 1.55
  * Simulink Coder version         : 8.10 (R2016a) 10-Feb-2016
- * C/C++ source code generated on : Fri Jul 29 17:07:38 2016
+ * C/C++ source code generated on : Sat Jul 30 20:04:58 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -34,6 +34,15 @@ RT_MODEL_TestMPU6050_T *const TestMPU6050_M = &TestMPU6050_M_;
 /* Model step function */
 void TestMPU6050_step(void)
 {
+  /* S-Function (MPU6050_CustomBlock): '<Root>/S-Function Builder1' */
+  MPU6050_CustomBlock_Outputs_wrapper( &TestMPU6050_B.SFunctionBuilder1_o1,
+    &TestMPU6050_B.SFunctionBuilder1_o2, &TestMPU6050_B.SFunctionBuilder1_o3,
+    &TestMPU6050_B.SFunctionBuilder1_o4, &TestMPU6050_B.SFunctionBuilder1_o5,
+    &TestMPU6050_B.SFunctionBuilder1_o6,
+    &TestMPU6050_DW.SFunctionBuilder1_DSTATE,
+    &TestMPU6050_P.SFunctionBuilder1_P1, 1, &TestMPU6050_P.SFunctionBuilder1_P2,
+    1);
+
   /* S-Function (MPU6050_CustomBlock): '<Root>/S-Function Builder2' */
   MPU6050_CustomBlock_Outputs_wrapper( &TestMPU6050_B.SFunctionBuilder2_o1,
     &TestMPU6050_B.SFunctionBuilder2_o2, &TestMPU6050_B.SFunctionBuilder2_o3,
@@ -41,6 +50,15 @@ void TestMPU6050_step(void)
     &TestMPU6050_B.SFunctionBuilder2_o6,
     &TestMPU6050_DW.SFunctionBuilder2_DSTATE,
     &TestMPU6050_P.SFunctionBuilder2_P1, 1, &TestMPU6050_P.SFunctionBuilder2_P2,
+    1);
+
+  /* S-Function "MPU6050_CustomBlock_wrapper" Block: <Root>/S-Function Builder1 */
+  MPU6050_CustomBlock_Update_wrapper( &TestMPU6050_B.SFunctionBuilder1_o1,
+    &TestMPU6050_B.SFunctionBuilder1_o2, &TestMPU6050_B.SFunctionBuilder1_o3,
+    &TestMPU6050_B.SFunctionBuilder1_o4, &TestMPU6050_B.SFunctionBuilder1_o5,
+    &TestMPU6050_B.SFunctionBuilder1_o6,
+    &TestMPU6050_DW.SFunctionBuilder1_DSTATE,
+    &TestMPU6050_P.SFunctionBuilder1_P1, 1, &TestMPU6050_P.SFunctionBuilder1_P2,
     1);
 
   /* S-Function "MPU6050_CustomBlock_wrapper" Block: <Root>/S-Function Builder2 */
@@ -102,10 +120,10 @@ void TestMPU6050_initialize(void)
   TestMPU6050_M->Timing.stepSize0 = 0.05;
 
   /* External mode info */
-  TestMPU6050_M->Sizes.checksums[0] = (3630313113U);
-  TestMPU6050_M->Sizes.checksums[1] = (3690395987U);
-  TestMPU6050_M->Sizes.checksums[2] = (2094238731U);
-  TestMPU6050_M->Sizes.checksums[3] = (3465846350U);
+  TestMPU6050_M->Sizes.checksums[0] = (1251635297U);
+  TestMPU6050_M->Sizes.checksums[1] = (2821285838U);
+  TestMPU6050_M->Sizes.checksums[2] = (4008865327U);
+  TestMPU6050_M->Sizes.checksums[3] = (808074783U);
 
   {
     static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE;
@@ -144,6 +162,18 @@ void TestMPU6050_initialize(void)
 
     /* Parameters transition table */
     dtInfo.PTransTable = &rtPTransTable;
+  }
+
+  /* S-Function Block: <Root>/S-Function Builder1 */
+  {
+    real_T initVector[1] = { 0 };
+
+    {
+      int_T i1;
+      for (i1=0; i1 < 1; i1++) {
+        TestMPU6050_DW.SFunctionBuilder1_DSTATE = initVector[0];
+      }
+    }
   }
 
   /* S-Function Block: <Root>/S-Function Builder2 */

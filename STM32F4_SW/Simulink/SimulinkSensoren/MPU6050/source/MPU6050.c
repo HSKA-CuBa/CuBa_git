@@ -96,6 +96,10 @@ Int16 readMPU6050_ZGyroscope(bool AD0pinLevel)
 }
 UInt8 readByte(bool AD0pinLevel, UInt8 registerAddr)
 {
+	while((I2C_GetFlagStatus(I2C1, I2C_FLAG_BUSY)))
+	{
+		;
+	}
 	UInt8 deviceAddr = AD0pinLevel ? MPU_BASE_ADDR + 2U : MPU_BASE_ADDR;
 	startTransmission(deviceAddr, I2C_Direction_Transmitter);
 	I2C_SendData(I2C1, registerAddr);
@@ -111,6 +115,10 @@ UInt8 readByte(bool AD0pinLevel, UInt8 registerAddr)
 }
 void writeByte(bool AD0pinLevel, UInt8 registerAddr, UInt8 byteValue)
 {
+	while((I2C_GetFlagStatus(I2C1, I2C_FLAG_BUSY)))
+	{
+		;
+	}
 	UInt8 deviceAddr = AD0pinLevel ? MPU_BASE_ADDR + 2U : MPU_BASE_ADDR;
 	startTransmission(deviceAddr, I2C_Direction_Transmitter);
 	I2C_SendData(I2C1, registerAddr);
@@ -166,18 +174,22 @@ void initI2CPins()
 }
 void initI2C()
 {
-	initI2CPins();
-	I2C_InitTypeDef I2C_InitStruct;
-	//CLK fuer I2C1 aktivieren
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1, ENABLE);
-	//I2C-Initialisierung
-	I2C_InitStruct.I2C_ClockSpeed 			= 100000;
-	I2C_InitStruct.I2C_Mode 				= I2C_Mode_I2C;
-	I2C_InitStruct.I2C_DutyCycle 			= I2C_DutyCycle_2;
-	I2C_InitStruct.I2C_OwnAddress1 			= 0x00;
-	I2C_InitStruct.I2C_Ack 					= I2C_Ack_Disable;
-	I2C_InitStruct.I2C_AcknowledgedAddress 	= I2C_AcknowledgedAddress_7bit;
-	I2C_Init(I2C1, &I2C_InitStruct);
-
-	I2C_Cmd(I2C1, ENABLE);
+	static bool initDone = false;
+	if(false == initDone)
+	{
+		initI2CPins();
+		I2C_InitTypeDef I2C_InitStruct;
+		//CLK fuer I2C1 aktivieren
+		RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1, ENABLE);
+		//I2C-Initialisierung
+		I2C_InitStruct.I2C_ClockSpeed 			= 100000;
+		I2C_InitStruct.I2C_Mode 				= I2C_Mode_I2C;
+		I2C_InitStruct.I2C_DutyCycle 			= I2C_DutyCycle_2;
+		I2C_InitStruct.I2C_OwnAddress1 			= 0x00;
+		I2C_InitStruct.I2C_Ack 					= I2C_Ack_Disable;
+		I2C_InitStruct.I2C_AcknowledgedAddress 	= I2C_AcknowledgedAddress_7bit;
+		I2C_Cmd(I2C1, ENABLE);
+		I2C_Init(I2C1, &I2C_InitStruct);
+		initDone = true;
+	}
 }

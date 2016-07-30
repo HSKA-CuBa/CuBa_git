@@ -7,9 +7,9 @@
  *
  * Code generation for model "TestMPU6050".
  *
- * Model version              : 1.51
+ * Model version              : 1.55
  * Simulink Coder version : 8.10 (R2016a) 10-Feb-2016
- * C source code generated on : Fri Jul 29 17:07:38 2016
+ * C source code generated on : Sat Jul 30 20:04:58 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -57,12 +57,12 @@ static const char_T * rtDataTypeNames[] = {
 
 /* data type transitions for block I/O structure */
 static DataTypeTransition rtBTransitions[] = {
-  { (char_T *)(&TestMPU6050_B.SFunctionBuilder2_o1), 4, 0, 6 }
+  { (char_T *)(&TestMPU6050_B.SFunctionBuilder1_o1), 4, 0, 12 }
   ,
 
-  { (char_T *)(&TestMPU6050_DW.SFunctionBuilder2_DSTATE), 0, 0, 1 },
+  { (char_T *)(&TestMPU6050_DW.SFunctionBuilder1_DSTATE), 0, 0, 2 },
 
-  { (char_T *)(&TestMPU6050_DW.Scope_PWORK.LoggedData[0]), 11, 0, 6 }
+  { (char_T *)(&TestMPU6050_DW.Scope1_PWORK.LoggedData[0]), 11, 0, 12 }
 };
 
 /* data type transition table for block I/O structure */
@@ -73,9 +73,9 @@ static DataTypeTransitionTable rtBTransTable = {
 
 /* data type transitions for Parameters structure */
 static DataTypeTransition rtPTransitions[] = {
-  { (char_T *)(&TestMPU6050_P.SFunctionBuilder2_P2), 7, 0, 1 },
+  { (char_T *)(&TestMPU6050_P.SFunctionBuilder1_P2), 7, 0, 2 },
 
-  { (char_T *)(&TestMPU6050_P.SFunctionBuilder2_P1), 8, 0, 1 }
+  { (char_T *)(&TestMPU6050_P.SFunctionBuilder1_P1), 8, 0, 2 }
 };
 
 /* data type transition table for Parameters structure */

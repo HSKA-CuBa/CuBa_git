@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TestMPU6050'.
  *
- * Model version                  : 1.51
+ * Model version                  : 1.55
  * Simulink Coder version         : 8.10 (R2016a) 10-Feb-2016
- * C/C++ source code generated on : Fri Jul 29 17:07:38 2016
+ * C/C++ source code generated on : Sat Jul 30 20:04:58 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -23,7 +23,13 @@
 /* Block parameters (auto storage) */
 P_TestMPU6050_T TestMPU6050_P = {
   1U,                                  /* Expression: uint32(LowPassBW)
+                                        * Referenced by: '<Root>/S-Function Builder1'
+                                        */
+  1U,                                  /* Expression: uint32(LowPassBW)
                                         * Referenced by: '<Root>/S-Function Builder2'
+                                        */
+  0,                                   /* Expression: boolean(AD0PinLevel)
+                                        * Referenced by: '<Root>/S-Function Builder1'
                                         */
   1                                    /* Expression: boolean(AD0PinLevel)
                                         * Referenced by: '<Root>/S-Function Builder2'

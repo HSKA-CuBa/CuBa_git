@@ -12,12 +12,12 @@ Info : Unable to match requested speed 2000 kHz, using 1800 kHz
 Info : clock speed 1800 kHz
 Info : STLINK v2 JTAG v14 API v2 SWIM v0 VID 0x0483 PID 0x3748
 Info : using stlink api v2
-Info : Target voltage: 2.885647
+Info : Target voltage: 2.889046
 Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
 Info : accepting 'telnet' connection on tcp/4444
 stm32f4x.cpu: target state: halted
 target halted due to debug-request, current mode: Thread 
-xPSR: 0x01000000 pc: 0x08003364 msp: 0x10002040
+xPSR: 0x01000000 pc: 0x08003254 msp: 0x10002040
 Info : device id = 0x10076413
 Info : flash size = 1024kbytes
 flash 'stm32f2x' found at 0x08000000
@@ -25,6 +25,6 @@ auto erase enabled
 stm32f4x.cpu: target state: halted
 target halted due to breakpoint, current mode: Thread 
 xPSR: 0x61000000 pc: 0x20000046 msp: 0x10002040
-wrote 32768 bytes from file ../TestMPU6050.elf in 1.511185s (21.175 KiB/s)
+wrote 32768 bytes from file ../TestMPU6050.elf in 1.493807s (21.422 KiB/s)
 shutdown command invoked
 Info : dropped 'telnet' connection

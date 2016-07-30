@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TestMPU6050'.
  *
- * Model version                  : 1.51
+ * Model version                  : 1.55
  * Simulink Coder version         : 8.10 (R2016a) 10-Feb-2016
- * C/C++ source code generated on : Fri Jul 29 17:07:38 2016
+ * C/C++ source code generated on : Sat Jul 30 20:04:58 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -76,6 +76,12 @@
 
 /* Block signals (auto storage) */
 typedef struct {
+  int16_T SFunctionBuilder1_o1;        /* '<Root>/S-Function Builder1' */
+  int16_T SFunctionBuilder1_o2;        /* '<Root>/S-Function Builder1' */
+  int16_T SFunctionBuilder1_o3;        /* '<Root>/S-Function Builder1' */
+  int16_T SFunctionBuilder1_o4;        /* '<Root>/S-Function Builder1' */
+  int16_T SFunctionBuilder1_o5;        /* '<Root>/S-Function Builder1' */
+  int16_T SFunctionBuilder1_o6;        /* '<Root>/S-Function Builder1' */
   int16_T SFunctionBuilder2_o1;        /* '<Root>/S-Function Builder2' */
   int16_T SFunctionBuilder2_o2;        /* '<Root>/S-Function Builder2' */
   int16_T SFunctionBuilder2_o3;        /* '<Root>/S-Function Builder2' */
@@ -86,7 +92,12 @@ typedef struct {
 
 /* Block states (auto storage) for system '<Root>' */
 typedef struct {
+  real_T SFunctionBuilder1_DSTATE;     /* '<Root>/S-Function Builder1' */
   real_T SFunctionBuilder2_DSTATE;     /* '<Root>/S-Function Builder2' */
+  struct {
+    void *LoggedData[6];
+  } Scope1_PWORK;                      /* '<Root>/Scope1' */
+
   struct {
     void *LoggedData[6];
   } Scope_PWORK;                       /* '<Root>/Scope' */
@@ -94,8 +105,14 @@ typedef struct {
 
 /* Parameters (auto storage) */
 struct P_TestMPU6050_T_ {
+  uint32_T SFunctionBuilder1_P2;       /* Expression: uint32(LowPassBW)
+                                        * Referenced by: '<Root>/S-Function Builder1'
+                                        */
   uint32_T SFunctionBuilder2_P2;       /* Expression: uint32(LowPassBW)
                                         * Referenced by: '<Root>/S-Function Builder2'
+                                        */
+  boolean_T SFunctionBuilder1_P1;      /* Expression: boolean(AD0PinLevel)
+                                        * Referenced by: '<Root>/S-Function Builder1'
                                         */
   boolean_T SFunctionBuilder2_P1;      /* Expression: boolean(AD0PinLevel)
                                         * Referenced by: '<Root>/S-Function Builder2'

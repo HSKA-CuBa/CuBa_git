@@ -28,23 +28,31 @@
     ;%
     ;% Auto data (TestMPU6050_P)
     ;%
-      section.nData     = 1;
-      section.data(1)  = dumData; %prealloc
+      section.nData     = 2;
+      section.data(2)  = dumData; %prealloc
       
-	  ;% TestMPU6050_P.SFunctionBuilder2_P2
+	  ;% TestMPU6050_P.SFunctionBuilder1_P2
 	  section.data(1).logicalSrcIdx = 0;
 	  section.data(1).dtTransOffset = 0;
+	
+	  ;% TestMPU6050_P.SFunctionBuilder2_P2
+	  section.data(2).logicalSrcIdx = 1;
+	  section.data(2).dtTransOffset = 1;
 	
       nTotData = nTotData + section.nData;
       paramMap.sections(1) = section;
       clear section
       
-      section.nData     = 1;
-      section.data(1)  = dumData; %prealloc
+      section.nData     = 2;
+      section.data(2)  = dumData; %prealloc
       
-	  ;% TestMPU6050_P.SFunctionBuilder2_P1
-	  section.data(1).logicalSrcIdx = 1;
+	  ;% TestMPU6050_P.SFunctionBuilder1_P1
+	  section.data(1).logicalSrcIdx = 2;
 	  section.data(1).dtTransOffset = 0;
+	
+	  ;% TestMPU6050_P.SFunctionBuilder2_P1
+	  section.data(2).logicalSrcIdx = 3;
+	  section.data(2).dtTransOffset = 1;
 	
       nTotData = nTotData + section.nData;
       paramMap.sections(2) = section;
@@ -91,32 +99,56 @@
     ;%
     ;% Auto data (TestMPU6050_B)
     ;%
-      section.nData     = 6;
-      section.data(6)  = dumData; %prealloc
+      section.nData     = 12;
+      section.data(12)  = dumData; %prealloc
       
-	  ;% TestMPU6050_B.SFunctionBuilder2_o1
+	  ;% TestMPU6050_B.SFunctionBuilder1_o1
 	  section.data(1).logicalSrcIdx = 0;
 	  section.data(1).dtTransOffset = 0;
 	
-	  ;% TestMPU6050_B.SFunctionBuilder2_o2
+	  ;% TestMPU6050_B.SFunctionBuilder1_o2
 	  section.data(2).logicalSrcIdx = 1;
 	  section.data(2).dtTransOffset = 1;
 	
-	  ;% TestMPU6050_B.SFunctionBuilder2_o3
+	  ;% TestMPU6050_B.SFunctionBuilder1_o3
 	  section.data(3).logicalSrcIdx = 2;
 	  section.data(3).dtTransOffset = 2;
 	
-	  ;% TestMPU6050_B.SFunctionBuilder2_o4
+	  ;% TestMPU6050_B.SFunctionBuilder1_o4
 	  section.data(4).logicalSrcIdx = 3;
 	  section.data(4).dtTransOffset = 3;
 	
-	  ;% TestMPU6050_B.SFunctionBuilder2_o5
+	  ;% TestMPU6050_B.SFunctionBuilder1_o5
 	  section.data(5).logicalSrcIdx = 4;
 	  section.data(5).dtTransOffset = 4;
 	
-	  ;% TestMPU6050_B.SFunctionBuilder2_o6
+	  ;% TestMPU6050_B.SFunctionBuilder1_o6
 	  section.data(6).logicalSrcIdx = 5;
 	  section.data(6).dtTransOffset = 5;
+	
+	  ;% TestMPU6050_B.SFunctionBuilder2_o1
+	  section.data(7).logicalSrcIdx = 6;
+	  section.data(7).dtTransOffset = 6;
+	
+	  ;% TestMPU6050_B.SFunctionBuilder2_o2
+	  section.data(8).logicalSrcIdx = 7;
+	  section.data(8).dtTransOffset = 7;
+	
+	  ;% TestMPU6050_B.SFunctionBuilder2_o3
+	  section.data(9).logicalSrcIdx = 8;
+	  section.data(9).dtTransOffset = 8;
+	
+	  ;% TestMPU6050_B.SFunctionBuilder2_o4
+	  section.data(10).logicalSrcIdx = 9;
+	  section.data(10).dtTransOffset = 9;
+	
+	  ;% TestMPU6050_B.SFunctionBuilder2_o5
+	  section.data(11).logicalSrcIdx = 10;
+	  section.data(11).dtTransOffset = 10;
+	
+	  ;% TestMPU6050_B.SFunctionBuilder2_o6
+	  section.data(12).logicalSrcIdx = 11;
+	  section.data(12).dtTransOffset = 11;
 	
       nTotData = nTotData + section.nData;
       sigMap.sections(1) = section;
@@ -163,23 +195,31 @@
     ;%
     ;% Auto data (TestMPU6050_DW)
     ;%
-      section.nData     = 1;
-      section.data(1)  = dumData; %prealloc
+      section.nData     = 2;
+      section.data(2)  = dumData; %prealloc
       
-	  ;% TestMPU6050_DW.SFunctionBuilder2_DSTATE
+	  ;% TestMPU6050_DW.SFunctionBuilder1_DSTATE
 	  section.data(1).logicalSrcIdx = 0;
 	  section.data(1).dtTransOffset = 0;
+	
+	  ;% TestMPU6050_DW.SFunctionBuilder2_DSTATE
+	  section.data(2).logicalSrcIdx = 1;
+	  section.data(2).dtTransOffset = 1;
 	
       nTotData = nTotData + section.nData;
       dworkMap.sections(1) = section;
       clear section
       
-      section.nData     = 1;
-      section.data(1)  = dumData; %prealloc
+      section.nData     = 2;
+      section.data(2)  = dumData; %prealloc
       
-	  ;% TestMPU6050_DW.Scope_PWORK.LoggedData
-	  section.data(1).logicalSrcIdx = 1;
+	  ;% TestMPU6050_DW.Scope1_PWORK.LoggedData
+	  section.data(1).logicalSrcIdx = 2;
 	  section.data(1).dtTransOffset = 0;
+	
+	  ;% TestMPU6050_DW.Scope_PWORK.LoggedData
+	  section.data(2).logicalSrcIdx = 3;
+	  section.data(2).dtTransOffset = 6;
 	
       nTotData = nTotData + section.nData;
       dworkMap.sections(2) = section;
@@ -211,8 +251,8 @@
   ;%
 
 
-  targMap.checksum0 = 3630313113;
-  targMap.checksum1 = 3690395987;
-  targMap.checksum2 = 2094238731;
-  targMap.checksum3 = 3465846350;
+  targMap.checksum0 = 1251635297;
+  targMap.checksum1 = 2821285838;
+  targMap.checksum2 = 4008865327;
+  targMap.checksum3 = 808074783;
 
