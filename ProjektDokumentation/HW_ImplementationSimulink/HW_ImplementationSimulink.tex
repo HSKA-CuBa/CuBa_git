@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} 
+\usepackage{svg}
+\graphicspath{{img/}}
+\usepackage{geometry}
+\geometry{a4paper, top=25mm, left=30mm, right=25mm, bottom=20mm}
+
+\begin{document}
+
+\section{Einführung}
+Der Inhalt dieser Dokumentation besteht darin, die Umsetzung von eigenen SW-Treiber für eine Microcontroller-Plattform in Simulink zu erläutern. Hierfür wird zuerst die allgemeine Funktionsweise und insbesondere der Codegenerationsprozess mit Simulink diskutiert. Im Anschluss wird eine Übersicht über die verschiedenen Möglichkeiten dargestellt um eigene Simulink-Blöcke zu erstellen und in Quellcode zu übersetzen. MathoWorks sowohl Online- als auch PDF-Dokumentationen zur Verfügung, auf welche auch durchgehend verwiesen wird.
+
+\newpage
+\include{Section_FunktionsweiseSimulink}
+
+\newpage
+\renewcommand\refname{Literaturverzeichnis}
+\begin{thebibliography}{}
+	\bibitem{SFunc} TheMathWorks, "Writing S-Functions", März 2016
+\end{thebibliography}
+\end{document}
