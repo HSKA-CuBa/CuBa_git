@@ -25,7 +25,7 @@
   *  -------------------------------------------------------------------------
   * | See matlabroot/simulink/src/sfuntmpl_doc.c for a more detailed template |
   *  ------------------------------------------------------------------------- 
-* Created: Thu Jul 28 20:59:05 2016
+* Created: Mon Aug  1 10:02:18 2016
 */
 #define S_FUNCTION_LEVEL 2
 #define S_FUNCTION_NAME MPU6050_CustomBlock

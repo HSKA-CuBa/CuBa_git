@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'TestMPU6050'. 
 ## 
 ## Makefile     : TestMPU6050.mk
-## Generated on : Sat Jul 30 20:05:04 2016
+## Generated on : Mon Aug 01 10:00:24 2016
 ## MATLAB Coder version: 3.1 (R2016a)
 ## 
 ## Build Info:
@@ -245,7 +245,7 @@ BUILD_TYPE = "Top-Level Standalone Executable"
 ## INCLUDE PATHS
 ###########################################################################
 
-INCLUDES_BUILDINFO = -I$(MATLAB_ROOT)/simulink/include/sf_runtime -I$(START_DIR)/TestMPU6050_ert_rtw -I$(START_DIR) -I$(START_DIR)/MPU6050/include -I$(START_DIR)/MPU6050/source -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/serial -IC:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/scheduler/include -IC:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/CMSIS/ST/STM32F4xx/Include -IC:/MATLAB/SupportPackages/R2016a/CMSIS/CMSIS/Include -IC:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Project/Peripheral_Examples/SysTick -IC:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc -IC:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../include -IC:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/cmsis_rtos_rtx/include
+INCLUDES_BUILDINFO = -I$(MATLAB_ROOT)/simulink/include/sf_runtime -I$(START_DIR)/TestMPU6050_ert_rtw -I$(START_DIR) -I$(START_DIR)/MPU6050/include -I$(START_DIR)/MPU6050/source -I$(START_DIR)/MPU6050 -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/serial -IC:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/scheduler/include -IC:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/CMSIS/ST/STM32F4xx/Include -IC:/MATLAB/SupportPackages/R2016a/CMSIS/CMSIS/Include -IC:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Project/Peripheral_Examples/SysTick -IC:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc -IC:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../include -IC:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/cmsis_rtos_rtx/include
 
 INCLUDES = $(INCLUDES_BUILDINFO)
 
@@ -266,7 +266,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_IMPLIED) $(DEFINES_OPTS) $
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = $(START_DIR)/TestMPU6050_ert_rtw/TestMPU6050.c $(START_DIR)/TestMPU6050_ert_rtw/TestMPU6050_data.c $(START_DIR)/MPU6050/source/MPU6050.c $(START_DIR)/MPU6050/source/stm32f4xx_i2c.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_svr.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/updown.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_work.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c C:/Users/ich/Desktop/CuBa_git/STM32F4_SW/Simulink/SensorenSingleBlock/MPU6050/MPU6050_CustomBlock_wrapper.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/blapp_support.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/startup_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/syscalls_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/stm32f4xx_init_board.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/system_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/scheduler/src/SysTickScheduler.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/scheduler/src/m3m4m4f_multitasking.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/serial/ext_serial_pkt.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/serial/rtiostream_serial_interface.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/serial/ext_svr_serial_transport.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/rtiostream_serial_dma_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/misc.c
+SRCS = $(START_DIR)/TestMPU6050_ert_rtw/TestMPU6050.c $(START_DIR)/TestMPU6050_ert_rtw/TestMPU6050_data.c $(START_DIR)/MPU6050/source/MPU6050.c $(START_DIR)/MPU6050/source/stm32f4xx_i2c.c $(START_DIR)/MPU6050/MPU6050_CustomBlock_wrapper.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_svr.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/updown.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_work.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/blapp_support.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/startup_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/syscalls_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/stm32f4xx_init_board.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/system_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/scheduler/src/SysTickScheduler.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/scheduler/src/m3m4m4f_multitasking.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/serial/ext_serial_pkt.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/serial/rtiostream_serial_interface.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/serial/ext_svr_serial_transport.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/rtiostream_serial_dma_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/misc.c
 
 MAIN_SRC = $(START_DIR)/TestMPU6050_ert_rtw/ert_main.c
 
@@ -276,7 +276,7 @@ ALL_SRCS = $(SRCS) $(MAIN_SRC)
 ## OBJECTS
 ###########################################################################
 
-OBJS = TestMPU6050.o TestMPU6050_data.o MPU6050.o stm32f4xx_i2c.o ext_svr.o updown.o ext_work.o rtiostream_utils.o MPU6050_CustomBlock_wrapper.o blapp_support.o startup_stm32f4xx.o syscalls_stm32f4xx.o stm32f4xx_init_board.o system_stm32f4xx.o SysTickScheduler.o m3m4m4f_multitasking.o ext_serial_pkt.o rtiostream_serial_interface.o ext_svr_serial_transport.o rtiostream_serial_dma_stm32f4xx.o stm32f4xx_usart.o stm32f4xx_rcc.o stm32f4xx_gpio.o stm32f4xx_dma.o misc.o
+OBJS = TestMPU6050.o TestMPU6050_data.o MPU6050.o stm32f4xx_i2c.o MPU6050_CustomBlock_wrapper.o ext_svr.o updown.o ext_work.o rtiostream_utils.o blapp_support.o startup_stm32f4xx.o syscalls_stm32f4xx.o stm32f4xx_init_board.o system_stm32f4xx.o SysTickScheduler.o m3m4m4f_multitasking.o ext_serial_pkt.o rtiostream_serial_interface.o ext_svr_serial_transport.o rtiostream_serial_dma_stm32f4xx.o stm32f4xx_usart.o stm32f4xx_rcc.o stm32f4xx_gpio.o stm32f4xx_dma.o misc.o
 
 MAIN_OBJ = ert_main.o
 
@@ -558,6 +558,34 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(LIBS) $(MAIN_OBJ)
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
+%.o : $(START_DIR)/MPU6050/%.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+%.o : $(START_DIR)/MPU6050/%.s
+	$(AS) $(ASFLAGS) -o "$@" "$<"
+
+
+%.o : $(START_DIR)/MPU6050/%.S
+	$(AS) $(ASFLAGS) -o "$@" "$<"
+
+
+%.o : $(START_DIR)/MPU6050/%.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : $(START_DIR)/MPU6050/%.cc
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : $(START_DIR)/MPU6050/%.C
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : $(START_DIR)/MPU6050/%.cxx
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
 %.o : $(MATLAB_ROOT)/rtw/c/src/%.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
@@ -667,62 +695,6 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(LIBS) $(MAIN_OBJ)
 
 
 %.o : $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/%.cxx
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/STM32F4_SW/Simulink/SensorenSingleBlock/MPU6050/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/STM32F4_SW/Simulink/SensorenSingleBlock/MPU6050/%.s
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/STM32F4_SW/Simulink/SensorenSingleBlock/MPU6050/%.S
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/STM32F4_SW/Simulink/SensorenSingleBlock/MPU6050/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/STM32F4_SW/Simulink/SensorenSingleBlock/MPU6050/%.cc
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/STM32F4_SW/Simulink/SensorenSingleBlock/MPU6050/%.C
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/STM32F4_SW/Simulink/SensorenSingleBlock/MPU6050/%.cxx
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/HSKA_CuBa/STM32F4_SW/Simulink/SimulinkSensoren/MPU6050/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/HSKA_CuBa/STM32F4_SW/Simulink/SimulinkSensoren/MPU6050/%.s
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/HSKA_CuBa/STM32F4_SW/Simulink/SimulinkSensoren/MPU6050/%.S
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/HSKA_CuBa/STM32F4_SW/Simulink/SimulinkSensoren/MPU6050/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/HSKA_CuBa/STM32F4_SW/Simulink/SimulinkSensoren/MPU6050/%.cc
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/HSKA_CuBa/STM32F4_SW/Simulink/SimulinkSensoren/MPU6050/%.C
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/HSKA_CuBa/STM32F4_SW/Simulink/SimulinkSensoren/MPU6050/%.cxx
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 

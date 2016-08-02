@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TestMPU6050'.
  *
- * Model version                  : 1.55
+ * Model version                  : 1.58
  * Simulink Coder version         : 8.10 (R2016a) 10-Feb-2016
- * C/C++ source code generated on : Sat Jul 30 20:04:58 2016
+ * C/C++ source code generated on : Mon Aug 01 10:00:16 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -73,12 +73,12 @@ void TestMPU6050_step(void)
   /* External mode */
   rtExtModeUploadCheckTrigger(1);
 
-  {                                    /* Sample time: [0.05s, 0.0s] */
+  {                                    /* Sample time: [0.005s, 0.0s] */
     rtExtModeUpload(0, TestMPU6050_M->Timing.taskTime0);
   }
 
   /* signal main to stop simulation */
-  {                                    /* Sample time: [0.05s, 0.0s] */
+  {                                    /* Sample time: [0.005s, 0.0s] */
     if ((rtmGetTFinal(TestMPU6050_M)!=-1) &&
         !((rtmGetTFinal(TestMPU6050_M)-TestMPU6050_M->Timing.taskTime0) >
           TestMPU6050_M->Timing.taskTime0 * (DBL_EPSILON))) {
@@ -117,13 +117,13 @@ void TestMPU6050_initialize(void)
   (void) memset((void *)TestMPU6050_M, 0,
                 sizeof(RT_MODEL_TestMPU6050_T));
   rtmSetTFinal(TestMPU6050_M, -1);
-  TestMPU6050_M->Timing.stepSize0 = 0.05;
+  TestMPU6050_M->Timing.stepSize0 = 0.005;
 
   /* External mode info */
-  TestMPU6050_M->Sizes.checksums[0] = (1251635297U);
-  TestMPU6050_M->Sizes.checksums[1] = (2821285838U);
-  TestMPU6050_M->Sizes.checksums[2] = (4008865327U);
-  TestMPU6050_M->Sizes.checksums[3] = (808074783U);
+  TestMPU6050_M->Sizes.checksums[0] = (1003661637U);
+  TestMPU6050_M->Sizes.checksums[1] = (2652847418U);
+  TestMPU6050_M->Sizes.checksums[2] = (4165410598U);
+  TestMPU6050_M->Sizes.checksums[3] = (790485288U);
 
   {
     static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE;

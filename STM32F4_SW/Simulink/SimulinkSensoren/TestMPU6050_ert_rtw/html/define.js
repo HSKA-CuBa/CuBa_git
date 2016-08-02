@@ -63,6 +63,8 @@ this.def["writeByte"] = {file: "MPU6050_c.html",line:116,type:"fcn"};
 this.def["startTransmission"] = {file: "MPU6050_c.html",line:136,type:"fcn"};
 this.def["initI2CPins"] = {file: "MPU6050_c.html",line:159,type:"fcn"};
 this.def["initI2C"] = {file: "MPU6050_c.html",line:175,type:"fcn"};
+this.def["MPU6050_CustomBlock_Outputs_wrapper"] = {file: "MPU6050_CustomBlock_wrapper_c.html",line:34,type:"fcn"};
+this.def["MPU6050_CustomBlock_Update_wrapper"] = {file: "MPU6050_CustomBlock_wrapper_c.html",line:63,type:"fcn"};
 this.def["I2C_DeInit"] = {file: "stm32f4xx_i2c_c.html",line:132,type:"fcn"};
 this.def["I2C_Init"] = {file: "stm32f4xx_i2c_c.html",line:175,type:"fcn"};
 this.def["I2C_StructInit"] = {file: "stm32f4xx_i2c_c.html",line:284,type:"fcn"};
@@ -127,6 +129,8 @@ function Html2SrcLink() {
 	this.html2Root["rtmodel_h.html"] = "rtmodel_h.html";
 	this.html2SrcPath["MPU6050_c.html"] = "../../MPU6050/source/MPU6050.c";
 	this.html2Root["MPU6050_c.html"] = "MPU6050_c.html";
+	this.html2SrcPath["MPU6050_CustomBlock_wrapper_c.html"] = "../../MPU6050/MPU6050_CustomBlock_wrapper.c";
+	this.html2Root["MPU6050_CustomBlock_wrapper_c.html"] = "MPU6050_CustomBlock_wrapper_c.html";
 	this.html2SrcPath["MW_target_hardware_resources_h.html"] = "../MW_target_hardware_resources.h";
 	this.html2Root["MW_target_hardware_resources_h.html"] = "MW_target_hardware_resources_h.html";
 	this.html2SrcPath["stm32f4xx_i2c_c.html"] = "../../MPU6050/source/stm32f4xx_i2c.c";
@@ -146,4 +150,4 @@ function Html2SrcLink() {
 }
 Html2SrcLink.instance = new Html2SrcLink();
 var fileList = [
-"ert_main_c.html","TestMPU6050_c.html","TestMPU6050_h.html","TestMPU6050_private_h.html","TestMPU6050_types_h.html","TestMPU6050_data_c.html","multiword_types_h.html","rtwtypes_h.html","TestMPU6050_dt_h.html","rtmodel_h.html","MPU6050_c.html","MW_target_hardware_resources_h.html","stm32f4xx_i2c_c.html"];
+"ert_main_c.html","TestMPU6050_c.html","TestMPU6050_h.html","TestMPU6050_private_h.html","TestMPU6050_types_h.html","TestMPU6050_data_c.html","multiword_types_h.html","rtwtypes_h.html","TestMPU6050_dt_h.html","rtmodel_h.html","MPU6050_c.html","MPU6050_CustomBlock_wrapper_c.html","MW_target_hardware_resources_h.html","stm32f4xx_i2c_c.html"];
