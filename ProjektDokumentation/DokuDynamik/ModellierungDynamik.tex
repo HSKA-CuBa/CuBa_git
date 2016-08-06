@@ -47,19 +47,15 @@ V = g(m_R \cdot l_{AB} + m_K \cdot l_{AC})cos(\varphi)
 L = T - V = \frac{1}{2}[(J^A_K + m_R \cdot {l_{AB}}^2) {\dot{\varphi}}^2 + J^R_B(\dot{\varphi}+\dot{\psi})^2] - g(m_R \cdot l_{AB} + m_K \cdot l_{AC})cos(\varphi)
 \end{equation}
 
-Das von dem Motor verursachte Drehmoment $T_M$ verrichtet die virtuelle Arbeite $\delta W_M$. Aus diesem können die generalisierten Kraftkomponenten $Q_{\varphi}$ und $Q_{\psi}$ abgeleitet werden.
+In dem System wirken unterschiedliche Kräfte. Einerseits erzeugt der Motor ein Drehmoment, welches die virtuelle Arbeite $\delta W_M$ verursacht. Andererseits verrichtet die Gravitation die virtuelle Arbeite $\delta W_G$. Zusätzlich muss die, durch die Reibung entstandene, Verlustleistung berücksichtigt werden. In diesem Fall wird die Reibleistung mit den Rayleigh'schen Dissipationsfunktionen $D_{\varphi}$ und $D_{\psi}$ beschrieben und verrichten die virtuelle Arbeit $\delta W_D$.
 
 \begin{equation}
-\delta W_M = T_M \cdot \delta \psi
-\end{equation}
-\begin{equation}
-Q_{\varphi} = T_M \cdot \frac{\partial \psi}{\partial \varphi} = 0
-\end{equation}
-\begin{equation}
-Q_{\psi} = T_M \cdot \frac{\partial \psi}{\partial \psi} = T_M
+-\delta W_M = T_M \cdot \delta \psi
 \end{equation}
 
-Durch die Reibung in den Lagerungen bei $A$ und $B$ geht Energie in dem System verloren. Diese Verlustleistung kann mit den Rayleigh'schen Dissipationsfunktionen $D_{\varphi}$ und $D_{\psi}$ beschrieben werden.
+\begin{equation}
+-\delta W_G = g(m_K \cdot l_{AC} + m_R \cdot l_{AB})sin(\varphi) \cdot \delta \varphi
+\end{equation}
 
 \begin{equation}
 D_{\varphi} = \frac{1}{2}C_{\varphi} \cdot {\dot{\varphi}}^2
@@ -70,37 +66,100 @@ D_{\psi} = \frac{1}{2}C_{\psi} \cdot {\dot{\psi}}^2
 \begin{equation}
 D = D_{\varphi} + D_{\psi} = \frac{1}{2}C_{\varphi} \cdot {\dot{\varphi}}^2 + \frac{1}{2}C_{\psi} \cdot {\dot{\psi}}^2
 \end{equation}
+\begin{equation}
+-\delta W_D = - C_{\varphi} \cdot \dot{\varphi} \cdot \delta \varphi - C_{\psi} \cdot \dot{\psi} \cdot \delta \psi
+\end{equation}
 
-Bei dem Prototyp handelt es sich um ein nicht konservatives System, da einerseits durch die Reibung mechanische Energie verloren geht. Andererseits erhöht das Motormoment die mechanische Gesamtenergie des Systems. Da die beiden generalisierten Koordinaten $\varphi$ und $\psi$ voneinander unabhängig sind können aus dem d'Alembert'schen Prinzip zwei Bewegungsgleichungen abgeleitet werden.
+Die Summe der virtuellen Arbeiten, welche von den verschiedenen Kräften verrichtet wird, ergibt die virtuelle Arbeit des Gesamtsystems $\delta W$. In dem die verrichtete Arbeit partiell nach den beiden generalisierten Koordinaten $\varphi$ und $\psi$ differenziert wird, können die beiden generalisierten Kraftkomponenten $Q_{\varphi}$ und $Q_{\psi}$ berechnet werden.
 
 \begin{equation}
-\frac{d}{dt}\frac{\partial L}{\partial \dot{q}_i}-\frac{\partial L}{\partial q_i} + \frac{\partial D}{\partial \dot{q}_i} = Q_i
+Q_{\varphi} = g(m_K \cdot l_{AC} + m_R \cdot l_{AB})sin(\varphi) - C_{\varphi} \cdot \dot{\varphi}
 \end{equation}
 \begin{equation}
-\frac{d}{dt}\frac{\partial L}{\partial \dot{\varphi}}-\frac{\partial L}{\partial \varphi} + \frac{\partial D}{\partial \dot{\varphi}} = Q_{\varphi} 
+Q_{\psi} = T_M - C_{\psi} \cdot \dot{\psi}
+\end{equation}
+
+
+Bei dem Prototyp handelt es sich um ein nicht konservatives System, da durch die Reibung mechanische Energie verloren geht und der Motor dem System mechanische Energie zuführt. Da die beiden generalisierten Koordinaten $\varphi$ und $\psi$ voneinander unabhängig sind können aus dem d'Alembert'schen Prinzip zwei Bewegungsgleichungen abgeleitet werden.
+
+\begin{equation}
+\frac{d}{dt}\frac{\partial T}{\partial \dot{q}_i}-\frac{\partial T}{\partial q_i} = Q_i
+\end{equation}
+\begin{equation}
+\frac{d}{dt}\frac{\partial T}{\partial \dot{\varphi}}-\frac{\partial T}{\partial \varphi} = Q_{\varphi} 
 \end{equation}
 \begin{equation}
 \label{LG_phi_equation}
-(J^A_K + J^R_B + m_R \cdot l_{AB})\ddot{\varphi} + J^R_B \cdot \ddot{\psi} - g(m_R \cdot l_{AB} + m_K \cdot l_{AC})sin(\varphi) + C_{\psi} \cdot \dot{\psi} = 0
+(J^A_K + J^B_R + m_R \cdot l_{AB}^2)\ddot{\varphi} + J^B_R \cdot \ddot{\psi} - g(m_R \cdot l_{AB} + m_K \cdot l_{AC})sin(\varphi) + C_{\psi} \cdot \dot{\psi} = 0
 \end{equation}
 \begin{equation}
-\frac{d}{dt}\frac{\partial L}{\partial \dot{\psi}}-\frac{\partial L}{\partial \psi} + \frac{\partial D}{\partial \dot{\psi}} = Q_{\psi} 
+\frac{d}{dt}\frac{\partial T}{\partial \dot{\psi}}-\frac{\partial T}{\partial \psi} + \frac{\partial T}{\partial \dot{\psi}} = Q_{\psi} 
 \end{equation}
 \begin{equation}
 \label{LG_psi_euqation}
-J^R_B \cdot \ddot{\psi} = T_M - C_{\psi} \cdot \dot{\psi} - J^R_B \cdot \ddot{\varphi}
+J^R_B \cdot \ddot{\psi} = T_M - C_{\psi} \cdot \dot{\psi} - J^B_R \cdot \ddot{\varphi}
 \end{equation}
 
 Durch Einsetzen von (\ref{LG_psi_euqation}) in (\ref{LG_phi_equation}) ergibt sich die folgende Bewegungsgleichung für die Würfelseite.
 
 \begin{equation}
 \label{BG_phi_quation}
-\ddot{\varphi} = \frac{g(m_R \cdot l_{AB} + m_K \cdot l_{AC})sin(\varphi) - C_{\varphi} \cdot \dot{\varphi} + C_{\psi} \cdot \dot{\psi} - T_M}{J^A_K + m_R \cdot l_{AB}}
+\ddot{\varphi} = \frac{g(m_R \cdot l_{AB}^2 + m_K \cdot l_{AC})sin(\varphi) - C_{\varphi} \cdot \dot{\varphi} + C_{\psi} \cdot \dot{\psi} - T_M}{J^A_K + m_R \cdot l_{AB}^2}
 \end{equation}
 
 Die Bewegungsgleichung für die Schwungmasse ergibt sich durch Einsetzen von (\ref{BG_phi_quation}) in (\ref{LG_psi_euqation}).
 
 \begin{equation}
 \label{BG_psi_equation}
-\ddot{\psi} = \frac{(J^A_K + m_R \cdot l_{AB} + J^R_B)(T_M - C_{\psi} \cdot \dot{\psi})}{(J^A_K + m_R \cdot {l_{AB}}^2)J^R_B} + \frac{C_{\varphi} \cdot \dot{\varphi} - g(m_R \cdot l_{AB} + m_K \cdot l_{AC})sin(\varphi)}{J^A_K + m_R \cdot {l_{AB}}^2}
+\ddot{\psi} = \frac{(J^A_K + m_R \cdot l_{AB}^2 + J^B_R)(T_M - C_{\psi} \cdot \dot{\psi})}{(J^A_K + m_R \cdot {l_{AB}}^2)J^B_R} + \frac{C_{\varphi} \cdot \dot{\varphi} - g(m_R \cdot l_{AB} + m_K \cdot l_{AC})sin(\varphi)}{J^A_K + m_R \cdot {l_{AB}}^2}
+\end{equation}
+
+Mit Hilfe der Bewegungsgleichungen kann nun eine Zustandsraumdarstellung aufgestellt werden. Hierfür werden die nichtlinearen Terme entsprechend linearisiert. 
+
+\begin{equation}
+\textbf{x} = \begin{pmatrix}
+\varphi \\ \dot{\varphi} \\ \dot{\psi}
+\end{pmatrix}
+\hspace{35pt}
+\textbf{y} = \begin{pmatrix}
+\varphi \\ \dot{\varphi} \\ \dot{\psi}
+\end{pmatrix}
+\hspace{35pt}
+u = T_M
+\end{equation}
+
+\begin{equation}
+\dot{\textbf{x}} = \textbf{A} \cdot \textbf{x} + \textbf{B} \cdot u
+\end{equation}
+
+\begin{equation}
+\textbf{y} = \textbf{C} \cdot \textbf{x} + \textbf{D} \cdot u
+\end{equation}
+
+\begin{equation}
+\begin{split}
+\renewcommand*{\arraystretch}{1.7}
+\textbf{A} = \begin{pmatrix}
+0 & 1 & 0 \\
+\frac{g(m_K \cdot l_{AC} + m_R \cdot l_{AB})}{J^A_K + m_R \cdot l_{AB}^2} &
+\frac{-C_{\varphi}}{J^A_K + m_R \cdot l_{AB}^2} & 
+\frac{C_{\psi}}{J^A_K + m_R \cdot l_{AB}^2} \\
+\frac{-g(m_K \cdot l_{AC} + m_R \cdot l_{AB)}}{J^A_K + m_R \cdot l_{AB}^2} &
+\frac{C_{\varphi}}{J^A_K + m_R \cdot l_{AB}^2} &
+\frac{-C_{\psi}(J^A_K + J^B_R + m_R \cdot l_{AB}^2)}{J^B_R(J^A_K + m_R \cdot l_{AB}^2)}
+\end{pmatrix} 
+\\
+\renewcommand*{\arraystretch}{1.7}
+\textbf{B} = \begin{pmatrix}
+0 \\ \frac{-1}{J^A_K + m_R \cdot l_{AB}^2} \\ \frac{J^A_K + J^B_R + m_R \cdot l_{AB}^2}{J^K_R(J^A_K + m_R \cdot l_{AB}^2}
+\end{pmatrix}
+\hspace{35 pt}
+\textbf{C} = \begin{pmatrix}
+1 & 1 & 1
+\end{pmatrix}
+\hspace{35pt}
+\textbf{D} = \begin{pmatrix}
+0
+\end{pmatrix}
+\end{split}
 \end{equation}

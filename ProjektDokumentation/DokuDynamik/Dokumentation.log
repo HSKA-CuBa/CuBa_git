@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.21)  1 AUG 2016 19:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.21)  5 AUG 2016 15:26
 entering extended mode
 **./Dokumentation.tex
 (Dokumentation.tex
@@ -969,7 +969,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 [2
 
 
- <./img/MechZeichnung1D.pdf>]) [3]
+ <./img/MechZeichnung1D.pdf>] [3]) [4]
 \openout2 = `Sensoren.aux'.
 
  (Sensoren.tex
@@ -978,19 +978,19 @@ Package caption Warning: \label without proper reference on input line 5.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `Position_Sensoren_pic' on page 4 undefined on input l
+LaTeX Warning: Reference `Position_Sensoren_pic' on page 5 undefined on input l
 ine 2.
 
-<img/SensorZeichnung1D.pdf, id=34, 963.6pt x 542.025pt>
+<img/SensorZeichnung1D.pdf, id=42, 963.6pt x 542.025pt>
 File: img/SensorZeichnung1D.pdf Graphic file (type pdf)
 
 <use img/SensorZeichnung1D.pdf>
 Package pdftex.def Info: img/SensorZeichnung1D.pdf used on input line 6.
 (pdftex.def)             Requested size: 441.01773pt x 248.0691pt.
-) [4
+ [5
 
 
- <./img/SensorZeichnung1D.pdf>] [5
+ <./img/SensorZeichnung1D.pdf>]) [6] [7
 
 ]
 (Dokumentation.aux (Einfuehrung.aux) (ModellierungDynamik.aux) (Sensoren.aux))
@@ -999,24 +999,27 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 14737 strings out of 493634
- 282752 string characters out of 3141320
- 340131 words of memory out of 3000000
- 17818 multiletter control sequences out of 15000+200000
- 5612 words of font info for 21 fonts, out of 3000000 for 9000
+ 14742 strings out of 493634
+ 282796 string characters out of 3141320
+ 343135 words of memory out of 3000000
+ 17821 multiletter control sequences out of 15000+200000
+ 6231 words of font info for 23 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 68i,10n,98p,543b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,22n,98p,566b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Dokumentation.pdf (5 pages, 307867 bytes).
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on Dokumentation.pdf (7 pages, 347841 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
+ 102 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

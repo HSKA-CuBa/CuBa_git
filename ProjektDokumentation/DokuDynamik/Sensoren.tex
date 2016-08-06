@@ -41,3 +41,12 @@ g(1 - \alpha)sin(\varphi)
 \frac{\ddot{x}_1 - \alpha \cdot \ddot{x}_2}{\ddot{y}_1 - \alpha \cdot \ddot{y}_2} = -tan(\varphi)
 \end{equation}
 
+\subsection{Kalibrierung und Justierung}
+Die Sensoren geben die Beschleunigungs- und Geschwindigkeitswerte als 16 Bit Werte im Zweierkomplement aus. Diese Rohwerte müssen in die mit Hilfe eines Ausgleichspolynoms in die jeweilige SI-Einheit umgerechnet werden. 
+
+\subsubsection{Umrechnung der Winkelgeschwindigkeiten}
+In der Ruhelage werden 10000 Geschwindigkeitswerte der Sensoren aufgenommen. Über die Abweichung des Mittelwerts zu dem Sollwert ($\dot{\phi}=0$) wird die konstante Messabweichung ermittelt. Zusätzlich stellt der Hersteller einen Faktor zur Umrechnung der Roh- in SI-Werte. Daraus ergibt sich das folgende Polynom erster Ordnung zur Umrechnung der Gyroskopwerte in Winkelgeschwindigkeiten.
+
+
+\subsubsection{Umrechnung der Beschleunigungswerte}
+Um das Polynom zur Umrechnung der Beschleunigungswerte zu ermitteln werden sieben Messungen in den fixen Ausfallpositionen $\phi \in [-45, -30, -15, 0, 15, 30, 45]$ durchgeführt. Pro Position werden $m = 10000$ Messwerte aufgenommen. Da in der Ruhelage die Beschleunigung lediglich von dem aktuellen Ausfallwinkel abhängen ist der Sollwert für jede Position bekannt. Somit kann Polynom erster Ordnung approximiert werden um Mittelwerte der sieben Positionen in die entsprechenden Beschleunigungswerte umzurechnen.
