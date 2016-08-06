@@ -11,15 +11,21 @@ Der Ablauf einer Simulation läuft in verschiedenen Phasen ab. Zuerst wird ein M
 	\caption{Ablauf einer Simulation, Quelle: eigene Darstellung, Inhalt aus \cite{SFunc}}
 \end{figure}
 
-\subsection{Aufbau eines Simulink-Blocks}
-Ein Simulink-Block muss Funktionen bereitstellen um die oben genannten Schritte einer Simulation zu ermöglichen. Darunter fallen die Folgenden Funktionen:
+\subsection{Codegeneration mit Simulink}
+Simulink bietet neben der Standardausführung eines Modell auch die Generation von Quellcode, der sowohl auf der Host- als auch auf anderen Zielplattformen ausgeführt werden. Die hierfür benötigten Produkte sind \textit{Simulink-Coder}\footnote{Früher als Real-Time-Workshop bekannt, deshalb wird in vielen Quellen nach wie vor von dem Real-Time-Workshop bzw. RTW gesprochen.} als Basis und ggf. \textit{Embedded-Coder}, welcher die Generation von optimierten C/C++-Code für Microcontroller-Plattformen ermöglicht. Die folgenden Abschnitte stellen den Ablauf einer Codegenration für Modelle mit einfachen, fixen Abtastraten vor. Für weitere Details über die Codegeneration von komplexen Modellen, welche beispielsweise variable Abtastraten, kontinuierliche Zustände und asynchrone Scheduling-Strategien verwenden, sei auf \cite{SimCoder} und \cite{EmbCoder}.
 
-\begin{itemize}
-	\item Initialisierung des Blocks
-	\item Berechnung des nächsten Abtastzeitpunktes (falls der Block variable Abtastraten benötigt)
-	\item Berechnung der Ausgangswerte
-	\item Berechnung der diskreten Zustände des Blocks
-	\item Integration, hierunter fallen die Berechnung der Ausgangswerte und Ableitungen bei Zwischenschritten (wird nur bei kontinuierlichen Zuständen benötigt)
-\end{itemize}
+\subsection{Ablauf einer Simulink-Codegeneration}
+Der Beginn einer Codegeneration ist identisch mit der üblichen Simulation. Das heißt, dass die Signale, Blockparameter und Abtastraten evaluiert werden. Anschließend legt Simulink die Ausführungsreihenfolge der Blöcke fest. Anschließend erstellt \textit{Simulink-Coder} eine RTW-Datei (.rtw), welche diese Informationen über das Modell enthält. Im nächsten Schritt wird die RTW-Datei dem \ac{TLC} übergeben, welcher die Generation des Quellcodes durchführt. \ac{TLC} ist eine von TheMathWorks entwickelte Programmiersprache bzw. der Interpreter, welche diese auswertet. Diese Programmiersprache ermöglicht einerseits die Auswertung von RTW-Dateien, andererseits können auch Code-Datein in beliebigen Sprachen erstellt werden. Für mehr Informationen über die Funktionsweise und Syntax von \ac{TLC} sei auf \cite{TLC} verwiesen.
 
-Die Umsetzung dieser Methoden erfolgt in der Form einer sogenannten \textit{S-Function}. Hierbei handelt es sich lediglich um eine Sammlung von Funktionen, welche die oben genannten Aktionen implementieren. Eine \textit{S-Function} kann in unterschiedlichen Programmiersprachen implementiert werden, wobei MATLAB und C/C++ die üblichsten sind. Hier sollen lediglich \textit{S-Functions} in C/C++ vorgestellt werden, in \cite{SFunc} werden alle Alternativ detailliert erklärt. 
+Für die Codegeneration benötigt der \ac{TLC} neben der RTW-Datei des Modelles, ein \ac{STF}, ein \ac{TMF}, die Standard-TLC-Bibliothek und die \ac{TLC}-Dateien der einzelnen Blöcke, welche die Vorschrift für die Codegeneration des Blocks enthalten.
+
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{AblaufCodegeneration}
+	\caption{Ablauf Codegeneration, Quelle: eigene Darstellung, Inhalt aus \cite{TLC}}
+\end{figure}
+
+\subsubsection{System Target File}
+Das \ac{STF} stellt den Ausgangspunkt der \ac{TLC}-Codegeneration dar. In dieser Datei werden zuerst die Grundeinstellungen, wie z.B. das Codeformat und die Programmiersprache festgelegt. Anschließend werden eigenen Simulink-Blöcken TLC-Dateien zugeordnet, welche die Generationsvorschriften enthalten. Im nächsten Schritt wird die Ausführung der Simulink-Blöcke in entsprechender Reihenfolge in Quellcode übersetzt. Hierfür wird in der Regel die Datei "codegenentry.tlc" verwendet, welche von Simulink bereitgestellt wird. Diese Datei ordnet den Standard-Blöcken die entsprechenden TLC-Dateien zu, initialisiert globale Variablen und führt die Codegeneration eines einzelnen Simulationsschrittes durch. Zuletzt wird eine TLC-Datei inkludiert, welche eine main-Datei erstellt. In der main-Routine werden ggf. allgemeine Ressourcen initialisiert und die Simulationsschritte, den Abtastraten entsprechenden, aufgerufen.
+
+\subsubsection{Template Make File}
+Der \ac{TLC} erzeugt bei der Codegeneration ein Makefile um den Quellcode in ein ausführbares Format zu übersetzen. Das Makefile wird von einem \ac{TMF} abgeleitet, in welchem unter anderem die Toolchain, zusätzliche Bibliotheken und Compiler-Einstellungen festgelegt werden. Somit ermöglicht es ein \ac{TMF} auch Modelle auf beliebigen Zielplattform auszuführen, insofern eine Cross-Compiler-Toolchain zur Verfügung steht.

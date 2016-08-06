@@ -3,12 +3,44 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx} 
 \usepackage{svg}
+\usepackage{listings}
+\usepackage{color}
 \graphicspath{{img/}}
 \usepackage{geometry}
 \geometry{a4paper, top=25mm, left=30mm, right=25mm, bottom=20mm}
+\usepackage{acronym}
+\lstset{
+   basicstyle=\scriptsize\ttfamily,
+   keywordstyle=\bfseries\ttfamily\color{orange},
+   stringstyle=\color{green}\ttfamily,
+   commentstyle=\color{middlegray}\ttfamily,
+   emph={square}, 
+   emphstyle=\color{blue}\texttt,
+   emph={[2]root,base},
+   emphstyle={[2]\color{yac}\texttt},
+   showstringspaces=false,
+   flexiblecolumns=false,
+   tabsize=2,
+   numbers=left,
+   numberstyle=\tiny,
+   numberblanklines=false,
+   stepnumber=1,
+   numbersep=10pt,
+   xleftmargin=15pt
+}
 
 \begin{document}
 
+\tableofcontents
+\newpage
+\section*{Abkürzzungsverzeichnis}
+\begin{acronym}[Bash]
+\acro{TLC}{Target Language Compiler}
+\acro{STF}{System Target File}
+\acro{TMF}{Template Makefile}
+\end{acronym}
+
+\newpage
 \section{Einführung}
 Der Inhalt dieser Dokumentation besteht darin, die Umsetzung von eigenen SW-Treiber für eine Microcontroller-Plattform in Simulink zu erläutern. Hierfür wird zuerst die allgemeine Funktionsweise und insbesondere der Codegenerationsprozess mit Simulink diskutiert. Im Anschluss wird eine Übersicht über die verschiedenen Möglichkeiten dargestellt um eigene Simulink-Blöcke zu erstellen und in Quellcode zu übersetzen. MathoWorks sowohl Online- als auch PDF-Dokumentationen zur Verfügung, auf welche auch durchgehend verwiesen wird.
 
@@ -16,8 +48,14 @@ Der Inhalt dieser Dokumentation besteht darin, die Umsetzung von eigenen SW-Trei
 \include{Section_FunktionsweiseSimulink}
 
 \newpage
+\include{Section_SimulinkBloecke}
+
+\newpage
 \renewcommand\refname{Literaturverzeichnis}
 \begin{thebibliography}{}
 	\bibitem{SFunc} TheMathWorks, "Writing S-Functions", März 2016
+	\bibitem{TLC} TheMathWorks, "Target Language Compiler", März 2016
+	\bibitem{SimCoder} TheMathWorks, "Simulink Coder User Guide", März 2016
+	\bibitem{EmbCoder} TheMathWorks, "Embedded Coder User Guide", März 2016
 \end{thebibliography}
 \end{document}

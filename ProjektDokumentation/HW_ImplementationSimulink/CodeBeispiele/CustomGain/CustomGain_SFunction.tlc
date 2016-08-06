@@ -1,0 +1,8 @@
+%implements "CustomGain_SFunction" "C"
+
+%function Outputs(block, system) Output
+    %assign gainFactor  = LibBlockParameter(0, "", "", 0)
+    %assign inputValue  = LibBlockInputSignal(0, "", "", 0)
+    %assign outputValue = LibBlockOutputSignal(0, "", "", 0)
+    %<outputValue>      = %<inputValue> * %<gainFactor>
+%endfunction

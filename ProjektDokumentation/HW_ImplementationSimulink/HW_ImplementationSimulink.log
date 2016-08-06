@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.17)  30 JUL 2016 21:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.17)  2 AUG 2016 12:02
 entering extended mode
 **./HW_ImplementationSimulink.tex
 (HW_ImplementationSimulink.tex
@@ -405,6 +405,34 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 \SVG@out@height=\skip49
 \c@svgfigure=\count98
 )
+("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.st
+y"
+\lst@mode=\count99
+\lst@gtempboxa=\box26
+\lst@token=\toks19
+\lst@length=\count100
+\lst@currlwidth=\dimen114
+\lst@column=\count101
+\lst@pos=\count102
+\lst@lostspace=\dimen115
+\lst@width=\dimen116
+\lst@newlines=\count103
+\lst@lineno=\count104
+\lst@maxwidth=\dimen117
+
+("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.sty
+"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count105
+\lst@skipnumbers=\count106
+\lst@framebox=\box27
+)
+("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.cf
+g"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
 ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.st
 y"
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -418,54 +446,73 @@ Package ifvtex Info: VTeX not detected.
 y"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count99
-\Gm@cntv=\count100
-\c@Gm@tempcnt=\count101
-\Gm@bindingoffset=\dimen114
-\Gm@wd@mp=\dimen115
-\Gm@odd@mp=\dimen116
-\Gm@even@mp=\dimen117
-\Gm@layoutwidth=\dimen118
-\Gm@layoutheight=\dimen119
-\Gm@layouthoffset=\dimen120
-\Gm@layoutvoffset=\dimen121
-\Gm@dimlist=\toks19
+\Gm@cnth=\count107
+\Gm@cntv=\count108
+\c@Gm@tempcnt=\count109
+\Gm@bindingoffset=\dimen118
+\Gm@wd@mp=\dimen119
+\Gm@odd@mp=\dimen120
+\Gm@even@mp=\dimen121
+\Gm@layoutwidth=\dimen122
+\Gm@layoutheight=\dimen123
+\Gm@layouthoffset=\dimen124
+\Gm@layoutvoffset=\dimen125
+\Gm@dimlist=\toks20
 
 ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.cf
-g")) (HW_ImplementationSimulink.aux (Section_FunktionsweiseSimulink.aux))
+g"))
+("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\acronym\acronym.sty"
+Package: acronym 2015/03/21 v1.41 Support for acronyms (Tobias Oetiker)
+("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bigfoot\suffix.sty"
+Package: suffix 2006/07/15 1.5a Variant command support
+) ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xstring\xstring.st
+y"
+("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xstring\xstring.te
+x"
+\@xs@message=\write3
+\integerpart=\count110
+\decimalpart=\count111
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+\AC@clearlist=\toks21
+) (HW_ImplementationSimulink.aux (Section_FunktionsweiseSimulink.aux)
+(Section_SimulinkBloecke.aux))
 \openout1 = `HW_ImplementationSimulink.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii
 "
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count102
-\scratchdimen=\dimen122
-\scratchbox=\box26
-\nofMPsegments=\count103
-\nofMParguments=\count104
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count105
-\MPscratchDim=\dimen123
-\MPnumerator=\count106
-\makeMPintoPDFobject=\count107
-\everyMPtoPDFconversion=\toks21
+\scratchcounter=\count112
+\scratchdimen=\dimen126
+\scratchbox=\box28
+\nofMPsegments=\count113
+\nofMParguments=\count114
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count115
+\MPscratchDim=\dimen127
+\MPnumerator=\count116
+\makeMPintoPDFobject=\count117
+\everyMPtoPDFconversion=\toks23
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count118
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -501,50 +548,115 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-[1
+(HW_ImplementationSimulink.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 4.
+)
+\tf@toc=\write4
+\openout4 = `HW_ImplementationSimulink.toc'.
 
-{C:/Users/ich/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+ [1
+
+{C:/Users/ich/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
 \openout2 = `Section_FunktionsweiseSimulink.aux'.
 
-
-(Section_FunktionsweiseSimulink.tex
-<img/AblaufSimulation.pdf, id=7, 844.65562pt x 283.81032pt>
+ (Section_FunktionsweiseSimulink.tex
+<img/AblaufSimulation.pdf, id=14, 844.65562pt x 283.81032pt>
 File: img/AblaufSimulation.pdf Graphic file (type pdf)
 
 <use img/AblaufSimulation.pdf>
 Package pdftex.def Info: img/AblaufSimulation.pdf used on input line 10.
 (pdftex.def)             Requested size: 441.01773pt x 148.18849pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 18.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 15.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 15.
+Package acronym Info: Label `acro:TLC' newly defined as it shall be overridden
+although it is yet undefined on input line 18.
+
+Overfull \hbox (15.09427pt too wide) in paragraph at lines 18--19
+\OT1/cmr/m/n/10 Block-pa-ra-me-ter und Ab-ta-stra-ten eva-lu-iert wer-den. An-s
+chlie-end legt Si-mu-link die Ausf[]uhrungsreihenfolge
+ []
+
+[4
+
+ <./img/AblaufSimulation.pdf>]
+Package acronym Info: Label `acro:STF' newly defined as it shall be overridden
+although it is yet undefined on input line 20.
+Package acronym Info: Label `acro:TMF' newly defined as it shall be overridden
+although it is yet undefined on input line 20.
+
+<img/AblaufCodegeneration.pdf, id=32, 844.65562pt x 283.81032pt>
+File: img/AblaufCodegeneration.pdf Graphic file (type pdf)
+
+<use img/AblaufCodegeneration.pdf>
+Package pdftex.def Info: img/AblaufCodegeneration.pdf used on input line 23.
+(pdftex.def)             Requested size: 441.01773pt x 148.18849pt.
+) [5 <./img/AblaufCodegeneration.pdf>]
+\openout2 = `Section_SimulinkBloecke.aux'.
+
+
+(Section_SimulinkBloecke.tex
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 5.
 
 ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 18.
-)
-[2
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
 
- <./img/AblaufSimulation.pdf>] [3] [4
+<img/CustomGain_Overview.pdf, id=51, 844.65562pt x 170.13562pt>
+File: img/CustomGain_Overview.pdf Graphic file (type pdf)
 
-] (HW_ImplementationSimulink.aux
-(Section_FunktionsweiseSimulink.aux)) ) 
+<use img/CustomGain_Overview.pdf>
+Package pdftex.def Info: img/CustomGain_Overview.pdf used on input line 19.
+(pdftex.def)             Requested size: 441.01773pt x 88.83447pt.
+
+
+Package caption Warning: \label without proper reference on input line 18.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `CustomGain_Overview_pic' on page 6 undefined on input
+ line 33.
+
+[6
+
+
+ <./img/CustomGain_Overview.pdf>] [7]) [8] [9
+
+] (HW_ImplementationSimulink.aux (Section_FunktionsweiseSimulink.aux) (Section_
+SimulinkBloecke.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4350 strings out of 493634
- 64867 string characters out of 3136055
- 142171 words of memory out of 3000000
- 7687 multiletter control sequences out of 15000+200000
- 5196 words of font info for 19 fonts, out of 3000000 for 9000
+ 6578 strings out of 493634
+ 95182 string characters out of 3136055
+ 195596 words of memory out of 3000000
+ 9869 multiletter control sequences out of 15000+200000
+ 7495 words of font info for 27 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 68i,6n,98p,1331b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/ich/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ich/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ich/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/User
-s/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.p
-fb>
-Output written on HW_ImplementationSimulink.pdf (4 pages, 65663 bytes).
+ 68i,8n,98p,1331b,1577s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmbx10.pfb><C:/Users/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb><C:/Users/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/ich/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/ich/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/ich/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ich/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users
+/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><C:/Users/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmti10.pfb><C:/Users/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmtt8.pfb>
+Output written on HW_ImplementationSimulink.pdf (9 pages, 179059 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
+ 107 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

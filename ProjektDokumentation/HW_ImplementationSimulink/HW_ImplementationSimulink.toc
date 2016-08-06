@@ -1,0 +1,12 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Einf\IeC {\"u}hrung}{3}
+\contentsline {section}{\numberline {2}Funktionsweise von Simulink}{4}
+\contentsline {subsection}{\numberline {2.1}Ablauf einer Simulink-Simulation}{4}
+\contentsline {subsection}{\numberline {2.2}Codegeneration mit Simulink}{4}
+\contentsline {subsection}{\numberline {2.3}Ablauf einer Simulink-Codegeneration}{5}
+\contentsline {subsubsection}{\numberline {2.3.1}System Target File}{5}
+\contentsline {subsubsection}{\numberline {2.3.2}Template Make File}{5}
+\contentsline {section}{\numberline {3}Aufbau und Implementierung von Simulink-Bl\IeC {\"o}cken}{6}
+\contentsline {subsection}{\numberline {3.1}C/C++ S-Function}{6}
+\contentsline {subsection}{\numberline {3.2}Codegeneration einer S-Function}{7}
+\contentsline {subsection}{\numberline {3.3}Kompilierung einer S-Function}{8}
