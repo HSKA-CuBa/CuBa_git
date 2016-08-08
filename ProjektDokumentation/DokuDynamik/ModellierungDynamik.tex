@@ -1,4 +1,4 @@
-\section{Modellierung der Systemdynamik}
+\section{Modellierung der Systemdynamik} \label{Dynamik_sec}
 In dem folgenden Abschnitt werden die Bewegungsgleichungen mit Hilfe des Lagrange Formalismus hergeleitet. Aus diesen Gleichung kann im Anschluss eine Zustandsraumdarstellung aufgestellt werden, welche als Grundlage für den Reglerentwurf dient.
 
 \begin{figure}[h]
@@ -112,54 +112,4 @@ Die Bewegungsgleichung für die Schwungmasse ergibt sich durch Einsetzen von (\r
 \begin{equation}
 \label{BG_psi_equation}
 \ddot{\psi} = \frac{(J^A_K + m_R \cdot l_{AB}^2 + J^B_R)(T_M - C_{\psi} \cdot \dot{\psi})}{(J^A_K + m_R \cdot {l_{AB}}^2)J^B_R} + \frac{C_{\varphi} \cdot \dot{\varphi} - g(m_R \cdot l_{AB} + m_K \cdot l_{AC})sin(\varphi)}{J^A_K + m_R \cdot {l_{AB}}^2}
-\end{equation}
-
-Mit Hilfe der Bewegungsgleichungen kann nun eine Zustandsraumdarstellung aufgestellt werden. Hierfür werden die nichtlinearen Terme entsprechend linearisiert. 
-
-\begin{equation}
-\textbf{x} = \begin{pmatrix}
-\varphi \\ \dot{\varphi} \\ \dot{\psi}
-\end{pmatrix}
-\hspace{35pt}
-\textbf{y} = \begin{pmatrix}
-\varphi \\ \dot{\varphi} \\ \dot{\psi}
-\end{pmatrix}
-\hspace{35pt}
-u = T_M
-\end{equation}
-
-\begin{equation}
-\dot{\textbf{x}} = \textbf{A} \cdot \textbf{x} + \textbf{B} \cdot u
-\end{equation}
-
-\begin{equation}
-\textbf{y} = \textbf{C} \cdot \textbf{x} + \textbf{D} \cdot u
-\end{equation}
-
-\begin{equation}
-\begin{split}
-\renewcommand*{\arraystretch}{1.7}
-\textbf{A} = \begin{pmatrix}
-0 & 1 & 0 \\
-\frac{g(m_K \cdot l_{AC} + m_R \cdot l_{AB})}{J^A_K + m_R \cdot l_{AB}^2} &
-\frac{-C_{\varphi}}{J^A_K + m_R \cdot l_{AB}^2} & 
-\frac{C_{\psi}}{J^A_K + m_R \cdot l_{AB}^2} \\
-\frac{-g(m_K \cdot l_{AC} + m_R \cdot l_{AB)}}{J^A_K + m_R \cdot l_{AB}^2} &
-\frac{C_{\varphi}}{J^A_K + m_R \cdot l_{AB}^2} &
-\frac{-C_{\psi}(J^A_K + J^B_R + m_R \cdot l_{AB}^2)}{J^B_R(J^A_K + m_R \cdot l_{AB}^2)}
-\end{pmatrix} 
-\\
-\renewcommand*{\arraystretch}{1.7}
-\textbf{B} = \begin{pmatrix}
-0 \\ \frac{-1}{J^A_K + m_R \cdot l_{AB}^2} \\ \frac{J^A_K + J^B_R + m_R \cdot l_{AB}^2}{J^K_R(J^A_K + m_R \cdot l_{AB}^2}
-\end{pmatrix}
-\hspace{35 pt}
-\textbf{C} = \begin{pmatrix}
-1 & 1 & 1
-\end{pmatrix}
-\hspace{35pt}
-\textbf{D} = \begin{pmatrix}
-0
-\end{pmatrix}
-\end{split}
 \end{equation}

@@ -1,5 +1,6 @@
 \section{Sensorik}
-Die Aufgabe der verwendeten Sensorik liegt darin die Werte für $\varphi$, und $\dot{\varphi}$ zu bestimmen. Hierfür wurden zwei MPU6050 IC's verwendet. Diese verfügen jeweils über einen Beschleunigungssensor und Gyroskop, welche Werte für drei Achsen ausgeben. Um die Konfiguration und Auswertung der Sensoren vorzunehmen, bieten diese eine $I^2C$ Schnittstelle an. Die Position und Ausrichtung der Sensoren ist in \ref{Position_Sensoren_pic} dargestellt.
+\label{Sensorik_secd}
+Die Aufgabe der verwendeten Sensorik liegt darin die Werte für $\varphi$, und $\dot{\varphi}$ zu bestimmen. Hierfür wurden zwei MPU6050 IC's verwendet. Diese verfügen jeweils über einen Beschleunigungssensor und Gyroskop, welche Werte für drei Achsen ausgeben. Die Position und Ausrichtung der Sensoren ist in \ref{Position_Sensoren_pic} dargestellt.
 
 \begin{figure}[h]
 \label{Position_Sensoren_pic}
@@ -7,7 +8,7 @@ Die Aufgabe der verwendeten Sensorik liegt darin die Werte für $\varphi$, und $
 \caption{Position der Sensoren, Quelle: eigene Darstellung}
 \end{figure}
 
-\subsection{Berechnung der Winkelwerte}
+\subsection{Winkelschätzung}
 Die Sensoren keine Wege bzw. Winkel. Somit muss der Winkel $\varphi$ berechnet werden. Die gemessenen Sensorwerte hängen von $r_{S1}$ bzw. $r_{S2}$ ab, welche den Abstand zwischen den Sensoren und dem Drehpunkt $A$ beschreiben. Zusätzlich beeinflussen neben dem Winkel $\varphi$ auch dessen beiden Ableitungen $\dot{\varphi}$ und $\ddot{\varphi}$ die Sensorausgabe. Allerdings lassen sich aus den Beschleunigungswerten der beiden Sensoren wie folgt der aktuelle Wert von $\varphi$ berechnen.
 
 \begin{equation}
@@ -49,4 +50,8 @@ In der Ruhelage werden 10000 Geschwindigkeitswerte der Sensoren aufgenommen. Üb
 
 
 \subsubsection{Umrechnung der Beschleunigungswerte}
-Um das Polynom zur Umrechnung der Beschleunigungswerte zu ermitteln werden sieben Messungen in den fixen Ausfallpositionen $\phi \in [-45, -30, -15, 0, 15, 30, 45]$ durchgeführt. Pro Position werden $m = 10000$ Messwerte aufgenommen. Da in der Ruhelage die Beschleunigung lediglich von dem aktuellen Ausfallwinkel abhängen ist der Sollwert für jede Position bekannt. Somit kann Polynom erster Ordnung approximiert werden um Mittelwerte der sieben Positionen in die entsprechenden Beschleunigungswerte umzurechnen.
+Um das Polynom zur Umrechnung der Beschleunigungswerte zu ermitteln werden sieben Messungen in den fixen Ausfallpositionen $\phi \in [-45, -30, -15, 0, 15, 30, 45]$ durchgeführt. Pro Position werden $m = 10000$ Messwerte aufgenommen. Da in der Ruhelage die Beschleunigung lediglich von dem aktuellen Ausfallwinkel abhängt ist der Sollwert für jede Position bekannt. Somit kann ein Polynom erster Ordnung approximiert werden um Mittelwerte der sieben Positionen in die entsprechenden Beschleunigungswerte umzurechnen.
+
+%Bild mit Mittelwertvarlauf der Beschleunigungswerte x1, x2, y1, y2
+
+
