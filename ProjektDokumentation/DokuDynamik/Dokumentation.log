@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.17)  8 AUG 2016 21:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.17)  9 AUG 2016 09:06
 entering extended mode
 **./Dokumentation.tex
 (Dokumentation.tex
@@ -899,7 +899,8 @@ ty"
 Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 ) (Dokumentation.aux (Einfuehrung.aux) (AktorikSensorik.aux)
-(ModellierungDynamik.aux) (Sensoren.aux) (Modellbildung.aux))
+(ModellierungDynamik.aux) (Sensoren.aux) (Modellbildung.aux) (Reglerentwurf.aux
+))
 \openout1 = `Dokumentation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -974,9 +975,16 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+(Dokumentation.toc)
+\tf@toc=\write4
+\openout4 = `Dokumentation.toc'.
+
+ [1
+
+{C:/Users/ich/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 \openout2 = `Einfuehrung.aux'.
 
-(Einfuehrung.tex
+ (Einfuehrung.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 5.
 
 ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
@@ -985,25 +993,23 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
 )
-[1
+[2
 
-
-{C:/Users/ich/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+]
 \openout2 = `AktorikSensorik.aux'.
 
+ (AktorikSensorik.tex
 
-(AktorikSensorik.tex
+LaTeX Warning: Reference `sensorik_sec' on page 3 undefined on input line 4.
 
-LaTeX Warning: Reference `sensorik_sec' on page 2 undefined on input line 4.
-
-) [2
+) [3
 
 
 ]
 \openout2 = `ModellierungDynamik.aux'.
 
  (ModellierungDynamik.tex
-<img/MechZeichnung1D.pdf, id=18, 963.6pt x 542.025pt>
+<img/MechZeichnung1D.pdf, id=22, 963.6pt x 542.025pt>
 File: img/MechZeichnung1D.pdf Graphic file (type pdf)
 
 <use img/MechZeichnung1D.pdf>
@@ -1014,10 +1020,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-[3
+[4
 
 
- <./img/MechZeichnung1D.pdf>]) [4]
+ <./img/MechZeichnung1D.pdf>]) [5]
 \openout2 = `Sensoren.aux'.
 
  (Sensoren.tex
@@ -1026,60 +1032,73 @@ Package caption Warning: \label without proper reference on input line 6.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `Position_Sensoren_pic' on page 5 undefined on input l
+LaTeX Warning: Reference `Position_Sensoren_pic' on page 6 undefined on input l
 ine 3.
 
-<img/SensorZeichnung1D.pdf, id=39, 963.6pt x 542.025pt>
+<img/SensorZeichnung1D.pdf, id=42, 963.6pt x 542.025pt>
 File: img/SensorZeichnung1D.pdf Graphic file (type pdf)
 
 <use img/SensorZeichnung1D.pdf>
 Package pdftex.def Info: img/SensorZeichnung1D.pdf used on input line 7.
 (pdftex.def)             Requested size: 441.01773pt x 248.0691pt.
- [5
+ [6
 
 
- <./img/SensorZeichnung1D.pdf>]) [6]
+ <./img/SensorZeichnung1D.pdf>]) [7]
 \openout2 = `Modellbildung.aux'.
 
 
-(Modellbildung.tex [7
+(Modellbildung.tex [8
 
 
-] [8]
-<img/model_1D_overview.pdf, id=74, 794.97pt x 614.295pt>
+] [9]
+<img/model_1D_overview.pdf, id=77, 794.97pt x 614.295pt>
 File: img/model_1D_overview.pdf Graphic file (type pdf)
 
 <use img/model_1D_overview.pdf>
 Package pdftex.def Info: img/model_1D_overview.pdf used on input line 132.
 (pdftex.def)             Requested size: 441.01773pt x 135.59277pt.
 
-<img/model_1D_cubebody.pdf, id=76, 845.1575pt x 597.23125pt>
+<img/model_1D_cubebody.pdf, id=79, 845.1575pt x 597.23125pt>
 File: img/model_1D_cubebody.pdf Graphic file (type pdf)
 
 <use img/model_1D_cubebody.pdf>
 Package pdftex.def Info: img/model_1D_cubebody.pdf used on input line 154.
 (pdftex.def)             Requested size: 441.01773pt x 163.17943pt.
- [9 <./img/model_1D_overview.pdf> <./img/model_1D_cubebody.pdf>] <img/model_1D_
-wheel.pdf, id=101, 845.1575pt x 597.23125pt>
+ [10 <./img/model_1D_overview.pdf> <./img/model_1D_cubebody.pdf>] <img/model_1D
+_wheel.pdf, id=104, 845.1575pt x 597.23125pt>
 File: img/model_1D_wheel.pdf Graphic file (type pdf)
 
 <use img/model_1D_wheel.pdf>
 Package pdftex.def Info: img/model_1D_wheel.pdf used on input line 169.
 (pdftex.def)             Requested size: 441.01773pt x 133.4842pt.
-) [10 <./img/model_1D_wheel.pdf>] [11
+) [11 <./img/model_1D_wheel.pdf>]
+\openout2 = `Reglerentwurf.aux'.
 
-]
-(Dokumentation.aux (Einfuehrung.aux) (AktorikSensorik.aux)
-(ModellierungDynamik.aux) (Sensoren.aux) (Modellbildung.aux))
+
+(Reglerentwurf.tex <img/Regelkreis.pdf, id=119, 963.6pt x 542.025pt>
+File: img/Regelkreis.pdf Graphic file (type pdf)
+
+<use img/Regelkreis.pdf>
+Package pdftex.def Info: img/Regelkreis.pdf used on input line 6.
+(pdftex.def)             Requested size: 441.01773pt x 117.84912pt.
+) [12
+
+
+ <./img/Regelkreis.pdf>] [13
+
+] (Dokumentation.aux
+(Einfuehrung.aux) (AktorikSensorik.aux) (ModellierungDynamik.aux) (Sensoren.aux
+) (Modellbildung.aux) (Reglerentwurf.aux))
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 14834 strings out of 493634
- 286852 string characters out of 3136055
- 345242 words of memory out of 3000000
- 17878 multiletter control sequences out of 15000+200000
+ 14855 strings out of 493634
+ 287185 string characters out of 3136055
+ 345751 words of memory out of 3000000
+ 17888 multiletter control sequences out of 15000+200000
  11519 words of font info for 41 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  68i,22n,98p,965b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1101,9 +1120,9 @@ grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ich/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/
 ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb
 >
-Output written on Dokumentation.pdf (11 pages, 442466 bytes).
+Output written on Dokumentation.pdf (13 pages, 737490 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
+ 195 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 67 words of extra memory for PDF output out of 10000 (max. 10000000)
 
