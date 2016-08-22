@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TestMPU6050'.
  *
- * Model version                  : 1.58
+ * Model version                  : 1.64
  * Simulink Coder version         : 8.10 (R2016a) 10-Feb-2016
- * C/C++ source code generated on : Mon Aug 01 10:00:16 2016
+ * C/C++ source code generated on : Mon Aug 22 12:24:22 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex

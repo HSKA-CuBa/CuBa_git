@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="./js/coder_app.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="./rtwreport_utils.js"></script>
+<script type="text/javascript" src="./rtwannotate.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/coder_app.css"/>
+</head>
+<body onload="srcFileOnload();">
+<pre id="code">
+<table class="code" id="codeTbl">
+<tr name="1" id="1">
+<td>1</td><td><span class="ct">//Michael Meindl, 10.8.2016</span></td></tr>
+<tr name="2" id="2">
+<td>2</td><td><span class="pp">#include "ADC.h"</span></td></tr>
+<tr name="3" id="3">
+<td>3</td><td><span class="pp">#include "stm32f4xx.h"</span></td></tr>
+<tr name="4" id="4">
+<td>4</td><td><span class="pp">#include "stm32f4xx_gpio.h"</span></td></tr>
+<tr name="5" id="5">
+<td>5</td><td><span class="pp">#include "stm32f4xx_rcc.h"</span></td></tr>
+<tr name="6" id="6">
+<td>6</td><td><span class="pp">#include "stm32f4xx_adc.h"</span></td></tr>
+<tr name="7" id="7">
+<td>7</td><td></td></tr>
+<tr name="8" id="8">
+<td>8</td><td><span class="kw">static</span> <span class="kw">void</span> <a id="8c13" class="tk">initADCGPIO</a>();</td></tr>
+<tr name="9" id="9">
+<td>9</td><td></td></tr>
+<tr name="10" id="10">
+<td>10</td><td><a id="10c1" class="tk">UInt16</a> <a id="10c8" class="tk">getADCValue</a>()</td></tr>
+<tr name="11" id="11">
+<td>11</td><td><span class="br">{</span></td></tr>
+<tr name="12" id="12">
+<td>12</td><td>	<span class="kw">return</span> <a id="12c9" class="tk">ADC_GetConversionValue</a>(<a id="12c32" class="tk">ADC1</a>);</td></tr>
+<tr name="13" id="13">
+<td>13</td><td><span class="br">}</span></td></tr>
+<tr name="14" id="14">
+<td>14</td><td><span class="kw">void</span> <a id="14c6" class="tk">initADC</a>()</td></tr>
+<tr name="15" id="15">
+<td>15</td><td><span class="br">{</span></td></tr>
+<tr name="16" id="16">
+<td>16</td><td>	<a id="16c2" class="tk">initADCGPIO</a>();</td></tr>
+<tr name="17" id="17">
+<td>17</td><td>	<a id="17c2" class="tk">RCC_APB2PeriphClockCmd</a>(<a id="17c25" class="tk">RCC_APB2Periph_ADC1</a>, <a id="17c46" class="tk">ENABLE</a>);</td></tr>
+<tr name="18" id="18">
+<td>18</td><td>	<a id="18c2" class="tk">ADC_InitTypeDef</a> <a id="18c18" class="tk">init</a>;</td></tr>
+<tr name="19" id="19">
+<td>19</td><td>	<a id="19c2" class="tk">init</a>.<a id="19c7" class="tk">ADC_Resolution</a>			= <a id="19c26" class="tk">ADC_Resolution_12b</a>;</td></tr>
+<tr name="20" id="20">
+<td>20</td><td>	<a id="20c2" class="tk">init</a>.<a id="20c7" class="tk">ADC_ScanConvMode</a>		= <a id="20c27" class="tk">DISABLE</a>;</td></tr>
+<tr name="21" id="21">
+<td>21</td><td>	<a id="21c2" class="tk">init</a>.<a id="21c7" class="tk">ADC_ContinuousConvMode</a> = <a id="21c32" class="tk">ENABLE</a>;</td></tr>
+<tr name="22" id="22">
+<td>22</td><td>	<a id="22c2" class="tk">init</a>.<a id="22c7" class="tk">ADC_ExternalTrigConv</a>	= <a id="22c30" class="tk">ADC_ExternalTrigConvEdge_None</a>;</td></tr>
+<tr name="23" id="23">
+<td>23</td><td>	<a id="23c2" class="tk">init</a>.<a id="23c7" class="tk">ADC_DataAlign</a>			= <a id="23c25" class="tk">ADC_DataAlign_Right</a>;</td></tr>
+<tr name="24" id="24">
+<td>24</td><td>	<a id="24c2" class="tk">init</a>.<a id="24c7" class="tk">ADC_NbrOfConversion</a>	= 1;</td></tr>
+<tr name="25" id="25">
+<td>25</td><td>	<a id="25c2" class="tk">ADC_Init</a>(<a id="25c11" class="tk">ADC1</a>, <a id="25c17" class="tk">&amp;</a><a id="25c18" class="tk">init</a>);</td></tr>
+<tr name="26" id="26">
+<td>26</td><td>	<a id="26c2" class="tk">ADC_RegularChannelConfig</a>(<a id="26c27" class="tk">ADC1</a>, <a id="26c33" class="tk">ADC_Channel_0</a>, 1, <a id="26c51" class="tk">ADC_SampleTime_15Cycles</a>);</td></tr>
+<tr name="27" id="27">
+<td>27</td><td>	<a id="27c2" class="tk">ADC_Cmd</a>(<a id="27c10" class="tk">ADC1</a>, <a id="27c16" class="tk">ENABLE</a>);</td></tr>
+<tr name="28" id="28">
+<td>28</td><td>	<a id="28c2" class="tk">ADC_SoftwareStartConv</a>(<a id="28c24" class="tk">ADC1</a>);</td></tr>
+<tr name="29" id="29">
+<td>29</td><td><span class="br">}</span></td></tr>
+<tr name="30" id="30">
+<td>30</td><td><span class="kw">void</span> <a id="30c6" class="tk">initADCGPIO</a>()</td></tr>
+<tr name="31" id="31">
+<td>31</td><td><span class="br">{</span></td></tr>
+<tr name="32" id="32">
+<td>32</td><td>	<a id="32c2" class="tk">RCC_AHB1PeriphClockCmd</a>(<a id="32c25" class="tk">RCC_AHB1Periph_GPIOA</a>, <a id="32c47" class="tk">ENABLE</a>);</td></tr>
+<tr name="33" id="33">
+<td>33</td><td>	<a id="33c2" class="tk">GPIO_InitTypeDef</a> <a id="33c19" class="tk">init</a>;</td></tr>
+<tr name="34" id="34">
+<td>34</td><td>	<a id="34c2" class="tk">init</a>.<a id="34c7" class="tk">GPIO_Pin</a> 		= <a id="34c20" class="tk">GPIO_Pin_0</a>;</td></tr>
+<tr name="35" id="35">
+<td>35</td><td>	<a id="35c2" class="tk">init</a>.<a id="35c7" class="tk">GPIO_Mode</a>		= <a id="35c20" class="tk">GPIO_Mode_AIN</a>;</td></tr>
+<tr name="36" id="36">
+<td>36</td><td>	<a id="36c2" class="tk">GPIO_Init</a>(<a id="36c12" class="tk">GPIOA</a>, <a id="36c19" class="tk">&amp;</a><a id="36c20" class="tk">init</a>);</td></tr>
+<tr name="37" id="37">
+<td>37</td><td><span class="br">}</span></td></tr>
+<tr name="38" id="38">
+<td>38</td><td></td></tr>
+</table>
+</pre>
+</body>
+</html>

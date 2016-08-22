@@ -1,5 +1,5 @@
 \select@language {ngerman}
-\contentsline {section}{\numberline {1}Einf\IeC {\"u}hrung}{2}
+\contentsline {section}{\numberline {1}Cube-Balance (CuBa) - Der selbstbalancierende W\IeC {\"u}rfel}{2}
 \contentsline {section}{\numberline {2}Aktorik und Sensorik}{3}
 \contentsline {section}{\numberline {3}Modellierung der Systemdynamik}{4}
 \contentsline {section}{\numberline {4}Sensorik}{6}
@@ -8,6 +8,7 @@
 \contentsline {subsubsection}{\numberline {4.2.1}Umrechnung der Winkelgeschwindigkeiten}{7}
 \contentsline {subsubsection}{\numberline {4.2.2}Umrechnung der Beschleunigungswerte}{7}
 \contentsline {subsection}{\numberline {4.3}Auswertung der Radgeschwindigkeit $\mathaccentV {dot}05F{\psi }$}{7}
+\contentsline {subsection}{\numberline {4.4}Filterung der Sensordaten}{7}
 \contentsline {section}{\numberline {5}Modellbildung und Bestimmung der Systemgr\IeC {\"o}\IeC {\ss }en}{8}
 \contentsline {subsection}{\numberline {5.1}Identifikation der Parameter}{8}
 \contentsline {subsubsection}{\numberline {5.1.1}Ermittlung des Reibwertes $C_{\varphi }$}{8}
@@ -18,3 +19,4 @@
 \contentsline {subsubsection}{\numberline {5.2.2}Simulation der W\IeC {\"u}rfelseite}{10}
 \contentsline {subsubsection}{\numberline {5.2.3}Simulation der Schwungmasse}{11}
 \contentsline {section}{\numberline {6}Reglerentwurf}{12}
+\contentsline {section}{\numberline {7}Aufspringen}{13}

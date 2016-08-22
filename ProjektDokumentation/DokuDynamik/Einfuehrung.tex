@@ -1,13 +1,11 @@
-\section{Einführung}
+\section{Cube-Balance (CuBa) - Der selbstbalancierende Würfel}
+In der folgenden Dokumentation wird das CuBa-Projekt vorgestellt. Die Idee für dieses Projekt stammt von dem s.g. Cubli der ETH Zürich. Hierbei handelt es sich um einen Würfel, welcher in der Lage ist selbständig auf seine Ecken und Kanten zu springen und dort zu balancieren. Hierfür werden Motoren in dem Würfel fixiert, an welchen Schwungräder befestigt sind. Die Motormomente dienen einerseits als Stellgröße um den Würfel zu balancieren. Andererseits können die Schwungmassen über Bremsen abrupt zum Stillstand gebracht werden. Dadurch wird der Drehimpuls der Räder auf den Würfel übertragen. Somit ist es möglich den Würfel aus einer beliebigen Ruhelage aufzurichten.
+\newline
 
-Messungen:
-\begin{itemize}
-\item Beschleunigung Sensor1 und Sensor2 bei 45 Grad
-\item Beschleunigung Sensor1 und Sensor2 bei 30 Grad
-\item Beschleunigung Sensor1 und Sensor2 bei 15 Grad
-\item Beschleunigung Sensor1 und Sensor2 bei 0  Grad
-\item Beschleunigung Sensor1 und Sensor2 bei -15 Grad
-\item Beschleunigung Sensor1 und Sensor2 bei -30 Grad
-\item Beschleunigung Sensor1 und Sensor2 bei -45 Grad
-\item Winkelgeschwindigkeit Sensor1 und Sensor2 bei 0 rad/sec
-\end{itemize}
+Das Projekt ist in zwei Abschnitte unterteilt. Zuerst wird eine einzelne Würfelseite konzipiert, an welcher ein Motor mit einer Schwungmasse angebracht ist. Über eine Achse wird die Würfelseite gelagert und ist somit auf einen einzelnen rotatorischen Freiheitsgrad beschränkt. Dieser Prototyp dient als erstes Versuchsobjekt (1D-Modell) um die Systemeigenschaften zu untersuchen und Rückschlüsse auf den Entwurf des kompletten Würfel (3D-Modell) zu ziehen. Im zweiten Teil wird der letztendliche Würfel entwickelt, welcher über drei Motoren und Schwungmassen verfügt.
+\newline
+
+Der Aufbau der Dokumentation ist an den Projektverlauf angelehnt, so wird zu Beginn der Aufbau des 1D-Modell näher erläutert. Hierbei werden zuerst der mechanische Aufbau und die elektrischen Komponenten diskutiert. Im Anschluss werden mit Hilfe des Lagrange-Formalismus die Bewegungsgleichungen hergeleitet. Damit kann eine Zustandsraumdarstellung des Systems gewonnen werden, welche wiederum zu dem Entwurf eines zeitdiskreten Zustandsreglers verwendet wird. Außerdem wird auf die Auswertung der Sensoren eingegangen um mit Hilfe von Filtern und Datenfusionen möglichst genaue Schätzwerte des aktuellen Zustandsvektors zu erhalten. Zuletzt wird das Aufspringen der Würfelseite näher untersucht. Hierbei wird ein Lernalgorithmus vorgestellt, welcher die optimale Radgeschwindigkeit zum Aufspringen unter realen Bedingungen findet.
+\newline
+
+und von dem ganzen Würfel gibts noch nich so viel

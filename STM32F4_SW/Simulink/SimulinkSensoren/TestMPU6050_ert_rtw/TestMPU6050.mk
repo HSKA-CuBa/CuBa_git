@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'TestMPU6050'. 
 ## 
 ## Makefile     : TestMPU6050.mk
-## Generated on : Mon Aug 01 10:00:24 2016
+## Generated on : Thu Aug 18 13:19:58 2016
 ## MATLAB Coder version: 3.1 (R2016a)
 ## 
 ## Build Info:
@@ -695,6 +695,34 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(LIBS) $(MAIN_OBJ)
 
 
 %.o : $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/%.cxx
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung/MPU6050/%.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung/MPU6050/%.s
+	$(AS) $(ASFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung/MPU6050/%.S
+	$(AS) $(ASFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung/MPU6050/%.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung/MPU6050/%.cc
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung/MPU6050/%.C
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung/MPU6050/%.cxx
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 

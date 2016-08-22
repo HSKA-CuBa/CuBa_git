@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="./js/coder_app.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="./rtwreport_utils.js"></script>
+<script type="text/javascript" src="./rtwannotate.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/coder_app.css"/>
+</head>
+<body onload="srcFileOnload();">
+<pre id="code">
+<table class="code" id="codeTbl">
+<tr name="1" id="1">
+<td>1</td><td><span class="ct">// Autor: Michael Meindl</span></td></tr>
+<tr name="2" id="2">
+<td>2</td><td><span class="ct">// Datum: 28.07.2016</span></td></tr>
+<tr name="3" id="3">
+<td>3</td><td><span class="ct">// Funktionen zur Initialisierung und Auslesen der Sensoren</span></td></tr>
+<tr name="4" id="4">
+<td>4</td><td><span class="pp">#include "MPU6050.h"</span></td></tr>
+<tr name="5" id="5">
+<td>5</td><td><span class="pp">#include "stm32f4xx.h"</span></td></tr>
+<tr name="6" id="6">
+<td>6</td><td><span class="pp">#include "stm32f4xx_gpio.h"</span></td></tr>
+<tr name="7" id="7">
+<td>7</td><td><span class="pp">#include "stm32f4xx_rcc.h"</span></td></tr>
+<tr name="8" id="8">
+<td>8</td><td><span class="pp">#include "stm32f4xx_i2c.h"</span></td></tr>
+<tr name="9" id="9">
+<td>9</td><td></td></tr>
+<tr name="10" id="10">
+<td>10</td><td><span class="pp">#define</span> <a id="10c9" class="tk">MPU_BASE_ADDR</a> ((<a id="10c25" class="tk">UInt8</a>)(0x68U <a id="10c38" class="tk">&lt;&lt;</a> 1U))</td></tr>
+<tr name="11" id="11">
+<td>11</td><td></td></tr>
+<tr name="12" id="12">
+<td>12</td><td><span class="kw">static</span> <span class="kw">void</span> <a id="12c13" class="tk">initI2CPins</a>();</td></tr>
+<tr name="13" id="13">
+<td>13</td><td><span class="kw">static</span> <span class="kw">void</span> <a id="13c13" class="tk">initI2C</a>();</td></tr>
+<tr name="14" id="14">
+<td>14</td><td><span class="kw">static</span> <span class="kw">void</span> <a id="14c13" class="tk">startTransmission</a>(<a id="14c31" class="tk">UInt8</a> <a id="14c37" class="tk">address</a>, <a id="14c46" class="tk">UInt8</a> <a id="14c52" class="tk">direction</a>);</td></tr>
+<tr name="15" id="15">
+<td>15</td><td><span class="kw">void</span> <a id="15c6" class="tk">writeByte</a>(<span class="kw">bool</span> <a id="15c21" class="tk">AD0pinLevel</a>, <a id="15c34" class="tk">UInt8</a> <a id="15c40" class="tk">registerAddr</a>, <a id="15c54" class="tk">UInt8</a> <a id="15c60" class="tk">byte</a>);</td></tr>
+<tr name="16" id="16">
+<td>16</td><td><a id="16c1" class="tk">UInt8</a> <a id="16c7" class="tk">readByte</a>(<span class="kw">bool</span> <a id="16c21" class="tk">AD0pinLevel</a>, <a id="16c34" class="tk">UInt8</a> <a id="16c40" class="tk">registerAddr</a>);</td></tr>
+<tr name="17" id="17">
+<td>17</td><td></td></tr>
+<tr name="18" id="18">
+<td>18</td><td><span class="kw">bool</span> <a id="18c6" class="tk">initMPU6050</a>(<span class="kw">bool</span> <a id="18c23" class="tk">AD0pinLevel</a>, <a id="18c36" class="tk">ELowPass</a> <a id="18c45" class="tk">lowPassConfig</a>)</td></tr>
+<tr name="19" id="19">
+<td>19</td><td><span class="br">{</span></td></tr>
+<tr name="20" id="20">
+<td>20</td><td>	<a id="20c2" class="tk">initI2C</a>();</td></tr>
+<tr name="21" id="21">
+<td>21</td><td>	<a id="21c2" class="tk">writeByte</a>(<a id="21c12" class="tk">AD0pinLevel</a>, <a id="21c25" class="tk">PWR_MGMT_1</a>, 0U);</td></tr>
+<tr name="22" id="22">
+<td>22</td><td>	<a id="22c2" class="tk">writeByte</a>(<a id="22c12" class="tk">AD0pinLevel</a>, <a id="22c25" class="tk">CONFIG</a>, <a id="22c33" class="tk">lowPassConfig</a>);</td></tr>
+<tr name="23" id="23">
+<td>23</td><td>	<span class="kw">return</span> <a id="23c9" class="tk">readByte</a>(<a id="23c18" class="tk">AD0pinLevel</a>, <a id="23c31" class="tk">WHO_AM_I</a>) <a id="23c41" class="tk">==</a> 0x68U;</td></tr>
+<tr name="24" id="24">
+<td>24</td><td><span class="br">}</span></td></tr>
+<tr name="25" id="25">
+<td>25</td><td><a id="25c1" class="tk">Int16</a> <a id="25c7" class="tk">readMPU6050_XAcceleration</a>(<span class="kw">bool</span> <a id="25c38" class="tk">AD0pinLevel</a>)</td></tr>
+<tr name="26" id="26">
+<td>26</td><td><span class="br">{</span></td></tr>
+<tr name="27" id="27">
+<td>27</td><td>	<span class="kw">union</span> <a id="27c8" class="tk">SensorData</a></td></tr>
+<tr name="28" id="28">
+<td>28</td><td>	<span class="br">{</span></td></tr>
+<tr name="29" id="29">
+<td>29</td><td>		<a id="29c3" class="tk">Int16</a> <a id="29c9" class="tk">xAcceleration</a>;</td></tr>
+<tr name="30" id="30">
+<td>30</td><td>		<a id="30c3" class="tk">UInt8</a> <a id="30c9" class="tk">bytes</a>[2];</td></tr>
+<tr name="31" id="31">
+<td>31</td><td>	<span class="br">}</span> <a id="31c4" class="tk">xAcc</a>;</td></tr>
+<tr name="32" id="32">
+<td>32</td><td>	<a id="32c2" class="tk">xAcc</a>.<a id="32c7" class="tk">xAcceleration</a> = 0;</td></tr>
+<tr name="33" id="33">
+<td>33</td><td>	<a id="33c2" class="tk">xAcc</a>.<a id="33c7" class="tk">bytes</a>[0] = <a id="33c18" class="tk">readByte</a>(<a id="33c27" class="tk">AD0pinLevel</a>, <a id="33c40" class="tk">ACCEL_XOUT_L</a>);</td></tr>
+<tr name="34" id="34">
+<td>34</td><td>	<a id="34c2" class="tk">xAcc</a>.<a id="34c7" class="tk">bytes</a>[1] = <a id="34c18" class="tk">readByte</a>(<a id="34c27" class="tk">AD0pinLevel</a>, <a id="34c40" class="tk">ACCEL_XOUT_H</a>);</td></tr>
+<tr name="35" id="35">
+<td>35</td><td>	<span class="kw">return</span> <a id="35c9" class="tk">xAcc</a>.<a id="35c14" class="tk">xAcceleration</a>;</td></tr>
+<tr name="36" id="36">
+<td>36</td><td><span class="br">}</span></td></tr>
+<tr name="37" id="37">
+<td>37</td><td><a id="37c1" class="tk">Int16</a> <a id="37c7" class="tk">readMPU6050_YAcceleration</a>(<span class="kw">bool</span> <a id="37c38" class="tk">AD0pinLevel</a>)</td></tr>
+<tr name="38" id="38">
+<td>38</td><td><span class="br">{</span></td></tr>
+<tr name="39" id="39">
+<td>39</td><td>	<span class="kw">union</span> <a id="39c8" class="tk">SensorData</a></td></tr>
+<tr name="40" id="40">
+<td>40</td><td>	<span class="br">{</span></td></tr>
+<tr name="41" id="41">
+<td>41</td><td>		<a id="41c3" class="tk">Int16</a> <a id="41c9" class="tk">yAcceleration</a>;</td></tr>
+<tr name="42" id="42">
+<td>42</td><td>		<a id="42c3" class="tk">UInt8</a> <a id="42c9" class="tk">bytes</a>[2];</td></tr>
+<tr name="43" id="43">
+<td>43</td><td>	<span class="br">}</span> <a id="43c4" class="tk">yAcc</a>;</td></tr>
+<tr name="44" id="44">
+<td>44</td><td>	<a id="44c2" class="tk">yAcc</a>.<a id="44c7" class="tk">yAcceleration</a> = 0;</td></tr>
+<tr name="45" id="45">
+<td>45</td><td>	<a id="45c2" class="tk">yAcc</a>.<a id="45c7" class="tk">bytes</a>[0] = <a id="45c18" class="tk">readByte</a>(<a id="45c27" class="tk">AD0pinLevel</a>, <a id="45c40" class="tk">ACCEL_YOUT_L</a>);</td></tr>
+<tr name="46" id="46">
+<td>46</td><td>	<a id="46c2" class="tk">yAcc</a>.<a id="46c7" class="tk">bytes</a>[1] = <a id="46c18" class="tk">readByte</a>(<a id="46c27" class="tk">AD0pinLevel</a>, <a id="46c40" class="tk">ACCEL_YOUT_H</a>);</td></tr>
+<tr name="47" id="47">
+<td>47</td><td>	<span class="kw">return</span> <a id="47c9" class="tk">yAcc</a>.<a id="47c14" class="tk">yAcceleration</a>;</td></tr>
+<tr name="48" id="48">
+<td>48</td><td><span class="br">}</span></td></tr>
+<tr name="49" id="49">
+<td>49</td><td><a id="49c1" class="tk">Int16</a> <a id="49c7" class="tk">readMPU6050_ZAcceleration</a>(<span class="kw">bool</span> <a id="49c38" class="tk">AD0pinLevel</a>)</td></tr>
+<tr name="50" id="50">
+<td>50</td><td><span class="br">{</span></td></tr>
+<tr name="51" id="51">
+<td>51</td><td>	<span class="kw">union</span> <a id="51c8" class="tk">SensorData</a></td></tr>
+<tr name="52" id="52">
+<td>52</td><td>	<span class="br">{</span></td></tr>
+<tr name="53" id="53">
+<td>53</td><td>		<a id="53c3" class="tk">Int16</a> <a id="53c9" class="tk">zAcceleration</a>;</td></tr>
+<tr name="54" id="54">
+<td>54</td><td>		<a id="54c3" class="tk">UInt8</a> <a id="54c9" class="tk">bytes</a>[2];</td></tr>
+<tr name="55" id="55">
+<td>55</td><td>	<span class="br">}</span> <a id="55c4" class="tk">zAcc</a>;</td></tr>
+<tr name="56" id="56">
+<td>56</td><td>	<a id="56c2" class="tk">zAcc</a>.<a id="56c7" class="tk">zAcceleration</a> = 0;</td></tr>
+<tr name="57" id="57">
+<td>57</td><td>	<a id="57c2" class="tk">zAcc</a>.<a id="57c7" class="tk">bytes</a>[0] = <a id="57c18" class="tk">readByte</a>(<a id="57c27" class="tk">AD0pinLevel</a>, <a id="57c40" class="tk">ACCEL_ZOUT_L</a>);</td></tr>
+<tr name="58" id="58">
+<td>58</td><td>	<a id="58c2" class="tk">zAcc</a>.<a id="58c7" class="tk">bytes</a>[1] = <a id="58c18" class="tk">readByte</a>(<a id="58c27" class="tk">AD0pinLevel</a>, <a id="58c40" class="tk">ACCEL_ZOUT_H</a>);</td></tr>
+<tr name="59" id="59">
+<td>59</td><td>	<span class="kw">return</span> <a id="59c9" class="tk">zAcc</a>.<a id="59c14" class="tk">zAcceleration</a>;</td></tr>
+<tr name="60" id="60">
+<td>60</td><td><span class="br">}</span></td></tr>
+<tr name="61" id="61">
+<td>61</td><td><a id="61c1" class="tk">Int16</a> <a id="61c7" class="tk">readMPU6050_XGyroscope</a>(<span class="kw">bool</span> <a id="61c35" class="tk">AD0pinLevel</a>)</td></tr>
+<tr name="62" id="62">
+<td>62</td><td><span class="br">{</span></td></tr>
+<tr name="63" id="63">
+<td>63</td><td>	<span class="kw">union</span> <a id="63c8" class="tk">SensorData</a></td></tr>
+<tr name="64" id="64">
+<td>64</td><td>	<span class="br">{</span></td></tr>
+<tr name="65" id="65">
+<td>65</td><td>		<a id="65c3" class="tk">Int16</a> <a id="65c9" class="tk">xGyro</a>;</td></tr>
+<tr name="66" id="66">
+<td>66</td><td>		<a id="66c3" class="tk">UInt8</a> <a id="66c9" class="tk">bytes</a>[2];</td></tr>
+<tr name="67" id="67">
+<td>67</td><td>	<span class="br">}</span> <a id="67c4" class="tk">xGyr</a>;</td></tr>
+<tr name="68" id="68">
+<td>68</td><td>	<a id="68c2" class="tk">xGyr</a>.<a id="68c7" class="tk">xGyro</a> = 0;</td></tr>
+<tr name="69" id="69">
+<td>69</td><td>	<a id="69c2" class="tk">xGyr</a>.<a id="69c7" class="tk">bytes</a>[0] = <a id="69c18" class="tk">readByte</a>(<a id="69c27" class="tk">AD0pinLevel</a>, <a id="69c40" class="tk">GYRO_XOUT_L</a>);</td></tr>
+<tr name="70" id="70">
+<td>70</td><td>	<a id="70c2" class="tk">xGyr</a>.<a id="70c7" class="tk">bytes</a>[1] = <a id="70c18" class="tk">readByte</a>(<a id="70c27" class="tk">AD0pinLevel</a>, <a id="70c40" class="tk">GYRO_XOUT_H</a>);</td></tr>
+<tr name="71" id="71">
+<td>71</td><td>	<span class="kw">return</span> <a id="71c9" class="tk">xGyr</a>.<a id="71c14" class="tk">xGyro</a>;</td></tr>
+<tr name="72" id="72">
+<td>72</td><td><span class="br">}</span></td></tr>
+<tr name="73" id="73">
+<td>73</td><td><a id="73c1" class="tk">Int16</a> <a id="73c7" class="tk">readMPU6050_YGyroscope</a>(<span class="kw">bool</span> <a id="73c35" class="tk">AD0pinLevel</a>)</td></tr>
+<tr name="74" id="74">
+<td>74</td><td><span class="br">{</span></td></tr>
+<tr name="75" id="75">
+<td>75</td><td>	<span class="kw">union</span> <a id="75c8" class="tk">SensorData</a></td></tr>
+<tr name="76" id="76">
+<td>76</td><td>	<span class="br">{</span></td></tr>
+<tr name="77" id="77">
+<td>77</td><td>		<a id="77c3" class="tk">Int16</a> <a id="77c9" class="tk">yGyro</a>;</td></tr>
+<tr name="78" id="78">
+<td>78</td><td>		<a id="78c3" class="tk">UInt8</a> <a id="78c9" class="tk">bytes</a>[2];</td></tr>
+<tr name="79" id="79">
+<td>79</td><td>	<span class="br">}</span> <a id="79c4" class="tk">yGyr</a>;</td></tr>
+<tr name="80" id="80">
+<td>80</td><td>	<a id="80c2" class="tk">yGyr</a>.<a id="80c7" class="tk">yGyro</a> = 0;</td></tr>
+<tr name="81" id="81">
+<td>81</td><td>	<a id="81c2" class="tk">yGyr</a>.<a id="81c7" class="tk">bytes</a>[0] = <a id="81c18" class="tk">readByte</a>(<a id="81c27" class="tk">AD0pinLevel</a>, <a id="81c40" class="tk">GYRO_YOUT_L</a>);</td></tr>
+<tr name="82" id="82">
+<td>82</td><td>	<a id="82c2" class="tk">yGyr</a>.<a id="82c7" class="tk">bytes</a>[1] = <a id="82c18" class="tk">readByte</a>(<a id="82c27" class="tk">AD0pinLevel</a>, <a id="82c40" class="tk">GYRO_YOUT_H</a>);</td></tr>
+<tr name="83" id="83">
+<td>83</td><td>	<span class="kw">return</span> <a id="83c9" class="tk">yGyr</a>.<a id="83c14" class="tk">yGyro</a>;</td></tr>
+<tr name="84" id="84">
+<td>84</td><td><span class="br">}</span></td></tr>
+<tr name="85" id="85">
+<td>85</td><td><a id="85c1" class="tk">Int16</a> <a id="85c7" class="tk">readMPU6050_ZGyroscope</a>(<span class="kw">bool</span> <a id="85c35" class="tk">AD0pinLevel</a>)</td></tr>
+<tr name="86" id="86">
+<td>86</td><td><span class="br">{</span></td></tr>
+<tr name="87" id="87">
+<td>87</td><td>	<span class="kw">union</span> <a id="87c8" class="tk">SensorData</a></td></tr>
+<tr name="88" id="88">
+<td>88</td><td>	<span class="br">{</span></td></tr>
+<tr name="89" id="89">
+<td>89</td><td>		<a id="89c3" class="tk">Int16</a> <a id="89c9" class="tk">zGyro</a>;</td></tr>
+<tr name="90" id="90">
+<td>90</td><td>		<a id="90c3" class="tk">UInt8</a> <a id="90c9" class="tk">bytes</a>[2];</td></tr>
+<tr name="91" id="91">
+<td>91</td><td>	<span class="br">}</span> <a id="91c4" class="tk">zGyr</a>;</td></tr>
+<tr name="92" id="92">
+<td>92</td><td>	<a id="92c2" class="tk">zGyr</a>.<a id="92c7" class="tk">zGyro</a> = 0;</td></tr>
+<tr name="93" id="93">
+<td>93</td><td>	<a id="93c2" class="tk">zGyr</a>.<a id="93c7" class="tk">bytes</a>[0] = <a id="93c18" class="tk">readByte</a>(<a id="93c27" class="tk">AD0pinLevel</a>, <a id="93c40" class="tk">GYRO_ZOUT_L</a>);</td></tr>
+<tr name="94" id="94">
+<td>94</td><td>	<a id="94c2" class="tk">zGyr</a>.<a id="94c7" class="tk">bytes</a>[1] = <a id="94c18" class="tk">readByte</a>(<a id="94c27" class="tk">AD0pinLevel</a>, <a id="94c40" class="tk">GYRO_ZOUT_H</a>);</td></tr>
+<tr name="95" id="95">
+<td>95</td><td>	<span class="kw">return</span> <a id="95c9" class="tk">zGyr</a>.<a id="95c14" class="tk">zGyro</a>;</td></tr>
+<tr name="96" id="96">
+<td>96</td><td><span class="br">}</span></td></tr>
+<tr name="97" id="97">
+<td>97</td><td><a id="97c1" class="tk">UInt8</a> <a id="97c7" class="tk">readByte</a>(<span class="kw">bool</span> <a id="97c21" class="tk">AD0pinLevel</a>, <a id="97c34" class="tk">UInt8</a> <a id="97c40" class="tk">registerAddr</a>)</td></tr>
+<tr name="98" id="98">
+<td>98</td><td><span class="br">{</span></td></tr>
+<tr name="99" id="99">
+<td>99</td><td>	<span class="kw">while</span>((<a id="99c9" class="tk">I2C_GetFlagStatus</a>(<a id="99c27" class="tk">I2C1</a>, <a id="99c33" class="tk">I2C_FLAG_BUSY</a>)))</td></tr>
+<tr name="100" id="100">
+<td>100</td><td>	<span class="br">{</span></td></tr>
+<tr name="101" id="101">
+<td>101</td><td>		;</td></tr>
+<tr name="102" id="102">
+<td>102</td><td>	<span class="br">}</span></td></tr>
+<tr name="103" id="103">
+<td>103</td><td>	<a id="103c2" class="tk">UInt8</a> <a id="103c8" class="tk">deviceAddr</a> = <a id="103c21" class="tk">AD0pinLevel</a> <a id="103c33" class="tk">?</a> <a id="103c35" class="tk">MPU_BASE_ADDR</a> <a id="103c49" class="tk">+</a> 2U <a id="103c54" class="tk">:</a> <a id="103c56" class="tk">MPU_BASE_ADDR</a>;</td></tr>
+<tr name="104" id="104">
+<td>104</td><td>	<a id="104c2" class="tk">startTransmission</a>(<a id="104c20" class="tk">deviceAddr</a>, <a id="104c32" class="tk">I2C_Direction_Transmitter</a>);</td></tr>
+<tr name="105" id="105">
+<td>105</td><td>	<a id="105c2" class="tk">I2C_SendData</a>(<a id="105c15" class="tk">I2C1</a>, <a id="105c21" class="tk">registerAddr</a>);</td></tr>
+<tr name="106" id="106">
+<td>106</td><td></td></tr>
+<tr name="107" id="107">
+<td>107</td><td>	<a id="107c2" class="tk">startTransmission</a>(<a id="107c20" class="tk">deviceAddr</a><a id="107c30" class="tk">+</a>1U, <a id="107c35" class="tk">I2C_Direction_Receiver</a>);</td></tr>
+<tr name="108" id="108">
+<td>108</td><td>	<a id="108c2" class="tk">I2C_AcknowledgeConfig</a>(<a id="108c24" class="tk">I2C1</a>, <a id="108c30" class="tk">DISABLE</a>);</td></tr>
+<tr name="109" id="109">
+<td>109</td><td>	<a id="109c2" class="tk">I2C_GenerateSTOP</a>(<a id="109c19" class="tk">I2C1</a>, <a id="109c25" class="tk">ENABLE</a>);</td></tr>
+<tr name="110" id="110">
+<td>110</td><td>	<span class="kw">while</span>(<a id="110c8" class="tk">!</a><a id="110c9" class="tk">I2C_CheckEvent</a>(<a id="110c24" class="tk">I2C1</a>, <a id="110c30" class="tk">I2C_EVENT_MASTER_BYTE_RECEIVED</a>))</td></tr>
+<tr name="111" id="111">
+<td>111</td><td>	<span class="br">{</span></td></tr>
+<tr name="112" id="112">
+<td>112</td><td>		;</td></tr>
+<tr name="113" id="113">
+<td>113</td><td>	<span class="br">}</span></td></tr>
+<tr name="114" id="114">
+<td>114</td><td>	<span class="kw">return</span> <a id="114c9" class="tk">I2C_ReceiveData</a>(<a id="114c25" class="tk">I2C1</a>);</td></tr>
+<tr name="115" id="115">
+<td>115</td><td><span class="br">}</span></td></tr>
+<tr name="116" id="116">
+<td>116</td><td><span class="kw">void</span> <a id="116c6" class="tk">writeByte</a>(<span class="kw">bool</span> <a id="116c21" class="tk">AD0pinLevel</a>, <a id="116c34" class="tk">UInt8</a> <a id="116c40" class="tk">registerAddr</a>, <a id="116c54" class="tk">UInt8</a> <a id="116c60" class="tk">byteValue</a>)</td></tr>
+<tr name="117" id="117">
+<td>117</td><td><span class="br">{</span></td></tr>
+<tr name="118" id="118">
+<td>118</td><td>	<span class="kw">while</span>((<a id="118c9" class="tk">I2C_GetFlagStatus</a>(<a id="118c27" class="tk">I2C1</a>, <a id="118c33" class="tk">I2C_FLAG_BUSY</a>)))</td></tr>
+<tr name="119" id="119">
+<td>119</td><td>	<span class="br">{</span></td></tr>
+<tr name="120" id="120">
+<td>120</td><td>		;</td></tr>
+<tr name="121" id="121">
+<td>121</td><td>	<span class="br">}</span></td></tr>
+<tr name="122" id="122">
+<td>122</td><td>	<a id="122c2" class="tk">UInt8</a> <a id="122c8" class="tk">deviceAddr</a> = <a id="122c21" class="tk">AD0pinLevel</a> <a id="122c33" class="tk">?</a> <a id="122c35" class="tk">MPU_BASE_ADDR</a> <a id="122c49" class="tk">+</a> 2U <a id="122c54" class="tk">:</a> <a id="122c56" class="tk">MPU_BASE_ADDR</a>;</td></tr>
+<tr name="123" id="123">
+<td>123</td><td>	<a id="123c2" class="tk">startTransmission</a>(<a id="123c20" class="tk">deviceAddr</a>, <a id="123c32" class="tk">I2C_Direction_Transmitter</a>);</td></tr>
+<tr name="124" id="124">
+<td>124</td><td>	<a id="124c2" class="tk">I2C_SendData</a>(<a id="124c15" class="tk">I2C1</a>, <a id="124c21" class="tk">registerAddr</a>);</td></tr>
+<tr name="125" id="125">
+<td>125</td><td>	<span class="kw">while</span>(<a id="125c8" class="tk">!</a><a id="125c9" class="tk">I2C_CheckEvent</a>(<a id="125c24" class="tk">I2C1</a>, <a id="125c30" class="tk">I2C_EVENT_MASTER_BYTE_TRANSMITTED</a>))</td></tr>
+<tr name="126" id="126">
+<td>126</td><td>	<span class="br">{</span></td></tr>
+<tr name="127" id="127">
+<td>127</td><td>		;</td></tr>
+<tr name="128" id="128">
+<td>128</td><td>	<span class="br">}</span></td></tr>
+<tr name="129" id="129">
+<td>129</td><td>	<a id="129c2" class="tk">I2C_SendData</a>(<a id="129c15" class="tk">I2C1</a>, <a id="129c21" class="tk">byteValue</a>);</td></tr>
+<tr name="130" id="130">
+<td>130</td><td>	<span class="kw">while</span>(<a id="130c8" class="tk">!</a><a id="130c9" class="tk">I2C_CheckEvent</a>(<a id="130c24" class="tk">I2C1</a>, <a id="130c30" class="tk">I2C_EVENT_MASTER_BYTE_TRANSMITTED</a>))</td></tr>
+<tr name="131" id="131">
+<td>131</td><td>	<span class="br">{</span></td></tr>
+<tr name="132" id="132">
+<td>132</td><td>		;</td></tr>
+<tr name="133" id="133">
+<td>133</td><td>	<span class="br">}</span></td></tr>
+<tr name="134" id="134">
+<td>134</td><td>	<a id="134c2" class="tk">I2C_GenerateSTOP</a>(<a id="134c19" class="tk">I2C1</a>, <a id="134c25" class="tk">ENABLE</a>);</td></tr>
+<tr name="135" id="135">
+<td>135</td><td><span class="br">}</span></td></tr>
+<tr name="136" id="136">
+<td>136</td><td><span class="kw">void</span> <a id="136c6" class="tk">startTransmission</a>(<a id="136c24" class="tk">UInt8</a> <a id="136c30" class="tk">address</a>, <a id="136c39" class="tk">UInt8</a> <a id="136c45" class="tk">direction</a>)</td></tr>
+<tr name="137" id="137">
+<td>137</td><td><span class="br">{</span></td></tr>
+<tr name="138" id="138">
+<td>138</td><td>	<a id="138c2" class="tk">I2C_GenerateSTART</a>(<a id="138c20" class="tk">I2C1</a>, <a id="138c26" class="tk">ENABLE</a>);</td></tr>
+<tr name="139" id="139">
+<td>139</td><td>	<span class="kw">while</span>(<a id="139c8" class="tk">!</a><a id="139c9" class="tk">I2C_CheckEvent</a>(<a id="139c24" class="tk">I2C1</a>, <a id="139c30" class="tk">I2C_EVENT_MASTER_MODE_SELECT</a>))</td></tr>
+<tr name="140" id="140">
+<td>140</td><td>	<span class="br">{</span></td></tr>
+<tr name="141" id="141">
+<td>141</td><td>		;</td></tr>
+<tr name="142" id="142">
+<td>142</td><td>	<span class="br">}</span></td></tr>
+<tr name="143" id="143">
+<td>143</td><td>	<a id="143c2" class="tk">I2C_Send7bitAddress</a>(<a id="143c22" class="tk">I2C1</a>, <a id="143c28" class="tk">address</a>, <a id="143c37" class="tk">direction</a>);</td></tr>
+<tr name="144" id="144">
+<td>144</td><td>	<span class="kw">if</span>(<a id="144c5" class="tk">I2C_Direction_Transmitter</a> <a id="144c31" class="tk">==</a> <a id="144c34" class="tk">direction</a>)</td></tr>
+<tr name="145" id="145">
+<td>145</td><td>	<span class="br">{</span></td></tr>
+<tr name="146" id="146">
+<td>146</td><td>		<span class="kw">while</span>(<a id="146c9" class="tk">!</a><a id="146c10" class="tk">I2C_CheckEvent</a>(<a id="146c25" class="tk">I2C1</a>, <a id="146c31" class="tk">I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED</a>))</td></tr>
+<tr name="147" id="147">
+<td>147</td><td>		<span class="br">{</span></td></tr>
+<tr name="148" id="148">
+<td>148</td><td>			;</td></tr>
+<tr name="149" id="149">
+<td>149</td><td>		<span class="br">}</span></td></tr>
+<tr name="150" id="150">
+<td>150</td><td>	<span class="br">}</span></td></tr>
+<tr name="151" id="151">
+<td>151</td><td>	<span class="kw">else</span> <span class="kw">if</span>(<a id="151c10" class="tk">I2C_Direction_Receiver</a> <a id="151c33" class="tk">==</a> <a id="151c36" class="tk">direction</a>)</td></tr>
+<tr name="152" id="152">
+<td>152</td><td>	<span class="br">{</span></td></tr>
+<tr name="153" id="153">
+<td>153</td><td>		<span class="kw">while</span>(<a id="153c9" class="tk">!</a><a id="153c10" class="tk">I2C_CheckEvent</a>(<a id="153c25" class="tk">I2C1</a>, <a id="153c31" class="tk">I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED</a>))</td></tr>
+<tr name="154" id="154">
+<td>154</td><td>		<span class="br">{</span></td></tr>
+<tr name="155" id="155">
+<td>155</td><td>			;</td></tr>
+<tr name="156" id="156">
+<td>156</td><td>		<span class="br">}</span></td></tr>
+<tr name="157" id="157">
+<td>157</td><td>	<span class="br">}</span></td></tr>
+<tr name="158" id="158">
+<td>158</td><td><span class="br">}</span></td></tr>
+<tr name="159" id="159">
+<td>159</td><td><span class="kw">void</span> <a id="159c6" class="tk">initI2CPins</a>()</td></tr>
+<tr name="160" id="160">
+<td>160</td><td><span class="br">{</span></td></tr>
+<tr name="161" id="161">
+<td>161</td><td>	<a id="161c2" class="tk">GPIO_InitTypeDef</a> <a id="161c19" class="tk">GPIO_InitStruct</a>;</td></tr>
+<tr name="162" id="162">
+<td>162</td><td>	<span class="ct">//CLK fuer Pins aktivieren</span></td></tr>
+<tr name="163" id="163">
+<td>163</td><td>	<a id="163c2" class="tk">RCC_AHB1PeriphClockCmd</a>(<a id="163c25" class="tk">RCC_AHB1Periph_GPIOB</a>, <a id="163c47" class="tk">ENABLE</a>);</td></tr>
+<tr name="164" id="164">
+<td>164</td><td>	<span class="ct">//Pin-Initialisierung: PB6&amp;PB7, Mode:Alternate Function, Speed:50MHz, OpenDrain/PullUp</span></td></tr>
+<tr name="165" id="165">
+<td>165</td><td>	<a id="165c2" class="tk">GPIO_InitStruct</a>.<a id="165c18" class="tk">GPIO_Pin</a> 	= <a id="165c30" class="tk">GPIO_Pin_6</a> <a id="165c41" class="tk">|</a> <a id="165c43" class="tk">GPIO_Pin_7</a>;</td></tr>
+<tr name="166" id="166">
+<td>166</td><td>	<a id="166c2" class="tk">GPIO_InitStruct</a>.<a id="166c18" class="tk">GPIO_Mode</a> 	= <a id="166c31" class="tk">GPIO_Mode_AF</a>;</td></tr>
+<tr name="167" id="167">
+<td>167</td><td>	<a id="167c2" class="tk">GPIO_InitStruct</a>.<a id="167c18" class="tk">GPIO_Speed</a> 	= <a id="167c32" class="tk">GPIO_Speed_50MHz</a>;</td></tr>
+<tr name="168" id="168">
+<td>168</td><td>	<a id="168c2" class="tk">GPIO_InitStruct</a>.<a id="168c18" class="tk">GPIO_OType</a> 	= <a id="168c32" class="tk">GPIO_OType_OD</a>;</td></tr>
+<tr name="169" id="169">
+<td>169</td><td>	<a id="169c2" class="tk">GPIO_InitStruct</a>.<a id="169c18" class="tk">GPIO_PuPd</a> 	= <a id="169c31" class="tk">GPIO_PuPd_UP</a>;</td></tr>
+<tr name="170" id="170">
+<td>170</td><td>	<a id="170c2" class="tk">GPIO_Init</a>(<a id="170c12" class="tk">GPIOB</a>, <a id="170c19" class="tk">&amp;</a><a id="170c20" class="tk">GPIO_InitStruct</a>);</td></tr>
+<tr name="171" id="171">
+<td>171</td><td>	<span class="ct">//AlternateFunction fuer I2C1 konfigurieren</span></td></tr>
+<tr name="172" id="172">
+<td>172</td><td>	<a id="172c2" class="tk">GPIO_PinAFConfig</a>(<a id="172c19" class="tk">GPIOB</a>, <a id="172c26" class="tk">GPIO_PinSource6</a>, <a id="172c43" class="tk">GPIO_AF_I2C1</a>);</td></tr>
+<tr name="173" id="173">
+<td>173</td><td>	<a id="173c2" class="tk">GPIO_PinAFConfig</a>(<a id="173c19" class="tk">GPIOB</a>, <a id="173c26" class="tk">GPIO_PinSource7</a>, <a id="173c43" class="tk">GPIO_AF_I2C1</a>);</td></tr>
+<tr name="174" id="174">
+<td>174</td><td><span class="br">}</span></td></tr>
+<tr name="175" id="175">
+<td>175</td><td><span class="kw">void</span> <a id="175c6" class="tk">initI2C</a>()</td></tr>
+<tr name="176" id="176">
+<td>176</td><td><span class="br">{</span></td></tr>
+<tr name="177" id="177">
+<td>177</td><td>	<span class="kw">static</span> <span class="kw">bool</span> <a id="177c14" class="tk">initDone</a> = false;</td></tr>
+<tr name="178" id="178">
+<td>178</td><td>	<span class="kw">if</span>(false <a id="178c11" class="tk">==</a> <a id="178c14" class="tk">initDone</a>)</td></tr>
+<tr name="179" id="179">
+<td>179</td><td>	<span class="br">{</span></td></tr>
+<tr name="180" id="180">
+<td>180</td><td>		<a id="180c3" class="tk">initI2CPins</a>();</td></tr>
+<tr name="181" id="181">
+<td>181</td><td>		<a id="181c3" class="tk">I2C_InitTypeDef</a> <a id="181c19" class="tk">I2C_InitStruct</a>;</td></tr>
+<tr name="182" id="182">
+<td>182</td><td>		<span class="ct">//CLK fuer I2C1 aktivieren</span></td></tr>
+<tr name="183" id="183">
+<td>183</td><td>		<a id="183c3" class="tk">RCC_APB1PeriphClockCmd</a>(<a id="183c26" class="tk">RCC_APB1Periph_I2C1</a>, <a id="183c47" class="tk">ENABLE</a>);</td></tr>
+<tr name="184" id="184">
+<td>184</td><td>		<span class="ct">//I2C-Initialisierung</span></td></tr>
+<tr name="185" id="185">
+<td>185</td><td>		<a id="185c3" class="tk">I2C_InitStruct</a>.<a id="185c18" class="tk">I2C_ClockSpeed</a> 			= 100000;</td></tr>
+<tr name="186" id="186">
+<td>186</td><td>		<a id="186c3" class="tk">I2C_InitStruct</a>.<a id="186c18" class="tk">I2C_Mode</a> 				= <a id="186c33" class="tk">I2C_Mode_I2C</a>;</td></tr>
+<tr name="187" id="187">
+<td>187</td><td>		<a id="187c3" class="tk">I2C_InitStruct</a>.<a id="187c18" class="tk">I2C_DutyCycle</a> 			= <a id="187c37" class="tk">I2C_DutyCycle_2</a>;</td></tr>
+<tr name="188" id="188">
+<td>188</td><td>		<a id="188c3" class="tk">I2C_InitStruct</a>.<a id="188c18" class="tk">I2C_OwnAddress1</a> 			= 0x00;</td></tr>
+<tr name="189" id="189">
+<td>189</td><td>		<a id="189c3" class="tk">I2C_InitStruct</a>.<a id="189c18" class="tk">I2C_Ack</a> 					= <a id="189c33" class="tk">I2C_Ack_Disable</a>;</td></tr>
+<tr name="190" id="190">
+<td>190</td><td>		<a id="190c3" class="tk">I2C_InitStruct</a>.<a id="190c18" class="tk">I2C_AcknowledgedAddress</a> 	= <a id="190c45" class="tk">I2C_AcknowledgedAddress_7bit</a>;</td></tr>
+<tr name="191" id="191">
+<td>191</td><td>		<a id="191c3" class="tk">I2C_Cmd</a>(<a id="191c11" class="tk">I2C1</a>, <a id="191c17" class="tk">ENABLE</a>);</td></tr>
+<tr name="192" id="192">
+<td>192</td><td>		<a id="192c3" class="tk">I2C_Init</a>(<a id="192c12" class="tk">I2C1</a>, <a id="192c18" class="tk">&amp;</a><a id="192c19" class="tk">I2C_InitStruct</a>);</td></tr>
+<tr name="193" id="193">
+<td>193</td><td>		<a id="193c3" class="tk">initDone</a> = true;</td></tr>
+<tr name="194" id="194">
+<td>194</td><td>	<span class="br">}</span></td></tr>
+<tr name="195" id="195">
+<td>195</td><td><span class="br">}</span></td></tr>
+<tr name="196" id="196">
+<td>196</td><td></td></tr>
+</table>
+</pre>
+</body>
+</html>

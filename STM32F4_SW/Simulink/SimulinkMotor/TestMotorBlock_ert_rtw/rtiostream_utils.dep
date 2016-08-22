@@ -1,0 +1,110 @@
+rtiostream_utils.o: \
+ C:/PROGRA~1/MATLAB/R2016a/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/CMSIS/ST/STM32F4xx/Include/stm32f4xx.h \
+ C:/MATLAB/SupportPackages/R2016a/CMSIS/CMSIS/Include/core_cm4.h \
+ C:/MATLAB/SupportPackages/R2016a/CMSIS/CMSIS/Include/core_cmInstr.h \
+ C:/MATLAB/SupportPackages/R2016a/CMSIS/CMSIS/Include/core_cmFunc.h \
+ C:/MATLAB/SupportPackages/R2016a/CMSIS/CMSIS/Include/core_cmSimd.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/CMSIS/ST/STM32F4xx/Include/system_stm32f4xx.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Project/Peripheral_Examples/SysTick/stm32f4xx_conf.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_adc.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_can.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_crc.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_cryp.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dac.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dbgmcu.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dcmi.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dma.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_exti.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_flash.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_hash.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_gpio.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_i2c.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_iwdg.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_pwr.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rcc.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rng.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rtc.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_sdio.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_spi.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_syscfg.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_tim.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_usart.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h \
+ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/misc.h \
+ C:/PROGRA~1/MATLAB/R2016a/toolbox/coder/rtiostream/src/utils/rtiostream_utils.h \
+ C:/Users/ich/Desktop/CuBa_git/STM32F4_SW/Simulink/SimulinkMotor/TestMotorBlock_ert_rtw/rtwtypes.h \
+ C:/PROGRA~1/MATLAB/R2016a/rtw/c/src/rtiostream.h
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/CMSIS/ST/STM32F4xx/Include/stm32f4xx.h:
+
+C:/MATLAB/SupportPackages/R2016a/CMSIS/CMSIS/Include/core_cm4.h:
+
+C:/MATLAB/SupportPackages/R2016a/CMSIS/CMSIS/Include/core_cmInstr.h:
+
+C:/MATLAB/SupportPackages/R2016a/CMSIS/CMSIS/Include/core_cmFunc.h:
+
+C:/MATLAB/SupportPackages/R2016a/CMSIS/CMSIS/Include/core_cmSimd.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/CMSIS/ST/STM32F4xx/Include/system_stm32f4xx.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Project/Peripheral_Examples/SysTick/stm32f4xx_conf.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_adc.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_can.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_crc.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_cryp.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dac.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dbgmcu.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dcmi.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dma.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_exti.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_flash.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_hash.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_gpio.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_i2c.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_iwdg.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_pwr.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rcc.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rng.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rtc.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_sdio.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_spi.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_syscfg.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_tim.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_usart.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h:
+
+C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/misc.h:
+
+C:/PROGRA~1/MATLAB/R2016a/toolbox/coder/rtiostream/src/utils/rtiostream_utils.h:
+
+C:/Users/ich/Desktop/CuBa_git/STM32F4_SW/Simulink/SimulinkMotor/TestMotorBlock_ert_rtw/rtwtypes.h:
+
+C:/PROGRA~1/MATLAB/R2016a/rtw/c/src/rtiostream.h:

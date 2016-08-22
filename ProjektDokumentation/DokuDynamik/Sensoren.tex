@@ -1,15 +1,16 @@
 \section{Sensorik}
 \label{Sensorik_secd}
-Die Aufgabe der verwendeten Sensorik liegt darin die Werte für $\varphi$, und $\dot{\varphi}$ zu bestimmen. Hierfür wurden zwei MPU6050 IC's verwendet. Diese verfügen jeweils über einen Beschleunigungssensor und Gyroskop, welche Werte für drei Achsen ausgeben. Die Position und Ausrichtung der Sensoren ist in \ref{Position_Sensoren_pic} dargestellt.
+Die Aufgabe der verwendeten Sensorik liegt darin die Werte für $\varphi$, und $\dot{\varphi}$ zu bestimmen. Hierfür wurden zwei MPU6050 IC's verwendet. Diese verfügen jeweils über einen Beschleunigungssensor und Gyroskop, welche Werte für drei Achsen ausgeben. Der Tiefpass der Sensoren wird auf eine Grenzfrequenz von $44Hz$ eingestellt, da hier einerseits eine erste Glättung der Daten erfolgt, andererseits aber keine zu große Verzögerung ergibt, welche sich wiederum negativ auf die Regelung auswirken könnte. Die Position und Ausrichtung der Sensoren ist in \ref{Position_Sensoren_pic} dargestellt.
 
 \begin{figure}[h]
-\label{Position_Sensoren_pic}
 \includegraphics[width=\linewidth]{SensorZeichnung1D}
 \caption{Position der Sensoren, Quelle: eigene Darstellung}
+
+\label{Position_Sensoren_pic}
 \end{figure}
 
 \subsection{Winkelschätzung}
-Die Sensoren keine Wege bzw. Winkel. Somit muss der Winkel $\varphi$ berechnet werden. Die gemessenen Sensorwerte hängen von $r_{S1}$ bzw. $r_{S2}$ ab, welche den Abstand zwischen den Sensoren und dem Drehpunkt $A$ beschreiben. Zusätzlich beeinflussen neben dem Winkel $\varphi$ auch dessen beiden Ableitungen $\dot{\varphi}$ und $\ddot{\varphi}$ die Sensorausgabe. Allerdings lassen sich aus den Beschleunigungswerten der beiden Sensoren wie folgt der aktuelle Wert von $\varphi$ berechnen.
+Die Sensoren keine Wege bzw. Winkel. Somit muss der Winkel $\varphi$ berechnet werden. Die gemessenen Sensorwerte hängen von $r_{S1}$ bzw. $r_{S2}$ ab, welche den Abstand zwischen den Sensoren und dem Drehpunkt $A$ beschreiben. Zusätzlich beeinflussen neben dem Winkel $\varphi$ auch dessen beiden Ableitungen $\dot{\varphi}$ und $\ddot{\varphi}$ die Sensorausgabe. Allerdings lassen sich aus den Beschleunigungswerten der beiden Sensoren nach \cite{Cubli1D} wie folgt der aktuelle Wert von $\varphi$ berechnen.
 
 \begin{equation}
 \ddot{S}_i = 
@@ -56,3 +57,5 @@ Um das Polynom zur Umrechnung der Beschleunigungswerte zu ermitteln werden siebe
 
 \subsection{Auswertung der Radgeschwindigkeit $\dot{\psi}$}
 
+\subsection{Filterung der Sensordaten}
+In der Regel werden Sensoren von Störungen unterschiedlichster Art beeinflusst. Um diese Störungen zu minimieren werden in dem folgenden Abschnitt 
