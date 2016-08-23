@@ -11,3 +11,5 @@
 \contentsline {subsection}{\numberline {1.2}Mittelwertverlauf und Ausgleichspolynom}{9}{subsection.1.2}
 \contentsline {section}{\numberline {2}Versuch 2 - Offsetbestimmung der Winkelgeschwindigkeiten}{10}{section.2}
 \contentsline {section}{\numberline {3}Versuch 3 - Auswertung der Motorgeschwindigkeit}{11}{section.3}
+\contentsline {section}{\numberline {4}Versuch 4 - Ermittlung des Reibwertes $C_{\varphi }$}{13}{section.4}
+\contentsline {section}{\numberline {5}Versuch 5 - Ermittlung des Reibwertes $C_{\psi }$}{14}{section.5}

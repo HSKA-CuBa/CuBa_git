@@ -22,11 +22,18 @@ Der Motortreiber liefert ein analoges Spannungssignal, welches die aktuelle Moto
 
 Mit Hilfe von MATLAB kann wird ein Polynom erster Ordnung berechnet, welches die ADC-Werte in SI-Einheiten umrechnet.
 
+\begin{table}[h!]
+\centering
+\begin{tabular}{lcllcl}
+$\dot{\psi}$ & $\equiv$ & Geschwindigkeit der Schwungmasse & $\dot{\psi}_{ADC}$ & $\equiv$ & ADC-Wert
+\end{tabular}
+\end{table}
+
 \begin{equation}
 \dot{\psi} = 0.5176 \cdot \dot{\psi}_{ADC} + -1017
 \end{equation}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 	\includegraphics[width=0.5\linewidth]{img/ADC_mittelwert_polynom.eps}
 \end{figure}
