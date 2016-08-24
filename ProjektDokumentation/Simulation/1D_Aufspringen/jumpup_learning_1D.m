@@ -7,20 +7,21 @@
 
 %Faktor um den Impulsverlust des nicht perfekten Stoßes zu beschreiben
 a_impulse = 0.9;
+mu = 0.05;
 
 %Systemgrößen (Werte vom alten Model)
 deltaT  = 1e-3;
 g       = 9.81;
 T_M_m   = 12.4e-3;
 T_M_e   = 5.5e-4;
-l_AB    = 0.0751442;
-l_AC    = 0.08455;
-m_K     = 0.294;
-m_R     = 0.1298;
-O_A_K   = 3.3e-3;
-O_B_R   = 0.088e-3;
-C_phi   = 2.1e-3;
-C_psi   = 2.1268e-5;
+C_phi   = 6.2e-3;
+C_psi   = 3.1176e-5;
+l_AB    = 0.084;
+l_AC    = 0.087;
+m_K     = 0.221;
+m_R     = 0.09;
+O_A_K   = 2.8e-3;
+O_B_R   = 1.1683e-4;
 %Anfangswerte der Zustandsgrößen
 phi_0       = degtorad(45);
 phi__dd_0   = 0;
@@ -45,7 +46,7 @@ while(stop == 0)
     if(phi_min >= 0)    %Nulldurchgang vor Sollwert
         deltaE = (1-cos(phi_min))*(m_K+m_R)*g*l_AC;
         deltaPsi__d_0 = sqrt(2*(O_A_K+O_B_R+m_R*l_AB^2)/(O_B_R^2)*deltaE);
-        psi__d_0 = psi__d_0+ 0.02*deltaPsi__d_0;
+        psi__d_0 = psi__d_0+ mu*deltaPsi__d_0;
         phi__d_0 = -a_impulse * psi__d_0  * O_B_R /(O_B_R + O_A_K+ m_R*l_AB^2);
         phi_zero(iteration)    = phi_min;
         phi__d_zero(iteration) = phi__d(find(phi==phi_min));
@@ -54,7 +55,7 @@ while(stop == 0)
         t_phi__d_min    = find(abs(phi__d) == phi__d_min) * deltaT;  
         deltaE          = 0.5*(O_B_R + O_A_K+ m_R*l_AB^2)*phi__d_min^2;
         deltaPsi__d_0   = -sqrt(2*(O_A_K+O_B_R+m_R*l_AB^2)/(O_B_R^2)*deltaE);
-        psi__d_0 = psi__d_0+ 0.02*deltaPsi__d_0;
+        psi__d_0 = psi__d_0+ mu*deltaPsi__d_0;
         phi__d_0 = -a_impulse * psi__d_0  * O_B_R /(O_B_R + O_A_K+ m_R*l_AB^2);
         phi__d_zero(iteration) = phi__d_min;
         phi_zero(iteration)    = phi(find(abs(phi) == min(abs(phi))));
@@ -69,6 +70,8 @@ end
 
 index = 1:1:iteration;
 subplot(2,1,1);
-plot(index, radtodeg(phi_zero), 'o'); grid;
+plot(index, radtodeg(phi_zero), 'o'); grid; xlabel('Iteration []');
+ylabel('Minimum-Wert $\varphi$ []', 'interpreter', 'latex');
 subplot(2,1,2);
 plot(index, radtodeg(phi__d_zero), 'o'); grid;
+xlabel('Iteration []'); ylabel('Minimum-Wert $\dot{\varphi}$', 'interpreter', 'latex');
