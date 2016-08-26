@@ -1,0 +1,30 @@
+//26.8.2016, Michael Meindl
+//File to define basic values and constants
+#ifndef CONFIG_H
+#define CONFIG_H
+#include "Global.h"
+
+namespace Config
+{
+	constexpr float T_a						= 0.020F;
+	constexpr float K_phi					= 1.0F;
+	constexpr float K_phi__d				= 1.0F;
+	constexpr float K_psi__d				= 1.0F;
+	constexpr float ComplementaryAlpha		= 0.98F;
+	constexpr float X1__dd_P1				= 1.0F;
+	constexpr float X1__dd_P2				= 1.0F;
+	constexpr float X2__dd_P1				= 1.0F;
+	constexpr float X2__dd_P2				= 1.0F;
+	constexpr float Y1__dd_P1				= 1.0F;
+	constexpr float Y1__dd_P2				= 1.0F;
+	constexpr float Y2__dd_P1			    = 1.0F;
+	constexpr float Y2__dd_P2				= 1.0F;
+	constexpr float Phi1__d_P1				= 1.0F;
+	constexpr float Phi1__d_P2				= 1.0F;
+	constexpr float Phi2__d_P1				= 1.0F;
+	constexpr float Phi2__d_P2				= 1.0F;
+	constexpr float Psi1__d_P1				= 1.0F;
+	constexpr float Psi1__d_P2				= 1.0F;
+}
+
+#endif

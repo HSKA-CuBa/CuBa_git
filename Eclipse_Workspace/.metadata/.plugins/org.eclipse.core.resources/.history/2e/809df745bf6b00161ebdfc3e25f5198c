@@ -1,0 +1,7 @@
+//26.8.2016, Michael Meindl
+//Template-Class to calculate the kalman-filtered phi value
+#ifndef TKALMANFILTER_H
+#define TKALMANFILTER_H
+#include "Global.h"
+
+#endif

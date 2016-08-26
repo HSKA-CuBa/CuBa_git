@@ -1,0 +1,14 @@
+//26.8.2016, Michael Meindl
+//Template-Class to calculate the kalman-filtered phi value
+#ifndef TKALMANFILTER_H
+#define TKALMANFILTER_H
+#include "Global.h"
+
+template<const UInt32 n>
+class TKalmanFilter
+{
+public:
+	float calculatePhi(const float phi);
+};
+
+#endif

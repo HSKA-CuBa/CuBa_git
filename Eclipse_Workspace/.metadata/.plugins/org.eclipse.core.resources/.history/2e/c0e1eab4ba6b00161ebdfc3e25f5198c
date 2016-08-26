@@ -1,0 +1,13 @@
+//26.8.2016, Michael Meindl
+//File to define basic values and constants
+#ifndef CONFIG_H
+#define CONFIG_H
+#include "Global.h"
+
+namespace Config
+{
+	constexpr float T_a						= 0.020F;
+	constexpr float ComplementaryAlpha		= 0.98F;
+}
+
+#endif

@@ -1,0 +1,48 @@
+//26.8.2016, Michael Meindl
+//Template-Class to calculate the kalman-filtered phi value
+#ifndef TKALMANFILTER_H
+#define TKALMANFILTER_H
+#include "Global.h"
+
+template<const UInt32 n>
+class TKalmanFilter
+{
+public:
+	float calculatePhi(const float phi, const float phi__d);
+public:
+	TKalmanFilter<n>();
+	TKalmanFilter<n>(const TKalmanFilter<n>&) = delete;
+	TKalmanFilter<n>& operator=(const TKalmanFilter<n>&) = delete;
+	~TKalmanFilter<n>() = default;
+private:
+	float mRecentPhiValues[n];
+	float mRecentPhi__dValues[n];
+	float mP;
+	float mK;
+	bool mInitialRun;
+	UInt8 mPadding[3];
+};
+
+template<const UInt32 n>
+TKalmanFilter<n>::TKalmanFilter() : mRecentPhiValues{0.0F},
+									mRecentPhi__dValues{0.0F},
+									mInitialRun(true),
+									mPadding{0U}
+{
+
+}
+template<const UInt32 n>
+float TKalmanFilter<n>::calculatePhi(const float phi, const float phi__d)
+{
+	if(true == mInitialRun)
+	{
+		mInitialRun		= false;
+		for(UInt32 index = 0U; index < n; index++)
+		{
+			mRecentPhiValues[index] 	= phi;
+			mRecentPhi__dValues[index] 	= phi__d;
+		}
+	}
+}
+
+#endif
