@@ -1,0 +1,33 @@
+//27.8.2016
+//Definitions to carry out the FSM-actions
+#include "CActionHandler.h"
+#include "Config.h"
+
+CActionHandler::CActionHandler(IHardware& hw) : mHardware(hw)
+{
+
+}
+void CActionHandler::onEntryIdle()
+{
+
+}
+void CActionHandler::onExitIdle()
+{
+
+}
+void CActionHandler::onEntryJumpUp()
+{
+	//Set torque
+}
+void CActionHandler::onExitJumpUp()
+{
+	mHardware.openBrake();
+}
+void CActionHandler::onEntryBalance()
+{
+	mHardware.enableMotor();
+}
+void CActionHandler::onExitBalance()
+{
+	mHardware.disableMotor();
+}

@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.17)  22 AUG 2016 20:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.21)  27 AUG 2016 12:46
 entering extended mode
 **./VersucheMessungen.tex
 (VersucheMessungen.tex
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -21,25 +21,22 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2016/01/08 3.9n The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg
-"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-german\ngerman
-.ldf"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-german\ngerman.ldf"
 Language: ngerman 2013/12/13 v2.7 German support for babel (new orthography)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-german\ngerman
-b.ldf"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-german\ngermanb.ldf"
 Language: ngermanb 2013/12/13 v2.7 German support for babel (new orthography)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2016/01/08 3.9n Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
@@ -47,19 +44,20 @@ File: babel.def 2016/01/08 3.9n Babel common definitions
 \l@naustrian = a dialect from \language\l@ngerman 
 \l@nswissgerman = a dialect from \language\l@ngerman 
 Package babel Info: Making " an active character on input line 88.
-))) ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.st
-y"
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
- ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\utf8.def"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
 File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -219,7 +217,7 @@ File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
 File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -260,7 +258,7 @@ File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
 File: omsenc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -284,36 +282,31 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.st
-y"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.st
-y"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
- ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\graphics.cf
-g"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.de
-f"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarerr
-.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.s
-ty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count88
@@ -321,35 +314,28 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.st
-y"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-ba
-se.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefinek
-eys.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.s
-ty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys
-.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.
-sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.
-sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -358,13 +344,11 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmd
-s.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty
-"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -377,29 +361,28 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
-)) ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\svg\svg.sty"
+))
+(C:\Users\ich\AppData\Roaming\MiKTeX\2.9\tex\latex\svg\svg.sty
 Package: svg 2012/09/05 v1.0 SVG inclusion and extraction
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.te
-x"
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.t
-ex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
 \XKV@toks=\toks17
 \XKV@tempa@toks=\toks18
 )
 \XKV@depth=\count89
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
+(C:\Users\ich\AppData\Roaming\MiKTeX\2.9\tex\latex\subfig\subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty"
+(C:\Users\ich\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty
-"
+
+(C:\Users\ich\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
 Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen106
@@ -426,21 +409,20 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \sf@top=\skip46
 \sf@bottom=\skip47
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\import\import.sty"
+(C:\Users\ich\AppData\Roaming\MiKTeX\2.9\tex\latex\import\import.sty
 Package: import 2009/03/23  v 5.1
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\transparent
-.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\transparent.sty"
 Package: transparent 2007/01/08 v1.0 Transparency via pdfTeX's color stack (HO)
 
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty
-"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
-)) ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
-"
+))
+(C:\Users\ich\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
- ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -458,17 +440,14 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 \SVG@out@height=\skip49
 \c@svgfigure=\count98
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.st
-y"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.st
-y"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.st
-y"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count99
@@ -484,24 +463,25 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen121
 \Gm@dimlist=\toks19
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.cf
-g"))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip50
+
 For additional information on amsmath, use the `?' option.
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks20
 \ex@=\dimen122
-)) ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.st
-y"
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen123
-) ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
-"
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count102
@@ -542,32 +522,28 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.s
-ty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
 Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
-) ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\verbatim.sty
-"
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks25
 \verbatim@line=\toks26
 \verbatim@in@stream=\read1
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperref.st
-y"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hy
-perref.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
 
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-ge
-neric.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
 Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -600,15 +576,14 @@ Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 \Hy@linkcounter=\count114
 \Hy@pagecounter=\count115
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
 \Hy@SavedSpaceFactor=\count116
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperref.cf
-g"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4443.
@@ -619,7 +594,8 @@ Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count117
- ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
+
+(C:\Users\ich\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -644,14 +620,12 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def
-"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count122
 \c@bookmark@seq@number=\count123
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfilech
-eck.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
@@ -659,7 +633,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip53
 )
 Package hyperref Info: Option `colorlinks' set `false' on input line 18.
- (VersucheMessungen.aux (Versuch1_BeschleunigungsSensoren.aux)
+
+(VersucheMessungen.aux (Versuch1_BeschleunigungsSensoren.aux)
 (Versuch2_WinkelgeschwindigkeitSensoren.aux)
 (Versuch3_WinkelgeschwindigkeitMotor.aux) (Versuch4_C_phi.aux) (V5_C_psi.aux))
 \openout1 = `VersucheMessungen.aux'.
@@ -679,8 +654,7 @@ LaTeX Font Info:    ... okay on input line 20.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii
-"
+(C:\Users\ich\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count124
 \scratchdimen=\dimen135
@@ -735,12 +709,10 @@ Package caption Info: End \AtBeginDocument code.
 
 \AtBeginShipoutBox=\box29
 Package hyperref Info: Link coloring OFF on input line 20.
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
-"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitles
-tring.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count130
@@ -748,12 +720,12 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 20.
 LaTeX Info: Redefining \pageref on input line 20.
 LaTeX Info: Redefining \nameref on input line 20.
- (VersucheMessungen.out) (VersucheMessungen.out)
+
+(VersucheMessungen.out) (VersucheMessungen.out)
 \@outlinefile=\write3
 \openout3 = `VersucheMessungen.out'.
 
-
-(VersucheMessungen.toc)
+ (VersucheMessungen.toc)
 \tf@toc=\write4
 \openout4 = `VersucheMessungen.toc'.
 
@@ -765,12 +737,14 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 27.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 27.
- [1
+
+[1
 
 {C:/Users/ich/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 \openout2 = `Versuch1_BeschleunigungsSensoren.aux'.
 
- (Versuch1_BeschleunigungsSensoren.tex
+
+(Versuch1_BeschleunigungsSensoren.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
@@ -805,16 +779,22 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 7.
 
 Package epstopdf Info: Source file: <img/X1__dd___phi_-45.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 76664 bytes
+(epstopdf)                    date: 2016-08-27 12:35:25
+(epstopdf)                    size: 75927 bytes
 (epstopdf)             Output file: <img/X1__dd___phi_-45-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:01
 (epstopdf)                    size: 68918 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/X1__dd___phi_-45-eps-co
 nverted-to.pdf img/X1__dd___phi_-45.eps>
 (epstopdf)             \includegraphics on input line 9.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/X1__dd___phi_-45-eps-converted-to.pdf img/X1__
+dd___phi_-45.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/X1__dd___phi_-45-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2016-08-27 12:46:15
+(epstopdf)                    size: 71478 bytes.
 <img/X1__dd___phi_-45-eps-converted-to.pdf, id=100, 422.57875pt x 317.185pt>
 File: img/X1__dd___phi_-45-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -823,16 +803,22 @@ Package pdftex.def Info: img/X1__dd___phi_-45-eps-converted-to.pdf used on inpu
 t line 9.
 (pdftex.def)             Requested size: 220.50887pt x 165.51791pt.
 Package epstopdf Info: Source file: <img/X2__dd___phi_-45.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 74532 bytes
+(epstopdf)                    date: 2016-08-27 12:35:31
+(epstopdf)                    size: 73090 bytes
 (epstopdf)             Output file: <img/X2__dd___phi_-45-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:02
 (epstopdf)                    size: 68898 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/X2__dd___phi_-45-eps-co
 nverted-to.pdf img/X2__dd___phi_-45.eps>
 (epstopdf)             \includegraphics on input line 10.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/X2__dd___phi_-45-eps-converted-to.pdf img/X2__
+dd___phi_-45.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/X2__dd___phi_-45-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2016-08-27 12:46:16
+(epstopdf)                    size: 68988 bytes.
 
 <img/X2__dd___phi_-45-eps-converted-to.pdf, id=101, 422.57875pt x 317.185pt>
 File: img/X2__dd___phi_-45-eps-converted-to.pdf Graphic file (type pdf)
@@ -847,16 +833,22 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 9--11
  []
 
 Package epstopdf Info: Source file: <img/Y1__dd___phi_-45.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 71604 bytes
+(epstopdf)                    date: 2016-08-27 12:35:28
+(epstopdf)                    size: 69496 bytes
 (epstopdf)             Output file: <img/Y1__dd___phi_-45-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:03
 (epstopdf)                    size: 65351 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/Y1__dd___phi_-45-eps-co
 nverted-to.pdf img/Y1__dd___phi_-45.eps>
 (epstopdf)             \includegraphics on input line 13.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/Y1__dd___phi_-45-eps-converted-to.pdf img/Y1__
+dd___phi_-45.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/Y1__dd___phi_-45-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2016-08-27 12:46:16
+(epstopdf)                    size: 57637 bytes.
 <img/Y1__dd___phi_-45-eps-converted-to.pdf, id=102, 422.57875pt x 317.185pt>
 File: img/Y1__dd___phi_-45-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -865,16 +857,22 @@ Package pdftex.def Info: img/Y1__dd___phi_-45-eps-converted-to.pdf used on inpu
 t line 13.
 (pdftex.def)             Requested size: 220.50887pt x 165.51791pt.
 Package epstopdf Info: Source file: <img/Y2__dd___phi_-45.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 72299 bytes
+(epstopdf)                    date: 2016-08-27 12:35:34
+(epstopdf)                    size: 73332 bytes
 (epstopdf)             Output file: <img/Y2__dd___phi_-45-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:03
 (epstopdf)                    size: 66060 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/Y2__dd___phi_-45-eps-co
 nverted-to.pdf img/Y2__dd___phi_-45.eps>
 (epstopdf)             \includegraphics on input line 14.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/Y2__dd___phi_-45-eps-converted-to.pdf img/Y2__
+dd___phi_-45.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/Y2__dd___phi_-45-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2016-08-27 12:46:17
+(epstopdf)                    size: 68899 bytes.
 
 <img/Y2__dd___phi_-45-eps-converted-to.pdf, id=103, 422.57875pt x 317.185pt>
 File: img/Y2__dd___phi_-45-eps-converted-to.pdf Graphic file (type pdf)
@@ -927,16 +925,22 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 18.
 
 Package epstopdf Info: Source file: <img/X1__dd___phi_-30.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 77098 bytes
+(epstopdf)                    date: 2016-08-27 12:33:47
+(epstopdf)                    size: 77065 bytes
 (epstopdf)             Output file: <img/X1__dd___phi_-30-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:04
 (epstopdf)                    size: 72290 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/X1__dd___phi_-30-eps-co
 nverted-to.pdf img/X1__dd___phi_-30.eps>
 (epstopdf)             \includegraphics on input line 20.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/X1__dd___phi_-30-eps-converted-to.pdf img/X1__
+dd___phi_-30.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/X1__dd___phi_-30-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2016-08-27 12:46:18
+(epstopdf)                    size: 73882 bytes.
 <img/X1__dd___phi_-30-eps-converted-to.pdf, id=134, 422.57875pt x 317.185pt>
 File: img/X1__dd___phi_-30-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -945,16 +949,22 @@ Package pdftex.def Info: img/X1__dd___phi_-30-eps-converted-to.pdf used on inpu
 t line 20.
 (pdftex.def)             Requested size: 220.50887pt x 165.51791pt.
 Package epstopdf Info: Source file: <img/X2__dd___phi_-30.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 76128 bytes
+(epstopdf)                    date: 2016-08-27 12:33:53
+(epstopdf)                    size: 72549 bytes
 (epstopdf)             Output file: <img/X2__dd___phi_-30-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:05
 (epstopdf)                    size: 70788 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/X2__dd___phi_-30-eps-co
 nverted-to.pdf img/X2__dd___phi_-30.eps>
 (epstopdf)             \includegraphics on input line 21.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/X2__dd___phi_-30-eps-converted-to.pdf img/X2__
+dd___phi_-30.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/X2__dd___phi_-30-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2016-08-27 12:46:18
+(epstopdf)                    size: 61223 bytes.
 
 <img/X2__dd___phi_-30-eps-converted-to.pdf, id=135, 422.57875pt x 317.185pt>
 File: img/X2__dd___phi_-30-eps-converted-to.pdf Graphic file (type pdf)
@@ -969,16 +979,22 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 20--22
  []
 
 Package epstopdf Info: Source file: <img/Y1__dd___phi_-30.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 70233 bytes
+(epstopdf)                    date: 2016-08-27 12:33:50
+(epstopdf)                    size: 70944 bytes
 (epstopdf)             Output file: <img/Y1__dd___phi_-30-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:06
 (epstopdf)                    size: 59600 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/Y1__dd___phi_-30-eps-co
 nverted-to.pdf img/Y1__dd___phi_-30.eps>
 (epstopdf)             \includegraphics on input line 24.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/Y1__dd___phi_-30-eps-converted-to.pdf img/Y1__
+dd___phi_-30.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/Y1__dd___phi_-30-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2016-08-27 12:46:19
+(epstopdf)                    size: 66926 bytes.
 <img/Y1__dd___phi_-30-eps-converted-to.pdf, id=136, 422.57875pt x 317.185pt>
 File: img/Y1__dd___phi_-30-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -987,16 +1003,22 @@ Package pdftex.def Info: img/Y1__dd___phi_-30-eps-converted-to.pdf used on inpu
 t line 24.
 (pdftex.def)             Requested size: 220.50887pt x 165.51791pt.
 Package epstopdf Info: Source file: <img/Y2__dd___phi_-30.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 73341 bytes
+(epstopdf)                    date: 2016-08-27 12:33:56
+(epstopdf)                    size: 71808 bytes
 (epstopdf)             Output file: <img/Y2__dd___phi_-30-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:06
 (epstopdf)                    size: 66043 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/Y2__dd___phi_-30-eps-co
 nverted-to.pdf img/Y2__dd___phi_-30.eps>
 (epstopdf)             \includegraphics on input line 25.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/Y2__dd___phi_-30-eps-converted-to.pdf img/Y2__
+dd___phi_-30.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/Y2__dd___phi_-30-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2016-08-27 12:46:20
+(epstopdf)                    size: 67146 bytes.
 
 <img/Y2__dd___phi_-30-eps-converted-to.pdf, id=137, 422.57875pt x 317.185pt>
 File: img/Y2__dd___phi_-30-eps-converted-to.pdf Graphic file (type pdf)
@@ -1047,16 +1069,22 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 29.
 
 Package epstopdf Info: Source file: <img/X1__dd___phi_-15.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 75414 bytes
+(epstopdf)                    date: 2016-08-27 12:31:35
+(epstopdf)                    size: 76601 bytes
 (epstopdf)             Output file: <img/X1__dd___phi_-15-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:07
 (epstopdf)                    size: 70377 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/X1__dd___phi_-15-eps-co
 nverted-to.pdf img/X1__dd___phi_-15.eps>
 (epstopdf)             \includegraphics on input line 31.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/X1__dd___phi_-15-eps-converted-to.pdf img/X1__
+dd___phi_-15.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/X1__dd___phi_-15-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2016-08-27 12:46:21
+(epstopdf)                    size: 68338 bytes.
 <img/X1__dd___phi_-15-eps-converted-to.pdf, id=168, 422.57875pt x 317.185pt>
 File: img/X1__dd___phi_-15-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1065,16 +1093,22 @@ Package pdftex.def Info: img/X1__dd___phi_-15-eps-converted-to.pdf used on inpu
 t line 31.
 (pdftex.def)             Requested size: 220.50887pt x 165.51791pt.
 Package epstopdf Info: Source file: <img/X2__dd___phi_-15.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 73289 bytes
+(epstopdf)                    date: 2016-08-27 12:31:41
+(epstopdf)                    size: 71682 bytes
 (epstopdf)             Output file: <img/X2__dd___phi_-15-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:08
 (epstopdf)                    size: 67712 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/X2__dd___phi_-15-eps-co
 nverted-to.pdf img/X2__dd___phi_-15.eps>
 (epstopdf)             \includegraphics on input line 32.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/X2__dd___phi_-15-eps-converted-to.pdf img/X2__
+dd___phi_-15.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/X2__dd___phi_-15-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2016-08-27 12:46:21
+(epstopdf)                    size: 61576 bytes.
 
 <img/X2__dd___phi_-15-eps-converted-to.pdf, id=169, 422.57875pt x 317.185pt>
 File: img/X2__dd___phi_-15-eps-converted-to.pdf Graphic file (type pdf)
@@ -1089,16 +1123,22 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 31--33
  []
 
 Package epstopdf Info: Source file: <img/Y1__dd___phi_-15.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 72409 bytes
+(epstopdf)                    date: 2016-08-27 12:31:38
+(epstopdf)                    size: 73258 bytes
 (epstopdf)             Output file: <img/Y1__dd___phi_-15-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:08
 (epstopdf)                    size: 63719 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/Y1__dd___phi_-15-eps-co
 nverted-to.pdf img/Y1__dd___phi_-15.eps>
 (epstopdf)             \includegraphics on input line 35.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/Y1__dd___phi_-15-eps-converted-to.pdf img/Y1__
+dd___phi_-15.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/Y1__dd___phi_-15-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2016-08-27 12:46:22
+(epstopdf)                    size: 68791 bytes.
 <img/Y1__dd___phi_-15-eps-converted-to.pdf, id=170, 422.57875pt x 317.185pt>
 File: img/Y1__dd___phi_-15-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1107,16 +1147,22 @@ Package pdftex.def Info: img/Y1__dd___phi_-15-eps-converted-to.pdf used on inpu
 t line 35.
 (pdftex.def)             Requested size: 220.50887pt x 165.51791pt.
 Package epstopdf Info: Source file: <img/Y2__dd___phi_-15.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 75902 bytes
+(epstopdf)                    date: 2016-08-27 12:31:44
+(epstopdf)                    size: 72509 bytes
 (epstopdf)             Output file: <img/Y2__dd___phi_-15-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:09
 (epstopdf)                    size: 70735 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/Y2__dd___phi_-15-eps-co
 nverted-to.pdf img/Y2__dd___phi_-15.eps>
 (epstopdf)             \includegraphics on input line 36.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/Y2__dd___phi_-15-eps-converted-to.pdf img/Y2__
+dd___phi_-15.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/Y2__dd___phi_-15-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2016-08-27 12:46:23
+(epstopdf)                    size: 67965 bytes.
 
 <img/Y2__dd___phi_-15-eps-converted-to.pdf, id=171, 422.57875pt x 317.185pt>
 File: img/Y2__dd___phi_-15-eps-converted-to.pdf Graphic file (type pdf)
@@ -1167,15 +1213,20 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 40.
 
 Package epstopdf Info: Source file: <img/X1__dd___phi_0.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 71677 bytes
+(epstopdf)                    date: 2016-08-27 12:29:22
+(epstopdf)                    size: 74290 bytes
 (epstopdf)             Output file: <img/X1__dd___phi_0-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:10
 (epstopdf)                    size: 59367 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/X1__dd___phi_0-eps-conv
 erted-to.pdf img/X1__dd___phi_0.eps>
 (epstopdf)             \includegraphics on input line 42.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/X1__dd___phi_0-eps-converted-to.pdf img/X1__dd
+___phi_0.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/X1__dd___phi_0-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:23
+(epstopdf)                    size: 63735 bytes.
 <img/X1__dd___phi_0-eps-converted-to.pdf, id=202, 422.57875pt x 317.185pt>
 File: img/X1__dd___phi_0-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1184,15 +1235,20 @@ Package pdftex.def Info: img/X1__dd___phi_0-eps-converted-to.pdf used on input
 line 42.
 (pdftex.def)             Requested size: 220.50887pt x 165.51791pt.
 Package epstopdf Info: Source file: <img/X2__dd___phi_0.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 73296 bytes
+(epstopdf)                    date: 2016-08-27 12:29:28
+(epstopdf)                    size: 69322 bytes
 (epstopdf)             Output file: <img/X2__dd___phi_0-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:11
 (epstopdf)                    size: 68777 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/X2__dd___phi_0-eps-conv
 erted-to.pdf img/X2__dd___phi_0.eps>
 (epstopdf)             \includegraphics on input line 43.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/X2__dd___phi_0-eps-converted-to.pdf img/X2__dd
+___phi_0.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/X2__dd___phi_0-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:24
+(epstopdf)                    size: 58020 bytes.
 
 <img/X2__dd___phi_0-eps-converted-to.pdf, id=203, 422.57875pt x 317.185pt>
 File: img/X2__dd___phi_0-eps-converted-to.pdf Graphic file (type pdf)
@@ -1207,15 +1263,20 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 42--44
  []
 
 Package epstopdf Info: Source file: <img/Y1__dd___phi_0.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 75291 bytes
+(epstopdf)                    date: 2016-08-27 12:29:25
+(epstopdf)                    size: 74352 bytes
 (epstopdf)             Output file: <img/Y1__dd___phi_0-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:11
 (epstopdf)                    size: 69814 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/Y1__dd___phi_0-eps-conv
 erted-to.pdf img/Y1__dd___phi_0.eps>
 (epstopdf)             \includegraphics on input line 46.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/Y1__dd___phi_0-eps-converted-to.pdf img/Y1__dd
+___phi_0.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/Y1__dd___phi_0-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:25
+(epstopdf)                    size: 69435 bytes.
 <img/Y1__dd___phi_0-eps-converted-to.pdf, id=204, 422.57875pt x 317.185pt>
 File: img/Y1__dd___phi_0-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1224,15 +1285,20 @@ Package pdftex.def Info: img/Y1__dd___phi_0-eps-converted-to.pdf used on input
 line 46.
 (pdftex.def)             Requested size: 220.50887pt x 165.51791pt.
 Package epstopdf Info: Source file: <img/Y2__dd___phi_0.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 73301 bytes
+(epstopdf)                    date: 2016-08-27 12:29:31
+(epstopdf)                    size: 71890 bytes
 (epstopdf)             Output file: <img/Y2__dd___phi_0-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:12
 (epstopdf)                    size: 61565 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/Y2__dd___phi_0-eps-conv
 erted-to.pdf img/Y2__dd___phi_0.eps>
 (epstopdf)             \includegraphics on input line 47.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/Y2__dd___phi_0-eps-converted-to.pdf img/Y2__dd
+___phi_0.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/Y2__dd___phi_0-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:25
+(epstopdf)                    size: 67825 bytes.
 
 <img/Y2__dd___phi_0-eps-converted-to.pdf, id=205, 422.57875pt x 317.185pt>
 File: img/Y2__dd___phi_0-eps-converted-to.pdf Graphic file (type pdf)
@@ -1283,15 +1349,20 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 51.
 
 Package epstopdf Info: Source file: <img/X1__dd___phi_15.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 74100 bytes
+(epstopdf)                    date: 2016-08-27 12:22:02
+(epstopdf)                    size: 77741 bytes
 (epstopdf)             Output file: <img/X1__dd___phi_15-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:13
 (epstopdf)                    size: 62636 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/X1__dd___phi_15-eps-con
 verted-to.pdf img/X1__dd___phi_15.eps>
 (epstopdf)             \includegraphics on input line 53.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/X1__dd___phi_15-eps-converted-to.pdf img/X1__d
+d___phi_15.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/X1__dd___phi_15-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:26
+(epstopdf)                    size: 66959 bytes.
 <img/X1__dd___phi_15-eps-converted-to.pdf, id=236, 422.57875pt x 317.185pt>
 File: img/X1__dd___phi_15-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1300,15 +1371,20 @@ Package pdftex.def Info: img/X1__dd___phi_15-eps-converted-to.pdf used on input
  line 53.
 (pdftex.def)             Requested size: 220.50887pt x 165.51791pt.
 Package epstopdf Info: Source file: <img/X2__dd___phi_15.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 74186 bytes
+(epstopdf)                    date: 2016-08-27 12:22:07
+(epstopdf)                    size: 71871 bytes
 (epstopdf)             Output file: <img/X2__dd___phi_15-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:13
 (epstopdf)                    size: 64816 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/X2__dd___phi_15-eps-con
 verted-to.pdf img/X2__dd___phi_15.eps>
 (epstopdf)             \includegraphics on input line 54.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/X2__dd___phi_15-eps-converted-to.pdf img/X2__d
+d___phi_15.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/X2__dd___phi_15-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:27
+(epstopdf)                    size: 60076 bytes.
 
 <img/X2__dd___phi_15-eps-converted-to.pdf, id=237, 422.57875pt x 317.185pt>
 File: img/X2__dd___phi_15-eps-converted-to.pdf Graphic file (type pdf)
@@ -1323,15 +1399,20 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 53--55
  []
 
 Package epstopdf Info: Source file: <img/Y1__dd___phi_15.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 73805 bytes
+(epstopdf)                    date: 2016-08-27 12:22:04
+(epstopdf)                    size: 70934 bytes
 (epstopdf)             Output file: <img/Y1__dd___phi_15-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:14
 (epstopdf)                    size: 68215 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/Y1__dd___phi_15-eps-con
 verted-to.pdf img/Y1__dd___phi_15.eps>
 (epstopdf)             \includegraphics on input line 57.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/Y1__dd___phi_15-eps-converted-to.pdf img/Y1__d
+d___phi_15.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/Y1__dd___phi_15-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:27
+(epstopdf)                    size: 58060 bytes.
 <img/Y1__dd___phi_15-eps-converted-to.pdf, id=238, 422.57875pt x 317.185pt>
 File: img/Y1__dd___phi_15-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1340,15 +1421,20 @@ Package pdftex.def Info: img/Y1__dd___phi_15-eps-converted-to.pdf used on input
  line 57.
 (pdftex.def)             Requested size: 220.50887pt x 165.51791pt.
 Package epstopdf Info: Source file: <img/Y2__dd___phi_15.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 75460 bytes
+(epstopdf)                    date: 2016-08-27 12:22:10
+(epstopdf)                    size: 73224 bytes
 (epstopdf)             Output file: <img/Y2__dd___phi_15-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:15
 (epstopdf)                    size: 70640 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/Y2__dd___phi_15-eps-con
 verted-to.pdf img/Y2__dd___phi_15.eps>
 (epstopdf)             \includegraphics on input line 58.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/Y2__dd___phi_15-eps-converted-to.pdf img/Y2__d
+d___phi_15.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/Y2__dd___phi_15-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:28
+(epstopdf)                    size: 67346 bytes.
 
 <img/Y2__dd___phi_15-eps-converted-to.pdf, id=239, 422.57875pt x 317.185pt>
 File: img/Y2__dd___phi_15-eps-converted-to.pdf Graphic file (type pdf)
@@ -1399,15 +1485,20 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 62.
 
 Package epstopdf Info: Source file: <img/X1__dd___phi_30.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 74347 bytes
+(epstopdf)                    date: 2016-08-27 12:25:46
+(epstopdf)                    size: 71676 bytes
 (epstopdf)             Output file: <img/X1__dd___phi_30-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:16
 (epstopdf)                    size: 59237 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/X1__dd___phi_30-eps-con
 verted-to.pdf img/X1__dd___phi_30.eps>
 (epstopdf)             \includegraphics on input line 64.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/X1__dd___phi_30-eps-converted-to.pdf img/X1__d
+d___phi_30.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/X1__dd___phi_30-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:29
+(epstopdf)                    size: 60507 bytes.
 <img/X1__dd___phi_30-eps-converted-to.pdf, id=270, 422.57875pt x 317.185pt>
 File: img/X1__dd___phi_30-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1416,15 +1507,20 @@ Package pdftex.def Info: img/X1__dd___phi_30-eps-converted-to.pdf used on input
  line 64.
 (pdftex.def)             Requested size: 220.50887pt x 165.51791pt.
 Package epstopdf Info: Source file: <img/X2__dd___phi_30.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 75698 bytes
+(epstopdf)                    date: 2016-08-27 12:25:52
+(epstopdf)                    size: 72805 bytes
 (epstopdf)             Output file: <img/X2__dd___phi_30-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:16
 (epstopdf)                    size: 70206 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/X2__dd___phi_30-eps-con
 verted-to.pdf img/X2__dd___phi_30.eps>
 (epstopdf)             \includegraphics on input line 65.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/X2__dd___phi_30-eps-converted-to.pdf img/X2__d
+d___phi_30.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/X2__dd___phi_30-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:29
+(epstopdf)                    size: 68725 bytes.
 
 <img/X2__dd___phi_30-eps-converted-to.pdf, id=271, 422.57875pt x 317.185pt>
 File: img/X2__dd___phi_30-eps-converted-to.pdf Graphic file (type pdf)
@@ -1439,15 +1535,20 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 64--66
  []
 
 Package epstopdf Info: Source file: <img/Y1__dd___phi_30.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 74615 bytes
+(epstopdf)                    date: 2016-08-27 12:25:49
+(epstopdf)                    size: 70874 bytes
 (epstopdf)             Output file: <img/Y1__dd___phi_30-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:17
 (epstopdf)                    size: 69105 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/Y1__dd___phi_30-eps-con
 verted-to.pdf img/Y1__dd___phi_30.eps>
 (epstopdf)             \includegraphics on input line 68.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/Y1__dd___phi_30-eps-converted-to.pdf img/Y1__d
+d___phi_30.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/Y1__dd___phi_30-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:30
+(epstopdf)                    size: 62684 bytes.
 <img/Y1__dd___phi_30-eps-converted-to.pdf, id=272, 422.57875pt x 317.185pt>
 File: img/Y1__dd___phi_30-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1456,15 +1557,20 @@ Package pdftex.def Info: img/Y1__dd___phi_30-eps-converted-to.pdf used on input
  line 68.
 (pdftex.def)             Requested size: 220.50887pt x 165.51791pt.
 Package epstopdf Info: Source file: <img/Y2__dd___phi_30.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 73082 bytes
+(epstopdf)                    date: 2016-08-27 12:25:54
+(epstopdf)                    size: 69531 bytes
 (epstopdf)             Output file: <img/Y2__dd___phi_30-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:18
 (epstopdf)                    size: 60942 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/Y2__dd___phi_30-eps-con
 verted-to.pdf img/Y2__dd___phi_30.eps>
 (epstopdf)             \includegraphics on input line 69.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/Y2__dd___phi_30-eps-converted-to.pdf img/Y2__d
+d___phi_30.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/Y2__dd___phi_30-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:31
+(epstopdf)                    size: 60078 bytes.
 
 <img/Y2__dd___phi_30-eps-converted-to.pdf, id=273, 422.57875pt x 317.185pt>
 File: img/Y2__dd___phi_30-eps-converted-to.pdf Graphic file (type pdf)
@@ -1515,15 +1621,20 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 73.
 
 Package epstopdf Info: Source file: <img/X1__dd___phi_45.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 75378 bytes
+(epstopdf)                    date: 2016-08-27 12:27:32
+(epstopdf)                    size: 75048 bytes
 (epstopdf)             Output file: <img/X1__dd___phi_45-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:18
 (epstopdf)                    size: 70486 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/X1__dd___phi_45-eps-con
 verted-to.pdf img/X1__dd___phi_45.eps>
 (epstopdf)             \includegraphics on input line 75.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/X1__dd___phi_45-eps-converted-to.pdf img/X1__d
+d___phi_45.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/X1__dd___phi_45-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:31
+(epstopdf)                    size: 66984 bytes.
 <img/X1__dd___phi_45-eps-converted-to.pdf, id=305, 422.57875pt x 317.185pt>
 File: img/X1__dd___phi_45-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1532,15 +1643,20 @@ Package pdftex.def Info: img/X1__dd___phi_45-eps-converted-to.pdf used on input
  line 75.
 (pdftex.def)             Requested size: 220.50887pt x 165.51791pt.
 Package epstopdf Info: Source file: <img/X2__dd___phi_45.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 70304 bytes
+(epstopdf)                    date: 2016-08-27 12:27:37
+(epstopdf)                    size: 72535 bytes
 (epstopdf)             Output file: <img/X2__dd___phi_45-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:19
 (epstopdf)                    size: 59875 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/X2__dd___phi_45-eps-con
 verted-to.pdf img/X2__dd___phi_45.eps>
 (epstopdf)             \includegraphics on input line 76.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/X2__dd___phi_45-eps-converted-to.pdf img/X2__d
+d___phi_45.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/X2__dd___phi_45-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:32
+(epstopdf)                    size: 68394 bytes.
 
 <img/X2__dd___phi_45-eps-converted-to.pdf, id=306, 422.57875pt x 317.185pt>
 File: img/X2__dd___phi_45-eps-converted-to.pdf Graphic file (type pdf)
@@ -1555,15 +1671,20 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 75--77
  []
 
 Package epstopdf Info: Source file: <img/Y1__dd___phi_45.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 73324 bytes
+(epstopdf)                    date: 2016-08-27 12:27:35
+(epstopdf)                    size: 69963 bytes
 (epstopdf)             Output file: <img/Y1__dd___phi_45-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:20
 (epstopdf)                    size: 68524 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/Y1__dd___phi_45-eps-con
 verted-to.pdf img/Y1__dd___phi_45.eps>
 (epstopdf)             \includegraphics on input line 79.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/Y1__dd___phi_45-eps-converted-to.pdf img/Y1__d
+d___phi_45.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/Y1__dd___phi_45-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:33
+(epstopdf)                    size: 60982 bytes.
 <img/Y1__dd___phi_45-eps-converted-to.pdf, id=307, 422.57875pt x 317.185pt>
 File: img/Y1__dd___phi_45-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1572,15 +1693,20 @@ Package pdftex.def Info: img/Y1__dd___phi_45-eps-converted-to.pdf used on input
  line 79.
 (pdftex.def)             Requested size: 220.50887pt x 165.51791pt.
 Package epstopdf Info: Source file: <img/Y2__dd___phi_45.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 69600 bytes
+(epstopdf)                    date: 2016-08-27 12:27:40
+(epstopdf)                    size: 73079 bytes
 (epstopdf)             Output file: <img/Y2__dd___phi_45-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:21
 (epstopdf)                    size: 56669 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/Y2__dd___phi_45-eps-con
 verted-to.pdf img/Y2__dd___phi_45.eps>
 (epstopdf)             \includegraphics on input line 80.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/Y2__dd___phi_45-eps-converted-to.pdf img/Y2__d
+d___phi_45.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/Y2__dd___phi_45-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:34
+(epstopdf)                    size: 67938 bytes.
 
 <img/Y2__dd___phi_45-eps-converted-to.pdf, id=308, 422.57875pt x 317.185pt>
 File: img/Y2__dd___phi_45-eps-converted-to.pdf Graphic file (type pdf)
@@ -1610,15 +1736,20 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 84.
 Package epstopdf Info: Source file: <img/X1__dd___fitted.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 103991 bytes
+(epstopdf)                    date: 2016-08-27 12:35:58
+(epstopdf)                    size: 103010 bytes
 (epstopdf)             Output file: <img/X1__dd___fitted-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:21
 (epstopdf)                    size: 4941 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/X1__dd___fitted-eps-con
 verted-to.pdf img/X1__dd___fitted.eps>
 (epstopdf)             \includegraphics on input line 118.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/X1__dd___fitted-eps-converted-to.pdf img/X1__d
+d___fitted.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/X1__dd___fitted-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:34
+(epstopdf)                    size: 4937 bytes.
 
 <img/X1__dd___fitted-eps-converted-to.pdf, id=339, 362.35374pt x 305.14pt>
 File: img/X1__dd___fitted-eps-converted-to.pdf Graphic file (type pdf)
@@ -1628,15 +1759,20 @@ Package pdftex.def Info: img/X1__dd___fitted-eps-converted-to.pdf used on input
  line 118.
 (pdftex.def)             Requested size: 220.50887pt x 185.6928pt.
 Package epstopdf Info: Source file: <img/X2__dd___fitted.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 103990 bytes
+(epstopdf)                    date: 2016-08-27 12:35:59
+(epstopdf)                    size: 103008 bytes
 (epstopdf)             Output file: <img/X2__dd___fitted-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:22
 (epstopdf)                    size: 4937 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/X2__dd___fitted-eps-con
 verted-to.pdf img/X2__dd___fitted.eps>
 (epstopdf)             \includegraphics on input line 119.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/X2__dd___fitted-eps-converted-to.pdf img/X2__d
+d___fitted.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/X2__dd___fitted-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:35
+(epstopdf)                    size: 4942 bytes.
 
 <img/X2__dd___fitted-eps-converted-to.pdf, id=340, 362.35374pt x 305.14pt>
 File: img/X2__dd___fitted-eps-converted-to.pdf Graphic file (type pdf)
@@ -1651,15 +1787,20 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 118--120
  []
 
 Package epstopdf Info: Source file: <img/Y1__dd___fitted.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 103125 bytes
+(epstopdf)                    date: 2016-08-27 12:36:00
+(epstopdf)                    size: 102140 bytes
 (epstopdf)             Output file: <img/Y1__dd___fitted-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:23
 (epstopdf)                    size: 4892 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/Y1__dd___fitted-eps-con
 verted-to.pdf img/Y1__dd___fitted.eps>
 (epstopdf)             \includegraphics on input line 124.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/Y1__dd___fitted-eps-converted-to.pdf img/Y1__d
+d___fitted.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/Y1__dd___fitted-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:36
+(epstopdf)                    size: 4882 bytes.
 <img/Y1__dd___fitted-eps-converted-to.pdf, id=341, 367.3725pt x 305.14pt>
 File: img/Y1__dd___fitted-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1668,15 +1809,20 @@ Package pdftex.def Info: img/Y1__dd___fitted-eps-converted-to.pdf used on input
  line 124.
 (pdftex.def)             Requested size: 220.50887pt x 183.1599pt.
 Package epstopdf Info: Source file: <img/Y2__dd___fitted.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 103126 bytes
+(epstopdf)                    date: 2016-08-27 12:36:00
+(epstopdf)                    size: 102141 bytes
 (epstopdf)             Output file: <img/Y2__dd___fitted-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:39:24
 (epstopdf)                    size: 4890 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/Y2__dd___fitted-eps-con
 verted-to.pdf img/Y2__dd___fitted.eps>
 (epstopdf)             \includegraphics on input line 125.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/Y2__dd___fitted-eps-converted-to.pdf img/Y2__d
+d___fitted.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <img/Y2__dd___fitted-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:37
+(epstopdf)                    size: 4885 bytes.
 
 <img/Y2__dd___fitted-eps-converted-to.pdf, id=342, 367.3725pt x 305.14pt>
 File: img/Y2__dd___fitted-eps-converted-to.pdf Graphic file (type pdf)
@@ -1710,15 +1856,20 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 Package epstopdf Info: Source file: <img/phi1__d.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 224381 bytes
+(epstopdf)                    date: 2016-08-27 12:42:45
+(epstopdf)                    size: 222515 bytes
 (epstopdf)             Output file: <img/phi1__d-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:42:03
 (epstopdf)                    size: 13600 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/phi1__d-eps-converted-t
 o.pdf img/phi1__d.eps>
 (epstopdf)             \includegraphics on input line 5.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/phi1__d-eps-converted-to.pdf img/phi1__d.eps).
+..executed (allowed).
+
+Package epstopdf Info: Result file: <img/phi1__d-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:37
+(epstopdf)                    size: 13591 bytes.
 
 <img/phi1__d-eps-converted-to.pdf, id=392, 370.38374pt x 305.14pt>
 File: img/phi1__d-eps-converted-to.pdf Graphic file (type pdf)
@@ -1728,15 +1879,20 @@ Package pdftex.def Info: img/phi1__d-eps-converted-to.pdf used on input line 5.
 
 (pdftex.def)             Requested size: 220.50887pt x 181.6653pt.
 Package epstopdf Info: Source file: <img/phi2__d.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 222073 bytes
+(epstopdf)                    date: 2016-08-27 12:42:46
+(epstopdf)                    size: 221881 bytes
 (epstopdf)             Output file: <img/phi2__d-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:42:04
 (epstopdf)                    size: 13530 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/phi2__d-eps-converted-t
 o.pdf img/phi2__d.eps>
 (epstopdf)             \includegraphics on input line 6.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=img/phi2__d-eps-converted-to.pdf img/phi2__d.eps).
+..executed (allowed).
+
+Package epstopdf Info: Result file: <img/phi2__d-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-08-27 12:46:38
+(epstopdf)                    size: 13553 bytes.
 
 <img/phi2__d-eps-converted-to.pdf, id=393, 370.38374pt x 305.14pt>
 File: img/phi2__d-eps-converted-to.pdf Graphic file (type pdf)
@@ -1782,11 +1938,11 @@ y/m/n/10  \OT1/cmr/m/n/10 2000\OML/cmm/m/it/10 ;$ $\OMS/cmsy/m/n/10  \OT1/cmr/m
  []
 
 Package epstopdf Info: Source file: <img/adc_values_rpm_-3000.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 39426 bytes
+(epstopdf)                    date: 2016-08-22 13:52:32
+(epstopdf)                    size: 39374 bytes
 (epstopdf)             Output file: <img/adc_values_rpm_-3000-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:46:35
 (epstopdf)                    size: 6737 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/adc_values_rpm_-3000-ep
 s-converted-to.pdf img/adc_values_rpm_-3000.eps>
@@ -1800,11 +1956,11 @@ Package pdftex.def Info: img/adc_values_rpm_-3000-eps-converted-to.pdf used on
 input line 5.
 (pdftex.def)             Requested size: 220.50887pt x 180.69218pt.
 Package epstopdf Info: Source file: <img/adc_values_rpm_-2000.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 38920 bytes
+(epstopdf)                    date: 2016-08-22 13:55:43
+(epstopdf)                    size: 38868 bytes
 (epstopdf)             Output file: <img/adc_values_rpm_-2000-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:46:36
 (epstopdf)                    size: 6706 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/adc_values_rpm_-2000-ep
 s-converted-to.pdf img/adc_values_rpm_-2000.eps>
@@ -1823,11 +1979,11 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 5--7
  []
 
 Package epstopdf Info: Source file: <img/adc_values_rpm_-1000.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 39215 bytes
+(epstopdf)                    date: 2016-08-22 13:58:21
+(epstopdf)                    size: 39163 bytes
 (epstopdf)             Output file: <img/adc_values_rpm_-1000-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:46:37
 (epstopdf)                    size: 6682 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/adc_values_rpm_-1000-ep
 s-converted-to.pdf img/adc_values_rpm_-1000.eps>
@@ -1841,11 +1997,11 @@ Package pdftex.def Info: img/adc_values_rpm_-1000-eps-converted-to.pdf used on
 input line 9.
 (pdftex.def)             Requested size: 220.50887pt x 180.69218pt.
 Package epstopdf Info: Source file: <img/adc_values_rpm_0.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 37222 bytes
+(epstopdf)                    date: 2016-08-22 14:00:10
+(epstopdf)                    size: 37170 bytes
 (epstopdf)             Output file: <img/adc_values_rpm_0-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:46:37
 (epstopdf)                    size: 6470 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/adc_values_rpm_0-eps-co
 nverted-to.pdf img/adc_values_rpm_0.eps>
@@ -1879,11 +2035,11 @@ Package babel Info: Redefining ngerman shorthand "~
 eps-converted-to.pdf> <./img/adc_values_rpm_-1000-eps-converted-to.pdf> <./img/
 adc_values_rpm_0-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <img/adc_values_rpm_1000.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 37662 bytes
+(epstopdf)                    date: 2016-08-22 14:02:13
+(epstopdf)                    size: 37610 bytes
 (epstopdf)             Output file: <img/adc_values_rpm_1000-eps-converted-to.p
 df>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:46:38
 (epstopdf)                    size: 6550 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/adc_values_rpm_1000-eps
 -converted-to.pdf img/adc_values_rpm_1000.eps>
@@ -1898,11 +2054,11 @@ Package pdftex.def Info: img/adc_values_rpm_1000-eps-converted-to.pdf used on i
 nput line 15.
 (pdftex.def)             Requested size: 220.50887pt x 180.69218pt.
 Package epstopdf Info: Source file: <img/adc_values_rpm_2000.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 36724 bytes
+(epstopdf)                    date: 2016-08-22 14:03:35
+(epstopdf)                    size: 36672 bytes
 (epstopdf)             Output file: <img/adc_values_rpm_2000-eps-converted-to.p
 df>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:46:39
 (epstopdf)                    size: 6553 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/adc_values_rpm_2000-eps
 -converted-to.pdf img/adc_values_rpm_2000.eps>
@@ -1922,11 +2078,11 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 15--17
  []
 
 Package epstopdf Info: Source file: <img/adc_values_rpm_3000.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 39726 bytes
+(epstopdf)                    date: 2016-08-22 14:06:11
+(epstopdf)                    size: 39674 bytes
 (epstopdf)             Output file: <img/adc_values_rpm_3000-eps-converted-to.p
 df>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:46:40
 (epstopdf)                    size: 6736 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/adc_values_rpm_3000-eps
 -converted-to.pdf img/adc_values_rpm_3000.eps>
@@ -1941,11 +2097,11 @@ Package pdftex.def Info: img/adc_values_rpm_3000-eps-converted-to.pdf used on i
 nput line 20.
 (pdftex.def)             Requested size: 220.50887pt x 180.69218pt.
 Package epstopdf Info: Source file: <img/ADC_mittelwert_polynom.eps>
-(epstopdf)                    date: 2016-08-22 19:24:37
-(epstopdf)                    size: 184990 bytes
+(epstopdf)                    date: 2016-08-22 14:08:18
+(epstopdf)                    size: 183104 bytes
 (epstopdf)             Output file: <img/ADC_mittelwert_polynom-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2016-08-22 19:24:37
+(epstopdf)                    date: 2016-08-22 15:46:40
 (epstopdf)                    size: 7247 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/ADC_mittelwert_polynom-
 eps-converted-to.pdf img/ADC_mittelwert_polynom.eps>
@@ -1996,10 +2152,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
 Package epstopdf Info: Source file: <img/V4_phi.eps>
-(epstopdf)                    date: 2016-08-22 19:24:40
+(epstopdf)                    date: 2016-08-23 21:25:28
 (epstopdf)                    size: 257975 bytes
 (epstopdf)             Output file: <img/V4_phi-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 19:42:15
+(epstopdf)                    date: 2016-08-23 21:25:28
 (epstopdf)                    size: 12924 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/V4_phi-eps-converted-to
 .pdf img/V4_phi.eps>
@@ -2050,10 +2206,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
 Package epstopdf Info: Source file: <img/V5_C_psi_d.eps>
-(epstopdf)                    date: 2016-08-22 19:24:40
+(epstopdf)                    date: 2016-08-23 21:25:28
 (epstopdf)                    size: 266054 bytes
 (epstopdf)             Output file: <img/V5_C_psi_d-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-22 20:02:07
+(epstopdf)                    date: 2016-08-23 21:25:28
 (epstopdf)                    size: 17296 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/V5_C_psi_d-eps-converte
 d-to.pdf img/V5_C_psi_d.eps>
@@ -2092,28 +2248,26 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
  ) 
 Here is how much of TeX's memory you used:
  9104 strings out of 493634
- 143180 string characters out of 3136055
+ 141367 string characters out of 3141320
  240951 words of memory out of 3000000
  12200 multiletter control sequences out of 15000+200000
  8900 words of font info for 32 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  68i,11n,98p,825b,364s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmbx10.pfb><C:/Users/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmbx12.pfb><C:/Users/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb><C:/Users/ich/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ich/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ich/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/ic
-h/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C
-:/Users/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-mib10.pfb><C:/Users/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr10.pfb><C:/Users/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr5.pfb><C:/Users/ich/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ich/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ich/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on VersucheMessungen.pdf (14 pages, 2083799 bytes).
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on VersucheMessungen.pdf (14 pages, 2063093 bytes).
 PDF statistics:
  608 PDF objects out of 1000 (max. 8388607)
  70 named destinations out of 1000 (max. 500000)

@@ -1,0 +1,69 @@
+#include "CComplementaryFilter.h"
+#include "CLQR.h"
+#include "CSensorEvaluation.h"
+#include "TKalmanFilter.h"
+#include "CMPU6050.h"
+#include "Cservo_control.h"
+#include "Cmotor_control.h"
+#include "CSensor.h"
+#include "EState.h"
+
+static UInt32 sTickCounter = 0U;
+
+extern "C"
+{
+void SysTick_Handler()
+{
+	HAL_IncTick();
+	sTickCounter++;
+}
+}
+
+
+void main();
+void main()
+{
+	EState state = EState::StateIdle;
+	bool initSuccess = false;
+	CSensor sensor(initSuccess, ELowPass::BANDWIDTH_44);
+	CSensorEvaluation sensorEval;
+
+	Int16 x1__dd_raw;
+	Int16 x2__dd_raw;
+	Int16 y1__dd_raw;
+	Int16 y2__dd_raw;
+
+	float torque = 0.0F;
+
+	while(true)
+	{
+		if(sTickCounter >= static_cast<UInt32>(Config::T_a * 1000.0F))
+		{
+			sTickCounter = 0U;
+
+			sensor.getAccX1Raw(x1__dd_raw);
+			sensor.getAccX2Raw(x2__dd_raw);
+			sensor.getAccY1Raw(y1__dd_raw);
+
+			sensorEval.calcPhi(sensor.getAccX1Raw(), )
+			switch(state)
+			{
+			case EState::StateIdle:
+			{
+
+				break;
+			}
+			case EState::StateJumpUp:
+			{
+
+				break;
+			}
+			case EState::StateBalance:
+			{
+
+				break;
+			}
+			}
+		}
+	}
+}

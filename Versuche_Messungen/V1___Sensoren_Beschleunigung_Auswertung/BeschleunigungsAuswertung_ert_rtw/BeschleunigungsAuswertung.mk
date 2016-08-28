@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'BeschleunigungsAuswertung'. 
 ## 
 ## Makefile     : BeschleunigungsAuswertung.mk
-## Generated on : Mon Aug 22 13:28:48 2016
+## Generated on : Sat Aug 27 12:13:28 2016
 ## MATLAB Coder version: 3.1 (R2016a)
 ## 
 ## Build Info:
@@ -29,7 +29,7 @@ MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2016a
 MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2016a/bin
 MATLAB_ARCH_BIN           = C:/PROGRA~1/MATLAB/R2016a/bin/win64
 MASTER_ANCHOR_DIR         = 
-START_DIR                 = C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung
+START_DIR                 = C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung
 ARCH                      = win64
 SOLVER                    = 
 SOLVER_OBJ                = 
@@ -695,6 +695,34 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(LIBS) $(MAIN_OBJ)
 
 
 %.o : $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/%.cxx
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MPU6050/%.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MPU6050/%.s
+	$(AS) $(ASFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MPU6050/%.S
+	$(AS) $(ASFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MPU6050/%.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MPU6050/%.cc
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MPU6050/%.C
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MPU6050/%.cxx
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 

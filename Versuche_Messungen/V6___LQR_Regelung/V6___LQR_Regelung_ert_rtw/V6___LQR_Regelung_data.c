@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'V6___LQR_Regelung'.
  *
- * Model version                  : 1.15
+ * Model version                  : 1.29
  * Simulink Coder version         : 8.10 (R2016a) 10-Feb-2016
- * C/C++ source code generated on : Fri Aug 26 09:20:35 2016
+ * C/C++ source code generated on : Sun Aug 28 12:47:02 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -25,21 +25,33 @@ P_V6___LQR_Regelung_T V6___LQR_Regelung_P = {
   /*  Variable: Kd
    * Referenced by: '<Root>/Gain3'
    */
-  { -1.2143007872722522, -0.14984487258542348, -0.000412288804367589 },
+  { -0.88214609589243231, -0.13864179610495247, -0.00022760770893999778 },
+  0.2618F,                             /* Mask Parameter: BalanceArea_const
+                                        * Referenced by: '<S1>/Constant'
+                                        */
   1017.0,                              /* Expression: 1017
                                         * Referenced by: '<Root>/Constant2'
+                                        */
+  0.0,                                 /* Expression: 0
+                                        * Referenced by: '<Root>/phi_COG_Offset1'
+                                        */
+  0.127F,                              /* Computed Parameter: phi_COG_Offset_Value
+                                        * Referenced by: '<Root>/phi_COG_Offset'
                                         */
   0.02F,                               /* Expression: single(0.02)
                                         * Referenced by: '<Root>/S-Function Builder2'
                                         */
-  0.11F,                               /* Computed Parameter: Constant1_Value
-                                        * Referenced by: '<Root>/Constant1'
-                                        */
-  -1.21430075F,                        /* Computed Parameter: Gain1_Gain
+  -0.88214612F,                        /* Computed Parameter: Gain1_Gain
                                         * Referenced by: '<Root>/Gain1'
                                         */
-  -0.14984487F,                        /* Computed Parameter: Gain2_Gain
+  -0.13864179F,                        /* Computed Parameter: Gain2_Gain
                                         * Referenced by: '<Root>/Gain2'
+                                        */
+  57.2958F,                            /* Computed Parameter: radtodeg3_Gain
+                                        * Referenced by: '<Root>/radtodeg3'
+                                        */
+  57.2958F,                            /* Computed Parameter: radtodeg2_Gain
+                                        * Referenced by: '<Root>/radtodeg2'
                                         */
   57.2958F,                            /* Computed Parameter: radtodeg1_Gain
                                         * Referenced by: '<Root>/radtodeg1'
@@ -52,9 +64,6 @@ P_V6___LQR_Regelung_T V6___LQR_Regelung_P = {
                                         */
   33882U,                              /* Computed Parameter: Gain_Gain
                                         * Referenced by: '<Root>/Gain'
-                                        */
-  0,                                   /* Computed Parameter: Constant_Value
-                                        * Referenced by: '<Root>/Constant'
                                         */
   0,                                   /* Expression: boolean(AD0PinLevel)
                                         * Referenced by: '<Root>/Sensor1'

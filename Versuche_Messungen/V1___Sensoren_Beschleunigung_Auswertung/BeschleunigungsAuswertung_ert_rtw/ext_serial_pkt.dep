@@ -33,7 +33,7 @@ ext_serial_pkt.o: \
  C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_usart.h \
  C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h \
  C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/misc.h \
- C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung/BeschleunigungsAuswertung_ert_rtw/rtwtypes.h \
+ C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung/BeschleunigungsAuswertung_ert_rtw/rtwtypes.h \
  C:/PROGRA~1/MATLAB/R2016a/rtw/c/src/ext_mode/common/ext_types.h \
  C:/PROGRA~1/MATLAB/R2016a/rtw/c/src/ext_mode/common/ext_share.h \
  C:/PROGRA~1/MATLAB/R2016a/rtw/c/src/ext_mode/serial/ext_serial_port.h \
@@ -105,7 +105,7 @@ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx
 
 C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/misc.h:
 
-C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung/BeschleunigungsAuswertung_ert_rtw/rtwtypes.h:
+C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung/BeschleunigungsAuswertung_ert_rtw/rtwtypes.h:
 
 C:/PROGRA~1/MATLAB/R2016a/rtw/c/src/ext_mode/common/ext_types.h:
 

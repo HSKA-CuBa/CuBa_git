@@ -25,7 +25,7 @@
   *  -------------------------------------------------------------------------
   * | See matlabroot/simulink/src/sfuntmpl_doc.c for a more detailed template |
   *  ------------------------------------------------------------------------- 
-* Created: Wed Aug 24 14:19:21 2016
+* Created: Sat Aug 27 15:09:15 2016
 */
 #define S_FUNCTION_LEVEL 2
 #define S_FUNCTION_NAME SensorenFilter_Block
@@ -50,7 +50,7 @@
 #define IN_0_BIAS            0
 #define IN_0_SLOPE           0.125
 /* Input Port  1 */
-#define IN_PORT_1_NAME      phi1__d
+#define IN_PORT_1_NAME      y1__dd
 #define INPUT_1_WIDTH       1
 #define INPUT_DIMS_1_COL    1
 #define INPUT_1_DTYPE       int16_T
@@ -67,7 +67,7 @@
 #define IN_1_BIAS            0
 #define IN_1_SLOPE           0.125
 /* Input Port  2 */
-#define IN_PORT_2_NAME      phi2__d
+#define IN_PORT_2_NAME      phi1__d
 #define INPUT_2_WIDTH       1
 #define INPUT_DIMS_2_COL    1
 #define INPUT_2_DTYPE       int16_T
@@ -84,7 +84,7 @@
 #define IN_2_BIAS            0
 #define IN_2_SLOPE           0.125
 /* Input Port  3 */
-#define IN_PORT_3_NAME      y1__dd
+#define IN_PORT_3_NAME      x2__dd
 #define INPUT_3_WIDTH       1
 #define INPUT_DIMS_3_COL    1
 #define INPUT_3_DTYPE       int16_T
@@ -118,7 +118,7 @@
 #define IN_4_BIAS            0
 #define IN_4_SLOPE           0.125
 /* Input Port  5 */
-#define IN_PORT_5_NAME      x2__dd
+#define IN_PORT_5_NAME      phi2__d
 #define INPUT_5_WIDTH       1
 #define INPUT_DIMS_5_COL    1
 #define INPUT_5_DTYPE       int16_T
@@ -230,11 +230,11 @@
 !mxIsEmpty(pVal) && !mxIsSparse(pVal) && !mxIsComplex(pVal) && mxIsSingle(pVal))
 
 extern void SensorenFilter_Block_Outputs_wrapper(const int16_T *x1__dd,
-			const int16_T *phi1__d,
-			const int16_T *phi2__d,
 			const int16_T *y1__dd,
-			const int16_T *y2__dd,
+			const int16_T *phi1__d,
 			const int16_T *x2__dd,
+			const int16_T *y2__dd,
+			const int16_T *phi2__d,
 			real32_T *phi__raw,
 			real32_T *phi__comp,
 			real32_T *phi__kalman,
@@ -242,11 +242,11 @@ extern void SensorenFilter_Block_Outputs_wrapper(const int16_T *x1__dd,
 			const real_T *xD,
 			const real32_T  *T_a, const int_T  p_width0);
 extern void SensorenFilter_Block_Update_wrapper(const int16_T *x1__dd,
-			const int16_T *phi1__d,
-			const int16_T *phi2__d,
 			const int16_T *y1__dd,
-			const int16_T *y2__dd,
+			const int16_T *phi1__d,
 			const int16_T *x2__dd,
+			const int16_T *y2__dd,
+			const int16_T *phi2__d,
 			real32_T *phi__raw,
 			real32_T *phi__comp,
 			real32_T *phi__kalman,
@@ -458,11 +458,11 @@ static void mdlSetWorkWidths(SimStruct *S)
 static void mdlOutputs(SimStruct *S, int_T tid)
 {
     const int16_T   *x1__dd  = (const int16_T*) ssGetInputPortSignal(S,0);
-    const int16_T   *phi1__d  = (const int16_T*) ssGetInputPortSignal(S,1);
-    const int16_T   *phi2__d  = (const int16_T*) ssGetInputPortSignal(S,2);
-    const int16_T   *y1__dd  = (const int16_T*) ssGetInputPortSignal(S,3);
+    const int16_T   *y1__dd  = (const int16_T*) ssGetInputPortSignal(S,1);
+    const int16_T   *phi1__d  = (const int16_T*) ssGetInputPortSignal(S,2);
+    const int16_T   *x2__dd  = (const int16_T*) ssGetInputPortSignal(S,3);
     const int16_T   *y2__dd  = (const int16_T*) ssGetInputPortSignal(S,4);
-    const int16_T   *x2__dd  = (const int16_T*) ssGetInputPortSignal(S,5);
+    const int16_T   *phi2__d  = (const int16_T*) ssGetInputPortSignal(S,5);
     real32_T        *phi__raw  = (real32_T *)ssGetOutputPortRealSignal(S,0);
     real32_T        *phi__comp  = (real32_T *)ssGetOutputPortRealSignal(S,1);
     real32_T        *phi__kalman  = (real32_T *)ssGetOutputPortRealSignal(S,2);
@@ -471,7 +471,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     const int_T   p_width0  = mxGetNumberOfElements(PARAM_DEF0(S));
     const real32_T  *T_a  = (const real32_T *)mxGetData(PARAM_DEF0(S));
 
-    SensorenFilter_Block_Outputs_wrapper(x1__dd, phi1__d, phi2__d, y1__dd, y2__dd, x2__dd, phi__raw, phi__comp, phi__kalman, phi__d, xD, T_a, p_width0);
+    SensorenFilter_Block_Outputs_wrapper(x1__dd, y1__dd, phi1__d, x2__dd, y2__dd, phi2__d, phi__raw, phi__comp, phi__kalman, phi__d, xD, T_a, p_width0);
 
 }
 #define MDL_UPDATE  /* Change to #undef to remove function */
@@ -486,11 +486,11 @@ static void mdlOutputs(SimStruct *S, int_T tid)
   {
     real_T         *xD  = ssGetDiscStates(S);
     const int16_T   *x1__dd  = (const int16_T*) ssGetInputPortSignal(S,0);
-    const int16_T   *phi1__d  = (const int16_T*) ssGetInputPortSignal(S,1);
-    const int16_T   *phi2__d  = (const int16_T*) ssGetInputPortSignal(S,2);
-    const int16_T   *y1__dd  = (const int16_T*) ssGetInputPortSignal(S,3);
+    const int16_T   *y1__dd  = (const int16_T*) ssGetInputPortSignal(S,1);
+    const int16_T   *phi1__d  = (const int16_T*) ssGetInputPortSignal(S,2);
+    const int16_T   *x2__dd  = (const int16_T*) ssGetInputPortSignal(S,3);
     const int16_T   *y2__dd  = (const int16_T*) ssGetInputPortSignal(S,4);
-    const int16_T   *x2__dd  = (const int16_T*) ssGetInputPortSignal(S,5);
+    const int16_T   *phi2__d  = (const int16_T*) ssGetInputPortSignal(S,5);
     real32_T        *phi__raw  = (real32_T *)ssGetOutputPortRealSignal(S,0);
     real32_T        *phi__comp  = (real32_T *)ssGetOutputPortRealSignal(S,1);
     real32_T        *phi__kalman  = (real32_T *)ssGetOutputPortRealSignal(S,2);
@@ -498,7 +498,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     const int_T   p_width0  = mxGetNumberOfElements(PARAM_DEF0(S));
     const real32_T  *T_a  = (const real32_T *)mxGetData(PARAM_DEF0(S));
 
-    SensorenFilter_Block_Update_wrapper(x1__dd, phi1__d, phi2__d, y1__dd, y2__dd, x2__dd, phi__raw, phi__comp, phi__kalman, phi__d,  xD, T_a, p_width0);
+    SensorenFilter_Block_Update_wrapper(x1__dd, y1__dd, phi1__d, x2__dd, y2__dd, phi2__d, phi__raw, phi__comp, phi__kalman, phi__d,  xD, T_a, p_width0);
 }
 
 

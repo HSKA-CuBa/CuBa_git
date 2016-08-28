@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'TestFilter'.
  *
- * Model version                  : 1.17
+ * Model version                  : 1.23
  * Simulink Coder version         : 8.10 (R2016a) 10-Feb-2016
- * C/C++ source code generated on : Wed Aug 24 18:27:22 2016
+ * C/C++ source code generated on : Sat Aug 27 13:43:35 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -132,10 +132,10 @@ void TestFilter_initialize(void)
   TestFilter_M->Timing.stepSize0 = 0.02;
 
   /* External mode info */
-  TestFilter_M->Sizes.checksums[0] = (308850644U);
-  TestFilter_M->Sizes.checksums[1] = (1332529841U);
-  TestFilter_M->Sizes.checksums[2] = (2270831634U);
-  TestFilter_M->Sizes.checksums[3] = (1956564080U);
+  TestFilter_M->Sizes.checksums[0] = (2046822630U);
+  TestFilter_M->Sizes.checksums[1] = (1117202071U);
+  TestFilter_M->Sizes.checksums[2] = (2108673156U);
+  TestFilter_M->Sizes.checksums[3] = (1228462439U);
 
   {
     static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE;

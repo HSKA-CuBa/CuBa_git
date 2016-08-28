@@ -31,11 +31,11 @@
  *
  */
 void SensorenFilter_Block_Outputs_wrapper(const int16_T *x1__dd,
-			const int16_T *phi1__d,
-			const int16_T *phi2__d,
 			const int16_T *y1__dd,
-			const int16_T *y2__dd,
+			const int16_T *phi1__d,
 			const int16_T *x2__dd,
+			const int16_T *y2__dd,
+			const int16_T *phi2__d,
 			real32_T *phi__raw,
 			real32_T *phi__comp,
 			real32_T *phi__kalman,
@@ -49,12 +49,12 @@ if(xD[0] == 1)
     #ifndef MATLAB_MEX_FILE
     static bool initialRun = true;
     static float recentPhi = 0.0F;
-    float x1__dd_f  = ((float)x1__dd[0]) * (-0.0000582F) + 0.03477F;
-    float x2__dd_f  = ((float)x2__dd[0]) * (-0.0004713F) + 0.168F;
-    float y1__dd_f  = ((float)y1__dd[0]) * (-0.0006188F) + 0.1636F;
-    float y2__dd_f  = ((float)y2__dd[0]) * (-0.0006165F) + 0.05969F;
-    float phi1__d_f = ((float)(phi1__d[0] - 79)) * (-0.0076F) * 0.0175F;
-    float phi2__d_f = ((float)(phi2__d[0] - 161)) * (-0.0076F) * 0.0175;
+    float x1__dd_f  = ((float)x1__dd[0]) * (-0.0006082F) + 0.4412F;
+    float x2__dd_f  = ((float)x2__dd[0]) * (-0.000607F) + 0.2804F;
+    float y1__dd_f  = ((float)y1__dd[0]) * (-0.0006064F) + 0.1248F;
+    float y2__dd_f  = ((float)y2__dd[0]) * (-0.0006089F) + 0.09182F;
+    float phi1__d_f = ((float)(phi1__d[0] + 89)) * (-0.0076F) * 0.0175F;
+    float phi2__d_f = ((float)(phi2__d[0] + 889)) * (-0.0076F) * 0.0175;
     
     phi__d[0]       = (phi1__d_f + phi2__d_f) / 2.0F;
     //Winkelschaetzung
@@ -72,11 +72,13 @@ if(xD[0] == 1)
     static float sPhi[7]     = { 0.0F };
     static float sP          = 0.001F;
     static float sK          = 0.0F;
+    static float sOldPhi     = 0.0F;
     static int index         = 0;
     if(initialRun == true)
     {
         initialRun = false;
         phi__kalman[0] = phi__raw[0];
+        sOldPhi        = phi__raw[0];
         sPhi__d[0] = phi__d[0];
         sPhi__d[1] = phi__d[0];
         sPhi__d[2] = phi__d[0];
@@ -97,13 +99,13 @@ if(xD[0] == 1)
     index = index == 6 ? 0 : index + 1;
     float meanPhi_d = (sPhi__d[0] + sPhi__d[1] + sPhi__d[2] + sPhi__d[3] + 
                        sPhi__d[4] + sPhi__d[5] + sPhi__d[6]) / 7.0F;
-    float varPhi_d  = ((T_a[0]*(sPhi__d[0]-meanPhi_d))*(T_a[0]*(sPhi__d[0]-meanPhi_d)) + 
-                       (T_a[0]*(sPhi__d[1]-meanPhi_d))*(T_a[0]*(sPhi__d[1]-meanPhi_d)) + 
-                       (T_a[0]*(sPhi__d[2]-meanPhi_d))*(T_a[0]*(sPhi__d[2]-meanPhi_d)) + 
-                       (T_a[0]*(sPhi__d[3]-meanPhi_d))*(T_a[0]*(sPhi__d[3]-meanPhi_d)) +
-                       (T_a[0]*(sPhi__d[4]-meanPhi_d))*(T_a[0]*(sPhi__d[4]-meanPhi_d)) + 
-                       (T_a[0]*(sPhi__d[5]-meanPhi_d))*(T_a[0]*(sPhi__d[5]-meanPhi_d)) + 
-                       (T_a[0]*(sPhi__d[6]-meanPhi_d))*(T_a[0]*(sPhi__d[6]-meanPhi_d)))/ 7.0F;
+    float varPhi_d  = ((sPhi__d[0]-meanPhi_d)*(sPhi__d[0]-meanPhi_d) + 
+                       (sPhi__d[1]-meanPhi_d)*(sPhi__d[1]-meanPhi_d) + 
+                       (sPhi__d[2]-meanPhi_d)*(sPhi__d[2]-meanPhi_d) + 
+                       (sPhi__d[3]-meanPhi_d)*(sPhi__d[3]-meanPhi_d) +
+                       (sPhi__d[4]-meanPhi_d)*(sPhi__d[4]-meanPhi_d) + 
+                       (sPhi__d[5]-meanPhi_d)*(sPhi__d[5]-meanPhi_d) + 
+                       (sPhi__d[6]-meanPhi_d)*(sPhi__d[6]-meanPhi_d)) * T_a[0] * T_a[0]/ 6.0F;
     float meanPhi  = (sPhi[0] + sPhi[1] + sPhi[2] + sPhi[3] + sPhi[4] +
                       sPhi[5] + sPhi[6]) / 7.0F;
     float varPhi   = ((sPhi[0]-meanPhi)*(sPhi[0]-meanPhi) + 
@@ -112,13 +114,14 @@ if(xD[0] == 1)
                       (sPhi[3]-meanPhi)*(sPhi[3]-meanPhi) +
                       (sPhi[4]-meanPhi)*(sPhi[4]-meanPhi) +
                       (sPhi[5]-meanPhi)*(sPhi[5]-meanPhi) +
-                      (sPhi[6]-meanPhi)*(sPhi[6]-meanPhi)) / 7.0F;
-    phi__kalman[0] = phi__kalman[0] + phi__d[0]*T_a[0];
+                      (sPhi[6]-meanPhi)*(sPhi[6]-meanPhi)) / 6.0F;
+    phi__kalman[0] = sOldPhi + phi__d[0]*T_a[0];
     sP             = sP + varPhi_d;
     sK             = sP / (sP + varPhi);
     phi__kalman[0] = phi__kalman[0] + sK * (phi__raw[0] - phi__kalman[0]);
     sP             = (1-sK)*sP;
-    #endif
+    sOldPhi        = phi__kalman[0];
+    #endif    
 }
 /* %%%-SFUNWIZ_wrapper_Outputs_Changes_END --- EDIT HERE TO _BEGIN */
 }
@@ -128,11 +131,11 @@ if(xD[0] == 1)
   *
   */
 void SensorenFilter_Block_Update_wrapper(const int16_T *x1__dd,
-			const int16_T *phi1__d,
-			const int16_T *phi2__d,
 			const int16_T *y1__dd,
-			const int16_T *y2__dd,
+			const int16_T *phi1__d,
 			const int16_T *x2__dd,
+			const int16_T *y2__dd,
+			const int16_T *phi2__d,
 			real32_T *phi__raw,
 			real32_T *phi__comp,
 			real32_T *phi__kalman,

@@ -1,0 +1,109 @@
+//27.8.2016
+//Definitions to carry out the FSM-actions
+#include "CActionHandler.h"
+#include "Config.h"
+#include <cmath>
+
+CActionHandler::CActionHandler(IHardware& hw) : mHardware(hw)
+{
+
+}
+void CActionHandler::onEntryIdle()
+{
+
+}
+void CActionHandler::onExitIdle()
+{
+
+}
+void CActionHandler::onEntryJumpUp()
+{
+	mHardware.enableMotor();
+	mHardware.setTorque(Config::Torque_JumpUp);
+}
+void CActionHandler::onExitJumpUp()
+{
+	mHardware.disableMotor();
+	mHardware.openBrake();
+}
+void CActionHandler::onEntryBalance()
+{
+	mHardware.enableMotor();
+}
+void CActionHandler::onExitBalance()
+{
+	mHardware.disableMotor();
+}
+EEvent CActionHandler::onStateIdle()
+{
+	EEvent returnEvent = EEvent::EV_DEFAULT_IGNORE;
+	float phi 	 = mSensorEval.calcPhi(mHardware.getX1__dd_raw(),
+									   mHardware.getX2__dd_raw(),
+									   mHardware.getY1__dd_raw(),
+									   mHardware.getY2__dd_raw());
+	float phi__d = mSensorEval.calcPhi__d(mHardware.getPhi1__d_raw(),
+										  mHardware.getPhi2__d_raw());
+	//Filter phi
+	phi = mCompFilter.calculatePhi(phi, phi__d);
+
+	if(abs(phi - Config::PhiBalanceOffset) <= Config::PhiBalanceMax)
+	{
+		returnEvent = EEvent::EV_PHI_IN_BALANCE_AREA;
+	}
+	else if(abs(phi) < Config::PhiResting)
+	{
+		returnEvent = EEvent::EV_CUBE_RESTING;
+	}
+	return returnEvent;
+}
+EEvent CActionHandler::onStateBalance()
+{
+	EEvent returnEvent = EEvent::EV_DEFAULT_IGNORE;
+	//Evaluate the raw data
+	float phi 	 = mSensorEval.calcPhi(mHardware.getX1__dd_raw(),
+									   mHardware.getX2__dd_raw(),
+									   mHardware.getY1__dd_raw(),
+									   mHardware.getY2__dd_raw());
+	float phi__d = mSensorEval.calcPhi__d(mHardware.getPhi1__d_raw(),
+										  mHardware.getPhi2__d_raw());
+	float psi__d = mSensorEval.calcPsi__d(mHardware.getPsi__d_raw());
+	//Filter phi
+	phi = mCompFilter.calculatePhi(phi, phi__d);
+	// phi = mKalmanFilter.calculatePhi(phi, phi__d);
+	if(abs(phi - Config::PhiBalanceOffset) <= Config::PhiBalanceMax)
+	{
+		mHardware.setTorque(mLQR.controlIteration(phi, phi__d, psi__d));
+	}
+	else
+	{
+		returnEvent = EEvent::EV_PHI_NOT_IN_BALANCE_AREA;
+	}
+	return returnEvent;
+}
+EEvent CActionHandler::onStateJumpUp()
+{
+	static bool brakeState = false;
+	EEvent returnEvent = EEvent::EV_DEFAULT_IGNORE;
+	float psi__d = mSensorEval.calcPsi__d(mHardware.getPsi__d_raw());
+
+	if(false == brakeState)
+	{
+		if(abs(psi__d) >= Config::Psi__d_JumpValue)
+		{
+			mHardware.setTorque(0.0F);
+			mHardware.disableMotor();
+			mHardware.closeBrake();
+			brakeState = true;
+		}
+	}
+	else
+	{
+		if(abs(psi__d) >= Config::Psi__d_Resting)
+		{
+			mHardware.openBrake();
+			brakeState = false;
+			returnEvent = EEvent::EV_BRAKING_FINISHED;
+		}
+	}
+	return returnEvent;
+}

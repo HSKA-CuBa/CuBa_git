@@ -1,0 +1,12 @@
+//27.8.2016, Michael Meindl
+//Class to control the hardware on the STM-Board
+#ifndef CSTMHARDWARE_H
+#define CSTMHARDWARE_H
+#include "IHardware.h"
+
+class CSTMHardware : public IHardware
+{
+
+};
+
+#endif

@@ -12,7 +12,7 @@ Info : Unable to match requested speed 2000 kHz, using 1800 kHz
 Info : clock speed 1800 kHz
 Info : STLINK v2 JTAG v14 API v2 SWIM v0 VID 0x0483 PID 0x3748
 Info : using stlink api v2
-Info : Target voltage: 2.883950
+Info : Target voltage: 2.887346
 Info : stm32f4x.cpu: hardware has 6 breakpoints, 4 watchpoints
 Info : accepting 'telnet' connection on tcp/4444
 stm32f4x.cpu: target state: halted
@@ -25,6 +25,6 @@ auto erase enabled
 stm32f4x.cpu: target state: halted
 target halted due to breakpoint, current mode: Thread 
 xPSR: 0x61000000 pc: 0x20000046 msp: 0x10002040
-wrote 32768 bytes from file ../BeschleunigungsAuswertung.elf in 1.476939s (21.666 KiB/s)
+wrote 32768 bytes from file ../BeschleunigungsAuswertung.elf in 1.467639s (21.804 KiB/s)
 shutdown command invoked
 Info : dropped 'telnet' connection

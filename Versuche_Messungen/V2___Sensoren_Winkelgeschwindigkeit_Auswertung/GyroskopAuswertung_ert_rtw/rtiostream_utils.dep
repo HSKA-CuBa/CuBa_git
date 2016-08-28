@@ -34,7 +34,7 @@ rtiostream_utils.o: \
  C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h \
  C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/misc.h \
  C:/PROGRA~1/MATLAB/R2016a/toolbox/coder/rtiostream/src/utils/rtiostream_utils.h \
- C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V2___Sensoren_Winkelgeschwindigkeit_Auswertung/GyroskopAuswertung_ert_rtw/rtwtypes.h \
+ C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V2___Sensoren_Winkelgeschwindigkeit_Auswertung/GyroskopAuswertung_ert_rtw/rtwtypes.h \
  C:/PROGRA~1/MATLAB/R2016a/rtw/c/src/rtiostream.h
 
 C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/CMSIS/ST/STM32F4xx/Include/stm32f4xx.h:
@@ -105,6 +105,6 @@ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx
 
 C:/PROGRA~1/MATLAB/R2016a/toolbox/coder/rtiostream/src/utils/rtiostream_utils.h:
 
-C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V2___Sensoren_Winkelgeschwindigkeit_Auswertung/GyroskopAuswertung_ert_rtw/rtwtypes.h:
+C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V2___Sensoren_Winkelgeschwindigkeit_Auswertung/GyroskopAuswertung_ert_rtw/rtwtypes.h:
 
 C:/PROGRA~1/MATLAB/R2016a/rtw/c/src/rtiostream.h:

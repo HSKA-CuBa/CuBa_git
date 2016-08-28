@@ -19,7 +19,7 @@ float CComplementaryFilter::calculatePhi(const float phi, const float phi__d)
 		mRecentPhi 		= phi;
 		mRecentPhi__d	= phi__d;
 	}
-	float phi_int 	= mRecentPhi + (Config::T_a / 2.0F * (mRecentPhi__d + phi__d));
+	float phi_int 	= mRecentPhi + ((Config::T_a / 2.0F) * (mRecentPhi__d + phi__d));
 	mRecentPhi		= (Config::ComplementaryAlpha * phi_int) +
 					  ((1.0F - Config::ComplementaryAlpha) *  phi);
 	mRecentPhi__d 	= phi__d;

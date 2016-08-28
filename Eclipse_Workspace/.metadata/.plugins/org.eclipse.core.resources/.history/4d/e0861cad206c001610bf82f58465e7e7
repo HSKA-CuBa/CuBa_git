@@ -1,0 +1,30 @@
+#ifndef CSENSOR_H
+#define CSENSOR_H
+#include "CMPU6050.h"
+#include "ELowPass.h"
+
+class CSensor
+{
+public:
+	bool getPhiKValues(float& phiK, float& phiK_d);
+	bool getFilteredPhiKValues(float& phiK, float& phiK_d);
+	bool getAccX1Raw(Int16& rawValue);
+	bool getAccY1Raw(Int16& rawValue);
+	bool getAccX2Raw(Int16& rawValue);
+	bool getAccY2Raw(Int16& rawValue);
+	bool getGyrZ1Raw(Int16& rawValue);
+	bool getTemperature(Int16& rawValue);
+public:
+	CSensor(bool& initSuccess, ELowPass lpConfig);
+	CSensor() = delete;
+	CSensor(const CSensor&) = delete;
+	CSensor& operator=(const CSensor&) = delete;
+	~CSensor() = default;
+private:
+	I2C_HandleTypeDef mHandle;
+	CMPU6050 mMPU1;
+	CMPU6050 mMPU2;
+};
+
+
+#endif

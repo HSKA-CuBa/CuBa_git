@@ -31,9 +31,9 @@ private:
 template<const UInt32 n>
 TKalmanFilter<n>::TKalmanFilter() : mRecentPhiValues{0.0F},
 									mRecentPhi__dValues{0.0F},
-									mValueIndex(0U),
 									mP(0.0F),
 									mK(0.0F),
+									mValueIndex(0U),
 									mInitialRun(true),
 									mPadding{0U}
 {

@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'ServoBremse_Test'. 
 ## 
 ## Makefile     : ServoBremse_Test.mk
-## Generated on : Wed Aug 24 16:38:43 2016
+## Generated on : Sat Aug 27 11:42:30 2016
 ## MATLAB Coder version: 3.1 (R2016a)
 ## 
 ## Build Info:
@@ -326,7 +326,7 @@ CPPFLAGS += $(CPPFLAGS_SKIPFORSIL) $(CPPFLAGS_BASIC)
 # C++ Linker
 #---------------
 
-CPP_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard  --specs=nano.specs     -T "C:\MATLAB\SupportPackages\R2016a\toolbox\target\supportpackages\stm32f4discovery\@slCustomizer\..\src\arm-gcc-link.ld"
+CPP_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard  --specs=nano.specs    -T "C:\MATLAB\SupportPackages\R2016a\toolbox\target\supportpackages\stm32f4discovery\@slCustomizer\..\src\arm-gcc-link.ld"
 
 CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
 
@@ -334,7 +334,7 @@ CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
 # C++ Shared Library Linker
 #------------------------------
 
-CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard  --specs=nano.specs     -T "C:\MATLAB\SupportPackages\R2016a\toolbox\target\supportpackages\stm32f4discovery\@slCustomizer\..\src\arm-gcc-link.ld"
+CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard  --specs=nano.specs    -T "C:\MATLAB\SupportPackages\R2016a\toolbox\target\supportpackages\stm32f4discovery\@slCustomizer\..\src\arm-gcc-link.ld"
 
 CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
@@ -342,7 +342,7 @@ CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 # Linker
 #-----------
 
-LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard  --specs=nano.specs     -T "C:\MATLAB\SupportPackages\R2016a\toolbox\target\supportpackages\stm32f4discovery\@slCustomizer\..\src\arm-gcc-link.ld"
+LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard  --specs=nano.specs    -T "C:\MATLAB\SupportPackages\R2016a\toolbox\target\supportpackages\stm32f4discovery\@slCustomizer\..\src\arm-gcc-link.ld"
 
 LDFLAGS += $(LDFLAGS_SKIPFORSIL)
 
@@ -350,7 +350,7 @@ LDFLAGS += $(LDFLAGS_SKIPFORSIL)
 # Shared Library Linker
 #--------------------------
 
-SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard  --specs=nano.specs     -T "C:\MATLAB\SupportPackages\R2016a\toolbox\target\supportpackages\stm32f4discovery\@slCustomizer\..\src\arm-gcc-link.ld"
+SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard  --specs=nano.specs    -T "C:\MATLAB\SupportPackages\R2016a\toolbox\target\supportpackages\stm32f4discovery\@slCustomizer\..\src\arm-gcc-link.ld"
 
 SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
 

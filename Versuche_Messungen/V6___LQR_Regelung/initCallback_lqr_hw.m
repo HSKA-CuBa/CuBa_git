@@ -40,9 +40,9 @@ A = [0 1 0;
 B = [0;beta1;beta2];
 
 Tmax = 0.07;
-phiKmax = degtorad(3);
+phiKmax = degtorad(5);
 phiK_dmax = degtorad(20);
-phiR_dmax = degtorad(1000*6);
+phiR_dmax = degtorad(2000*6);
 R = 1/(Tmax^2);
 Q = [1/(phiKmax^2) 0 0;0 1/(phiK_dmax^2) 0; 0 0 1/(phiR_dmax^2)];
 

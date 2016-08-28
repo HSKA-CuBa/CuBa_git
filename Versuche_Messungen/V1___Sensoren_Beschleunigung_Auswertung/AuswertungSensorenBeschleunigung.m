@@ -4,7 +4,7 @@
 %der x und y Beschleunigung der beiden Sensoren. Speichert anschlieﬂend die
 %Plots und Messwerte.
 
-phi = 45;
+phi = -45;
 
 t      = double(x1__dd.time(2:end));
 x1__dd = double(x1__dd.signals(1).values(2:end));
@@ -32,7 +32,7 @@ print(strcat('Plots/Y1__dd___phi_', num2str(phi)), '-depsc');
 figure;
 plot(t, x2__dd, t, x2__dd_mean, 'r'); grid; 
 xlabel('Zeit [s]'); ylabel('X-Beschleunigung []');
-title(strcat('X-Beschleunigung Sensor1 be2 \phi = ', num2str(phi), '∞'));
+title(strcat('X-Beschleunigung Sensor2 bei \phi = ', num2str(phi), '∞'));
 legend('Rohwert', 'Mittelwert');
 print(strcat('Plots/X2__dd___phi_', num2str(phi)), '-depsc');
 figure;

@@ -1,0 +1,53 @@
+#include "CActionHandler.h"
+#include "EEvent.h"
+#include "EState.h"
+#include "CSTMHardware.h"
+
+static UInt32 sTickCounter = 0U;
+
+extern "C"
+{
+void SysTick_Handler();
+void SysTick_Handler()
+{
+	HAL_IncTick();
+	sTickCounter++;
+}
+}
+
+
+void main();
+void main()
+{
+	EState state = EState::StateIdle;
+	CSTMHardware hw;
+	CActionHandler action(hw);
+	EEvent eventQueue = EEvent::EV_DEFAULT_IGNORE;
+
+	while(true)
+	{
+		if(sTickCounter >= static_cast<UInt32>(Config::T_a * 1000.0F))
+		{
+			sTickCounter = 0U;
+
+			switch(state)
+			{
+			case EState::StateIdle:
+			{
+
+				break;
+			}
+			case EState::StateJumpUp:
+			{
+
+				break;
+			}
+			case EState::StateBalance:
+			{
+
+				break;
+			}
+			}
+		}
+	}
+}

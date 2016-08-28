@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'V6___LQR_Regelung'.
  *
- * Model version                  : 1.15
+ * Model version                  : 1.29
  * Simulink Coder version         : 8.10 (R2016a) 10-Feb-2016
- * C/C++ source code generated on : Fri Aug 26 09:20:35 2016
+ * C/C++ source code generated on : Sun Aug 28 12:47:02 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex

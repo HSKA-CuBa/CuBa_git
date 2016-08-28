@@ -34,7 +34,7 @@ stm32f4xx_init_board.o: \
  C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h \
  C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/inc/misc.h \
  c:\matlab\supportpackages\r2016a\toolbox\target\supportpackages\stm32f4discovery\include\stm32f4discovery_wrapper.h \
- C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V2___Sensoren_Winkelgeschwindigkeit_Auswertung/GyroskopAuswertung_ert_rtw/MW_target_hardware_resources.h \
+ C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V2___Sensoren_Winkelgeschwindigkeit_Auswertung/GyroskopAuswertung_ert_rtw/MW_target_hardware_resources.h \
  C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/scheduler/include/SysTickScheduler.h \
  C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/scheduler/include/arm_cortex_m_multitasking.h \
  c:\matlab\supportpackages\r2016a\toolbox\target\supportpackages\stm32f4discovery\include\blapp_support.h \
@@ -114,7 +114,7 @@ C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx
 
 c:\matlab\supportpackages\r2016a\toolbox\target\supportpackages\stm32f4discovery\include\stm32f4discovery_wrapper.h:
 
-C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V2___Sensoren_Winkelgeschwindigkeit_Auswertung/GyroskopAuswertung_ert_rtw/MW_target_hardware_resources.h:
+C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V2___Sensoren_Winkelgeschwindigkeit_Auswertung/GyroskopAuswertung_ert_rtw/MW_target_hardware_resources.h:
 
 C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/scheduler/include/SysTickScheduler.h:
 

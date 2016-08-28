@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'V6___LQR_Regelung'. 
 ## 
 ## Makefile     : V6___LQR_Regelung.mk
-## Generated on : Fri Aug 26 08:50:26 2016
+## Generated on : Sun Aug 28 12:34:27 2016
 ## MATLAB Coder version: 3.1 (R2016a)
 ## 
 ## Build Info:
@@ -266,7 +266,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_IMPLIED) $(DEFINES_OPTS) $
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = $(START_DIR)/V6___LQR_Regelung_ert_rtw/V6___LQR_Regelung.c $(START_DIR)/V6___LQR_Regelung_ert_rtw/V6___LQR_Regelung_data.c $(START_DIR)/MotorBlock/source/ADC.c $(START_DIR)/MotorBlock/source/MotorControl.c $(START_DIR)/MotorBlock/source/stm32f4xx_adc.c $(START_DIR)/MotorBlock/source/stm32f4xx_tim.c $(START_DIR)/MPU6050/source/stm32f4xx_i2c.c $(START_DIR)/MPU6050/source/MPU6050.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_svr.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/updown.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_work.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c $(START_DIR)/MPU6050/MPU6050_CustomBlock_wrapper.c $(START_DIR)/SensorenFilter/SensorenFilter_Block_wrapper.c C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkMotor/MotorBlock/MotorADC_wrapper.c C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkMotor/MotorBlock/Motor_wrapper.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/blapp_support.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/startup_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/syscalls_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/stm32f4xx_init_board.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/system_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/scheduler/src/SysTickScheduler.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/scheduler/src/m3m4m4f_multitasking.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/serial/ext_serial_pkt.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/serial/rtiostream_serial_interface.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/serial/ext_svr_serial_transport.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/rtiostream_serial_dma_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/misc.c
+SRCS = $(START_DIR)/V6___LQR_Regelung_ert_rtw/V6___LQR_Regelung.c $(START_DIR)/V6___LQR_Regelung_ert_rtw/V6___LQR_Regelung_data.c $(START_DIR)/MotorBlock/source/ADC.c $(START_DIR)/MotorBlock/source/MotorControl.c $(START_DIR)/MotorBlock/source/stm32f4xx_adc.c $(START_DIR)/MotorBlock/source/stm32f4xx_tim.c $(START_DIR)/MPU6050/source/stm32f4xx_i2c.c $(START_DIR)/MPU6050/source/MPU6050.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_svr.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/updown.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_work.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c $(START_DIR)/MPU6050/MPU6050_CustomBlock_wrapper.c C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkFilter/SensorenFilter/SensorenFilter_Block_wrapper.c C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkMotor/MotorBlock/MotorADC_wrapper.c C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkMotor/MotorBlock/Motor_wrapper.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/blapp_support.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/startup_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/syscalls_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/stm32f4xx_init_board.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/system_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/scheduler/src/SysTickScheduler.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/scheduler/src/m3m4m4f_multitasking.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/serial/ext_serial_pkt.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/serial/rtiostream_serial_interface.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/serial/ext_svr_serial_transport.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/rtiostream_serial_dma_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/misc.c
 
 MAIN_SRC = $(START_DIR)/V6___LQR_Regelung_ert_rtw/ert_main.c
 
@@ -726,31 +726,31 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(LIBS) $(MAIN_OBJ)
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-%.o : $(START_DIR)/SensorenFilter/%.c
+%.o : C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkFilter/SensorenFilter/%.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-%.o : $(START_DIR)/SensorenFilter/%.s
+%.o : C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkFilter/SensorenFilter/%.s
 	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 
-%.o : $(START_DIR)/SensorenFilter/%.S
+%.o : C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkFilter/SensorenFilter/%.S
 	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 
-%.o : $(START_DIR)/SensorenFilter/%.cpp
+%.o : C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkFilter/SensorenFilter/%.cpp
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-%.o : $(START_DIR)/SensorenFilter/%.cc
+%.o : C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkFilter/SensorenFilter/%.cc
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-%.o : $(START_DIR)/SensorenFilter/%.C
+%.o : C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkFilter/SensorenFilter/%.C
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-%.o : $(START_DIR)/SensorenFilter/%.cxx
+%.o : C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkFilter/SensorenFilter/%.cxx
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
@@ -807,34 +807,6 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(LIBS) $(MAIN_OBJ)
 
 
 %.o : C:/Users/ich/Desktop/CuBa_git/STM32F4_SW/Simulink/SimulinkSensoren/MPU6050/%.cxx
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/STM32F4_SW/Simulink/SimulinkFilter/SensorenFilter/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/STM32F4_SW/Simulink/SimulinkFilter/SensorenFilter/%.s
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/STM32F4_SW/Simulink/SimulinkFilter/SensorenFilter/%.S
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/STM32F4_SW/Simulink/SimulinkFilter/SensorenFilter/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/STM32F4_SW/Simulink/SimulinkFilter/SensorenFilter/%.cc
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/STM32F4_SW/Simulink/SimulinkFilter/SensorenFilter/%.C
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/STM32F4_SW/Simulink/SimulinkFilter/SensorenFilter/%.cxx
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 

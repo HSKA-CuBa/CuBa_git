@@ -1,5 +1,5 @@
 %% File : SensorenFilter_Block.tlc
-%% Created: Wed Aug 24 14:19:21 2016
+%% Created: Sat Aug 27 15:09:15 2016
 %%
 %% Description: 
 %%   Simulink Coder wrapper functions interface generated for 
@@ -25,11 +25,11 @@
   %openfile externs
     
   extern void SensorenFilter_Block_Outputs_wrapper(const int16_T *x1__dd,
-			const int16_T *phi1__d,
-			const int16_T *phi2__d,
 			const int16_T *y1__dd,
-			const int16_T *y2__dd,
+			const int16_T *phi1__d,
 			const int16_T *x2__dd,
+			const int16_T *y2__dd,
+			const int16_T *phi2__d,
 			real32_T *phi__raw,
 			real32_T *phi__comp,
 			real32_T *phi__kalman,
@@ -37,11 +37,11 @@
 			const real_T *xD,
 			const real32_T  *T_a, const int_T  p_width0);
   extern void SensorenFilter_Block_Update_wrapper(const int16_T *x1__dd,
-			const int16_T *phi1__d,
-			const int16_T *phi2__d,
 			const int16_T *y1__dd,
-			const int16_T *y2__dd,
+			const int16_T *phi1__d,
 			const int16_T *x2__dd,
+			const int16_T *y2__dd,
+			const int16_T *phi2__d,
 			real32_T *phi__raw,
 			real32_T *phi__comp,
 			real32_T *phi__kalman,

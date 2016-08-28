@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'V6___LQR_Regelung'.
  *
- * Model version                  : 1.15
+ * Model version                  : 1.29
  * Simulink Coder version         : 8.10 (R2016a) 10-Feb-2016
- * C/C++ source code generated on : Fri Aug 26 09:20:35 2016
+ * C/C++ source code generated on : Sun Aug 28 12:47:02 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -98,11 +98,11 @@ extern void MPU6050_CustomBlock_Update_wrapper(int16_T *XAcceleration,
   const boolean_T *AD0PinLevel, const int_T p_width0,
   const uint32_T *LPBW, const int_T p_width1);
 extern void SensorenFilter_Block_Outputs_wrapper(const int16_T *x1__dd,
-  const int16_T *phi1__d,
-  const int16_T *phi2__d,
   const int16_T *y1__dd,
-  const int16_T *y2__dd,
+  const int16_T *phi1__d,
   const int16_T *x2__dd,
+  const int16_T *y2__dd,
+  const int16_T *phi2__d,
   real32_T *phi__raw,
   real32_T *phi__comp,
   real32_T *phi__kalman,
@@ -110,11 +110,11 @@ extern void SensorenFilter_Block_Outputs_wrapper(const int16_T *x1__dd,
   const real_T *xD,
   const real32_T *T_a, const int_T p_width0);
 extern void SensorenFilter_Block_Update_wrapper(const int16_T *x1__dd,
-  const int16_T *phi1__d,
-  const int16_T *phi2__d,
   const int16_T *y1__dd,
-  const int16_T *y2__dd,
+  const int16_T *phi1__d,
   const int16_T *x2__dd,
+  const int16_T *y2__dd,
+  const int16_T *phi2__d,
   real32_T *phi__raw,
   real32_T *phi__comp,
   real32_T *phi__kalman,

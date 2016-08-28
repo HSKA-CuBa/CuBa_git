@@ -7,9 +7,9 @@
  *
  * Code generation for model "TestFilter".
  *
- * Model version              : 1.17
+ * Model version              : 1.23
  * Simulink Coder version : 8.10 (R2016a) 10-Feb-2016
- * C source code generated on : Wed Aug 24 18:27:22 2016
+ * C source code generated on : Sat Aug 27 13:43:35 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex

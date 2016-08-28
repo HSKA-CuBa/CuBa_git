@@ -63,6 +63,8 @@ this.def["writeByte"] = {file: "MPU6050_c.html",line:116,type:"fcn"};
 this.def["startTransmission"] = {file: "MPU6050_c.html",line:136,type:"fcn"};
 this.def["initI2CPins"] = {file: "MPU6050_c.html",line:159,type:"fcn"};
 this.def["initI2C"] = {file: "MPU6050_c.html",line:175,type:"fcn"};
+this.def["SensorenFilter_Block_Outputs_wrapper"] = {file: "SensorenFilter_Block_wrapper_c.html",line:33,type:"fcn"};
+this.def["SensorenFilter_Block_Update_wrapper"] = {file: "SensorenFilter_Block_wrapper_c.html",line:133,type:"fcn"};
 this.def["I2C_DeInit"] = {file: "stm32f4xx_i2c_c.html",line:132,type:"fcn"};
 this.def["I2C_Init"] = {file: "stm32f4xx_i2c_c.html",line:175,type:"fcn"};
 this.def["I2C_StructInit"] = {file: "stm32f4xx_i2c_c.html",line:284,type:"fcn"};
@@ -129,6 +131,8 @@ function Html2SrcLink() {
 	this.html2Root["MPU6050_c.html"] = "MPU6050_c.html";
 	this.html2SrcPath["MW_target_hardware_resources_h.html"] = "../MW_target_hardware_resources.h";
 	this.html2Root["MW_target_hardware_resources_h.html"] = "MW_target_hardware_resources_h.html";
+	this.html2SrcPath["SensorenFilter_Block_wrapper_c.html"] = "../../SensorenFilter/SensorenFilter_Block_wrapper.c";
+	this.html2Root["SensorenFilter_Block_wrapper_c.html"] = "SensorenFilter_Block_wrapper_c.html";
 	this.html2SrcPath["stm32f4xx_i2c_c.html"] = "../../MPU6050/source/stm32f4xx_i2c.c";
 	this.html2Root["stm32f4xx_i2c_c.html"] = "stm32f4xx_i2c_c.html";
 	this.getLink2Src = function (htmlFileName) {
@@ -146,4 +150,4 @@ function Html2SrcLink() {
 }
 Html2SrcLink.instance = new Html2SrcLink();
 var fileList = [
-"ert_main_c.html","TestFilter_c.html","TestFilter_h.html","TestFilter_private_h.html","TestFilter_types_h.html","TestFilter_data_c.html","multiword_types_h.html","rtwtypes_h.html","TestFilter_dt_h.html","rtmodel_h.html","MPU6050_c.html","MW_target_hardware_resources_h.html","stm32f4xx_i2c_c.html"];
+"ert_main_c.html","TestFilter_c.html","TestFilter_h.html","TestFilter_private_h.html","TestFilter_types_h.html","TestFilter_data_c.html","multiword_types_h.html","rtwtypes_h.html","TestFilter_dt_h.html","rtmodel_h.html","MPU6050_c.html","MW_target_hardware_resources_h.html","SensorenFilter_Block_wrapper_c.html","stm32f4xx_i2c_c.html"];

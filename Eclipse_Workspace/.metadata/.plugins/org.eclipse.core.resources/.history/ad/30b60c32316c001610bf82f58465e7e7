@@ -1,0 +1,57 @@
+//27.8.2016
+//Definitions to carry out the FSM-actions
+#include "CActionHandler.h"
+#include "Config.h"
+
+CActionHandler::CActionHandler(IHardware& hw) : mHardware(hw)
+{
+
+}
+void CActionHandler::onEntryIdle()
+{
+
+}
+void CActionHandler::onExitIdle()
+{
+
+}
+void CActionHandler::onEntryJumpUp()
+{
+	//Set torque
+}
+void CActionHandler::onExitJumpUp()
+{
+	mHardware.openBrake();
+}
+void CActionHandler::onEntryBalance()
+{
+	mHardware.enableMotor();
+}
+void CActionHandler::onExitBalance()
+{
+	mHardware.disableMotor();
+}
+void CActionHandler::onStateIdle()
+{
+
+}
+void CActionHandler::onStateBalance()
+{
+	//Evaluate the raw data
+	float phi 	 = mSensorEval.calcPhi(mHardware.getX1__dd_raw(),
+									   mHardware.getX2__dd_raw(),
+									   mHardware.getY1__dd_raw(),
+									   mHardware.getY2__dd_raw());
+	float phi__d = mSensorEval.calcPhi__d(mHardware.getPhi1__d_raw(),
+										  mHardware.getPhi2__d_raw());
+	float psi__d = mSensorEval.calcPsi__d(mHardware.getPsi__d_raw());
+	//Filter phi
+	phi = mCompFilter.calculatePhi(phi, phi__d);
+	// phi = mKalmanFilter.calculatePhi(phi, phi__d);
+	//Set the motor torque
+	mHardware.setTorque(mLQR.controlIteration(phi, phi__d, psi__d));
+}
+void CActionHandler::onStateJumpUp()
+{
+
+}

@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'V6___LQR_Regelung'.
  *
- * Model version                  : 1.15
+ * Model version                  : 1.29
  * Simulink Coder version         : 8.10 (R2016a) 10-Feb-2016
- * C/C++ source code generated on : Fri Aug 26 09:20:35 2016
+ * C/C++ source code generated on : Sun Aug 28 12:47:02 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -34,6 +34,8 @@ RT_MODEL_V6___LQR_Regelung_T *const V6___LQR_Regelung_M = &V6___LQR_Regelung_M_;
 /* Model step function */
 void V6___LQR_Regelung_step(void)
 {
+  real32_T rtb_WinkelOffset;
+
   /* S-Function (MPU6050_CustomBlock): '<Root>/Sensor1' */
   MPU6050_CustomBlock_Outputs_wrapper( &V6___LQR_Regelung_B.Sensor1_o1,
     &V6___LQR_Regelung_B.Sensor1_o2, &V6___LQR_Regelung_B.Sensor1_o3,
@@ -50,43 +52,66 @@ void V6___LQR_Regelung_step(void)
 
   /* S-Function (SensorenFilter_Block): '<Root>/S-Function Builder2' */
   SensorenFilter_Block_Outputs_wrapper(&V6___LQR_Regelung_B.Sensor1_o1,
-    &V6___LQR_Regelung_B.Sensor1_o6, &V6___LQR_Regelung_B.Sensor2_o6,
-    &V6___LQR_Regelung_B.Sensor1_o2, &V6___LQR_Regelung_B.Sensor2_o2,
-    &V6___LQR_Regelung_B.Sensor2_o1, &V6___LQR_Regelung_B.SFunctionBuilder2_o1,
+    &V6___LQR_Regelung_B.Sensor1_o2, &V6___LQR_Regelung_B.Sensor1_o6,
+    &V6___LQR_Regelung_B.Sensor2_o1, &V6___LQR_Regelung_B.Sensor2_o2,
+    &V6___LQR_Regelung_B.Sensor2_o6, &V6___LQR_Regelung_B.SFunctionBuilder2_o1,
     &V6___LQR_Regelung_B.SFunctionBuilder2_o2,
     &V6___LQR_Regelung_B.SFunctionBuilder2_o3,
     &V6___LQR_Regelung_B.SFunctionBuilder2_o4,
     &V6___LQR_Regelung_DW.SFunctionBuilder2_DSTATE,
     &V6___LQR_Regelung_P.SFunctionBuilder2_P1, 1);
 
+  /* Sum: '<Root>/WinkelOffset' incorporates:
+   *  Constant: '<Root>/phi_COG_Offset'
+   */
+  rtb_WinkelOffset = V6___LQR_Regelung_B.SFunctionBuilder2_o3 -
+    V6___LQR_Regelung_P.phi_COG_Offset_Value;
+
+  /* RelationalOperator: '<S1>/Compare' incorporates:
+   *  Abs: '<Root>/Abs'
+   *  Constant: '<S1>/Constant'
+   */
+  V6___LQR_Regelung_B.Compare = ((real32_T)fabs(rtb_WinkelOffset) <=
+    V6___LQR_Regelung_P.BalanceArea_const);
+
   /* S-Function (MotorADC): '<Root>/S-Function Builder1' */
   MotorADC_Outputs_wrapper( &V6___LQR_Regelung_B.SFunctionBuilder1 );
 
-  /* Sum: '<Root>/Sum' incorporates:
-   *  Constant: '<Root>/Constant1'
+  /* Sum: '<Root>/WinkelOffset1' incorporates:
    *  Constant: '<Root>/Constant2'
+   *  Constant: '<Root>/phi_COG_Offset1'
    *  Gain: '<Root>/Gain'
+   *  Sum: '<Root>/Add'
+   */
+  V6___LQR_Regelung_B.WinkelOffset1 = (V6___LQR_Regelung_P.Constant2_Value -
+    (real_T)((uint32_T)V6___LQR_Regelung_P.Gain_Gain *
+             V6___LQR_Regelung_B.SFunctionBuilder1) * 1.52587890625E-5) -
+    V6___LQR_Regelung_P.phi_COG_Offset1_Value;
+
+  /* Sum: '<Root>/Sum' incorporates:
    *  Gain: '<Root>/Gain1'
    *  Gain: '<Root>/Gain2'
    *  Gain: '<Root>/Gain3'
-   *  Sum: '<Root>/Add'
-   *  Sum: '<Root>/Sum1'
    */
-  V6___LQR_Regelung_B.Sum = (real32_T)(((0.0 - (real_T)
-    (V6___LQR_Regelung_B.SFunctionBuilder2_o2 -
-     V6___LQR_Regelung_P.Constant1_Value) * V6___LQR_Regelung_P.Gain1_Gain) -
+  V6___LQR_Regelung_B.T_M = (real32_T)(((0.0 - (real_T)
+    V6___LQR_Regelung_P.Gain1_Gain * rtb_WinkelOffset) -
     V6___LQR_Regelung_P.Gain2_Gain * V6___LQR_Regelung_B.SFunctionBuilder2_o4) -
-    (V6___LQR_Regelung_P.Constant2_Value - (real_T)((uint32_T)
-    V6___LQR_Regelung_P.Gain_Gain * V6___LQR_Regelung_B.SFunctionBuilder1) *
-     1.52587890625E-5) * V6___LQR_Regelung_P.Kd[2]);
+    V6___LQR_Regelung_P.Kd[2] * V6___LQR_Regelung_B.WinkelOffset1);
 
   /* S-Function (Motor): '<Root>/S-Function Builder' */
-  Motor_Outputs_wrapper(&V6___LQR_Regelung_P.Constant_Value,
-                        &V6___LQR_Regelung_B.Sum );
+  Motor_Outputs_wrapper(&V6___LQR_Regelung_B.Compare, &V6___LQR_Regelung_B.T_M );
+
+  /* Gain: '<Root>/radtodeg3' */
+  V6___LQR_Regelung_B.phi_acc_deg = V6___LQR_Regelung_P.radtodeg3_Gain *
+    V6___LQR_Regelung_B.SFunctionBuilder2_o1;
+
+  /* Gain: '<Root>/radtodeg2' */
+  V6___LQR_Regelung_B.phi_komp_deg = V6___LQR_Regelung_P.radtodeg2_Gain *
+    V6___LQR_Regelung_B.SFunctionBuilder2_o2;
 
   /* Gain: '<Root>/radtodeg1' */
-  V6___LQR_Regelung_B.radtodeg1 = V6___LQR_Regelung_P.radtodeg1_Gain *
-    V6___LQR_Regelung_B.SFunctionBuilder2_o2;
+  V6___LQR_Regelung_B.phi_kalman__deg = V6___LQR_Regelung_P.radtodeg1_Gain *
+    V6___LQR_Regelung_B.SFunctionBuilder2_o3;
 
   /* S-Function "MPU6050_CustomBlock_wrapper" Block: <Root>/Sensor1 */
   MPU6050_CustomBlock_Update_wrapper( &V6___LQR_Regelung_B.Sensor1_o1,
@@ -104,9 +129,9 @@ void V6___LQR_Regelung_step(void)
 
   /* S-Function "SensorenFilter_Block_wrapper" Block: <Root>/S-Function Builder2 */
   SensorenFilter_Block_Update_wrapper(&V6___LQR_Regelung_B.Sensor1_o1,
-    &V6___LQR_Regelung_B.Sensor1_o6, &V6___LQR_Regelung_B.Sensor2_o6,
-    &V6___LQR_Regelung_B.Sensor1_o2, &V6___LQR_Regelung_B.Sensor2_o2,
-    &V6___LQR_Regelung_B.Sensor2_o1, &V6___LQR_Regelung_B.SFunctionBuilder2_o1,
+    &V6___LQR_Regelung_B.Sensor1_o2, &V6___LQR_Regelung_B.Sensor1_o6,
+    &V6___LQR_Regelung_B.Sensor2_o1, &V6___LQR_Regelung_B.Sensor2_o2,
+    &V6___LQR_Regelung_B.Sensor2_o6, &V6___LQR_Regelung_B.SFunctionBuilder2_o1,
     &V6___LQR_Regelung_B.SFunctionBuilder2_o2,
     &V6___LQR_Regelung_B.SFunctionBuilder2_o3,
     &V6___LQR_Regelung_B.SFunctionBuilder2_o4,
@@ -165,10 +190,10 @@ void V6___LQR_Regelung_initialize(void)
   V6___LQR_Regelung_M->Timing.stepSize0 = 0.02;
 
   /* External mode info */
-  V6___LQR_Regelung_M->Sizes.checksums[0] = (3390264252U);
-  V6___LQR_Regelung_M->Sizes.checksums[1] = (4287730889U);
-  V6___LQR_Regelung_M->Sizes.checksums[2] = (2368429964U);
-  V6___LQR_Regelung_M->Sizes.checksums[3] = (1379560705U);
+  V6___LQR_Regelung_M->Sizes.checksums[0] = (4263614307U);
+  V6___LQR_Regelung_M->Sizes.checksums[1] = (72339049U);
+  V6___LQR_Regelung_M->Sizes.checksums[2] = (1506053837U);
+  V6___LQR_Regelung_M->Sizes.checksums[3] = (2415319127U);
 
   {
     static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE;

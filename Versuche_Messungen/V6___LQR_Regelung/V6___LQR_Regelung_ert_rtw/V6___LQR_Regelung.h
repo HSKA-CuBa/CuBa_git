@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'V6___LQR_Regelung'.
  *
- * Model version                  : 1.15
+ * Model version                  : 1.29
  * Simulink Coder version         : 8.10 (R2016a) 10-Feb-2016
- * C/C++ source code generated on : Fri Aug 26 09:20:35 2016
+ * C/C++ source code generated on : Sun Aug 28 12:47:02 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -19,6 +19,7 @@
 
 #ifndef RTW_HEADER_V6___LQR_Regelung_h_
 #define RTW_HEADER_V6___LQR_Regelung_h_
+#include <math.h>
 #include <float.h>
 #include <string.h>
 #include <stddef.h>
@@ -76,12 +77,15 @@
 
 /* Block signals (auto storage) */
 typedef struct {
+  real_T WinkelOffset1;                /* '<Root>/WinkelOffset1' */
   real32_T SFunctionBuilder2_o1;       /* '<Root>/S-Function Builder2' */
   real32_T SFunctionBuilder2_o2;       /* '<Root>/S-Function Builder2' */
   real32_T SFunctionBuilder2_o3;       /* '<Root>/S-Function Builder2' */
   real32_T SFunctionBuilder2_o4;       /* '<Root>/S-Function Builder2' */
-  real32_T Sum;                        /* '<Root>/Sum' */
-  real32_T radtodeg1;                  /* '<Root>/radtodeg1' */
+  real32_T T_M;                        /* '<Root>/Sum' */
+  real32_T phi_acc_deg;                /* '<Root>/radtodeg3' */
+  real32_T phi_komp_deg;               /* '<Root>/radtodeg2' */
+  real32_T phi_kalman__deg;            /* '<Root>/radtodeg1' */
   int16_T Sensor1_o1;                  /* '<Root>/Sensor1' */
   int16_T Sensor1_o2;                  /* '<Root>/Sensor1' */
   int16_T Sensor1_o3;                  /* '<Root>/Sensor1' */
@@ -95,6 +99,7 @@ typedef struct {
   int16_T Sensor2_o5;                  /* '<Root>/Sensor2' */
   int16_T Sensor2_o6;                  /* '<Root>/Sensor2' */
   uint16_T SFunctionBuilder1;          /* '<Root>/S-Function Builder1' */
+  boolean_T Compare;                   /* '<S1>/Compare' */
 } B_V6___LQR_Regelung_T;
 
 /* Block states (auto storage) for system '<Root>' */
@@ -104,11 +109,15 @@ typedef struct {
   real_T SFunctionBuilder2_DSTATE;     /* '<Root>/S-Function Builder2' */
   struct {
     void *LoggedData;
-  } Scope1_PWORK;                      /* '<Root>/Scope1' */
+  } phi__d_scope_PWORK;                /* '<Root>/phi__d_scope' */
+
+  struct {
+    void *LoggedData[3];
+  } phi_scope_PWORK;                   /* '<Root>/phi_scope' */
 
   struct {
     void *LoggedData;
-  } Scope2_PWORK;                      /* '<Root>/Scope2' */
+  } psi__d_scope_PWORK;                /* '<Root>/psi__d_scope' */
 } DW_V6___LQR_Regelung_T;
 
 /* Parameters (auto storage) */
@@ -116,20 +125,32 @@ struct P_V6___LQR_Regelung_T_ {
   real_T Kd[3];                        /* Variable: Kd
                                         * Referenced by: '<Root>/Gain3'
                                         */
+  real32_T BalanceArea_const;          /* Mask Parameter: BalanceArea_const
+                                        * Referenced by: '<S1>/Constant'
+                                        */
   real_T Constant2_Value;              /* Expression: 1017
                                         * Referenced by: '<Root>/Constant2'
                                         */
+  real_T phi_COG_Offset1_Value;        /* Expression: 0
+                                        * Referenced by: '<Root>/phi_COG_Offset1'
+                                        */
+  real32_T phi_COG_Offset_Value;       /* Computed Parameter: phi_COG_Offset_Value
+                                        * Referenced by: '<Root>/phi_COG_Offset'
+                                        */
   real32_T SFunctionBuilder2_P1;       /* Expression: single(0.02)
                                         * Referenced by: '<Root>/S-Function Builder2'
-                                        */
-  real32_T Constant1_Value;            /* Computed Parameter: Constant1_Value
-                                        * Referenced by: '<Root>/Constant1'
                                         */
   real32_T Gain1_Gain;                 /* Computed Parameter: Gain1_Gain
                                         * Referenced by: '<Root>/Gain1'
                                         */
   real32_T Gain2_Gain;                 /* Computed Parameter: Gain2_Gain
                                         * Referenced by: '<Root>/Gain2'
+                                        */
+  real32_T radtodeg3_Gain;             /* Computed Parameter: radtodeg3_Gain
+                                        * Referenced by: '<Root>/radtodeg3'
+                                        */
+  real32_T radtodeg2_Gain;             /* Computed Parameter: radtodeg2_Gain
+                                        * Referenced by: '<Root>/radtodeg2'
                                         */
   real32_T radtodeg1_Gain;             /* Computed Parameter: radtodeg1_Gain
                                         * Referenced by: '<Root>/radtodeg1'
@@ -142,9 +163,6 @@ struct P_V6___LQR_Regelung_T_ {
                                         */
   uint16_T Gain_Gain;                  /* Computed Parameter: Gain_Gain
                                         * Referenced by: '<Root>/Gain'
-                                        */
-  boolean_T Constant_Value;            /* Computed Parameter: Constant_Value
-                                        * Referenced by: '<Root>/Constant'
                                         */
   boolean_T Sensor1_P1;                /* Expression: boolean(AD0PinLevel)
                                         * Referenced by: '<Root>/Sensor1'
@@ -225,6 +243,7 @@ extern RT_MODEL_V6___LQR_Regelung_T *const V6___LQR_Regelung_M;
  * Here is the system hierarchy for this model
  *
  * '<Root>' : 'V6___LQR_Regelung'
+ * '<S1>'   : 'V6___LQR_Regelung/BalanceArea'
  */
 #endif                                 /* RTW_HEADER_V6___LQR_Regelung_h_ */
 

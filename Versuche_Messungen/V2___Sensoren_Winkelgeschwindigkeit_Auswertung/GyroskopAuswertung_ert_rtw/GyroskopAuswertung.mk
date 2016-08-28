@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'GyroskopAuswertung'. 
 ## 
 ## Makefile     : GyroskopAuswertung.mk
-## Generated on : Mon Aug 22 13:46:33 2016
+## Generated on : Sat Aug 27 12:41:37 2016
 ## MATLAB Coder version: 3.1 (R2016a)
 ## 
 ## Build Info:
@@ -29,7 +29,7 @@ MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2016a
 MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2016a/bin
 MATLAB_ARCH_BIN           = C:/PROGRA~1/MATLAB/R2016a/bin/win64
 MASTER_ANCHOR_DIR         = 
-START_DIR                 = C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V2___Sensoren_Winkelgeschwindigkeit_Auswertung
+START_DIR                 = C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V2___Sensoren_Winkelgeschwindigkeit_Auswertung
 ARCH                      = win64
 SOLVER                    = 
 SOLVER_OBJ                = 
@@ -326,7 +326,7 @@ CPPFLAGS += $(CPPFLAGS_SKIPFORSIL) $(CPPFLAGS_BASIC)
 # C++ Linker
 #---------------
 
-CPP_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard  --specs=nano.specs     -T "C:\MATLAB\SupportPackages\R2016a\toolbox\target\supportpackages\stm32f4discovery\@slCustomizer\..\src\arm-gcc-link.ld"
+CPP_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard  --specs=nano.specs    -T "C:\MATLAB\SupportPackages\R2016a\toolbox\target\supportpackages\stm32f4discovery\@slCustomizer\..\src\arm-gcc-link.ld"
 
 CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
 
@@ -334,7 +334,7 @@ CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
 # C++ Shared Library Linker
 #------------------------------
 
-CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard  --specs=nano.specs     -T "C:\MATLAB\SupportPackages\R2016a\toolbox\target\supportpackages\stm32f4discovery\@slCustomizer\..\src\arm-gcc-link.ld"
+CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard  --specs=nano.specs    -T "C:\MATLAB\SupportPackages\R2016a\toolbox\target\supportpackages\stm32f4discovery\@slCustomizer\..\src\arm-gcc-link.ld"
 
 CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
@@ -342,7 +342,7 @@ CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 # Linker
 #-----------
 
-LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard  --specs=nano.specs     -T "C:\MATLAB\SupportPackages\R2016a\toolbox\target\supportpackages\stm32f4discovery\@slCustomizer\..\src\arm-gcc-link.ld"
+LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard  --specs=nano.specs    -T "C:\MATLAB\SupportPackages\R2016a\toolbox\target\supportpackages\stm32f4discovery\@slCustomizer\..\src\arm-gcc-link.ld"
 
 LDFLAGS += $(LDFLAGS_SKIPFORSIL)
 
@@ -350,7 +350,7 @@ LDFLAGS += $(LDFLAGS_SKIPFORSIL)
 # Shared Library Linker
 #--------------------------
 
-SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard  --specs=nano.specs     -T "C:\MATLAB\SupportPackages\R2016a\toolbox\target\supportpackages\stm32f4discovery\@slCustomizer\..\src\arm-gcc-link.ld"
+SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard  --specs=nano.specs    -T "C:\MATLAB\SupportPackages\R2016a\toolbox\target\supportpackages\stm32f4discovery\@slCustomizer\..\src\arm-gcc-link.ld"
 
 SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
@@ -698,31 +698,31 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(LIBS) $(MAIN_OBJ)
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-%.o : C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung/MPU6050/%.c
+%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MPU6050/%.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-%.o : C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung/MPU6050/%.s
+%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MPU6050/%.s
 	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 
-%.o : C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung/MPU6050/%.S
+%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MPU6050/%.S
 	$(AS) $(ASFLAGS) -o "$@" "$<"
 
 
-%.o : C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung/MPU6050/%.cpp
+%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MPU6050/%.cpp
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-%.o : C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung/MPU6050/%.cc
+%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MPU6050/%.cc
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-%.o : C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung/MPU6050/%.C
+%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MPU6050/%.C
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
-%.o : C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V1___Sensoren_Beschleunigung_Auswertung/MPU6050/%.cxx
+%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MPU6050/%.cxx
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 
