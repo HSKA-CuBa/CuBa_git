@@ -106,7 +106,7 @@ EEvent CActionHandler::onStateJumpUp()
 	else
 	{
 		tickCounter++;
-		if(tickCounter >= 5U)
+		if(tickCounter >= 15U)
 		{
 			tickCounter = 0U;
 			brakeState = false;

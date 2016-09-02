@@ -1,0 +1,11 @@
+#include "CSTMHardware.h"
+
+void main();
+void main()
+{
+	CSTMHardware hw;
+  while (1)
+    {
+       ;
+    }
+}

@@ -1,0 +1,26 @@
+\BOOKMARK [1][-]{section.1}{Cube-Balance \(CuBa\) - Der selbstbalancierende W\374rfel}{}% 1
+\BOOKMARK [1][-]{section.2}{Aktorik und Sensorik}{}% 2
+\BOOKMARK [1][-]{section.3}{Modellierung der Systemdynamik}{}% 3
+\BOOKMARK [1][-]{section.4}{Sensorik}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Winkelsch\344tzung}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{Kalibrierung und Justierung}{section.4}% 6
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Umrechnung der Beschleunigungswerte}{subsection.4.2}% 7
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Umrechnung der Winkelgeschwindigkeiten}{subsection.4.2}% 8
+\BOOKMARK [2][-]{subsection.4.3}{Auswertung der Radgeschwindigkeit }{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.4}{Filterung der Sensordaten}{section.4}% 10
+\BOOKMARK [3][-]{subsubsection.4.4.1}{Komplement\344rfilter}{subsection.4.4}% 11
+\BOOKMARK [3][-]{subsubsection.4.4.2}{Kalman-Filter}{subsection.4.4}% 12
+\BOOKMARK [3][-]{subsubsection.4.4.3}{Anwendung des Kalman-Filters}{subsection.4.4}% 13
+\BOOKMARK [1][-]{section.5}{Modellbildung und Bestimmung der Systemgr\366\337en}{}% 14
+\BOOKMARK [2][-]{subsection.5.1}{Identifikation der Parameter}{section.5}% 15
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Ermittlung des Reibwertes C}{subsection.5.1}% 16
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Ermittlung des Reibwertes C}{subsection.5.1}% 17
+\BOOKMARK [3][-]{subsubsection.5.1.3}{Resultate der Systemidentifikation}{subsection.5.1}% 18
+\BOOKMARK [2][-]{subsection.5.2}{Entwurf des Simulink-Modelles}{section.5}% 19
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Simulation des Motors}{subsection.5.2}% 20
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Simulation der W\374rfelseite}{subsection.5.2}% 21
+\BOOKMARK [3][-]{subsubsection.5.2.3}{Simulation der Schwungmasse}{subsection.5.2}% 22
+\BOOKMARK [1][-]{section.6}{Reglerentwurf}{}% 23
+\BOOKMARK [2][-]{subsection.6.1}{Analytische Bestimmung der Reglerparameter}{section.6}% 24
+\BOOKMARK [2][-]{subsection.6.2}{Verifizierung des Reglers an dem 1D-Prototyp}{section.6}% 25
+\BOOKMARK [1][-]{section.7}{Aufspringen}{}% 26

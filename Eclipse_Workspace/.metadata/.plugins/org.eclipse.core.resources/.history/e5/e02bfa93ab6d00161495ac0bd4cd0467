@@ -1,0 +1,31 @@
+#include "CSTMHardware.h"
+#include "CSensorEvaluation.h"
+#include "CComplementaryFilter.h"
+#include "TKalmanFilter.h"
+#include "CLQR.h"
+
+UInt32 tick = 0U;
+
+extern "C"
+{
+void SysTick_Handler()
+{
+	HAL_IncTick();
+	tick++;
+}
+}
+
+void main();
+void main()
+{
+	CSTMHardware hw;
+	CSensorEvaluation sensorEval;
+	CComplementaryFilter compFilter;
+	CLQR lqr;
+
+
+	while (1)
+	{
+	   ;
+	}
+}

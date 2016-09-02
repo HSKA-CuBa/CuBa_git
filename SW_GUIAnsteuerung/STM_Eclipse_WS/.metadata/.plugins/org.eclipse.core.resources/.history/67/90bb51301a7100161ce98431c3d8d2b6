@@ -1,0 +1,254 @@
+/* Proxy - Distribute the Messages
+ *
+ * Created on: 16.08.2016
+ * Author: Alexander Schleicher
+ * From Foundation of Michael Meindl
+ */
+
+#include "SProxy.h"
+#include "FreeRTOS.h"
+#include "queue.h"
+#include <new>
+
+SProxy* SProxy::sInstance = nullptr;
+SProxy& SProxy::getInstance()
+{
+	if(sInstance == nullptr)
+	{
+		void* memLocation = pvPortMalloc(sizeof(SProxy));
+		sInstance = new(memLocation) SProxy;
+	}
+	return *sInstance;
+}
+
+
+SProxy::SProxy() : mControlComp(SControlComponent::getInstance()),
+				   mCommComp(SCommComponent::getInstance()) {}
+void SProxy::startControl(EComponentID sender)
+{
+	CMessage msg(sender,
+			 	 EComponentID::CONTROL_COMP,
+				 EControlEvent::EV_START);
+
+	xQueueSendToBack(mControlComp.mQueue,
+						static_cast<void*>(&msg),
+						0U);
+}
+
+void SProxy::stopControl(EComponentID sender)
+{
+	CMessage msg(sender,
+			     EComponentID::CONTROL_COMP,
+				 EControlEvent::EV_STOP);
+
+	xQueueSendToBack(mControlComp.mQueue,
+						static_cast<void*>(&msg),
+						0U);
+}
+
+void SProxy::setJumpFlag(EComponentID sender, UInt8 jumpFlag)
+{
+	CMessage msg(sender,
+			     EComponentID::CONTROL_COMP,
+				 EControlEvent::EV_SET_JUMP_FLAG);
+	msg.setByte(jumpFlag, 0U);
+
+	xQueueSendToBack(mControlComp.mQueue,
+						static_cast<void*>(&msg),
+						0U);
+
+}
+
+void SProxy::setBalanceFlag(EComponentID sender, UInt8 balanceFlag)
+{
+	CMessage msg(sender,
+			     EComponentID::CONTROL_COMP,
+				 EControlEvent::EV_SET_BALANCE_FLAG);
+	msg.setByte(balanceFlag, 0U);
+
+	xQueueSendToBack(mControlComp.mQueue,
+						static_cast<void*>(&msg),
+						0U);
+}
+
+void SProxy::setTransmitFlag(EComponentID sender, UInt8 transmitFlag)
+{
+	CMessage msg(sender,
+			     EComponentID::CONTROL_COMP,
+				 EControlEvent::EV_SET_TRANSMIT_FLAG);
+	msg.setByte(transmitFlag, 0U);
+
+	xQueueSendToBack(mControlComp.mQueue,
+						static_cast<void*>(&msg),
+						0U);
+}
+
+void SProxy::jump(EComponentID sender)
+{
+	CMessage msg(sender,
+			     EComponentID::CONTROL_COMP,
+				 EControlEvent::EV_JUMP);
+
+	xQueueSendToBack(mControlComp.mQueue,
+						static_cast<void*>(&msg),
+						0U);
+}
+
+
+void SProxy::getLogData(EComponentID sender)
+{
+	CMessage msg(sender,
+			     EComponentID::CONTROL_COMP,
+				 EControlEvent::EV_GET_LOG_DATA);
+
+	xQueueSendToBackFromISR(mControlComp.mQueue,
+						static_cast<void*>(&msg),
+						0U);
+}
+
+
+void SProxy::timerCallback()
+{
+	CMessage msg(EComponentID::CONTROL_COMP,
+				 EComponentID::CONTROL_COMP,
+				 EControlEvent::EV_TIMER);
+
+	xQueueSendToBackFromISR(mControlComp.mQueue,
+							static_cast<void*>(&msg),
+							0U);
+}
+
+void SProxy::commMessageReceived(EComponentID sender)
+{
+	CMessage msg(sender,
+			     EComponentID::COMM_COMP,
+				 ECommEvent::EV_COMM_MSG_RECEIVED);
+
+	xQueueSendToBackFromISR(mCommComp.mQueue,
+							static_cast<void*>(&msg),
+							0U);
+
+}
+
+void SProxy::usartSynchroCheck(EComponentID sender)
+{
+	CMessage msg(sender,
+			     EComponentID::COMM_COMP,
+				 ECommEvent::EV_TRANSMIT_USART_SYNCHRO_CHECK);
+
+	xQueueSendToBackFromISR(mCommComp.mQueue,
+							static_cast<void*>(&msg),
+							0U);
+}
+void SProxy::transmitPhiK(EComponentID sender, UInt16 phiK)
+{
+	CMessage msg(sender,
+				 EComponentID::COMM_COMP,
+				 ECommEvent::EV_TRANSMIT_PHI_K);
+	msg.setData(static_cast<UInt32>(phiK));
+
+	xQueueSendToBack(mCommComp.mQueue,
+						static_cast<void*>(&msg),
+						0U);
+}
+
+void SProxy::transmitPhiK_d(EComponentID sender, UInt16 phiK_d)
+{
+	CMessage msg(sender,
+				 EComponentID::COMM_COMP,
+				 ECommEvent::EV_TRANSMIT_PHI_K_D);
+	msg.setData(static_cast<UInt32>(phiK_d));
+
+	xQueueSendToBack(mCommComp.mQueue,
+						static_cast<void*>(&msg),
+						0U);
+}
+
+void SProxy::transmitPhiK_dd(EComponentID sender, UInt16 phiK_dd)
+{
+	CMessage msg(sender,
+				 EComponentID::COMM_COMP,
+				 ECommEvent::EV_TRANSMIT_PHI_K_DD);
+	msg.setData(static_cast<UInt32>(phiK_dd));
+
+	xQueueSendToBack(mCommComp.mQueue,
+						static_cast<void*>(&msg),
+						0U);
+}
+
+void SProxy::transmitPhiR_d(EComponentID sender, UInt16 phiR_d)
+{
+	CMessage msg(sender,
+				 EComponentID::COMM_COMP,
+				 ECommEvent::EV_TRANSMIT_PHI_R_D);
+	msg.setData(static_cast<UInt32>(phiR_d));
+
+	xQueueSendToBack(mCommComp.mQueue,
+						 static_cast<void*>(&msg),
+						 0U);
+}
+
+void SProxy::transmitBrakeState(EComponentID sender, UInt8 brakeState)
+{
+	CMessage msg(sender,
+				 EComponentID::COMM_COMP,
+				 ECommEvent::EV_TRANSMIT_PHI_K_D);
+	msg.setData(static_cast<UInt32>(brakeState));
+
+	xQueueSendToBack(mCommComp.mQueue,
+						 static_cast<void*>(&msg),
+						 0U);
+}
+
+void SProxy::transmitStateEntry(EComponentID sender, EState state)
+{
+	CMessage msg(sender,
+				 EComponentID::COMM_COMP,
+				 ECommEvent::EV_TRANSMIT_ENTRY_STATE);
+	msg.setData(static_cast<UInt32>(state));
+
+	xQueueSendToBack(mCommComp.mQueue,
+						 static_cast<void*>(&msg),
+						 0U);
+}
+
+void SProxy::transmitUnhandeldEvent(EComponentID sender, EControlEvent event)
+{
+	CMessage msg(sender,
+			     EComponentID::COMM_COMP,
+				 ECommEvent::EV_TRANSMIT_UNHANDELD_EV);
+	msg.setData(static_cast<UInt32>(event));
+
+	xQueueSendToBack(mCommComp.mQueue,
+						 static_cast<void*>(&msg),
+						 0U);
+}
+
+void SProxy::transmitVelocity(EComponentID sender, float velocity)
+{
+	CMessage msg(sender,
+			     EComponentID::COMM_COMP,
+				 ECommEvent::EV_TRANSMIT_VELOCITY);
+
+	msg.setData(static_cast<UInt32>(velocity*3.2));
+
+
+	xQueueSendToBack(mCommComp.mQueue,
+						static_cast<void*>(&msg),
+						0U);
+}
+
+void SProxy::transmitAngle(EComponentID sender, float angle)
+{
+	CMessage msg(sender,
+			     EComponentID::COMM_COMP,
+				 ECommEvent::EV_TRANSMIT_ANGLE);
+
+	Int16 tmpData = static_cast<Int16>(100.0F*angle);
+
+	msg.setData(static_cast<UInt32>(static_cast<UInt16>(tmpData))));
+
+	xQueueSendToBack(mCommComp.mQueue,
+						static_cast<void*>(&msg),
+						0U);
+}

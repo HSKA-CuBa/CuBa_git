@@ -3,19 +3,21 @@ function RTW_Sid2UrlHash() {
 	/* <Root>/Add */
 	this.urlHashMap["MotorTest:5"] = "MotorTest.c:40&MotorTest.h:79";
 	/* <Root>/Constant */
-	this.urlHashMap["MotorTest:1"] = "MotorTest.h:102&MotorTest_data.c:35";
+	this.urlHashMap["MotorTest:1"] = "MotorTest.h:106&MotorTest_data.c:35";
 	/* <Root>/Constant1 */
-	this.urlHashMap["MotorTest:2"] = "MotorTest.h:96&MotorTest_data.c:29";
+	this.urlHashMap["MotorTest:2"] = "MotorTest.h:100&MotorTest_data.c:29";
 	/* <Root>/Constant2 */
-	this.urlHashMap["MotorTest:6"] = "MotorTest.c:41&MotorTest.h:93&MotorTest_data.c:26";
+	this.urlHashMap["MotorTest:6"] = "MotorTest.c:41&MotorTest.h:97&MotorTest_data.c:26";
 	/* <Root>/Gain */
-	this.urlHashMap["MotorTest:7"] = "MotorTest.c:42&MotorTest.h:99&MotorTest_data.c:32";
+	this.urlHashMap["MotorTest:7"] = "MotorTest.c:42&MotorTest.h:103&MotorTest_data.c:32";
 	/* <Root>/S-Function Builder */
 	this.urlHashMap["MotorTest:3"] = "MotorTest.c:47";
 	/* <Root>/S-Function Builder1 */
 	this.urlHashMap["MotorTest:9"] = "MotorTest.c:37&MotorTest.h:80";
 	/* <Root>/Scope */
 	this.urlHashMap["MotorTest:4"] = "MotorTest.h:87";
+	/* <Root>/Scope1 */
+	this.urlHashMap["MotorTest:11"] = "MotorTest.h:91";
 	this.getUrlHash = function(sid) { return this.urlHashMap[sid];}
 }
 RTW_Sid2UrlHash.instance = new RTW_Sid2UrlHash();
@@ -40,6 +42,8 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["MotorTest:9"] = {rtwname: "<Root>/S-Function Builder1"};
 	this.rtwnameHashMap["<Root>/Scope"] = {sid: "MotorTest:4"};
 	this.sidHashMap["MotorTest:4"] = {rtwname: "<Root>/Scope"};
+	this.rtwnameHashMap["<Root>/Scope1"] = {sid: "MotorTest:11"};
+	this.sidHashMap["MotorTest:11"] = {rtwname: "<Root>/Scope1"};
 	this.getSID = function(rtwname) { return this.rtwnameHashMap[rtwname];}
 	this.getRtwname = function(sid) { return this.sidHashMap[sid];}
 }

@@ -1,0 +1,40 @@
+#include "CSTMHardware.h"
+#include "CSensorEvaluation.h"
+#include "CComplementaryFilter.h"
+#include "TKalmanFilter.h"
+#include "CLQR.h"
+
+UInt32 tick = 0U;
+
+extern "C"
+{
+void SysTick_Handler()
+{
+	HAL_IncTick();
+	tick++;
+}
+}
+
+void main();
+void main()
+{
+	CSTMHardware hw;
+	CSensorEvaluation sensorEval;
+	CComplementaryFilter compFilter;
+	CLQR lqr;
+
+	float phi;
+	float phi_d;
+	float psi_d;
+	float torque;
+
+	while (1)
+	{
+	   if(tick >= 20.0U)
+	   {
+		   tick = 0U;
+
+
+	   }
+	}
+}

@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'MotorTest'. 
 ## 
 ## Makefile     : MotorTest.mk
-## Generated on : Fri Aug 26 08:32:21 2016
+## Generated on : Mon Aug 29 09:57:47 2016
 ## MATLAB Coder version: 3.1 (R2016a)
 ## 
 ## Build Info:
@@ -695,34 +695,6 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(LIBS) $(MAIN_OBJ)
 
 
 %.o : $(START_DIR)/MotorBlock/%.cxx
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MotorBlock/%.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MotorBlock/%.s
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MotorBlock/%.S
-	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MotorBlock/%.cpp
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MotorBlock/%.cc
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MotorBlock/%.C
-	$(CPP) $(CPPFLAGS) -o "$@" "$<"
-
-
-%.o : C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V6___LQR_Regelung/MotorBlock/%.cxx
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 

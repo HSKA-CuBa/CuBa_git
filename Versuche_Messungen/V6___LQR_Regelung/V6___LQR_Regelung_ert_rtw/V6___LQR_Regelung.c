@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'V6___LQR_Regelung'.
  *
- * Model version                  : 1.29
+ * Model version                  : 1.31
  * Simulink Coder version         : 8.10 (R2016a) 10-Feb-2016
- * C/C++ source code generated on : Sun Aug 28 12:47:02 2016
+ * C/C++ source code generated on : Fri Sep 02 13:21:06 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -190,10 +190,10 @@ void V6___LQR_Regelung_initialize(void)
   V6___LQR_Regelung_M->Timing.stepSize0 = 0.02;
 
   /* External mode info */
-  V6___LQR_Regelung_M->Sizes.checksums[0] = (4263614307U);
-  V6___LQR_Regelung_M->Sizes.checksums[1] = (72339049U);
-  V6___LQR_Regelung_M->Sizes.checksums[2] = (1506053837U);
-  V6___LQR_Regelung_M->Sizes.checksums[3] = (2415319127U);
+  V6___LQR_Regelung_M->Sizes.checksums[0] = (1961465426U);
+  V6___LQR_Regelung_M->Sizes.checksums[1] = (236356520U);
+  V6___LQR_Regelung_M->Sizes.checksums[2] = (2497097983U);
+  V6___LQR_Regelung_M->Sizes.checksums[3] = (2666979419U);
 
   {
     static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE;

@@ -176,12 +176,16 @@
     ;%
     ;% Auto data (MotorTest_DW)
     ;%
-      section.nData     = 1;
-      section.data(1)  = dumData; %prealloc
+      section.nData     = 2;
+      section.data(2)  = dumData; %prealloc
       
 	  ;% MotorTest_DW.Scope_PWORK.LoggedData
 	  section.data(1).logicalSrcIdx = 0;
 	  section.data(1).dtTransOffset = 0;
+	
+	  ;% MotorTest_DW.Scope1_PWORK.LoggedData
+	  section.data(2).logicalSrcIdx = 1;
+	  section.data(2).dtTransOffset = 1;
 	
       nTotData = nTotData + section.nData;
       dworkMap.sections(1) = section;
@@ -213,8 +217,8 @@
   ;%
 
 
-  targMap.checksum0 = 2610658849;
-  targMap.checksum1 = 164582888;
-  targMap.checksum2 = 141505151;
-  targMap.checksum3 = 2491501337;
+  targMap.checksum0 = 923569970;
+  targMap.checksum1 = 529230976;
+  targMap.checksum2 = 1293867602;
+  targMap.checksum3 = 2484971821;
 

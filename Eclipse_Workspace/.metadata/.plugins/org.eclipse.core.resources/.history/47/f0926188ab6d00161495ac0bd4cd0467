@@ -1,0 +1,18 @@
+#include "CSTMHardware.h"
+#include "CSensorEvaluation.h"
+#include "CComplementaryFilter.h"
+#include "TKalmanFilter.h"
+#include "CLQR.h"
+
+void main();
+void main()
+{
+	CSTMHardware hw;
+	CSensorEvaluation sensorEval;
+	CComplementaryFilter compFilter;
+	CLQR lqr;
+	while (1)
+	{
+	   ;
+	}
+}

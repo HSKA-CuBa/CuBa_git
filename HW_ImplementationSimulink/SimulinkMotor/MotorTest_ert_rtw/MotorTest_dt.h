@@ -7,9 +7,9 @@
  *
  * Code generation for model "MotorTest".
  *
- * Model version              : 1.15
+ * Model version              : 1.18
  * Simulink Coder version : 8.10 (R2016a) 10-Feb-2016
- * C source code generated on : Fri Aug 26 08:32:13 2016
+ * C source code generated on : Mon Aug 29 09:57:17 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -66,7 +66,7 @@ static DataTypeTransition rtBTransitions[] = {
   { (char_T *)(&MotorTest_B.SFunctionBuilder1), 5, 0, 1 }
   ,
 
-  { (char_T *)(&MotorTest_DW.Scope_PWORK.LoggedData), 11, 0, 1 }
+  { (char_T *)(&MotorTest_DW.Scope_PWORK.LoggedData), 11, 0, 2 }
 };
 
 /* data type transition table for block I/O structure */

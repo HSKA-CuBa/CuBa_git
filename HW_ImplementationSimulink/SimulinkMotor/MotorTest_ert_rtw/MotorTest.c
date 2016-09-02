@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'MotorTest'.
  *
- * Model version                  : 1.15
+ * Model version                  : 1.18
  * Simulink Coder version         : 8.10 (R2016a) 10-Feb-2016
- * C/C++ source code generated on : Fri Aug 26 08:32:13 2016
+ * C/C++ source code generated on : Mon Aug 29 09:57:17 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -98,10 +98,10 @@ void MotorTest_initialize(void)
   MotorTest_M->Timing.stepSize0 = 0.02;
 
   /* External mode info */
-  MotorTest_M->Sizes.checksums[0] = (2610658849U);
-  MotorTest_M->Sizes.checksums[1] = (164582888U);
-  MotorTest_M->Sizes.checksums[2] = (141505151U);
-  MotorTest_M->Sizes.checksums[3] = (2491501337U);
+  MotorTest_M->Sizes.checksums[0] = (923569970U);
+  MotorTest_M->Sizes.checksums[1] = (529230976U);
+  MotorTest_M->Sizes.checksums[2] = (1293867602U);
+  MotorTest_M->Sizes.checksums[3] = (2484971821U);
 
   {
     static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE;
