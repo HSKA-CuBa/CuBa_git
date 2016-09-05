@@ -1,7 +1,7 @@
-\section{Reglerentwurf}
+\subsection{Reglerentwurf}
 In dem folgenden Abschnitt wird der Entwurf eines Reglers vorgestellt, welcher auf der Rückführung des Zustandsvektors basiert. Im ersten Teil wird die analytische Bestimmung der Parameter erläutert, daraufhin wird der Regler im zweiten Teil an dem Prototyp erprobt und validiert.
 
-\subsection{Analytische Bestimmung der Reglerparameter}
+\subsubsection{Analytische Bestimmung der Reglerparameter}
 Mit Hilfe der Zustandsraumdarstellung kann über die Rückführung des Zustandvektors eine Regelung entworfen werden. Das folgende Blockschaltbild zeigt den Zusammenhang der Systemmatrizen und der Reglermatrix $\textbf{F}$, welche zur Berechnung der Stellgröße $u=T_M$ dient.
 
 \begin{figure}[h]
@@ -52,7 +52,7 @@ R = \begin{pmatrix}
 
 Die Reglermatrix $\textbf{F}$ muss die Eigenschaft besitzen die Gütefunktion (\ref{costfunction_equation}) zu minimieren. Dieses Problem wird mit Hilfe von der Matlab-Funktion \textit{lqrd} numerisch gelöst.
 
-\subsection{Verifizierung des Reglers an dem 1D-Prototyp}
+\subsubsection{Verifizierung des Reglers an dem 1D-Prototyp}
 Mit Hilfe von Matlab wurden die Werte der Reglermatrix $\boldsymbol{F}$ berechnet.
 
 \begin{equation}

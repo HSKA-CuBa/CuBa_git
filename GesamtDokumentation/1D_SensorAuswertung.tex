@@ -1,4 +1,4 @@
-\section{Sensorik}
+\subsection{Sensorik}
 \label{Sensorik_secd}
 Die Aufgabe der verwendeten Sensorik liegt darin die Werte für $\varphi$, und $\dot{\varphi}$ zu bestimmen. Hierfür wurden zwei MPU6050 IC's verwendet. Diese verfügen jeweils über einen Beschleunigungssensor und Gyroskop, welche Werte für drei Achsen ausgeben. Der Tiefpass der Sensoren wird auf eine Grenzfrequenz von $44Hz$ eingestellt, da hier einerseits eine erste Glättung der Daten erfolgt, andererseits aber keine zu große Verzögerung ergibt, welche sich wiederum negativ auf die Regelung auswirken könnte. Die Position und Ausrichtung der Sensoren ist in \ref{Position_Sensoren_pic} dargestellt.
 
@@ -9,7 +9,7 @@ Die Aufgabe der verwendeten Sensorik liegt darin die Werte für $\varphi$, und $
 \label{Position_Sensoren_pic}
 \end{figure}
 
-\subsection{Winkelschätzung}
+\subsubsection{Winkelschätzung}
 Die Sensoren keine Wege bzw. Winkel. Somit muss der Winkel $\varphi$ berechnet werden. Die gemessenen Sensorwerte hängen von $r_{S1}$ bzw. $r_{S2}$ ab, welche den Abstand zwischen den Sensoren und dem Drehpunkt $A$ beschreiben. Zusätzlich beeinflussen neben dem Winkel $\varphi$ auch dessen beiden Ableitungen $\dot{\varphi}$ und $\ddot{\varphi}$ die Sensorausgabe. Allerdings lassen sich aus den Beschleunigungswerten der beiden Sensoren nach \cite{Cubli1D} wie folgt der aktuelle Wert von $\varphi$ berechnen.
 
 \begin{equation}
@@ -43,10 +43,10 @@ g(1 - \alpha)sin(\varphi)
 \frac{\ddot{x}_1 - \alpha \cdot \ddot{x}_2}{\ddot{y}_1 - \alpha \cdot \ddot{y}_2} = -tan(\varphi)
 \end{equation}
 
-\subsection{Kalibrierung und Justierung}
+\subsubsection{Kalibrierung und Justierung}
 Die Sensoren geben die Beschleunigungs- und Geschwindigkeitswerte als 16 Bit Werte im Zweierkomplement aus. Diese Rohwerte müssen in die mit Hilfe eines Ausgleichspolynoms in die jeweilige SI-Einheit umgerechnet werden. 
 
-\subsubsection{Umrechnung der Beschleunigungswerte}
+\subsubsubsection{Umrechnung der Beschleunigungswerte}
 Um das Polynom zur Umrechnung der Beschleunigungswerte zu ermitteln werden sieben Messungen in den fixen Ausfallpositionen $\phi \in [-45, -30, -15, 0, 15, 30, 45]$ durchgeführt. Pro Position werden $m = 10000$ Messwerte aufgenommen. Da in der Ruhelage die Beschleunigung lediglich von dem aktuellen Ausfallwinkel abhängt ist der Sollwert für jede Position bekannt. Somit kann ein Polynom erster Ordnung approximiert werden um Mittelwerte der sieben Positionen in die entsprechenden Beschleunigungswerte umzurechnen.
 
 \begin{table}[h]
@@ -89,7 +89,7 @@ $p^1_{y_2}$ &$=$& $-6.089 \cdot 10^{-4}$ & $p^2_{y_2}$ &$=$& $0.09182$ \\
 	\includegraphics[width=0.5\linewidth]{img/Y2__dd___fitted.eps}
 \end{figure}
 
-\subsubsection{Umrechnung der Winkelgeschwindigkeiten}
+\subsubsubsection{Umrechnung der Winkelgeschwindigkeiten}
 Um die Rohwerte der Gyroskope in Winkelgeschwindigkeiten umzurechnen wird die Würfelseite fixiert und die Winkelgeschwindigkeitswerte der beiden Sensoren aufgenommen. Hierbei werden jeweils $m = 1000$ Werte aufgenommen. Da der Sollwert $\dot{\varphi} = 0 \frac{m}{s}$ bekannt ist kann die systematische Messabweichung der Sensoren über den Mittelwert bestimmt werden. Der proportionale Umrechnungsfaktor von Rohdaten zu Winkelgeschwindigkeiten wird dem Datenblatt des Herstellers entnommen.
 
 \begin{figure}[h]
@@ -116,7 +116,7 @@ $p^1_{\varphi_2}$ &$=$& $-0.0076$ & $p^2_{\varphi_2}$ &$=$& $889$ \\
 \end{tabular}
 \end{table}
 
-\subsection{Auswertung der Radgeschwindigkeit $\dot{\psi}$}
+\subsubsection{Auswertung der Radgeschwindigkeit $\dot{\psi}$}
 Der Motortreiber liefert ein analoges Spannungssignal, welches die aktuelle Motorgeschwindigkeit wiedergibt. Um die ADC-Werte in SI-Einheiten umzurechnen wird ein Polynom erster Ordnung benötigt. Hierfür werden mit Hilfe der ESCON-Studio konstante Motorgeschwindigkeiten ($\dot{\psi} \in \{ -3000, -2000,$  $-1000, 0, 1000, 2000, 3000 \} [rpm] $) gefahren und pro Durchlauf $m=500$ ADC-Werte aufgenommen. Über die Mittelwerte der Messungen und die vorgegebenen Radgeschwindigkeiten wird anschließend ein Polynom erster Ordnung approximiert.
 
 \begin{table}[h!]
@@ -135,12 +135,12 @@ $\dot{\psi}$ & $\equiv$ & Geschwindigkeit der Schwungmasse & $\dot{\psi}_{ADC}$ 
 	\includegraphics[width=0.5\linewidth]{img/ADC_mittelwert_polynom.eps}
 \end{figure}
 
-\subsection{Filterung der Sensordaten}
+\subsubsection{Filterung der Sensordaten}
 In der Regel werden Sensoren von Störungen unterschiedlichster Art beeinflusst. In diesem Abschnitt werden das Komplementär- und Kalman-Filter vorgestellt. Hierbei handelt es sich um Methoden der Datenfusion um möglicht präzise Schätzungen der Zustandsgrößen zu erreichen.
 
 Der Ausfallwinkel $\varphi$ kann über die Auswertung der Beschleunigungswerte berechnet werden. Allerdings weißen diese Sensoren hochfrequente Störanteile auf, welche sich negativ auf die Winkelschätzung auswirken. Alternativ kann die Zustandsgröße $\varphi$ über die Integration der Winkelgeschwindigkeit $\dot{\varphi}$ gewonnen werden. Die Geschwindigkeit $\dot{\varphi}$ wird mit Hilfe der beiden Gyroskope gemessen. Allerdings sind diese Messungen von einer systematischen Messabweichung betroffen, welche in die Integration einfließt und somit zu einem langfristigen Drift des Winkels $\varphi$ führt.
 
-\subsubsection{Komplementärfilter}
+\subsubsubsection{Komplementärfilter}
 Eine der simpelsten Methoden der Signalverarbeitung stellt das s.g. Komplementärfilter dar. Die Grundidee dieses Prinzips besteht darin die einzelnen Sensorsignale mit einem Hoch- oder Tiefpass zu filtern und anschließend zu fusionieren. 
 
 In diesem Anwendungsfall wird der Winkel $\varphi_{Acc}$, welcher über die Beschleunigungswerte berechnet wird, mit einem Tiefpass gefiltert. Dadurch werden die hochfrequenten Störsignale entfernt. Der zweite Winkelwert $\varphi_{Gyr}$, welcher durch die Integration der Winkelgeschwindigkeit $\dot{\varphi}$ gewonnen wird, kann mit Hilfe eines Hochpasses von dem niederfrequenten Störsignal befreit werden.
@@ -162,7 +162,7 @@ Dieses Fusionsprinzip führt zu den folgenden Berechnungsschritten.
  \end{equation}
 \end{enumerate}
 
-\subsubsection{Kalman-Filter}
+\subsubsubsection{Kalman-Filter}
 Das Kalman-Filter beruht auf dem Prinzip der Zustandsschätzung. Diese Schätzung erfolgt mittels der Messwerte aus Gyroskopen, Beschleunigungssensoren und der darauf folgenden Winkelschätzung. Hierbei greift der Algorithmus auf Methoden der Wahrscheinlichkeitsrechnung zurück. Ist die Varianz eines Messfehlers gegeben, so kann eine Schätzung des tatsächlichen Zustandes vorgenommen werden.
 In diesem Fall wird mit den linearisierten Bewegungsgleichungen gearbeitet. Dadurch kann das gewöhnliche Kalman-Filter verwendet werden. Für nichtlineare Systeme müssen unterschiedliche Filteralgorithmen, wie beispielsweise das Extended-Kalman-Filter, verwendet werden.
 
@@ -220,7 +220,7 @@ Im zweiten Abschnitt, der s.g. Korrektur- bzw. Filterschritt, wird die Vorhersag
 	\end{equation}
 \end{enumerate}
 
-\subsubsection{Anwendung des Kalman-Filters}
+\subsubsubsection{Anwendung des Kalman-Filters}
 Um die zuvor angesprochenen Nachteile der einzelnen Sensoren auszugleichen, wird nun die Umsetzung eines Kalman-Filters zur Sensorfusion vorgestellt.
 
 Das Kalman-Filter fusioniert den Ausfallwinkel $\varphi_{Acc}$ aus der Winkelschätzung mit der Winkeländerung $\Delta \varphi_{Gyr}$, welche durch Integration der Gyroskopwerte gewonnen wurde. Daraus ergibt sich der gefilterte Winkel $\hat{\varphi}_n$. Dieser gefilterte Zustandswert wird für die Berechnung des Regelkreises verwendet.
