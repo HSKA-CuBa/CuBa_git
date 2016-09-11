@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} 
+\usepackage{epstopdf}
+\usepackage{svg}
+\usepackage{svg}
+\usepackage{booktabs}
+\usepackage{longtable, lscape}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{array} 
+\usepackage{tabularx}
+\usepackage{varwidth}
+\graphicspath{{img/}}
+\usepackage{geometry}
+\usepackage{amsmath,mathtools}
+\usepackage{pdflscape}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=false, %set true if you want colored links
+    linktoc=all
+}
+\geometry{a4paper, top=25mm, left=30mm, right=25mm, bottom=20mm}
+\usepackage{titlesec}
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+
+\titleformat{\subsubsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{5}{\z@}%
+  {3.25ex \@plus1ex \@minus.2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{6}{\parindent}%
+  {3.25ex \@plus1ex \@minus .2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\def\toclevel@subsubsubsection{4}
+\def\toclevel@paragraph{5}
+\def\toclevel@paragraph{6}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\def\l@paragraph{\@dottedtocline{5}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{6}{14em}{6em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\include{CuBa_Macros}
+
+\begin{document}
+\tableofcontents
+\newpage
+
+\include{Einfuehrung}
+
+\include{1D_Section}
+\include{1D_AktorikSensorik}
+\include{1D_Dynamik}
+\include{1D_SensorAuswertung}
+\include{1D_Modellbildung}
+\include{1D_Reglerentwurf}
+\include{1D_Aufspringen}
+
+\include{3D_Section}
+\include{3D_Dynamik}
+
+
+\newpage
+\begin{thebibliography}{\hspace{0.5cm}}
+	\bibitem{Cubli1D} Mohanarjah Gajamohan, Michael merz, Igor Thommen, Raffaello D'Andrea: The Cubli: A Cube that can Jump Up and Balance
+	\bibitem{Cubli3D_LQR} Mohanarajah Gajamohan, Michael Muehlbach, Tobias Widmer, Raffaello D'Andrea: The Cubli: A Reaction Wheel Based 3D Inverted Pendulum
+	\bibitem{Cubli3D_Nonlinear} Michael Muehlbach, Gajamohan Mohanarajah, Raffaello D'Andrea: Nonlinear Analysis and Control of a Reaction Wheel-based 3D Inverted Pendulum
+	\bibitem{TheoPhysik1} Wolfgang Nolting: Grundkurs Theoretische Physik 1 - Klassische Mechanik
+	\bibitem{TheoPhysik2} Wolfgang Nolting: Grundkurs Theoretische Physik 2 - Analytische Mechanik
+	\bibitem{Kane} Thomas R. Kane: Dynamics - Theory and Applications
+	\bibitem{PraxisDerDigSigVer} Fernando Puente Le\'on, Sebastian Bauer: Praxis der digitalen Signalverarbeitung
+	\bibitem{SimTechLinearUndNichtlinSysteme} Josef Hoffmann, Franz Quint : Simulation technischer linearer und nichtlinearer Systeme mit MATLAB/Simulink
+	\bibitem{SystemTheoStochPro} Herbert Schlitt: Systemtheorie für stochastische Prozesse
+	\bibitem{SigVer_AnaDigSig} Marin Meyer: Signalverarbeitung - Analoge und digitale Signale, Systeme und Filter
+	\bibitem{SuS} Ottmar Beucher: Signale und Systeme - Theorie, Simulation und Anwendung
+	\bibitem{RT1} Heinz Unbehauen: Regelungstechnik 1 - Klassische Verfahren zur Analyse und Synthese linearer kontinuierlicher Regelsysteme
+	\bibitem{RT2} Heinz Unbehauen: Regelungstechnik 2 - Zustandsregelungen, digitale und nichtlineare Regelsysteme
+	\bibitem{lqrnotes} Joao P. Hespanha: Lecture notes on LQR/LQG controller design
+	\bibitem{ML_Mitchell} Tom M. Mitchell: Machine Learning
+	\bibitem{ML_Bishop} Christopher Bishop: Pattern Recognition and Machine Learning
+\end{thebibliography}
+
+\end{document}
