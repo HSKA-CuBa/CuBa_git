@@ -1,4 +1,0 @@
-//26.8.2016, Michael Meindl
-//Definitions to process the raw sensorvalues
-#include "CSensorEvaluation.h"
-

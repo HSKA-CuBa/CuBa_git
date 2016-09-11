@@ -1,0 +1,23 @@
+//Michael Meindl, 5.9.2016
+//Template-Class to calculate floatin mean values
+#ifndef TFLOATINGMEAN_H
+#define TFLOATINGMEAN_H
+#include "Global.h"
+
+template<const UInt32 n>
+class TFloatingMean
+{
+public:
+	float calculateValue(float newValue);
+public:
+	TFloatingMean<n>();
+	TFloatingMean<n>(const TFloatingMean<n>&) = delete;
+	TFloatingMean<n>& operator=(const TFloatingMean<n>&) = delete;
+	~TFloatingMean<n>() = default;
+private:
+	float mValues[n];
+	UInt32 mFirstindex;
+	UInt32 mLastindex;
+};
+
+#endif

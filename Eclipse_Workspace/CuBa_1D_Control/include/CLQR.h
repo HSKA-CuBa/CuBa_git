@@ -1,5 +1,5 @@
 //26.8.2016, Michael Meindl
-//Class-Deklaration to calculate the current motor torque
+//Class-declaration to calculate the current motor torque
 #ifndef CLQR_H
 #define CLQR_H
 #include "Global.h"

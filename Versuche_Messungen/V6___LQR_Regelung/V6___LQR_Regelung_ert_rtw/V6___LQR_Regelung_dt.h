@@ -7,9 +7,9 @@
  *
  * Code generation for model "V6___LQR_Regelung".
  *
- * Model version              : 1.31
+ * Model version              : 1.35
  * Simulink Coder version : 8.10 (R2016a) 10-Feb-2016
- * C source code generated on : Fri Sep 02 13:21:06 2016
+ * C source code generated on : Mon Sep 05 11:52:48 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -61,9 +61,9 @@ static const char_T * rtDataTypeNames[] = {
 
 /* data type transitions for block I/O structure */
 static DataTypeTransition rtBTransitions[] = {
-  { (char_T *)(&V6___LQR_Regelung_B.WinkelOffset1), 0, 0, 1 },
+  { (char_T *)(&V6___LQR_Regelung_B.WinkelOffset1), 0, 0, 2 },
 
-  { (char_T *)(&V6___LQR_Regelung_B.SFunctionBuilder2_o1), 1, 0, 8 },
+  { (char_T *)(&V6___LQR_Regelung_B.SFunctionBuilder2_o1), 1, 0, 9 },
 
   { (char_T *)(&V6___LQR_Regelung_B.Sensor1_o1), 4, 0, 12 },
 
@@ -72,14 +72,19 @@ static DataTypeTransition rtBTransitions[] = {
   { (char_T *)(&V6___LQR_Regelung_B.Compare), 8, 0, 1 }
   ,
 
-  { (char_T *)(&V6___LQR_Regelung_DW.Sensor1_DSTATE), 0, 0, 3 },
+  { (char_T *)(&V6___LQR_Regelung_DW.Sensor1_DSTATE), 0, 0, 6 },
 
-  { (char_T *)(&V6___LQR_Regelung_DW.phi__d_scope_PWORK.LoggedData), 11, 0, 5 }
+  { (char_T *)(&V6___LQR_Regelung_DW.phi__d_scope_PWORK.LoggedData[0]), 11, 0, 7
+  },
+
+  { (char_T *)(&V6___LQR_Regelung_DW.DiscreteFIRFilter1_states[0]), 1, 0, 3 },
+
+  { (char_T *)(&V6___LQR_Regelung_DW.DiscreteFIRFilter1_circBuf), 6, 0, 2 }
 };
 
 /* data type transition table for block I/O structure */
 static DataTypeTransitionTable rtBTransTable = {
-  7U,
+  9U,
   rtBTransitions
 };
 
@@ -89,9 +94,9 @@ static DataTypeTransition rtPTransitions[] = {
 
   { (char_T *)(&V6___LQR_Regelung_P.BalanceArea_const), 1, 0, 1 },
 
-  { (char_T *)(&V6___LQR_Regelung_P.Constant2_Value), 0, 0, 2 },
+  { (char_T *)(&V6___LQR_Regelung_P.Constant1_Value), 0, 0, 9 },
 
-  { (char_T *)(&V6___LQR_Regelung_P.phi_COG_Offset_Value), 1, 0, 7 },
+  { (char_T *)(&V6___LQR_Regelung_P.phi_COG_Offset_Value), 1, 0, 12 },
 
   { (char_T *)(&V6___LQR_Regelung_P.Sensor1_P2), 7, 0, 2 },
 

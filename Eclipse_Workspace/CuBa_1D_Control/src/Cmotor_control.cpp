@@ -105,8 +105,6 @@ void Cmotor_control::GPIO_Init(GPIO_TypeDef* GPIOx, UInt16 GPIO_PIN_x)
 	 mGPIO_InitSt.Speed = GPIO_SPEED_HIGH;
 	 mGPIO_InitSt.Alternate = 0;
 
-
-
 	 HAL_GPIO_Init(GPIOx,&mGPIO_InitSt);
 }
 

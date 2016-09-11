@@ -3,6 +3,7 @@
 
 mu = 0.140/0.061;
 r1 = 0.14;
+r2 = 0.061;
 
 
 load('Messwerte\V4_SensorValues');
@@ -16,8 +17,8 @@ y2__dd  = double(SensorValues.signals(5).values(20:end));
 phi2__d = double(SensorValues.signals(6).values(20:end));
 t       = 0:ta:(size(x1__dd,1)-1)*ta;
 
-x1__dd  = x1__dd * (-5.852e-5) + 0.03477;
-x2__dd  = x2__dd * (-4.713e-4) + 0.168;
+x1__dd  = x1__dd * x1__dd_polynom.p1 + x1__dd_polynom.p2;
+x2__dd  = x2__dd * x2__dd_polynom.p1 + x2__dd_polynom.p2;
 y1__dd  = y1__dd * (-6.188e-4) + 0.1636;
 y2__dd  = y2__dd * (-6.185e-4) + 0.05969;
 phi1__d = degtorad((phi1__d - 79) * -0.0076);
@@ -65,8 +66,6 @@ xlabel('Zeit [s]'); ylabel('$\varphi$ [$\circ$]', 'interpreter', 'latex');
 title('Vergleich der Filter');
 
 %Kalman für phi_d
-phi__dd     = x1__dd / r1;
-phi__d_t     = (x1__dd / r1)*ta;
 
 phi__d_n    = ones(size(phi)) * phi1__d(1);
 P           = zeros(size(phi));

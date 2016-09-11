@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'V6___LQR_Regelung'.
  *
- * Model version                  : 1.31
+ * Model version                  : 1.35
  * Simulink Coder version         : 8.10 (R2016a) 10-Feb-2016
- * C/C++ source code generated on : Fri Sep 02 13:21:06 2016
+ * C/C++ source code generated on : Mon Sep 05 11:52:48 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -78,10 +78,12 @@
 /* Block signals (auto storage) */
 typedef struct {
   real_T WinkelOffset1;                /* '<Root>/WinkelOffset1' */
+  real_T DiscreteFIRFilter;            /* '<Root>/Discrete FIR Filter' */
   real32_T SFunctionBuilder2_o1;       /* '<Root>/S-Function Builder2' */
   real32_T SFunctionBuilder2_o2;       /* '<Root>/S-Function Builder2' */
   real32_T SFunctionBuilder2_o3;       /* '<Root>/S-Function Builder2' */
   real32_T SFunctionBuilder2_o4;       /* '<Root>/S-Function Builder2' */
+  real32_T DiscreteFIRFilter1;         /* '<Root>/Discrete FIR Filter1' */
   real32_T T_M;                        /* '<Root>/Sum' */
   real32_T phi_acc_deg;                /* '<Root>/radtodeg3' */
   real32_T phi_komp_deg;               /* '<Root>/radtodeg2' */
@@ -107,8 +109,9 @@ typedef struct {
   real_T Sensor1_DSTATE;               /* '<Root>/Sensor1' */
   real_T Sensor2_DSTATE;               /* '<Root>/Sensor2' */
   real_T SFunctionBuilder2_DSTATE;     /* '<Root>/S-Function Builder2' */
+  real_T DiscreteFIRFilter_states[3];  /* '<Root>/Discrete FIR Filter' */
   struct {
-    void *LoggedData;
+    void *LoggedData[2];
   } phi__d_scope_PWORK;                /* '<Root>/phi__d_scope' */
 
   struct {
@@ -116,8 +119,12 @@ typedef struct {
   } phi_scope_PWORK;                   /* '<Root>/phi_scope' */
 
   struct {
-    void *LoggedData;
+    void *LoggedData[2];
   } psi__d_scope_PWORK;                /* '<Root>/psi__d_scope' */
+
+  real32_T DiscreteFIRFilter1_states[3];/* '<Root>/Discrete FIR Filter1' */
+  int32_T DiscreteFIRFilter1_circBuf;  /* '<Root>/Discrete FIR Filter1' */
+  int32_T DiscreteFIRFilter_circBuf;   /* '<Root>/Discrete FIR Filter' */
 } DW_V6___LQR_Regelung_T;
 
 /* Parameters (auto storage) */
@@ -128,12 +135,24 @@ struct P_V6___LQR_Regelung_T_ {
   real32_T BalanceArea_const;          /* Mask Parameter: BalanceArea_const
                                         * Referenced by: '<S1>/Constant'
                                         */
+  real_T Constant1_Value;              /* Expression: 1
+                                        * Referenced by: '<Root>/Constant1'
+                                        */
+  real_T Constant_Value;               /* Expression: 1
+                                        * Referenced by: '<Root>/Constant'
+                                        */
   real_T Constant2_Value;              /* Expression: 1017
                                         * Referenced by: '<Root>/Constant2'
                                         */
   real_T phi_COG_Offset1_Value;        /* Expression: 0
                                         * Referenced by: '<Root>/phi_COG_Offset1'
                                         */
+  real_T DiscreteFIRFilter_InitialStates;/* Expression: 0
+                                          * Referenced by: '<Root>/Discrete FIR Filter'
+                                          */
+  real_T DiscreteFIRFilter_Coefficients[4];/* Expression: [0.25 0.25 0.25 0.25]
+                                            * Referenced by: '<Root>/Discrete FIR Filter'
+                                            */
   real32_T phi_COG_Offset_Value;       /* Computed Parameter: phi_COG_Offset_Value
                                         * Referenced by: '<Root>/phi_COG_Offset'
                                         */
@@ -143,6 +162,12 @@ struct P_V6___LQR_Regelung_T_ {
   real32_T Gain1_Gain;                 /* Computed Parameter: Gain1_Gain
                                         * Referenced by: '<Root>/Gain1'
                                         */
+  real32_T DiscreteFIRFilter1_InitialState;/* Computed Parameter: DiscreteFIRFilter1_InitialState
+                                            * Referenced by: '<Root>/Discrete FIR Filter1'
+                                            */
+  real32_T DiscreteFIRFilter1_Coefficients[4];/* Computed Parameter: DiscreteFIRFilter1_Coefficients
+                                               * Referenced by: '<Root>/Discrete FIR Filter1'
+                                               */
   real32_T Gain2_Gain;                 /* Computed Parameter: Gain2_Gain
                                         * Referenced by: '<Root>/Gain2'
                                         */

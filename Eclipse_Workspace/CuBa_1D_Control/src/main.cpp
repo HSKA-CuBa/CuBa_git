@@ -2,10 +2,12 @@
 #include "CSensorEvaluation.h"
 #include "CComplementaryFilter.h"
 #include "TKalmanFilter.h"
+#include "TFloatingMean.h"
 #include "CLQR.h"
 #include <cmath>
 
 UInt32 tick = 0U;
+UInt32 adcTick = 0U;
 
 extern "C"
 {
@@ -14,6 +16,7 @@ void SysTick_Handler()
 {
 	HAL_IncTick();
 	tick++;
+	adcTick++;
 }
 }
 
@@ -24,14 +27,24 @@ void main()
 	CSensorEvaluation sensorEval;
 	CComplementaryFilter compFilter;
 	TKalmanFilter<7U> kalmanFilter;
+	TKalmanFilter<7U> phi_d_KalmanFilter;
 	CLQR lqr;
+	TFloatingMean<4U> psi_d_filter;
 
 	float phi 		= 0.0F;
 	float phi_d 	= 0.0F;
+	float phi_dd 	= 0.0F;
 	float psi_d		= 0.0F;
 
 	while (1)
 	{
+		//Ueberabtastung des ADC
+		if(adcTick >= 5U)
+		{
+
+		   psi_d = sensorEval.calcPsi__d(hw.getPsi__d_raw());
+		   psi_d = psi_d_filter.calculateValue(psi_d);
+		}
 	   if(tick >= 20U)
 	   {
 		   tick = 0U;
@@ -42,10 +55,11 @@ void main()
 									hw.getY2__dd_raw());
 		   phi_d = sensorEval.calcPhi__d(hw.getPhi1__d_raw(),
 				   	   	   	   	   	   	 hw.getPhi2__d_raw());
-		   psi_d = sensorEval.calcPsi__d(hw.getPsi__d_raw());
+		   phi_dd = sensorEval.getPhi__dd();
 
 		   //phi = compFilter.calculatePhi(phi, phi_d);
 		   phi = kalmanFilter.calculatePhi(phi, phi_d);
+		   //phi_d = phi_d_KalmanFilter.calculatePhi(phi_d, phi_dd);
 
 		   float absPhi = std::abs(phi);
 		   if(absPhi < Config::PhiBalanceMax)

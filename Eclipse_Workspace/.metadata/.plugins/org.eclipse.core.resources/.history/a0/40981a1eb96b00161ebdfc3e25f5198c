@@ -1,4 +1,0 @@
-//26.8.2016, Michael Meindl
-//Defintions in order to filter the phi value
-#include "CComplementaryFilter.h"
-

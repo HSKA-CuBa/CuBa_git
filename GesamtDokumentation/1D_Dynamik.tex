@@ -40,13 +40,13 @@ beschrieben werden. Der Winkel $\varphi$ wird von den Achsen $y$ und $y_K$ einge
 Um die Bewegungsgleichungen des Systems zu ermitteln wird der Lagrange Formalismus verwendet. Dieser basiert auf der Lagrange-Funktion $L$, welche die Differenz der kinetischen Energie $T$ und der potenziellen Energie $V$ des Systems beschreibt.
 
 \begin{equation}
-T = \frac{1}{2}[({\theta}^A_K + m_R \cdot {l_{AB}}^2) {\dot{\varphi}}^2 + {\theta}^R_B(\dot{\varphi}+\dot{\psi})^2]
+T = \frac{1}{2}[({\theta}^A_K + m_R \cdot {l_{AB}}^2) {\dot{\varphi}}^2 + {\theta}^B_R(\dot{\varphi}+\dot{\psi})^2]
 \end{equation}
 \begin{equation}
 V = g(m_R \cdot l_{AB} + m_K \cdot l_{AC})cos(\varphi)
 \end{equation}
 \begin{equation}
-L = T - V = \frac{1}{2}[({\theta}^A_K + m_R \cdot {l_{AB}}^2) {\dot{\varphi}}^2 + {\theta}^R_B(\dot{\varphi}+\dot{\psi})^2] - g(m_R \cdot l_{AB} + m_K \cdot l_{AC})cos(\varphi)
+L = T - V = \frac{1}{2}[({\theta}^A_K + m_R \cdot {l_{AB}}^2) {\dot{\varphi}}^2 + {\theta}^B_R(\dot{\varphi}+\dot{\psi})^2] - g(m_R \cdot l_{AB} + m_K \cdot l_{AC})cos(\varphi)
 \end{equation}
 
 In dem System wirken unterschiedliche Kräfte. Einerseits erzeugt der Motor ein Drehmoment, welches die virtuelle Arbeite $\delta W_M$ verursacht. Andererseits verrichtet die Gravitation die virtuelle Arbeite $\delta W_G$. Zusätzlich muss die, durch die Reibung entstandene, Verlustleistung berücksichtigt werden. In diesem Fall wird die Reibleistung mit den Rayleigh'schen Dissipationsfunktionen $D_{\varphi}$ und $D_{\psi}$ beschrieben und verrichten die virtuelle Arbeit $\delta W_D$.
@@ -92,10 +92,10 @@ Bei dem Prototyp handelt es sich um ein nicht konservatives System, da durch die
 \end{equation}
 \begin{equation}
 \label{LG_phi_equation}
-({\theta}^A_K + {\theta}^B_R + m_R \cdot l_{AB}^2)\ddot{\varphi} + {\theta}^B_R \cdot \ddot{\psi} - g(m_R \cdot l_{AB} + m_K \cdot l_{AC})sin(\varphi) + C_{\psi} \cdot \dot{\psi} = 0
+({\theta}^A_K + {\theta}^B_R + m_R \cdot l_{AB}^2)\ddot{\varphi} + {\theta}^B_R \cdot \ddot{\psi} - g(m_R \cdot l_{AB} + m_K \cdot l_{AC})sin(\varphi) + C_{\varphi} \cdot \dot{\varphi} = 0
 \end{equation}
 \begin{equation}
-\frac{d}{dt}\frac{\partial T}{\partial \dot{\psi}}-\frac{\partial T}{\partial \psi} + \frac{\partial T}{\partial \dot{\psi}} = Q_{\psi} 
+\frac{d}{dt}\frac{\partial T}{\partial \dot{\psi}}-\frac{\partial T}{\partial \psi} } = Q_{\psi} 
 \end{equation}
 \begin{equation}
 \label{LG_psi_euqation}
@@ -106,7 +106,7 @@ Durch Einsetzen von (\ref{LG_psi_euqation}) in (\ref{LG_phi_equation}) ergibt si
 
 \begin{equation}
 \label{BG_phi_quation}
-\ddot{\varphi} = \frac{g(m_R \cdot l_{AB}^2 + m_K \cdot l_{AC})sin(\varphi) - C_{\varphi} \cdot \dot{\varphi} + C_{\psi} \cdot \dot{\psi} - T_M}{{\theta}^A_K + m_R \cdot l_{AB}^2}
+\ddot{\varphi} = \frac{g(m_R \cdot l_{AB} + m_K \cdot l_{AC})sin(\varphi) - C_{\varphi} \cdot \dot{\varphi} + C_{\psi} \cdot \dot{\psi} - T_M}{{\theta}^A_K + m_R \cdot l_{AB}^2}
 \end{equation}
 
 Die Bewegungsgleichung für die Schwungmasse ergibt sich durch Einsetzen von (\ref{BG_phi_quation}) in (\ref{LG_psi_euqation}).

@@ -5,7 +5,9 @@ function RTW_Sid2UrlHash() {
 	/* <Root>/Constant1 */
 	this.urlHashMap["V3_AusgleichsPolynomPsi__d:3"] = "V3_AusgleichsPolynomPsi__d.h:92&V3_AusgleichsPolynomPsi__d_data.c:26";
 	/* <Root>/S-Function Builder */
-	this.urlHashMap["V3_AusgleichsPolynomPsi__d:1"] = "V3_AusgleichsPolynomPsi__d.c:38&V3_AusgleichsPolynomPsi__d.h:79";
+	this.urlHashMap["V3_AusgleichsPolynomPsi__d:1"] = "V3_AusgleichsPolynomPsi__d.c:38";
+	/* <Root>/S-Function Builder1 */
+	this.urlHashMap["V3_AusgleichsPolynomPsi__d:8"] = "V3_AusgleichsPolynomPsi__d.c:42&V3_AusgleichsPolynomPsi__d.h:79";
 	/* <Root>/To Workspace */
 	this.urlHashMap["V3_AusgleichsPolynomPsi__d:7"] = "V3_AusgleichsPolynomPsi__d.h:86";
 	this.getUrlHash = function(sid) { return this.urlHashMap[sid];}
@@ -22,6 +24,8 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["V3_AusgleichsPolynomPsi__d:3"] = {rtwname: "<Root>/Constant1"};
 	this.rtwnameHashMap["<Root>/S-Function Builder"] = {sid: "V3_AusgleichsPolynomPsi__d:1"};
 	this.sidHashMap["V3_AusgleichsPolynomPsi__d:1"] = {rtwname: "<Root>/S-Function Builder"};
+	this.rtwnameHashMap["<Root>/S-Function Builder1"] = {sid: "V3_AusgleichsPolynomPsi__d:8"};
+	this.sidHashMap["V3_AusgleichsPolynomPsi__d:8"] = {rtwname: "<Root>/S-Function Builder1"};
 	this.rtwnameHashMap["<Root>/To Workspace"] = {sid: "V3_AusgleichsPolynomPsi__d:7"};
 	this.sidHashMap["V3_AusgleichsPolynomPsi__d:7"] = {rtwname: "<Root>/To Workspace"};
 	this.getSID = function(rtwname) { return this.rtwnameHashMap[rtwname];}

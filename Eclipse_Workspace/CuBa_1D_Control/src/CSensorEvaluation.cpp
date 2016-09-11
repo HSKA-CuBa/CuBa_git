@@ -11,6 +11,7 @@ float CSensorEvaluation::calcPhi(Int16 x1__dd_raw, Int16 x2__dd_raw,
 	float x2__dd = static_cast<float>(x2__dd_raw) * Config::X2__dd_P1 + Config::X2__dd_P2;
 	float y1__dd = static_cast<float>(y1__dd_raw) * Config::Y1__dd_P1 + Config::Y1__dd_P2;
 	float y2__dd = static_cast<float>(y2__dd_raw) * Config::Y2__dd_P1 + Config::Y2__dd_P2;
+	mPhi__dd = (x1__dd - x2__dd)/(Config::R_S1 - Config::R_S2);
 	return -atan2f(x1__dd - (Config::SensorAlpha * x2__dd),
 				   y1__dd - (Config::SensorAlpha * y2__dd));
 }
@@ -23,4 +24,8 @@ float CSensorEvaluation::calcPhi__d(Int16 phi1__d_raw, Int16 phi2__d_raw)
 float CSensorEvaluation::calcPsi__d(Int16 psi__d_raw)
 {
 	return static_cast<float>(psi__d_raw) * Config::Psi__d_P1 + Config::Psi__d_P2;
+}
+CSensorEvaluation::CSensorEvaluation() : mPhi__dd(0.0F)
+{
+
 }

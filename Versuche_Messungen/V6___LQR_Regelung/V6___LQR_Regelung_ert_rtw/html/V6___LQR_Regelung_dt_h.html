@@ -29,11 +29,11 @@
 <tr name="9" id="9">
 <td>9</td><td><span class="ct"> *</span></td></tr>
 <tr name="10" id="10">
-<td>10</td><td><span class="ct"> * Model version              : 1.31</span></td></tr>
+<td>10</td><td><span class="ct"> * Model version              : 1.35</span></td></tr>
 <tr name="11" id="11">
 <td>11</td><td><span class="ct"> * Simulink Coder version : 8.10 (R2016a) 10-Feb-2016</span></td></tr>
 <tr name="12" id="12">
-<td>12</td><td><span class="ct"> * C source code generated on : Fri Sep 02 13:21:06 2016</span></td></tr>
+<td>12</td><td><span class="ct"> * C source code generated on : Mon Sep 05 11:52:48 2016</span></td></tr>
 <tr name="13" id="13">
 <td>13</td><td><span class="ct"> *</span></td></tr>
 <tr name="14" id="14">
@@ -137,11 +137,11 @@
 <tr name="63" id="63">
 <td>63</td><td><span class="kw">static</span> <a id="63c8" class="tk">DataTypeTransition</a> <a id="63c27" class="tk">rtBTransitions</a>[] = <span class="br">{</span></td></tr>
 <tr name="64" id="64">
-<td>64</td><td>  <span class="br">{</span> (<a id="64c6" class="tk">char_T</a> <a id="64c13" class="tk">*</a>)(<a id="64c16" class="tk">&amp;</a><a id="64c17" class="tk">V6___LQR_Regelung_B</a>.<a id="64c37" class="tk">WinkelOffset1</a>), 0, 0, 1 <span class="br">}</span>,</td></tr>
+<td>64</td><td>  <span class="br">{</span> (<a id="64c6" class="tk">char_T</a> <a id="64c13" class="tk">*</a>)(<a id="64c16" class="tk">&amp;</a><a id="64c17" class="tk">V6___LQR_Regelung_B</a>.<a id="64c37" class="tk">WinkelOffset1</a>), 0, 0, 2 <span class="br">}</span>,</td></tr>
 <tr name="65" id="65">
 <td>65</td><td></td></tr>
 <tr name="66" id="66">
-<td>66</td><td>  <span class="br">{</span> (<a id="66c6" class="tk">char_T</a> <a id="66c13" class="tk">*</a>)(<a id="66c16" class="tk">&amp;</a><a id="66c17" class="tk">V6___LQR_Regelung_B</a>.<a id="66c37" class="tk">SFunctionBuilder2_o1</a>), 1, 0, 8 <span class="br">}</span>,</td></tr>
+<td>66</td><td>  <span class="br">{</span> (<a id="66c6" class="tk">char_T</a> <a id="66c13" class="tk">*</a>)(<a id="66c16" class="tk">&amp;</a><a id="66c17" class="tk">V6___LQR_Regelung_B</a>.<a id="66c37" class="tk">SFunctionBuilder2_o1</a>), 1, 0, 9 <span class="br">}</span>,</td></tr>
 <tr name="67" id="67">
 <td>67</td><td></td></tr>
 <tr name="68" id="68">
@@ -159,77 +159,87 @@
 <tr name="74" id="74">
 <td>74</td><td></td></tr>
 <tr name="75" id="75">
-<td>75</td><td>  <span class="br">{</span> (<a id="75c6" class="tk">char_T</a> <a id="75c13" class="tk">*</a>)(<a id="75c16" class="tk">&amp;</a><a id="75c17" class="tk">V6___LQR_Regelung_DW</a>.<a id="75c38" class="tk">Sensor1_DSTATE</a>), 0, 0, 3 <span class="br">}</span>,</td></tr>
+<td>75</td><td>  <span class="br">{</span> (<a id="75c6" class="tk">char_T</a> <a id="75c13" class="tk">*</a>)(<a id="75c16" class="tk">&amp;</a><a id="75c17" class="tk">V6___LQR_Regelung_DW</a>.<a id="75c38" class="tk">Sensor1_DSTATE</a>), 0, 0, 6 <span class="br">}</span>,</td></tr>
 <tr name="76" id="76">
 <td>76</td><td></td></tr>
 <tr name="77" id="77">
-<td>77</td><td>  <span class="br">{</span> (<a id="77c6" class="tk">char_T</a> <a id="77c13" class="tk">*</a>)(<a id="77c16" class="tk">&amp;</a><a id="77c17" class="tk">V6___LQR_Regelung_DW</a>.<a id="77c38" class="tk">phi__d_scope_PWORK</a>.<a id="77c57" class="tk">LoggedData</a>), 11, 0, 5 <span class="br">}</span></td></tr>
+<td>77</td><td>  <span class="br">{</span> (<a id="77c6" class="tk">char_T</a> <a id="77c13" class="tk">*</a>)(<a id="77c16" class="tk">&amp;</a><a id="77c17" class="tk">V6___LQR_Regelung_DW</a>.<a id="77c38" class="tk">phi__d_scope_PWORK</a>.<a id="77c57" class="tk">LoggedData</a>[0]), 11, 0, 7</td></tr>
 <tr name="78" id="78">
-<td>78</td><td><span class="br">}</span>;</td></tr>
+<td>78</td><td>  <span class="br">}</span>,</td></tr>
 <tr name="79" id="79">
 <td>79</td><td></td></tr>
 <tr name="80" id="80">
-<td>80</td><td><span class="ct">/* data type transition table for block I/O structure */</span></td></tr>
+<td>80</td><td>  <span class="br">{</span> (<a id="80c6" class="tk">char_T</a> <a id="80c13" class="tk">*</a>)(<a id="80c16" class="tk">&amp;</a><a id="80c17" class="tk">V6___LQR_Regelung_DW</a>.<a id="80c38" class="tk">DiscreteFIRFilter1_states</a>[0]), 1, 0, 3 <span class="br">}</span>,</td></tr>
 <tr name="81" id="81">
-<td>81</td><td><span class="kw">static</span> <a id="81c8" class="tk">DataTypeTransitionTable</a> <a id="81c32" class="tk">rtBTransTable</a> = <span class="br">{</span></td></tr>
+<td>81</td><td></td></tr>
 <tr name="82" id="82">
-<td>82</td><td>  7U,</td></tr>
+<td>82</td><td>  <span class="br">{</span> (<a id="82c6" class="tk">char_T</a> <a id="82c13" class="tk">*</a>)(<a id="82c16" class="tk">&amp;</a><a id="82c17" class="tk">V6___LQR_Regelung_DW</a>.<a id="82c38" class="tk">DiscreteFIRFilter1_circBuf</a>), 6, 0, 2 <span class="br">}</span></td></tr>
 <tr name="83" id="83">
-<td>83</td><td>  <a id="83c3" class="tk">rtBTransitions</a></td></tr>
+<td>83</td><td><span class="br">}</span>;</td></tr>
 <tr name="84" id="84">
-<td>84</td><td><span class="br">}</span>;</td></tr>
+<td>84</td><td></td></tr>
 <tr name="85" id="85">
-<td>85</td><td></td></tr>
+<td>85</td><td><span class="ct">/* data type transition table for block I/O structure */</span></td></tr>
 <tr name="86" id="86">
-<td>86</td><td><span class="ct">/* data type transitions for Parameters structure */</span></td></tr>
+<td>86</td><td><span class="kw">static</span> <a id="86c8" class="tk">DataTypeTransitionTable</a> <a id="86c32" class="tk">rtBTransTable</a> = <span class="br">{</span></td></tr>
 <tr name="87" id="87">
-<td>87</td><td><span class="kw">static</span> <a id="87c8" class="tk">DataTypeTransition</a> <a id="87c27" class="tk">rtPTransitions</a>[] = <span class="br">{</span></td></tr>
+<td>87</td><td>  9U,</td></tr>
 <tr name="88" id="88">
-<td>88</td><td>  <span class="br">{</span> (<a id="88c6" class="tk">char_T</a> <a id="88c13" class="tk">*</a>)(<a id="88c16" class="tk">&amp;</a><a id="88c17" class="tk">V6___LQR_Regelung_P</a>.<a id="88c37" class="tk">Kd</a>[0]), 0, 0, 3 <span class="br">}</span>,</td></tr>
+<td>88</td><td>  <a id="88c3" class="tk">rtBTransitions</a></td></tr>
 <tr name="89" id="89">
-<td>89</td><td></td></tr>
+<td>89</td><td><span class="br">}</span>;</td></tr>
 <tr name="90" id="90">
-<td>90</td><td>  <span class="br">{</span> (<a id="90c6" class="tk">char_T</a> <a id="90c13" class="tk">*</a>)(<a id="90c16" class="tk">&amp;</a><a id="90c17" class="tk">V6___LQR_Regelung_P</a>.<a id="90c37" class="tk">BalanceArea_const</a>), 1, 0, 1 <span class="br">}</span>,</td></tr>
+<td>90</td><td></td></tr>
 <tr name="91" id="91">
-<td>91</td><td></td></tr>
+<td>91</td><td><span class="ct">/* data type transitions for Parameters structure */</span></td></tr>
 <tr name="92" id="92">
-<td>92</td><td>  <span class="br">{</span> (<a id="92c6" class="tk">char_T</a> <a id="92c13" class="tk">*</a>)(<a id="92c16" class="tk">&amp;</a><a id="92c17" class="tk">V6___LQR_Regelung_P</a>.<a id="92c37" class="tk">Constant2_Value</a>), 0, 0, 2 <span class="br">}</span>,</td></tr>
+<td>92</td><td><span class="kw">static</span> <a id="92c8" class="tk">DataTypeTransition</a> <a id="92c27" class="tk">rtPTransitions</a>[] = <span class="br">{</span></td></tr>
 <tr name="93" id="93">
-<td>93</td><td></td></tr>
+<td>93</td><td>  <span class="br">{</span> (<a id="93c6" class="tk">char_T</a> <a id="93c13" class="tk">*</a>)(<a id="93c16" class="tk">&amp;</a><a id="93c17" class="tk">V6___LQR_Regelung_P</a>.<a id="93c37" class="tk">Kd</a>[0]), 0, 0, 3 <span class="br">}</span>,</td></tr>
 <tr name="94" id="94">
-<td>94</td><td>  <span class="br">{</span> (<a id="94c6" class="tk">char_T</a> <a id="94c13" class="tk">*</a>)(<a id="94c16" class="tk">&amp;</a><a id="94c17" class="tk">V6___LQR_Regelung_P</a>.<a id="94c37" class="tk">phi_COG_Offset_Value</a>), 1, 0, 7 <span class="br">}</span>,</td></tr>
+<td>94</td><td></td></tr>
 <tr name="95" id="95">
-<td>95</td><td></td></tr>
+<td>95</td><td>  <span class="br">{</span> (<a id="95c6" class="tk">char_T</a> <a id="95c13" class="tk">*</a>)(<a id="95c16" class="tk">&amp;</a><a id="95c17" class="tk">V6___LQR_Regelung_P</a>.<a id="95c37" class="tk">BalanceArea_const</a>), 1, 0, 1 <span class="br">}</span>,</td></tr>
 <tr name="96" id="96">
-<td>96</td><td>  <span class="br">{</span> (<a id="96c6" class="tk">char_T</a> <a id="96c13" class="tk">*</a>)(<a id="96c16" class="tk">&amp;</a><a id="96c17" class="tk">V6___LQR_Regelung_P</a>.<a id="96c37" class="tk">Sensor1_P2</a>), 7, 0, 2 <span class="br">}</span>,</td></tr>
+<td>96</td><td></td></tr>
 <tr name="97" id="97">
-<td>97</td><td></td></tr>
+<td>97</td><td>  <span class="br">{</span> (<a id="97c6" class="tk">char_T</a> <a id="97c13" class="tk">*</a>)(<a id="97c16" class="tk">&amp;</a><a id="97c17" class="tk">V6___LQR_Regelung_P</a>.<a id="97c37" class="tk">Constant1_Value</a>), 0, 0, 9 <span class="br">}</span>,</td></tr>
 <tr name="98" id="98">
-<td>98</td><td>  <span class="br">{</span> (<a id="98c6" class="tk">char_T</a> <a id="98c13" class="tk">*</a>)(<a id="98c16" class="tk">&amp;</a><a id="98c17" class="tk">V6___LQR_Regelung_P</a>.<a id="98c37" class="tk">Gain_Gain</a>), 14, 0, 1 <span class="br">}</span>,</td></tr>
+<td>98</td><td></td></tr>
 <tr name="99" id="99">
-<td>99</td><td></td></tr>
+<td>99</td><td>  <span class="br">{</span> (<a id="99c6" class="tk">char_T</a> <a id="99c13" class="tk">*</a>)(<a id="99c16" class="tk">&amp;</a><a id="99c17" class="tk">V6___LQR_Regelung_P</a>.<a id="99c37" class="tk">phi_COG_Offset_Value</a>), 1, 0, 12 <span class="br">}</span>,</td></tr>
 <tr name="100" id="100">
-<td>100</td><td>  <span class="br">{</span> (<a id="100c6" class="tk">char_T</a> <a id="100c13" class="tk">*</a>)(<a id="100c16" class="tk">&amp;</a><a id="100c17" class="tk">V6___LQR_Regelung_P</a>.<a id="100c37" class="tk">Sensor1_P1</a>), 8, 0, 2 <span class="br">}</span></td></tr>
+<td>100</td><td></td></tr>
 <tr name="101" id="101">
-<td>101</td><td><span class="br">}</span>;</td></tr>
+<td>101</td><td>  <span class="br">{</span> (<a id="101c6" class="tk">char_T</a> <a id="101c13" class="tk">*</a>)(<a id="101c16" class="tk">&amp;</a><a id="101c17" class="tk">V6___LQR_Regelung_P</a>.<a id="101c37" class="tk">Sensor1_P2</a>), 7, 0, 2 <span class="br">}</span>,</td></tr>
 <tr name="102" id="102">
 <td>102</td><td></td></tr>
 <tr name="103" id="103">
-<td>103</td><td><span class="ct">/* data type transition table for Parameters structure */</span></td></tr>
+<td>103</td><td>  <span class="br">{</span> (<a id="103c6" class="tk">char_T</a> <a id="103c13" class="tk">*</a>)(<a id="103c16" class="tk">&amp;</a><a id="103c17" class="tk">V6___LQR_Regelung_P</a>.<a id="103c37" class="tk">Gain_Gain</a>), 14, 0, 1 <span class="br">}</span>,</td></tr>
 <tr name="104" id="104">
-<td>104</td><td><span class="kw">static</span> <a id="104c8" class="tk">DataTypeTransitionTable</a> <a id="104c32" class="tk">rtPTransTable</a> = <span class="br">{</span></td></tr>
+<td>104</td><td></td></tr>
 <tr name="105" id="105">
-<td>105</td><td>  7U,</td></tr>
+<td>105</td><td>  <span class="br">{</span> (<a id="105c6" class="tk">char_T</a> <a id="105c13" class="tk">*</a>)(<a id="105c16" class="tk">&amp;</a><a id="105c17" class="tk">V6___LQR_Regelung_P</a>.<a id="105c37" class="tk">Sensor1_P1</a>), 8, 0, 2 <span class="br">}</span></td></tr>
 <tr name="106" id="106">
-<td>106</td><td>  <a id="106c3" class="tk">rtPTransitions</a></td></tr>
+<td>106</td><td><span class="br">}</span>;</td></tr>
 <tr name="107" id="107">
-<td>107</td><td><span class="br">}</span>;</td></tr>
+<td>107</td><td></td></tr>
 <tr name="108" id="108">
-<td>108</td><td></td></tr>
+<td>108</td><td><span class="ct">/* data type transition table for Parameters structure */</span></td></tr>
 <tr name="109" id="109">
-<td>109</td><td><span class="ct">/* [EOF] V6___LQR_Regelung_dt.h */</span></td></tr>
+<td>109</td><td><span class="kw">static</span> <a id="109c8" class="tk">DataTypeTransitionTable</a> <a id="109c32" class="tk">rtPTransTable</a> = <span class="br">{</span></td></tr>
 <tr name="110" id="110">
-<td>110</td><td></td></tr>
+<td>110</td><td>  7U,</td></tr>
+<tr name="111" id="111">
+<td>111</td><td>  <a id="111c3" class="tk">rtPTransitions</a></td></tr>
+<tr name="112" id="112">
+<td>112</td><td><span class="br">}</span>;</td></tr>
+<tr name="113" id="113">
+<td>113</td><td></td></tr>
+<tr name="114" id="114">
+<td>114</td><td><span class="ct">/* [EOF] V6___LQR_Regelung_dt.h */</span></td></tr>
+<tr name="115" id="115">
+<td>115</td><td></td></tr>
 </table>
 </pre>
 </body>

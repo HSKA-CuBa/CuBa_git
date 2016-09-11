@@ -1,5 +1,7 @@
-10:26:50 **** Incremental Build of configuration Debug for project CuBa_1D_Control ****
+16:16:03 **** Incremental Build of configuration Debug for project CuBa_1D_Control ****
 Info: Internal Builder is used for build
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\CSensorEvaluation.o" "..\\src\\CSensorEvaluation.cpp" 
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\CLQR.o" "..\\src\\CLQR.cpp" 
 arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\CSTMHardware.o" "..\\src\\CSTMHardware.cpp" 
 In file included from ../include/Cmotor_control.h:15:0,
                  from ../include/CSTMHardware.h:6,
@@ -12,6 +14,42 @@ In file included from ../include/CSTMHardware.h:6:0,
 ../include/Cmotor_control.h:18:7: warning: padding struct size to alignment boundary [-Wpadded]
  class Cmotor_control {
        ^
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\CSensor.o" "..\\src\\CSensor.cpp" 
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\main.o" "..\\src\\main.cpp" 
+In file included from ../include/Cmotor_control.h:15:0,
+                 from ../include/CSTMHardware.h:6,
+                 from ..\src\main.cpp:1:
+../include/Cpwm.h:29:9: warning: padding struct to align 'Cpwm::mTIM_CHANNEL_x' [-Wpadded]
+  UInt32 mTIM_CHANNEL_x;
+         ^
+In file included from ../include/CSTMHardware.h:6:0,
+                 from ..\src\main.cpp:1:
+../include/Cmotor_control.h:18:7: warning: padding struct size to alignment boundary [-Wpadded]
+ class Cmotor_control {
+       ^
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\CMPU6050.o" "..\\src\\CMPU6050.cpp" 
+..\src\CMPU6050.cpp: In constructor 'CMPU6050::CMPU6050(bool, I2C_HandleTypeDef&)':
+..\src\CMPU6050.cpp:30:18: warning: conversion to 'UInt8 {aka unsigned char}' from 'int' may alter its value [-Wconversion]
+   mDeviceAddress = mDeviceAddress + static_cast<UInt8>(2U);
+                  ^
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\Cmotor_control.o" "..\\src\\Cmotor_control.cpp" 
+In file included from ..\src\Cmotor_control.cpp:13:0:
+../include/Cpwm.h:29:9: warning: padding struct to align 'Cpwm::mTIM_CHANNEL_x' [-Wpadded]
+  UInt32 mTIM_CHANNEL_x;
+         ^
+In file included from ..\src\Cmotor_control.cpp:14:0:
+../include/Cmotor_control.h:18:7: warning: padding struct size to alignment boundary [-Wpadded]
+ class Cmotor_control {
+       ^
+..\src\Cmotor_control.cpp: In member function 'void Cmotor_control::set_pwm(float)':
+..\src\Cmotor_control.cpp:34:20: warning: conversion to 'UInt32 {aka long unsigned int}' from 'float' may alter its value [-Wfloat-conversion]
+  Temp_duty_percent =(duty_percent*1000);
+                    ^
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L../ldscripts -Wl,-Map,CuBa_1D_Control.map --specs=nano.specs -o CuBa_1D_Control.elf "src\\CAdc.o" "src\\CComplementaryFilter.o" "src\\CLQR.o" "src\\CMPU6050.o" "src\\CSTMHardware.o" "src\\CSensor.o" "src\\CSensorEvaluation.o" "src\\Cmotor_control.o" "src\\Cpwm.o" "src\\Cservo_control.o" "src\\_initialize_hardware.o" "src\\_write.o" "src\\main.o" "src\\stm32f4xx_hal_msp.o" "system\\src\\cmsis\\system_stm32f4xx.o" "system\\src\\cmsis\\vectors_stm32f407xx.o" "system\\src\\cortexm\\_initialize_hardware.o" "system\\src\\cortexm\\_reset_hardware.o" "system\\src\\cortexm\\exception_handlers.o" "system\\src\\diag\\Trace.o" "system\\src\\diag\\trace_impl.o" "system\\src\\newlib\\_cxx.o" "system\\src\\newlib\\_exit.o" "system\\src\\newlib\\_sbrk.o" "system\\src\\newlib\\_startup.o" "system\\src\\newlib\\_syscalls.o" "system\\src\\newlib\\assert.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_adc.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_adc_ex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_cortex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_flash.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_gpio.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_i2c.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_i2c_ex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_iwdg.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_pwr.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_rcc.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_tim.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_tim_ex.o" 
+Info: Nothing to build for CuBa_1D_Control
+Info: Nothing to build for CuBa_1D_Control
+16:35:59 **** Incremental Build of configuration Debug for project CuBa_1D_Control ****
+Info: Internal Builder is used for build
 arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\main.o" "..\\src\\main.cpp" 
 In file included from ../include/Cmotor_control.h:15:0,
                  from ../include/CSTMHardware.h:6,
@@ -25,3 +63,148 @@ In file included from ../include/CSTMHardware.h:6:0,
  class Cmotor_control {
        ^
 arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L../ldscripts -Wl,-Map,CuBa_1D_Control.map --specs=nano.specs -o CuBa_1D_Control.elf "src\\CAdc.o" "src\\CComplementaryFilter.o" "src\\CLQR.o" "src\\CMPU6050.o" "src\\CSTMHardware.o" "src\\CSensor.o" "src\\CSensorEvaluation.o" "src\\Cmotor_control.o" "src\\Cpwm.o" "src\\Cservo_control.o" "src\\_initialize_hardware.o" "src\\_write.o" "src\\main.o" "src\\stm32f4xx_hal_msp.o" "system\\src\\cmsis\\system_stm32f4xx.o" "system\\src\\cmsis\\vectors_stm32f407xx.o" "system\\src\\cortexm\\_initialize_hardware.o" "system\\src\\cortexm\\_reset_hardware.o" "system\\src\\cortexm\\exception_handlers.o" "system\\src\\diag\\Trace.o" "system\\src\\diag\\trace_impl.o" "system\\src\\newlib\\_cxx.o" "system\\src\\newlib\\_exit.o" "system\\src\\newlib\\_sbrk.o" "system\\src\\newlib\\_startup.o" "system\\src\\newlib\\_syscalls.o" "system\\src\\newlib\\assert.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_adc.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_adc_ex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_cortex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_flash.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_gpio.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_i2c.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_i2c_ex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_iwdg.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_pwr.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_rcc.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_tim.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_tim_ex.o" 
+Info: Nothing to build for CuBa_1D_Control
+Info: Nothing to build for CuBa_1D_Control
+Info: Nothing to build for CuBa_1D_Control
+Info: Nothing to build for CuBa_1D_Control
+Info: Nothing to build for CuBa_1D_Control
+16:40:25 **** Incremental Build of configuration Debug for project CuBa_1D_Control ****
+Info: Internal Builder is used for build
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\main.o" "..\\src\\main.cpp" 
+In file included from ../include/Cmotor_control.h:15:0,
+                 from ../include/CSTMHardware.h:6,
+                 from ..\src\main.cpp:1:
+../include/Cpwm.h:29:9: warning: padding struct to align 'Cpwm::mTIM_CHANNEL_x' [-Wpadded]
+  UInt32 mTIM_CHANNEL_x;
+         ^
+In file included from ../include/CSTMHardware.h:6:0,
+                 from ..\src\main.cpp:1:
+../include/Cmotor_control.h:18:7: warning: padding struct size to alignment boundary [-Wpadded]
+ class Cmotor_control {
+       ^
+..\src\main.cpp: In function 'void main()':
+..\src\main.cpp:36:8: warning: variable 'phi_dd' set but not used [-Wunused-but-set-variable]
+  float phi_dd  = 0.0F;
+        ^
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L../ldscripts -Wl,-Map,CuBa_1D_Control.map --specs=nano.specs -o CuBa_1D_Control.elf "src\\CAdc.o" "src\\CComplementaryFilter.o" "src\\CLQR.o" "src\\CMPU6050.o" "src\\CSTMHardware.o" "src\\CSensor.o" "src\\CSensorEvaluation.o" "src\\Cmotor_control.o" "src\\Cpwm.o" "src\\Cservo_control.o" "src\\_initialize_hardware.o" "src\\_write.o" "src\\main.o" "src\\stm32f4xx_hal_msp.o" "system\\src\\cmsis\\system_stm32f4xx.o" "system\\src\\cmsis\\vectors_stm32f407xx.o" "system\\src\\cortexm\\_initialize_hardware.o" "system\\src\\cortexm\\_reset_hardware.o" "system\\src\\cortexm\\exception_handlers.o" "system\\src\\diag\\Trace.o" "system\\src\\diag\\trace_impl.o" "system\\src\\newlib\\_cxx.o" "system\\src\\newlib\\_exit.o" "system\\src\\newlib\\_sbrk.o" "system\\src\\newlib\\_startup.o" "system\\src\\newlib\\_syscalls.o" "system\\src\\newlib\\assert.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_adc.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_adc_ex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_cortex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_flash.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_gpio.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_i2c.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_i2c_ex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_iwdg.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_pwr.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_rcc.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_tim.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_tim_ex.o" 
+16:41:22 **** Incremental Build of configuration Debug for project CuBa_1D_Control ****
+Info: Internal Builder is used for build
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\main.o" "..\\src\\main.cpp" 
+In file included from ../include/Cmotor_control.h:15:0,
+                 from ../include/CSTMHardware.h:6,
+                 from ..\src\main.cpp:1:
+../include/Cpwm.h:29:9: warning: padding struct to align 'Cpwm::mTIM_CHANNEL_x' [-Wpadded]
+  UInt32 mTIM_CHANNEL_x;
+         ^
+In file included from ../include/CSTMHardware.h:6:0,
+                 from ..\src\main.cpp:1:
+../include/Cmotor_control.h:18:7: warning: padding struct size to alignment boundary [-Wpadded]
+ class Cmotor_control {
+       ^
+..\src\main.cpp: In function 'void main()':
+..\src\main.cpp:62:14: error: 'phi_d_kalmanFilter' was not declared in this scope
+      phi_d = phi_d_kalmanFilter.calculatePhi(phi_d, phi_dd);
+              ^
+16:41:37 **** Incremental Build of configuration Debug for project CuBa_1D_Control ****
+Info: Internal Builder is used for build
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\main.o" "..\\src\\main.cpp" 
+In file included from ../include/Cmotor_control.h:15:0,
+                 from ../include/CSTMHardware.h:6,
+                 from ..\src\main.cpp:1:
+../include/Cpwm.h:29:9: warning: padding struct to align 'Cpwm::mTIM_CHANNEL_x' [-Wpadded]
+  UInt32 mTIM_CHANNEL_x;
+         ^
+In file included from ../include/CSTMHardware.h:6:0,
+                 from ..\src\main.cpp:1:
+../include/Cmotor_control.h:18:7: warning: padding struct size to alignment boundary [-Wpadded]
+ class Cmotor_control {
+       ^
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L../ldscripts -Wl,-Map,CuBa_1D_Control.map --specs=nano.specs -o CuBa_1D_Control.elf "src\\CAdc.o" "src\\CComplementaryFilter.o" "src\\CLQR.o" "src\\CMPU6050.o" "src\\CSTMHardware.o" "src\\CSensor.o" "src\\CSensorEvaluation.o" "src\\Cmotor_control.o" "src\\Cpwm.o" "src\\Cservo_control.o" "src\\_initialize_hardware.o" "src\\_write.o" "src\\main.o" "src\\stm32f4xx_hal_msp.o" "system\\src\\cmsis\\system_stm32f4xx.o" "system\\src\\cmsis\\vectors_stm32f407xx.o" "system\\src\\cortexm\\_initialize_hardware.o" "system\\src\\cortexm\\_reset_hardware.o" "system\\src\\cortexm\\exception_handlers.o" "system\\src\\diag\\Trace.o" "system\\src\\diag\\trace_impl.o" "system\\src\\newlib\\_cxx.o" "system\\src\\newlib\\_exit.o" "system\\src\\newlib\\_sbrk.o" "system\\src\\newlib\\_startup.o" "system\\src\\newlib\\_syscalls.o" "system\\src\\newlib\\assert.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_adc.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_adc_ex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_cortex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_flash.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_gpio.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_i2c.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_i2c_ex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_iwdg.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_pwr.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_rcc.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_tim.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_tim_ex.o" 
+Info: Nothing to build for CuBa_1D_Control
+16:44:48 **** Incremental Build of configuration Debug for project CuBa_1D_Control ****
+Info: Internal Builder is used for build
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\main.o" "..\\src\\main.cpp" 
+In file included from ../include/Cmotor_control.h:15:0,
+                 from ../include/CSTMHardware.h:6,
+                 from ..\src\main.cpp:1:
+../include/Cpwm.h:29:9: warning: padding struct to align 'Cpwm::mTIM_CHANNEL_x' [-Wpadded]
+  UInt32 mTIM_CHANNEL_x;
+         ^
+In file included from ../include/CSTMHardware.h:6:0,
+                 from ..\src\main.cpp:1:
+../include/Cmotor_control.h:18:7: warning: padding struct size to alignment boundary [-Wpadded]
+ class Cmotor_control {
+       ^
+..\src\main.cpp: In function 'void main()':
+..\src\main.cpp:36:8: warning: variable 'phi_dd' set but not used [-Wunused-but-set-variable]
+  float phi_dd  = 0.0F;
+        ^
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L../ldscripts -Wl,-Map,CuBa_1D_Control.map --specs=nano.specs -o CuBa_1D_Control.elf "src\\CAdc.o" "src\\CComplementaryFilter.o" "src\\CLQR.o" "src\\CMPU6050.o" "src\\CSTMHardware.o" "src\\CSensor.o" "src\\CSensorEvaluation.o" "src\\Cmotor_control.o" "src\\Cpwm.o" "src\\Cservo_control.o" "src\\_initialize_hardware.o" "src\\_write.o" "src\\main.o" "src\\stm32f4xx_hal_msp.o" "system\\src\\cmsis\\system_stm32f4xx.o" "system\\src\\cmsis\\vectors_stm32f407xx.o" "system\\src\\cortexm\\_initialize_hardware.o" "system\\src\\cortexm\\_reset_hardware.o" "system\\src\\cortexm\\exception_handlers.o" "system\\src\\diag\\Trace.o" "system\\src\\diag\\trace_impl.o" "system\\src\\newlib\\_cxx.o" "system\\src\\newlib\\_exit.o" "system\\src\\newlib\\_sbrk.o" "system\\src\\newlib\\_startup.o" "system\\src\\newlib\\_syscalls.o" "system\\src\\newlib\\assert.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_adc.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_adc_ex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_cortex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_flash.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_gpio.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_i2c.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_i2c_ex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_iwdg.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_pwr.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_rcc.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_tim.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_tim_ex.o" 
+16:45:29 **** Incremental Build of configuration Debug for project CuBa_1D_Control ****
+Info: Internal Builder is used for build
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\main.o" "..\\src\\main.cpp" 
+In file included from ../include/Cmotor_control.h:15:0,
+                 from ../include/CSTMHardware.h:6,
+                 from ..\src\main.cpp:1:
+../include/Cpwm.h:29:9: warning: padding struct to align 'Cpwm::mTIM_CHANNEL_x' [-Wpadded]
+  UInt32 mTIM_CHANNEL_x;
+         ^
+In file included from ../include/CSTMHardware.h:6:0,
+                 from ..\src\main.cpp:1:
+../include/Cmotor_control.h:18:7: warning: padding struct size to alignment boundary [-Wpadded]
+ class Cmotor_control {
+       ^
+..\src\main.cpp: In function 'void main()':
+..\src\main.cpp:36:8: warning: variable 'phi_dd' set but not used [-Wunused-but-set-variable]
+  float phi_dd  = 0.0F;
+        ^
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\CSensorEvaluation.o" "..\\src\\CSensorEvaluation.cpp" 
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\CLQR.o" "..\\src\\CLQR.cpp" 
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L../ldscripts -Wl,-Map,CuBa_1D_Control.map --specs=nano.specs -o CuBa_1D_Control.elf "src\\CAdc.o" "src\\CComplementaryFilter.o" "src\\CLQR.o" "src\\CMPU6050.o" "src\\CSTMHardware.o" "src\\CSensor.o" "src\\CSensorEvaluation.o" "src\\Cmotor_control.o" "src\\Cpwm.o" "src\\Cservo_control.o" "src\\_initialize_hardware.o" "src\\_write.o" "src\\main.o" "src\\stm32f4xx_hal_msp.o" "system\\src\\cmsis\\system_stm32f4xx.o" "system\\src\\cmsis\\vectors_stm32f407xx.o" "system\\src\\cortexm\\_initialize_hardware.o" "system\\src\\cortexm\\_reset_hardware.o" "system\\src\\cortexm\\exception_handlers.o" "system\\src\\diag\\Trace.o" "system\\src\\diag\\trace_impl.o" "system\\src\\newlib\\_cxx.o" "system\\src\\newlib\\_exit.o" "system\\src\\newlib\\_sbrk.o" "system\\src\\newlib\\_startup.o" "system\\src\\newlib\\_syscalls.o" "system\\src\\newlib\\assert.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_adc.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_adc_ex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_cortex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_flash.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_gpio.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_i2c.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_i2c_ex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_iwdg.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_pwr.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_rcc.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_tim.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_tim_ex.o" 
+16:46:22 **** Incremental Build of configuration Debug for project CuBa_1D_Control ****
+Info: Internal Builder is used for build
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\CLQR.o" "..\\src\\CLQR.cpp" 
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\CSensorEvaluation.o" "..\\src\\CSensorEvaluation.cpp" 
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\main.o" "..\\src\\main.cpp" 
+In file included from ../include/Cmotor_control.h:15:0,
+                 from ../include/CSTMHardware.h:6,
+                 from ..\src\main.cpp:1:
+../include/Cpwm.h:29:9: warning: padding struct to align 'Cpwm::mTIM_CHANNEL_x' [-Wpadded]
+  UInt32 mTIM_CHANNEL_x;
+         ^
+In file included from ../include/CSTMHardware.h:6:0,
+                 from ..\src\main.cpp:1:
+../include/Cmotor_control.h:18:7: warning: padding struct size to alignment boundary [-Wpadded]
+ class Cmotor_control {
+       ^
+..\src\main.cpp: In function 'void main()':
+..\src\main.cpp:36:8: warning: variable 'phi_dd' set but not used [-Wunused-but-set-variable]
+  float phi_dd  = 0.0F;
+        ^
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L../ldscripts -Wl,-Map,CuBa_1D_Control.map --specs=nano.specs -o CuBa_1D_Control.elf "src\\CAdc.o" "src\\CComplementaryFilter.o" "src\\CLQR.o" "src\\CMPU6050.o" "src\\CSTMHardware.o" "src\\CSensor.o" "src\\CSensorEvaluation.o" "src\\Cmotor_control.o" "src\\Cpwm.o" "src\\Cservo_control.o" "src\\_initialize_hardware.o" "src\\_write.o" "src\\main.o" "src\\stm32f4xx_hal_msp.o" "system\\src\\cmsis\\system_stm32f4xx.o" "system\\src\\cmsis\\vectors_stm32f407xx.o" "system\\src\\cortexm\\_initialize_hardware.o" "system\\src\\cortexm\\_reset_hardware.o" "system\\src\\cortexm\\exception_handlers.o" "system\\src\\diag\\Trace.o" "system\\src\\diag\\trace_impl.o" "system\\src\\newlib\\_cxx.o" "system\\src\\newlib\\_exit.o" "system\\src\\newlib\\_sbrk.o" "system\\src\\newlib\\_startup.o" "system\\src\\newlib\\_syscalls.o" "system\\src\\newlib\\assert.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_adc.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_adc_ex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_cortex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_flash.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_gpio.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_i2c.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_i2c_ex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_iwdg.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_pwr.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_rcc.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_tim.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_tim_ex.o" 
+16:46:47 **** Incremental Build of configuration Debug for project CuBa_1D_Control ****
+Info: Internal Builder is used for build
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\CLQR.o" "..\\src\\CLQR.cpp" 
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\CSensorEvaluation.o" "..\\src\\CSensorEvaluation.cpp" 
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -DDEBUG -DUSE_FULL_ASSERT -DSTM32F407xx -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I../include -I../system/include -I../system/include/cmsis -I../system/include/stm32f4-hal -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -Wabi -Wctor-dtor-privacy -Wnoexcept -Wnon-virtual-dtor -Wstrict-null-sentinel -Wsign-promo -c -o "src\\main.o" "..\\src\\main.cpp" 
+In file included from ../include/Cmotor_control.h:15:0,
+                 from ../include/CSTMHardware.h:6,
+                 from ..\src\main.cpp:1:
+../include/Cpwm.h:29:9: warning: padding struct to align 'Cpwm::mTIM_CHANNEL_x' [-Wpadded]
+  UInt32 mTIM_CHANNEL_x;
+         ^
+In file included from ../include/CSTMHardware.h:6:0,
+                 from ..\src\main.cpp:1:
+../include/Cmotor_control.h:18:7: warning: padding struct size to alignment boundary [-Wpadded]
+ class Cmotor_control {
+       ^
+..\src\main.cpp: In function 'void main()':
+..\src\main.cpp:36:8: warning: variable 'phi_dd' set but not used [-Wunused-but-set-variable]
+  float phi_dd  = 0.0F;
+        ^
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wpadded -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L../ldscripts -Wl,-Map,CuBa_1D_Control.map --specs=nano.specs -o CuBa_1D_Control.elf "src\\CAdc.o" "src\\CComplementaryFilter.o" "src\\CLQR.o" "src\\CMPU6050.o" "src\\CSTMHardware.o" "src\\CSensor.o" "src\\CSensorEvaluation.o" "src\\Cmotor_control.o" "src\\Cpwm.o" "src\\Cservo_control.o" "src\\_initialize_hardware.o" "src\\_write.o" "src\\main.o" "src\\stm32f4xx_hal_msp.o" "system\\src\\cmsis\\system_stm32f4xx.o" "system\\src\\cmsis\\vectors_stm32f407xx.o" "system\\src\\cortexm\\_initialize_hardware.o" "system\\src\\cortexm\\_reset_hardware.o" "system\\src\\cortexm\\exception_handlers.o" "system\\src\\diag\\Trace.o" "system\\src\\diag\\trace_impl.o" "system\\src\\newlib\\_cxx.o" "system\\src\\newlib\\_exit.o" "system\\src\\newlib\\_sbrk.o" "system\\src\\newlib\\_startup.o" "system\\src\\newlib\\_syscalls.o" "system\\src\\newlib\\assert.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_adc.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_adc_ex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_cortex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_flash.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_gpio.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_i2c.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_i2c_ex.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_iwdg.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_pwr.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_rcc.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_tim.o" "system\\src\\stm32f4-hal\\stm32f4xx_hal_tim_ex.o" 
+Info: Nothing to build for CuBa_1D_Control
+Info: Nothing to build for CuBa_1D_Control
+Info: Nothing to build for CuBa_1D_Control
+Info: Nothing to build for CuBa_1D_Control
+Info: Nothing to build for CuBa_1D_Control

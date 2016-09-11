@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'V6___LQR_Regelung'.
  *
- * Model version                  : 1.31
+ * Model version                  : 1.35
  * Simulink Coder version         : 8.10 (R2016a) 10-Feb-2016
- * C/C++ source code generated on : Fri Sep 02 13:21:06 2016
+ * C/C++ source code generated on : Mon Sep 05 11:52:48 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -29,13 +29,27 @@ P_V6___LQR_Regelung_T V6___LQR_Regelung_P = {
   0.2618F,                             /* Mask Parameter: BalanceArea_const
                                         * Referenced by: '<S1>/Constant'
                                         */
+  1.0,                                 /* Expression: 1
+                                        * Referenced by: '<Root>/Constant1'
+                                        */
+  1.0,                                 /* Expression: 1
+                                        * Referenced by: '<Root>/Constant'
+                                        */
   1017.0,                              /* Expression: 1017
                                         * Referenced by: '<Root>/Constant2'
                                         */
   0.0,                                 /* Expression: 0
                                         * Referenced by: '<Root>/phi_COG_Offset1'
                                         */
-  0.127F,                              /* Computed Parameter: phi_COG_Offset_Value
+  0.0,                                 /* Expression: 0
+                                        * Referenced by: '<Root>/Discrete FIR Filter'
+                                        */
+
+  /*  Expression: [0.25 0.25 0.25 0.25]
+   * Referenced by: '<Root>/Discrete FIR Filter'
+   */
+  { 0.25, 0.25, 0.25, 0.25 },
+  0.1F,                                /* Computed Parameter: phi_COG_Offset_Value
                                         * Referenced by: '<Root>/phi_COG_Offset'
                                         */
   0.02F,                               /* Expression: single(0.02)
@@ -44,6 +58,14 @@ P_V6___LQR_Regelung_T V6___LQR_Regelung_P = {
   -0.88214612F,                        /* Computed Parameter: Gain1_Gain
                                         * Referenced by: '<Root>/Gain1'
                                         */
+  0.0F,                                /* Computed Parameter: DiscreteFIRFilter1_InitialState
+                                        * Referenced by: '<Root>/Discrete FIR Filter1'
+                                        */
+
+  /*  Computed Parameter: DiscreteFIRFilter1_Coefficients
+   * Referenced by: '<Root>/Discrete FIR Filter1'
+   */
+  { 0.25F, 0.25F, 0.25F, 0.25F },
   -0.13864179F,                        /* Computed Parameter: Gain2_Gain
                                         * Referenced by: '<Root>/Gain2'
                                         */

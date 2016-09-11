@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'V3_AusgleichsPolynomPsi__d'.
  *
- * Model version                  : 1.44
+ * Model version                  : 1.50
  * Simulink Coder version         : 8.10 (R2016a) 10-Feb-2016
- * C/C++ source code generated on : Mon Aug 22 14:03:57 2016
+ * C/C++ source code generated on : Mon Sep 05 17:01:56 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -32,8 +32,8 @@
 #endif
 
 extern void Motor_Outputs_wrapper(const boolean_T *EnableState,
-  const real32_T *Torque,
-  uint16_T *VelocityADCValue);
+  const real32_T *Torque);
+extern void MotorADC_Outputs_wrapper(uint16_T *MotorADC);
 
 #endif                                 /* RTW_HEADER_V3_AusgleichsPolynomPsi__d_private_h_ */
 

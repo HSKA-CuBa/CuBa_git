@@ -23,11 +23,14 @@ $\varphi_3$ & Drehung um $\inW e_z$ \\ \hline
 \end{tabular}
 \end{table}
 
+Die erste Ableitung gewöhnliche Ableitung der Euler-Winkel entspricht den Winkelgeschwindigkeiten des Würfels um die oben genannten Achsen.
+
 Mit Hilfe der Euler-Winkel können Drehmatrizen definiert werden um Koordinaten in dem raumfesten Bezugssystem $\{I\}$ in das körperfeste Bezugssystem $\{W\}$ zu projizieren. Hier zeigt sich wieder die Bedeutung der Reihenfolge der einzelnen Drehungen, da auch die Matrizenmultiplikation im Allgemeinen nicht kommutativ ist.
 
 \begin{equation}
-\inW{}\boldsymbol{r} = \inW{}\bS{D}_{\varphi_1} \cdot \inW{}\bS{D}_{\varphi_2} \cdot \inW{}\bS{D}_{\varphi_3} \cdot \inI{}\bS{r} = \inW{}\bS{D} \cdot \BinI{r}
+\inW{}\boldsymbol{r} = \inW{}\bS{D}_{\varphi_3} \cdot ( \inW{}\bS{D}_{\varphi_2} \cdot ( \inW{}\bS{D}_{\varphi_1} \cdot \inI{}\bS{r} )) = \inW{}\bS{D} \cdot \BinI{r}
 \end{equation}
+
 \begin{equation}
 \inW{}\bS{D}_{\varphi_1} = \begin{pmatrix}
 c_{\varphi_1} & -s_{\varphi_1} & 0 \\
@@ -47,6 +50,7 @@ s_{\varphi_3} & c_{\varphi_3} & 0 \\
 0 & 0 & 1
 \end{pmatrix}
 \end{equation}
+
 \begin{equation}
 \BinW{D} = \begin{pmatrix}
 c_{\varphi_1}c{\varphi_3} - s_{\varphi_1}c_{\varphi_2}s_{\varphi_3} &
@@ -80,6 +84,17 @@ Die Bewegung der Schwungmassen relativ zu dem Würfelkörper wird von den drei W
 \dot{\psi}_1 \\
 \dot{\psi}_2  \\
 \dot{\psi}_3 
+\end{pmatrix}
+\end{equation}
+
+Die Euler-Winkel $\bS{\varphi}$ und die Ausfallwinkel der Schwungmassen $\bS{\psi}$ werden als generalisierte Koordinaten verwendet.
+
+\begin{equation}
+\bS{q} = \begin{pmatrix}
+q_1 \\ q_2 \\ q_3 \\ q_4 \\ q_5 \\ q_6
+\end{pmatrix} =
+\begin{pmatrix}
+\varphi_1 \\ \varphi_2 \\ \varphi_3 \\ \psi_1 \\ \psi_2 \\ \psi_3
 \end{pmatrix}
 \end{equation}
 
@@ -121,6 +136,65 @@ Die kinetische Energie setzt sich aus der Winkelgeschwindigkeit des Würfels $\b
 T = \frac{1}{2} \BinW{\omega}^T_K \cdot (\BinW{\Theta}_G - \BinW{\Theta}_R) \cdot \BinW{\omega}_K + \frac{1}{2} (\BinW{\omega}_K + \BinW{\omega}_R)^T \cdot \BinW{\Theta}_R \cdot (\BinW{\omega}_K + \BinW{\omega}_R)
 \end{equation}
 
+Um das die kinetische Energie $T$ mit Hilfe der generalisierten Koordinaten darzustellen muss die Winkelgeschwindigkeit $\BinW{\omega}_W$ als die erste Ableitung der Euler-Winkel $\bS{\varphi}$ darstellen.
+Um die Projektion der Euler-Geschwindigkeiten $\dot{\bS{\varphi}}$ zu veranschaulichen kann die Rotationsgeschwindigkeit des Würfels $\BinW{\omega}_W$ als Summe der Euler-Komponenten dargestellt werden.
+
+\begin{equation}
+\BinW{\omega}_W = \BinW{\dot{\varphi}_1} + \BinW{\dot{\varphi}_2} + \BinW{\dot{\varphi}_3}
+\end{equation}
+
+Um die Euler-Geschwindigkeit in dem körperfesten Bezugssystem darzustellen werden Rotationsachsen um die entsprechenden Euler-Winkel rotiert. Die Winkelgeschwindigkeit $\dot{\varphi}_3$ ist ist gleich der Rotation um die körperfeste $\inW e_z$ und muss somit nicht über eine Drehmatrix projiziert werden. 
+
+\begin{equation}
+\BinW{\dot{\varphi}}_3 =  =
+\begin{pmatrix}
+0 \\ 0 \\ \inW{\omega}_z
+\end{pmatrix} 
+\end{equation}
+
+Die Winkelgeschwindigkeit $\dot{\varphi}_2$ entsprecht der Rotation um die körperfeste Achse $\inW e_x$ vor der Rotation um den Winkel $\varphi_3$. Somit muss mit Hilfe der  Matrix $\BinW{D}_{\varphi_3}$ der Geschwindigkeitsvektor in das endgültige körperfeste Bezugssystem projiziert werden.
+
+\begin{equation}
+\BinW{\dot{\varphi}}_2 = \BinW{D}_{\varphi_3} \cdot
+\begin{pmatrix}
+\dot{\varphi}_2 \\ 0 \\ 0
+\end{pmatrix} = 
+\begin{pmatrix}
+\dot{\varphi}_2 \cdot c_{\varphi_3} \\
+-\dot{\varphi}_2 \cdot s_{\varphi_3} \\
+0
+\end{pmatrix}
+\end{equation}
+
+Die dritte Komponente ist die Winkelgeschwindigkeit $\dot{\varphi}_1$, welche der Rotation um die raumfeste Achse $\inI e_z$ entspricht. Folglich muss zu einer Projektion in das körperfeste Bezugsystem der Geschwindigkeitsvektor mit den Matrizen $\BinW{D}_{\varphi_3}$ und $\BinW{D}_{\varphi_2}$ multipliziert werden. 
+
+\begin{equation}
+\BinW{\omega}_W = \BinW{\dot{\varphi}_1} + \BinW{\dot{\varphi}_2} + \BinW{\dot{\varphi}_3} = 
+(\BinW{D}_{\varphi_2} (
+\BinW{D}_{\varphi_3} \cdot \begin{pmatrix}
+\dot{\varphi}_1 \\ 0 \\ 0
+\end{pmatrix} ) )
+=
+\begin{pmatrix}
+\dot{\varphi}_1 \cdot s_{\varphi_2} \cdot s_{\varphi_3} \\
+\dot{\varphi}_1 \cdot s_{\varphi_2} \cdot c_{\varphi_3} \\
+\dot{\varphi}_1 \cdot c_{\varphi_2}
+\end{pmatrix}
+\end{equation}
+
+Die gesamte Winkelgeschwindigkeit des Würfels $\BinW{\omega}_K$ ergibt sich wie bereits beschrieben aus der Summe der einzelnen Komponenten.
+
+\begin{equation}
+\BinW{\dot{\varphi}} = 
+\begin{pmatrix}
+\dot{\varphi}_1 \cdot s_{\varphi_2} \cdot s_{\varphi_3} + \dot{\varphi}_2 \dot c_{\varphi_3} \\
+\dot{\varphi}_1 \cdot s_{\varphi_2} \cdot c_{\varphi_3} - \dot{\varphi}_2 \cdot s_{\varphi_3} \\
+\dot{\varphi}_1 \cdot c_{\varphi_2} + \dot{\varphi}_3
+\end{pmatrix}
+\end{equation}
+
+
+
 \subsubsection{Generalisierte Kraftkomponenten}
 In der Untersuchung des 1D-Modelles wurde bereits gezeigt, dass der Würfel ein nicht konservatives System ist, da einerseits über die Motoren mechanische Energie zugeführt wird und andererseits durch Reibung mechanische Energie verloren geht. Deshalb müssen die generalisierten Kraftkomponenten bestimmt werden um mit Hilfe des d'Alembert'schen Prinzip die Bewegungsgleichungen zu ermitteln.
 \newline
@@ -135,22 +209,36 @@ C_{\psi_1} & 0 & 0 \\
 \end{pmatrix}
 \end{equation}
 
-Das von der Gravitation verursachte Moment $M_G$ lässt sich aus der aktuellen Position des Schwerpunktes $\bS{r}_C$ und der Schwerkraftvektors $\bS{g}$ berechnen.
+Die Komponenten dieses Momentvektors sind gleichermaßen die generalisierten Kraftkomponenten der Koordinaten $\psi_1$, $\psi_2$ und $\psi_3$.
 
 \begin{equation}
-\BinI{G} = \begin{pmatrix}
-0 \\ 0 \\ -m_G \cdot g
-\end{pmatrix}
-\hspace{35pt}
-\BinW{G} = \BinW{D} \cdot \BinI{G} = -m_G \cdot g \cdot \begin{pmatrix}
-s_{\varphi_1}s_{\varphi_2} \\ -c_{\varphi_1}s_{\varphi_2} \\ c_{\varphi_2}
-\end{pmatrix}
+Q_{\psi_1} = Q_4 = T_{M1} - C_{\psi_1} \cdot \dot{\psi}_1
+\end{equation}
+\begin{equation}
+Q_{\psi_2} = Q_5 = T_{M2} - C_{\psi_2} \cdot \dot{\psi}_2
+\end{equation}
+\begin{equation}
+Q_{\psi_3} = Q_6 = T_{M3} - C_{\psi_3} \cdot \dot{\psi}_3
+\end{equation}
+
+Die Kraftkomponenten, welche den generalisierten Koordinaten $\varphi_1$, $\varphi_2$ und $\varphi_3$ zugeordnet sind lassen sich aus dem Potential $V$ herleiten.
+
+\begin{equation}
+Q_{\varphi_1} = \frac{\partial V}{\partial \varphi_1} = 0
 \end{equation}
 
 \begin{equation}
-\BinW{M}_G = \BinW{r}_C \times \BinW{G} = -m_G \cdot g \cdot  \begin{pmatrix}
-\inW y_C \cdot c_{\varphi_2} + \inW z_c \cdot c_{\varphi_1} s_{\varphi_2} \\
-\inW z_C \cdot s_{\varphi_1}s_{\varphi_2} - \inW x_C \cdot c_{\varphi_2} \\
-- \inW x_C \cdot c_{\varphi_1}s_{\varphi_2} - \inW y_C \cdot s_{\varphi_1} s_{\varphi_2} 
-\end{pmatrix} 
+Q_{\varphi_2} = \frac{\partial V}{\partial \varphi_2} = m_G \cdot g \cdot (c_{\varphi_2} s_{\varphi_3} \cdot \inW{y}_C + c_{\varphi_2}c_{\varphi_3} \cdot \inW{y}_C - s_{\varphi_2} \cdot \inW{z}_C)
 \end{equation}
+
+\begin{equation}
+Q_{\varphi_3} = \frac{\partial V}{\partial \varphi_3} = m_G \cdot g \cdot (s_{\varphi_2} c_{\varphi_3} \cdot \inW{x}_C - s_{\varphi_2} c_{\varphi_3} \cdot \inW{y}_C)
+\end{equation}
+
+
+\subsubsubsection{Test}
+
+\begin{multline}
+T = \frac{\left(\mathrm{\dot{\varphi}_2}\, \cos\!\left(\mathrm{\varphi}_{3}\right) + \mathrm{\dot{\varphi}_1}\, \sin\!\left(\mathrm{\varphi}_{2}\right)\, \sin\!\left(\mathrm{\varphi}_{3}\right)\right)\, \left({{{{O_{K}}}_{3}}}_{1}\, \left(\mathrm{\dot{\varphi}_3} + \mathrm{\dot{\varphi}_1}\, \cos\!\left(\mathrm{\varphi}_{2}\right)\right) + {{{{O_{K}}}_{1}}}_{1}\, \left(\mathrm{\dot{\varphi}_2}\, \cos\!\left(\mathrm{\varphi}_{3}\right) + \mathrm{\dot{\varphi}_1}\, \sin\!\left(\mathrm{\varphi}_{2}\right)\, \sin\!\left(\mathrm{\varphi}_{3}\right)\right) - {{{{O_{K}}}_{2}}}_{1}\, \left(\mathrm{\dot{\varphi}_2}\, \sin\!\left(\mathrm{\varphi}_{3}\right) - \mathrm{\dot{\varphi}_1}\, \cos\!\left(\mathrm{\varphi}_{3}\right)\, \sin\!\left(\mathrm{\varphi}_{2}\right)\right)\right)}{2} \\
+ - \frac{\left(\mathrm{\dot{\varphi}_2}\, \sin\!\left(\mathrm{\varphi}_{3}\right) - \mathrm{\dot{\varphi}_1}\, \cos\!\left(\mathrm{\varphi}_{3}\right)\, \sin\!\left(\mathrm{\varphi}_{2}\right)\right)\, \left({{{{O_{K}}}_{3}}}_{2}\, \left(\mathrm{\dot{\varphi}_3} + \mathrm{\dot{\varphi}_1}\, \cos\!\left(\mathrm{\varphi}_{2}\right)\right) + {{{{O_{K}}}_{1}}}_{2}\, \left(\mathrm{\dot{\varphi}_2}\, \cos\!\left(\mathrm{\varphi}_{3}\right) + \mathrm{\dot{\varphi}_1}\, \sin\!\left(\mathrm{\varphi}_{2}\right)\, \sin\!\left(\mathrm{\varphi}_{3}\right)\right) - {{{{O_{K}}}_{2}}}_{2}\, \left(\mathrm{\dot{\varphi}_2}\, \sin\!\left(\mathrm{\varphi}_{3}\right) - \mathrm{\dot{\varphi}_1}\, \cos\!\left(\mathrm{\varphi}_{3}\right)\, \sin\!\left(\mathrm{\varphi}_{2}\right)\right)\right)}{2} \\ + \frac{\left({{{{O_{K}}}_{3}}}_{3}\, \left(\mathrm{\dot{\varphi}_3} + \mathrm{psi\_\_d\_3} + \mathrm{\dot{\varphi}_1}\, \cos\!\left(\mathrm{\varphi}_{2}\right)\right) + {{{{O_{K}}}_{1}}}_{3}\, \left(\mathrm{psi\_\_d\_1} + \mathrm{\dot{\varphi}_2}\, \cos\!\left(\mathrm{\varphi}_{3}\right) + \mathrm{\dot{\varphi}_1}\, \sin\!\left(\mathrm{\varphi}_{2}\right)\, \sin\!\left(\mathrm{\varphi}_{3}\right)\right) + {{{{O_{K}}}_{2}}}_{3}\, \left(\mathrm{psi\_\_d\_2} - \mathrm{\dot{\varphi}_2}\, \sin\!\left(\mathrm{\varphi}_{3}\right) + \mathrm{\dot{\varphi}_1}\, \cos\!\left(\mathrm{\varphi}_{3}\right)\, \sin\!\left(\mathrm{\varphi}_{2}\right)\right)\right)\, \left(\mathrm{\dot{\varphi}_3} + \mathrm{psi\_\_d\_3} + \mathrm{\dot{\varphi}_1}\, \cos\!\left(\mathrm{\varphi}_{2}\right)\right)}{2} \\ + \frac{\left(\mathrm{psi\_\_d\_1} + \mathrm{\dot{\varphi}_2}\, \cos\!\left(\mathrm{\varphi}_{3}\right) + \mathrm{\dot{\varphi}_1}\, \sin\!\left(\mathrm{\varphi}_{2}\right)\, \sin\!\left(\mathrm{\varphi}_{3}\right)\right)\, \left({{{{O_{K}}}_{3}}}_{1}\, \left(\mathrm{\dot{\varphi}_3} + \mathrm{psi\_\_d\_3} + \mathrm{\dot{\varphi}_1}\, \cos\!\left(\mathrm{\varphi}_{2}\right)\right) + {{{{O_{K}}}_{1}}}_{1}\, \left(\mathrm{psi\_\_d\_1} + \mathrm{\dot{\varphi}_2}\, \cos\!\left(\mathrm{\varphi}_{3}\right) + \mathrm{\dot{\varphi}_1}\, \sin\!\left(\mathrm{\varphi}_{2}\right)\, \sin\!\left(\mathrm{\varphi}_{3}\right)\right) + {{{{O_{K}}}_{2}}}_{1}\, \left(\mathrm{psi\_\_d\_2} - \mathrm{\dot{\varphi}_2}\, \sin\!\left(\mathrm{\varphi}_{3}\right) + \mathrm{\dot{\varphi}_1}\, \cos\!\left(\mathrm{\varphi}_{3}\right)\, \sin\!\left(\mathrm{\varphi}_{2}\right)\right)\right)}{2} \\ + \frac{\left(\mathrm{psi\_\_d\_2} - \mathrm{\dot{\varphi}_2}\, \sin\!\left(\mathrm{\varphi}_{3}\right) + \mathrm{\dot{\varphi}_1}\, \cos\!\left(\mathrm{\varphi}_{3}\right)\, \sin\!\left(\mathrm{\varphi}_{2}\right)\right)\, \left({{{{O_{K}}}_{3}}}_{2}\, \left(\mathrm{\dot{\varphi}_3} + \mathrm{psi\_\_d\_3} + \mathrm{\dot{\varphi}_1}\, \cos\!\left(\mathrm{\varphi}_{2}\right)\right) + {{{{O_{K}}}_{1}}}_{2}\, \left(\mathrm{psi\_\_d\_1} + \mathrm{\dot{\varphi}_2}\, \cos\!\left(\mathrm{\varphi}_{3}\right) + \mathrm{\dot{\varphi}_1}\, \sin\!\left(\mathrm{\varphi}_{2}\right)\, \sin\!\left(\mathrm{\varphi}_{3}\right)\right) + {{{{O_{K}}}_{2}}}_{2}\, \left(\mathrm{psi\_\_d\_2} - \mathrm{\dot{\varphi}_2}\, \sin\!\left(\mathrm{\varphi}_{3}\right) + \mathrm{\dot{\varphi}_1}\, \cos\!\left(\mathrm{\varphi}_{3}\right)\, \sin\!\left(\mathrm{\varphi}_{2}\right)\right)\right)}{2} \\ + \frac{\left(\mathrm{\dot{\varphi}_3} + \mathrm{\dot{\varphi}_1}\, \cos\!\left(\mathrm{\varphi}_{2}\right)\right)\, \left({{{{O_{K}}}_{3}}}_{3}\, \left(\mathrm{\dot{\varphi}_3} + \mathrm{\dot{\varphi}_1}\, \cos\!\left(\mathrm{\varphi}_{2}\right)\right) + {{{{O_{K}}}_{1}}}_{3}\, \left(\mathrm{\dot{\varphi}_2}\, \cos\!\left(\mathrm{\varphi}_{3}\right) + \mathrm{\dot{\varphi}_1}\, \sin\!\left(\mathrm{\varphi}_{2}\right)\, \sin\!\left(\mathrm{\varphi}_{3}\right)\right) - {{{{O_{K}}}_{2}}}_{3}\, \left(\mathrm{\dot{\varphi}_2}\, \sin\!\left(\mathrm{\varphi}_{3}\right) - \mathrm{\dot{\varphi}_1}\, \cos\!\left(\mathrm{\varphi}_{3}\right)\, \sin\!\left(\mathrm{\varphi}_{2}\right)\right)\right)}{2}
+\end{multline}

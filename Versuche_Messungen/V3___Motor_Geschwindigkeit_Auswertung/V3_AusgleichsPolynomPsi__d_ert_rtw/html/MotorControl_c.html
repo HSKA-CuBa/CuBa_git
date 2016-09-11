@@ -31,11 +31,11 @@
 <tr name="10" id="10">
 <td>10</td><td><span class="kw">static</span> <span class="kw">void</span> <a id="10c13" class="tk">initMotorPWM</a>();</td></tr>
 <tr name="11" id="11">
-<td>11</td><td><span class="kw">static</span> <span class="kw">void</span> <a id="11c13" class="tk">setTorque</a>(<span class="kw">float</span><a id="11c28" class="tk">*</a> <a id="11c30" class="tk">torquePtr</a>);</td></tr>
+<td>11</td><td><span class="kw">static</span> <span class="kw">void</span> <a id="11c13" class="tk">setTorque</a>(<span class="kw">float</span> <a id="11c29" class="tk">*</a><a id="11c30" class="tk">torque</a>);</td></tr>
 <tr name="12" id="12">
 <td>12</td><td></td></tr>
 <tr name="13" id="13">
-<td>13</td><td><span class="kw">void</span> <a id="13c6" class="tk">motorIteration</a>(<span class="kw">bool</span> <a id="13c26" class="tk">motorState</a>, <span class="kw">float</span><a id="13c43" class="tk">*</a> <a id="13c45" class="tk">torquePtr</a>)</td></tr>
+<td>13</td><td><span class="kw">void</span> <a id="13c6" class="tk">motorIteration</a>(<span class="kw">bool</span> <a id="13c26" class="tk">motorState</a>, <span class="kw">float</span><a id="13c43" class="tk">*</a> <a id="13c45" class="tk">torque</a>)</td></tr>
 <tr name="14" id="14">
 <td>14</td><td><span class="br">{</span></td></tr>
 <tr name="15" id="15">
@@ -49,173 +49,181 @@
 <tr name="19" id="19">
 <td>19</td><td>		<a id="19c3" class="tk">initMotorPWM</a>();</td></tr>
 <tr name="20" id="20">
-<td>20</td><td>		<a id="20c3" class="tk">initADC</a>();</td></tr>
+<td>20</td><td>		<a id="20c3" class="tk">initDone</a> = true;</td></tr>
 <tr name="21" id="21">
-<td>21</td><td>		<a id="21c3" class="tk">initDone</a> = true;</td></tr>
+<td>21</td><td>	<span class="br">}</span></td></tr>
 <tr name="22" id="22">
-<td>22</td><td>	<span class="br">}</span></td></tr>
+<td>22</td><td>	<span class="kw">if</span>(true <a id="22c10" class="tk">==</a> <a id="22c13" class="tk">motorState</a>)</td></tr>
 <tr name="23" id="23">
-<td>23</td><td>	<span class="kw">if</span>(true <a id="23c10" class="tk">==</a> <a id="23c13" class="tk">motorState</a>)</td></tr>
+<td>23</td><td>	<span class="br">{</span></td></tr>
 <tr name="24" id="24">
-<td>24</td><td>	<span class="br">{</span></td></tr>
+<td>24</td><td>		<a id="24c3" class="tk">GPIO_SetBits</a>(<a id="24c16" class="tk">GPIOD</a>, <a id="24c23" class="tk">GPIO_Pin_12</a>);</td></tr>
 <tr name="25" id="25">
-<td>25</td><td>		<a id="25c3" class="tk">GPIO_SetBits</a>(<a id="25c16" class="tk">GPIOD</a>, <a id="25c23" class="tk">GPIO_Pin_12</a>);</td></tr>
+<td>25</td><td>		<a id="25c3" class="tk">setTorque</a>(<a id="25c13" class="tk">torque</a>);</td></tr>
 <tr name="26" id="26">
-<td>26</td><td>		<a id="26c3" class="tk">setTorque</a>(<a id="26c13" class="tk">torquePtr</a>);</td></tr>
+<td>26</td><td>	<span class="br">}</span></td></tr>
 <tr name="27" id="27">
-<td>27</td><td>	<span class="br">}</span></td></tr>
+<td>27</td><td>	<span class="kw">else</span></td></tr>
 <tr name="28" id="28">
-<td>28</td><td>	<span class="kw">else</span></td></tr>
+<td>28</td><td>	<span class="br">{</span></td></tr>
 <tr name="29" id="29">
-<td>29</td><td>	<span class="br">{</span></td></tr>
+<td>29</td><td>		<a id="29c3" class="tk">GPIO_ResetBits</a>(<a id="29c18" class="tk">GPIOD</a>, <a id="29c25" class="tk">GPIO_Pin_12</a>);</td></tr>
 <tr name="30" id="30">
-<td>30</td><td>		<a id="30c3" class="tk">GPIO_ResetBits</a>(<a id="30c18" class="tk">GPIOD</a>, <a id="30c25" class="tk">GPIO_Pin_12</a>);</td></tr>
+<td>30</td><td>        <span class="kw">float</span> <a id="30c15" class="tk">t</a> = 0.0F;</td></tr>
 <tr name="31" id="31">
-<td>31</td><td>		<span class="kw">float</span> <a id="31c9" class="tk">zeroTorque</a> = 0.0F;</td></tr>
+<td>31</td><td>		<a id="31c3" class="tk">setTorque</a>(<a id="31c13" class="tk">&amp;</a><a id="31c14" class="tk">t</a>);</td></tr>
 <tr name="32" id="32">
-<td>32</td><td>		<a id="32c3" class="tk">setTorque</a>(<a id="32c13" class="tk">&amp;</a><a id="32c14" class="tk">zeroTorque</a>);</td></tr>
+<td>32</td><td>	<span class="br">}</span></td></tr>
 <tr name="33" id="33">
-<td>33</td><td>	<span class="br">}</span></td></tr>
+<td>33</td><td><span class="br">}</span></td></tr>
 <tr name="34" id="34">
-<td>34</td><td><span class="br">}</span></td></tr>
+<td>34</td><td><a id="34c1" class="tk">UInt16</a> <a id="34c8" class="tk">getMotorADCValue</a>()</td></tr>
 <tr name="35" id="35">
-<td>35</td><td><a id="35c1" class="tk">UInt16</a> <a id="35c8" class="tk">getMotorADCValue</a>()</td></tr>
+<td>35</td><td><span class="br">{</span></td></tr>
 <tr name="36" id="36">
-<td>36</td><td><span class="br">{</span></td></tr>
+<td>36</td><td>    <span class="kw">static</span> <span class="kw">bool</span> <a id="36c17" class="tk">adcInit</a> = false;</td></tr>
 <tr name="37" id="37">
-<td>37</td><td>	<span class="kw">return</span> <a id="37c9" class="tk">getADCValue</a>();</td></tr>
+<td>37</td><td>    <span class="kw">if</span>(false <a id="37c14" class="tk">==</a> <a id="37c17" class="tk">adcInit</a>)</td></tr>
 <tr name="38" id="38">
-<td>38</td><td><span class="br">}</span></td></tr>
+<td>38</td><td>    <span class="br">{</span></td></tr>
 <tr name="39" id="39">
-<td>39</td><td><span class="kw">void</span> <a id="39c6" class="tk">setTorque</a>(<span class="kw">float</span><a id="39c21" class="tk">*</a> <a id="39c23" class="tk">torquePtr</a>)</td></tr>
+<td>39</td><td>        <a id="39c9" class="tk">adcInit</a> = true;</td></tr>
 <tr name="40" id="40">
-<td>40</td><td><span class="br">{</span></td></tr>
+<td>40</td><td>        <a id="40c9" class="tk">initADC</a>();</td></tr>
 <tr name="41" id="41">
-<td>41</td><td>	<span class="kw">float</span> <a id="41c8" class="tk">torque</a> = <a id="41c17" class="tk">*</a><a id="41c18" class="tk">torquePtr</a>;</td></tr>
+<td>41</td><td>    <span class="br">}</span></td></tr>
 <tr name="42" id="42">
-<td>42</td><td>	<span class="kw">if</span>(<a id="42c5" class="tk">torque</a> <a id="42c12" class="tk">&gt;</a> 0.071F)</td></tr>
+<td>42</td><td>	<span class="kw">return</span> <a id="42c9" class="tk">getADCValue</a>();</td></tr>
 <tr name="43" id="43">
-<td>43</td><td>	<span class="br">{</span></td></tr>
+<td>43</td><td><span class="br">}</span></td></tr>
 <tr name="44" id="44">
-<td>44</td><td>		<a id="44c3" class="tk">torque</a> = 0.071F;</td></tr>
+<td>44</td><td><span class="kw">void</span> <a id="44c6" class="tk">setTorque</a>(<span class="kw">float</span> <a id="44c22" class="tk">*</a><a id="44c23" class="tk">torque</a>)</td></tr>
 <tr name="45" id="45">
-<td>45</td><td>	<span class="br">}</span></td></tr>
+<td>45</td><td><span class="br">{</span></td></tr>
 <tr name="46" id="46">
-<td>46</td><td>	<span class="kw">else</span> <span class="kw">if</span>(<a id="46c10" class="tk">torque</a> <a id="46c17" class="tk">&lt;</a> <a id="46c19" class="tk">-</a>0.071F)</td></tr>
+<td>46</td><td>	<span class="kw">if</span>(<a id="46c5" class="tk">*</a><a id="46c6" class="tk">torque</a> <a id="46c13" class="tk">&gt;</a> 0.071F)</td></tr>
 <tr name="47" id="47">
 <td>47</td><td>	<span class="br">{</span></td></tr>
 <tr name="48" id="48">
-<td>48</td><td>		<a id="48c3" class="tk">torque</a> = <a id="48c12" class="tk">-</a>0.071F;</td></tr>
+<td>48</td><td>		<a id="48c3" class="tk">*</a><a id="48c4" class="tk">torque</a> = 0.071F;</td></tr>
 <tr name="49" id="49">
 <td>49</td><td>	<span class="br">}</span></td></tr>
 <tr name="50" id="50">
-<td>50</td><td>	<span class="kw">if</span>(<a id="50c5" class="tk">torque</a> <a id="50c12" class="tk">&gt;</a> 0.0F)</td></tr>
+<td>50</td><td>	<span class="kw">else</span> <span class="kw">if</span>(<a id="50c10" class="tk">*</a><a id="50c11" class="tk">torque</a> <a id="50c18" class="tk">&lt;</a> <a id="50c20" class="tk">-</a>0.071F)</td></tr>
 <tr name="51" id="51">
 <td>51</td><td>	<span class="br">{</span></td></tr>
 <tr name="52" id="52">
-<td>52</td><td>		<a id="52c3" class="tk">GPIO_ResetBits</a>(<a id="52c18" class="tk">GPIOD</a>, <a id="52c25" class="tk">GPIO_Pin_13</a>);</td></tr>
+<td>52</td><td>		<a id="52c3" class="tk">*</a><a id="52c4" class="tk">torque</a> = <a id="52c13" class="tk">-</a>0.071F;</td></tr>
 <tr name="53" id="53">
 <td>53</td><td>	<span class="br">}</span></td></tr>
 <tr name="54" id="54">
-<td>54</td><td>	<span class="kw">else</span></td></tr>
+<td>54</td><td>	<span class="kw">if</span>(<a id="54c5" class="tk">*</a><a id="54c6" class="tk">torque</a> <a id="54c13" class="tk">&gt;</a> 0.0F)</td></tr>
 <tr name="55" id="55">
 <td>55</td><td>	<span class="br">{</span></td></tr>
 <tr name="56" id="56">
-<td>56</td><td>		<a id="56c3" class="tk">GPIO_SetBits</a>(<a id="56c16" class="tk">GPIOD</a>, <a id="56c23" class="tk">GPIO_Pin_13</a>);</td></tr>
+<td>56</td><td>		<a id="56c3" class="tk">GPIO_ResetBits</a>(<a id="56c18" class="tk">GPIOD</a>, <a id="56c25" class="tk">GPIO_Pin_13</a>);</td></tr>
 <tr name="57" id="57">
 <td>57</td><td>	<span class="br">}</span></td></tr>
 <tr name="58" id="58">
-<td>58</td><td>	<a id="58c2" class="tk">torque</a> = <a id="58c11" class="tk">torque</a> <a id="58c18" class="tk">&gt;</a> 0.0F <a id="58c25" class="tk">?</a> <a id="58c27" class="tk">torque</a> <a id="58c34" class="tk">:</a> <a id="58c36" class="tk">-</a><a id="58c37" class="tk">torque</a>;</td></tr>
+<td>58</td><td>	<span class="kw">else</span></td></tr>
 <tr name="59" id="59">
-<td>59</td><td>	<a id="59c2" class="tk">TIM_SetCompare1</a>(<a id="59c18" class="tk">TIM3</a>, (<a id="59c25" class="tk">UInt32</a>)((0.1F <a id="59c39" class="tk">+</a> <a id="59c41" class="tk">torque</a><a id="59c47" class="tk">/</a>0.08875F) <a id="59c58" class="tk">*</a> 10000.0F));</td></tr>
+<td>59</td><td>	<span class="br">{</span></td></tr>
 <tr name="60" id="60">
-<td>60</td><td><span class="br">}</span></td></tr>
+<td>60</td><td>		<a id="60c3" class="tk">GPIO_SetBits</a>(<a id="60c16" class="tk">GPIOD</a>, <a id="60c23" class="tk">GPIO_Pin_13</a>);</td></tr>
 <tr name="61" id="61">
-<td>61</td><td><span class="kw">void</span> <a id="61c6" class="tk">initMotorGPIO</a>()</td></tr>
+<td>61</td><td>	<span class="br">}</span></td></tr>
 <tr name="62" id="62">
-<td>62</td><td><span class="br">{</span></td></tr>
+<td>62</td><td>	<a id="62c2" class="tk">*</a><a id="62c3" class="tk">torque</a> = <a id="62c12" class="tk">*</a><a id="62c13" class="tk">torque</a> <a id="62c20" class="tk">&gt;</a> 0.0F <a id="62c27" class="tk">?</a> <a id="62c29" class="tk">*</a><a id="62c30" class="tk">torque</a> <a id="62c37" class="tk">:</a> <a id="62c39" class="tk">-</a>(<a id="62c41" class="tk">*</a><a id="62c42" class="tk">torque</a>);</td></tr>
 <tr name="63" id="63">
-<td>63</td><td>	<span class="ct">//PWM Pin-B4</span></td></tr>
+<td>63</td><td>	<a id="63c2" class="tk">TIM_SetCompare1</a>(<a id="63c18" class="tk">TIM3</a>, (<a id="63c25" class="tk">UInt32</a>)((0.1F <a id="63c39" class="tk">+</a> (<a id="63c42" class="tk">*</a><a id="63c43" class="tk">torque</a>)<a id="63c50" class="tk">/</a>0.08875F) <a id="63c61" class="tk">*</a> 10000.0F));</td></tr>
 <tr name="64" id="64">
-<td>64</td><td>	<a id="64c2" class="tk">GPIO_InitTypeDef</a> <a id="64c19" class="tk">init</a>;</td></tr>
+<td>64</td><td><span class="br">}</span></td></tr>
 <tr name="65" id="65">
-<td>65</td><td>	<a id="65c2" class="tk">RCC_AHB1PeriphClockCmd</a>(<a id="65c25" class="tk">RCC_AHB1Periph_GPIOB</a>, <a id="65c47" class="tk">ENABLE</a>);</td></tr>
+<td>65</td><td><span class="kw">void</span> <a id="65c6" class="tk">initMotorGPIO</a>()</td></tr>
 <tr name="66" id="66">
-<td>66</td><td>	<a id="66c2" class="tk">GPIO_PinAFConfig</a>(<a id="66c19" class="tk">GPIOB</a>, <a id="66c26" class="tk">GPIO_PinSource4</a>, <a id="66c43" class="tk">GPIO_AF_TIM3</a>);</td></tr>
+<td>66</td><td><span class="br">{</span></td></tr>
 <tr name="67" id="67">
-<td>67</td><td>	<a id="67c2" class="tk">init</a>.<a id="67c7" class="tk">GPIO_Pin</a>		= <a id="67c19" class="tk">GPIO_Pin_4</a>;</td></tr>
+<td>67</td><td>	<span class="ct">//PWM Pin-B4</span></td></tr>
 <tr name="68" id="68">
-<td>68</td><td>	<a id="68c2" class="tk">init</a>.<a id="68c7" class="tk">GPIO_Mode</a>		= <a id="68c20" class="tk">GPIO_Mode_AF</a>;</td></tr>
+<td>68</td><td>	<a id="68c2" class="tk">GPIO_InitTypeDef</a> <a id="68c19" class="tk">init</a>;</td></tr>
 <tr name="69" id="69">
-<td>69</td><td>	<a id="69c2" class="tk">init</a>.<a id="69c7" class="tk">GPIO_OType</a>		= <a id="69c21" class="tk">GPIO_OType_PP</a>;</td></tr>
+<td>69</td><td>	<a id="69c2" class="tk">RCC_AHB1PeriphClockCmd</a>(<a id="69c25" class="tk">RCC_AHB1Periph_GPIOB</a>, <a id="69c47" class="tk">ENABLE</a>);</td></tr>
 <tr name="70" id="70">
-<td>70</td><td>	<a id="70c2" class="tk">init</a>.<a id="70c7" class="tk">GPIO_PuPd</a>		= <a id="70c20" class="tk">GPIO_PuPd_UP</a>;</td></tr>
+<td>70</td><td>	<a id="70c2" class="tk">GPIO_PinAFConfig</a>(<a id="70c19" class="tk">GPIOB</a>, <a id="70c26" class="tk">GPIO_PinSource4</a>, <a id="70c43" class="tk">GPIO_AF_TIM3</a>);</td></tr>
 <tr name="71" id="71">
-<td>71</td><td>	<a id="71c2" class="tk">init</a>.<a id="71c7" class="tk">GPIO_Speed</a>		= <a id="71c21" class="tk">GPIO_Speed_100MHz</a>;</td></tr>
+<td>71</td><td>	<a id="71c2" class="tk">init</a>.<a id="71c7" class="tk">GPIO_Pin</a>		= <a id="71c19" class="tk">GPIO_Pin_4</a>;</td></tr>
 <tr name="72" id="72">
-<td>72</td><td>	<a id="72c2" class="tk">GPIO_Init</a>(<a id="72c12" class="tk">GPIOB</a>, <a id="72c19" class="tk">&amp;</a><a id="72c20" class="tk">init</a>);</td></tr>
+<td>72</td><td>	<a id="72c2" class="tk">init</a>.<a id="72c7" class="tk">GPIO_Mode</a>		= <a id="72c20" class="tk">GPIO_Mode_AF</a>;</td></tr>
 <tr name="73" id="73">
-<td>73</td><td>	<span class="ct">//GPIO Pin-D12/13</span></td></tr>
+<td>73</td><td>	<a id="73c2" class="tk">init</a>.<a id="73c7" class="tk">GPIO_OType</a>		= <a id="73c21" class="tk">GPIO_OType_PP</a>;</td></tr>
 <tr name="74" id="74">
-<td>74</td><td>	<a id="74c2" class="tk">RCC_AHB1PeriphClockCmd</a>(<a id="74c25" class="tk">RCC_AHB1Periph_GPIOD</a>, <a id="74c47" class="tk">ENABLE</a>);</td></tr>
+<td>74</td><td>	<a id="74c2" class="tk">init</a>.<a id="74c7" class="tk">GPIO_PuPd</a>		= <a id="74c20" class="tk">GPIO_PuPd_UP</a>;</td></tr>
 <tr name="75" id="75">
-<td>75</td><td>	<a id="75c2" class="tk">init</a>.<a id="75c7" class="tk">GPIO_Pin</a>		= <a id="75c19" class="tk">GPIO_Pin_12</a> <a id="75c31" class="tk">|</a> <a id="75c33" class="tk">GPIO_Pin_13</a>;</td></tr>
+<td>75</td><td>	<a id="75c2" class="tk">init</a>.<a id="75c7" class="tk">GPIO_Speed</a>		= <a id="75c21" class="tk">GPIO_Speed_100MHz</a>;</td></tr>
 <tr name="76" id="76">
-<td>76</td><td>	<a id="76c2" class="tk">init</a>.<a id="76c7" class="tk">GPIO_Mode</a>		= <a id="76c20" class="tk">GPIO_Mode_OUT</a>;</td></tr>
+<td>76</td><td>	<a id="76c2" class="tk">GPIO_Init</a>(<a id="76c12" class="tk">GPIOB</a>, <a id="76c19" class="tk">&amp;</a><a id="76c20" class="tk">init</a>);</td></tr>
 <tr name="77" id="77">
-<td>77</td><td>	<a id="77c2" class="tk">init</a>.<a id="77c7" class="tk">GPIO_OType</a>		= <a id="77c21" class="tk">GPIO_OType_PP</a>;</td></tr>
+<td>77</td><td>	<span class="ct">//GPIO Pin-D12/13</span></td></tr>
 <tr name="78" id="78">
-<td>78</td><td>	<a id="78c2" class="tk">init</a>.<a id="78c7" class="tk">GPIO_PuPd</a>		= <a id="78c20" class="tk">GPIO_PuPd_NOPULL</a>;</td></tr>
+<td>78</td><td>	<a id="78c2" class="tk">RCC_AHB1PeriphClockCmd</a>(<a id="78c25" class="tk">RCC_AHB1Periph_GPIOD</a>, <a id="78c47" class="tk">ENABLE</a>);</td></tr>
 <tr name="79" id="79">
-<td>79</td><td>	<a id="79c2" class="tk">init</a>.<a id="79c7" class="tk">GPIO_Speed</a>		= <a id="79c21" class="tk">GPIO_Speed_100MHz</a>;</td></tr>
+<td>79</td><td>	<a id="79c2" class="tk">init</a>.<a id="79c7" class="tk">GPIO_Pin</a>		= <a id="79c19" class="tk">GPIO_Pin_12</a> <a id="79c31" class="tk">|</a> <a id="79c33" class="tk">GPIO_Pin_13</a>;</td></tr>
 <tr name="80" id="80">
-<td>80</td><td>	<a id="80c2" class="tk">GPIO_Init</a>(<a id="80c12" class="tk">GPIOD</a>, <a id="80c19" class="tk">&amp;</a><a id="80c20" class="tk">init</a>);</td></tr>
+<td>80</td><td>	<a id="80c2" class="tk">init</a>.<a id="80c7" class="tk">GPIO_Mode</a>		= <a id="80c20" class="tk">GPIO_Mode_OUT</a>;</td></tr>
 <tr name="81" id="81">
-<td>81</td><td><span class="br">}</span></td></tr>
+<td>81</td><td>	<a id="81c2" class="tk">init</a>.<a id="81c7" class="tk">GPIO_OType</a>		= <a id="81c21" class="tk">GPIO_OType_PP</a>;</td></tr>
 <tr name="82" id="82">
-<td>82</td><td><span class="kw">void</span> <a id="82c6" class="tk">initMotorPWM</a>()</td></tr>
+<td>82</td><td>	<a id="82c2" class="tk">init</a>.<a id="82c7" class="tk">GPIO_PuPd</a>		= <a id="82c20" class="tk">GPIO_PuPd_NOPULL</a>;</td></tr>
 <tr name="83" id="83">
-<td>83</td><td><span class="br">{</span></td></tr>
+<td>83</td><td>	<a id="83c2" class="tk">init</a>.<a id="83c7" class="tk">GPIO_Speed</a>		= <a id="83c21" class="tk">GPIO_Speed_100MHz</a>;</td></tr>
 <tr name="84" id="84">
-<td>84</td><td>	<a id="84c2" class="tk">TIM_TimeBaseInitTypeDef</a> <a id="84c26" class="tk">init</a>;</td></tr>
+<td>84</td><td>	<a id="84c2" class="tk">GPIO_Init</a>(<a id="84c12" class="tk">GPIOD</a>, <a id="84c19" class="tk">&amp;</a><a id="84c20" class="tk">init</a>);</td></tr>
 <tr name="85" id="85">
-<td>85</td><td>	<a id="85c2" class="tk">RCC_APB1PeriphClockCmd</a>(<a id="85c25" class="tk">RCC_APB1Periph_TIM3</a>, <a id="85c46" class="tk">ENABLE</a>);</td></tr>
+<td>85</td><td><span class="br">}</span></td></tr>
 <tr name="86" id="86">
-<td>86</td><td>	<a id="86c2" class="tk">init</a>.<a id="86c7" class="tk">TIM_CounterMode</a>		= <a id="86c26" class="tk">TIM_CounterMode_Up</a>;</td></tr>
+<td>86</td><td><span class="kw">void</span> <a id="86c6" class="tk">initMotorPWM</a>()</td></tr>
 <tr name="87" id="87">
-<td>87</td><td>	<a id="87c2" class="tk">init</a>.<a id="87c7" class="tk">TIM_ClockDivision</a>		= <a id="87c28" class="tk">TIM_CKD_DIV1</a>;</td></tr>
+<td>87</td><td><span class="br">{</span></td></tr>
 <tr name="88" id="88">
-<td>88</td><td>	<a id="88c2" class="tk">init</a>.<a id="88c7" class="tk">TIM_RepetitionCounter</a>	= 0;</td></tr>
+<td>88</td><td>	<a id="88c2" class="tk">TIM_TimeBaseInitTypeDef</a> <a id="88c26" class="tk">init</a>;</td></tr>
 <tr name="89" id="89">
-<td>89</td><td>	<a id="89c2" class="tk">init</a>.<a id="89c7" class="tk">TIM_Period</a>				= 9999U;</td></tr>
+<td>89</td><td>	<a id="89c2" class="tk">RCC_APB1PeriphClockCmd</a>(<a id="89c25" class="tk">RCC_APB1Periph_TIM3</a>, <a id="89c46" class="tk">ENABLE</a>);</td></tr>
 <tr name="90" id="90">
-<td>90</td><td>	<a id="90c2" class="tk">init</a>.<a id="90c7" class="tk">TIM_Prescaler</a>			= 167U;</td></tr>
+<td>90</td><td>	<a id="90c2" class="tk">init</a>.<a id="90c7" class="tk">TIM_CounterMode</a>		= <a id="90c26" class="tk">TIM_CounterMode_Up</a>;</td></tr>
 <tr name="91" id="91">
-<td>91</td><td>	<a id="91c2" class="tk">TIM_TimeBaseInit</a>(<a id="91c19" class="tk">TIM3</a>, <a id="91c25" class="tk">&amp;</a><a id="91c26" class="tk">init</a>);</td></tr>
+<td>91</td><td>	<a id="91c2" class="tk">init</a>.<a id="91c7" class="tk">TIM_ClockDivision</a>		= <a id="91c28" class="tk">TIM_CKD_DIV1</a>;</td></tr>
 <tr name="92" id="92">
-<td>92</td><td></td></tr>
+<td>92</td><td>	<a id="92c2" class="tk">init</a>.<a id="92c7" class="tk">TIM_RepetitionCounter</a>	= 0;</td></tr>
 <tr name="93" id="93">
-<td>93</td><td>	<a id="93c2" class="tk">TIM_OCInitTypeDef</a> <a id="93c20" class="tk">ocInit</a>;</td></tr>
+<td>93</td><td>	<a id="93c2" class="tk">init</a>.<a id="93c7" class="tk">TIM_Period</a>				= 9999U;</td></tr>
 <tr name="94" id="94">
-<td>94</td><td>	<a id="94c2" class="tk">ocInit</a>.<a id="94c9" class="tk">TIM_OCMode</a>			= <a id="94c24" class="tk">TIM_OCMode_PWM1</a>;</td></tr>
+<td>94</td><td>	<a id="94c2" class="tk">init</a>.<a id="94c7" class="tk">TIM_Prescaler</a>			= 167U;</td></tr>
 <tr name="95" id="95">
-<td>95</td><td>	<a id="95c2" class="tk">ocInit</a>.<a id="95c9" class="tk">TIM_OutputState</a>		= <a id="95c28" class="tk">TIM_OutputState_Enable</a>;</td></tr>
+<td>95</td><td>	<a id="95c2" class="tk">TIM_TimeBaseInit</a>(<a id="95c19" class="tk">TIM3</a>, <a id="95c25" class="tk">&amp;</a><a id="95c26" class="tk">init</a>);</td></tr>
 <tr name="96" id="96">
-<td>96</td><td>	<a id="96c2" class="tk">ocInit</a>.<a id="96c9" class="tk">TIM_Pulse</a>			= 1000U;</td></tr>
+<td>96</td><td></td></tr>
 <tr name="97" id="97">
-<td>97</td><td>	<a id="97c2" class="tk">ocInit</a>.<a id="97c9" class="tk">TIM_OCPolarity</a>		= <a id="97c27" class="tk">TIM_OCPolarity_High</a>;</td></tr>
+<td>97</td><td>	<a id="97c2" class="tk">TIM_OCInitTypeDef</a> <a id="97c20" class="tk">ocInit</a>;</td></tr>
 <tr name="98" id="98">
-<td>98</td><td>	<a id="98c2" class="tk">TIM_OC1Init</a>(<a id="98c14" class="tk">TIM3</a>, <a id="98c20" class="tk">&amp;</a><a id="98c21" class="tk">ocInit</a>);</td></tr>
+<td>98</td><td>	<a id="98c2" class="tk">ocInit</a>.<a id="98c9" class="tk">TIM_OCMode</a>			= <a id="98c24" class="tk">TIM_OCMode_PWM1</a>;</td></tr>
 <tr name="99" id="99">
-<td>99</td><td>	<a id="99c2" class="tk">TIM_OC1PreloadConfig</a>(<a id="99c23" class="tk">TIM3</a>, <a id="99c29" class="tk">TIM_OCPreload_Enable</a>);</td></tr>
+<td>99</td><td>	<a id="99c2" class="tk">ocInit</a>.<a id="99c9" class="tk">TIM_OutputState</a>		= <a id="99c28" class="tk">TIM_OutputState_Enable</a>;</td></tr>
 <tr name="100" id="100">
-<td>100</td><td>	<a id="100c2" class="tk">TIM_ARRPreloadConfig</a>(<a id="100c23" class="tk">TIM3</a>, <a id="100c29" class="tk">ENABLE</a>);</td></tr>
+<td>100</td><td>	<a id="100c2" class="tk">ocInit</a>.<a id="100c9" class="tk">TIM_Pulse</a>			= 1000U;</td></tr>
 <tr name="101" id="101">
-<td>101</td><td>	<a id="101c2" class="tk">TIM_Cmd</a>(<a id="101c10" class="tk">TIM3</a>, <a id="101c16" class="tk">ENABLE</a>);</td></tr>
+<td>101</td><td>	<a id="101c2" class="tk">ocInit</a>.<a id="101c9" class="tk">TIM_OCPolarity</a>		= <a id="101c27" class="tk">TIM_OCPolarity_High</a>;</td></tr>
 <tr name="102" id="102">
-<td>102</td><td><span class="br">}</span></td></tr>
+<td>102</td><td>	<a id="102c2" class="tk">TIM_OC1Init</a>(<a id="102c14" class="tk">TIM3</a>, <a id="102c20" class="tk">&amp;</a><a id="102c21" class="tk">ocInit</a>);</td></tr>
 <tr name="103" id="103">
-<td>103</td><td></td></tr>
+<td>103</td><td>	<a id="103c2" class="tk">TIM_OC1PreloadConfig</a>(<a id="103c23" class="tk">TIM3</a>, <a id="103c29" class="tk">TIM_OCPreload_Enable</a>);</td></tr>
+<tr name="104" id="104">
+<td>104</td><td>	<a id="104c2" class="tk">TIM_ARRPreloadConfig</a>(<a id="104c23" class="tk">TIM3</a>, <a id="104c29" class="tk">ENABLE</a>);</td></tr>
+<tr name="105" id="105">
+<td>105</td><td>	<a id="105c2" class="tk">TIM_Cmd</a>(<a id="105c10" class="tk">TIM3</a>, <a id="105c16" class="tk">ENABLE</a>);</td></tr>
+<tr name="106" id="106">
+<td>106</td><td><span class="br">}</span></td></tr>
+<tr name="107" id="107">
+<td>107</td><td></td></tr>
 </table>
 </pre>
 </body>

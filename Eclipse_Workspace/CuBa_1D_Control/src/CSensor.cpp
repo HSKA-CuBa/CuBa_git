@@ -108,12 +108,9 @@ CSensor::CSensor() : mMPU1(false, mHandle),
 	mHandle.Init.NoStretchMode 		= I2C_NOSTRETCH_DISABLE;
 	HAL_I2C_Init(&mHandle);
 
-	if(mMPU1.init() && mMPU2.init())
+	if(false == (mMPU1.init() && mMPU2.init()))
 	{
-		for(UInt32 counter = 0U; counter < 5U; counter++)
-		{
-			;
-		}
+		//Error-Handler
 	}
 	mMPU1.writeRegister(MPU6050::CONFIG, static_cast<UInt8>(ELowPass::BANDWIDTH_44));
 	mMPU2.writeRegister(MPU6050::CONFIG, static_cast<UInt8>(ELowPass::BANDWIDTH_44));

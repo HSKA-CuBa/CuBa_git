@@ -94,7 +94,7 @@
       section.nData     = 1;
       section.data(1)  = dumData; %prealloc
       
-	  ;% V3_AusgleichsPolynomPsi__d_B.SFunctionBuilder
+	  ;% V3_AusgleichsPolynomPsi__d_B.SFunctionBuilder1
 	  section.data(1).logicalSrcIdx = 0;
 	  section.data(1).dtTransOffset = 0;
 	
@@ -180,8 +180,8 @@
   ;%
 
 
-  targMap.checksum0 = 3475456718;
-  targMap.checksum1 = 1309291290;
-  targMap.checksum2 = 2478140092;
-  targMap.checksum3 = 1605047473;
+  targMap.checksum0 = 53785334;
+  targMap.checksum1 = 2788412469;
+  targMap.checksum2 = 2347852118;
+  targMap.checksum3 = 2233727977;
 

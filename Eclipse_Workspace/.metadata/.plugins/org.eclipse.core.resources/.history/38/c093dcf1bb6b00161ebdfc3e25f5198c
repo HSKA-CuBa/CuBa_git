@@ -1,9 +1,0 @@
-//26.8.2016, Michael Meindl
-//Definitions to process the raw sensorvalues
-#include "CSensorEvaluation.h"
-
-float CSensorEvaluation::calcPhi(const Int16 x1__dd, const Int16 x2__dd,
-								 const Int16 y1__dd, const Int16 y2__dd)
-{
-
-}

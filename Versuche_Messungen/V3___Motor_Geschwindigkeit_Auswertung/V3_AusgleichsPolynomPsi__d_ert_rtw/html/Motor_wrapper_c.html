@@ -41,61 +41,53 @@
 <tr name="15" id="15">
 <td>15</td><td><span class="pp">#include &lt;math.h&gt;</span></td></tr>
 <tr name="16" id="16">
-<td>16</td><td><span class="pp">#include &lt;stdbool.h&gt;</span></td></tr>
+<td>16</td><td><span class="ct">/* %%%-SFUNWIZ_wrapper_includes_Changes_END --- EDIT HERE TO _BEGIN */</span></td></tr>
 <tr name="17" id="17">
-<td>17</td><td><span class="ct">/* %%%-SFUNWIZ_wrapper_includes_Changes_END --- EDIT HERE TO _BEGIN */</span></td></tr>
+<td>17</td><td><span class="pp">#define</span> <a id="17c9" class="tk">u_width</a> 1</td></tr>
 <tr name="18" id="18">
-<td>18</td><td><span class="pp">#define</span> <a id="18c9" class="tk">u_width</a> 1</td></tr>
+<td>18</td><td><span class="ct">/*</span></td></tr>
 <tr name="19" id="19">
-<td>19</td><td><span class="pp">#define</span> <a id="19c9" class="tk">y_width</a> 1</td></tr>
+<td>19</td><td><span class="ct"> * Create external references here.  </span></td></tr>
 <tr name="20" id="20">
-<td>20</td><td><span class="ct">/*</span></td></tr>
+<td>20</td><td><span class="ct"> *</span></td></tr>
 <tr name="21" id="21">
-<td>21</td><td><span class="ct"> * Create external references here.  </span></td></tr>
+<td>21</td><td><span class="ct"> */</span></td></tr>
 <tr name="22" id="22">
-<td>22</td><td><span class="ct"> *</span></td></tr>
+<td>22</td><td><span class="ct">/* %%%-SFUNWIZ_wrapper_externs_Changes_BEGIN --- EDIT HERE TO _END */</span></td></tr>
 <tr name="23" id="23">
-<td>23</td><td><span class="ct"> */</span></td></tr>
+<td>23</td><td><span class="ct">/* extern double func(double a); */</span></td></tr>
 <tr name="24" id="24">
-<td>24</td><td><span class="ct">/* %%%-SFUNWIZ_wrapper_externs_Changes_BEGIN --- EDIT HERE TO _END */</span></td></tr>
+<td>24</td><td><span class="ct">/* %%%-SFUNWIZ_wrapper_externs_Changes_END --- EDIT HERE TO _BEGIN */</span></td></tr>
 <tr name="25" id="25">
-<td>25</td><td><span class="ct">/* extern double func(double a); */</span></td></tr>
+<td>25</td><td></td></tr>
 <tr name="26" id="26">
-<td>26</td><td><span class="ct">/* %%%-SFUNWIZ_wrapper_externs_Changes_END --- EDIT HERE TO _BEGIN */</span></td></tr>
+<td>26</td><td><span class="ct">/*</span></td></tr>
 <tr name="27" id="27">
-<td>27</td><td></td></tr>
+<td>27</td><td><span class="ct"> * Output functions</span></td></tr>
 <tr name="28" id="28">
-<td>28</td><td><span class="ct">/*</span></td></tr>
+<td>28</td><td><span class="ct"> *</span></td></tr>
 <tr name="29" id="29">
-<td>29</td><td><span class="ct"> * Output functions</span></td></tr>
+<td>29</td><td><span class="ct"> */</span></td></tr>
 <tr name="30" id="30">
-<td>30</td><td><span class="ct"> *</span></td></tr>
+<td>30</td><td><span class="kw">void</span> <a id="30c6" class="tk">Motor_Outputs_wrapper</a>(<span class="kw">const</span> <a id="30c34" class="tk">boolean_T</a> <a id="30c44" class="tk">*</a><a id="30c45" class="tk">EnableState</a>,</td></tr>
 <tr name="31" id="31">
-<td>31</td><td><span class="ct"> */</span></td></tr>
+<td>31</td><td>			<span class="kw">const</span> <a id="31c10" class="tk">real32_T</a> <a id="31c19" class="tk">*</a><a id="31c20" class="tk">Torque</a>)</td></tr>
 <tr name="32" id="32">
-<td>32</td><td><span class="kw">void</span> <a id="32c6" class="tk">Motor_Outputs_wrapper</a>(<span class="kw">const</span> <a id="32c34" class="tk">boolean_T</a> <a id="32c44" class="tk">*</a><a id="32c45" class="tk">EnableState</a>,</td></tr>
+<td>32</td><td><span class="br">{</span></td></tr>
 <tr name="33" id="33">
-<td>33</td><td>			<span class="kw">const</span> <a id="33c10" class="tk">real32_T</a> <a id="33c19" class="tk">*</a><a id="33c20" class="tk">Torque</a>,</td></tr>
+<td>33</td><td><span class="ct">/* %%%-SFUNWIZ_wrapper_Outputs_Changes_BEGIN --- EDIT HERE TO _END */</span></td></tr>
 <tr name="34" id="34">
-<td>34</td><td>			<a id="34c4" class="tk">uint16_T</a> <a id="34c13" class="tk">*</a><a id="34c14" class="tk">VelocityADCValue</a>)</td></tr>
+<td>34</td><td><span class="pp">#ifndef</span> <a id="34c9" class="tk">MATLAB_MEX_FILE</a></td></tr>
 <tr name="35" id="35">
-<td>35</td><td><span class="br">{</span></td></tr>
+<td>35</td><td><a id="35c1" class="tk">motorIteration</a>(<a id="35c16" class="tk">EnableState</a>[0], <a id="35c32" class="tk">Torque</a>);</td></tr>
 <tr name="36" id="36">
-<td>36</td><td><span class="ct">/* %%%-SFUNWIZ_wrapper_Outputs_Changes_BEGIN --- EDIT HERE TO _END */</span></td></tr>
+<td>36</td><td><span class="pp">#endif</span></td></tr>
 <tr name="37" id="37">
-<td>37</td><td><span class="pp">#ifndef</span> <a id="37c9" class="tk">MATLAB_MEX_FILE</a></td></tr>
+<td>37</td><td><span class="ct">/* %%%-SFUNWIZ_wrapper_Outputs_Changes_END --- EDIT HERE TO _BEGIN */</span></td></tr>
 <tr name="38" id="38">
-<td>38</td><td><a id="38c1" class="tk">motorIteration</a>(<a id="38c16" class="tk">EnableState</a>[0], <a id="38c32" class="tk">Torque</a>);</td></tr>
+<td>38</td><td><span class="br">}</span></td></tr>
 <tr name="39" id="39">
-<td>39</td><td><a id="39c1" class="tk">VelocityADCValue</a>[0] = <a id="39c23" class="tk">getMotorADCValue</a>();</td></tr>
-<tr name="40" id="40">
-<td>40</td><td><span class="pp">#endif</span></td></tr>
-<tr name="41" id="41">
-<td>41</td><td><span class="ct">/* %%%-SFUNWIZ_wrapper_Outputs_Changes_END --- EDIT HERE TO _BEGIN */</span></td></tr>
-<tr name="42" id="42">
-<td>42</td><td><span class="br">}</span></td></tr>
-<tr name="43" id="43">
-<td>43</td><td></td></tr>
+<td>39</td><td></td></tr>
 </table>
 </pre>
 </body>

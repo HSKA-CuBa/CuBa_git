@@ -1,3 +1,5 @@
+//7.5.2016, Michael Meindl
+//Class to 
 #ifndef CMPU6050_H
 #define CMPU6050_H
 #include "MPU6050.h"

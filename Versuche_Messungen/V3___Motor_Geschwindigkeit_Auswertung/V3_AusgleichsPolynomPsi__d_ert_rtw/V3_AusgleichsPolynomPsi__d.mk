@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'V3_AusgleichsPolynomPsi__d'. 
 ## 
 ## Makefile     : V3_AusgleichsPolynomPsi__d.mk
-## Generated on : Mon Aug 22 14:04:54 2016
+## Generated on : Mon Sep 05 17:05:02 2016
 ## MATLAB Coder version: 3.1 (R2016a)
 ## 
 ## Build Info:
@@ -29,7 +29,7 @@ MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2016a
 MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2016a/bin
 MATLAB_ARCH_BIN           = C:/PROGRA~1/MATLAB/R2016a/bin/win64
 MASTER_ANCHOR_DIR         = 
-START_DIR                 = C:/Users/ich/Desktop/CuBa_git/ProjektDokumentation/Versuche_Messungen/V3___Motor_Geschwindigkeit_Auswertung
+START_DIR                 = C:/Users/ich/Desktop/CuBa_git/Versuche_Messungen/V3___Motor_Geschwindigkeit_Auswertung
 ARCH                      = win64
 SOLVER                    = 
 SOLVER_OBJ                = 
@@ -266,7 +266,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_IMPLIED) $(DEFINES_OPTS) $
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = $(START_DIR)/V3_AusgleichsPolynomPsi__d_ert_rtw/V3_AusgleichsPolynomPsi__d.c $(START_DIR)/V3_AusgleichsPolynomPsi__d_ert_rtw/V3_AusgleichsPolynomPsi__d_data.c $(START_DIR)/MotorBlock/source/ADC.c $(START_DIR)/MotorBlock/source/stm32f4xx_adc.c $(START_DIR)/MotorBlock/source/stm32f4xx_tim.c $(START_DIR)/MotorBlock/source/MotorControl.c $(START_DIR)/MotorBlock/Motor_wrapper.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_svr.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/updown.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_work.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/blapp_support.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/startup_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/syscalls_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/stm32f4xx_init_board.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/system_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/scheduler/src/SysTickScheduler.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/scheduler/src/m3m4m4f_multitasking.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/serial/ext_serial_pkt.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/serial/rtiostream_serial_interface.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/serial/ext_svr_serial_transport.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/rtiostream_serial_dma_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/misc.c
+SRCS = $(START_DIR)/V3_AusgleichsPolynomPsi__d_ert_rtw/V3_AusgleichsPolynomPsi__d.c $(START_DIR)/V3_AusgleichsPolynomPsi__d_ert_rtw/V3_AusgleichsPolynomPsi__d_data.c $(START_DIR)/MotorBlock/source/ADC.c $(START_DIR)/MotorBlock/source/stm32f4xx_adc.c $(START_DIR)/MotorBlock/source/stm32f4xx_tim.c $(START_DIR)/MotorBlock/source/MotorControl.c $(START_DIR)/MotorBlock/Motor_wrapper.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_svr.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/updown.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/common/ext_work.c $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/rtiostream_utils.c $(START_DIR)/MotorBlock/MotorADC_wrapper.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/blapp_support.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/startup_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/syscalls_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/stm32f4xx_init_board.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/system_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/scheduler/src/SysTickScheduler.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/armcortexmbase/scheduler/src/m3m4m4f_multitasking.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/serial/ext_serial_pkt.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/serial/rtiostream_serial_interface.c $(MATLAB_ROOT)/rtw/c/src/ext_mode/serial/ext_svr_serial_transport.c C:/MATLAB/SupportPackages/R2016a/toolbox/target/supportpackages/stm32f4discovery/@slCustomizer/../src/rtiostream_serial_dma_stm32f4xx.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.c C:/MATLAB/SupportPackages/R2016a/STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver/src/misc.c
 
 MAIN_SRC = $(START_DIR)/V3_AusgleichsPolynomPsi__d_ert_rtw/ert_main.c
 
@@ -276,7 +276,7 @@ ALL_SRCS = $(SRCS) $(MAIN_SRC)
 ## OBJECTS
 ###########################################################################
 
-OBJS = V3_AusgleichsPolynomPsi__d.o V3_AusgleichsPolynomPsi__d_data.o ADC.o stm32f4xx_adc.o stm32f4xx_tim.o MotorControl.o Motor_wrapper.o ext_svr.o updown.o ext_work.o rtiostream_utils.o blapp_support.o startup_stm32f4xx.o syscalls_stm32f4xx.o stm32f4xx_init_board.o system_stm32f4xx.o SysTickScheduler.o m3m4m4f_multitasking.o ext_serial_pkt.o rtiostream_serial_interface.o ext_svr_serial_transport.o rtiostream_serial_dma_stm32f4xx.o stm32f4xx_usart.o stm32f4xx_rcc.o stm32f4xx_gpio.o stm32f4xx_dma.o misc.o
+OBJS = V3_AusgleichsPolynomPsi__d.o V3_AusgleichsPolynomPsi__d_data.o ADC.o stm32f4xx_adc.o stm32f4xx_tim.o MotorControl.o Motor_wrapper.o ext_svr.o updown.o ext_work.o rtiostream_utils.o MotorADC_wrapper.o blapp_support.o startup_stm32f4xx.o syscalls_stm32f4xx.o stm32f4xx_init_board.o system_stm32f4xx.o SysTickScheduler.o m3m4m4f_multitasking.o ext_serial_pkt.o rtiostream_serial_interface.o ext_svr_serial_transport.o rtiostream_serial_dma_stm32f4xx.o stm32f4xx_usart.o stm32f4xx_rcc.o stm32f4xx_gpio.o stm32f4xx_dma.o misc.o
 
 MAIN_OBJ = ert_main.o
 
@@ -695,6 +695,34 @@ $(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(LIBS) $(MAIN_OBJ)
 
 
 %.o : $(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils/%.cxx
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkMotor/MotorBlock/%.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkMotor/MotorBlock/%.s
+	$(AS) $(ASFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkMotor/MotorBlock/%.S
+	$(AS) $(ASFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkMotor/MotorBlock/%.cpp
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkMotor/MotorBlock/%.cc
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkMotor/MotorBlock/%.C
+	$(CPP) $(CPPFLAGS) -o "$@" "$<"
+
+
+%.o : C:/Users/ich/Desktop/CuBa_git/HW_ImplementationSimulink/SimulinkMotor/MotorBlock/%.cxx
 	$(CPP) $(CPPFLAGS) -o "$@" "$<"
 
 

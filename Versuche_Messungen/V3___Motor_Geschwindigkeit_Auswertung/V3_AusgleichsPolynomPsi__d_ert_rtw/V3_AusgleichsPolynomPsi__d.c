@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'V3_AusgleichsPolynomPsi__d'.
  *
- * Model version                  : 1.44
+ * Model version                  : 1.50
  * Simulink Coder version         : 8.10 (R2016a) 10-Feb-2016
- * C/C++ source code generated on : Mon Aug 22 14:03:57 2016
+ * C/C++ source code generated on : Mon Sep 05 17:01:56 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -37,18 +37,20 @@ void V3_AusgleichsPolynomPsi__d_step(void)
 {
   /* S-Function (Motor): '<Root>/S-Function Builder' */
   Motor_Outputs_wrapper(&V3_AusgleichsPolynomPsi__d_P.Constant_Value,
-                        &V3_AusgleichsPolynomPsi__d_P.Constant1_Value,
-                        &V3_AusgleichsPolynomPsi__d_B.SFunctionBuilder );
+                        &V3_AusgleichsPolynomPsi__d_P.Constant1_Value );
+
+  /* S-Function (MotorADC): '<Root>/S-Function Builder1' */
+  MotorADC_Outputs_wrapper( &V3_AusgleichsPolynomPsi__d_B.SFunctionBuilder1 );
 
   /* External mode */
   rtExtModeUploadCheckTrigger(1);
 
-  {                                    /* Sample time: [0.01s, 0.0s] */
+  {                                    /* Sample time: [0.02s, 0.0s] */
     rtExtModeUpload(0, V3_AusgleichsPolynomPsi__d_M->Timing.taskTime0);
   }
 
   /* signal main to stop simulation */
-  {                                    /* Sample time: [0.01s, 0.0s] */
+  {                                    /* Sample time: [0.02s, 0.0s] */
     if ((rtmGetTFinal(V3_AusgleichsPolynomPsi__d_M)!=-1) &&
         !((rtmGetTFinal(V3_AusgleichsPolynomPsi__d_M)-
            V3_AusgleichsPolynomPsi__d_M->Timing.taskTime0) >
@@ -81,13 +83,13 @@ void V3_AusgleichsPolynomPsi__d_initialize(void)
   (void) memset((void *)V3_AusgleichsPolynomPsi__d_M, 0,
                 sizeof(RT_MODEL_V3_AusgleichsPolynom_T));
   rtmSetTFinal(V3_AusgleichsPolynomPsi__d_M, 10.0);
-  V3_AusgleichsPolynomPsi__d_M->Timing.stepSize0 = 0.01;
+  V3_AusgleichsPolynomPsi__d_M->Timing.stepSize0 = 0.02;
 
   /* External mode info */
-  V3_AusgleichsPolynomPsi__d_M->Sizes.checksums[0] = (3475456718U);
-  V3_AusgleichsPolynomPsi__d_M->Sizes.checksums[1] = (1309291290U);
-  V3_AusgleichsPolynomPsi__d_M->Sizes.checksums[2] = (2478140092U);
-  V3_AusgleichsPolynomPsi__d_M->Sizes.checksums[3] = (1605047473U);
+  V3_AusgleichsPolynomPsi__d_M->Sizes.checksums[0] = (53785334U);
+  V3_AusgleichsPolynomPsi__d_M->Sizes.checksums[1] = (2788412469U);
+  V3_AusgleichsPolynomPsi__d_M->Sizes.checksums[2] = (2347852118U);
+  V3_AusgleichsPolynomPsi__d_M->Sizes.checksums[3] = (2233727977U);
 
   {
     static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE;

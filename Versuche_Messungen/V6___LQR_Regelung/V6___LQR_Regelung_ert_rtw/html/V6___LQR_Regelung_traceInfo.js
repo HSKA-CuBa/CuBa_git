@@ -1,55 +1,69 @@
 function RTW_Sid2UrlHash() {
 	this.urlHashMap = new Array();
 	/* <Root>/Abs */
-	this.urlHashMap["V6___LQR_Regelung:48"] = "V6___LQR_Regelung.c:71";
+	this.urlHashMap["V6___LQR_Regelung:48"] = "V6___LQR_Regelung.c:75";
 	/* <Root>/Add */
-	this.urlHashMap["V6___LQR_Regelung:17"] = "V6___LQR_Regelung.c:84";
+	this.urlHashMap["V6___LQR_Regelung:17"] = "V6___LQR_Regelung.c:108";
+	/* <Root>/Constant */
+	this.urlHashMap["V6___LQR_Regelung:60"] = "V6___LQR_Regelung.c:147&V6___LQR_Regelung.h:142&V6___LQR_Regelung_data.c:36";
+	/* <Root>/Constant1 */
+	this.urlHashMap["V6___LQR_Regelung:63"] = "V6___LQR_Regelung.c:136&V6___LQR_Regelung.h:139&V6___LQR_Regelung_data.c:33";
 	/* <Root>/Constant2 */
-	this.urlHashMap["V6___LQR_Regelung:20"] = "V6___LQR_Regelung.c:81&V6___LQR_Regelung.h:132&V6___LQR_Regelung_data.c:33";
+	this.urlHashMap["V6___LQR_Regelung:20"] = "V6___LQR_Regelung.c:105&V6___LQR_Regelung.h:145&V6___LQR_Regelung_data.c:39";
+	/* <Root>/Discrete FIR Filter */
+	this.urlHashMap["V6___LQR_Regelung:58"] = "V6___LQR_Regelung.c:115,133,220,231,368,375,383,391&V6___LQR_Regelung.h:81,112,127,151,154&V6___LQR_Regelung_data.c:45,49";
+	/* <Root>/Discrete FIR Filter1 */
+	this.urlHashMap["V6___LQR_Regelung:61"] = "V6___LQR_Regelung.c:81,99,207,218,365,371,379,387&V6___LQR_Regelung.h:86,125,126,166,169&V6___LQR_Regelung_data.c:62,66";
 	/* <Root>/Gain */
-	this.urlHashMap["V6___LQR_Regelung:21"] = "V6___LQR_Regelung.c:83&V6___LQR_Regelung.h:165&V6___LQR_Regelung_data.c:66";
+	this.urlHashMap["V6___LQR_Regelung:21"] = "V6___LQR_Regelung.c:107&V6___LQR_Regelung.h:190&V6___LQR_Regelung_data.c:88";
 	/* <Root>/Gain1 */
-	this.urlHashMap["V6___LQR_Regelung:38"] = "V6___LQR_Regelung.c:92&V6___LQR_Regelung.h:144&V6___LQR_Regelung_data.c:45";
+	this.urlHashMap["V6___LQR_Regelung:38"] = "V6___LQR_Regelung.c:158&V6___LQR_Regelung.h:163&V6___LQR_Regelung_data.c:59";
 	/* <Root>/Gain2 */
-	this.urlHashMap["V6___LQR_Regelung:39"] = "V6___LQR_Regelung.c:93&V6___LQR_Regelung.h:147&V6___LQR_Regelung_data.c:48";
+	this.urlHashMap["V6___LQR_Regelung:39"] = "V6___LQR_Regelung.c:159&V6___LQR_Regelung.h:172&V6___LQR_Regelung_data.c:70";
 	/* <Root>/Gain3 */
-	this.urlHashMap["V6___LQR_Regelung:40"] = "V6___LQR_Regelung.c:94&V6___LQR_Regelung.h:126&V6___LQR_Regelung_data.c:26";
+	this.urlHashMap["V6___LQR_Regelung:40"] = "V6___LQR_Regelung.c:160&V6___LQR_Regelung.h:133&V6___LQR_Regelung_data.c:26";
+	/* <Root>/Multiport
+Switch */
+	this.urlHashMap["V6___LQR_Regelung:59"] = "V6___LQR_Regelung.c:146,155";
+	/* <Root>/Multiport
+Switch1 */
+	this.urlHashMap["V6___LQR_Regelung:62"] = "V6___LQR_Regelung.c:135,144";
 	/* <Root>/S-Function Builder */
-	this.urlHashMap["V6___LQR_Regelung:22"] = "V6___LQR_Regelung.c:101";
+	this.urlHashMap["V6___LQR_Regelung:22"] = "V6___LQR_Regelung.c:167";
 	/* <Root>/S-Function Builder1 */
-	this.urlHashMap["V6___LQR_Regelung:23"] = "V6___LQR_Regelung.c:77&V6___LQR_Regelung.h:101";
+	this.urlHashMap["V6___LQR_Regelung:23"] = "V6___LQR_Regelung.c:101&V6___LQR_Regelung.h:103";
 	/* <Root>/S-Function Builder2 */
-	this.urlHashMap["V6___LQR_Regelung:51"] = "V6___LQR_Regelung.c:53,130,261&V6___LQR_Regelung.h:81,82,83,84,109,141&V6___LQR_Regelung_data.c:42";
+	this.urlHashMap["V6___LQR_Regelung:51"] = "V6___LQR_Regelung.c:57,196,353&V6___LQR_Regelung.h:82,83,84,85,111,160&V6___LQR_Regelung_data.c:56";
 	/* <Root>/Sensor1 */
-	this.urlHashMap["V6___LQR_Regelung:27"] = "V6___LQR_Regelung.c:39,116,237&V6___LQR_Regelung.h:89,90,91,92,93,94,107,159,168&V6___LQR_Regelung_data.c:60,69";
+	this.urlHashMap["V6___LQR_Regelung:27"] = "V6___LQR_Regelung.c:43,182,329&V6___LQR_Regelung.h:91,92,93,94,95,96,109,184,193&V6___LQR_Regelung_data.c:82,91";
 	/* <Root>/Sensor2 */
-	this.urlHashMap["V6___LQR_Regelung:28"] = "V6___LQR_Regelung.c:46,123,249&V6___LQR_Regelung.h:95,96,97,98,99,100,108,162,171&V6___LQR_Regelung_data.c:63,72";
+	this.urlHashMap["V6___LQR_Regelung:28"] = "V6___LQR_Regelung.c:50,189,341&V6___LQR_Regelung.h:97,98,99,100,101,102,110,187,196&V6___LQR_Regelung_data.c:85,94";
 	/* <Root>/Sum */
-	this.urlHashMap["V6___LQR_Regelung:41"] = "V6___LQR_Regelung.c:91&V6___LQR_Regelung.h:85";
+	this.urlHashMap["V6___LQR_Regelung:41"] = "V6___LQR_Regelung.c:157&V6___LQR_Regelung.h:87";
 	/* <Root>/WinkelOffset */
-	this.urlHashMap["V6___LQR_Regelung:47"] = "V6___LQR_Regelung.c:64";
+	this.urlHashMap["V6___LQR_Regelung:47"] = "V6___LQR_Regelung.c:68";
 	/* <Root>/WinkelOffset1 */
-	this.urlHashMap["V6___LQR_Regelung:53"] = "V6___LQR_Regelung.c:80&V6___LQR_Regelung.h:80";
+	this.urlHashMap["V6___LQR_Regelung:53"] = "V6___LQR_Regelung.c:104&V6___LQR_Regelung.h:80";
 	/* <Root>/phi_COG_Offset */
-	this.urlHashMap["V6___LQR_Regelung:46"] = "V6___LQR_Regelung.c:65&V6___LQR_Regelung.h:138&V6___LQR_Regelung_data.c:39";
+	this.urlHashMap["V6___LQR_Regelung:46"] = "V6___LQR_Regelung.c:69&V6___LQR_Regelung.h:157&V6___LQR_Regelung_data.c:53";
 	/* <Root>/phi_COG_Offset1 */
-	this.urlHashMap["V6___LQR_Regelung:54"] = "V6___LQR_Regelung.c:82&V6___LQR_Regelung.h:135&V6___LQR_Regelung_data.c:36";
+	this.urlHashMap["V6___LQR_Regelung:54"] = "V6___LQR_Regelung.c:106&V6___LQR_Regelung.h:148&V6___LQR_Regelung_data.c:42";
 	/* <Root>/phi__d_scope */
-	this.urlHashMap["V6___LQR_Regelung:57"] = "V6___LQR_Regelung.h:112";
+	this.urlHashMap["V6___LQR_Regelung:57"] = "V6___LQR_Regelung.h:115";
 	/* <Root>/phi_scope */
-	this.urlHashMap["V6___LQR_Regelung:26"] = "V6___LQR_Regelung.h:116";
+	this.urlHashMap["V6___LQR_Regelung:26"] = "V6___LQR_Regelung.h:119";
 	/* <Root>/psi__d_scope */
-	this.urlHashMap["V6___LQR_Regelung:52"] = "V6___LQR_Regelung.h:120";
+	this.urlHashMap["V6___LQR_Regelung:52"] = "V6___LQR_Regelung.h:123";
 	/* <Root>/radtodeg1 */
-	this.urlHashMap["V6___LQR_Regelung:36"] = "V6___LQR_Regelung.c:112&V6___LQR_Regelung.h:88,156&V6___LQR_Regelung_data.c:57";
+	this.urlHashMap["V6___LQR_Regelung:36"] = "V6___LQR_Regelung.c:178&V6___LQR_Regelung.h:90,181&V6___LQR_Regelung_data.c:79";
 	/* <Root>/radtodeg2 */
-	this.urlHashMap["V6___LQR_Regelung:55"] = "V6___LQR_Regelung.c:108&V6___LQR_Regelung.h:87,153&V6___LQR_Regelung_data.c:54";
+	this.urlHashMap["V6___LQR_Regelung:55"] = "V6___LQR_Regelung.c:174&V6___LQR_Regelung.h:89,178&V6___LQR_Regelung_data.c:76";
 	/* <Root>/radtodeg3 */
-	this.urlHashMap["V6___LQR_Regelung:56"] = "V6___LQR_Regelung.c:104&V6___LQR_Regelung.h:86,150&V6___LQR_Regelung_data.c:51";
+	this.urlHashMap["V6___LQR_Regelung:56"] = "V6___LQR_Regelung.c:170&V6___LQR_Regelung.h:88,175&V6___LQR_Regelung_data.c:73";
 	/* <S1>/Compare */
-	this.urlHashMap["V6___LQR_Regelung:49:2"] = "V6___LQR_Regelung.c:70&V6___LQR_Regelung.h:102";
+	this.urlHashMap["V6___LQR_Regelung:49:2"] = "V6___LQR_Regelung.c:74&V6___LQR_Regelung.h:104";
 	/* <S1>/Constant */
-	this.urlHashMap["V6___LQR_Regelung:49:3"] = "V6___LQR_Regelung.c:72&V6___LQR_Regelung.h:129&V6___LQR_Regelung_data.c:30";
+	this.urlHashMap["V6___LQR_Regelung:49:3"] = "V6___LQR_Regelung.c:76&V6___LQR_Regelung.h:136&V6___LQR_Regelung_data.c:30";
 	this.getUrlHash = function(sid) { return this.urlHashMap[sid];}
 }
 RTW_Sid2UrlHash.instance = new RTW_Sid2UrlHash();
@@ -66,8 +80,16 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["V6___LQR_Regelung:17"] = {rtwname: "<Root>/Add"};
 	this.rtwnameHashMap["<Root>/BalanceArea"] = {sid: "V6___LQR_Regelung:49"};
 	this.sidHashMap["V6___LQR_Regelung:49"] = {rtwname: "<Root>/BalanceArea"};
+	this.rtwnameHashMap["<Root>/Constant"] = {sid: "V6___LQR_Regelung:60"};
+	this.sidHashMap["V6___LQR_Regelung:60"] = {rtwname: "<Root>/Constant"};
+	this.rtwnameHashMap["<Root>/Constant1"] = {sid: "V6___LQR_Regelung:63"};
+	this.sidHashMap["V6___LQR_Regelung:63"] = {rtwname: "<Root>/Constant1"};
 	this.rtwnameHashMap["<Root>/Constant2"] = {sid: "V6___LQR_Regelung:20"};
 	this.sidHashMap["V6___LQR_Regelung:20"] = {rtwname: "<Root>/Constant2"};
+	this.rtwnameHashMap["<Root>/Discrete FIR Filter"] = {sid: "V6___LQR_Regelung:58"};
+	this.sidHashMap["V6___LQR_Regelung:58"] = {rtwname: "<Root>/Discrete FIR Filter"};
+	this.rtwnameHashMap["<Root>/Discrete FIR Filter1"] = {sid: "V6___LQR_Regelung:61"};
+	this.sidHashMap["V6___LQR_Regelung:61"] = {rtwname: "<Root>/Discrete FIR Filter1"};
 	this.rtwnameHashMap["<Root>/Gain"] = {sid: "V6___LQR_Regelung:21"};
 	this.sidHashMap["V6___LQR_Regelung:21"] = {rtwname: "<Root>/Gain"};
 	this.rtwnameHashMap["<Root>/Gain1"] = {sid: "V6___LQR_Regelung:38"};
@@ -76,6 +98,10 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["V6___LQR_Regelung:39"] = {rtwname: "<Root>/Gain2"};
 	this.rtwnameHashMap["<Root>/Gain3"] = {sid: "V6___LQR_Regelung:40"};
 	this.sidHashMap["V6___LQR_Regelung:40"] = {rtwname: "<Root>/Gain3"};
+	this.rtwnameHashMap["<Root>/Multiport Switch"] = {sid: "V6___LQR_Regelung:59"};
+	this.sidHashMap["V6___LQR_Regelung:59"] = {rtwname: "<Root>/Multiport Switch"};
+	this.rtwnameHashMap["<Root>/Multiport Switch1"] = {sid: "V6___LQR_Regelung:62"};
+	this.sidHashMap["V6___LQR_Regelung:62"] = {rtwname: "<Root>/Multiport Switch1"};
 	this.rtwnameHashMap["<Root>/S-Function Builder"] = {sid: "V6___LQR_Regelung:22"};
 	this.sidHashMap["V6___LQR_Regelung:22"] = {rtwname: "<Root>/S-Function Builder"};
 	this.rtwnameHashMap["<Root>/S-Function Builder1"] = {sid: "V6___LQR_Regelung:23"};

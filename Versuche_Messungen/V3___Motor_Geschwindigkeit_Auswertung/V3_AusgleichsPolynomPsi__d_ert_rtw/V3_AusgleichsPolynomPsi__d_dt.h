@@ -7,9 +7,9 @@
  *
  * Code generation for model "V3_AusgleichsPolynomPsi__d".
  *
- * Model version              : 1.44
+ * Model version              : 1.50
  * Simulink Coder version : 8.10 (R2016a) 10-Feb-2016
- * C source code generated on : Mon Aug 22 14:03:57 2016
+ * C source code generated on : Mon Sep 05 17:01:56 2016
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -57,7 +57,7 @@ static const char_T * rtDataTypeNames[] = {
 
 /* data type transitions for block I/O structure */
 static DataTypeTransition rtBTransitions[] = {
-  { (char_T *)(&V3_AusgleichsPolynomPsi__d_B.SFunctionBuilder), 5, 0, 1 }
+  { (char_T *)(&V3_AusgleichsPolynomPsi__d_B.SFunctionBuilder1), 5, 0, 1 }
   ,
 
   { (char_T *)(&V3_AusgleichsPolynomPsi__d_DW.ToWorkspace_PWORK.LoggedData), 11,

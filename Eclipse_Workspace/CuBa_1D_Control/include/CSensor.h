@@ -1,3 +1,5 @@
+//8.5.2016, Michael Meindl
+//Methods to read the accelerometer and gyroscope values of both mpu's
 #ifndef CSENSOR_H
 #define CSENSOR_H
 #include "CMPU6050.h"
