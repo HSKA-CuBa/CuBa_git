@@ -1,0 +1,6 @@
+//11.9.16, Michael Meindl
+//Class to create the TCP/IP server in order to connect to Matlab
+#ifndef CTCPSERVER_H
+#define CTCPSERVER_H
+
+#endif

@@ -1,0 +1,106 @@
+#ifndef MPU6050_H
+#define MPU6050_H
+#include "Global.h"
+
+namespace MPU6050Register
+{
+constexpr float Z1_GYRO_OFFSET      = -70.4841F;
+constexpr float Z1_GYRO_FACTOR 		= 0.0076F;
+constexpr float X1_ACC_P1			= 0.0005886F;
+constexpr float X1_ACC_P2			= 0.1687F;
+constexpr float Y1_ACC_P1			= -0.0005925F;
+constexpr float Y1_ACC_P2			= -0.1616F;
+constexpr float X2_ACC_P1			= 0.000586F;
+constexpr float X2_ACC_P2			= -0.04218F;
+constexpr float Y2_ACC_P1			= -0.0005932F;
+constexpr float Y2_ACC_P2			= -0.2192F;
+constexpr float R1					= 0.140F;
+constexpr float R2					= 0.061F;
+constexpr float MU					= R1/R2;
+constexpr float DEG_TO_RAD_FACTOR   = 0.0175F;
+
+constexpr UInt8 SELF_TEST_X 	 	= 13U;
+constexpr UInt8 SELF_TEST_Y		 	= 14U;
+constexpr UInt8 SELF_TEST_Z		 	= 15U;
+constexpr UInt8 SELF_TEST_A 	 	= 16U;
+constexpr UInt8 SIMPLRT_DIV 	 	= 25U;
+constexpr UInt8 CONFIG			 	= 26U;
+constexpr UInt8 GYRO_CONFIG 	 	= 27U;
+constexpr UInt8 ACCEL_CONFIG	 	= 28U;
+constexpr UInt8 FIFO_EN			 	= 35U;
+constexpr UInt8 I2C_MST_CTRL	 	= 36U;
+constexpr UInt8 I2C_SLV0_ADDR    	= 37U;
+constexpr UInt8 I2C_SLV0_REG	 	= 38U;
+constexpr UInt8 I2C_SLV0_CTRL    	= 39U;
+constexpr UInt8 I2C_SLV1_ADDR    	= 40U;
+constexpr UInt8 I2C_SLV1_REG	 	= 41U;
+constexpr UInt8 I2C_SLV1_CTRL    	= 42U;
+constexpr UInt8 I2C_SLV2_ADDR    	= 43U;
+constexpr UInt8 I2C_SLV2_REG	 	= 44U;
+constexpr UInt8 I2C_SLV2_CTRL    	= 45U;
+constexpr UInt8 I2C_SLV3_ADDR    	= 46U;
+constexpr UInt8 I2C_SLV3_REG	 	= 47U;
+constexpr UInt8 I2C_SLV3_CTRL    	= 48U;
+constexpr UInt8 I2C_SLV4_ADDR    	= 49U;
+constexpr UInt8 I2C_SLV4_REG	 	= 50U;
+constexpr UInt8 I2C_SLV4_DO		 	= 51U;
+constexpr UInt8 I2C_SLV4_CTRL    	= 52U;
+constexpr UInt8 I2C_SLV4_DI		 	= 53U;
+constexpr UInt8 I2C_MST_STATUS   	= 54U;
+constexpr UInt8 INT_PIN_CFG		 	= 55U;
+constexpr UInt8 INT_ENABLE		 	= 56U;
+constexpr UInt8 INT_STATUS		 	= 58U;
+constexpr UInt8 ACCEL_XOUT_H	 	= 59U;
+constexpr UInt8 ACCEL_XOUT_L	 	= 60U;
+constexpr UInt8 ACCEL_YOUT_H	 	= 61U;
+constexpr UInt8 ACCEL_YOUT_L	 	= 62U;
+constexpr UInt8 ACCEL_ZOUT_H	 	= 63U;
+constexpr UInt8 ACCEL_ZOUT_L	 	= 64U;
+constexpr UInt8 TEMP_OUT_H		 	= 65U;
+constexpr UInt8 TEMP_OUT_L		 	= 66U;
+constexpr UInt8 GYRO_XOUT_H		 	= 67U;
+constexpr UInt8 GYRO_XOUT_L		 	= 68U;
+constexpr UInt8 GYRO_YOUT_H		 	= 69U;
+constexpr UInt8 GYRO_YOUT_L		 	= 70U;
+constexpr UInt8 GYRO_ZOUT_H		 	= 71U;
+constexpr UInt8 GYRO_ZOUT_L		 	= 72U;
+constexpr UInt8 EXT_SENS_DATA_00 	= 73U;
+constexpr UInt8 EXT_SENS_DATA_01 	= 74U;
+constexpr UInt8 EXT_SENS_DATA_02 	= 75U;
+constexpr UInt8 EXT_SENS_DATA_03 	= 76U;
+constexpr UInt8 EXT_SENS_DATA_04 	= 77U;
+constexpr UInt8 EXT_SENS_DATA_05 	= 78U;
+constexpr UInt8 EXT_SENS_DATA_06 	= 79U;
+constexpr UInt8 EXT_SENS_DATA_07 	= 80U;
+constexpr UInt8 EXT_SENS_DATA_08 	= 81U;
+constexpr UInt8 EXT_SENS_DATA_09 	= 82U;
+constexpr UInt8 EXT_SENS_DATA_10 	= 83U;
+constexpr UInt8 EXT_SENS_DATA_11 	= 84U;
+constexpr UInt8 EXT_SENS_DATA_12 	= 85U;
+constexpr UInt8 EXT_SENS_DATA_13 	= 86U;
+constexpr UInt8 EXT_SENS_DATA_14 	= 87U;
+constexpr UInt8 EXT_SENS_DATA_15 	= 88U;
+constexpr UInt8 EXT_SENS_DATA_16 	= 89U;
+constexpr UInt8 EXT_SENS_DATA_17 	= 90U;
+constexpr UInt8 EXT_SENS_DATA_18 	= 91U;
+constexpr UInt8 EXT_SENS_DATA_19 	= 92U;
+constexpr UInt8 EXT_SENS_DATA_20 	= 93U;
+constexpr UInt8 EXT_SENS_DATA_21 	= 94U;
+constexpr UInt8 EXT_SENS_DATA_22 	= 95U;
+constexpr UInt8 EXT_SENS_DATA_23 	= 96U;
+constexpr UInt8 I2C_SLV0_DO		 	= 99U;
+constexpr UInt8 I2C_SLV1_DO		 	= 100U;
+constexpr UInt8 I2C_SLV2_DO		 	= 101U;
+constexpr UInt8 I2C_SLV3_DO		 	= 102U;
+constexpr UInt8 I2C_MST_DELAY_CTRL 	= 103U;
+constexpr UInt8 SIGNAL_PATH_RESET 	= 104U;
+constexpr UInt8 USER_CTRL			= 106U;
+constexpr UInt8 PWR_MGMT_1			= 107U;
+constexpr UInt8 PWR_MGMT_2			= 108U;
+constexpr UInt8 FIFO_COUNTH			= 114U;
+constexpr UInt8	FIFO_COUNTL			= 115U;
+constexpr UInt8 FIFO_R_W			= 116U;
+constexpr UInt8 WHO_AM_I			= 117U;
+}
+
+#endif

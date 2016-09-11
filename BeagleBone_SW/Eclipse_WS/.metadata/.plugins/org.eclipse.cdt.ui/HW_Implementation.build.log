@@ -1,0 +1,35 @@
+21:49:44 **** Build of configuration Debug for project HW_Implementation ****
+make all 
+Building file: ../source/main.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++1y -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/HW_Implementation/HW/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/HW_Implementation/Basic/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"source/main.d" -MT"source/main.o" -o "source/main.o" "../source/main.cpp"
+Finished building: ../source/main.cpp
+ 
+Building file: ../HW/source/CADC.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++1y -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/HW_Implementation/HW/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/HW_Implementation/Basic/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"HW/source/CADC.d" -MT"HW/source/CADC.o" -o "HW/source/CADC.o" "../HW/source/CADC.cpp"
+Finished building: ../HW/source/CADC.cpp
+ 
+Building file: ../HW/source/CDOUT.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++1y -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/HW_Implementation/HW/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/HW_Implementation/Basic/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"HW/source/CDOUT.d" -MT"HW/source/CDOUT.o" -o "HW/source/CDOUT.o" "../HW/source/CDOUT.cpp"
+Finished building: ../HW/source/CDOUT.cpp
+ 
+Building file: ../HW/source/CMPU6050.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++1y -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/HW_Implementation/HW/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/HW_Implementation/Basic/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"HW/source/CMPU6050.d" -MT"HW/source/CMPU6050.o" -o "HW/source/CMPU6050.o" "../HW/source/CMPU6050.cpp"
+Finished building: ../HW/source/CMPU6050.cpp
+ 
+Building file: ../Basic/source/Assertion.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++1y -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/HW_Implementation/HW/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/HW_Implementation/Basic/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Basic/source/Assertion.d" -MT"Basic/source/Assertion.o" -o "Basic/source/Assertion.o" "../Basic/source/Assertion.cpp"
+Finished building: ../Basic/source/Assertion.cpp
+ 
+Building target: HW_Implementation
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "HW_Implementation"  ./source/main.o  ./HW/source/CADC.o ./HW/source/CDOUT.o ./HW/source/CMPU6050.o  ./Basic/source/Assertion.o   
+Finished building target: HW_Implementation
+ 
+
+21:49:44 Build Finished (took 760ms)
+

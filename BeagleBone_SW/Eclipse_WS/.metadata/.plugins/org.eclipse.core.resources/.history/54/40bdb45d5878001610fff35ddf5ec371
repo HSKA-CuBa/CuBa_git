@@ -1,0 +1,77 @@
+//7.9.2016, Michael Meindl
+//Method-Definitions to run digital Outputs
+#include "CDOUT.h"
+#include <unistd.h>
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include <fcntl.h>
+using namespace std;
+
+CDOUT::CDOUT(string pinNumber) : mFile(-1),
+								 mPin(pinNumber)
+{
+	Int32 pin = std::stoi(pinNumber);
+	sAssertion((pin < 0) || (pin > 127), "(CDOUT::CDOUT()): Invalid Pin-Number.");
+
+	//Activate the GPIO-Pin
+	mFile = open("/sys/class/gpio/export", O_WRONLY);
+	sAssertion(mFile < 0, "(CDOUT::CDOUT()): Failed to open export.");
+
+	Int32 retVal = write(mFile, pinNumber.c_str(), pinNumber.size()) < static_cast<ssize_t>(pinNumber.size());
+	sAssertion(retVal < 0, "(CDOUT::CDOUT()): Failed to complete writing export.");
+
+	retVal = close(mFile);
+	sAssertion(mFile < 0, "(CDOUT::CDOUT()): Failed to close export.");
+
+	//Configure the GPIO as output
+	string filepath = "/sys/class/gpio/gpio" + pinNumber + "/direction";
+	mFile = open(filepath.c_str(), O_WRONLY);
+	sAssertion(mFile < 0, "(CDOUT::CDOUT()): Failed to open direction.");
+
+	string content = "out";
+	retVal = write(mFile, content.c_str(), content.size()) < static_cast<ssize_t>(content.size());
+	sAssertion(retVal < 0, "(CDOUT::CDOUT()): Failed to complete writing.");
+
+	retVal = close(mFile);
+	sAssertion(retVal < 0, "(CDOUT::CDOUT()): Failed to close direction.");
+}
+void CDOUT::setPinState(bool state)
+{
+	string filepath = "/sys/class/gpio/gpio" + mPin + "/value";
+	mFile = open(filepath.c_str(), O_WRONLY);
+	if(mFile < 0)
+	{
+		std::cerr << "(CDOUT::setPinState()) : Failed to open value-file . . . " << std::endl;
+		exit(1);
+	}
+	string content = state ? "1" : "0";
+	if(write(mFile, content.c_str(), content.size()) < static_cast<ssize_t>(content.size()))
+	{
+		std::cerr << "(CDOUT::setPinState()) : Failed to finish writing value-file . . . "  << std::endl;
+	}
+	if(close(mFile) < 0)
+	{
+		std::cerr << "(CDOUT::setPinState()) : Failed to close value-file . . . " << std::endl;
+		exit(1);
+	}
+}
+CDOUT::~CDOUT()
+{
+	mFile = open("/sys/class/gpio/unexport", O_WRONLY);
+	if(mFile < 0)
+	{
+		std::cerr << "(CDOUT::~CDOUT()): Failed to open unexport . . . " << std::endl;
+		exit(1);
+	}
+	if(write(mFile, mPin.c_str(), mPin.size()) < static_cast<ssize_t>(mPin.size()))
+	{
+		std::cerr << "(CDOUT::~CDOUT()): Failed to complete writing unexport . . . " << std::endl;
+	}
+	if(close(mFile) < 0)
+	{
+		std::cerr << "(CDOUT::~CDOUT()): Failed to close file unexport . . . " << std::endl;
+		exit(1);
+	}
+}

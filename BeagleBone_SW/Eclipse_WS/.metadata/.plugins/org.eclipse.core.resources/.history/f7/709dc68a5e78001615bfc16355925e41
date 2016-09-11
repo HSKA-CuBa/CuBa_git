@@ -1,0 +1,22 @@
+#include "CContainer.h"
+
+CContainer::CContainer() : mConsumerSem(false, true),
+						   mProducerSem(true, true),
+						   mData(0.0F)
+{
+
+}
+void CContainer::setData(const float data)
+{
+	mProducerSem.take(true);	//Wait forever...
+	mData = data;
+	mConsumerSem.give();
+}
+float CContainer::getData()
+{
+	float data = 0.0F;
+	mConsumerSem.take(true);	//Wait for Producer to signal the arrival of data via give
+	data = mData;
+	mProducerSem.give();		//Signal that data can be written again
+	return data;
+}

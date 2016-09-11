@@ -1,0 +1,9 @@
+//8.9.2016, Michael Meindl
+#include "Assertion.h"
+#include <cstdlib>
+#include <iostream>
+
+void sOwnAssertion(bool assertion, const char* errMsg)
+{
+	if
+}

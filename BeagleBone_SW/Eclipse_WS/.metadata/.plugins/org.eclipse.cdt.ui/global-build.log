@@ -1,0 +1,7 @@
+22:31:00 **** Incremental Build of configuration Debug for project LibraryProject ****
+make all 
+Building target: LibraryProject
+Invoking: Cross G++ Linker
+arm-linux-gnueabihf-g++  -o "LibraryProject"  ./TCPServer/source/CServer.o  ./HW/source/CADC.o ./HW/source/CDOUT.o ./HW/source/CMPU6050.o  ./Basic/source/AComponentBase.o ./Basic/source/Assertion.o ./Basic/source/CBinarySemaphore.o ./Basic/source/CCountingSemaphore.o ./Basic/source/CMessage.o ./Basic/source/CMutex.o  ./main.o   -lpthread
+Finished building target: LibraryProject
+ 
