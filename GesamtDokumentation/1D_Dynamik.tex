@@ -95,7 +95,7 @@ Bei dem Prototyp handelt es sich um ein nicht konservatives System, da durch die
 ({\theta}^A_K + {\theta}^B_R + m_R \cdot l_{AB}^2)\ddot{\varphi} + {\theta}^B_R \cdot \ddot{\psi} - g(m_R \cdot l_{AB} + m_K \cdot l_{AC})sin(\varphi) + C_{\psi} \cdot \dot{\psi} = 0
 \end{equation}
 \begin{equation}
-\frac{d}{dt}\frac{\partial T}{\partial \dot{\psi}}-\frac{\partial T}{\partial \psi} + \frac{\partial T}{\partial \dot{\psi}} = Q_{\psi} 
+\frac{d}{dt}\frac{\partial T}{\partial \dot{\psi}}-\frac{\partial T}{\partial \psi} = Q_{\psi} 
 \end{equation}
 \begin{equation}
 \label{LG_psi_euqation}
@@ -104,14 +104,20 @@ Bei dem Prototyp handelt es sich um ein nicht konservatives System, da durch die
 
 Durch Einsetzen von (\ref{LG_psi_euqation}) in (\ref{LG_phi_equation}) ergibt sich die folgende Bewegungsgleichung für die Würfelseite.
 
+
 \begin{equation}
 \label{BG_phi_quation}
-\ddot{\varphi} = \frac{g(m_R \cdot l_{AB}^2 + m_K \cdot l_{AC})sin(\varphi) - C_{\varphi} \cdot \dot{\varphi} + C_{\psi} \cdot \dot{\psi} - T_M}{{\theta}^A_K + m_R \cdot l_{AB}^2}
+\ddot{\varphi} = \frac{g(m_R \cdot l_{AB} + m_K \cdot l_{AC})sin(\varphi) - C_{\varphi} \cdot \dot{\varphi} + C_{\psi} \cdot \dot{\psi} - T_M}{{\theta}^A_K + m_R \cdot l_{AB}^2}
 \end{equation}
 
 Die Bewegungsgleichung für die Schwungmasse ergibt sich durch Einsetzen von (\ref{BG_phi_quation}) in (\ref{LG_psi_euqation}).
 
 \begin{equation}
 \label{BG_psi_equation}
-\ddot{\psi} = \frac{({\theta}^A_K + m_R \cdot l_{AB}^2 + {\theta}^B_R)(T_M - C_{\psi} \cdot \dot{\psi})}{({\theta}^A_K + m_R \cdot {l_{AB}}^2){\theta}^B_R} + \frac{C_{\varphi} \cdot \dot{\varphi} - g(m_R \cdot l_{AB} + m_K \cdot l_{AC})sin(\varphi)}{{\theta}^A_K + m_R \cdot {l_{AB}}^2}
+\begin{split}
+\Theta^B_R \cdot \ddot{\psi} &= T_M - C_{\psi} \cdot \dot{\psi} - \Theta^B_R \cdot \frac{g(m_R\cdot l_{AB} + m_K \cdot l_{AC})sin(\varphi) - C_{\varphi} \cdot \dot{\varphi} + C_{\psi} \cdot \dot{\psi} - T_M}{\Theta^A_K + m_R \cdot l^2_{AB}} \\
+ & = \left(T_M + \frac{\Theta^B_R \cdot T_M}{\Theta^A_K + m_R \cdot l^2_{AB}} \right) - \left(C_{\psi} \cdot \dot{\psi} + \frac{ \Theta^B_R \cdot C_{\psi} \cdot \dot{\psi} }{ \Theta^A_K + m_R \cdot l^2_{AB} } \right)  - \Theta^B_R \frac{g(m_R\cdot l_{AB} + m_K \cdot l_{AC})sin(\varphi) - C_{\varphi} \cdot  \dot{\varphi}}{\Theta^A_K + m_R \cdot l^2_{AB}} \\
+ & = \frac{(\Theta^A_K + \Theta^B_R + m_R \cdot l^2_{AB})(T_M - C_{\psi} \cdot \dot{\psi})}{\Theta^A_K + m_R \cdot l^2_{AB}} + \Theta^B_R \frac{C_{\varphi} \cdot  \dot{\varphi} - g(m_R\cdot l_{AB} + m_K \cdot l_{AC})sin(\varphi) }{\Theta^A_K + m_R \cdot l^2_{AB}} \\
+\ddot{\psi} &= \frac{({\theta}^A_K + m_R \cdot l_{AB}^2 + {\theta}^B_R)(T_M - C_{\psi} \cdot \dot{\psi})}{({\theta}^A_K + m_R \cdot {l_{AB}}^2){\theta}^B_R} + \frac{C_{\varphi} \cdot \dot{\varphi} - g(m_R \cdot l_{AB} + m_K \cdot l_{AC})sin(\varphi)}{{\theta}^A_K + m_R \cdot {l_{AB}}^2}
+\end{split}
 \end{equation}
