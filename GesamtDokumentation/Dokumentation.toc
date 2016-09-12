@@ -1,34 +1,39 @@
-\contentsline {section}{\numberline {1}Cube-Balance (CuBa) - Der selbstbalancierende W\IeC {\"u}rfel}{2}{section.1}
-\contentsline {subsection}{\numberline {1.1}Software}{3}{subsection.1.1}
-\contentsline {section}{\numberline {2}1D-Prototyp}{4}{section.2}
-\contentsline {subsection}{\numberline {2.1}Aktorik und Sensorik}{5}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Modellierung der Systemdynamik}{6}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Sensorik}{8}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Winkelsch\IeC {\"a}tzung}{8}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Kalibrierung und Justierung}{8}{subsubsection.2.3.2}
-\contentsline {subsubsubsection}{\numberline {2.3.2.1}Umrechnung der Beschleunigungswerte}{9}{subsubsubsection.2.3.2.1}
-\contentsline {subsubsubsection}{\numberline {2.3.2.2}Umrechnung der Winkelgeschwindigkeiten}{9}{subsubsubsection.2.3.2.2}
-\contentsline {subsubsection}{\numberline {2.3.3}Auswertung der Radgeschwindigkeit $\mathaccentV {dot}05F{\psi }$}{10}{subsubsection.2.3.3}
-\contentsline {subsubsection}{\numberline {2.3.4}Filterung der Sensordaten}{11}{subsubsection.2.3.4}
-\contentsline {subsubsubsection}{\numberline {2.3.4.1}Komplement\IeC {\"a}rfilter}{11}{subsubsubsection.2.3.4.1}
-\contentsline {subsubsubsection}{\numberline {2.3.4.2}Kalman-Filter}{11}{subsubsubsection.2.3.4.2}
-\contentsline {subsubsubsection}{\numberline {2.3.4.3}Anwendung des Kalman-Filters}{12}{subsubsubsection.2.3.4.3}
-\contentsline {subsection}{\numberline {2.4}Modellbildung und Bestimmung der Systemgr\IeC {\"o}\IeC {\ss }en}{14}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Identifikation der Parameter}{14}{subsubsection.2.4.1}
-\contentsline {subsubsubsection}{\numberline {2.4.1.1}Ermittlung des Reibwertes $C_{\varphi }$}{14}{subsubsubsection.2.4.1.1}
-\contentsline {subsubsubsection}{\numberline {2.4.1.2}Ermittlung des Reibwertes $C_{\psi }$}{15}{subsubsubsection.2.4.1.2}
-\contentsline {subsubsubsection}{\numberline {2.4.1.3}Resultate der Systemidentifikation}{16}{subsubsubsection.2.4.1.3}
-\contentsline {subsubsection}{\numberline {2.4.2}Entwurf des Simulink-Modelles}{17}{subsubsection.2.4.2}
-\contentsline {subsubsubsection}{\numberline {2.4.2.1}Simulation des Motors}{17}{subsubsubsection.2.4.2.1}
-\contentsline {subsubsubsection}{\numberline {2.4.2.2}Simulation der W\IeC {\"u}rfelseite}{17}{subsubsubsection.2.4.2.2}
-\contentsline {subsubsubsection}{\numberline {2.4.2.3}Simulation der Schwungmasse}{18}{subsubsubsection.2.4.2.3}
-\contentsline {subsection}{\numberline {2.5}Reglerentwurf}{19}{subsection.2.5}
-\contentsline {subsubsection}{\numberline {2.5.1}Analytische Bestimmung der Reglerparameter}{19}{subsubsection.2.5.1}
-\contentsline {subsubsection}{\numberline {2.5.2}Verifizierung des Reglers an dem 1D-Prototyp}{20}{subsubsection.2.5.2}
-\contentsline {subsection}{\numberline {2.6}Aufspringen}{22}{subsection.2.6}
-\contentsline {section}{\numberline {3}3D-Modell}{23}{section.3}
-\contentsline {subsection}{\numberline {3.1}Modellierung der Systemdynamik}{24}{subsection.3.1}
-\contentsline {subsubsection}{\numberline {3.1.1}Potential des Systems}{25}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}Kinetische Energie des Systems}{25}{subsubsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.3}Generalisierte Kraftkomponenten}{26}{subsubsection.3.1.3}
-\contentsline {subsubsubsection}{\numberline {3.1.3.1}Test}{27}{subsubsubsection.3.1.3.1}
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Cube-Balance (CuBa) - Der selbstbalancierende W\IeC {\"u}rfel}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Software}{4}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}Hardware-Schnittstelle}{4}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}TCP/IP-Verbindung}{4}{subsubsection.1.1.2}
+\contentsline {subsubsection}{\numberline {1.1.3}Komponentenarchitektur}{4}{subsubsection.1.1.3}
+\contentsline {subsubsubsection}{\numberline {1.1.3.1}Kommunikation mittels Nachrichten}{4}{subsubsubsection.1.1.3.1}
+\contentsline {section}{\numberline {2}1D-Prototyp}{6}{section.2}
+\contentsline {subsection}{\numberline {2.1}Aktorik und Sensorik}{7}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Modellierung der Systemdynamik}{8}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Sensorik}{10}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Winkelsch\IeC {\"a}tzung}{10}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Kalibrierung und Justierung}{10}{subsubsection.2.3.2}
+\contentsline {subsubsubsection}{\numberline {2.3.2.1}Umrechnung der Beschleunigungswerte}{11}{subsubsubsection.2.3.2.1}
+\contentsline {subsubsubsection}{\numberline {2.3.2.2}Umrechnung der Winkelgeschwindigkeiten}{11}{subsubsubsection.2.3.2.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Auswertung der Radgeschwindigkeit $\mathaccentV {dot}05F{\psi }$}{12}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.4}Filterung der Sensordaten}{13}{subsubsection.2.3.4}
+\contentsline {subsubsubsection}{\numberline {2.3.4.1}Komplement\IeC {\"a}rfilter}{13}{subsubsubsection.2.3.4.1}
+\contentsline {subsubsubsection}{\numberline {2.3.4.2}Kalman-Filter}{13}{subsubsubsection.2.3.4.2}
+\contentsline {subsubsubsection}{\numberline {2.3.4.3}Anwendung des Kalman-Filters}{14}{subsubsubsection.2.3.4.3}
+\contentsline {subsection}{\numberline {2.4}Modellbildung und Bestimmung der Systemgr\IeC {\"o}\IeC {\ss }en}{16}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Identifikation der Parameter}{16}{subsubsection.2.4.1}
+\contentsline {subsubsubsection}{\numberline {2.4.1.1}Ermittlung des Reibwertes $C_{\varphi }$}{16}{subsubsubsection.2.4.1.1}
+\contentsline {subsubsubsection}{\numberline {2.4.1.2}Ermittlung des Reibwertes $C_{\psi }$}{17}{subsubsubsection.2.4.1.2}
+\contentsline {subsubsubsection}{\numberline {2.4.1.3}Resultate der Systemidentifikation}{18}{subsubsubsection.2.4.1.3}
+\contentsline {subsubsection}{\numberline {2.4.2}Entwurf des Simulink-Modelles}{19}{subsubsection.2.4.2}
+\contentsline {subsubsubsection}{\numberline {2.4.2.1}Simulation des Motors}{19}{subsubsubsection.2.4.2.1}
+\contentsline {subsubsubsection}{\numberline {2.4.2.2}Simulation der W\IeC {\"u}rfelseite}{19}{subsubsubsection.2.4.2.2}
+\contentsline {subsubsubsection}{\numberline {2.4.2.3}Simulation der Schwungmasse}{20}{subsubsubsection.2.4.2.3}
+\contentsline {subsection}{\numberline {2.5}Reglerentwurf}{21}{subsection.2.5}
+\contentsline {subsubsection}{\numberline {2.5.1}Analytische Bestimmung der Reglerparameter}{21}{subsubsection.2.5.1}
+\contentsline {subsubsection}{\numberline {2.5.2}Verifizierung des Reglers an dem 1D-Prototyp}{22}{subsubsection.2.5.2}
+\contentsline {subsection}{\numberline {2.6}Aufspringen}{24}{subsection.2.6}
+\contentsline {section}{\numberline {3}3D-Modell}{25}{section.3}
+\contentsline {subsection}{\numberline {3.1}Modellierung der Systemdynamik}{26}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Potential des Systems}{27}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Kinetische Energie des Systems}{27}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Generalisierte Kraftkomponenten}{28}{subsubsection.3.1.3}
+\contentsline {subsubsubsection}{\numberline {3.1.3.1}Test}{29}{subsubsubsection.3.1.3.1}

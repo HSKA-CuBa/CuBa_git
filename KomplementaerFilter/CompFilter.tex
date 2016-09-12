@@ -90,18 +90,18 @@ Unter der Annahme das die Zeitkonstante des Tiefpass $\tau_1$ und des Hochpass $
 \end{split}
 \end{equation}
 \begin{equation}
-(T + \tau) \cdot \varphi^C(z) = \tau \cdot (\varphi^C(z) \cdot z^-1  + T \cdot \dot{\varphi}^G(z)) + T \cdot \varphi^A(z)
+(T + \tau) \cdot \varphi^C(z) = \tau \cdot [\varphi^C(z) \cdot z^{-1}  + T \cdot \dot{\varphi}^G(z)] + T \cdot \varphi^A(z)
 \end{equation}
 \begin{equation}
 \begin{split}
-\varphi^C(z) & = \frac{\tau}{\tau + T}(\varphi^C(z) \cdot z^{-1}  + T \cdot \dot{\varphi}^G(z)) + \frac{T}{T + \tau} \varphi^A(z) \\
-& = \frac{\tau}{\tau + T}(\varphi^C(z) \cdot z^{-1}  + T \cdot \dot{\varphi}^G(z)) + (1 - \frac{\tau}{T + \tau}) \varphi^A(z)
+\varphi^C(z) & = \frac{\tau}{\tau + T}[\varphi^C(z) \cdot z^{-1}  + T \cdot \dot{\varphi}^G(z)] + \frac{T}{T + \tau} \varphi^A(z) \\
+& = \frac{\tau}{\tau + T}[\varphi^C(z) \cdot z^{-1}  + T \cdot \dot{\varphi}^G(z)] + (1 - \frac{\tau}{T + \tau}) \varphi^A(z)
 \end{split}
 \end{equation}
 Durch die Substitution $\alpha = \frac{\tau}{\tau + T}$ kann weiter vereinfacht werden. Welche in zeit diskreter Darstellung der Berechnungsvorschrift (\ref{Komp_BV_eq}) entspricht.
 
 \begin{equation}
-\varphi^C(z)  = \alpha(\varphi^C(z) \cdot z^{-1}  + T \cdot \dot{\varphi}^G(z)) + (1 - \alpha) \varphi^A(z)
+\varphi^C(z)  = \alpha[\varphi^C(z) \cdot z^{-1}  + T \cdot \dot{\varphi}^G(z)] + (1 - \alpha) \varphi^A(z)
 \end{equation}
 \begin{equation}
 \varphi^C_n = \alpha(\varphi^C_{n-1}  + T \cdot \dot{\varphi}^G_n) + (1 - \alpha) \varphi^A_n
@@ -132,20 +132,20 @@ H^{Fi} \cdot x^{Ri} \overset{!}{=} 0
 \end{equation}
 Das Ausgangssignal $y^C$ des Gesamtsystem kann wie folgt berechnet werden.
 \begin{equation}
-y^C = H^{F1} \cdot x^{C1} + H^{F1} \cdot x^{C2} = H^{F1} \cdot (w + x^{R1}) H^{F2} \cdot (w + x^{R2})
+y^C(s) = H^{F1}(s) \cdot x^{C1}(s) + H^{F1}(s) \cdot x^{C2}(s) = H^{F1}(s) \cdot [w(s) + x^{R1}(s)] + H^{F2}(s) \cdot [w(s) + x^{R2}(s)]
 \end{equation}
 Falls die Bedingung (\ref{comp_rule_1}) erfüllt ist fallen die Rauschterme weg.
 \begin{equation}
-y^C = H^{F1} \cdot w + H^{F2} \cdot w = w \cdot (H^{F1} \cdot H^{F2})
+y^C(s) = H^{F1}(s) \cdot w(s) + H^{F2}(s) \cdot w(s) = w \cdot [H^{F1}(s) + H^{F2}(s)]
 \end{equation}
 Wenn nun die zweite Forderung 
 \begin{equation}
 \label{comp_rule_2}
-H^{F1} + H^{F2} \overset{!}{=} 1
+H^{F1}(s) + H^{F2}(s) \overset{!}{=} 1
 \end{equation}
 erfüllt ist, ist das Ausgangssignal $y^C$ gleich dem gesuchten Signal $w$ (wenn diese Bedingung erfüllt ist ergibt auch der Name Komplementär-Filter Sinn). Prinzipiell kann die Summe der Übertragungsfunktionen auch ein beliebiger, konstanter Wert $a \in \rm I\!R$ sein, dann gilt $y^C = a \cdot w$. Bleibt allerdings ein von $s$ abhängiger Term übrig (wäre der Fall bei dem Würfelbeispiel, falls $\tau_1 \neq \tau_2$) so würde gelten:
 \begin{equation}
-y^C = H^C(s) \cdot w
+y^C(s) = H^C(s) \cdot w(s)
 \end{equation}
 Somit wäre der Zusammenhang von $y^C$ und $w$ von dem momentanen Frequenzspektrum von $w$ abhängig, welches sich praktisch kaum ohne Verzögerung bestimmen lässt.
 
@@ -160,7 +160,7 @@ Diese Analyse sollte dann ergeben, dass das Gyroscope von niederfrequenten Rausc
 
 \begin{equation}
 \begin{split}
-x^{C1} = \varphi^A + x^{R2} \hspace{80pt} & x^{C2} = \frac{1}{s} \dot{\varphi}^G + x^{R1}  \\
+x^{C1}(s) = \varphi^A(s) + x^{R2}(s) \hspace{80pt} & x^{C2}(s) = \frac{1}{s} \dot{\varphi}^G(s) + x^{R1}(s)  \\
 H^{F1}(s) = H^{TP}(s) = \frac{1}{1 + \tau_1 \cdot s} \hspace{80pt} & H^{F1}(s)=H^{RP}(s) = \frac{\tau_2 \cdot s}{1 + \tau_2 \cdot s}
 \end{split}
 \end{equation}
@@ -195,13 +195,13 @@ y^C(s) &= \frac{\tau_1 \cdot s}{1 + \tau_1 \cdot s} \cdot \dot{\varphi}^G(s) + \
 \end{equation}
 Mit Hilfe der Backward-Euler-Substitution (Tranformation?) $s = \frac{1-z^{-1}}{T}$ ergibt sich:
 \begin{equation}
-(1+\frac{\tau}{T}-\frac{\tau \cdot z^{-1}}{T}) \cdot \dot{\varphi}^C_n = \frac{\tau}{T}\cdot (1-z^{-1}) \cdot \dot{\varphi}^G_n + \dot{\varphi}^A_n
+(1+\frac{\tau}{T}-\frac{\tau \cdot z^{-1}}{T}) \cdot \dot{\varphi}^C(z) = \frac{\tau}{T}\cdot (1-z^{-1}) \cdot \dot{\varphi}^G(z) + \dot{\varphi}^A(z)
 \end{equation}
 \begin{equation}
-\frac{T+\tau}{T} \cdot \dot{\varphi}^C_n = \frac{\tau}{T} \cdot z^{-1} \cdot \dot{\varphi}^C_n + \frac{\tau}{T} \cdot (1-z^{-1}) \dot{\varphi}^G_n + \frac{T}{T+\tau} \cdot \dot{\varphi}^A_n 
+\frac{T+\tau}{T} \cdot \dot{\varphi}^C(z) = \frac{\tau}{T} \cdot z^{-1} \cdot \dot{\varphi}^C(z) + \frac{\tau}{T} \cdot (1-z^{-1}) \dot{\varphi}^G(z) + \frac{T}{T+\tau} \cdot \dot{\varphi}^A(z) 
 \end{equation}
 \begin{equation}
-\dot{\varphi}^C_n = \frac{\tau}{T+\tau} \cdot z^{-1} \cdot \dot{\varphi}^C_n + \frac{\tau}{T + \tau} \cdot (1 - z^{-1}) \cdot \dot{\varphi}^G_n + \frac{T}{T+\tau} \cdot \dot{\varphi}^A_n
+\dot{\varphi}^C(z) = \frac{\tau}{T+\tau} \cdot z^{-1} \cdot \dot{\varphi}^C(z) + \frac{\tau}{T + \tau} \cdot (1 - z^{-1}) \cdot \dot{\varphi}^G(z) + \frac{T}{T+\tau} \cdot \dot{\varphi}^A(z)
 \end{equation}
 
 \begin{equation}

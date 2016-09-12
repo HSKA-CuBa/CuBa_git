@@ -1,34 +1,38 @@
 \BOOKMARK [1][-]{section.1}{Cube-Balance \(CuBa\) - Der selbstbalancierende W\374rfel}{}% 1
 \BOOKMARK [2][-]{subsection.1.1}{Software}{section.1}% 2
-\BOOKMARK [1][-]{section.2}{1D-Prototyp}{}% 3
-\BOOKMARK [2][-]{subsection.2.1}{Aktorik und Sensorik}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.2}{Modellierung der Systemdynamik}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.3}{Sensorik}{section.2}% 6
-\BOOKMARK [3][-]{subsubsection.2.3.1}{Winkelsch\344tzung}{subsection.2.3}% 7
-\BOOKMARK [3][-]{subsubsection.2.3.2}{Kalibrierung und Justierung}{subsection.2.3}% 8
-\BOOKMARK [4][-]{subsubsubsection.2.3.2.1}{Umrechnung der Beschleunigungswerte}{subsubsection.2.3.2}% 9
-\BOOKMARK [4][-]{subsubsubsection.2.3.2.2}{Umrechnung der Winkelgeschwindigkeiten}{subsubsection.2.3.2}% 10
-\BOOKMARK [3][-]{subsubsection.2.3.3}{Auswertung der Radgeschwindigkeit }{subsection.2.3}% 11
-\BOOKMARK [3][-]{subsubsection.2.3.4}{Filterung der Sensordaten}{subsection.2.3}% 12
-\BOOKMARK [4][-]{subsubsubsection.2.3.4.1}{Komplement\344rfilter}{subsubsection.2.3.4}% 13
-\BOOKMARK [4][-]{subsubsubsection.2.3.4.2}{Kalman-Filter}{subsubsection.2.3.4}% 14
-\BOOKMARK [4][-]{subsubsubsection.2.3.4.3}{Anwendung des Kalman-Filters}{subsubsection.2.3.4}% 15
-\BOOKMARK [2][-]{subsection.2.4}{Modellbildung und Bestimmung der Systemgr\366\337en}{section.2}% 16
-\BOOKMARK [3][-]{subsubsection.2.4.1}{Identifikation der Parameter}{subsection.2.4}% 17
-\BOOKMARK [4][-]{subsubsubsection.2.4.1.1}{Ermittlung des Reibwertes C}{subsubsection.2.4.1}% 18
-\BOOKMARK [4][-]{subsubsubsection.2.4.1.2}{Ermittlung des Reibwertes C}{subsubsection.2.4.1}% 19
-\BOOKMARK [4][-]{subsubsubsection.2.4.1.3}{Resultate der Systemidentifikation}{subsubsection.2.4.1}% 20
-\BOOKMARK [3][-]{subsubsection.2.4.2}{Entwurf des Simulink-Modelles}{subsection.2.4}% 21
-\BOOKMARK [4][-]{subsubsubsection.2.4.2.1}{Simulation des Motors}{subsubsection.2.4.2}% 22
-\BOOKMARK [4][-]{subsubsubsection.2.4.2.2}{Simulation der W\374rfelseite}{subsubsection.2.4.2}% 23
-\BOOKMARK [4][-]{subsubsubsection.2.4.2.3}{Simulation der Schwungmasse}{subsubsection.2.4.2}% 24
-\BOOKMARK [2][-]{subsection.2.5}{Reglerentwurf}{section.2}% 25
-\BOOKMARK [3][-]{subsubsection.2.5.1}{Analytische Bestimmung der Reglerparameter}{subsection.2.5}% 26
-\BOOKMARK [3][-]{subsubsection.2.5.2}{Verifizierung des Reglers an dem 1D-Prototyp}{subsection.2.5}% 27
-\BOOKMARK [2][-]{subsection.2.6}{Aufspringen}{section.2}% 28
-\BOOKMARK [1][-]{section.3}{3D-Modell}{}% 29
-\BOOKMARK [2][-]{subsection.3.1}{Modellierung der Systemdynamik}{section.3}% 30
-\BOOKMARK [3][-]{subsubsection.3.1.1}{Potential des Systems}{subsection.3.1}% 31
-\BOOKMARK [3][-]{subsubsection.3.1.2}{Kinetische Energie des Systems}{subsection.3.1}% 32
-\BOOKMARK [3][-]{subsubsection.3.1.3}{Generalisierte Kraftkomponenten}{subsection.3.1}% 33
-\BOOKMARK [4][-]{subsubsubsection.3.1.3.1}{Test}{subsubsection.3.1.3}% 34
+\BOOKMARK [3][-]{subsubsection.1.1.1}{Hardware-Schnittstelle}{subsection.1.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.1.2}{TCP/IP-Verbindung}{subsection.1.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.1.3}{Komponentenarchitektur}{subsection.1.1}% 5
+\BOOKMARK [4][-]{subsubsubsection.1.1.3.1}{Kommunikation mittels Nachrichten}{subsubsection.1.1.3}% 6
+\BOOKMARK [1][-]{section.2}{1D-Prototyp}{}% 7
+\BOOKMARK [2][-]{subsection.2.1}{Aktorik und Sensorik}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.2}{Modellierung der Systemdynamik}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.3}{Sensorik}{section.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Winkelsch\344tzung}{subsection.2.3}% 11
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Kalibrierung und Justierung}{subsection.2.3}% 12
+\BOOKMARK [4][-]{subsubsubsection.2.3.2.1}{Umrechnung der Beschleunigungswerte}{subsubsection.2.3.2}% 13
+\BOOKMARK [4][-]{subsubsubsection.2.3.2.2}{Umrechnung der Winkelgeschwindigkeiten}{subsubsection.2.3.2}% 14
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Auswertung der Radgeschwindigkeit }{subsection.2.3}% 15
+\BOOKMARK [3][-]{subsubsection.2.3.4}{Filterung der Sensordaten}{subsection.2.3}% 16
+\BOOKMARK [4][-]{subsubsubsection.2.3.4.1}{Komplement\344rfilter}{subsubsection.2.3.4}% 17
+\BOOKMARK [4][-]{subsubsubsection.2.3.4.2}{Kalman-Filter}{subsubsection.2.3.4}% 18
+\BOOKMARK [4][-]{subsubsubsection.2.3.4.3}{Anwendung des Kalman-Filters}{subsubsection.2.3.4}% 19
+\BOOKMARK [2][-]{subsection.2.4}{Modellbildung und Bestimmung der Systemgr\366\337en}{section.2}% 20
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Identifikation der Parameter}{subsection.2.4}% 21
+\BOOKMARK [4][-]{subsubsubsection.2.4.1.1}{Ermittlung des Reibwertes C}{subsubsection.2.4.1}% 22
+\BOOKMARK [4][-]{subsubsubsection.2.4.1.2}{Ermittlung des Reibwertes C}{subsubsection.2.4.1}% 23
+\BOOKMARK [4][-]{subsubsubsection.2.4.1.3}{Resultate der Systemidentifikation}{subsubsection.2.4.1}% 24
+\BOOKMARK [3][-]{subsubsection.2.4.2}{Entwurf des Simulink-Modelles}{subsection.2.4}% 25
+\BOOKMARK [4][-]{subsubsubsection.2.4.2.1}{Simulation des Motors}{subsubsection.2.4.2}% 26
+\BOOKMARK [4][-]{subsubsubsection.2.4.2.2}{Simulation der W\374rfelseite}{subsubsection.2.4.2}% 27
+\BOOKMARK [4][-]{subsubsubsection.2.4.2.3}{Simulation der Schwungmasse}{subsubsection.2.4.2}% 28
+\BOOKMARK [2][-]{subsection.2.5}{Reglerentwurf}{section.2}% 29
+\BOOKMARK [3][-]{subsubsection.2.5.1}{Analytische Bestimmung der Reglerparameter}{subsection.2.5}% 30
+\BOOKMARK [3][-]{subsubsection.2.5.2}{Verifizierung des Reglers an dem 1D-Prototyp}{subsection.2.5}% 31
+\BOOKMARK [2][-]{subsection.2.6}{Aufspringen}{section.2}% 32
+\BOOKMARK [1][-]{section.3}{3D-Modell}{}% 33
+\BOOKMARK [2][-]{subsection.3.1}{Modellierung der Systemdynamik}{section.3}% 34
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Potential des Systems}{subsection.3.1}% 35
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Kinetische Energie des Systems}{subsection.3.1}% 36
+\BOOKMARK [3][-]{subsubsection.3.1.3}{Generalisierte Kraftkomponenten}{subsection.3.1}% 37
+\BOOKMARK [4][-]{subsubsubsection.3.1.3.1}{Test}{subsubsection.3.1.3}% 38
