@@ -1,0 +1,14 @@
+//12.9.16, Michael Meindl
+//Enumeration to define different Message-Types
+#ifndef EMESSAGETYPE_H
+#define EMESSAGETYPE_H
+#include "Global.h"
+
+enum class EMessageType
+{
+	DEFAULT_IGNORE = 0,
+	CMD = 1,
+	DATA = 2
+};
+
+#endif

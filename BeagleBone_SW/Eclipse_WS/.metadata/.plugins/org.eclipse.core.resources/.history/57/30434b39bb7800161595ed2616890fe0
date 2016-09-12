@@ -1,0 +1,20 @@
+//12.9.16, Michael Meindl
+//Container-Class for Sensor-Data
+#ifndef CSENSORDATA_H
+#define CSENSORDATA_H
+#include "Global.h"
+
+class CSensorData
+{
+public:
+
+public:
+
+private:
+	Float32 mTime;
+	Int16 mX1__dd;
+	Int16 mY1__dd;
+	Int16 mPhi1_raw__dd;
+};
+
+#endif

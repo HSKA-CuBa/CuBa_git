@@ -1,0 +1,147 @@
+\section{C\-Sensor\-Data Class Reference}
+\label{classCSensorData}\index{C\-Sensor\-Data@{C\-Sensor\-Data}}
+
+
+Container-\/\-Class to hold the current sensor raw values.  
+
+
+
+
+{\ttfamily \#include $<$C\-Sensor\-Data.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf C\-Sensor\-Data} ({\bf Float32} time, {\bf Int16} x1\-\_\-raw\-\_\-\-\_\-dd, {\bf Int16} y1\-\_\-raw\-\_\-\-\_\-dd, {\bf Int16} phi1\-\_\-raw\-\_\-\-\_\-dd, {\bf Int16} x2\-\_\-raw\-\_\-\-\_\-dd, {\bf Int16} y2\-\_\-raw\-\_\-\-\_\-dd, {\bf Int16} phi2\-\_\-raw\-\_\-\-\_\-dd)
+\begin{DoxyCompactList}\small\item\em Constructor to create an instance with valid data. \end{DoxyCompactList}\item 
+{\bf C\-Sensor\-Data} (const {\bf C\-Sensor\-Data} \&)=delete
+\item 
+{\bf C\-Sensor\-Data} \& {\bf operator=} (const {\bf C\-Sensor\-Data} \&)=default
+\begin{DoxyCompactList}\small\item\em Required to copy messages into the queue. \end{DoxyCompactList}\item 
+{\bf $\sim$\-C\-Sensor\-Data} ()=default
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Float32} {\bf m\-Time}
+\begin{DoxyCompactList}\small\item\em Current time. \end{DoxyCompactList}\item 
+{\bf Int16} {\bf m\-X1\-\_\-raw\-\_\-\-\_\-dd}
+\begin{DoxyCompactList}\small\item\em Current X1-\/\-Acceleration in 2-\/complement. \end{DoxyCompactList}\item 
+{\bf Int16} {\bf m\-Y1\-\_\-raw\-\_\-\-\_\-dd}
+\begin{DoxyCompactList}\small\item\em Current Y1-\/\-Acceleration in 2-\/complement. \end{DoxyCompactList}\item 
+{\bf Int16} {\bf m\-Phi1\-\_\-raw\-\_\-\-\_\-dd}
+\begin{DoxyCompactList}\small\item\em Current Z1-\/\-Angular-\/\-Velocity in 2-\/complement. \end{DoxyCompactList}\item 
+{\bf Int16} {\bf m\-X2\-\_\-raw\-\_\-\-\_\-dd}
+\begin{DoxyCompactList}\small\item\em Current X2-\/\-Acceleration in 2-\/complement. \end{DoxyCompactList}\item 
+{\bf Int16} {\bf m\-Y2\-\_\-raw\-\_\-\-\_\-dd}
+\begin{DoxyCompactList}\small\item\em Current Y2-\/\-Acceleration in 2-\/complement. \end{DoxyCompactList}\item 
+{\bf Int16} {\bf m\-Phi2\-\_\-raw\-\_\-\-\_\-dd}
+\begin{DoxyCompactList}\small\item\em Current Z2-\/\-Angular-\/\-Velocity in 2-\/complement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Container-\/\-Class to hold the current sensor raw values. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{C\-Sensor\-Data@{C\-Sensor\-Data}!C\-Sensor\-Data@{C\-Sensor\-Data}}
+\index{C\-Sensor\-Data@{C\-Sensor\-Data}!CSensorData@{C\-Sensor\-Data}}
+\subsubsection[{C\-Sensor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}C\-Sensor\-Data\-::\-C\-Sensor\-Data (
+\begin{DoxyParamCaption}
+\item[{{\bf Float32}}]{time, }
+\item[{{\bf Int16}}]{x1\-\_\-raw\-\_\-\-\_\-dd, }
+\item[{{\bf Int16}}]{y1\-\_\-raw\-\_\-\-\_\-dd, }
+\item[{{\bf Int16}}]{phi1\-\_\-raw\-\_\-\-\_\-dd, }
+\item[{{\bf Int16}}]{x2\-\_\-raw\-\_\-\-\_\-dd, }
+\item[{{\bf Int16}}]{y2\-\_\-raw\-\_\-\-\_\-dd, }
+\item[{{\bf Int16}}]{phi2\-\_\-raw\-\_\-\-\_\-dd}
+\end{DoxyParamCaption}
+)}\label{classCSensorData_ab8139c8cf29aac797638436aa92ae293}
+
+
+Constructor to create an instance with valid data. 
+
+\index{C\-Sensor\-Data@{C\-Sensor\-Data}!C\-Sensor\-Data@{C\-Sensor\-Data}}
+\index{C\-Sensor\-Data@{C\-Sensor\-Data}!CSensorData@{C\-Sensor\-Data}}
+\subsubsection[{C\-Sensor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}C\-Sensor\-Data\-::\-C\-Sensor\-Data (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Sensor\-Data} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classCSensorData_aa0237ea8eb5ef613d0ca62b1ebb08241}
+\index{C\-Sensor\-Data@{C\-Sensor\-Data}!$\sim$\-C\-Sensor\-Data@{$\sim$\-C\-Sensor\-Data}}
+\index{$\sim$\-C\-Sensor\-Data@{$\sim$\-C\-Sensor\-Data}!CSensorData@{C\-Sensor\-Data}}
+\subsubsection[{$\sim$\-C\-Sensor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}C\-Sensor\-Data\-::$\sim$\-C\-Sensor\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\label{classCSensorData_a0abb16d423dfb3a4d974a46ba28b881f}
+
+
+\subsection{Member Function Documentation}
+\index{C\-Sensor\-Data@{C\-Sensor\-Data}!operator=@{operator=}}
+\index{operator=@{operator=}!CSensorData@{C\-Sensor\-Data}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Sensor\-Data}\& C\-Sensor\-Data\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Sensor\-Data} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\label{classCSensorData_af3b0e7cdf01ed9560c01d4b5fb1a17c7}
+
+
+Required to copy messages into the queue. 
+
+
+
+\subsection{Member Data Documentation}
+\index{C\-Sensor\-Data@{C\-Sensor\-Data}!m\-Phi1\-\_\-raw\-\_\-\-\_\-dd@{m\-Phi1\-\_\-raw\-\_\-\-\_\-dd}}
+\index{m\-Phi1\-\_\-raw\-\_\-\-\_\-dd@{m\-Phi1\-\_\-raw\-\_\-\-\_\-dd}!CSensorData@{C\-Sensor\-Data}}
+\subsubsection[{m\-Phi1\-\_\-raw\-\_\-\-\_\-dd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int16} C\-Sensor\-Data\-::m\-Phi1\-\_\-raw\-\_\-\-\_\-dd\hspace{0.3cm}{\ttfamily [private]}}\label{classCSensorData_a5557e18f5d6914d912958868bd4d6dd2}
+
+
+Current Z1-\/\-Angular-\/\-Velocity in 2-\/complement. 
+
+\index{C\-Sensor\-Data@{C\-Sensor\-Data}!m\-Phi2\-\_\-raw\-\_\-\-\_\-dd@{m\-Phi2\-\_\-raw\-\_\-\-\_\-dd}}
+\index{m\-Phi2\-\_\-raw\-\_\-\-\_\-dd@{m\-Phi2\-\_\-raw\-\_\-\-\_\-dd}!CSensorData@{C\-Sensor\-Data}}
+\subsubsection[{m\-Phi2\-\_\-raw\-\_\-\-\_\-dd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int16} C\-Sensor\-Data\-::m\-Phi2\-\_\-raw\-\_\-\-\_\-dd\hspace{0.3cm}{\ttfamily [private]}}\label{classCSensorData_a9bd62696a11a2b98171b1dcb1c3ba787}
+
+
+Current Z2-\/\-Angular-\/\-Velocity in 2-\/complement. 
+
+\index{C\-Sensor\-Data@{C\-Sensor\-Data}!m\-Time@{m\-Time}}
+\index{m\-Time@{m\-Time}!CSensorData@{C\-Sensor\-Data}}
+\subsubsection[{m\-Time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Float32} C\-Sensor\-Data\-::m\-Time\hspace{0.3cm}{\ttfamily [private]}}\label{classCSensorData_a4bca17e8c319dca5ad4aba7428113ae1}
+
+
+Current time. 
+
+\index{C\-Sensor\-Data@{C\-Sensor\-Data}!m\-X1\-\_\-raw\-\_\-\-\_\-dd@{m\-X1\-\_\-raw\-\_\-\-\_\-dd}}
+\index{m\-X1\-\_\-raw\-\_\-\-\_\-dd@{m\-X1\-\_\-raw\-\_\-\-\_\-dd}!CSensorData@{C\-Sensor\-Data}}
+\subsubsection[{m\-X1\-\_\-raw\-\_\-\-\_\-dd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int16} C\-Sensor\-Data\-::m\-X1\-\_\-raw\-\_\-\-\_\-dd\hspace{0.3cm}{\ttfamily [private]}}\label{classCSensorData_a1ec53c6864fb1cd8ce5b43f24b5f3844}
+
+
+Current X1-\/\-Acceleration in 2-\/complement. 
+
+\index{C\-Sensor\-Data@{C\-Sensor\-Data}!m\-X2\-\_\-raw\-\_\-\-\_\-dd@{m\-X2\-\_\-raw\-\_\-\-\_\-dd}}
+\index{m\-X2\-\_\-raw\-\_\-\-\_\-dd@{m\-X2\-\_\-raw\-\_\-\-\_\-dd}!CSensorData@{C\-Sensor\-Data}}
+\subsubsection[{m\-X2\-\_\-raw\-\_\-\-\_\-dd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int16} C\-Sensor\-Data\-::m\-X2\-\_\-raw\-\_\-\-\_\-dd\hspace{0.3cm}{\ttfamily [private]}}\label{classCSensorData_a36a4d489fa9ffdb544ae2962ecec6b75}
+
+
+Current X2-\/\-Acceleration in 2-\/complement. 
+
+\index{C\-Sensor\-Data@{C\-Sensor\-Data}!m\-Y1\-\_\-raw\-\_\-\-\_\-dd@{m\-Y1\-\_\-raw\-\_\-\-\_\-dd}}
+\index{m\-Y1\-\_\-raw\-\_\-\-\_\-dd@{m\-Y1\-\_\-raw\-\_\-\-\_\-dd}!CSensorData@{C\-Sensor\-Data}}
+\subsubsection[{m\-Y1\-\_\-raw\-\_\-\-\_\-dd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int16} C\-Sensor\-Data\-::m\-Y1\-\_\-raw\-\_\-\-\_\-dd\hspace{0.3cm}{\ttfamily [private]}}\label{classCSensorData_a4043308f3c4ef5c021552fa068b081b2}
+
+
+Current Y1-\/\-Acceleration in 2-\/complement. 
+
+\index{C\-Sensor\-Data@{C\-Sensor\-Data}!m\-Y2\-\_\-raw\-\_\-\-\_\-dd@{m\-Y2\-\_\-raw\-\_\-\-\_\-dd}}
+\index{m\-Y2\-\_\-raw\-\_\-\-\_\-dd@{m\-Y2\-\_\-raw\-\_\-\-\_\-dd}!CSensorData@{C\-Sensor\-Data}}
+\subsubsection[{m\-Y2\-\_\-raw\-\_\-\-\_\-dd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int16} C\-Sensor\-Data\-::m\-Y2\-\_\-raw\-\_\-\-\_\-dd\hspace{0.3cm}{\ttfamily [private]}}\label{classCSensorData_a825a3cfff4953bddf4c7655ee44607bb}
+
+
+Current Y2-\/\-Acceleration in 2-\/complement. 
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Basic/include/{\bf C\-Sensor\-Data.\-h}\end{DoxyCompactItemize}

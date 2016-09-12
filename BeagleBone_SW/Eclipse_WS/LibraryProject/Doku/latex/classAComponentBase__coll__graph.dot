@@ -1,0 +1,20 @@
+digraph "AComponentBase"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="AComponentBase",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mRxQueue\nmTxQueue" ];
+  Node2 [label="TQueue\< Config::QueueSize \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTQueue.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mAccessMutex" ];
+  Node3 [label="CMutex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCMutex.html"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mQueue" ];
+  Node4 [label="CMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCMessage.html",tooltip="Container-Class to pass Data between processes. "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mMotorData" ];
+  Node5 [label="CMotorData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCMotorData.html",tooltip="Container-Class to hold motor values. "];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mSensorData" ];
+  Node6 [label="CSensorData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCSensorData.html",tooltip="Container-Class to hold the current sensor raw values. "];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mFilterData" ];
+  Node7 [label="CFilterData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCFilterData.html",tooltip="Container-Class to hold filtered values. "];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mWriteSem\nmReadSem" ];
+  Node8 [label="CCountingSemaphore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCCountingSemaphore.html"];
+}

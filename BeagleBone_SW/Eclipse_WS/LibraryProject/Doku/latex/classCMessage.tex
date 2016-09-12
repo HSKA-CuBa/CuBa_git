@@ -1,0 +1,195 @@
+\section{C\-Message Class Reference}
+\label{classCMessage}\index{C\-Message@{C\-Message}}
+
+
+Container-\/\-Class to pass Data between processes.  
+
+
+
+
+{\ttfamily \#include $<$C\-Message.\-h$>$}
+
+
+
+Collaboration diagram for C\-Message\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf C\-Message} ()
+\begin{DoxyCompactList}\small\item\em Standard-\/\-Ctor to create invalid Messages. Necessary to initialize a queue. \end{DoxyCompactList}\item 
+{\bf C\-Message} ({\bf E\-Data\-Type} data\-Type, {\bf C\-Sensor\-Data} data)
+\begin{DoxyCompactList}\small\item\em Create a Data-\/\-Message with Sensor-\/\-Values. \end{DoxyCompactList}\item 
+{\bf C\-Message} ({\bf E\-Data\-Type} data\-Type, {\bf C\-Motor\-Data} data)
+\begin{DoxyCompactList}\small\item\em Create a Data-\/\-Message with Motor-\/\-Values. \end{DoxyCompactList}\item 
+{\bf C\-Message} ({\bf E\-Data\-Type} data\-Type, {\bf C\-Filter\-Data} data)
+\begin{DoxyCompactList}\small\item\em Create a Data-\/\-Message with Filter-\/\-Values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>{\bf UInt8} {\bf mSenderID}\\
+\>\>{\em To be replaced by a proper ID-\/Enumeration. }\\
+\>{\bf UInt8} {\bf mReceiverID}\\
+\>\>{\em To be replaced by a proper ID-\/Enumeration. }\\
+\>{\bf EMessageType} {\bf mMsgType}\\
+\>\>{\em Enumeration-\/Value which specifys the message type. }\\
+\>union \{\\
+\>\>{\bf ECommandType} {\bf mCommandType}\\
+\>\>\>{\em Enumeration-\/Value which specifys the command type. }\\
+\>\>{\bf EDataType} {\bf mDataType}\\
+\>\>\>{\em Enumeration-\/Value which specifys the data type. }\\
+\>\} \\
+\} {\bf mHeader}\\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em Structure which contains the Message-\/\-Header. \end{DoxyCompactList}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>{\bf UInt8} {\bf mRawData} [16]\\
+\>\>{\em Byte-\/Array to write the data into a stream. }\\
+\>{\bf CSensorData} {\bf mSensorData}\\
+\>\>{\em Container to hold sensor data. }\\
+\>{\bf CFilterData} {\bf mFilterData}\\
+\>\>{\em Container to hold filter data. }\\
+\>{\bf CMotorData} {\bf mMotorData}\\
+\>\>{\em Container to hold motor data. }\\
+\} {\bf mData}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Container-\/\-Class to pass Data between processes. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{C\-Message@{C\-Message}!C\-Message@{C\-Message}}
+\index{C\-Message@{C\-Message}!CMessage@{C\-Message}}
+\subsubsection[{C\-Message}]{\setlength{\rightskip}{0pt plus 5cm}C\-Message\-::\-C\-Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCMessage_a9977a9eeb7bc77fe25b6cc30958be980}
+
+
+Standard-\/\-Ctor to create invalid Messages. Necessary to initialize a queue. 
+
+\index{C\-Message@{C\-Message}!C\-Message@{C\-Message}}
+\index{C\-Message@{C\-Message}!CMessage@{C\-Message}}
+\subsubsection[{C\-Message}]{\setlength{\rightskip}{0pt plus 5cm}C\-Message\-::\-C\-Message (
+\begin{DoxyParamCaption}
+\item[{{\bf E\-Data\-Type}}]{data\-Type, }
+\item[{{\bf C\-Sensor\-Data}}]{data}
+\end{DoxyParamCaption}
+)}\label{classCMessage_a0737f762eaea673555ceaa181678c6fd}
+
+
+Create a Data-\/\-Message with Sensor-\/\-Values. 
+
+\index{C\-Message@{C\-Message}!C\-Message@{C\-Message}}
+\index{C\-Message@{C\-Message}!CMessage@{C\-Message}}
+\subsubsection[{C\-Message}]{\setlength{\rightskip}{0pt plus 5cm}C\-Message\-::\-C\-Message (
+\begin{DoxyParamCaption}
+\item[{{\bf E\-Data\-Type}}]{data\-Type, }
+\item[{{\bf C\-Motor\-Data}}]{data}
+\end{DoxyParamCaption}
+)}\label{classCMessage_aaffd5d3bb869f8dfc0353b82cfca2c47}
+
+
+Create a Data-\/\-Message with Motor-\/\-Values. 
+
+\index{C\-Message@{C\-Message}!C\-Message@{C\-Message}}
+\index{C\-Message@{C\-Message}!CMessage@{C\-Message}}
+\subsubsection[{C\-Message}]{\setlength{\rightskip}{0pt plus 5cm}C\-Message\-::\-C\-Message (
+\begin{DoxyParamCaption}
+\item[{{\bf E\-Data\-Type}}]{data\-Type, }
+\item[{{\bf C\-Filter\-Data}}]{data}
+\end{DoxyParamCaption}
+)}\label{classCMessage_ae9b901b55dcb86a98f4c8fb43797e01e}
+
+
+Create a Data-\/\-Message with Filter-\/\-Values. 
+
+
+
+\subsection{Member Data Documentation}
+\index{C\-Message@{C\-Message}!m\-Command\-Type@{m\-Command\-Type}}
+\index{m\-Command\-Type@{m\-Command\-Type}!CMessage@{C\-Message}}
+\subsubsection[{m\-Command\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-Command\-Type} C\-Message\-::m\-Command\-Type}\label{classCMessage_ac21c30a0a3ced0b42169f1eac648a1e2}
+
+
+Enumeration-\/\-Value which specifys the command type. 
+
+\index{C\-Message@{C\-Message}!m\-Data@{m\-Data}}
+\index{m\-Data@{m\-Data}!CMessage@{C\-Message}}
+\subsubsection[{m\-Data}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \}   C\-Message\-::m\-Data\hspace{0.3cm}{\ttfamily [private]}}\label{classCMessage_a65762af7d1d1c7925114fe4e4603de39}
+\index{C\-Message@{C\-Message}!m\-Data\-Type@{m\-Data\-Type}}
+\index{m\-Data\-Type@{m\-Data\-Type}!CMessage@{C\-Message}}
+\subsubsection[{m\-Data\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-Data\-Type} C\-Message\-::m\-Data\-Type}\label{classCMessage_af293f359432b3cdaf64b38b45dec880a}
+
+
+Enumeration-\/\-Value which specifys the data type. 
+
+\index{C\-Message@{C\-Message}!m\-Filter\-Data@{m\-Filter\-Data}}
+\index{m\-Filter\-Data@{m\-Filter\-Data}!CMessage@{C\-Message}}
+\subsubsection[{m\-Filter\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Filter\-Data} C\-Message\-::m\-Filter\-Data}\label{classCMessage_aff84d3f0786990a8690f4456188a3917}
+
+
+Container to hold filter data. 
+
+\index{C\-Message@{C\-Message}!m\-Header@{m\-Header}}
+\index{m\-Header@{m\-Header}!CMessage@{C\-Message}}
+\subsubsection[{m\-Header}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   C\-Message\-::m\-Header\hspace{0.3cm}{\ttfamily [private]}}\label{classCMessage_a1ddcb76fe4c9891411985772506f5ec5}
+
+
+Structure which contains the Message-\/\-Header. 
+
+\index{C\-Message@{C\-Message}!m\-Motor\-Data@{m\-Motor\-Data}}
+\index{m\-Motor\-Data@{m\-Motor\-Data}!CMessage@{C\-Message}}
+\subsubsection[{m\-Motor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Motor\-Data} C\-Message\-::m\-Motor\-Data}\label{classCMessage_ad2fce7e2f515ec1ffbb7f761d04f6650}
+
+
+Container to hold motor data. 
+
+\index{C\-Message@{C\-Message}!m\-Msg\-Type@{m\-Msg\-Type}}
+\index{m\-Msg\-Type@{m\-Msg\-Type}!CMessage@{C\-Message}}
+\subsubsection[{m\-Msg\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-Message\-Type} C\-Message\-::m\-Msg\-Type}\label{classCMessage_a5472c05eeeb0cc366361aeee6cdb71ad}
+
+
+Enumeration-\/\-Value which specifys the message type. 
+
+\index{C\-Message@{C\-Message}!m\-Raw\-Data@{m\-Raw\-Data}}
+\index{m\-Raw\-Data@{m\-Raw\-Data}!CMessage@{C\-Message}}
+\subsubsection[{m\-Raw\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\-Int8} C\-Message\-::m\-Raw\-Data[16]}\label{classCMessage_ad2da1166e19ca8ae5fc162700c588875}
+
+
+Byte-\/\-Array to write the data into a stream. 
+
+\index{C\-Message@{C\-Message}!m\-Receiver\-I\-D@{m\-Receiver\-I\-D}}
+\index{m\-Receiver\-I\-D@{m\-Receiver\-I\-D}!CMessage@{C\-Message}}
+\subsubsection[{m\-Receiver\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\-Int8} C\-Message\-::m\-Receiver\-I\-D}\label{classCMessage_a2b381caf915e37fe99ebf96d5d2d3e18}
+
+
+To be replaced by a proper I\-D-\/\-Enumeration. 
+
+\index{C\-Message@{C\-Message}!m\-Sender\-I\-D@{m\-Sender\-I\-D}}
+\index{m\-Sender\-I\-D@{m\-Sender\-I\-D}!CMessage@{C\-Message}}
+\subsubsection[{m\-Sender\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\-Int8} C\-Message\-::m\-Sender\-I\-D}\label{classCMessage_a7639c7dc3fd845286966ce86b69023bd}
+
+
+To be replaced by a proper I\-D-\/\-Enumeration. 
+
+\index{C\-Message@{C\-Message}!m\-Sensor\-Data@{m\-Sensor\-Data}}
+\index{m\-Sensor\-Data@{m\-Sensor\-Data}!CMessage@{C\-Message}}
+\subsubsection[{m\-Sensor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Sensor\-Data} C\-Message\-::m\-Sensor\-Data}\label{classCMessage_a36722ef8eaac64c49f8ff15c396a1186}
+
+
+Container to hold sensor data. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Basic/include/{\bf C\-Message.\-h}\item 
+Basic/source/{\bf C\-Message.\-cpp}\end{DoxyCompactItemize}

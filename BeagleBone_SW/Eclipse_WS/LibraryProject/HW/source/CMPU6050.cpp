@@ -101,7 +101,7 @@ Int16 CMPU6050::getZ_angular__d_raw()
 }
 void CMPU6050::writeRegister(const UInt8 registerAddr, const UInt8 value)
 {
-	Int32 retVal = i2c_smbus_write_byte_data(mFile, MPU6050Register::PWR_MGMT_1, 0U);
+	Int32 retVal = i2c_smbus_write_byte_data(mFile, registerAddr, 0U);
 	sAssertion(retVal < 0, "(CMPU6050::writeRegister()): Failed to write Register.");
 }
 UInt8 CMPU6050::readRegister(const UInt8 registerAddr)

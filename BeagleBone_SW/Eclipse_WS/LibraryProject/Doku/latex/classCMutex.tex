@@ -1,0 +1,97 @@
+\section{C\-Mutex Class Reference}
+\label{classCMutex}\index{C\-Mutex@{C\-Mutex}}
+
+
+{\ttfamily \#include $<$C\-Mutex.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf take} (bool wait\-Forever)
+\item 
+void {\bf give} ()
+\item 
+{\bf C\-Mutex} (bool is\-Full=true, bool is\-Process\-Shared=false)
+\item 
+{\bf C\-Mutex} (const {\bf C\-Mutex} \&)=delete
+\item 
+{\bf C\-Mutex} \& {\bf operator=} (const {\bf C\-Mutex} \&)=delete
+\item 
+{\bf $\sim$\-C\-Mutex} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+pthread\-\_\-mutex\-\_\-t {\bf m\-Mutex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{C\-Mutex@{C\-Mutex}!C\-Mutex@{C\-Mutex}}
+\index{C\-Mutex@{C\-Mutex}!CMutex@{C\-Mutex}}
+\subsubsection[{C\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}C\-Mutex\-::\-C\-Mutex (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\-Full = {\ttfamily true}, }
+\item[{bool}]{is\-Process\-Shared = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{classCMutex_afcd04a39b987806845adb52224486749}
+
+
+Here is the call graph for this function\-:
+
+
+\index{C\-Mutex@{C\-Mutex}!C\-Mutex@{C\-Mutex}}
+\index{C\-Mutex@{C\-Mutex}!CMutex@{C\-Mutex}}
+\subsubsection[{C\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}C\-Mutex\-::\-C\-Mutex (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Mutex} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classCMutex_ad4b2d7045e4b6ee8f62413b09197f628}
+\index{C\-Mutex@{C\-Mutex}!$\sim$\-C\-Mutex@{$\sim$\-C\-Mutex}}
+\index{$\sim$\-C\-Mutex@{$\sim$\-C\-Mutex}!CMutex@{C\-Mutex}}
+\subsubsection[{$\sim$\-C\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}C\-Mutex\-::$\sim$\-C\-Mutex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCMutex_a43fa2c418e6ec1ede656c8b9c4767494}
+
+
+\subsection{Member Function Documentation}
+\index{C\-Mutex@{C\-Mutex}!give@{give}}
+\index{give@{give}!CMutex@{C\-Mutex}}
+\subsubsection[{give}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Mutex\-::give (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCMutex_a2f5e8486cd3e06fd096600db70955ab2}
+
+
+Here is the call graph for this function\-:
+
+
+\index{C\-Mutex@{C\-Mutex}!operator=@{operator=}}
+\index{operator=@{operator=}!CMutex@{C\-Mutex}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Mutex}\& C\-Mutex\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Mutex} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classCMutex_ad8343dbb6dee357003cc49065144b26c}
+\index{C\-Mutex@{C\-Mutex}!take@{take}}
+\index{take@{take}!CMutex@{C\-Mutex}}
+\subsubsection[{take}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Mutex\-::take (
+\begin{DoxyParamCaption}
+\item[{bool}]{wait\-Forever}
+\end{DoxyParamCaption}
+)}\label{classCMutex_ac09534fbe7e9779b0a94324756ebfdb2}
+
+
+\subsection{Member Data Documentation}
+\index{C\-Mutex@{C\-Mutex}!m\-Mutex@{m\-Mutex}}
+\index{m\-Mutex@{m\-Mutex}!CMutex@{C\-Mutex}}
+\subsubsection[{m\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-mutex\-\_\-t C\-Mutex\-::m\-Mutex\hspace{0.3cm}{\ttfamily [private]}}\label{classCMutex_a57de4b0e938bfc93f93017b03a7fbf99}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Basic/include/{\bf C\-Mutex.\-h}\item 
+Basic/source/{\bf C\-Mutex.\-cpp}\end{DoxyCompactItemize}

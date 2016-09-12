@@ -1,0 +1,107 @@
+\section{C\-Counting\-Semaphore Class Reference}
+\label{classCCountingSemaphore}\index{C\-Counting\-Semaphore@{C\-Counting\-Semaphore}}
+
+
+{\ttfamily \#include $<$C\-Counting\-Semaphore.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf take} (bool wait\-Forever)
+\item 
+void {\bf give} ()
+\item 
+{\bf C\-Counting\-Semaphore} (bool is\-Process\-Shared, {\bf Int32} starting\-Value)
+\item 
+{\bf C\-Counting\-Semaphore} ()=delete
+\item 
+{\bf C\-Counting\-Semaphore} (const {\bf C\-Counting\-Semaphore} \&)=delete
+\item 
+{\bf $\sim$\-C\-Counting\-Semaphore} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+pthread\-\_\-mutex\-\_\-t {\bf m\-Mutex}
+\item 
+pthread\-\_\-cond\-\_\-t {\bf m\-Condition}
+\item 
+{\bf Int32} {\bf m\-Counter}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{C\-Counting\-Semaphore@{C\-Counting\-Semaphore}!C\-Counting\-Semaphore@{C\-Counting\-Semaphore}}
+\index{C\-Counting\-Semaphore@{C\-Counting\-Semaphore}!CCountingSemaphore@{C\-Counting\-Semaphore}}
+\subsubsection[{C\-Counting\-Semaphore}]{\setlength{\rightskip}{0pt plus 5cm}C\-Counting\-Semaphore\-::\-C\-Counting\-Semaphore (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\-Process\-Shared, }
+\item[{{\bf Int32}}]{starting\-Value}
+\end{DoxyParamCaption}
+)}\label{classCCountingSemaphore_a13e9656df86602a6b10bca73dfce72f3}
+
+
+Here is the call graph for this function\-:
+
+
+\index{C\-Counting\-Semaphore@{C\-Counting\-Semaphore}!C\-Counting\-Semaphore@{C\-Counting\-Semaphore}}
+\index{C\-Counting\-Semaphore@{C\-Counting\-Semaphore}!CCountingSemaphore@{C\-Counting\-Semaphore}}
+\subsubsection[{C\-Counting\-Semaphore}]{\setlength{\rightskip}{0pt plus 5cm}C\-Counting\-Semaphore\-::\-C\-Counting\-Semaphore (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classCCountingSemaphore_afe2b4992c6a7b90a8068e5a246b57eff}
+\index{C\-Counting\-Semaphore@{C\-Counting\-Semaphore}!C\-Counting\-Semaphore@{C\-Counting\-Semaphore}}
+\index{C\-Counting\-Semaphore@{C\-Counting\-Semaphore}!CCountingSemaphore@{C\-Counting\-Semaphore}}
+\subsubsection[{C\-Counting\-Semaphore}]{\setlength{\rightskip}{0pt plus 5cm}C\-Counting\-Semaphore\-::\-C\-Counting\-Semaphore (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Counting\-Semaphore} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classCCountingSemaphore_aec6eb022f9f6f0c00be270a1cebf8a54}
+\index{C\-Counting\-Semaphore@{C\-Counting\-Semaphore}!$\sim$\-C\-Counting\-Semaphore@{$\sim$\-C\-Counting\-Semaphore}}
+\index{$\sim$\-C\-Counting\-Semaphore@{$\sim$\-C\-Counting\-Semaphore}!CCountingSemaphore@{C\-Counting\-Semaphore}}
+\subsubsection[{$\sim$\-C\-Counting\-Semaphore}]{\setlength{\rightskip}{0pt plus 5cm}C\-Counting\-Semaphore\-::$\sim$\-C\-Counting\-Semaphore (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCCountingSemaphore_a90a22f738e141f3454ff135375de83fa}
+
+
+Here is the call graph for this function\-:
+
+
+
+
+\subsection{Member Function Documentation}
+\index{C\-Counting\-Semaphore@{C\-Counting\-Semaphore}!give@{give}}
+\index{give@{give}!CCountingSemaphore@{C\-Counting\-Semaphore}}
+\subsubsection[{give}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Counting\-Semaphore\-::give (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCCountingSemaphore_a66221b5fc9f06c24bb45c437d2faf372}
+\index{C\-Counting\-Semaphore@{C\-Counting\-Semaphore}!take@{take}}
+\index{take@{take}!CCountingSemaphore@{C\-Counting\-Semaphore}}
+\subsubsection[{take}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Counting\-Semaphore\-::take (
+\begin{DoxyParamCaption}
+\item[{bool}]{wait\-Forever}
+\end{DoxyParamCaption}
+)}\label{classCCountingSemaphore_a9abfa1aff9fc59a4f1501547524cc847}
+
+
+\subsection{Member Data Documentation}
+\index{C\-Counting\-Semaphore@{C\-Counting\-Semaphore}!m\-Condition@{m\-Condition}}
+\index{m\-Condition@{m\-Condition}!CCountingSemaphore@{C\-Counting\-Semaphore}}
+\subsubsection[{m\-Condition}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-cond\-\_\-t C\-Counting\-Semaphore\-::m\-Condition\hspace{0.3cm}{\ttfamily [private]}}\label{classCCountingSemaphore_a5e2b6343056636e3d9d7a813e5152964}
+\index{C\-Counting\-Semaphore@{C\-Counting\-Semaphore}!m\-Counter@{m\-Counter}}
+\index{m\-Counter@{m\-Counter}!CCountingSemaphore@{C\-Counting\-Semaphore}}
+\subsubsection[{m\-Counter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int32} C\-Counting\-Semaphore\-::m\-Counter\hspace{0.3cm}{\ttfamily [private]}}\label{classCCountingSemaphore_a99bbb49de404d3af17c981340b649604}
+\index{C\-Counting\-Semaphore@{C\-Counting\-Semaphore}!m\-Mutex@{m\-Mutex}}
+\index{m\-Mutex@{m\-Mutex}!CCountingSemaphore@{C\-Counting\-Semaphore}}
+\subsubsection[{m\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-mutex\-\_\-t C\-Counting\-Semaphore\-::m\-Mutex\hspace{0.3cm}{\ttfamily [private]}}\label{classCCountingSemaphore_abb3c969943f9b5793a4204914ca95286}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Basic/include/{\bf C\-Counting\-Semaphore.\-h}\item 
+Basic/source/{\bf C\-Counting\-Semaphore.\-cpp}\end{DoxyCompactItemize}

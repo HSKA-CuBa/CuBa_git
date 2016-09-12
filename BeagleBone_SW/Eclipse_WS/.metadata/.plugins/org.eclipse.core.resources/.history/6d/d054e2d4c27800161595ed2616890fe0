@@ -1,0 +1,17 @@
+//12.9.16, Michael Meindl
+//Enumeration to define different types of Data-Messages
+#ifndef EDATATYPE_H
+#define EDATATYPE_H
+
+enum class EDataType
+{
+	DEFAULT_IGNORE = 0,
+	SENSOR_DATA = 1,
+	UNFILTERED_DATA = 2,
+	KALMAN_DATA = 3,
+	COMP_DATA = 4,
+	MOTOR_DATA = 5
+
+};
+
+#endif

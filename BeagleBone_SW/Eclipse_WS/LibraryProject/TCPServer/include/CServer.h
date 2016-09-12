@@ -10,7 +10,7 @@
 class CServer
 {
 public:
-
+	void echo();
 public:
 	CServer();
 	CServer(const CServer&) = delete;

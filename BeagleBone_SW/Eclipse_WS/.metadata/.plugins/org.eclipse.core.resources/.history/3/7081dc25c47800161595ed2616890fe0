@@ -1,0 +1,22 @@
+//12.9.16, Michael Meindl
+#ifndef CSENSORDATA_H
+#define CSENSORDATA_H
+#include "Global.h"
+
+/// Container-Class to hold the current sensor raw values.
+class CSensorData
+{
+public:
+public:
+	CSensorData(Float32 time)
+private:
+	Float32 mTime;			///< Current time.
+	Int16 mX1_raw__dd;		///< Current X1-Acceleration in 2-complement.
+	Int16 mY1_raw__dd;		///< Current Y1-Acceleration in 2-complement.
+	Int16 mPhi1_raw__dd;	///< Current Z1-Angular-Velocity in 2-complement.
+	Int16 mX2_raw__dd;		///< Current X2-Acceleration in 2-complement.
+	Int16 mY2_raw__dd;		///< Current Y2-Acceleration in 2-complement.
+	Int16 mPhi2_raw__dd;	///< Current Z2-Angular-Velocity in 2-complement.
+};
+
+#endif

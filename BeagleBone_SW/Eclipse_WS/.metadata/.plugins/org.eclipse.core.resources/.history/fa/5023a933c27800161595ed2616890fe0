@@ -1,0 +1,20 @@
+//12.9.16, Michael Meindl
+#ifndef CMOTORDATA_H
+#define CMOTORDATA_H
+#include "Global.h"
+
+/// Container-Class to hold motor values.
+class CMotorData
+{
+public:
+
+public:
+
+private:
+	Float32 mTime;
+	Float32 mTorque;
+	Float32 mPsi__dd;
+	Float32 mPsi_raw__dd;
+};
+
+#endif

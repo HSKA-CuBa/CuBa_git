@@ -1,10 +1,29 @@
-22:31:00 **** Incremental Build of configuration Debug for project LibraryProject ****
+09:51:58 **** Incremental Build of configuration Debug for project LibraryProject ****
 make all 
+Building file: ../Basic/source/AComponentBase.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/TCPServer/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Basic/source/AComponentBase.d" -MT"Basic/source/AComponentBase.o" -o "Basic/source/AComponentBase.o" "../Basic/source/AComponentBase.cpp"
+Finished building: ../Basic/source/AComponentBase.cpp
+ 
+Building file: ../Basic/source/CMessage.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/TCPServer/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Basic/source/CMessage.d" -MT"Basic/source/CMessage.o" -o "Basic/source/CMessage.o" "../Basic/source/CMessage.cpp"
+../Basic/source/CMessage.cpp: In constructor ‘CMessage::CMessage()’:
+../Basic/source/CMessage.cpp:5:8: warning: statement has no effect [-Wunused-value]
+  sizeof(mData);
+        ^
+Finished building: ../Basic/source/CMessage.cpp
+ 
+Building file: ../main.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/TCPServer/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
 Building target: LibraryProject
 Invoking: Cross G++ Linker
 arm-linux-gnueabihf-g++  -o "LibraryProject"  ./TCPServer/source/CServer.o  ./HW/source/CADC.o ./HW/source/CDOUT.o ./HW/source/CMPU6050.o  ./Basic/source/AComponentBase.o ./Basic/source/Assertion.o ./Basic/source/CBinarySemaphore.o ./Basic/source/CCountingSemaphore.o ./Basic/source/CMessage.o ./Basic/source/CMutex.o  ./main.o   -lpthread
 Finished building target: LibraryProject
  
 
-22:31:00 Build Finished (took 109ms)
+09:51:59 Build Finished (took 743ms)
 

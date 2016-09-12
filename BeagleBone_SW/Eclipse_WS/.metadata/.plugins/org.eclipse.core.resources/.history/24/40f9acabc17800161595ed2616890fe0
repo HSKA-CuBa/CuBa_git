@@ -1,0 +1,11 @@
+//12.9.16, Michael Meindl
+//Enumeration to define different Command-Messages
+#ifndef ECOMMANDTYPE_H
+#define ECOMMANDTYPE_H
+
+enum class ECommandType
+{
+	DEFAULT_IGNORE = 0		///<
+};
+
+#endif

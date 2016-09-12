@@ -1,0 +1,129 @@
+\section{T\-Queue$<$ size $>$ Class Template Reference}
+\label{classTQueue}\index{T\-Queue$<$ size $>$@{T\-Queue$<$ size $>$}}
+
+
+{\ttfamily \#include $<$T\-Queue.\-h$>$}
+
+
+
+Collaboration diagram for T\-Queue$<$ size $>$\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr {\bf Int32} {\bf get\-Num\-Of\-Byte\-Needed} ()
+\item 
+bool {\bf get\-Message} ({\bf C\-Message} \&msg, bool wait\-Forever)
+\item 
+bool {\bf add\-Message} ({\bf C\-Message} \&msg, bool wait\-Forever)
+\item 
+{\bf T\-Queue} ()
+\item 
+{\bf T\-Queue} (const {\bf T\-Queue}$<$ size $>$ \&)=delete
+\item 
+{\bf T\-Queue} \& {\bf operator=} (const {\bf T\-Queue}$<$ size $>$ \&)=delete
+\item 
+{\bf $\sim$\-T\-Queue} ()=default
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf C\-Counting\-Semaphore} {\bf m\-Write\-Sem}
+\item 
+{\bf C\-Counting\-Semaphore} {\bf m\-Read\-Sem}
+\item 
+{\bf C\-Mutex} {\bf m\-Access\-Mutex}
+\item 
+{\bf C\-Message} {\bf m\-Queue} [size]
+\item 
+{\bf Int32} {\bf m\-Head\-Index}
+\item 
+{\bf Int32} {\bf m\-Tail\-Index}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{T\-Queue@{T\-Queue}!T\-Queue@{T\-Queue}}
+\index{T\-Queue@{T\-Queue}!TQueue@{T\-Queue}}
+\subsubsection[{T\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const Int32 size$>$ {\bf T\-Queue}$<$ size $>$\-::{\bf T\-Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classTQueue_a91655f9804de188370b1fee4e80e1528}
+
+
+Here is the call graph for this function\-:
+
+
+\index{T\-Queue@{T\-Queue}!T\-Queue@{T\-Queue}}
+\index{T\-Queue@{T\-Queue}!TQueue@{T\-Queue}}
+\subsubsection[{T\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const Int32 size$>$ {\bf T\-Queue}$<$ size $>$\-::{\bf T\-Queue} (
+\begin{DoxyParamCaption}
+\item[{const {\bf T\-Queue}$<$ size $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classTQueue_a7fd739395fe9e8c607e04e7e099cb807}
+\index{T\-Queue@{T\-Queue}!$\sim$\-T\-Queue@{$\sim$\-T\-Queue}}
+\index{$\sim$\-T\-Queue@{$\sim$\-T\-Queue}!TQueue@{T\-Queue}}
+\subsubsection[{$\sim$\-T\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const Int32 size$>$ {\bf T\-Queue}$<$ size $>$\-::$\sim${\bf T\-Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\label{classTQueue_a74b27fd43b864484081d48c9de8a7e77}
+
+
+\subsection{Member Function Documentation}
+\index{T\-Queue@{T\-Queue}!add\-Message@{add\-Message}}
+\index{add\-Message@{add\-Message}!TQueue@{T\-Queue}}
+\subsubsection[{add\-Message}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const Int32 size$>$ bool {\bf T\-Queue}$<$ size $>$\-::add\-Message (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-Message} \&}]{msg, }
+\item[{bool}]{wait\-Forever}
+\end{DoxyParamCaption}
+)}\label{classTQueue_a8dff9b0ee9f11a604043a66d42b2c551}
+\index{T\-Queue@{T\-Queue}!get\-Message@{get\-Message}}
+\index{get\-Message@{get\-Message}!TQueue@{T\-Queue}}
+\subsubsection[{get\-Message}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const Int32 size$>$ bool {\bf T\-Queue}$<$ size $>$\-::get\-Message (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-Message} \&}]{msg, }
+\item[{bool}]{wait\-Forever}
+\end{DoxyParamCaption}
+)}\label{classTQueue_a18df918fae12d0979c28fd7a9fc729ab}
+\index{T\-Queue@{T\-Queue}!get\-Num\-Of\-Byte\-Needed@{get\-Num\-Of\-Byte\-Needed}}
+\index{get\-Num\-Of\-Byte\-Needed@{get\-Num\-Of\-Byte\-Needed}!TQueue@{T\-Queue}}
+\subsubsection[{get\-Num\-Of\-Byte\-Needed}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const Int32 size$>$ constexpr {\bf Int32} {\bf T\-Queue}$<$ size $>$\-::get\-Num\-Of\-Byte\-Needed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classTQueue_ae8d8b929e6695a2144da6144499fe2e5}
+\index{T\-Queue@{T\-Queue}!operator=@{operator=}}
+\index{operator=@{operator=}!TQueue@{T\-Queue}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const Int32 size$>$ {\bf T\-Queue}\& {\bf T\-Queue}$<$ size $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf T\-Queue}$<$ size $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classTQueue_a583a1bbade6d0e8c599c14f3e1767715}
+
+
+\subsection{Member Data Documentation}
+\index{T\-Queue@{T\-Queue}!m\-Access\-Mutex@{m\-Access\-Mutex}}
+\index{m\-Access\-Mutex@{m\-Access\-Mutex}!TQueue@{T\-Queue}}
+\subsubsection[{m\-Access\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const Int32 size$>$ {\bf C\-Mutex} {\bf T\-Queue}$<$ size $>$\-::m\-Access\-Mutex\hspace{0.3cm}{\ttfamily [private]}}\label{classTQueue_a929a4b242d5498617157bc0fbda79cbd}
+\index{T\-Queue@{T\-Queue}!m\-Head\-Index@{m\-Head\-Index}}
+\index{m\-Head\-Index@{m\-Head\-Index}!TQueue@{T\-Queue}}
+\subsubsection[{m\-Head\-Index}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const Int32 size$>$ {\bf Int32} {\bf T\-Queue}$<$ size $>$\-::m\-Head\-Index\hspace{0.3cm}{\ttfamily [private]}}\label{classTQueue_ad7d0fc2df56a9dcccdf18d7cdb99278e}
+\index{T\-Queue@{T\-Queue}!m\-Queue@{m\-Queue}}
+\index{m\-Queue@{m\-Queue}!TQueue@{T\-Queue}}
+\subsubsection[{m\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const Int32 size$>$ {\bf C\-Message} {\bf T\-Queue}$<$ size $>$\-::m\-Queue[size]\hspace{0.3cm}{\ttfamily [private]}}\label{classTQueue_abcbef405103cd05ddb5128aa9ab99041}
+\index{T\-Queue@{T\-Queue}!m\-Read\-Sem@{m\-Read\-Sem}}
+\index{m\-Read\-Sem@{m\-Read\-Sem}!TQueue@{T\-Queue}}
+\subsubsection[{m\-Read\-Sem}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const Int32 size$>$ {\bf C\-Counting\-Semaphore} {\bf T\-Queue}$<$ size $>$\-::m\-Read\-Sem\hspace{0.3cm}{\ttfamily [private]}}\label{classTQueue_a7ea5a91f0a34c1148f30f942fa64a89a}
+\index{T\-Queue@{T\-Queue}!m\-Tail\-Index@{m\-Tail\-Index}}
+\index{m\-Tail\-Index@{m\-Tail\-Index}!TQueue@{T\-Queue}}
+\subsubsection[{m\-Tail\-Index}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const Int32 size$>$ {\bf Int32} {\bf T\-Queue}$<$ size $>$\-::m\-Tail\-Index\hspace{0.3cm}{\ttfamily [private]}}\label{classTQueue_a4852689ddce183a0aaa7d6aa0c2d11d9}
+\index{T\-Queue@{T\-Queue}!m\-Write\-Sem@{m\-Write\-Sem}}
+\index{m\-Write\-Sem@{m\-Write\-Sem}!TQueue@{T\-Queue}}
+\subsubsection[{m\-Write\-Sem}]{\setlength{\rightskip}{0pt plus 5cm}template$<$const Int32 size$>$ {\bf C\-Counting\-Semaphore} {\bf T\-Queue}$<$ size $>$\-::m\-Write\-Sem\hspace{0.3cm}{\ttfamily [private]}}\label{classTQueue_a855f05714b454eb31b3a517f0cb99465}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Basic/include/{\bf T\-Queue.\-h}\end{DoxyCompactItemize}

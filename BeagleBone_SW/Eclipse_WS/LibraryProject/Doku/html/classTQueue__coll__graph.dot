@@ -1,0 +1,18 @@
+digraph "TQueue&lt; size &gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="TQueue\< size \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mAccessMutex" ,fontname="Helvetica"];
+  Node2 [label="CMutex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCMutex.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mQueue" ,fontname="Helvetica"];
+  Node3 [label="CMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCMessage.html",tooltip="Container-Class to pass Data between processes. "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mMotorData" ,fontname="Helvetica"];
+  Node4 [label="CMotorData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCMotorData.html",tooltip="Container-Class to hold motor values. "];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mSensorData" ,fontname="Helvetica"];
+  Node5 [label="CSensorData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCSensorData.html",tooltip="Container-Class to hold the current sensor raw values. "];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mFilterData" ,fontname="Helvetica"];
+  Node6 [label="CFilterData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCFilterData.html",tooltip="Container-Class to hold filtered values. "];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mWriteSem\nmReadSem" ,fontname="Helvetica"];
+  Node7 [label="CCountingSemaphore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCCountingSemaphore.html"];
+}

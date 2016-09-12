@@ -1,0 +1,27 @@
+//12.9.16, Michael Meindl
+//Container-Class for Motor-Data
+#ifndef CMOTORDATA_H
+#define CMOTORDATA_H
+#include "Global.h"
+
+class CMotorData
+{
+public:
+	Float32 getTorque() const;
+	Float32 getPsi__dd() const;
+	Float32 mPsi_raw__dd() const;
+public:
+	CMotorData(Float32 torque,
+			   Float32 psi__dd,
+			   Float32 psi_raw__dd);
+	CMotorData(const CMotorData&) = delete;
+	CMotorData& operator=(const CMotorData&) = default;
+	~CMotorData() = default;
+private:
+	Float32 mTime;
+	Float32 mTorque;
+	Float32 mPsi__dd;
+	Float32 mPsi_raw__dd;
+};
+
+#endif

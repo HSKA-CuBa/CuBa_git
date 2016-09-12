@@ -1,0 +1,19 @@
+//12.9.16, Michael Meindl
+//Container-Class for Motor-Data
+#ifndef CMOTORDATA_H
+#define CMOTORDATA_H
+#include "Global.h"
+
+class CMotorData
+{
+public:
+
+public:
+
+private:
+	Float32 mTorque;
+	Float32 mPsi__dd;
+	Float32 mPsi_raw__dd;
+};
+
+#endif

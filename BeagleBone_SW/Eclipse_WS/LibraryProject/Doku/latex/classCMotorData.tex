@@ -1,0 +1,117 @@
+\section{C\-Motor\-Data Class Reference}
+\label{classCMotorData}\index{C\-Motor\-Data@{C\-Motor\-Data}}
+
+
+Container-\/\-Class to hold motor values.  
+
+
+
+
+{\ttfamily \#include $<$C\-Motor\-Data.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf C\-Motor\-Data} ({\bf Float32} time, {\bf Float32} torque, {\bf Float32} psi\-\_\-\-\_\-d, {\bf Float32} psi\-\_\-raw\-\_\-\-\_\-dd)
+\begin{DoxyCompactList}\small\item\em Constructor to create an instance with valid data. \end{DoxyCompactList}\item 
+{\bf C\-Motor\-Data} (const {\bf C\-Motor\-Data} \&)=delete
+\item 
+{\bf C\-Motor\-Data} \& {\bf operator=} (const {\bf C\-Motor\-Data} \&)=default
+\begin{DoxyCompactList}\small\item\em Necessary to copy messages into the queue. \end{DoxyCompactList}\item 
+{\bf $\sim$\-C\-Motor\-Data} ()=default
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Float32} {\bf m\-Time}
+\begin{DoxyCompactList}\small\item\em Current time. \end{DoxyCompactList}\item 
+{\bf Float32} {\bf m\-Torque}
+\begin{DoxyCompactList}\small\item\em Current motor torque. \end{DoxyCompactList}\item 
+{\bf Float32} {\bf m\-Psi\-\_\-\-\_\-dd}
+\begin{DoxyCompactList}\small\item\em Current motor velocity in S\-I-\/\-Units. \end{DoxyCompactList}\item 
+{\bf Float32} {\bf m\-Psi\-\_\-raw\-\_\-\-\_\-dd}
+\begin{DoxyCompactList}\small\item\em Raw A\-D\-C-\/\-Values which represent the motor velocity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Container-\/\-Class to hold motor values. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{C\-Motor\-Data@{C\-Motor\-Data}!C\-Motor\-Data@{C\-Motor\-Data}}
+\index{C\-Motor\-Data@{C\-Motor\-Data}!CMotorData@{C\-Motor\-Data}}
+\subsubsection[{C\-Motor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}C\-Motor\-Data\-::\-C\-Motor\-Data (
+\begin{DoxyParamCaption}
+\item[{{\bf Float32}}]{time, }
+\item[{{\bf Float32}}]{torque, }
+\item[{{\bf Float32}}]{psi\-\_\-\-\_\-d, }
+\item[{{\bf Float32}}]{psi\-\_\-raw\-\_\-\-\_\-dd}
+\end{DoxyParamCaption}
+)}\label{classCMotorData_ab5c2e6c3167a9b9add1f95dccc465939}
+
+
+Constructor to create an instance with valid data. 
+
+\index{C\-Motor\-Data@{C\-Motor\-Data}!C\-Motor\-Data@{C\-Motor\-Data}}
+\index{C\-Motor\-Data@{C\-Motor\-Data}!CMotorData@{C\-Motor\-Data}}
+\subsubsection[{C\-Motor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}C\-Motor\-Data\-::\-C\-Motor\-Data (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Motor\-Data} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classCMotorData_a131d635c028d05ba83cc921547cad8e5}
+\index{C\-Motor\-Data@{C\-Motor\-Data}!$\sim$\-C\-Motor\-Data@{$\sim$\-C\-Motor\-Data}}
+\index{$\sim$\-C\-Motor\-Data@{$\sim$\-C\-Motor\-Data}!CMotorData@{C\-Motor\-Data}}
+\subsubsection[{$\sim$\-C\-Motor\-Data}]{\setlength{\rightskip}{0pt plus 5cm}C\-Motor\-Data\-::$\sim$\-C\-Motor\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\label{classCMotorData_ac2bfd40e59bc6e8ff0add70744e38659}
+
+
+\subsection{Member Function Documentation}
+\index{C\-Motor\-Data@{C\-Motor\-Data}!operator=@{operator=}}
+\index{operator=@{operator=}!CMotorData@{C\-Motor\-Data}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Motor\-Data}\& C\-Motor\-Data\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Motor\-Data} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\label{classCMotorData_af5d1a3990714c43ac74c4b093264ca91}
+
+
+Necessary to copy messages into the queue. 
+
+
+
+\subsection{Member Data Documentation}
+\index{C\-Motor\-Data@{C\-Motor\-Data}!m\-Psi\-\_\-\-\_\-dd@{m\-Psi\-\_\-\-\_\-dd}}
+\index{m\-Psi\-\_\-\-\_\-dd@{m\-Psi\-\_\-\-\_\-dd}!CMotorData@{C\-Motor\-Data}}
+\subsubsection[{m\-Psi\-\_\-\-\_\-dd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Float32} C\-Motor\-Data\-::m\-Psi\-\_\-\-\_\-dd\hspace{0.3cm}{\ttfamily [private]}}\label{classCMotorData_aa21cd8f6198d6c844e2537e63604a893}
+
+
+Current motor velocity in S\-I-\/\-Units. 
+
+\index{C\-Motor\-Data@{C\-Motor\-Data}!m\-Psi\-\_\-raw\-\_\-\-\_\-dd@{m\-Psi\-\_\-raw\-\_\-\-\_\-dd}}
+\index{m\-Psi\-\_\-raw\-\_\-\-\_\-dd@{m\-Psi\-\_\-raw\-\_\-\-\_\-dd}!CMotorData@{C\-Motor\-Data}}
+\subsubsection[{m\-Psi\-\_\-raw\-\_\-\-\_\-dd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Float32} C\-Motor\-Data\-::m\-Psi\-\_\-raw\-\_\-\-\_\-dd\hspace{0.3cm}{\ttfamily [private]}}\label{classCMotorData_a9773dfddd84b7455458af60640f95db9}
+
+
+Raw A\-D\-C-\/\-Values which represent the motor velocity. 
+
+\index{C\-Motor\-Data@{C\-Motor\-Data}!m\-Time@{m\-Time}}
+\index{m\-Time@{m\-Time}!CMotorData@{C\-Motor\-Data}}
+\subsubsection[{m\-Time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Float32} C\-Motor\-Data\-::m\-Time\hspace{0.3cm}{\ttfamily [private]}}\label{classCMotorData_ad81474626f24208bdc12b23f1a1c9acf}
+
+
+Current time. 
+
+\index{C\-Motor\-Data@{C\-Motor\-Data}!m\-Torque@{m\-Torque}}
+\index{m\-Torque@{m\-Torque}!CMotorData@{C\-Motor\-Data}}
+\subsubsection[{m\-Torque}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Float32} C\-Motor\-Data\-::m\-Torque\hspace{0.3cm}{\ttfamily [private]}}\label{classCMotorData_aec15090a13905a6dbc0930b43bcf6543}
+
+
+Current motor torque. 
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Basic/include/{\bf C\-Motor\-Data.\-h}\end{DoxyCompactItemize}

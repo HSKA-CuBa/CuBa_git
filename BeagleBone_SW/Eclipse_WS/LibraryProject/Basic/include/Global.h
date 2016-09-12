@@ -12,5 +12,8 @@ using Int8		= char;
 using Int16		= short;
 using Int32		= long;
 using Int64		= long long;
+using Float32	= float;
+using Double64  = double;
+using Bool8		= bool;
 
 #endif

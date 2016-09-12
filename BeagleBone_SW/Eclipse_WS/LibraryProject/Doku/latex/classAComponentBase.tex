@@ -1,0 +1,122 @@
+\section{A\-Component\-Base Class Reference}
+\label{classAComponentBase}\index{A\-Component\-Base@{A\-Component\-Base}}
+
+
+Abstract base class for the components.  
+
+
+
+
+{\ttfamily \#include $<$A\-Component\-Base.\-h$>$}
+
+
+
+Collaboration diagram for A\-Component\-Base\-:
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf init} ()=0
+\begin{DoxyCompactList}\small\item\em Brief Abstract method to initialize the comopnent. \end{DoxyCompactList}\item 
+virtual void {\bf run} ()=0
+\begin{DoxyCompactList}\small\item\em Brief Abstract method to run the component. This function should never return. \end{DoxyCompactList}\item 
+{\bf A\-Component\-Base} ({\bf T\-Queue}$<$ {\bf Config\-::\-Queue\-Size} $>$ \&rx\-Queue, {\bf T\-Queue}$<$ {\bf Config\-::\-Queue\-Size} $>$ \&tx\-Queue)
+\item 
+{\bf A\-Component\-Base} ()=delete
+\item 
+{\bf A\-Component\-Base} (const {\bf A\-Component\-Base} \&)=delete
+\item 
+{\bf A\-Component\-Base} \& {\bf operator=} (const {\bf A\-Component\-Base} \&)=delete
+\item 
+virtual {\bf $\sim$\-A\-Component\-Base} ()=default
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf T\-Queue}$<$ {\bf Config\-::\-Queue\-Size} $>$ \& {\bf m\-Rx\-Queue}
+\item 
+{\bf T\-Queue}$<$ {\bf Config\-::\-Queue\-Size} $>$ \& {\bf m\-Tx\-Queue}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract base class for the components. 
+
+This class contains two references to queues, which are used for communication between the T\-C\-P/\-I\-P-\/server and the control system. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{A\-Component\-Base@{A\-Component\-Base}!A\-Component\-Base@{A\-Component\-Base}}
+\index{A\-Component\-Base@{A\-Component\-Base}!AComponentBase@{A\-Component\-Base}}
+\subsubsection[{A\-Component\-Base}]{\setlength{\rightskip}{0pt plus 5cm}A\-Component\-Base\-::\-A\-Component\-Base (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-Queue}$<$ {\bf Config\-::\-Queue\-Size} $>$ \&}]{rx\-Queue, }
+\item[{{\bf T\-Queue}$<$ {\bf Config\-::\-Queue\-Size} $>$ \&}]{tx\-Queue}
+\end{DoxyParamCaption}
+)}\label{classAComponentBase_aa0916458a178493682fbd0be307fffb4}
+\index{A\-Component\-Base@{A\-Component\-Base}!A\-Component\-Base@{A\-Component\-Base}}
+\index{A\-Component\-Base@{A\-Component\-Base}!AComponentBase@{A\-Component\-Base}}
+\subsubsection[{A\-Component\-Base}]{\setlength{\rightskip}{0pt plus 5cm}A\-Component\-Base\-::\-A\-Component\-Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classAComponentBase_abd260020036bda6e1864d7730aacc6c8}
+\index{A\-Component\-Base@{A\-Component\-Base}!A\-Component\-Base@{A\-Component\-Base}}
+\index{A\-Component\-Base@{A\-Component\-Base}!AComponentBase@{A\-Component\-Base}}
+\subsubsection[{A\-Component\-Base}]{\setlength{\rightskip}{0pt plus 5cm}A\-Component\-Base\-::\-A\-Component\-Base (
+\begin{DoxyParamCaption}
+\item[{const {\bf A\-Component\-Base} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classAComponentBase_ab13f42da0f41f57c754cd37a83e87e1d}
+\index{A\-Component\-Base@{A\-Component\-Base}!$\sim$\-A\-Component\-Base@{$\sim$\-A\-Component\-Base}}
+\index{$\sim$\-A\-Component\-Base@{$\sim$\-A\-Component\-Base}!AComponentBase@{A\-Component\-Base}}
+\subsubsection[{$\sim$\-A\-Component\-Base}]{\setlength{\rightskip}{0pt plus 5cm}virtual A\-Component\-Base\-::$\sim$\-A\-Component\-Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}\label{classAComponentBase_a192a3e923f798bcafce8768f1d7802d0}
+
+
+\subsection{Member Function Documentation}
+\index{A\-Component\-Base@{A\-Component\-Base}!init@{init}}
+\index{init@{init}!AComponentBase@{A\-Component\-Base}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}virtual void A\-Component\-Base\-::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classAComponentBase_a4999e6118c560dbea7866da0c5155071}
+
+
+Brief Abstract method to initialize the comopnent. 
+
+\index{A\-Component\-Base@{A\-Component\-Base}!operator=@{operator=}}
+\index{operator=@{operator=}!AComponentBase@{A\-Component\-Base}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\-Component\-Base}\& A\-Component\-Base\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf A\-Component\-Base} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classAComponentBase_a13e20312e6436524b473bd5c9125580a}
+\index{A\-Component\-Base@{A\-Component\-Base}!run@{run}}
+\index{run@{run}!AComponentBase@{A\-Component\-Base}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}virtual void A\-Component\-Base\-::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classAComponentBase_a6d8a951a3d3eaf664841e75935c62d8e}
+
+
+Brief Abstract method to run the component. This function should never return. 
+
+
+
+\subsection{Member Data Documentation}
+\index{A\-Component\-Base@{A\-Component\-Base}!m\-Rx\-Queue@{m\-Rx\-Queue}}
+\index{m\-Rx\-Queue@{m\-Rx\-Queue}!AComponentBase@{A\-Component\-Base}}
+\subsubsection[{m\-Rx\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-Queue}$<${\bf Config\-::\-Queue\-Size}$>$\& A\-Component\-Base\-::m\-Rx\-Queue\hspace{0.3cm}{\ttfamily [protected]}}\label{classAComponentBase_aa245688230760f423572ce06388fdf0f}
+\index{A\-Component\-Base@{A\-Component\-Base}!m\-Tx\-Queue@{m\-Tx\-Queue}}
+\index{m\-Tx\-Queue@{m\-Tx\-Queue}!AComponentBase@{A\-Component\-Base}}
+\subsubsection[{m\-Tx\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-Queue}$<${\bf Config\-::\-Queue\-Size}$>$\& A\-Component\-Base\-::m\-Tx\-Queue\hspace{0.3cm}{\ttfamily [protected]}}\label{classAComponentBase_a7119bbb290dae26369754405ba78e2a0}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Basic/include/{\bf A\-Component\-Base.\-h}\item 
+Basic/source/{\bf A\-Component\-Base.\-cpp}\end{DoxyCompactItemize}

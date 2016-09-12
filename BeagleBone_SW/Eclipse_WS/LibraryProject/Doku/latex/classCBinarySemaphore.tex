@@ -1,0 +1,111 @@
+\section{C\-Binary\-Semaphore Class Reference}
+\label{classCBinarySemaphore}\index{C\-Binary\-Semaphore@{C\-Binary\-Semaphore}}
+
+
+{\ttfamily \#include $<$C\-Binary\-Semaphore.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf take} (bool wait\-Forever)
+\item 
+void {\bf give} ()
+\item 
+{\bf C\-Binary\-Semaphore} (bool is\-Full, bool is\-Process\-Shared)
+\item 
+{\bf C\-Binary\-Semaphore} ()=delete
+\item 
+{\bf C\-Binary\-Semaphore} (const {\bf C\-Binary\-Semaphore} \&)=delete
+\item 
+{\bf C\-Binary\-Semaphore} \& {\bf operator=} (const {\bf C\-Binary\-Semaphore} \&)=delete
+\item 
+{\bf $\sim$\-C\-Binary\-Semaphore} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+pthread\-\_\-mutex\-\_\-t {\bf m\-Mutex}
+\item 
+pthread\-\_\-cond\-\_\-t {\bf m\-Condition}
+\item 
+{\bf Int32} {\bf m\-Counter}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{C\-Binary\-Semaphore@{C\-Binary\-Semaphore}!C\-Binary\-Semaphore@{C\-Binary\-Semaphore}}
+\index{C\-Binary\-Semaphore@{C\-Binary\-Semaphore}!CBinarySemaphore@{C\-Binary\-Semaphore}}
+\subsubsection[{C\-Binary\-Semaphore}]{\setlength{\rightskip}{0pt plus 5cm}C\-Binary\-Semaphore\-::\-C\-Binary\-Semaphore (
+\begin{DoxyParamCaption}
+\item[{bool}]{is\-Full, }
+\item[{bool}]{is\-Process\-Shared}
+\end{DoxyParamCaption}
+)}\label{classCBinarySemaphore_a2c8f8b8b51df4db9f84e37a8e10dedec}
+
+
+Here is the call graph for this function\-:
+
+
+\index{C\-Binary\-Semaphore@{C\-Binary\-Semaphore}!C\-Binary\-Semaphore@{C\-Binary\-Semaphore}}
+\index{C\-Binary\-Semaphore@{C\-Binary\-Semaphore}!CBinarySemaphore@{C\-Binary\-Semaphore}}
+\subsubsection[{C\-Binary\-Semaphore}]{\setlength{\rightskip}{0pt plus 5cm}C\-Binary\-Semaphore\-::\-C\-Binary\-Semaphore (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classCBinarySemaphore_a3b341636277260e97dafb79b340177d9}
+\index{C\-Binary\-Semaphore@{C\-Binary\-Semaphore}!C\-Binary\-Semaphore@{C\-Binary\-Semaphore}}
+\index{C\-Binary\-Semaphore@{C\-Binary\-Semaphore}!CBinarySemaphore@{C\-Binary\-Semaphore}}
+\subsubsection[{C\-Binary\-Semaphore}]{\setlength{\rightskip}{0pt plus 5cm}C\-Binary\-Semaphore\-::\-C\-Binary\-Semaphore (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Binary\-Semaphore} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classCBinarySemaphore_a785f96f5a9316273586468730fda597e}
+\index{C\-Binary\-Semaphore@{C\-Binary\-Semaphore}!$\sim$\-C\-Binary\-Semaphore@{$\sim$\-C\-Binary\-Semaphore}}
+\index{$\sim$\-C\-Binary\-Semaphore@{$\sim$\-C\-Binary\-Semaphore}!CBinarySemaphore@{C\-Binary\-Semaphore}}
+\subsubsection[{$\sim$\-C\-Binary\-Semaphore}]{\setlength{\rightskip}{0pt plus 5cm}C\-Binary\-Semaphore\-::$\sim$\-C\-Binary\-Semaphore (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCBinarySemaphore_ad37b61eae138bc95d330ff9b0b03a738}
+
+
+\subsection{Member Function Documentation}
+\index{C\-Binary\-Semaphore@{C\-Binary\-Semaphore}!give@{give}}
+\index{give@{give}!CBinarySemaphore@{C\-Binary\-Semaphore}}
+\subsubsection[{give}]{\setlength{\rightskip}{0pt plus 5cm}void C\-Binary\-Semaphore\-::give (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classCBinarySemaphore_a392b97c87024a18e0b039cce3f0938ac}
+\index{C\-Binary\-Semaphore@{C\-Binary\-Semaphore}!operator=@{operator=}}
+\index{operator=@{operator=}!CBinarySemaphore@{C\-Binary\-Semaphore}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-Binary\-Semaphore}\& C\-Binary\-Semaphore\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\-Binary\-Semaphore} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classCBinarySemaphore_af129dc201b4de6e319a4b49f8ec71ed0}
+\index{C\-Binary\-Semaphore@{C\-Binary\-Semaphore}!take@{take}}
+\index{take@{take}!CBinarySemaphore@{C\-Binary\-Semaphore}}
+\subsubsection[{take}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Binary\-Semaphore\-::take (
+\begin{DoxyParamCaption}
+\item[{bool}]{wait\-Forever}
+\end{DoxyParamCaption}
+)}\label{classCBinarySemaphore_a33d012e0f0a6ae63dc131079359a642f}
+
+
+\subsection{Member Data Documentation}
+\index{C\-Binary\-Semaphore@{C\-Binary\-Semaphore}!m\-Condition@{m\-Condition}}
+\index{m\-Condition@{m\-Condition}!CBinarySemaphore@{C\-Binary\-Semaphore}}
+\subsubsection[{m\-Condition}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-cond\-\_\-t C\-Binary\-Semaphore\-::m\-Condition\hspace{0.3cm}{\ttfamily [private]}}\label{classCBinarySemaphore_a73fe97c07043ce97dfb1e73483a2918f}
+\index{C\-Binary\-Semaphore@{C\-Binary\-Semaphore}!m\-Counter@{m\-Counter}}
+\index{m\-Counter@{m\-Counter}!CBinarySemaphore@{C\-Binary\-Semaphore}}
+\subsubsection[{m\-Counter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int32} C\-Binary\-Semaphore\-::m\-Counter\hspace{0.3cm}{\ttfamily [private]}}\label{classCBinarySemaphore_a356dbc03d049fceb01e8370dc9cbfc2e}
+\index{C\-Binary\-Semaphore@{C\-Binary\-Semaphore}!m\-Mutex@{m\-Mutex}}
+\index{m\-Mutex@{m\-Mutex}!CBinarySemaphore@{C\-Binary\-Semaphore}}
+\subsubsection[{m\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}pthread\-\_\-mutex\-\_\-t C\-Binary\-Semaphore\-::m\-Mutex\hspace{0.3cm}{\ttfamily [private]}}\label{classCBinarySemaphore_a7bed0955ec8f413860dd1c8ffa6bdbf4}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Basic/include/{\bf C\-Binary\-Semaphore.\-h}\item 
+Basic/source/{\bf C\-Binary\-Semaphore.\-cpp}\end{DoxyCompactItemize}

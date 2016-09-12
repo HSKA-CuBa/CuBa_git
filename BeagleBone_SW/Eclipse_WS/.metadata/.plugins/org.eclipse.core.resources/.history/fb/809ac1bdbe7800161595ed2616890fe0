@@ -1,0 +1,41 @@
+#ifndef CMESSAGE_H
+#define CMESSAGE_H
+#include "Global.h"
+#include "EMessageType.h"
+#include "ECommandType.h"
+#include "EDataType.h"
+#include "CSensorData.h"
+#include "CFilterData.h"
+#include "CMotorData.h"
+
+class CMessage
+{
+public:
+
+public:
+	CMessage();		/// < Brief Standard-Ctor to create invalid Messages. Necessary to initialize a queue.
+	CMessage(EDataType dataType, CSensorData data);	///< Brief Create a Data-Message with Sensor-Values.
+	CMessage(EDataType dataType, CMotorData data);	///< Brief Create a Data-Message with Motor-Values.
+	CMessage(EDataType dataType, CFilterData data);	///< Brief Create a Data-Message with Filter-Values.
+private:
+	struct
+	{
+		UInt8 mSenderID;
+		UInt8 mReceiverID;
+		EMessageType mMsgType;
+		union
+		{
+			ECommandType mCommandType;
+			EDataType mDataType;
+		};
+	} mHeader;
+	union
+	{
+		UInt8 mRawData[16];
+		CSensorData mSensorData;
+		CFilterData mFilterData;
+		CMotorData mMotorData;
+	} mData;
+};
+
+#endif

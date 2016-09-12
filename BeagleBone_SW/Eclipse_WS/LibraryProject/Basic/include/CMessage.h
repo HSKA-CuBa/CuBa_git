@@ -1,19 +1,43 @@
+//12.9.16, Michal Meindl
 #ifndef CMESSAGE_H
 #define CMESSAGE_H
 #include "Global.h"
+#include "EMessageType.h"
+#include "ECommandType.h"
+#include "EDataType.h"
+#include "CSensorData.h"
+#include "CFilterData.h"
+#include "CMotorData.h"
 
+///	Container-Class to pass Data between processes
 class CMessage
 {
 public:
-	float getData();
-	void setData(float);
+
 public:
-	CMessage();
-	CMessage(const CMessage&) = delete;
-	CMessage& operator=(const CMessage&) = default;
-	~CMessage() = default;
+	CMessage();		///< Standard-Ctor to create invalid Messages. Necessary to initialize a queue.
+	CMessage(EDataType dataType, CSensorData data);	///< Create a Data-Message with Sensor-Values.
+	CMessage(EDataType dataType, CMotorData data);	///< Create a Data-Message with Motor-Values.
+	CMessage(EDataType dataType, CFilterData data);	///< Create a Data-Message with Filter-Values.
 private:
-	float mData;
+	struct
+	{
+		UInt8 mSenderID;			///< To be replaced by a proper ID-Enumeration.
+		UInt8 mReceiverID;			///< To be replaced by a proper ID-Enumeration.
+		EMessageType mMsgType;		///< Enumeration-Value which specifys the message type.
+		union
+		{
+			ECommandType mCommandType;	///< Enumeration-Value which specifys the command type.
+			EDataType mDataType;		///< Enumeration-Value which specifys the data type.
+		};
+	} mHeader;							///< Structure which contains the Message-Header.
+	union
+	{
+		UInt8 mRawData[16];				///< Byte-Array to write the data into a stream.
+		CSensorData mSensorData;		///< Container to hold sensor data.
+		CFilterData mFilterData;		///< Container to hold filter data.
+		CMotorData mMotorData;			///< Container to hold motor data.
+	} mData;
 };
 
 #endif

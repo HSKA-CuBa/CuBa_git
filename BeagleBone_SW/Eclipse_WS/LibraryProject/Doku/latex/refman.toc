@@ -1,0 +1,186 @@
+\contentsline {chapter}{\numberline {1}Namespace Index}{1}
+\contentsline {section}{\numberline {1.1}Namespace List}{1}
+\contentsline {chapter}{\numberline {2}Class Index}{3}
+\contentsline {section}{\numberline {2.1}Class List}{3}
+\contentsline {chapter}{\numberline {3}File Index}{5}
+\contentsline {section}{\numberline {3.1}File List}{5}
+\contentsline {chapter}{\numberline {4}Namespace Documentation}{7}
+\contentsline {section}{\numberline {4.1}Config Namespace Reference}{7}
+\contentsline {subsection}{\numberline {4.1.1}Variable Documentation}{7}
+\contentsline {subsubsection}{\numberline {4.1.1.1}Control\discretionary {-}{}{}S\discretionary {-}{}{}H\discretionary {-}{}{}M}{7}
+\contentsline {subsubsection}{\numberline {4.1.1.2}Queue\discretionary {-}{}{}Size}{7}
+\contentsline {subsubsection}{\numberline {4.1.1.3}Server\discretionary {-}{}{}S\discretionary {-}{}{}H\discretionary {-}{}{}M}{7}
+\contentsline {chapter}{\numberline {5}Class Documentation}{9}
+\contentsline {section}{\numberline {5.1}A\discretionary {-}{}{}Component\discretionary {-}{}{}Base Class Reference}{9}
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{9}
+\contentsline {subsection}{\numberline {5.1.2}Constructor \& Destructor Documentation}{9}
+\contentsline {subsubsection}{\numberline {5.1.2.1}A\discretionary {-}{}{}Component\discretionary {-}{}{}Base}{9}
+\contentsline {subsubsection}{\numberline {5.1.2.2}A\discretionary {-}{}{}Component\discretionary {-}{}{}Base}{9}
+\contentsline {subsubsection}{\numberline {5.1.2.3}A\discretionary {-}{}{}Component\discretionary {-}{}{}Base}{9}
+\contentsline {subsubsection}{\numberline {5.1.2.4}$\sim $\discretionary {-}{}{}A\discretionary {-}{}{}Component\discretionary {-}{}{}Base}{9}
+\contentsline {subsection}{\numberline {5.1.3}Member Function Documentation}{9}
+\contentsline {subsubsection}{\numberline {5.1.3.1}init}{9}
+\contentsline {subsubsection}{\numberline {5.1.3.2}operator=}{9}
+\contentsline {subsubsection}{\numberline {5.1.3.3}run}{9}
+\contentsline {subsection}{\numberline {5.1.4}Member Data Documentation}{9}
+\contentsline {subsubsection}{\numberline {5.1.4.1}m\discretionary {-}{}{}Rx\discretionary {-}{}{}Queue}{9}
+\contentsline {subsubsection}{\numberline {5.1.4.2}m\discretionary {-}{}{}Tx\discretionary {-}{}{}Queue}{10}
+\contentsline {section}{\numberline {5.2}C\discretionary {-}{}{}Binary\discretionary {-}{}{}Semaphore Class Reference}{10}
+\contentsline {subsection}{\numberline {5.2.1}Constructor \& Destructor Documentation}{10}
+\contentsline {subsubsection}{\numberline {5.2.1.1}C\discretionary {-}{}{}Binary\discretionary {-}{}{}Semaphore}{10}
+\contentsline {subsubsection}{\numberline {5.2.1.2}C\discretionary {-}{}{}Binary\discretionary {-}{}{}Semaphore}{10}
+\contentsline {subsubsection}{\numberline {5.2.1.3}C\discretionary {-}{}{}Binary\discretionary {-}{}{}Semaphore}{10}
+\contentsline {subsubsection}{\numberline {5.2.1.4}$\sim $\discretionary {-}{}{}C\discretionary {-}{}{}Binary\discretionary {-}{}{}Semaphore}{10}
+\contentsline {subsection}{\numberline {5.2.2}Member Function Documentation}{10}
+\contentsline {subsubsection}{\numberline {5.2.2.1}give}{10}
+\contentsline {subsubsection}{\numberline {5.2.2.2}operator=}{10}
+\contentsline {subsubsection}{\numberline {5.2.2.3}take}{10}
+\contentsline {subsection}{\numberline {5.2.3}Member Data Documentation}{10}
+\contentsline {subsubsection}{\numberline {5.2.3.1}m\discretionary {-}{}{}Condition}{10}
+\contentsline {subsubsection}{\numberline {5.2.3.2}m\discretionary {-}{}{}Counter}{10}
+\contentsline {subsubsection}{\numberline {5.2.3.3}m\discretionary {-}{}{}Mutex}{10}
+\contentsline {section}{\numberline {5.3}C\discretionary {-}{}{}Counting\discretionary {-}{}{}Semaphore Class Reference}{10}
+\contentsline {subsection}{\numberline {5.3.1}Constructor \& Destructor Documentation}{11}
+\contentsline {subsubsection}{\numberline {5.3.1.1}C\discretionary {-}{}{}Counting\discretionary {-}{}{}Semaphore}{11}
+\contentsline {subsubsection}{\numberline {5.3.1.2}C\discretionary {-}{}{}Counting\discretionary {-}{}{}Semaphore}{11}
+\contentsline {subsubsection}{\numberline {5.3.1.3}C\discretionary {-}{}{}Counting\discretionary {-}{}{}Semaphore}{11}
+\contentsline {subsubsection}{\numberline {5.3.1.4}$\sim $\discretionary {-}{}{}C\discretionary {-}{}{}Counting\discretionary {-}{}{}Semaphore}{11}
+\contentsline {subsection}{\numberline {5.3.2}Member Function Documentation}{11}
+\contentsline {subsubsection}{\numberline {5.3.2.1}give}{11}
+\contentsline {subsubsection}{\numberline {5.3.2.2}take}{11}
+\contentsline {subsection}{\numberline {5.3.3}Member Data Documentation}{11}
+\contentsline {subsubsection}{\numberline {5.3.3.1}m\discretionary {-}{}{}Condition}{11}
+\contentsline {subsubsection}{\numberline {5.3.3.2}m\discretionary {-}{}{}Counter}{11}
+\contentsline {subsubsection}{\numberline {5.3.3.3}m\discretionary {-}{}{}Mutex}{11}
+\contentsline {section}{\numberline {5.4}C\discretionary {-}{}{}Filter\discretionary {-}{}{}Data Class Reference}{11}
+\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{11}
+\contentsline {subsection}{\numberline {5.4.2}Member Data Documentation}{11}
+\contentsline {subsubsection}{\numberline {5.4.2.1}m\discretionary {-}{}{}Phi}{11}
+\contentsline {subsubsection}{\numberline {5.4.2.2}m\discretionary {-}{}{}Phi\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}d}{11}
+\contentsline {subsubsection}{\numberline {5.4.2.3}m\discretionary {-}{}{}Phi\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}dd}{11}
+\contentsline {subsubsection}{\numberline {5.4.2.4}m\discretionary {-}{}{}Time}{11}
+\contentsline {section}{\numberline {5.5}C\discretionary {-}{}{}Message Class Reference}{11}
+\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{12}
+\contentsline {subsection}{\numberline {5.5.2}Constructor \& Destructor Documentation}{12}
+\contentsline {subsubsection}{\numberline {5.5.2.1}C\discretionary {-}{}{}Message}{12}
+\contentsline {subsubsection}{\numberline {5.5.2.2}C\discretionary {-}{}{}Message}{12}
+\contentsline {subsubsection}{\numberline {5.5.2.3}C\discretionary {-}{}{}Message}{12}
+\contentsline {subsubsection}{\numberline {5.5.2.4}C\discretionary {-}{}{}Message}{12}
+\contentsline {subsection}{\numberline {5.5.3}Member Data Documentation}{12}
+\contentsline {subsubsection}{\numberline {5.5.3.1}m\discretionary {-}{}{}Command\discretionary {-}{}{}Type}{12}
+\contentsline {subsubsection}{\numberline {5.5.3.2}m\discretionary {-}{}{}Data}{12}
+\contentsline {subsubsection}{\numberline {5.5.3.3}m\discretionary {-}{}{}Data\discretionary {-}{}{}Type}{12}
+\contentsline {subsubsection}{\numberline {5.5.3.4}m\discretionary {-}{}{}Filter\discretionary {-}{}{}Data}{12}
+\contentsline {subsubsection}{\numberline {5.5.3.5}m\discretionary {-}{}{}Header}{13}
+\contentsline {subsubsection}{\numberline {5.5.3.6}m\discretionary {-}{}{}Motor\discretionary {-}{}{}Data}{13}
+\contentsline {subsubsection}{\numberline {5.5.3.7}m\discretionary {-}{}{}Msg\discretionary {-}{}{}Type}{13}
+\contentsline {subsubsection}{\numberline {5.5.3.8}m\discretionary {-}{}{}Raw\discretionary {-}{}{}Data}{13}
+\contentsline {subsubsection}{\numberline {5.5.3.9}m\discretionary {-}{}{}Receiver\discretionary {-}{}{}I\discretionary {-}{}{}D}{13}
+\contentsline {subsubsection}{\numberline {5.5.3.10}m\discretionary {-}{}{}Sender\discretionary {-}{}{}I\discretionary {-}{}{}D}{13}
+\contentsline {subsubsection}{\numberline {5.5.3.11}m\discretionary {-}{}{}Sensor\discretionary {-}{}{}Data}{13}
+\contentsline {section}{\numberline {5.6}C\discretionary {-}{}{}Motor\discretionary {-}{}{}Data Class Reference}{13}
+\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{13}
+\contentsline {subsection}{\numberline {5.6.2}Constructor \& Destructor Documentation}{13}
+\contentsline {subsubsection}{\numberline {5.6.2.1}C\discretionary {-}{}{}Motor\discretionary {-}{}{}Data}{13}
+\contentsline {subsubsection}{\numberline {5.6.2.2}C\discretionary {-}{}{}Motor\discretionary {-}{}{}Data}{13}
+\contentsline {subsubsection}{\numberline {5.6.2.3}$\sim $\discretionary {-}{}{}C\discretionary {-}{}{}Motor\discretionary {-}{}{}Data}{13}
+\contentsline {subsection}{\numberline {5.6.3}Member Function Documentation}{13}
+\contentsline {subsubsection}{\numberline {5.6.3.1}operator=}{13}
+\contentsline {subsection}{\numberline {5.6.4}Member Data Documentation}{13}
+\contentsline {subsubsection}{\numberline {5.6.4.1}m\discretionary {-}{}{}Psi\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}dd}{13}
+\contentsline {subsubsection}{\numberline {5.6.4.2}m\discretionary {-}{}{}Psi\discretionary {-}{}{}\_\discretionary {-}{}{}raw\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}dd}{13}
+\contentsline {subsubsection}{\numberline {5.6.4.3}m\discretionary {-}{}{}Time}{13}
+\contentsline {subsubsection}{\numberline {5.6.4.4}m\discretionary {-}{}{}Torque}{14}
+\contentsline {section}{\numberline {5.7}C\discretionary {-}{}{}Mutex Class Reference}{14}
+\contentsline {subsection}{\numberline {5.7.1}Constructor \& Destructor Documentation}{14}
+\contentsline {subsubsection}{\numberline {5.7.1.1}C\discretionary {-}{}{}Mutex}{14}
+\contentsline {subsubsection}{\numberline {5.7.1.2}C\discretionary {-}{}{}Mutex}{14}
+\contentsline {subsubsection}{\numberline {5.7.1.3}$\sim $\discretionary {-}{}{}C\discretionary {-}{}{}Mutex}{14}
+\contentsline {subsection}{\numberline {5.7.2}Member Function Documentation}{14}
+\contentsline {subsubsection}{\numberline {5.7.2.1}give}{14}
+\contentsline {subsubsection}{\numberline {5.7.2.2}operator=}{14}
+\contentsline {subsubsection}{\numberline {5.7.2.3}take}{14}
+\contentsline {subsection}{\numberline {5.7.3}Member Data Documentation}{14}
+\contentsline {subsubsection}{\numberline {5.7.3.1}m\discretionary {-}{}{}Mutex}{14}
+\contentsline {section}{\numberline {5.8}C\discretionary {-}{}{}Sensor\discretionary {-}{}{}Data Class Reference}{14}
+\contentsline {subsection}{\numberline {5.8.1}Detailed Description}{15}
+\contentsline {subsection}{\numberline {5.8.2}Constructor \& Destructor Documentation}{15}
+\contentsline {subsubsection}{\numberline {5.8.2.1}C\discretionary {-}{}{}Sensor\discretionary {-}{}{}Data}{15}
+\contentsline {subsubsection}{\numberline {5.8.2.2}C\discretionary {-}{}{}Sensor\discretionary {-}{}{}Data}{15}
+\contentsline {subsubsection}{\numberline {5.8.2.3}$\sim $\discretionary {-}{}{}C\discretionary {-}{}{}Sensor\discretionary {-}{}{}Data}{15}
+\contentsline {subsection}{\numberline {5.8.3}Member Function Documentation}{15}
+\contentsline {subsubsection}{\numberline {5.8.3.1}operator=}{15}
+\contentsline {subsection}{\numberline {5.8.4}Member Data Documentation}{15}
+\contentsline {subsubsection}{\numberline {5.8.4.1}m\discretionary {-}{}{}Phi1\discretionary {-}{}{}\_\discretionary {-}{}{}raw\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}dd}{15}
+\contentsline {subsubsection}{\numberline {5.8.4.2}m\discretionary {-}{}{}Phi2\discretionary {-}{}{}\_\discretionary {-}{}{}raw\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}dd}{15}
+\contentsline {subsubsection}{\numberline {5.8.4.3}m\discretionary {-}{}{}Time}{15}
+\contentsline {subsubsection}{\numberline {5.8.4.4}m\discretionary {-}{}{}X1\discretionary {-}{}{}\_\discretionary {-}{}{}raw\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}dd}{15}
+\contentsline {subsubsection}{\numberline {5.8.4.5}m\discretionary {-}{}{}X2\discretionary {-}{}{}\_\discretionary {-}{}{}raw\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}dd}{15}
+\contentsline {subsubsection}{\numberline {5.8.4.6}m\discretionary {-}{}{}Y1\discretionary {-}{}{}\_\discretionary {-}{}{}raw\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}dd}{15}
+\contentsline {subsubsection}{\numberline {5.8.4.7}m\discretionary {-}{}{}Y2\discretionary {-}{}{}\_\discretionary {-}{}{}raw\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}\_\discretionary {-}{}{}dd}{15}
+\contentsline {section}{\numberline {5.9}T\discretionary {-}{}{}Queue$<$ size $>$ Class Template Reference}{15}
+\contentsline {subsection}{\numberline {5.9.1}Constructor \& Destructor Documentation}{16}
+\contentsline {subsubsection}{\numberline {5.9.1.1}T\discretionary {-}{}{}Queue}{16}
+\contentsline {subsubsection}{\numberline {5.9.1.2}T\discretionary {-}{}{}Queue}{16}
+\contentsline {subsubsection}{\numberline {5.9.1.3}$\sim $\discretionary {-}{}{}T\discretionary {-}{}{}Queue}{16}
+\contentsline {subsection}{\numberline {5.9.2}Member Function Documentation}{16}
+\contentsline {subsubsection}{\numberline {5.9.2.1}add\discretionary {-}{}{}Message}{16}
+\contentsline {subsubsection}{\numberline {5.9.2.2}get\discretionary {-}{}{}Message}{16}
+\contentsline {subsubsection}{\numberline {5.9.2.3}get\discretionary {-}{}{}Num\discretionary {-}{}{}Of\discretionary {-}{}{}Byte\discretionary {-}{}{}Needed}{16}
+\contentsline {subsubsection}{\numberline {5.9.2.4}operator=}{16}
+\contentsline {subsection}{\numberline {5.9.3}Member Data Documentation}{16}
+\contentsline {subsubsection}{\numberline {5.9.3.1}m\discretionary {-}{}{}Access\discretionary {-}{}{}Mutex}{16}
+\contentsline {subsubsection}{\numberline {5.9.3.2}m\discretionary {-}{}{}Head\discretionary {-}{}{}Index}{16}
+\contentsline {subsubsection}{\numberline {5.9.3.3}m\discretionary {-}{}{}Queue}{16}
+\contentsline {subsubsection}{\numberline {5.9.3.4}m\discretionary {-}{}{}Read\discretionary {-}{}{}Sem}{16}
+\contentsline {subsubsection}{\numberline {5.9.3.5}m\discretionary {-}{}{}Tail\discretionary {-}{}{}Index}{16}
+\contentsline {subsubsection}{\numberline {5.9.3.6}m\discretionary {-}{}{}Write\discretionary {-}{}{}Sem}{16}
+\contentsline {chapter}{\numberline {6}File Documentation}{17}
+\contentsline {section}{\numberline {6.1}Basic/include/\discretionary {-}{}{}A\discretionary {-}{}{}Component\discretionary {-}{}{}Base.h File Reference}{17}
+\contentsline {section}{\numberline {6.2}Basic/include/\discretionary {-}{}{}Assertion.h File Reference}{17}
+\contentsline {subsection}{\numberline {6.2.1}Function Documentation}{17}
+\contentsline {subsubsection}{\numberline {6.2.1.1}s\discretionary {-}{}{}Assertion}{17}
+\contentsline {section}{\numberline {6.3}Basic/include/\discretionary {-}{}{}C\discretionary {-}{}{}Binary\discretionary {-}{}{}Semaphore.h File Reference}{17}
+\contentsline {section}{\numberline {6.4}Basic/include/\discretionary {-}{}{}C\discretionary {-}{}{}Counting\discretionary {-}{}{}Semaphore.h File Reference}{17}
+\contentsline {section}{\numberline {6.5}Basic/include/\discretionary {-}{}{}C\discretionary {-}{}{}Filter\discretionary {-}{}{}Data.h File Reference}{17}
+\contentsline {section}{\numberline {6.6}Basic/include/\discretionary {-}{}{}C\discretionary {-}{}{}Message.h File Reference}{18}
+\contentsline {section}{\numberline {6.7}Basic/include/\discretionary {-}{}{}C\discretionary {-}{}{}Motor\discretionary {-}{}{}Data.h File Reference}{18}
+\contentsline {section}{\numberline {6.8}Basic/include/\discretionary {-}{}{}C\discretionary {-}{}{}Mutex.h File Reference}{18}
+\contentsline {section}{\numberline {6.9}Basic/include/\discretionary {-}{}{}Config.h File Reference}{18}
+\contentsline {section}{\numberline {6.10}Basic/include/\discretionary {-}{}{}C\discretionary {-}{}{}Sensor\discretionary {-}{}{}Data.h File Reference}{18}
+\contentsline {section}{\numberline {6.11}Basic/include/\discretionary {-}{}{}E\discretionary {-}{}{}Command\discretionary {-}{}{}Type.h File Reference}{18}
+\contentsline {subsection}{\numberline {6.11.1}Enumeration Type Documentation}{18}
+\contentsline {subsubsection}{\numberline {6.11.1.1}E\discretionary {-}{}{}Command\discretionary {-}{}{}Type}{19}
+\contentsline {section}{\numberline {6.12}Basic/include/\discretionary {-}{}{}E\discretionary {-}{}{}Data\discretionary {-}{}{}Type.h File Reference}{19}
+\contentsline {subsection}{\numberline {6.12.1}Enumeration Type Documentation}{19}
+\contentsline {subsubsection}{\numberline {6.12.1.1}E\discretionary {-}{}{}Data\discretionary {-}{}{}Type}{19}
+\contentsline {section}{\numberline {6.13}Basic/include/\discretionary {-}{}{}E\discretionary {-}{}{}Message\discretionary {-}{}{}Type.h File Reference}{19}
+\contentsline {subsection}{\numberline {6.13.1}Enumeration Type Documentation}{19}
+\contentsline {subsubsection}{\numberline {6.13.1.1}E\discretionary {-}{}{}Message\discretionary {-}{}{}Type}{19}
+\contentsline {section}{\numberline {6.14}Basic/include/\discretionary {-}{}{}F\discretionary {-}{}{}W\discretionary {-}{}{}Memory.h File Reference}{19}
+\contentsline {subsection}{\numberline {6.14.1}Function Documentation}{19}
+\contentsline {subsubsection}{\numberline {6.14.1.1}c\discretionary {-}{}{}Make\discretionary {-}{}{}Alignment\discretionary {-}{}{}Size}{19}
+\contentsline {section}{\numberline {6.15}Basic/include/\discretionary {-}{}{}Global.h File Reference}{19}
+\contentsline {subsection}{\numberline {6.15.1}Typedef Documentation}{20}
+\contentsline {subsubsection}{\numberline {6.15.1.1}Bool8}{20}
+\contentsline {subsubsection}{\numberline {6.15.1.2}Double64}{20}
+\contentsline {subsubsection}{\numberline {6.15.1.3}Float32}{20}
+\contentsline {subsubsection}{\numberline {6.15.1.4}Int16}{20}
+\contentsline {subsubsection}{\numberline {6.15.1.5}Int32}{20}
+\contentsline {subsubsection}{\numberline {6.15.1.6}Int64}{20}
+\contentsline {subsubsection}{\numberline {6.15.1.7}Int8}{20}
+\contentsline {subsubsection}{\numberline {6.15.1.8}U\discretionary {-}{}{}Int16}{20}
+\contentsline {subsubsection}{\numberline {6.15.1.9}U\discretionary {-}{}{}Int32}{20}
+\contentsline {subsubsection}{\numberline {6.15.1.10}U\discretionary {-}{}{}Int64}{20}
+\contentsline {subsubsection}{\numberline {6.15.1.11}U\discretionary {-}{}{}Int8}{20}
+\contentsline {section}{\numberline {6.16}Basic/include/\discretionary {-}{}{}T\discretionary {-}{}{}Queue.h File Reference}{20}
+\contentsline {section}{\numberline {6.17}Basic/source/\discretionary {-}{}{}A\discretionary {-}{}{}Component\discretionary {-}{}{}Base.cpp File Reference}{20}
+\contentsline {section}{\numberline {6.18}Basic/source/\discretionary {-}{}{}Assertion.cpp File Reference}{20}
+\contentsline {subsection}{\numberline {6.18.1}Function Documentation}{20}
+\contentsline {subsubsection}{\numberline {6.18.1.1}s\discretionary {-}{}{}Assertion}{20}
+\contentsline {section}{\numberline {6.19}Basic/source/\discretionary {-}{}{}C\discretionary {-}{}{}Binary\discretionary {-}{}{}Semaphore.cpp File Reference}{20}
+\contentsline {section}{\numberline {6.20}Basic/source/\discretionary {-}{}{}C\discretionary {-}{}{}Counting\discretionary {-}{}{}Semaphore.cpp File Reference}{21}
+\contentsline {section}{\numberline {6.21}Basic/source/\discretionary {-}{}{}C\discretionary {-}{}{}Message.cpp File Reference}{21}
+\contentsline {section}{\numberline {6.22}Basic/source/\discretionary {-}{}{}C\discretionary {-}{}{}Mutex.cpp File Reference}{21}
+\contentsline {subsection}{\numberline {6.22.1}Function Documentation}{21}
+\contentsline {subsubsection}{\numberline {6.22.1.1}my\discretionary {-}{}{}Assertion}{21}

@@ -1,0 +1,19 @@
+//12.9.16, Michael Meindl
+//Container-Class for Kalman-Filter-Data
+#ifndef CFILTERDATA_H
+#define CFILTERDATA_H
+#include "Global.h"
+
+class CFilterData
+{
+public:
+
+
+private:
+	Float32 mTime;
+	Float32 mPhi;
+	Float32 mPhi__d;
+	Float32 mPhi__dd;
+};
+
+#endif

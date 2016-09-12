@@ -1,0 +1,31 @@
+#ifndef CMESSAGE_H
+#define CMESSAGE_H
+#include "Global.h"
+#include "EMessageType.h"
+#include "ECommandType.h"
+#include "EDataType.h"
+
+class CMessage
+{
+public:
+
+public:
+	CMessage();
+	CMessage(const CMessage&) = delete;
+	CMessage& operator=(const CMessage&) = default;
+	~CMessage() = default;
+private:
+	struct
+	{
+		UInt8 mSenderID;
+		UInt8 mReceiverID;
+		EMessageType mMsgType;
+		union
+		{
+			ECommandType mCommandType;
+			EDataType mDataType;
+		};
+	} mHeader;
+};
+
+#endif

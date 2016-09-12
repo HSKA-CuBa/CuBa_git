@@ -1,0 +1,14 @@
+#include "CMPU6050.h"
+#include "CServer.h"
+#include <iostream>
+
+int main()
+{
+	CServer myServer;
+	std::cout << "Created the server!" << std::endl;
+	myServer.echo();
+	std::cout << "Shutdown..." << std::endl;
+	sleep(5);
+
+	return 0;
+}

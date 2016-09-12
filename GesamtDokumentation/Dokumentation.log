@@ -1,13 +1,15 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.17)  11 SEP 2016 14:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.31)  11 SEP 2016 22:41
 entering extended mode
-**./Dokumentation.tex
-(Dokumentation.tex
-LaTeX2e <2015/10/01> patch level 2
-Babel <3.9n> and hyphenation patterns for 69 languages loaded.
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo"
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Dokumentation.tex
+(./Dokumentation.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 4 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -21,51 +23,54 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2016/01/08 3.9n The Babel package
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2013/12/03 3.9h The Babel package
 
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg
-"
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-german\ngerman
-.ldf"
-Language: ngerman 2013/12/13 v2.7 German support for babel (new orthography)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-german\ngerman
-b.ldf"
-Language: ngermanb 2013/12/13 v2.7 German support for babel (new orthography)
+! Package babel Error: Unknown option `ngerman'. Either you misspelled it
+(babel)                or the language definition file ngerman.ldf was not foun
+d.
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2016/01/08 3.9n Babel common definitions
-\babel@savecnt=\count87
-\U@D=\dimen103
-)
-\l@naustrian = a dialect from \language\l@ngerman 
-\l@nswissgerman = a dialect from \language\l@ngerman 
-Package babel Info: Making " an active character on input line 88.
-))) ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.st
-y"
-Package: inputenc 2015/03/17 v1.2c Input encoding file
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.296 \ProcessOptions*
+                      
+Valid options are: shorthands=, KeepShorthandsActive,
+activeacute, activegrave, noconfigs, safe=, main=, math=
+headfoot=, strings=, config=, hyphenmap=, or a language name.
+
+
+! Package babel Error: You haven't specified a language option.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.329 ...ry to proceed from here, type x to quit.}
+                                                  
+You need to specify a language, either as a global option
+or as an optional argument to the \usepackage command;
+You shouldn't try to proceed from here, type x to quit.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
- ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
-   defining Unicode char U+00A0 (decimal 160)
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
-   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00BB (decimal 187)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C0 (decimal 192)
@@ -186,10 +191,6 @@ File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+016F (decimal 367)
    defining Unicode char U+0170 (decimal 368)
    defining Unicode char U+0171 (decimal 369)
-   defining Unicode char U+0174 (decimal 372)
-   defining Unicode char U+0175 (decimal 373)
-   defining Unicode char U+0176 (decimal 374)
-   defining Unicode char U+0177 (decimal 375)
    defining Unicode char U+0178 (decimal 376)
    defining Unicode char U+0179 (decimal 377)
    defining Unicode char U+017A (decimal 378)
@@ -197,10 +198,6 @@ File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+017C (decimal 380)
    defining Unicode char U+017D (decimal 381)
    defining Unicode char U+017E (decimal 382)
-   defining Unicode char U+0218 (decimal 536)
-   defining Unicode char U+0219 (decimal 537)
-   defining Unicode char U+021A (decimal 538)
-   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+200C (decimal 8204)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
@@ -219,12 +216,10 @@ File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
-   defining Unicode char U+00A0 (decimal 160)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
-   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00B8 (decimal 184)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C5 (decimal 197)
@@ -242,14 +237,6 @@ File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+0142 (decimal 322)
    defining Unicode char U+0152 (decimal 338)
    defining Unicode char U+0153 (decimal 339)
-   defining Unicode char U+0174 (decimal 372)
-   defining Unicode char U+0175 (decimal 373)
-   defining Unicode char U+0176 (decimal 374)
-   defining Unicode char U+0177 (decimal 375)
-   defining Unicode char U+0218 (decimal 536)
-   defining Unicode char U+0219 (decimal 537)
-   defining Unicode char U+021A (decimal 538)
-   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
    defining Unicode char U+2018 (decimal 8216)
@@ -260,8 +247,8 @@ File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -284,72 +271,60 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.st
-y"
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.st
-y"
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
- ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\graphics.cf
-g"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.de
-f"
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarerr
-.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.s
-ty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count88
+\Gread@gobject=\count87
 ))
-\Gin@req@height=\dimen104
-\Gin@req@width=\dimen105
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.st
-y"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-ba
-se.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefinek
-eys.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.s
-ty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys
-.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.
-sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.
-sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -358,13 +333,11 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmd
-s.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty
-"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -377,70 +350,70 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
-)) ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\svg\svg.sty"
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/svg/svg.sty
 Package: svg 2012/09/05 v1.0 SVG inclusion and extraction
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.te
-x"
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.t
-ex"
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 \XKV@toks=\toks17
 \XKV@tempa@toks=\toks18
-)
-\XKV@depth=\count89
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+\XKV@depth=\count88
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 ))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty"
-Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty
-"
-Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen106
-\captionmargin@=\dimen107
-\captionwidth=\dimen108
-\caption@tempdima=\dimen109
-\caption@indent=\dimen110
-\caption@parindent=\dimen111
-\caption@hangindent=\dimen112
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen105
+\captionmargin@=\dimen106
+\captionwidth=\dimen107
+\caption@tempdima=\dimen108
+\caption@indent=\dimen109
+\caption@parindent=\dimen110
+\caption@hangindent=\dimen111
 )
-\c@ContinuedFloat=\count90
+\c@ContinuedFloat=\count89
 )
-\c@KVtest=\count91
+\c@KVtest=\count90
 \sf@farskip=\skip43
-\sf@captopadj=\dimen113
+\sf@captopadj=\dimen112
 \sf@capskip=\skip44
 \sf@nearskip=\skip45
-\c@subfigure=\count92
-\c@subfigure@save=\count93
-\c@lofdepth=\count94
-\c@subtable=\count95
-\c@subtable@save=\count96
-\c@lotdepth=\count97
+\c@subfigure=\count91
+\c@subfigure@save=\count92
+\c@lofdepth=\count93
+\c@subtable=\count94
+\c@subtable@save=\count95
+\c@lotdepth=\count96
 \sf@top=\skip46
 \sf@bottom=\skip47
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\import\import.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
 Package: import 2009/03/23  v 5.1
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\transparent
-.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/transparent.sty
 Package: transparent 2007/01/08 v1.0 Transparency via pdfTeX's color stack (HO)
 
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty
-"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
-)) ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
-"
+))
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
- ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -456,372 +429,295 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
 \SVG@out@width=\skip48
 \SVG@out@height=\skip49
-\c@svgfigure=\count98
+\c@svgfigure=\count97
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\booktabs\booktabs.st
-y"
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen114
-\lightrulewidth=\dimen115
-\cmidrulewidth=\dimen116
-\belowrulesep=\dimen117
-\belowbottomsep=\dimen118
-\aboverulesep=\dimen119
-\abovetopsep=\dimen120
-\cmidrulesep=\dimen121
-\cmidrulekern=\dimen122
-\defaultaddspace=\dimen123
-\@cmidla=\count99
-\@cmidlb=\count100
-\@aboverulesep=\dimen124
-\@belowrulesep=\dimen125
-\@thisruleclass=\count101
-\@lastruleclass=\count102
-\@thisrulewidth=\dimen126
+\heavyrulewidth=\dimen113
+\lightrulewidth=\dimen114
+\cmidrulewidth=\dimen115
+\belowrulesep=\dimen116
+\belowbottomsep=\dimen117
+\aboverulesep=\dimen118
+\abovetopsep=\dimen119
+\cmidrulesep=\dimen120
+\cmidrulekern=\dimen121
+\defaultaddspace=\dimen122
+\@cmidla=\count98
+\@cmidlb=\count99
+\@aboverulesep=\dimen123
+\@belowrulesep=\dimen124
+\@thisruleclass=\count100
+\@lastruleclass=\count101
+\@thisrulewidth=\dimen125
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\longtable.sty"
-Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip50
 \LTright=\skip51
 \LTpre=\skip52
 \LTpost=\skip53
-\LTchunksize=\count103
-\LTcapwidth=\dimen127
+\LTchunksize=\count102
+\LTcapwidth=\dimen126
 \LT@head=\box26
 \LT@firsthead=\box27
 \LT@foot=\box28
 \LT@lastfoot=\box29
-\LT@cols=\count104
-\LT@rows=\count105
-\c@LT@tables=\count106
-\c@LT@chunks=\count107
+\LT@cols=\count103
+\LT@rows=\count104
+\c@LT@tables=\count105
+\c@LT@chunks=\count106
 \LT@p@ftn=\toks19
-) ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\lscape.st
-y"
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\frontendlayer\ti
-kz.sty"
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.s
-ty"
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs
-.sty"
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgfu
-til-common.tex"
+(/usr/share/texmf/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks20
-\pgfutil@tempdima=\dimen128
-\pgfutil@tempdimb=\dimen129
-
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgfu
-til-common-lists.tex"))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgfu
-til-latex.def"
+)
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box30
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgfr
-cs.code.tex"
-Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
 ))
-Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfco
-re.sty"
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfs
-ys.sty"
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\pg
-fsys.code.tex"
-Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texmf/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgfk
-eys.code.tex"
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks21
 \pgfkeys@temptoks=\toks22
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgfk
-eysfiltered.code.tex"
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
 \pgfkeys@tmptoks=\toks23
 ))
-\pgf@x=\dimen130
-\pgf@y=\dimen131
-\pgf@xa=\dimen132
-\pgf@ya=\dimen133
-\pgf@xb=\dimen134
-\pgf@yb=\dimen135
-\pgf@xc=\dimen136
-\pgf@yc=\dimen137
+\pgf@x=\dimen127
+\pgf@y=\dimen128
+\pgf@xa=\dimen129
+\pgf@ya=\dimen130
+\pgf@xb=\dimen131
+\pgf@yb=\dimen132
+\pgf@xc=\dimen133
+\pgf@yc=\dimen134
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count108
-\c@pgf@countb=\count109
-\c@pgf@countc=\count110
-\c@pgf@countd=\count111
-\t@pgf@toka=\toks24
-\t@pgf@tokb=\toks25
-\t@pgf@tokc=\toks26
+\c@pgf@counta=\count107
+\c@pgf@countb=\count108
+\c@pgf@countc=\count109
+\c@pgf@countd=\count110
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\pg
-f.cfg"
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
-Driver file for pgf: pgfsys-pdftex.def
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\pg
-fsys-pdftex.def"
-File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\pg
-fsys-common-pdf.def"
-File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
 )))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\pg
-fsyssoftpath.code.tex"
-File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count112
-\pgfsyssoftpath@bigbuffer@items=\count113
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
+\pgfsyssoftpath@smallbuffer@items=\count111
+\pgfsyssoftpath@bigbuffer@items=\count112
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\pg
-fsysprotocol.code.tex"
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
 ))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgf
-core.code.tex"
-Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.c
-ode.tex"
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathca
-lc.code.tex"
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathut
-il.code.tex")
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathpa
-rser.code.tex"
-\pgfmath@dimen=\dimen138
-\pgfmath@count=\count114
+(/usr/share/texmf/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen135
+\pgfmath@count=\count113
 \pgfmath@box=\box31
-\pgfmath@toks=\toks27
-\pgfmath@stack@operand=\toks28
-\pgfmath@stack@operation=\toks29
+\pgfmath@toks=\toks24
+\pgfmath@stack@operand=\toks25
+\pgfmath@stack@operation=\toks26
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfu
-nctions.code.tex"
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfu
-nctions.basic.code.tex")
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfu
-nctions.trigonometric.code.tex")
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfu
-nctions.random.code.tex")
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfu
-nctions.comparison.code.tex")
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfu
-nctions.base.code.tex")
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfu
-nctions.round.code.tex")
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfu
-nctions.misc.code.tex")
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfu
-nctions.integerarithmetics.code.tex")))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfl
-oat.code.tex"
-\c@pgfmathroundto@lastzeros=\count115
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)))
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count114
 ))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgf
-corepoints.code.tex"
-File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen139
-\pgf@picmaxx=\dimen140
-\pgf@picminy=\dimen141
-\pgf@picmaxy=\dimen142
-\pgf@pathminx=\dimen143
-\pgf@pathmaxx=\dimen144
-\pgf@pathminy=\dimen145
-\pgf@pathmaxy=\dimen146
-\pgf@xx=\dimen147
-\pgf@xy=\dimen148
-\pgf@yx=\dimen149
-\pgf@yy=\dimen150
-\pgf@zx=\dimen151
-\pgf@zy=\dimen152
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
+\pgf@picminx=\dimen136
+\pgf@picmaxx=\dimen137
+\pgf@picminy=\dimen138
+\pgf@picmaxy=\dimen139
+\pgf@pathminx=\dimen140
+\pgf@pathmaxx=\dimen141
+\pgf@pathminy=\dimen142
+\pgf@pathmaxy=\dimen143
+\pgf@xx=\dimen144
+\pgf@xy=\dimen145
+\pgf@yx=\dimen146
+\pgf@yy=\dimen147
+\pgf@zx=\dimen148
+\pgf@zy=\dimen149
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgf
-corepathconstruct.code.tex"
-File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen153
-\pgf@path@lasty=\dimen154
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
+\pgf@path@lastx=\dimen150
+\pgf@path@lasty=\dimen151
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgf
-corepathusage.code.tex"
-File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen155
-\pgf@shorten@start@additional=\dimen156
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
+\pgf@shorten@end@additional=\dimen152
+\pgf@shorten@start@additional=\dimen153
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgf
-corescopes.code.tex"
-File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
 \pgfpic=\box32
 \pgf@hbox=\box33
 \pgf@layerbox@main=\box34
-\pgf@picture@serial@count=\count116
+\pgf@picture@serial@count=\count115
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgf
-coregraphicstate.code.tex"
-File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen157
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
+\pgflinewidth=\dimen154
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgf
-coretransformations.code.tex"
-File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen158
-\pgf@pt@y=\dimen159
-\pgf@pt@temp=\dimen160
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
+\pgf@pt@x=\dimen155
+\pgf@pt@y=\dimen156
+\pgf@pt@temp=\dimen157
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgf
-corequick.code.tex"
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgf
-coreobjects.code.tex"
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgf
-corepathprocessing.code.tex"
-File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgf
-corearrows.code.tex"
-File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen161
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgf
-coreshade.code.tex"
-File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen162
-\pgf@sys@shading@range@num=\count117
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
+\pgf@max=\dimen158
+\pgf@sys@shading@range@num=\count116
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgf
-coreimage.code.tex"
-File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgf
-coreexternal.code.tex"
-File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
 \pgfexternal@startupbox=\box35
 ))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgf
-corelayers.code.tex"
-File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgf
-coretransparency.code.tex"
-File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgf
-corepatterns.code.tex"
-File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
 )))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfmod
-uleshapes.code.tex"
-File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
 \pgfnodeparttextbox=\box36
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfmod
-uleplot.code.tex"
-File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatibility\pg
-fcomp-version-0-65.sty"
-Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen163
-\pgf@nodesepend=\dimen164
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen159
+\pgf@nodesepend=\dimen160
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatibility\pg
-fcomp-version-1-18.sty"
-Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
 ))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgffor
-.sty"
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgfkey
-s.sty"
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgfk
-eys.code.tex"))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.sty
-"
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.c
-ode.tex"))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgff
-or.code.tex"
-Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
-
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.c
-ode.tex")
-\pgffor@iter=\dimen165
-\pgffor@skip=\dimen166
-\pgffor@stack=\toks30
-\pgffor@toks=\toks31
+(/usr/share/texmf/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
+\pgffor@iter=\dimen161
+\pgffor@skip=\dimen162
+\pgffor@stack=\toks27
+\pgffor@toks=\toks28
 ))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer\
-tikz\tikz.code.tex"
-Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pgfl
-ibraryplothandlers.code.tex"
-File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count118
-\pgfplotmarksize=\dimen167
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
+\pgf@plot@mark@count=\count117
+\pgfplotmarksize=\dimen163
 )
-\tikz@lastx=\dimen168
-\tikz@lasty=\dimen169
-\tikz@lastxsaved=\dimen170
-\tikz@lastysaved=\dimen171
-\tikzleveldistance=\dimen172
-\tikzsiblingdistance=\dimen173
+\tikz@lastx=\dimen164
+\tikz@lasty=\dimen165
+\tikz@lastxsaved=\dimen166
+\tikz@lastysaved=\dimen167
+\tikzleveldistance=\dimen168
+\tikzsiblingdistance=\dimen169
 \tikz@figbox=\box37
-\tikz@figbox@bg=\box38
-\tikz@tempbox=\box39
-\tikz@tempbox@bg=\box40
-\tikztreelevel=\count119
-\tikznumberofchildren=\count120
-\tikznumberofcurrentchild=\count121
-\tikz@fig@count=\count122
+\tikz@tempbox=\box38
+\tikztreelevel=\count118
+\tikznumberofchildren=\count119
+\tikznumberofcurrentchild=\count120
+\tikz@fig@count=\count121
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfmod
-ulematrix.code.tex"
-File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count123
-\pgfmatrixcurrentcolumn=\count124
-\pgf@matrix@numberofcolumns=\count125
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
+\pgfmatrixcurrentrow=\count122
+\pgfmatrixcurrentcolumn=\count123
+\pgf@matrix@numberofcolumns=\count124
 )
-\tikz@expandcount=\count126
+\tikz@expandcount=\count125
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer\
-tikz\libraries\tikzlibrarytopaths.code.tex"
-File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
-)))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\multicol.sty"
-Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
-\c@tracingmulticols=\count127
-\mult@box=\box41
-\multicol@leftmargin=\dimen174
-\c@unbalance=\count128
-\c@collectmore=\count129
-\doublecol@number=\count130
-\multicoltolerance=\count131
-\multicolpretolerance=\count132
-\full@width=\dimen175
-\page@free=\dimen176
-\premulticols=\dimen177
-\postmulticols=\dimen178
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
+hs.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
+))) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count126
+\mult@box=\box39
+\multicol@leftmargin=\dimen170
+\c@unbalance=\count127
+\c@collectmore=\count128
+\doublecol@number=\count129
+\multicoltolerance=\count130
+\multicolpretolerance=\count131
+\full@width=\dimen171
+\page@free=\dimen172
+\premulticols=\dimen173
+\postmulticols=\dimen174
 \multicolsep=\skip54
 \multicolbaselineskip=\skip55
-\partial@page=\box42
-\last@line=\box43
-\maxbalancingoverflow=\dimen179
-\mult@rightbox=\box44
-\mult@grightbox=\box45
-\mult@gfirstbox=\box46
-\mult@firstbox=\box47
+\partial@page=\box40
+\last@line=\box41
+\mult@rightbox=\box42
+\mult@grightbox=\box43
+\mult@gfirstbox=\box44
+\mult@firstbox=\box45
+\@tempa=\box46
+\@tempa=\box47
 \@tempa=\box48
 \@tempa=\box49
 \@tempa=\box50
@@ -837,177 +733,166 @@ Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
 \@tempa=\box60
 \@tempa=\box61
 \@tempa=\box62
-\@tempa=\box63
-\@tempa=\box64
-\c@columnbadness=\count133
-\c@finalcolumnbadness=\count134
-\last@try=\dimen180
-\multicolovershoot=\dimen181
-\multicolundershoot=\dimen182
-\mult@nat@firstbox=\box65
-\colbreak@box=\box66
-\mc@col@check@num=\count135
-) ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.sty"
-Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen183
-\extrarowheight=\dimen184
-\NC@list=\toks32
+\c@columnbadness=\count132
+\c@finalcolumnbadness=\count133
+\last@try=\dimen175
+\multicolovershoot=\dimen176
+\multicolundershoot=\dimen177
+\mult@nat@firstbox=\box63
+\colbreak@box=\box64
+\multicol@sort@counter=\count134
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen178
+\extrarowheight=\dimen179
+\NC@list=\toks29
 \extratabsurround=\skip56
 \backup@length=\skip57
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
-Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
-\TX@col@width=\dimen185
-\TX@old@table=\dimen186
-\TX@old@col=\dimen187
-\TX@target=\dimen188
-\TX@delta=\dimen189
-\TX@cols=\count136
-\TX@ftn=\toks33
-) ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.s
-ty"
-Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box67
-\sift@deathcycles=\count137
-\@vwid@loff=\dimen190
-\@vwid@roff=\dimen191
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
+\TX@col@width=\dimen180
+\TX@old@table=\dimen181
+\TX@old@col=\dimen182
+\TX@target=\dimen183
+\TX@delta=\dimen184
+\TX@cols=\count135
+\TX@ftn=\toks30
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.st
-y"
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box65
+\sift@deathcycles=\count136
+\@vwid@loff=\dimen185
+\@vwid@roff=\dimen186
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.st
-y"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.st
-y"
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count138
-\Gm@cntv=\count139
-\c@Gm@tempcnt=\count140
-\Gm@bindingoffset=\dimen192
-\Gm@wd@mp=\dimen193
-\Gm@odd@mp=\dimen194
-\Gm@even@mp=\dimen195
-\Gm@layoutwidth=\dimen196
-\Gm@layoutheight=\dimen197
-\Gm@layouthoffset=\dimen198
-\Gm@layoutvoffset=\dimen199
-\Gm@dimlist=\toks34
-
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.cf
-g"))
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+\Gm@cnth=\count137
+\Gm@cntv=\count138
+\c@Gm@tempcnt=\count139
+\Gm@bindingoffset=\dimen187
+\Gm@wd@mp=\dimen188
+\Gm@odd@mp=\dimen189
+\Gm@even@mp=\dimen190
+\Gm@layoutwidth=\dimen191
+\Gm@layoutheight=\dimen192
+\Gm@layouthoffset=\dimen193
+\Gm@layoutvoffset=\dimen194
+\Gm@dimlist=\toks31
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip58
+
 For additional information on amsmath, use the `?' option.
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks35
-\ex@=\dimen256
-)) ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.st
-y"
+\@emptytoks=\toks32
+\ex@=\dimen195
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen257
-) ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
-"
+\pmbraise@=\dimen196
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count141
+\inf@bad=\count140
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count142
-\leftroot@=\count143
+\uproot@=\count141
+\leftroot@=\count142
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count144
-\DOTSCASE@=\count145
+\classnum@=\count143
+\DOTSCASE@=\count144
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
-\Mathstrutbox@=\box68
-\strutbox@=\box69
-\big@size=\dimen258
+\Mathstrutbox@=\box66
+\strutbox@=\box67
+\big@size=\dimen197
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count146
-\c@MaxMatrixCols=\count147
+\macc@depth=\count145
+\c@MaxMatrixCols=\count146
 \dotsspace@=\muskip10
-\c@parentequation=\count148
-\dspbrk@lvl=\count149
-\tag@help=\toks36
-\row@=\count150
-\column@=\count151
-\maxfields@=\count152
-\andhelp@=\toks37
-\eqnshift@=\dimen259
-\alignsep@=\dimen260
-\tagshift@=\dimen261
-\tagwidth@=\dimen262
-\totwidth@=\dimen263
-\lineht@=\dimen264
-\@envbody=\toks38
+\c@parentequation=\count147
+\dspbrk@lvl=\count148
+\tag@help=\toks33
+\row@=\count149
+\column@=\count150
+\maxfields@=\count151
+\andhelp@=\toks34
+\eqnshift@=\dimen198
+\alignsep@=\dimen199
+\tagshift@=\dimen200
+\tagwidth@=\dimen201
+\totwidth@=\dimen202
+\lineht@=\dimen203
+\@envbody=\toks35
 \multlinegap=\skip59
 \multlinetaggap=\skip60
-\mathdisplay@stack=\toks39
+\mathdisplay@stack=\toks36
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mathtools\mathtools.
-sty"
-Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
- ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty"
-Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count153
-\calc@Bcount=\count154
-\calc@Adimen=\dimen265
-\calc@Bdimen=\dimen266
+(/usr/share/texlive/texmf-dist/tex/latex/mh/mathtools.sty
+Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count152
+\calc@Bcount=\count153
+\calc@Adimen=\dimen204
+\calc@Bdimen=\dimen205
 \calc@Askip=\skip61
 \calc@Bskip=\skip62
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count155
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count154
 \calc@Cskip=\skip63
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mathtools\mhsetup.st
-y"
+(/usr/share/texlive/texmf-dist/tex/latex/mh/mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
-LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count156
-\l_MT_multwidth_dim=\dimen267
+\g_MT_multlinerow_int=\count155
+\l_MT_multwidth_dim=\dimen206
 \origjot=\skip64
-\l_MT_shortvdotswithinadjustabove_dim=\dimen268
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen269
-\l_MT_above_intertext_sep=\dimen270
-\l_MT_below_intertext_sep=\dimen271
-\l_MT_above_shortintertext_sep=\dimen272
-\l_MT_below_shortintertext_sep=\dimen273
+\l_MT_shortvdotswithinadjustabove_dim=\dimen207
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen208
+\l_MT_above_intertext_sep=\dimen209
+\l_MT_below_intertext_sep=\dimen210
+\l_MT_above_shortintertext_sep=\dimen211
+\l_MT_below_shortintertext_sep=\dimen212
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.s
-ty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 )
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperref.st
-y"
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hy
-perref.sty"
-Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-ge
-neric.sty"
-Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package hobsub Info: Skipping package `ifluatex' (already loaded).
@@ -1026,7 +911,7 @@ Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
@@ -1034,19 +919,18 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-\@linkdim=\dimen274
-\Hy@linkcounter=\count157
-\Hy@pagecounter=\count158
+\@linkdim=\dimen213
+\Hy@linkcounter=\count156
+\Hy@pagecounter=\count157
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count159
+\Hy@SavedSpaceFactor=\count158
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperref.cf
-g"
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4443.
@@ -1056,16 +940,17 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count160
- ("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
+\c@Hy@tempcnt=\count159
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen275
-\Fld@menulength=\count161
-\Field@Width=\dimen276
-\Fld@charsize=\dimen277
+\XeTeXLinkMargin=\dimen214
+\Fld@menulength=\count160
+\Field@Width=\dimen215
+\Fld@charsize=\dimen216
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -1075,21 +960,19 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count162
-\c@Item=\count163
-\c@Hfootnote=\count164
+\Hy@abspage=\count161
+\c@Item=\count162
+\c@Hfootnote=\count163
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def
-"
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count165
-\c@bookmark@seq@number=\count166
+\Fld@listcount=\count164
+\c@bookmark@seq@number=\count165
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfilech
-eck.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
@@ -1098,28 +981,39 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 Package hyperref Info: Option `colorlinks' set `false' on input line 24.
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\titlesec\titlesec.st
-y"
-Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
-\ttl@box=\box70
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box68
 \beforetitleunit=\skip66
 \aftertitleunit=\skip67
-\ttl@plus=\dimen278
-\ttl@minus=\dimen279
-\ttl@toksa=\toks40
-\titlewidth=\dimen280
-\titlewidthlast=\dimen281
-\titlewidthfirst=\dimen282
+\ttl@plus=\dimen217
+\ttl@minus=\dimen218
+\ttl@toksa=\toks37
+\titlewidth=\dimen219
+\titlewidthlast=\dimen220
+\titlewidthfirst=\dimen221
 )
-\c@subsubsubsection=\count167
+\c@subsubsubsection=\count166
 
 \@input{CuBa_Macros.aux}
 \openout2 = `CuBa_Macros.aux'.
 
-(CuBa_Macros.tex) (Dokumentation.aux (Einfuehrung.aux) (1D_Software.aux)
-(1D_Section.aux) (1D_AktorikSensorik.aux) (1D_Dynamik.aux)
-(1D_SensorAuswertung.aux) (1D_Modellbildung.aux) (1D_Reglerentwurf.aux)
-(1D_Aufspringen.aux) (3D_Section.aux) (3D_Dynamik.aux))
+(./CuBa_Macros.tex) (./Dokumentation.aux
+
+! Package babel Error: You haven't defined the language ngerman yet.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 \select@language{ngerman}
+                              
+Your command will be ignored, type <return> to proceed
+
+(./Einfuehrung.aux) (./1D_Software.aux) (./1D_Section.aux)
+(./1D_AktorikSensorik.aux) (./1D_Dynamik.aux) (./1D_SensorAuswertung.aux)
+(./1D_Modellbildung.aux) (./1D_Reglerentwurf.aux) (./1D_Aufspringen.aux)
+(./3D_Section.aux) (./3D_Dynamik.aux))
 \openout1 = `Dokumentation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -1137,32 +1031,30 @@ LaTeX Font Info:    ... okay on input line 60.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii
-"
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count168
-\scratchdimen=\dimen283
-\scratchbox=\box71
-\nofMPsegments=\count169
-\nofMParguments=\count170
-\everyMPshowfont=\toks41
-\MPscratchCnt=\count171
-\MPscratchDim=\dimen284
-\MPnumerator=\count172
-\makeMPintoPDFobject=\count173
-\everyMPtoPDFconversion=\toks42
+\scratchcounter=\count167
+\scratchdimen=\dimen222
+\scratchbox=\box69
+\nofMPsegments=\count168
+\nofMParguments=\count169
+\everyMPshowfont=\toks38
+\MPscratchCnt=\count170
+\MPscratchDim=\dimen223
+\MPnumerator=\count171
+\makeMPintoPDFobject=\count172
+\everyMPtoPDFconversion=\toks39
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
-
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\ltcaption.st
-y"
-Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
- ABD: EveryShipout initializing macros
+
+ABD: EveryShipout initializing macros
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1197,52 +1089,48 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box72
+\AtBeginShipoutBox=\box70
 Package hyperref Info: Link coloring OFF on input line 60.
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
-"
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-("C:\Users\ich\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitles
-tring.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count174
+\c@section@level=\count173
 )
 LaTeX Info: Redefining \ref on input line 60.
 LaTeX Info: Redefining \pageref on input line 60.
 LaTeX Info: Redefining \nameref on input line 60.
- (Dokumentation.out) (Dokumentation.out)
+
+(./Dokumentation.out) (./Dokumentation.out)
 \@outlinefile=\write4
 \openout4 = `Dokumentation.out'.
 
- (Dokumentation.toc)
+ (./Dokumentation.toc
+
+! Package babel Error: You haven't defined the language ngerman yet.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \select@language {ngerman}
+                              
+Your command will be ignored, type <return> to proceed
+
+)
 \tf@toc=\write5
 \openout5 = `Dokumentation.toc'.
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 62.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 62.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 62.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 62.
-
-[1
+ [1
 
 
 
-{C:/Users/ich/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 \openout2 = `Einfuehrung.aux'.
 
-
-(Einfuehrung.tex
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
-
+ (./Einfuehrung.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
  []
@@ -1257,87 +1145,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 64.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 64.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 64.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 64.
- [2
+) [2
 
 ]
 \openout2 = `1D_Software.aux'.
 
- (1D_Software.tex
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
-
-<img/ElekAufbau_Kommunikation.pdf, id=224, 963.6pt x 542.025pt>
+ (./1D_Software.tex
+<img/ElekAufbau_Kommunikation.pdf, id=226, 963.6pt x 542.025pt>
 File: img/ElekAufbau_Kommunikation.pdf Graphic file (type pdf)
 
 <use img/ElekAufbau_Kommunikation.pdf>
 Package pdftex.def Info: img/ElekAufbau_Kommunikation.pdf used on input line 6.
 
 (pdftex.def)             Requested size: 352.81552pt x 170.97229pt.
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 66.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 66.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 66.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 66.
- [3
+) [3
 
 
  <./img/ElekAufbau_Kommunikation.pdf>]
 \openout2 = `1D_Section.aux'.
 
- (1D_Section.tex
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 68.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 68.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 68.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 68.
- [4
+ (./1D_Section.tex) [4
 
 
 ]
 \openout2 = `1D_AktorikSensorik.aux'.
 
- (1D_AktorikSensorik.tex
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
-
+ (./1D_AktorikSensorik.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
  []
 
 
 LaTeX Warning: Reference `sensorik_sec' on page 5 undefined on input line 5.
-
-
-Overfull \hbox (2.28049pt too wide) in paragraph at lines 5--7
-\OT1/cmr/m/n/10 wer-den zwei \OT1/cmr/m/it/10 GYR-521\OT1/cmr/m/n/10 -Platinen 
-ver-wen-det, die mit ei-nem \OT1/cmr/m/it/10 MPU6050\OT1/cmr/m/n/10 -IC der Fir
--ma \OT1/cmr/m/it/10 In-ven-Sen-se \OT1/cmr/m/n/10 best[]uckt
- []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--7
@@ -1354,27 +1193,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--13
 
  []
 
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 69.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 69.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 69.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 69.
- [5
+) [5
 
 
 ]
 \openout2 = `1D_Dynamik.aux'.
 
- (1D_Dynamik.tex
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
- <img/MechZeichnung1D.pdf, id=254, 963.6pt x 542.025pt>
+ (./1D_Dynamik.tex <img/MechZeichnung1D.pdf, id=256, 963.6pt x 542.025pt>
 File: img/MechZeichnung1D.pdf Graphic file (type pdf)
 
 <use img/MechZeichnung1D.pdf>
@@ -1385,77 +1210,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 39.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 39.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 39.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 39.
 [6
 
 
- <./img/MechZeichnung1D.pdf>])
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 70.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 70.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 70.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 70.
- [7]
+ <./img/MechZeichnung1D.pdf>]) [7]
 \openout2 = `1D_SensorAuswertung.aux'.
 
- (1D_SensorAuswertung.tex
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
-
-<img/SensorZeichnung1D.pdf, id=304, 963.6pt x 542.025pt>
+ (./1D_SensorAuswertung.tex
+<img/SensorZeichnung1D.pdf, id=307, 963.6pt x 542.025pt>
 File: img/SensorZeichnung1D.pdf Graphic file (type pdf)
 
 <use img/SensorZeichnung1D.pdf>
 Package pdftex.def Info: img/SensorZeichnung1D.pdf used on input line 6.
 (pdftex.def)             Requested size: 441.01773pt x 248.0691pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 12.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 12.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 46.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 46.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 49.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 49.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 51.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 51.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 51.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 51.
  [8
 
 
  <./img/SensorZeichnung1D.pdf>]
 Package epstopdf Info: Source file: <img/X1__dd___fitted.eps>
-(epstopdf)                    date: 2016-08-28 18:54:54
-(epstopdf)                    size: 103994 bytes
+(epstopdf)                    date: 2016-09-11 22:40:12
+(epstopdf)                    size: 101324 bytes
 (epstopdf)             Output file: <img/X1__dd___fitted-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-28 18:54:54
+(epstopdf)                    date: 2016-09-11 22:40:12
 (epstopdf)                    size: 4937 bytes
-(epstopdf)             Command: <epstopdf --outfile=img/X1__dd___fitted-eps-con
-verted-to.pdf img/X1__dd___fitted.eps>
+(epstopdf)             Command: <repstopdf --outfile=img/X1__dd___fitted-eps-co
+nverted-to.pdf img/X1__dd___fitted.eps>
 (epstopdf)             \includegraphics on input line 82.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/X1__dd___fitted-eps-converted-to.pdf, id=332, 362.35374pt x 305.14pt>
+<img/X1__dd___fitted-eps-converted-to.pdf, id=335, 362.35374pt x 305.14pt>
 File: img/X1__dd___fitted-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/X1__dd___fitted-eps-converted-to.pdf>
@@ -1463,17 +1246,17 @@ Package pdftex.def Info: img/X1__dd___fitted-eps-converted-to.pdf used on input
  line 82.
 (pdftex.def)             Requested size: 220.50887pt x 185.6928pt.
 Package epstopdf Info: Source file: <img/X2__dd___fitted.eps>
-(epstopdf)                    date: 2016-08-28 18:54:54
-(epstopdf)                    size: 103992 bytes
+(epstopdf)                    date: 2016-09-11 22:40:12
+(epstopdf)                    size: 101322 bytes
 (epstopdf)             Output file: <img/X2__dd___fitted-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-28 18:54:54
+(epstopdf)                    date: 2016-09-11 22:40:12
 (epstopdf)                    size: 4942 bytes
-(epstopdf)             Command: <epstopdf --outfile=img/X2__dd___fitted-eps-con
-verted-to.pdf img/X2__dd___fitted.eps>
+(epstopdf)             Command: <repstopdf --outfile=img/X2__dd___fitted-eps-co
+nverted-to.pdf img/X2__dd___fitted.eps>
 (epstopdf)             \includegraphics on input line 83.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/X2__dd___fitted-eps-converted-to.pdf, id=333, 362.35374pt x 305.14pt>
+<img/X2__dd___fitted-eps-converted-to.pdf, id=336, 362.35374pt x 305.14pt>
 File: img/X2__dd___fitted-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/X2__dd___fitted-eps-converted-to.pdf>
@@ -1486,16 +1269,16 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 82--84
  []
 
 Package epstopdf Info: Source file: <img/Y1__dd___fitted.eps>
-(epstopdf)                    date: 2016-08-28 18:54:54
-(epstopdf)                    size: 103124 bytes
+(epstopdf)                    date: 2016-09-11 22:40:12
+(epstopdf)                    size: 100540 bytes
 (epstopdf)             Output file: <img/Y1__dd___fitted-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-28 18:54:54
+(epstopdf)                    date: 2016-09-11 22:40:12
 (epstopdf)                    size: 4882 bytes
-(epstopdf)             Command: <epstopdf --outfile=img/Y1__dd___fitted-eps-con
-verted-to.pdf img/Y1__dd___fitted.eps>
+(epstopdf)             Command: <repstopdf --outfile=img/Y1__dd___fitted-eps-co
+nverted-to.pdf img/Y1__dd___fitted.eps>
 (epstopdf)             \includegraphics on input line 88.
 Package epstopdf Info: Output file is already uptodate.
-<img/Y1__dd___fitted-eps-converted-to.pdf, id=334, 367.3725pt x 305.14pt>
+<img/Y1__dd___fitted-eps-converted-to.pdf, id=337, 367.3725pt x 305.14pt>
 File: img/Y1__dd___fitted-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/Y1__dd___fitted-eps-converted-to.pdf>
@@ -1503,17 +1286,17 @@ Package pdftex.def Info: img/Y1__dd___fitted-eps-converted-to.pdf used on input
  line 88.
 (pdftex.def)             Requested size: 220.50887pt x 183.1599pt.
 Package epstopdf Info: Source file: <img/Y2__dd___fitted.eps>
-(epstopdf)                    date: 2016-08-28 18:54:54
-(epstopdf)                    size: 103125 bytes
+(epstopdf)                    date: 2016-09-11 22:40:12
+(epstopdf)                    size: 100541 bytes
 (epstopdf)             Output file: <img/Y2__dd___fitted-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-28 18:54:54
+(epstopdf)                    date: 2016-09-11 22:40:12
 (epstopdf)                    size: 4885 bytes
-(epstopdf)             Command: <epstopdf --outfile=img/Y2__dd___fitted-eps-con
-verted-to.pdf img/Y2__dd___fitted.eps>
+(epstopdf)             Command: <repstopdf --outfile=img/Y2__dd___fitted-eps-co
+nverted-to.pdf img/Y2__dd___fitted.eps>
 (epstopdf)             \includegraphics on input line 89.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/Y2__dd___fitted-eps-converted-to.pdf, id=335, 367.3725pt x 305.14pt>
+<img/Y2__dd___fitted-eps-converted-to.pdf, id=338, 367.3725pt x 305.14pt>
 File: img/Y2__dd___fitted-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/Y2__dd___fitted-eps-converted-to.pdf>
@@ -1525,21 +1308,17 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 88--90
 [][] [] 
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 92.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 92.
 Package epstopdf Info: Source file: <img/phi1__d.eps>
-(epstopdf)                    date: 2016-08-28 18:54:54
-(epstopdf)                    size: 224401 bytes
+(epstopdf)                    date: 2016-09-11 22:40:12
+(epstopdf)                    size: 218321 bytes
 (epstopdf)             Output file: <img/phi1__d-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-28 18:54:54
+(epstopdf)                    date: 2016-09-11 22:40:12
 (epstopdf)                    size: 13591 bytes
-(epstopdf)             Command: <epstopdf --outfile=img/phi1__d-eps-converted-t
-o.pdf img/phi1__d.eps>
+(epstopdf)             Command: <repstopdf --outfile=img/phi1__d-eps-converted-
+to.pdf img/phi1__d.eps>
 (epstopdf)             \includegraphics on input line 96.
 Package epstopdf Info: Output file is already uptodate.
-<img/phi1__d-eps-converted-to.pdf, id=336, 370.38374pt x 305.14pt>
+<img/phi1__d-eps-converted-to.pdf, id=339, 370.38374pt x 305.14pt>
 File: img/phi1__d-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/phi1__d-eps-converted-to.pdf>
@@ -1547,17 +1326,17 @@ Package pdftex.def Info: img/phi1__d-eps-converted-to.pdf used on input line 96
 .
 (pdftex.def)             Requested size: 220.50887pt x 181.6653pt.
 Package epstopdf Info: Source file: <img/phi2__d.eps>
-(epstopdf)                    date: 2016-08-28 18:54:54
-(epstopdf)                    size: 223767 bytes
+(epstopdf)                    date: 2016-09-11 22:40:12
+(epstopdf)                    size: 217730 bytes
 (epstopdf)             Output file: <img/phi2__d-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-28 18:54:54
+(epstopdf)                    date: 2016-09-11 22:40:12
 (epstopdf)                    size: 13553 bytes
-(epstopdf)             Command: <epstopdf --outfile=img/phi2__d-eps-converted-t
-o.pdf img/phi2__d.eps>
+(epstopdf)             Command: <repstopdf --outfile=img/phi2__d-eps-converted-
+to.pdf img/phi2__d.eps>
 (epstopdf)             \includegraphics on input line 97.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/phi2__d-eps-converted-to.pdf, id=337, 370.38374pt x 305.14pt>
+<img/phi2__d-eps-converted-to.pdf, id=340, 370.38374pt x 305.14pt>
 File: img/phi2__d-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/phi2__d-eps-converted-to.pdf>
@@ -1575,22 +1354,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 109.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 109.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 109.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 109.
 [9 <./img/X1__dd___fitted-eps-converted-to.pdf> <./img/X2__dd___fitted-eps-conv
 erted-to.pdf> <./img/Y1__dd___fitted-eps-converted-to.pdf> <./img/Y2__dd___fitt
 ed-eps-converted-to.pdf>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 119.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 119.
-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 119.
@@ -1600,114 +1366,93 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 119.
 
 Package epstopdf Info: Source file: <img/ADC_mittelwert_polynom.eps>
-(epstopdf)                    date: 2016-08-26 19:26:05
-(epstopdf)                    size: 184990 bytes
+(epstopdf)                    date: 2016-09-11 22:40:12
+(epstopdf)                    size: 181110 bytes
 (epstopdf)             Output file: <img/ADC_mittelwert_polynom-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2016-08-26 19:26:05
+(epstopdf)                    date: 2016-09-11 22:40:12
 (epstopdf)                    size: 7247 bytes
-(epstopdf)             Command: <epstopdf --outfile=img/ADC_mittelwert_polynom-
-eps-converted-to.pdf img/ADC_mittelwert_polynom.eps>
+(epstopdf)             Command: <repstopdf --outfile=img/ADC_mittelwert_polynom
+-eps-converted-to.pdf img/ADC_mittelwert_polynom.eps>
 (epstopdf)             \includegraphics on input line 135.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/ADC_mittelwert_polynom-eps-converted-to.pdf, id=387, 376.40625pt x 305.14p
+<img/ADC_mittelwert_polynom-eps-converted-to.pdf, id=390, 376.40625pt x 305.14p
 t>
 File: img/ADC_mittelwert_polynom-eps-converted-to.pdf Graphic file (type pdf)
  <use img/ADC_mittelwert_polynom-eps-converted-to.pdf>
 Package pdftex.def Info: img/ADC_mittelwert_polynom-eps-converted-to.pdf used o
 n input line 135.
 (pdftex.def)             Requested size: 220.50887pt x 178.76457pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 138.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 138.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 140.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 140.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 140.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 140.
  [10 <./img/phi1__d-eps-converted-to.pdf> <./img/phi2__d-eps-converted-to.pdf> 
 <./img/ADC_mittelwert_polynom-eps-converted-to.pdf>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 143.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 143.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 165.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 165.
+Overfull \hbox (1.98753pt too wide) in paragraph at lines 141--142
+[]\OT1/cmr/m/n/10 Der Aus-fall-winkel $\OML/cmm/m/it/10 '$ \OT1/cmr/m/n/10 kann
+ ^^?uber die Auswer-tung der Beschle-u-ni-gungswerte berech-net wer-den. Allerd
+-
+ []
 
-Underfull \hbox (badness 10000) in alignment at lines 186--186
+
+Overfull \hbox (1.0358pt too wide) in alignment at lines 186--186
 [][] 
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 191.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 191.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 191.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 191.
+
+Overfull \hbox (6.47379pt too wide) in paragraph at lines 189--191
+\OT1/cmr/m/n/10 gegliedert ist. Zuerst wird der Pr^^?adikationsschritt durchgef
+^^?uhrt, hi-er-bei wird der Pr^^?adikationssch^^?atzwert
+ []
+
 [11]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 223.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 223.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 238.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 238.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 238.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 238.
- [12] <img/Kalman_overview.pdf, id=466, 963.6pt x 542.025pt>
+Overfull \hbox (14.88058pt too wide) in paragraph at lines 226--227
+[]\OT1/cmr/m/n/10 Das Kalman-Filter fu-sion-iert den Aus-fall-winkel $\OML/cmm/
+m/it/10 '[]$ \OT1/cmr/m/n/10 aus der Winkelsch^^?atzung mit der Winkel^^?anderu
+ng
+ []
+
+
+Overfull \hbox (13.01942pt too wide) in paragraph at lines 228--229
+[]\OT1/cmr/m/n/10 Als ab-so-lute Ein-gangsgr^^?o^^Yen ste-hen hier zum einen di
+e Winkelsch^^?atzung $\OML/cmm/m/it/10 '[]$ \OT1/cmr/m/n/10 und die Winkel^^?an
+derung
+ []
+
+
+Overfull \hbox (13.32365pt too wide) in paragraph at lines 228--229
+\OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 '[]$ \OT1/cmr/m/n/10 zur Verf^^?ugung. Somi
+t kann das fehler-be-haftete Teil-sys-tem durch fol-gende Gle-ichun-gen beschri
+eben
+ []
+
+[12] <img/Kalman_overview.pdf, id=470, 963.6pt x 542.025pt>
 File: img/Kalman_overview.pdf Graphic file (type pdf)
 
 <use img/Kalman_overview.pdf>
 Package pdftex.def Info: img/Kalman_overview.pdf used on input line 241.
 (pdftex.def)             Requested size: 441.01773pt x 156.91512pt.
 
-<img/kalman_overview2.pdf, id=468, 963.6pt x 542.025pt>
-File: img/kalman_overview2.pdf Graphic file (type pdf)
 
-<use img/kalman_overview2.pdf>
-Package pdftex.def Info: img/kalman_overview2.pdf used on input line 272.
-(pdftex.def)             Requested size: 352.81552pt x 198.45363pt.
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 71.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 71.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 71.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 71.
- [13 <./img/Kalman_overview.pdf> <./img/kalman_overview2.pdf
+! LaTeX Error: File `img/kalman_overview2' not found.
 
-pdfTeX warning: pdflatex (file ./img/kalman_overview2.pdf): PDF inclusion: mult
-iple pdfs with page group included in a single page
->]
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.272 ...idth=0.8\linewidth]{img/kalman_overview2}
+                                                  
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) [13 <./img/Kalman_overview.pdf>]
 \openout2 = `1D_Modellbildung.aux'.
 
- (1D_Modellbildung.tex
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 52.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 52.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 55.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 55.
+ (./1D_Modellbildung.tex
+Overfull \hbox (12.372pt too wide) in paragraph at lines 2--3
+\OT1/cmr/m/n/10 Mit Hilfe der Be-we-gungs-gle-ichun-gen aus Ab-schnitt []2.2[] 
+kann nun eine Zu-s-tand-sraum-darstel-lung aufgestellt
+ []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1725,17 +1470,23 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 55.
 
+
+Overfull \hbox (4.52466pt too wide) in paragraph at lines 63--64
+[]\OT1/cmr/m/n/10 In dem Ver-such-sauf-bau wird das Gesamt-sys-tem nun von eine
+m Startwinkel $\OML/cmm/m/it/10 '[]$ \OT1/cmr/m/n/10 los-ge-lassen, woraufhin
+ []
+
 Package epstopdf Info: Source file: <img/V4_phi.eps>
-(epstopdf)                    date: 2016-08-26 19:26:05
-(epstopdf)                    size: 257975 bytes
+(epstopdf)                    date: 2016-09-11 22:40:12
+(epstopdf)                    size: 252646 bytes
 (epstopdf)             Output file: <img/V4_phi-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-26 19:26:05
+(epstopdf)                    date: 2016-09-11 22:40:12
 (epstopdf)                    size: 12922 bytes
-(epstopdf)             Command: <epstopdf --outfile=img/V4_phi-eps-converted-to
-.pdf img/V4_phi.eps>
+(epstopdf)             Command: <repstopdf --outfile=img/V4_phi-eps-converted-t
+o.pdf img/V4_phi.eps>
 (epstopdf)             \includegraphics on input line 67.
 Package epstopdf Info: Output file is already uptodate.
-<img/V4_phi-eps-converted-to.pdf, id=516, 365.365pt x 305.14pt>
+<img/V4_phi-eps-converted-to.pdf, id=505, 365.365pt x 305.14pt>
 File: img/V4_phi-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/V4_phi-eps-converted-to.pdf>
@@ -1746,10 +1497,6 @@ Package pdftex.def Info: img/V4_phi-eps-converted-to.pdf used on input line 67.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 96.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 96.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 96.
@@ -1766,96 +1513,43 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 96.
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 98.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 98.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 98.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 98.
 [14
 
 
 ]
+
+LaTeX Warning: File `img/V5_C_psi_d.eps' not found on input line 101.
+
 Package epstopdf Info: Source file: <img/V5_C_psi_d.eps>
-(epstopdf)                    date: 2016-08-26 19:26:05
-(epstopdf)                    size: 266054 bytes
 (epstopdf)             Output file: <img/V5_C_psi_d-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-26 19:26:05
+(epstopdf)                    date: 2016-09-11 22:40:12
 (epstopdf)                    size: 17296 bytes
-(epstopdf)             Command: <epstopdf --outfile=img/V5_C_psi_d-eps-converte
-d-to.pdf img/V5_C_psi_d.eps>
+(epstopdf)             Command: <repstopdf --outfile=img/V5_C_psi_d-eps-convert
+ed-to.pdf img/V5_C_psi_d.eps>
 (epstopdf)             \includegraphics on input line 101.
 Package epstopdf Info: Output file is already uptodate.
- <img/V5_C_psi_d-eps-converted-to.pdf, id=530, 379.4175pt x 305.14pt>
+<img/V5_C_psi_d-eps-converted-to.pdf, id=519, 379.4175pt x 305.14pt>
 File: img/V5_C_psi_d-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/V5_C_psi_d-eps-converted-to.pdf>
 Package pdftex.def Info: img/V5_C_psi_d-eps-converted-to.pdf used on input line
  101.
 (pdftex.def)             Requested size: 220.50887pt x 177.34448pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 132.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 132.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 151.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 151.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 151.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 151.
  [15 <./img/V4_phi-eps-converted-to.pdf> <./img/V5_C_psi_d-eps-converted-to.pdf
->]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 153.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 153.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 153.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 153.
- [16]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 154.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 154.
-
-<img/model_1D_overview.pdf, id=581, 794.97pt x 614.295pt>
+>] [16]
+<img/model_1D_overview.pdf, id=571, 794.97pt x 614.295pt>
 File: img/model_1D_overview.pdf Graphic file (type pdf)
 
 <use img/model_1D_overview.pdf>
 Package pdftex.def Info: img/model_1D_overview.pdf used on input line 159.
 (pdftex.def)             Requested size: 441.01773pt x 135.59277pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 163.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 163.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 170.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 170.
 
-<img/model_1D_cubebody.pdf, id=585, 845.1575pt x 597.23125pt>
+<img/model_1D_cubebody.pdf, id=575, 845.1575pt x 597.23125pt>
 File: img/model_1D_cubebody.pdf Graphic file (type pdf)
 
 <use img/model_1D_cubebody.pdf>
 Package pdftex.def Info: img/model_1D_cubebody.pdf used on input line 181.
 (pdftex.def)             Requested size: 441.01773pt x 163.17943pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 185.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 185.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 188.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 188.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 188.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 188.
  [17 <./img/model_1D_overview.pdf> <./img/model_1D_cubebody.pdf>]pdfTeX warning
  (ext4): destination with the same identifier (name{equation.2.56}) has been al
 ready used, duplicate ignored
@@ -1878,35 +1572,17 @@ er (name{equation.2.56}) has been already used, duplicate ignored
                    \relax 
 l.188 \begin{equation}
                       
-<img/model_1D_wheel.pdf, id=618, 845.1575pt x 597.23125pt>
+<img/model_1D_wheel.pdf, id=608, 845.1575pt x 597.23125pt>
 File: img/model_1D_wheel.pdf Graphic file (type pdf)
 
 <use img/model_1D_wheel.pdf>
 Package pdftex.def Info: img/model_1D_wheel.pdf used on input line 196.
 (pdftex.def)             Requested size: 441.01773pt x 133.4842pt.
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 72.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 72.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 72.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 72.
- [18 <./img/model_1D_wheel.pdf>]
+) [18 <./img/model_1D_wheel.pdf>]
 \openout2 = `1D_Reglerentwurf.aux'.
 
 
-(1D_Reglerentwurf.tex
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 4.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 4.
- <img/Regelkreis.pdf, id=636, 963.6pt x 542.025pt>
+(./1D_Reglerentwurf.tex <img/Regelkreis.pdf, id=626, 963.6pt x 542.025pt>
 File: img/Regelkreis.pdf Graphic file (type pdf)
 
 <use img/Regelkreis.pdf>
@@ -1932,35 +1608,22 @@ r (name{equation.2.56}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.15 \begin{equation}
-                     
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 55.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 55.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 66.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 66.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 66.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 66.
- [19
+                      [19
 
 
  <./img/Regelkreis.pdf>]
 Package epstopdf Info: Source file: <img/phi__d_regelung.eps>
-(epstopdf)                    date: 2016-08-28 18:54:54
-(epstopdf)                    size: 260545 bytes
+(epstopdf)                    date: 2016-09-11 22:40:12
+(epstopdf)                    size: 255136 bytes
 (epstopdf)             Output file: <img/phi__d_regelung-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-28 18:54:54
+(epstopdf)                    date: 2016-09-11 22:40:12
 (epstopdf)                    size: 14561 bytes
-(epstopdf)             Command: <epstopdf --outfile=img/phi__d_regelung-eps-con
-verted-to.pdf img/phi__d_regelung.eps>
+(epstopdf)             Command: <repstopdf --outfile=img/phi__d_regelung-eps-co
+nverted-to.pdf img/phi__d_regelung.eps>
 (epstopdf)             \includegraphics on input line 92.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/phi__d_regelung-eps-converted-to.pdf, id=678, 361.35pt x 305.14pt>
+<img/phi__d_regelung-eps-converted-to.pdf, id=669, 361.35pt x 305.14pt>
 File: img/phi__d_regelung-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/phi__d_regelung-eps-converted-to.pdf>
@@ -1968,118 +1631,69 @@ Package pdftex.def Info: img/phi__d_regelung-eps-converted-to.pdf used on input
  line 92.
 (pdftex.def)             Requested size: 180.67456pt x 152.56961pt.
 Package epstopdf Info: Source file: <img/psi__d_regelung.eps>
-(epstopdf)                    date: 2016-08-28 18:54:54
-(epstopdf)                    size: 261727 bytes
+(epstopdf)                    date: 2016-09-11 22:40:12
+(epstopdf)                    size: 256189 bytes
 (epstopdf)             Output file: <img/psi__d_regelung-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-28 18:54:54
+(epstopdf)                    date: 2016-09-11 22:40:12
 (epstopdf)                    size: 14060 bytes
-(epstopdf)             Command: <epstopdf --outfile=img/psi__d_regelung-eps-con
-verted-to.pdf img/psi__d_regelung.eps>
+(epstopdf)             Command: <repstopdf --outfile=img/psi__d_regelung-eps-co
+nverted-to.pdf img/psi__d_regelung.eps>
 (epstopdf)             \includegraphics on input line 93.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/psi__d_regelung-eps-converted-to.pdf, id=679, 379.4175pt x 308.15125pt>
+<img/psi__d_regelung-eps-converted-to.pdf, id=670, 379.4175pt x 308.15125pt>
 File: img/psi__d_regelung-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/psi__d_regelung-eps-converted-to.pdf>
 Package pdftex.def Info: img/psi__d_regelung-eps-converted-to.pdf used on input
  line 93.
 (pdftex.def)             Requested size: 189.70828pt x 154.07524pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 97.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 97.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 97.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 97.
  [20 <./img/phi__d_regelung-eps-converted-to.pdf> <./img/psi__d_regelung-eps-co
 nverted-to.pdf>]
 Package epstopdf Info: Source file: <img/phi_regelung.eps>
-(epstopdf)                    date: 2016-08-28 18:54:54
-(epstopdf)                    size: 287900 bytes
+(epstopdf)                    date: 2016-09-11 22:40:12
+(epstopdf)                    size: 281027 bytes
 (epstopdf)             Output file: <img/phi_regelung-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-28 18:54:54
+(epstopdf)                    date: 2016-09-11 22:40:12
 (epstopdf)                    size: 22954 bytes
-(epstopdf)             Command: <epstopdf --outfile=img/phi_regelung-eps-conver
-ted-to.pdf img/phi_regelung.eps>
+(epstopdf)             Command: <repstopdf --outfile=img/phi_regelung-eps-conve
+rted-to.pdf img/phi_regelung.eps>
 (epstopdf)             \includegraphics on input line 102.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/phi_regelung-eps-converted-to.pdf, id=724, 362.35374pt x 305.14pt>
+<img/phi_regelung-eps-converted-to.pdf, id=715, 362.35374pt x 305.14pt>
 File: img/phi_regelung-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/phi_regelung-eps-converted-to.pdf>
 Package pdftex.def Info: img/phi_regelung-eps-converted-to.pdf used on input li
 ne 102.
 (pdftex.def)             Requested size: 220.50887pt x 185.6928pt.
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 73.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 73.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 73.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 73.
- [21 <./img/phi_regelung-eps-converted-to.pdf>]
+) [21 <./img/phi_regelung-eps-converted-to.pdf>]
 \openout2 = `1D_Aufspringen.aux'.
 
- (1D_Aufspringen.tex
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 74.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 74.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 74.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 74.
- [22
+ (./1D_Aufspringen.tex) [22
 
 
 ]
 \openout2 = `3D_Section.aux'.
 
- (3D_Section.tex
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 76.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 76.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 76.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 76.
- [23
+ (./3D_Section.tex) [23
 
 
 ]
 \openout2 = `3D_Dynamik.aux'.
 
- (3D_Dynamik.tex
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
 
+(./3D_Dynamik.tex
 Overfull \hbox (18.95522pt too wide) in paragraph at lines 2--4
-\OT1/cmr/m/n/10 In die-sem Ab-schnitt wer-den die Be-we-gungs-glei-chun-gen des
- 3D-Modells mit Hil-fe des Lagrange-Formalismus
+\OT1/cmr/m/n/10 In diesem Ab-schnitt wer-den die Be-we-gungs-gle-ichun-gen des 
+3D-Modells mit Hilfe des Lagrange-Formalismus
  []
 
 
-Overfull \hbox (1.54628pt too wide) in paragraph at lines 2--4
-\OT1/cmr/m/n/10 her-ge-lei-tet. Der W[]urfelk[]orper be-sitzt drei ro-ta-to-ri-
-sche Frei-heits-gra-de, die drei Schwung-mas-sen verf[]ugen
+Overfull \hbox (3.61263pt too wide) in paragraph at lines 2--4
+\OT1/cmr/m/n/10 hergeleitet. Der W^^?urfelk^^?orper be-sitzt drei ro-ta-torisch
+e Frei-heits-grade, die drei Schwung-massen verf^^?ugen
  []
 
 
@@ -2087,71 +1701,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
  []
 
-<img/MechZeichnung3D.pdf, id=765, 963.6pt x 542.025pt>
+<img/MechZeichnung3D.pdf, id=756, 963.6pt x 542.025pt>
 File: img/MechZeichnung3D.pdf Graphic file (type pdf)
 
 <use img/MechZeichnung3D.pdf>
 Package pdftex.def Info: img/MechZeichnung3D.pdf used on input line 9.
 (pdftex.def)             Requested size: 441.01773pt x 248.0691pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 66.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 66.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 66.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 66.
- [24
+
+Overfull \hbox (7.03851pt too wide) in paragraph at lines 26--27
+[]\OT1/cmr/m/n/10 Die er-ste Ableitung gew^^?ohnliche Ableitung der Euler-Winke
+l entspricht den Winkelgeschwindigkeiten
+ []
+
+[24
 
 
  <./img/MechZeichnung3D.pdf>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 101.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 101.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 122.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 122.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 141.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 141.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 141.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 141.
- [25]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 198.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 198.
+Overfull \hbox (17.08841pt too wide) in paragraph at lines 123--124
+\OT1/cmr/m/n/10 Die kinetis-che En-ergie setzt sich aus der Winkelgeschwindigke
+it des W^^?urfels $[][]$ und der Geschwindigkeiten
+ []
 
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 199--201
 
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 232.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 232.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 232.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 232.
 [26]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 239.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 239.
-
 Overfull \hbox (227.2657pt too wide) detected at line 244
  []$[]  \OML/cmm/m/it/10 T \OT1/cmr/m/n/10 = []$ 
  []
 
 
 Overfull \hbox (204.47763pt too wide) detected at line 244
- []$[] \OMS/cmsy/m/n/10   []$ 
+ []$[] \OMS/cmsy/m/n/10 ^^@ []$ 
  []
 
 
@@ -2174,37 +1757,20 @@ Overfull \hbox (145.64432pt too wide) detected at line 244
  []$[] \OT1/cmr/m/n/10 + []$ []  
  []
 
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
- [27]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 100.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 100.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 100.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 100.
+) [27]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 100.
  [28
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 100.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 100.
- (Dokumentation.aux (Einfuehrung.aux) (1D_Software.aux)
-(1D_Section.aux) (1D_AktorikSensorik.aux) (1D_Dynamik.aux)
-(1D_SensorAuswertung.aux) (1D_Modellbildung.aux) (1D_Reglerentwurf.aux)
-(1D_Aufspringen.aux) (3D_Section.aux) (3D_Dynamik.aux))
+ (./Dokumentation.aux (./Einfuehrung.aux) (./1D_Software.aux)
+(./1D_Section.aux) (./1D_AktorikSensorik.aux) (./1D_Dynamik.aux)
+(./1D_SensorAuswertung.aux) (./1D_Modellbildung.aux) (./1D_Reglerentwurf.aux)
+(./1D_Aufspringen.aux) (./3D_Section.aux) (./3D_Dynamik.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 100.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 100.
 Package rerunfilecheck Info: File `Dokumentation.out' has not changed.
-(rerunfilecheck)             Checksum: C9A704757FFCF0DBA674F576E0701895;2914.
+(rerunfilecheck)             Checksum: 7DD793C94C7BDFAA5B7DCD8BD01FBAD9;2880.
 
 
 LaTeX Warning: There were undefined references.
@@ -2212,34 +1778,31 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 100.
  ) 
 Here is how much of TeX's memory you used:
- 19852 strings out of 493634
- 367592 string characters out of 3136055
- 461158 words of memory out of 3000000
- 22529 multiletter control sequences out of 15000+200000
- 8407 words of font info for 30 fonts, out of 3000000 for 9000
- 1025 hyphenation exceptions out of 8191
- 68i,22n,98p,4079b,373s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmbx10.pfb><C:/Users/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmbx12.pfb><C:/Users/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmbx7.pfb><C:/Users/ich/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ich/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ich/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/ich
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:
-/Users/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
-ib10.pfb><C:/Users/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cmextra/cmmib7.pfb><C:/Users/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ich/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/ich/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ich/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ich/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/U
-sers/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
-0.pfb>
-Output written on Dokumentation.pdf (28 pages, 1731560 bytes).
+ 17838 strings out of 494985
+ 310168 string characters out of 6180356
+ 406268 words of memory out of 5000000
+ 20373 multiletter control sequences out of 15000+600000
+ 8407 words of font info for 30 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 68i,22n,98p,4076b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Dokumentation.pdf (28 pages, 1424379 bytes).
 PDF statistics:
- 934 PDF objects out of 1000 (max. 8388607)
+ 928 PDF objects out of 1000 (max. 8388607)
+ 788 compressed objects within 8 object streams
  219 named destinations out of 1000 (max. 500000)
- 431 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 426 words of extra memory for PDF output out of 10000 (max. 10000000)
 
