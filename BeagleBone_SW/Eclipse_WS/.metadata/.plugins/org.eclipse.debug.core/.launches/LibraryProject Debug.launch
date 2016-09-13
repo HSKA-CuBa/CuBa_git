@@ -5,7 +5,7 @@
 <stringAttribute key="org.eclipse.cdt.dsf.gdb.DEBUG_NAME" value="/usr/bin/gdb-multiarch"/>
 <booleanAttribute key="org.eclipse.cdt.dsf.gdb.DEBUG_ON_FORK" value="false"/>
 <stringAttribute key="org.eclipse.cdt.dsf.gdb.GDB_INIT" value="/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/.gdbinit"/>
-<stringAttribute key="org.eclipse.cdt.dsf.gdb.HOST" value="192.168.7.2"/>
+<stringAttribute key="org.eclipse.cdt.dsf.gdb.HOST" value="192.168.9.1"/>
 <booleanAttribute key="org.eclipse.cdt.dsf.gdb.NON_STOP" value="false"/>
 <stringAttribute key="org.eclipse.cdt.dsf.gdb.PORT" value="12345"/>
 <booleanAttribute key="org.eclipse.cdt.dsf.gdb.REMOTE_TCP" value="true"/>
@@ -22,14 +22,14 @@
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN_SYMBOL" value="main"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Debug/LibraryProject"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="LibraryProject"/>
-<booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="true"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="cdt.managedbuild.config.gnu.cross.exe.debug.1134484789"/>
+<booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="false"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value=""/>
 <booleanAttribute key="org.eclipse.cdt.launch.remote.RemoteCDSFDebuggerTab.DEFAULTS_SET" value="true"/>
 <stringAttribute key="org.eclipse.debug.core.ATTR_GDBSERVER_COMMAND" value="/usr/bin/gdbserver"/>
 <stringAttribute key="org.eclipse.debug.core.ATTR_GDBSERVER_PORT" value="12345"/>
 <stringAttribute key="org.eclipse.debug.core.ATTR_PRERUN_CMDS" value=""/>
 <booleanAttribute key="org.eclipse.debug.core.ATTR_SKIP_DOWNLOAD_TO_TARGET" value="false"/>
-<stringAttribute key="org.eclipse.debug.core.ATTR_TARGET_PATH" value="/home/debian/tmp/LibraryProject"/>
+<stringAttribute key="org.eclipse.debug.core.ATTR_TARGET_PATH" value="/tmp/LibraryProject"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/LibraryProject"/>
 </listAttribute>

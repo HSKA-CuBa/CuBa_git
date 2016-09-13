@@ -1,0 +1,34 @@
+#include "CCommComponent.h"
+#include "AComponentBase.h"
+#include <iostream>
+#include <unistd.h>
+
+CCommComponent::CCommComponent(TQueue<Config::QueueSize>& rxQueue,
+							   TQueue<Config::QueueSize>& txQueue) : AComponentBase(rxQueue, txQueue, false)
+{
+
+}
+void CCommComponent::init()
+{
+	std::cout << "Comm-Component: init()" << std::endl;
+}
+void CCommComponent::run()
+{
+	std::cout << "Comm-Component: run()" << std::endl;
+	//Server-accept
+	sleep(1);
+	//Send run-event an Control-Comp
+	CMessage msg(EEvent::EV_REQUEST_RUN);
+	if(mTxQueue.addMessage(msg, true))
+	{
+		std::cout << "Run-Request transmitted." << std::endl;
+	}
+
+	while(true)
+	{
+		if(mRxQueue.getMessage(msg, true))
+		{
+			std::cout << "Comm-Component: Message received." << std::endl;
+		}
+	}
+}

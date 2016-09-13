@@ -1,0 +1,109 @@
+// ==========================================================================
+//  Copyright © 2016  Christian Steiger  -  All rights reserved
+// ==========================================================================
+
+#include <cstdio>     // printf
+#include <ctime>
+#include <unistd.h>   // usleep
+
+#include "CBBBHardware.h"
+
+// --------------------------------------------------------------------------
+//  Helper function to measure time between loop iterations
+// --------------------------------------------------------------------------
+void timespec_subtract(
+	struct timespec *result,
+	const struct timespec *x,
+	const struct timespec *y )
+{
+	__syscall_slong_t ndiff;
+	__time_t          sdiff;
+
+	if (x->tv_nsec >= y->tv_nsec)
+	{
+		ndiff = x->tv_nsec - y->tv_nsec;
+		sdiff = 0;
+	}
+	else
+	{
+		ndiff = 1e9 - x->tv_nsec - y->tv_nsec;
+		sdiff = 1;
+	}
+
+	result->tv_sec = x->tv_sec - y->tv_sec - sdiff;
+	result->tv_nsec = ndiff;
+}
+
+// --------------------------------------------------------------------------
+//  Main
+// --------------------------------------------------------------------------
+int main(void)
+{
+	CBBBHardware bbb;
+
+	int ret;
+	ret = bbb.initializeHardware();
+	if (ret < 0)
+	{
+		fprintf(stderr, "initializeHardware failed! ret: %d\n", ret);
+		return -1;
+	}
+
+	struct timespec start, stop, diff;
+	struct timespec sleep = { 0 , 20 * 1000 * 1000 }; // 20ms
+
+	int i = 0;
+	while(1)
+	{
+		// Fetch the system time and store it
+		clock_gettime(CLOCK_REALTIME, &start);
+
+		// Fetch values from ADC and MPU
+		bbb.fetchValues();
+
+		// Toggle motor pin on/off every second
+		i++;
+		if (i ==  100)
+		{
+			puts("A");
+			bbb.enableMotor();
+			bbb.openBrake();
+			bbb.setTorque(-1.0f);
+		}
+		else if (i >= 200)
+		{
+			puts("B");
+			bbb.disableMotor();
+			bbb.closeBrake();
+			bbb.setTorque(1.0f);
+			i = 0;
+		}
+
+		// Fetch the system time again and calculate the difference
+		clock_gettime(CLOCK_REALTIME, &stop);
+		timespec_subtract(&diff, &stop, &start);
+
+		// Print the time difference
+		printf("TIME: % 10.3fus ## ", (double)diff.tv_nsec / 1000.0f);
+
+		// Print values
+		printf(
+			"AIN0: %4d ## "
+			"X1: %5d, Y1: %5d, Phi1: %5d ## "
+			"X2: %5d, Y2: %5d, Phi2: %5d"
+			"\n",
+			bbb.getPsi__d_raw(),
+			bbb.getX1__dd_raw(),
+			bbb.getY1__dd_raw(),
+			bbb.getPhi1__d_raw(),
+			bbb.getX2__dd_raw(),
+			bbb.getY2__dd_raw(),
+			bbb.getPhi2__d_raw()
+		);
+
+		// Sleep for 20ms
+		nanosleep(&sleep, 0);
+	}
+
+	return 0;
+}

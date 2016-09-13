@@ -1,0 +1,51 @@
+//12.9.16, Michael Meindl
+#include "CSharedMemory.h"
+#include "FWMemory.h"
+#include <unistd.h> 	//ftruncate()
+#include <iostream>
+#include <sys/mman.h>
+#include <sys/types.h>
+#include <sys/ipc.h>
+#include <sys/shm.h>
+#include <errno.h>		//Error constants
+#include <sys/stat.h>	//Mode constants
+#include <fcntl.h>		//O_ constants
+
+#define FILEMODE (S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH)
+extern int errno;
+
+CSharedMemory::CSharedMemory() : mSHMFD(-1),
+								 mStartAddr(nullptr),
+								 mCurrentAddr(nullptr)
+{
+	mSHMFD = shm_open(Config::SHM, O_RDWR | O_CREAT | O_EXCL, FILEMODE);
+	if(-1 == mSHMFD)
+	{
+		sAssertion(errno == EEXIST, "(CSharedMemory::CSharedMemory()): Failed to open SHM.");
+		//Try to open the existing SHM
+		mSHMFD = shm_open(Config::SHM, O_RDWR, FILEMODE);
+		sAssertion(mSHMFD != -1, "(CSharedMemory::CSharedMemory()): Failed to open exisiting SHM.");
+	}
+	ftruncate(mSHMFD, sSize);
+	mStartAddr 	 = (Int8*) mmap(NULL, sSize, PROT_READ | PROT_WRITE, MAP_SHARED, mSHMFD, 0);
+	mCurrentAddr = mStartAddr;
+}
+TQueue<Config::QueueSize>* CSharedMemory::createQueue()
+{
+
+}
+//TQueue<Config::QueueSize>* CSharedMemory::createQueue()
+//{
+//	sAssertion(mCurrentAddr < (mCurrentAddr + sSize),
+//			   "(CSharedMemory::createQueue()): SHM is full.");
+//	auto queue = new(mCurrentAddr) TQueue<Config::QueueSize>;
+//	mCurrentAddr = cMakeAlignmentSize(sizeof(TQueue<Config::QueueSize>)) + mCurrentAddr;
+//	return queue;
+//}
+CSharedMemory::~CSharedMemory()
+{
+	Int32 retVal = munmap(mStartAddr, sSize);
+	sAssertion(retVal == 0, "(CSharedMemory::~CSharedMemory()): Failed to unmap SHM.");
+	retVal = shm_unlink(Config::SHM);
+	sAssertion(retVal == 0, "(CSharedMemory::~CSharedMemory()): Faied to unlink SHM.");
+}

@@ -1,0 +1,89 @@
+// ==========================================================================
+//  Copyright © 2016  Christian Steiger  -  All rights reserved
+// ==========================================================================
+
+#define _GNU_SOURCE       // Needed for usleep
+
+#include <stdio.h>        // printf
+#include <stdlib.h>       // exit
+#include <stdint.h>       // uint16_t
+#include <time.h>
+#include <unistd.h>       // usleep
+#include "bbb_mpu6050.h"
+
+// --------------------------------------------------------------------------
+//  Helper function to measure time between loop iterations
+// --------------------------------------------------------------------------
+void timespec_subtract(
+	struct timespec *result,
+	const struct timespec *x,
+	const struct timespec *y )
+{
+	__syscall_slong_t ndiff;
+	__time_t          sdiff;
+
+	if (x->tv_nsec >= y->tv_nsec)
+	{
+		ndiff = x->tv_nsec - y->tv_nsec;
+		sdiff = 0;
+	}
+	else
+	{
+		ndiff = 1e9 - x->tv_nsec - y->tv_nsec;
+		sdiff = 1;
+	}
+
+	result->tv_sec = x->tv_sec - y->tv_sec - sdiff;
+	result->tv_nsec = ndiff;
+}
+
+// --------------------------------------------------------------------------
+//  Main
+// --------------------------------------------------------------------------
+int main(void)
+{
+	struct bbb_mpu6050 mpu;
+	struct bbb_mpu6050_values val;
+
+	int ret;
+	ret = bbb_mpu6050_open(&mpu, 1);
+	if (ret < 0) {
+		fprintf(stderr, "bbb_mpu6050_open: %d\n", ret);
+		exit(1);
+	}
+	struct timespec start, stop, diff;
+	while(1)
+	{
+		// Wait 20ms
+		usleep(20 * 1000);
+
+		// Fetch the system time and store it
+		clock_gettime(CLOCK_REALTIME, &start);
+
+
+		// Read from the AIN-channel
+		ret = bbb_mpu6050_read(&mpu, &val);
+		if (ret < 0) {
+			fprintf(stderr, "bbb_mpu6050_read failed!\n");
+			continue;
+		}
+
+		// Fetch the system time again and calculate the difference
+		clock_gettime(CLOCK_REALTIME, &stop);
+		timespec_subtract(&diff, &stop, &start);
+
+		// Print the time difference
+		printf("TIME: % 10.3fus ## ", (double)diff.tv_nsec / 1000.0f);
+
+		printf(
+			"[accel] x:%6d, y:%6d, z:%6d "
+			"[anglvel]  x:%6d, y:%6d, z:%6d \n",
+			val.accel[0],
+			val.accel[1],
+			val.accel[2],
+			val.anglvel[0],
+			val.anglvel[1],
+			val.anglvel[2]
+		);
+	}
+}

@@ -2,8 +2,7 @@
 #ifndef CMESSAGE_H
 #define CMESSAGE_H
 #include "Global.h"
-#include "EMessageType.h"
-#include "ECommandType.h"
+#include "EEvent.h"
 #include "EDataType.h"
 #include "CSensorData.h"
 #include "CFilterData.h"
@@ -13,30 +12,25 @@
 class CMessage
 {
 public:
-
+	CMessage();
+	CMessage(EEvent event);
+	CMessage(EEvent event, EDataType datatype, CSensorData data);
+	CMessage(const CMessage&) = delete;
+	CMessage& operator=(const CMessage&) = default;
+	~CMessage() = default;
 public:
-	CMessage();		///< Standard-Ctor to create invalid Messages. Necessary to initialize a queue.
-	CMessage(EDataType dataType, CSensorData data);	///< Create a Data-Message with Sensor-Values.
-	CMessage(EDataType dataType, CMotorData data);	///< Create a Data-Message with Motor-Values.
-	CMessage(EDataType dataType, CFilterData data);	///< Create a Data-Message with Filter-Values.
-private:
 	struct
 	{
-		UInt8 mSenderID;			///< To be replaced by a proper ID-Enumeration.
-		UInt8 mReceiverID;			///< To be replaced by a proper ID-Enumeration.
-		EMessageType mMsgType;		///< Enumeration-Value which specifys the message type.
-		union
-		{
-			ECommandType mCommandType;	///< Enumeration-Value which specifys the command type.
-			EDataType mDataType;		///< Enumeration-Value which specifys the data type.
-		};
-	} mHeader;							///< Structure which contains the Message-Header.
+		EEvent mEvent;
+		EDataType mDataType;
+		UInt8 mPadding[2];
+	} mHeader;
 	union
 	{
-		UInt8 mRawData[16];				///< Byte-Array to write the data into a stream.
-		CSensorData mSensorData;		///< Container to hold sensor data.
-		CFilterData mFilterData;		///< Container to hold filter data.
-		CMotorData mMotorData;			///< Container to hold motor data.
+		UInt8 mRawData[16];
+		CSensorData mSensorData;
+		CFilterData mFilterData;
+		CMotorData mMotorData;
 	} mData;
 };
 

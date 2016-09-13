@@ -14,7 +14,8 @@ public:
 	virtual void run() = 0;		///< Brief Abstract method to run the component. This function should never return.
 public:
 	AComponentBase(TQueue<Config::QueueSize>& rxQueue,			//Queues werden in main im SHM angelegt
-				   TQueue<Config::QueueSize>& txQueue);
+				   TQueue<Config::QueueSize>& txQueue,
+				   bool initStandby);
 	AComponentBase() = delete;
 	AComponentBase(const AComponentBase&) = delete;
 	AComponentBase& operator=(const AComponentBase&) = delete;
@@ -22,6 +23,8 @@ public:
 protected:
 	TQueue<Config::QueueSize>& mRxQueue;
 	TQueue<Config::QueueSize>& mTxQueue;		//2 components --> point-to-point-communication
+	bool mStandbyState;
+	UInt8 mPadding{};
 };
 
 #endif

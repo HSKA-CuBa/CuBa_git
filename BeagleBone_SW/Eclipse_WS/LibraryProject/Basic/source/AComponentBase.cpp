@@ -1,9 +1,11 @@
 #include "AComponentBase.h"
 
 AComponentBase::AComponentBase(TQueue<Config::QueueSize>& rxQueue,
-							   TQueue<Config::QueueSize>& txQueue) :
+							   TQueue<Config::QueueSize>& txQueue,
+							   bool initStandby) :
 							   	   mRxQueue(rxQueue),
-								   mTxQueue(txQueue)
+								   mTxQueue(txQueue),
+								   mStandbyState(initStandby)
 {
 
 }

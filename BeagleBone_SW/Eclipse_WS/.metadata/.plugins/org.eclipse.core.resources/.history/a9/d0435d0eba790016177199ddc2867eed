@@ -1,0 +1,37 @@
+// ==========================================================================
+//  Copyright © 2016  Christian Steiger  -  All rights reserved
+// ==========================================================================
+
+#define _GNU_SOURCE     // Needed for usleep
+
+#include <stdio.h>    // printf
+#include <stdlib.h>   // exit
+#include <stdint.h>   // uint16_t
+#include <unistd.h>   // usleep
+#include "bbb_ain.h"
+
+int main(void)
+{
+	uint8_t channel = AIN0;
+	struct bbb_ain ain;
+
+	int ret;
+	ret = bbb_ain_open(&ain, channel);
+	if (ret < 0) { exit(1); }
+
+	uint16_t value = 0;
+	while(1)
+	{
+		// Wait 20ms
+		usleep(20 * 1000);
+
+		// Read from the AIN-channel
+		ret = bbb_ain_read(&ain, &value);
+		if (ret < 0) {
+			fprintf(stderr, "bbb_ain_read failed!\n");
+			continue;
+		}
+
+		printf("AIN%u: %4u\n", channel, value);
+	}
+}

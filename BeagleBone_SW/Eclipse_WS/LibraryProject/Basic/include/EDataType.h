@@ -2,16 +2,14 @@
 #ifndef EDATATYPE_H
 #define EDATATYPE_H
 
-/// Enumeration to specify the type of data a message contains.
 enum class EDataType
 {
-	DEFAULT_IGNORE = 0,		///< Default value used for invalid messages.
-	SENSOR_DATA = 1,		///< Value to represent sensor data.
-	UNFILTERED_DATA = 2,	///< Value to represent not filtered values in SI-Units.
-	KALMAN_DATA = 3,		///< Value to represent Kalman-Filter data.
-	COMP_DATA = 4,			///< Value to represent Complementary-Filter data.
-	MOTOR_DATA = 5			///< Value to represent motor data.
-
+	DEFAULT_IGNORE = 0,
+	SENSOR_DATA = 1,
+	MOTOR_DATA = 2,
+	UNFILTERED_DATA = 3,
+	KALMAN_DATA = 4,
+	COMPLEMENTARY_DATA = 5
 };
 
 #endif
