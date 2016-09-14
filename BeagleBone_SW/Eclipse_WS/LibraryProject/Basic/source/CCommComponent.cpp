@@ -1,43 +1,65 @@
 #include "CCommComponent.h"
 #include "AComponentBase.h"
 #include <iostream>
+#include <iomanip>
 #include <unistd.h>
 
 CCommComponent::CCommComponent(TQueue<Config::QueueSize>& rxQueue,
-							   TQueue<Config::QueueSize>& txQueue) : AComponentBase(rxQueue, txQueue, false)
+							   TQueue<Config::QueueSize>& txQueue) : AComponentBase(rxQueue, txQueue, true)
 {
 
 }
 void CCommComponent::init()
 {
-	std::cout << "Comm-Component: init()" << std::endl;
+	std::cout << "[*] Comm-Component: Initializing the TCP/IP-Server" << std::endl;
+	mServer.init();
 }
 void CCommComponent::run()
 {
-	std::cout << "Comm-Component: run()" << std::endl;
-	//Server-accept
-	sleep(1);
-	//Send run-event an Control-Comp
-	CMessage msg(EEvent::EV_REQUEST_RUN);
-	if(mTxQueue.addMessage(msg, true))
-	{
-		std::cout << "Run-Request transmitted." << std::endl;
-	}
-
 	while(true)
 	{
-		if(mRxQueue.getMessage(msg, true))
+		if(mStandbyState == true)
 		{
-			if(msg.mHeader.mEvent == EEvent::EV_REQUEST_TX_SENSORDATA)
+			std::cout << "[*] Comm-Component: Server waiting for connection" << std::endl;
+			mServer.waitForClient();
+			//Send a RUN-Request to the Control-Component
+			CMessage msg(EEvent::EV_REQUEST_RUN);
+			if(mTxQueue.addMessage(msg, true))
 			{
-				std::cout << "Comm-Component: Sensor-Data received." << std::endl;
-				std::cout << "X1__dd: " << msg.mData.mSensorData.mX1_raw__dd << std::endl;
-				std::cout << "X2__dd: " << msg.mData.mSensorData.mX2_raw__dd << std::endl;
-				std::cout << "Y1__dd: " << msg.mData.mSensorData.mY1_raw__dd << std::endl;
-				std::cout << "Y2__dd: " << msg.mData.mSensorData.mY2_raw__dd << std::endl;
-				std::cout << "Phi1__d: " << msg.mData.mSensorData.mPhi1_raw__d << std::endl;
-				std::cout << "Phi2__d: " << msg.mData.mSensorData.mPhi2_raw__d << std::endl << std::endl;
+				std::cout << "[*] Comm-Component: RUN-Request transmitted" << std::endl;
+			}
+			mStandbyState = false;	//Switch to running mode
+		}
+		else
+		{
+			CMessage msg;
+			if(mRxQueue.getMessage(msg, true))
+			{
+				if(msg.mHeader.mEvent == EEvent::EV_REQUEST_TX_DATA)
+				{
+					CSensorData* data = reinterpret_cast<CSensorData*>(msg.mData);
+					std::cout << "[*] Comm-Component: Sensor-Data received." << std::endl;
+					std::cout << std::setw(15) << ::std::left << "    X1__dd: " << data->getX1_raw__dd() << std::endl;
+					std::cout << std::setw(15) << ::std::left << "    X2__dd: " << data->getX2_raw__dd() << std::endl;
+					std::cout << std::setw(15) << ::std::left << "    Y1__dd: " << data->getY1_raw__dd() << std::endl;
+					std::cout << std::setw(15) << ::std::left << "    Y2__dd: " << data->getY2_raw__dd() << std::endl;
+					std::cout << std::setw(15) << ::std::left << "    Phi1__dd: " << data->getPhi1_raw__d() << std::endl;
+					std::cout << std::setw(15) << ::std::left << "    Phi2__dd: " << data->getPhi2_raw__d() << std::endl << std::endl;
+					if(false == mServer.transmitMessage(msg))
+					{
+						//Connection was shutdown by Matlab, notify the Control-Component and terminate the process
+						CMessage runMsg(EEvent::EV_REQUEST_STANDBY);
+						if(mTxQueue.addMessage(runMsg, true))
+						{
+							std::cout << "[*] Comm-Component: Sent STANDBY-Request to the Control-Component" << std::endl;
+						}
+						mStandbyState = true;
+						std::cout << "[*] Comm-Component: Client disconnected, terminating" << std::endl;
+						exit(0);
+					}
+				}
 			}
 		}
 	}
+
 }

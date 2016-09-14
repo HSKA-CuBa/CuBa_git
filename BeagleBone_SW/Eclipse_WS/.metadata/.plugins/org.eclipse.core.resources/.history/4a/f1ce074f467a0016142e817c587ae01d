@@ -1,0 +1,70 @@
+main.o: ../main.cpp \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/CSharedMemory.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/Global.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/Assertion.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/Config.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/FWMemory.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/TQueue.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/CCountingSemaphore.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/CMutex.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/CMessage.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/EEvent.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/EDataType.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/CSensorData.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/CFilterData.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/CMotorData.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/AComponentBase.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/CControlComponent.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/AComponentBase.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include/CBBBHardware.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/Global.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include/IHardware.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include/CMpu6050.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/CCommComponent.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/TQueue.h
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/CSharedMemory.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/Global.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/Assertion.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/Config.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/FWMemory.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/TQueue.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/CCountingSemaphore.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/CMutex.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/CMessage.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/EEvent.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/EDataType.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/CSensorData.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/CFilterData.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/CMotorData.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/AComponentBase.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/CControlComponent.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/AComponentBase.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include/CBBBHardware.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/Global.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include/IHardware.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include/CMpu6050.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/CCommComponent.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/TQueue.h:

@@ -1,15 +1,6 @@
-17:02:39 **** Incremental Build of configuration Debug for project LibraryProject ****
+17:14:02 **** Incremental Build of configuration Debug for project LibraryProject ****
 make all 
-Building file: ../Basic/source/CControlComponent.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/TCPServer/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Basic/source/CControlComponent.d" -MT"Basic/source/CControlComponent.o" -o "Basic/source/CControlComponent.o" "../Basic/source/CControlComponent.cpp"
-Finished building: ../Basic/source/CControlComponent.cpp
- 
-Building target: LibraryProject
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++  -o "LibraryProject"  ./TCPServer/source/CServer.o  ./HW/source/CBBBHardware.o ./HW/source/CMpu6050.o ./HW/source/bbb_ain.o ./HW/source/bbb_mpu6050.o ./HW/source/gpio.o  ./Basic/source/AComponentBase.o ./Basic/source/Assertion.o ./Basic/source/CBinarySemaphore.o ./Basic/source/CCommComponent.o ./Basic/source/CControlComponent.o ./Basic/source/CCountingSemaphore.o ./Basic/source/CMessage.o ./Basic/source/CMutex.o ./Basic/source/CSensorData.o ./Basic/source/CSharedMemory.o  ./main.o   -lpthread -lrt
-Finished building target: LibraryProject
- 
+make: Nothing to be done for `all'.
 
-17:02:40 Build Finished (took 476ms)
+17:14:02 Build Finished (took 83ms)
 

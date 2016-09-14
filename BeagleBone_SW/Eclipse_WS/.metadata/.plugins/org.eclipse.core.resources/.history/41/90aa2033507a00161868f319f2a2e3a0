@@ -1,0 +1,18 @@
+//12.9.16, Michael Meindl
+#ifndef CCOMMCOMPONENT_H
+#define CCOMMCOMPOENTN_H
+#include "AComponentBase.h"
+
+class CCommComponent : public AComponentBase
+{
+public:
+	void init() override;
+	void run() override;
+public:
+	CCommComponent(TQueue<Config::QueueSize>& rxQueue,
+				   TQueue<Config::QueueSize>& txQueue);
+private:
+
+};
+
+#endif

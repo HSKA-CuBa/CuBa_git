@@ -3,23 +3,47 @@
 #include <unistd.h>		//close()
 #include <strings.h>	//bzero()
 #include <iostream>
+#include <errno.h>
 
+extern int errno;
 
-void CServer::echo()
+bool CServer::transmitMessage(const CMessage& msg)
 {
+	bool success = false;
 	Int32 retVal = -1;
-	UInt8 buffer[1] = {0};
-	Int32 counter = 0;
-	while(counter < 10)
+	ssize_t writtenByte = 0;
+	const UInt8* buffer = reinterpret_cast<const UInt8*>(&msg);
+	union
 	{
-		retVal = read(mConnectedSocketFD, buffer, 1);
-		sAssertion(retVal >= 0, "(CServer::echo()): Failed to read from the socket.");
-		std::cout << "Received Byte: " << static_cast<Int32>(buffer[0]) << std::endl;
-		counter++;
-	}
+		UInt8 raw[20];
+		CMessage testMsg{};
+	};
+	testMsg = msg;
+	do
+	{
+		retVal = send(mConnectedSocketFD, (buffer+writtenByte), (20 - writtenByte), MSG_NOSIGNAL);
+		if(errno == EPIPE)
+		{
+			std::cout << "[*] Comm-Component: Connection was shutdown by client" << std::endl;
+			//Shutdown the connection
+//			Int32 closeVal = close(mConnectedSocketFD);
+//			sAssertion(closeVal >= 0, "(CServer::transmitMessage()): Failed to close socket.");
+//			closeVal = close(mSocketFD);
+//			sAssertion(mSocketFD >= 0, "(CServer::transmitMessage()): Failed to ");
+			success = false;
+			break;
+		}
+		else
+		{
+			//Check for different errors
+			sAssertion(retVal >= 0, "(CServer::transmitMessage()): Failed to send data.");
+		}
+		success = true;
+		writtenByte += retVal;
+	}while(writtenByte < 20);
+	return success;
 }
-CServer::CServer() : mSocketFD(-1),
-					 mConnectedSocketFD(-1)
+void CServer::init()
 {
 	mSocketFD = socket(AF_INET, SOCK_STREAM, 0);
 	sAssertion(mSocketFD >= 0, "(CServer::CServer()): Failed to open socket.");
@@ -37,12 +61,18 @@ CServer::CServer() : mSocketFD(-1),
 
 	retVal = listen(mSocketFD, 1);
 	sAssertion(retVal >= 0, "(CServer::CServer()): Failed to listen().");
-
-	std::cout << "Waiting to accept a connection . .  ." << std::endl;
+}
+void CServer::waitForClient()
+{
 	mConnectedSocketFD = accept(mSocketFD,
 					   	   	    reinterpret_cast<struct sockaddr*>(&mClientAddr),
 								&mClientLen);
-	sAssertion(mConnectedSocketFD >= 0, "(CServer::CServer()): Failed to accep the client connection.");
+	sAssertion(mConnectedSocketFD >= 0, "(CServer::CServer()): Failed to accept the client connection.");
+}
+CServer::CServer() : mSocketFD(-1),
+					 mConnectedSocketFD(-1)
+{
+
 }
 CServer::~CServer()
 {

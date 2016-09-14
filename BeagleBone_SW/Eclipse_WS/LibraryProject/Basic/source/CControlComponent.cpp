@@ -11,30 +11,47 @@ CControlComponent::CControlComponent(TQueue<Config::QueueSize>& rxQueue,
 }
 void CControlComponent::init()
 {
-	std::cout << "Control-Component: init()" << std::endl;
+	std::cout << "[*] Control-Component: Initializing Hardware" << std::endl;
 	Int32 retVal = mHardware.initializeHardware();
 	sAssertion( retVal >= 0, "(CControlComponent::init()): Failed to initialize HW.");
+	std::cout << "[*] Control-Component: Hardware successfully initialized" << std::endl;
 }
 void CControlComponent::run()
 {
-	CMessage msg;
-	Float32 time = 0.0F;
+ this->V1_AusgleichsPolynomAccelerometer();
+}
+void CControlComponent::V1_AusgleichsPolynomAccelerometer()
+{
+	CMessage rxMsg;
+	Float32 time;
+
 	while(true)
 	{
 		if(true == mStandbyState)
 		{
-			if(mRxQueue.getMessage(msg, true))
+			if(mRxQueue.getMessage(rxMsg, true))
 			{
-				if(msg.mHeader.mEvent == EEvent::EV_REQUEST_RUN)
+				if(rxMsg.mHeader.mEvent == EEvent::EV_REQUEST_RUN)
 				{
-					std::cout << "Control-Component: Switching from standby to running." << std::endl;
+					std::cout << "[*] Control-Component: Switching from STANDBY to RUNNING" << std::endl;
 					mStandbyState = false;
+					time = 0.0F;
 				}
 			}
 		}
 		else
 		{
-			sleep(1);
+			if(mRxQueue.getMessage(rxMsg, false))
+			{
+				//Connection was terminated by Matlab -> kill this process
+				if(rxMsg.mHeader.mEvent == EEvent::EV_REQUEST_STANDBY)
+				{
+					std::cout << "[*] Control-Component: Received STANDBY-Request, terminating the process" << std::endl;
+					mStandbyState = true;
+					exit(0);
+				}
+			}
+			usleep(20000);
 			mHardware.fetchValues();
 			CSensorData sensorData(time,
 					mHardware.getX1__dd_raw(),
@@ -43,10 +60,10 @@ void CControlComponent::run()
 					mHardware.getX2__dd_raw(),
 					mHardware.getY2__dd_raw(),
 					mHardware.getPhi2__d_raw());
-			CMessage sensorMsg(EEvent::EV_REQUEST_TX_SENSORDATA,
+			CMessage sensorMsg(EEvent::EV_REQUEST_TX_DATA,
 								EDataType::SENSOR_DATA,
 								sensorData);
-			time += 1.0F;
+			time += 0.02F;
 			mTxQueue.addMessage(sensorMsg, false);
 		}
 	}

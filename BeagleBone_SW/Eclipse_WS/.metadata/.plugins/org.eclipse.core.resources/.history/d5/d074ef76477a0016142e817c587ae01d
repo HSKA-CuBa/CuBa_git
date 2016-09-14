@@ -1,0 +1,51 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CPP_SRCS += \
+../Basic/source/AComponentBase.cpp \
+../Basic/source/Assertion.cpp \
+../Basic/source/CBinarySemaphore.cpp \
+../Basic/source/CCommComponent.cpp \
+../Basic/source/CControlComponent.cpp \
+../Basic/source/CCountingSemaphore.cpp \
+../Basic/source/CMessage.cpp \
+../Basic/source/CMutex.cpp \
+../Basic/source/CSensorData.cpp \
+../Basic/source/CSharedMemory.cpp 
+
+OBJS += \
+./Basic/source/AComponentBase.o \
+./Basic/source/Assertion.o \
+./Basic/source/CBinarySemaphore.o \
+./Basic/source/CCommComponent.o \
+./Basic/source/CControlComponent.o \
+./Basic/source/CCountingSemaphore.o \
+./Basic/source/CMessage.o \
+./Basic/source/CMutex.o \
+./Basic/source/CSensorData.o \
+./Basic/source/CSharedMemory.o 
+
+CPP_DEPS += \
+./Basic/source/AComponentBase.d \
+./Basic/source/Assertion.d \
+./Basic/source/CBinarySemaphore.d \
+./Basic/source/CCommComponent.d \
+./Basic/source/CControlComponent.d \
+./Basic/source/CCountingSemaphore.d \
+./Basic/source/CMessage.d \
+./Basic/source/CMutex.d \
+./Basic/source/CSensorData.d \
+./Basic/source/CSharedMemory.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+Basic/source/%.o: ../Basic/source/%.cpp
+	@echo 'Building file: $<'
+	@echo 'Invoking: Cross G++ Compiler'
+	arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/TCPServer/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

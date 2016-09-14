@@ -2,14 +2,12 @@
 #ifndef EEVENT_H
 #define EEVENT_H
 
-enum class EEvent
+enum class EEvent : UInt8
 {
 	EV_DEFAULT_IGNORE = 0,
 	EV_REQUEST_RUN = 1,
 	EV_REQUEST_STANDBY = 2,
-	EV_REQUEST_TX_MOTORDATA = 3,
-	EV_REQUEST_TX_SENSORDATA = 4,
-	EV_REQUEST_TX_FILTERDATA = 5
+	EV_REQUEST_TX_DATA = 3
 };
 
 #endif

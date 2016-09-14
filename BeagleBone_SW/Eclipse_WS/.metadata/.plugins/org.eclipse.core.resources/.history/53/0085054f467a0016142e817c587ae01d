@@ -1,0 +1,4 @@
+Basic/source/Assertion.o: ../Basic/source/Assertion.cpp \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/Assertion.h
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/Assertion.h:

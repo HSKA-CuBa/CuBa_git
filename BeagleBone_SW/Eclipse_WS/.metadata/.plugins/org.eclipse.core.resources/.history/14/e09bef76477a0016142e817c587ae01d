@@ -1,0 +1,47 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../HW/source/bbb_ain.c \
+../HW/source/bbb_mpu6050.c \
+../HW/source/gpio.c 
+
+CPP_SRCS += \
+../HW/source/CBBBHardware.cpp \
+../HW/source/CMpu6050.cpp 
+
+OBJS += \
+./HW/source/CBBBHardware.o \
+./HW/source/CMpu6050.o \
+./HW/source/bbb_ain.o \
+./HW/source/bbb_mpu6050.o \
+./HW/source/gpio.o 
+
+C_DEPS += \
+./HW/source/bbb_ain.d \
+./HW/source/bbb_mpu6050.d \
+./HW/source/gpio.d 
+
+CPP_DEPS += \
+./HW/source/CBBBHardware.d \
+./HW/source/CMpu6050.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+HW/source/%.o: ../HW/source/%.cpp
+	@echo 'Building file: $<'
+	@echo 'Invoking: Cross G++ Compiler'
+	arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/TCPServer/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+HW/source/%.o: ../HW/source/%.c
+	@echo 'Building file: $<'
+	@echo 'Invoking: Cross GCC Compiler'
+	arm-linux-gnueabihf-gcc -std=c11 -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

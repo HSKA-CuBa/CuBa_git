@@ -1,0 +1,16 @@
+HW/source/CBBBHardware.o: ../HW/source/CBBBHardware.cpp \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include/CBBBHardware.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/Global.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/Assertion.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include/IHardware.h \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include/CMpu6050.h
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include/CBBBHardware.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/Global.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/Basic/include/Assertion.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include/IHardware.h:
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include/CMpu6050.h:

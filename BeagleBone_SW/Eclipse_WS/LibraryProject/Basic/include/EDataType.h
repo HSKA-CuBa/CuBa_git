@@ -2,7 +2,7 @@
 #ifndef EDATATYPE_H
 #define EDATATYPE_H
 
-enum class EDataType
+enum class EDataType : UInt8
 {
 	DEFAULT_IGNORE = 0,
 	SENSOR_DATA = 1,

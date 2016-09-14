@@ -2,6 +2,7 @@
 #ifndef CCOMMCOMPONENT_H
 #define CCOMMCOMPOENTN_H
 #include "AComponentBase.h"
+#include "CServer.h"
 
 class CCommComponent : public AComponentBase
 {
@@ -12,7 +13,7 @@ public:
 	CCommComponent(TQueue<Config::QueueSize>& rxQueue,
 				   TQueue<Config::QueueSize>& txQueue);
 private:
-
+	CServer mServer;
 };
 
 #endif

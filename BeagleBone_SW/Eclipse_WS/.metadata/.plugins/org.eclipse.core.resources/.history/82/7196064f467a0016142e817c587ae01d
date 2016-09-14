@@ -1,0 +1,4 @@
+HW/source/CMpu6050.o: ../HW/source/CMpu6050.cpp \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include/CMpu6050.h
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include/CMpu6050.h:

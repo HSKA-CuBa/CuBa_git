@@ -12,6 +12,14 @@
 class CMessage
 {
 public:
+	struct Header
+	{
+	public:
+		EEvent mEvent;
+		EDataType mDataType;
+		UInt8 mReservered[2];
+	};
+public:
 	CMessage();
 	CMessage(EEvent event);
 	CMessage(EEvent event, EDataType datatype, CSensorData data);
@@ -19,19 +27,8 @@ public:
 	CMessage& operator=(const CMessage&) = default;
 	~CMessage() = default;
 public:
-	struct
-	{
-		EEvent mEvent;
-		EDataType mDataType;
-		UInt8 mPadding[2];
-	} mHeader;
-	union
-	{
-		UInt8 mRawData[16];
-		CSensorData mSensorData;
-		CFilterData mFilterData;
-		CMotorData mMotorData;
-	} mData;
+	Header mHeader;
+	UInt8 mData[16];
 };
 
 #endif

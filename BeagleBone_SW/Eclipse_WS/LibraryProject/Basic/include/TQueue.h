@@ -15,6 +15,7 @@ public:
 	constexpr Int32 getNumOfByteNeeded();
 	bool getMessage(CMessage& msg, bool waitForever);
 	bool addMessage(CMessage& msg, bool waitForever);
+	void flush();	///< Used to get rid of outdated values in the queue, blocks until the queue is empty.
 public:
 	TQueue();
 	TQueue(const TQueue<size>&) = delete;
@@ -27,6 +28,7 @@ private:
 	CMessage mQueue[size];
 	Int32 mHeadIndex;
 	Int32 mTailIndex;
+	Int32 mCurrentSize;
 };
 
 template<const Int32 size>
@@ -34,10 +36,22 @@ TQueue<size>::TQueue() : mWriteSem(true, size),
 						 mReadSem(true, 0),
 						 mAccessMutex(true, true),
 					     mHeadIndex(0),
-						 mTailIndex(0)
+						 mTailIndex(0),
+						 mCurrentSize(0)
 {
    sAssertion(size > 0, "(TQueue::TQueue()) : Created Queue with size 0");
 
+}
+template<const Int32 size>
+void TQueue<size>::flush()
+{
+	CMessage dummy;
+	mAccessMutex.take(true);
+	while(mCurrentSize > 0);
+	{
+		this->getMessage(dummy, false);
+	}
+	mAccessMutex.give();
 }
 template<const Int32 size>
 bool TQueue<size>::addMessage(CMessage& msg, bool waitForever)
@@ -57,6 +71,7 @@ bool TQueue<size>::addMessage(CMessage& msg, bool waitForever)
 		mQueue[mTailIndex] = msg;
 		mTailIndex = mTailIndex == (size -1) ? 0 : (mTailIndex + 1);
 		result = true;
+		mCurrentSize++;
 		mReadSem.give();
 		mAccessMutex.give();
 	}
@@ -80,6 +95,7 @@ bool TQueue<size>::getMessage(CMessage& msg, bool waitForever)
 		msg = mQueue[mHeadIndex];
 		mHeadIndex = mHeadIndex == (size -1) ? 0 : (mHeadIndex + 1);
 		result = true;
+		mCurrentSize --;
 		mWriteSem.give();
 		mAccessMutex.give();
 	}

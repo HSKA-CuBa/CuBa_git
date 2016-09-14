@@ -2,6 +2,7 @@
 //Class to create the TCP/IP server in order to connect to Matlab
 #ifndef CSERVER_H
 #define CSERVER_H
+#include "CMessage.h"
 #include "Global.h"
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -10,7 +11,9 @@
 class CServer
 {
 public:
-	void echo();
+	void init();
+	void waitForClient();
+	bool transmitMessage(const CMessage& msg);	///< Returns ture if the message was transmitted, false represents a connection shutdown.
 public:
 	CServer();
 	CServer(const CServer&) = delete;

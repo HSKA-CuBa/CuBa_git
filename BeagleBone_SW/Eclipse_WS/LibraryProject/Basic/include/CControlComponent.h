@@ -9,6 +9,9 @@ class CControlComponent : public AComponentBase
 public:
 	void init() override;
 	void run() override;
+private:
+	void V1_AusgleichsPolynomAccelerometer();
+	void V2_AusgleichsPolynomGyroscope();
 public:
 	CControlComponent(TQueue<Config::QueueSize>& rxQueue,
 					  TQueue<Config::QueueSize>& txQueue);

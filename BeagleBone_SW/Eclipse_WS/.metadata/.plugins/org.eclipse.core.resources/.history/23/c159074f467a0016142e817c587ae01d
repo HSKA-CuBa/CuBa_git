@@ -1,0 +1,4 @@
+HW/source/bbb_mpu6050.o: ../HW/source/bbb_mpu6050.c \
+ /home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include/bbb_mpu6050.h
+
+/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/LibraryProject/HW/include/bbb_mpu6050.h:

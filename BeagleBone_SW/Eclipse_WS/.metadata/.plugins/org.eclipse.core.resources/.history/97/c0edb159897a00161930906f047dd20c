@@ -1,0 +1,99 @@
+//11.9.16, Michael Meindl
+//Threadsafe Queue for IPC
+#ifndef CQUEUE_H
+#define CQUEUE_H
+#include "Global.h"
+#include "CCountingSemaphore.h"
+#include "CMutex.h"
+#include "CMessage.h"
+#include <iostream>
+
+template<const Int32 size>
+class TQueue
+{
+public:
+	constexpr Int32 getNumOfByteNeeded();
+	bool getMessage(CMessage& msg, bool waitForever);
+	bool addMessage(CMessage& msg, bool waitForever);
+	void flush();	///< Used to get rid of outdated values in the queue, blocks until the queue is empty.
+public:
+	TQueue();
+	TQueue(const TQueue<size>&) = delete;
+	TQueue& operator=(const TQueue<size>&) = delete;
+	~TQueue() = default;
+private:
+	CCountingSemaphore mWriteSem;
+	CCountingSemaphore mReadSem;
+	CMutex mAccessMutex;
+	CMessage mQueue[size];
+	Int32 mHeadIndex;
+	Int32 mTailIndex;
+};
+
+template<const Int32 size>
+TQueue<size>::TQueue() : mWriteSem(true, size),
+						 mReadSem(true, 0),
+						 mAccessMutex(true, true),
+					     mHeadIndex(0),
+						 mTailIndex(0)
+{
+   sAssertion(size > 0, "(TQueue::TQueue()) : Created Queue with size 0");
+
+}
+template<const Int32 size>
+void TQueue<size>::flush()
+{
+	CMessage dummy;
+	while(true == this->getMessage(dummy, true))
+	{
+		;
+	}
+}
+template<const Int32 size>
+bool TQueue<size>::addMessage(CMessage& msg, bool waitForever)
+{
+	bool result = true;
+	if(false == mWriteSem.take(waitForever))
+	{
+		result = false;
+	}
+	else if(false == mAccessMutex.take(waitForever))
+	{
+		mWriteSem.give();
+		result = false;
+	}
+	else
+	{
+		mQueue[mTailIndex] = msg;
+		mTailIndex = mTailIndex == (size -1) ? 0 : (mTailIndex + 1);
+		result = true;
+		mReadSem.give();
+		mAccessMutex.give();
+	}
+	return result;
+}
+template<const Int32 size>
+bool TQueue<size>::getMessage(CMessage& msg, bool waitForever)
+{
+	bool result = false;
+	if(false == mReadSem.take(waitForever))
+	{
+		result = false;
+	}
+	else if(false == mAccessMutex.take(waitForever))
+	{
+		mReadSem.give();
+		result = false;
+	}
+	else
+	{
+		msg = mQueue[mHeadIndex];
+		mHeadIndex = mHeadIndex == (size -1) ? 0 : (mHeadIndex + 1);
+		result = true;
+		mWriteSem.give();
+		mAccessMutex.give();
+	}
+	return result;
+}
+
+#endif

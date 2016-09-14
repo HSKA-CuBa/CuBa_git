@@ -7,7 +7,16 @@
 class CSensorData
 {
 public:
+	Float32 getTime() const;
+	Int16 getX1_raw__dd() const;
+	Int16 getX2_raw__dd() const;
+	Int16 getY1_raw__dd() const;
+	Int16 getY2_raw__dd() const;
+	Int16 getPhi1_raw__d() const;
+	Int16 getPhi2_raw__d() const;
+public:
 	///Constructor to create an instance with valid data.
+	//CSensorData();
 	CSensorData(Float32 time,
 				Int16 x1_raw__dd,
 				Int16 y1_raw__dd,
@@ -18,7 +27,7 @@ public:
 	CSensorData(const CSensorData&) = default;
 	CSensorData& operator=(const CSensorData&) = default; 	///< Required to copy messages into the queue.
 	~CSensorData() = default;
-public:
+private:
 	Float32 mTime;			///< Current time.
 	Int16 mX1_raw__dd;		///< Current X1-Acceleration in 2-complement.
 	Int16 mY1_raw__dd;		///< Current Y1-Acceleration in 2-complement.
