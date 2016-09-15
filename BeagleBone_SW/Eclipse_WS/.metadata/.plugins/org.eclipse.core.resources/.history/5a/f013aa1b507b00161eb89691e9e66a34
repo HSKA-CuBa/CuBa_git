@@ -1,0 +1,154 @@
+//12.9.16, Michael Meindl
+#include "CControlComponent.h"
+#include <iostream>
+#include <unistd.h>
+
+CControlComponent::CControlComponent(TQueue<Config::QueueSize>& rxQueue,
+									 TQueue<Config::QueueSize>& txQueue) :
+									 	 AComponentBase(rxQueue, txQueue, true)
+{
+
+}
+void CControlComponent::init()
+{
+	std::cout << "[*] Control-Component: Initializing Hardware" << std::endl;
+	Int32 retVal = mHardware.initializeHardware();
+	sAssertion( retVal >= 0, "(CControlComponent::init()): Failed to initialize HW.");
+	std::cout << "[*] Control-Component: Hardware successfully initialized" << std::endl;
+}
+void CControlComponent::run_V4_FilterTest()
+{
+	CMessage rxMsg;
+	Float32 time = 0.0F;
+
+	while(true)
+	{
+		if(true == mStandbyState)
+		{
+			if(mRxQueue.getMessage(rxMsg, true))
+			{
+				if(rxMsg.mHeader.mEvent == EEvent::EV_REQUEST_RUN)
+				{
+					std::cout << "[*] Control-Component: Switching from STANDBY to RUNNING" << std::endl;
+					mStandbyState = false;
+					time = 0.0F;
+				}
+			}
+		}
+		else
+		{
+			if(mRxQueue.getMessage(rxMsg, false))
+			{
+				//Connection was termianted by Matlab -> kill this process
+				if(rxMsg.mHeader.mEvent == EEvent::EV_REQUEST_STANDBY)
+				{
+					std::cout << "[*] Control-Component: Received STANDBY-Request, terminating the process" << std::endl;
+					mStandbyState = true;
+					exit(0);
+				}
+			}
+			usleep(20000);
+			mHardware.fetchValues();
+			//Get the raw values
+			Int16 x1_raw__dd 	= mHardware.getX1__dd_raw();
+			Int16 y1_raw__dd 	= mHardware.getY1__dd_raw();
+			Int16 phi1_raw__d	= mHardware.getPhi1__d_raw();
+			Int16 x2_raw__dd	= mHardware.getX2__dd_raw();
+			Int16 y2_raw__dd	= mHardware.getY2__dd_raw();
+			Int16 phi2_raw__d	= mHardware.getPhi2__d_raw();
+			CSensorData sensorData(time, x1_raw__dd, y1_raw__dd,
+								   phi1_raw__d, x2_raw__dd,
+								   y2_raw__dd, phi2_raw__d);
+			CMessage sensorMsg(EEvent::EV_REQUEST_TX_DATA,
+								EDataType::SENSOR_DATA,
+								sensorData);
+			//Evaluate the sensor data and calculate the filter values;
+//			mSensorEvaluation.calculateValues(x1_raw__dd, x2_raw__dd,
+//											  y1_raw__dd, y2_raw__dd,
+//											  phi1_raw__d, phi2_raw__d);
+//			Float32 phi 	= mSensorEvaluation.getPhi();
+//			Float32 phi__d  = mSensorEvaluation.getPhi__d();
+//			Float32 phi__dd = mSensorEvaluation.getPhi__dd();
+//			CFilterData unfilteredData(time, phi, phi__d, phi__dd);
+//			CMessage unfilteredMsg(EEvent::EV_REQUEST_TX_DATA,
+//								   EDataType::UNFILTERED_DATA,
+//								   unfilteredData);
+//
+//			mComplementaryFilter.calculateValues(phi, phi__d, phi__dd);
+//			Float32 phi_comp 	= mComplementaryFilter.getFilteredPhi();
+//			Float32 phi_comp__d = mComplementaryFilter.getFilteredPhi__d();
+//			CFilterData compData(time, phi_comp, phi_comp__d, 0.0F);
+//			CMessage compMsg(EEvent::EV_REQUEST_TX_DATA,
+//							 EDataType::COMPLEMENTARY_DATA,
+//							 compData);
+//
+//			Float32 phi_kalman = mKalmanFilter.calculatePhi(phi, phi__d);
+//			CFilterData kalmanData(time, phi_kalman, 0.0F, 0.0F);
+//			CMessage kalmanMsg(EEvent::EV_REQUEST_TX_DATA,
+//							   EDataType::KALMAN_DATA,
+//							   kalmanData);
+
+			time += 0.02F;
+			mTxQueue.addMessage(sensorMsg, false);
+			mTxQueue.addMessage(sensorMsg, false);
+			mTxQueue.addMessage(sensorMsg, false);
+			mTxQueue.addMessage(sensorMsg, false);
+			mTxQueue.addMessage(sensorMsg, false);
+			//mTxQueue.addMessage(unfilteredMsg, false);
+			//mTxQueue.addMessage(compMsg, false);
+			//mTxQueue.addMessage(kalmanMsg, false);
+		}
+	}
+}
+void CControlComponent::run_V2_OffsetGyroscope()
+{
+	this->run_V1_AusgleichsPolynomAccelerometer();
+}
+void CControlComponent::run_V1_AusgleichsPolynomAccelerometer()
+{
+	CMessage rxMsg;
+	Float32 time;
+
+	while(true)
+	{
+		if(true == mStandbyState)
+		{
+			if(mRxQueue.getMessage(rxMsg, true))
+			{
+				if(rxMsg.mHeader.mEvent == EEvent::EV_REQUEST_RUN)
+				{
+					std::cout << "[*] Control-Component: Switching from STANDBY to RUNNING" << std::endl;
+					mStandbyState = false;
+					time = 0.0F;
+				}
+			}
+		}
+		else
+		{
+			if(mRxQueue.getMessage(rxMsg, false))
+			{
+				//Connection was terminated by Matlab -> kill this process
+				if(rxMsg.mHeader.mEvent == EEvent::EV_REQUEST_STANDBY)
+				{
+					std::cout << "[*] Control-Component: Received STANDBY-Request, terminating the process" << std::endl;
+					mStandbyState = true;
+					exit(0);
+				}
+			}
+			usleep(20000);
+			mHardware.fetchValues();
+			CSensorData sensorData(time,
+					mHardware.getX1__dd_raw(),
+					mHardware.getY1__dd_raw(),
+					mHardware.getPhi1__d_raw(),
+					mHardware.getX2__dd_raw(),
+					mHardware.getY2__dd_raw(),
+					mHardware.getPhi2__d_raw());
+			CMessage sensorMsg(EEvent::EV_REQUEST_TX_DATA,
+								EDataType::SENSOR_DATA,
+								sensorData);
+			time += 0.02F;
+			mTxQueue.addMessage(sensorMsg, false);
+		}
+	}
+}

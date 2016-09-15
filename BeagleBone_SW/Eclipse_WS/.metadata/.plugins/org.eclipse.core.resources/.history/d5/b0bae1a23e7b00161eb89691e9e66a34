@@ -1,0 +1,6 @@
+//26.8.16, Michael Meindl
+#ifndef CCOMPLEMENTARYFILTER_H
+#define CCOMPLEMENTARYFILTER_H
+#include "Global.h"
+
+#endif

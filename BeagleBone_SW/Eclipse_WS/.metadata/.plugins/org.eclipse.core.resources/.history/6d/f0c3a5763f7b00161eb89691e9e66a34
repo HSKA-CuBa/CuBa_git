@@ -1,0 +1,16 @@
+//26.8.16, Michael Meindl
+#include "CComplementaryFilter.h"
+#include "ControlConfig.h"
+#include <cmath>
+
+CComplementaryFilter::CComplementaryFilter() : mFilteredPhi(0.0F),
+											   mFilteredPhi__d(0.0F),
+											   mRecentPhi_C(0.0F),
+											   mRecentPhi_G__d(0.0F),
+											   mRecentPhi_A__d(0.0F),
+											   mRecentPhi_C__d(0.0F),
+											   mFirstRun(true),
+											   mPadding{0U}
+{
+
+}

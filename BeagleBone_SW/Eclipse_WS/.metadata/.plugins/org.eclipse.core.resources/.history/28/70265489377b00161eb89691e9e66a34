@@ -1,0 +1,19 @@
+//13.9.16, Michael Meindl
+#ifndef CSENSOREVALUATION_H
+#define CSENSOREVALUATION_H
+#include "Global.h"
+
+class CSensorEvaluation
+{
+public:
+	Float32 getPhi() const;
+	Float32 getPhi__d() const;
+	Float32 getPhi__dd() const;
+public:
+	CSensorEvaluation();
+	CSensorEvaluation(const CSensorEvaluation&) = delete;
+	CSensorEvaluation& operator=(const CSensorEvaluation&) = delete;
+	~CSensorEvaluation() = default;
+};
+
+#endif

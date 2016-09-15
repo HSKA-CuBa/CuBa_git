@@ -1,0 +1,21 @@
+//13.9.16, Michael Meindl
+#include "CSensorEvaluation.h"
+
+CSensorEvaluation::CSensorEvaluation() : mPhi(0.0F),
+										 mPhi__d(0.0F),
+										 mPhi__dd(0.0F)
+{
+
+}
+void CSensorEvaluation::calculateValues(const Int16 x1_raw__dd,
+										const Int16 x2_raw__dd,
+										const Int16 y1_raw__dd,
+										const Int16 y2_raw__dd,
+										const Int16 phi1_raw__dd,
+										const Int16 phi2_raw__dd)
+{
+	Float32 x1__dd = static_cast<Float32>(x1_raw__dd) * ControlConfig::X1__dd_P1 +
+					 ControlConfig::X1__dd_P2;
+	Float32 x2__dd = static_cast<Float32>(x2_raw__dd) * ControlConfig::X2__dd_P1 +
+					 ControlConfig::X2__dd_P2;
+}

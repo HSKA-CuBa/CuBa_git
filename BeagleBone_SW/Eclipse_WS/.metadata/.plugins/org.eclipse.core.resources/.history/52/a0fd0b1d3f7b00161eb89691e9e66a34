@@ -1,0 +1,6 @@
+//26.8.16, Michael Meindl
+#include "CComplementaryFilter.h"
+#include "ControlConfig.h"
+#include <cmath>
+
+CComplementaryFilter::CComplementaryFilter() :
