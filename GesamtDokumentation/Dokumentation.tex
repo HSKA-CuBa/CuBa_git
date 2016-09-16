@@ -25,7 +25,37 @@
 }
 \geometry{a4paper, top=25mm, left=30mm, right=25mm, bottom=20mm}
 \usepackage{titlesec}
+\usepackage[footsepline,headsepline]{scrpage2}
+\setfootsepline{1pt}
+\setheadsepline{1pt}
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\cfoot{\pagemark}
+\chead{\headmark}
+\automark[subsection]{section}
 \titleclass{\subsubsubsection}{straight}[\subsection]
+
+%Listing
+\usepackage{courier}
+\usepackage{listings}
+\usepackage{color}
+ \lstset{
+   frame=tb,
+   basicstyle=\footnotesize\bfseries\ttfamily,
+   emph={square}, 
+   emphstyle=\color{blue}\texttt,
+   emph={[2]root,base},
+   emphstyle={[2]\color{yac}\texttt},
+   showstringspaces=false,
+   flexiblecolumns=false,
+   tabsize=2,
+   numbers=left,
+   numberstyle=\tiny\bfseries,
+   numberblanklines=false,
+   stepnumber=1,
+   numbersep=10pt,
+   xleftmargin=15pt
+ }
 
 \newcounter{subsubsubsection}[subsubsection]
 \renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
@@ -59,16 +89,21 @@
 \include{CuBa_Macros}
 
 \begin{document}
+
+\include{Deckblatt}
+\maketitle
+\include{Einfuehrung}
+
 \tableofcontents
 \newpage
+
+\section*{Abkürzungsverzeichnis}
 \begin{acronym}
-	\acro{BBB}{BeagleBone Blac}
+	\acro{BBB}{BeagleBone Black}
 	\acro{SHM}{Shared Memory}
 \end{acronym}
 
-\include{Einfuehrung}
 
-\include{1D_Software}
 
 \include{1D_Section}
 \include{1D_AktorikSensorik}
@@ -77,6 +112,7 @@
 \include{1D_Modellbildung}
 \include{1D_Reglerentwurf}
 \include{1D_Aufspringen}
+\include{1D_Software}
 
 \include{3D_Section}
 \include{3D_Dynamik}
@@ -100,6 +136,9 @@
 	\bibitem{lqrnotes} Joao P. Hespanha: Lecture notes on LQR/LQG controller design
 	\bibitem{ML_Mitchell} Tom M. Mitchell: Machine Learning
 	\bibitem{ML_Bishop} Christopher Bishop: Pattern Recognition and Machine Learning
+	\bibitem{Wie_FW} Joachim Wietzke, Manh Tien Tran: Automotive Embedded Systeme: Effizientes Framework - Vom Design zur Implementierung
+	\bibitem{Wie_ET} Joachim Wietzke: Embedded Technologies: Vom Treiber bis zur Grafik-Anbindung
+	\bibitem{EBBB} Derek Molloy: Exploring BeagleBone: Tools and Techniques for Building with Embedded Linux
 \end{thebibliography}
 
 \end{document}
