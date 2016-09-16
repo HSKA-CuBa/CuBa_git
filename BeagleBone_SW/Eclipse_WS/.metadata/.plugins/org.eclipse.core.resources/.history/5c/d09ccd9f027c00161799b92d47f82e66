@@ -1,0 +1,27 @@
+#include <pthread.h>
+#include <unistd.h>
+
+#include "CSharedMemory.h"
+#include "AComponentBase.h"
+#include "CControlComponent.h"
+#include "CCommComponent.h"
+#include "Global.h"
+#include "TQueue.h"
+#include "CBBBHardware.h"
+
+
+int main(void)
+{
+	CBBBHardware hw;
+	hw.initializeHardware();
+
+	hw.enableMotor();
+	hw.setTorque(-0.003F);
+	hw.setTorque(0.0001F);
+	hw.disableMotor();
+	while(true)
+	{
+
+	}
+	return 0;
+}

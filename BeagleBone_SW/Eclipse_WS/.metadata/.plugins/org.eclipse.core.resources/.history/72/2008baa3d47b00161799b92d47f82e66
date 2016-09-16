@@ -1,0 +1,129 @@
+#include "CCommComponent.h"
+#include "AComponentBase.h"
+#include <iostream>
+#include <iomanip>
+#include <unistd.h>
+
+CCommComponent::CCommComponent(TQueue<Config::QueueSize>& rxQueue,
+							   TQueue<Config::QueueSize>& txQueue) : AComponentBase(rxQueue, txQueue, true)
+{
+
+}
+void CCommComponent::init()
+{
+	std::cout << "[*] Comm-Component: Initializing the TCP/IP-Server" << std::endl;
+	mServer.init();
+}
+void CCommComponent::run_V4_FilterTest()
+{
+	while(true)
+	{
+		if(true == mStandbyState)
+		{
+			std:: cout << "[*] Comm-Component: Server waiting for connection" << std::endl;
+			mServer.waitForClient();
+			CMessage msg(EEvent::EV_REQUEST_RUN);
+			if(mTxQueue.addMessage(msg, true))
+			{
+				std::cout << "[*] Comm-Component: RUN-Request transmitted" << std::endl;
+			}
+			mStandbyState = false;	//Switch to running mode
+		}
+		else	//RUNNING-State
+		{
+			CMessage msg;
+			if(mRxQueue.getMessage(msg, true))
+			{
+				if(msg.mHeader.mEvent == EEvent::EV_REQUEST_TX_DATA)
+				{
+					if(false == mServer.transmitMessage(msg))
+					{
+						//Connection was shutdown by Matlab, notify the Control-Component and terminate the process
+						CMessage runMsg(EEvent::EV_REQUEST_STANDBY);
+						if(mTxQueue.addMessage(runMsg, true))
+						{
+							std::cout << "[*] Comm-Component: Sent STANDBY-Request to the Control-Component" << std::endl;
+						}
+						mStandbyState = true;
+						std::cout << "[*] Comm-Component: Client disconnected, terminating" << std::endl;
+						exit(0);
+					}
+					else
+					{
+						if(EDataType::SENSOR_DATA == msg.mHeader.mDataType)
+						{
+							std::cout << "[*] Comm-Component: Sensor-Data received" << std::endl;
+						}
+						else if(EDataType::UNFILTERED_DATA == msg.mHeader.mDataType)
+						{
+							CFilterData* data = reinterpret_cast<CFilterData*>(msg.mData);
+							std::cout << "[*] Comm-Component: Unfiltered-Data received" << std::endl;
+							std::cout << "    Unfiltered-Phi: " << data->getPhi() << std::endl;
+						}
+						else if(EDataType::COMPLEMENTARY_DATA == msg.mHeader.mDataType)
+						{
+							std::cout << "[*] Comm-Component: Complementary-Filter-Data received" << std::endl;
+						}
+						else if(EDataType::KALMAN_DATA == msg.mHeader.mDataType)
+						{
+							std::cout << "[*] Comm-Component: Kalman-Filter-Data received" << std::endl;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+void CCommComponent::run_V2_OffsetGyroscope()
+{
+	this->run_V1_AusgleichsPolynomAccelerometer();
+}
+void CCommComponent::run_V1_AusgleichsPolynomAccelerometer()
+{
+	while(true)
+	{
+		if(mStandbyState == true)
+		{
+			std::cout << "[*] Comm-Component: Server waiting for connection" << std::endl;
+			mServer.waitForClient();
+			//Send a RUN-Request to the Control-Component
+			CMessage msg(EEvent::EV_REQUEST_RUN);
+			if(mTxQueue.addMessage(msg, true))
+			{
+				std::cout << "[*] Comm-Component: RUN-Request transmitted" << std::endl;
+			}
+			mStandbyState = false;	//Switch to running mode
+		}
+		else
+		{
+			CMessage msg;
+			if(mRxQueue.getMessage(msg, true))
+			{
+				if(msg.mHeader.mEvent == EEvent::EV_REQUEST_TX_DATA)
+				{
+					CSensorData* data = reinterpret_cast<CSensorData*>(msg.mData);
+					std::cout << "[*] Comm-Component: Sensor-Data received" << std::endl;
+					std::cout << std::setw(15) << ::std::left << "    X1__dd: " << data->getX1_raw__dd() << std::endl;
+					std::cout << std::setw(15) << ::std::left << "    X2__dd: " << data->getX2_raw__dd() << std::endl;
+					std::cout << std::setw(15) << ::std::left << "    Y1__dd: " << data->getY1_raw__dd() << std::endl;
+					std::cout << std::setw(15) << ::std::left << "    Y2__dd: " << data->getY2_raw__dd() << std::endl;
+					std::cout << std::setw(15) << ::std::left << "    Phi1__dd: " << data->getPhi1_raw__d() << std::endl;
+					std::cout << std::setw(15) << ::std::left << "    Phi2__dd: " << data->getPhi2_raw__d() << std::endl << std::endl;
+					if(false == mServer.transmitMessage(msg))
+					{
+						//Connection was shutdown by Matlab, notify the Control-Component and terminate the process
+						CMessage runMsg(EEvent::EV_REQUEST_STANDBY);
+						if(mTxQueue.addMessage(runMsg, true))
+						{
+							std::cout << "[*] Comm-Component: Sent STANDBY-Request to the Control-Component" << std::endl;
+						}
+						mStandbyState = true;
+						std::cout << "[*] Comm-Component: Client disconnected, terminating" << std::endl;
+						exit(0);
+					}
+				}
+			}
+		}
+	}
+
+}

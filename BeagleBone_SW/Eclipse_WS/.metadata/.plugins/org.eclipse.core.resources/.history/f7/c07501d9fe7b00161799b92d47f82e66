@@ -1,0 +1,23 @@
+#include <pthread.h>
+#include <unistd.h>
+
+#include "CSharedMemory.h"
+#include "AComponentBase.h"
+#include "CControlComponent.h"
+#include "CCommComponent.h"
+#include "Global.h"
+#include "TQueue.h"
+#include "CBBBHardware.h"
+
+
+int main(void)
+{
+	CBBBHardware hw;
+
+
+	while(true)
+	{
+
+	}
+	return 0;
+}

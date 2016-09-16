@@ -1,0 +1,19 @@
+#include "CMotorData.h"
+
+
+Float32 CMotorData::getTime() const
+{
+	return mTime;
+}
+Float32 CMotorData::getTorque() const
+{
+	return mTorque;
+}
+Float32 CMotorData::getPsi__d() const
+{
+	return mPsi__d;
+}
+Float32 CMotorData::getPsi_raw__d() const
+{
+	return mPsi_raw__d;
+}
