@@ -13,7 +13,7 @@ public:
 	void init() override;
 	void run_V1_AusgleichsPolynomAccelerometer() override;
 	void run_V2_OffsetGyroscope() override;
-
+	void run_V3_AusgleichsPolynomMotorADC() override;
 	void run_V4_FilterTest() override;
 private:
 	void V1_AusgleichsPolynomAccelerometer();

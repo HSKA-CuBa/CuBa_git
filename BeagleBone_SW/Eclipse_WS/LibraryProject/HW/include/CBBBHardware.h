@@ -29,7 +29,7 @@ public:
 	void closeBrake();
 	void enableMotor();
 	void disableMotor();
-	void setTorque(const float torque);
+	void setTorque(float torque);
 
 private:
 	int sysfsEcho(const char* file, const char* string);

@@ -13,7 +13,7 @@ public:
 	virtual void init() = 0;									///< Brief Abstract method to initialize the comopnent.
 	virtual void run_V1_AusgleichsPolynomAccelerometer() = 0;	///< Abstract method to run the first measurement setup.
 	virtual void run_V2_OffsetGyroscope() = 0;					///< Abstract method to run the second measurement setup.
-//	virtual void run_V3_AusgleichsPolynomMotorADC() = 0;		///< Abstract method to run the third measurement setup.
+	virtual void run_V3_AusgleichsPolynomMotorADC() = 0;		///< Abstract method to run the third measurement setup.
 	virtual void run_V4_FilterTest() = 0;						///< Abstract method to test the different filters.
 //	virtual void run_V5_BestimmungC_psi() = 0;					///< Abstract method to determine C_psi.
 //	virtual void run_V6_BestimmungC_phi() = 0;					///< Abstract method to determine C_phi.

@@ -90,13 +90,55 @@ void CControlComponent::run_V4_FilterTest()
 
 			time += 0.02F;
 			mTxQueue.addMessage(sensorMsg, false);
-			mTxQueue.addMessage(sensorMsg, false);
-			mTxQueue.addMessage(sensorMsg, false);
-			mTxQueue.addMessage(sensorMsg, false);
-			mTxQueue.addMessage(sensorMsg, false);
-			//mTxQueue.addMessage(unfilteredMsg, false);
-			//mTxQueue.addMessage(compMsg, false);
-			//mTxQueue.addMessage(kalmanMsg, false);
+			mTxQueue.addMessage(unfilteredMsg, false);
+			mTxQueue.addMessage(compMsg, false);
+			mTxQueue.addMessage(kalmanMsg, false);
+		}
+	}
+}
+void CControlComponent::run_V3_AusgleichsPolynomMotorADC()
+{
+	CMessage rxMsg;
+	Float32 time;
+	Float32 torque = 0.014F;
+
+	while(true)
+	{
+		if(true == mStandbyState)
+		{
+			if(mRxQueue.getMessage(rxMsg, true))
+			{
+				std::cout << "[*] Control-Component: Switching from STANDBY to RUNNING" << std::endl;
+				mStandbyState = false;
+				mHardware.enableMotor();
+				time = 0.0F;
+			}
+		}
+		else
+		{
+			if(mRxQueue.getMessage(rxMsg, false))
+			{
+				if(rxMsg.mHeader.mEvent == EEvent::EV_REQUEST_STANDBY)
+				{
+					std::cout << "[*] Control-Component: Received STANDBY-Request, terminating the process" << std::endl;
+					mStandbyState = true;
+					mHardware.disableMotor();
+					exit(0);
+				}
+				else if(rxMsg.mHeader.mEvent == EEvent::EV_SET_TORQUE)
+				{
+					std::cout << "[*] Control-Component: Received request to set the motor torque value" << std::endl;
+					torque = *reinterpret_cast<Float32*>(rxMsg.mData);
+				}
+			}
+			mHardware.setTorque(torque);
+			mHardware.fetchValues();
+			UInt16 psi_raw__d = mHardware.getPsi__d_raw();
+			CMotorData motorData(time, torque, 0.0F, psi_raw__d);
+			CMessage txMsg(EEvent::EV_REQUEST_TX_DATA, EDataType::MOTOR_DATA, motorData);
+			mTxQueue.addMessage(txMsg, false);
+
+			usleep(20000);
 		}
 	}
 }

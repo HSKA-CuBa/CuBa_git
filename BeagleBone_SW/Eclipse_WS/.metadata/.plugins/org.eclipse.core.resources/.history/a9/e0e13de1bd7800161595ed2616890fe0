@@ -1,6 +1,0 @@
-#include "CMessage.h"
-
-CMessage::CMessage()
-{
-	sizeof(mData);
-}

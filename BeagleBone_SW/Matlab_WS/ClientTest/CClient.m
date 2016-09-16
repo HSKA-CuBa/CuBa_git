@@ -5,6 +5,7 @@ classdef CClient < handle
         mUnfilteredData;
         mCompData;
         mKalmanData;
+        mMotorData;
     end
     
     methods
@@ -14,6 +15,7 @@ classdef CClient < handle
             ctor.mUnfilteredData    = CFilterData();
             ctor.mCompData          = CFilterData();
             ctor.mKalmanData        = CFilterData();
+            ctor.mMotorData         = CMotorData();
         end
         function run_V1_AusgleichsPolynomAccelerometer(this, nbrOfDatapoints, phi)
             %Reset the sensordata
@@ -86,6 +88,38 @@ classdef CClient < handle
             sensorData = this.mSensorData;      %Dummy for the savefile
             save(saveFilename, 'sensorData');
         end
+        function run_V3_AusgleichsPolynomMotorADC(this, nbrOfDatapoints, rpm)
+            %Reset the data classes
+            this.mSensorData        = CSensorData();
+            this.mUnfilteredData    = CFilterData();
+            this.mCompData          = CFilterData();
+            this.mKalmanData        = CFilterData();
+            this.mMotorData         = CMotorData();
+            %Connect to the BBB
+            this.mClient = tcpclient('192.168.9.1', 40000);
+            
+            n = 0;
+            while(n < nbrOfDatapoints)
+                n = n + 1;
+                while(this.mClient.BytesAvailable < 20)
+                    ;    %Wait for a message
+                end
+                %Parse the header
+                header   = read(this.mClient, 4, 'uint8');
+                event    = EEvent(header(1));
+                dataType = EDataType(header(2));
+                
+                switch(event)
+                    case EEvent.EV_REQUEST_TX_DATA
+                        this.parseDataMessage(dataType);
+                    otherwise
+                        read(this.mClient, 16, 'uint8');   
+                end
+            end
+            %Shutdown the connection
+            this.mClient = [];            
+            
+        end
         function run_V4_FilterTest(this, nbrOfDatapoints)
             %Reset the sensordata
             this.mSensorData        = CSensorData();
@@ -146,6 +180,12 @@ classdef CClient < handle
                     phi__d  = read(this.mClient,1, 'single');
                     phi__dd = read(this.mClient,1, 'single');
                     this.mKalmanData.addData(time, phi, phi__d, phi__dd);
+                case EDataType.MOTOR_DATA
+                    time        = read(this.mClient,1, 'single');
+                    torque      = read(this.mClient,1, 'single');
+                    psi__d      = read(this.mClient,1, 'single');
+                    psi_raw__d  = read(this.mClient,1, 'single');
+                    this.mMotorData.addData(time, torque, psi__d, psi_raw__d);
             end
             
         end

@@ -7,25 +7,21 @@
 #include "CCommComponent.h"
 #include "Global.h"
 #include "TQueue.h"
+#include "CBBBHardware.h"
 
 
 int main(void)
 {
-	CSharedMemory shm;
-	TQueue<Config::QueueSize>* controlQueue = shm.createQueue();
-	TQueue<Config::QueueSize>* commQueue	= shm.createQueue();
+	CBBBHardware hw;
+	hw.initializeHardware();
 
-	CCommComponent commComp(*commQueue, *controlQueue);
-	CControlComponent controlComp(*controlQueue, *commQueue);
-	if(fork() == 0)
+	hw.enableMotor();
+	hw.setTorque(-0.005F);
+	hw.setTorque(0.0001F);
+	hw.disableMotor();
+	while(true)
 	{
-		controlComp.init();
-		controlComp.run();
-	}
-	else
-	{
-		commComp.init();
-		commComp.run();
+
 	}
 	return 0;
 }

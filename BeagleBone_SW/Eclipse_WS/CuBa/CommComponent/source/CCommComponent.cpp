@@ -56,9 +56,7 @@ void CCommComponent::run_V4_FilterTest()
 						}
 						else if(EDataType::UNFILTERED_DATA == msg.mHeader.mDataType)
 						{
-							CFilterData* data = reinterpret_cast<CFilterData*>(msg.mData);
 							std::cout << "[*] Comm-Component: Unfiltered-Data received" << std::endl;
-							std::cout << "    Unfiltered-Phi: " << data->getPhi() << std::endl;
 						}
 						else if(EDataType::COMPLEMENTARY_DATA == msg.mHeader.mDataType)
 						{
@@ -70,6 +68,52 @@ void CCommComponent::run_V4_FilterTest()
 						}
 					}
 				}
+			}
+		}
+	}
+}
+void CCommComponent::run_V3_AusgleichsPolynomMotorADC()
+{
+	while(true)
+	{
+		if(true == mStandbyState)
+		{
+			std::cout << "[*] Comm-Component: Server waiting for connection" << std::endl;
+			mServer.waitForClient();
+
+			CMessage msg(EEvent::EV_REQUEST_RUN);
+			if(mTxQueue.addMessage(msg, true))
+			{
+				std::cout << "[*] Comm-Component: RUN-Request transmitted" << std::endl;
+			}
+			mStandbyState = false;
+		}
+		else
+		{
+			CMessage msg;
+			if(mRxQueue.getMessage(msg, true))
+			{
+				if(msg.mHeader.mDataType == EDataType::MOTOR_DATA)
+				{
+					CMotorData* data = reinterpret_cast<CMotorData*>(msg.mData);
+					std::cout << "[*] Comm-Component: Motor-Data received" << std::endl;
+					std::cout << std::setw(25) << ::std::left << "    Time: " << data->getTime() << std::endl;
+					std::cout << std::setw(25) << ::std::left << "    Torque: " << data->getTorque() << std::endl;
+					std::cout << std::setw(25) << ::std::left << "    Psi__d: " << data->getPsi__d() << std::endl;
+					std::cout << std::setw(25) << ::std::left << "    Psi_raw__d: " << data->getPsi_raw__d() << std::endl;
+				}
+			}
+			if(false == mServer.transmitMessage(msg))
+			{
+				//Connection was shutdown by Matlab, notify the Control-Component and terminate the process
+				CMessage runMsg(EEvent::EV_REQUEST_STANDBY);
+				if(mTxQueue.addMessage(runMsg, true))
+				{
+					std::cout << "[*] Comm-Component: Sent STANDBY-Request to the Control-Component" << std::endl;
+				}
+				mStandbyState = true;
+				std::cout << "[*] Comm-Component: Client disconnected, terminating" << std::endl;
+				exit(0);
 			}
 		}
 	}
@@ -101,14 +145,18 @@ void CCommComponent::run_V1_AusgleichsPolynomAccelerometer()
 			{
 				if(msg.mHeader.mEvent == EEvent::EV_REQUEST_TX_DATA)
 				{
-					CSensorData* data = reinterpret_cast<CSensorData*>(msg.mData);
-					std::cout << "[*] Comm-Component: Sensor-Data received" << std::endl;
-					std::cout << std::setw(15) << ::std::left << "    X1__dd: " << data->getX1_raw__dd() << std::endl;
-					std::cout << std::setw(15) << ::std::left << "    X2__dd: " << data->getX2_raw__dd() << std::endl;
-					std::cout << std::setw(15) << ::std::left << "    Y1__dd: " << data->getY1_raw__dd() << std::endl;
-					std::cout << std::setw(15) << ::std::left << "    Y2__dd: " << data->getY2_raw__dd() << std::endl;
-					std::cout << std::setw(15) << ::std::left << "    Phi1__dd: " << data->getPhi1_raw__d() << std::endl;
-					std::cout << std::setw(15) << ::std::left << "    Phi2__dd: " << data->getPhi2_raw__d() << std::endl << std::endl;
+					if(msg.mHeader.mDataType == EDataType::SENSOR_DATA)
+					{
+						CSensorData* data = reinterpret_cast<CSensorData*>(msg.mData);
+						std::cout << "[*] Comm-Component: Sensor-Data received" << std::endl;
+						std::cout << std::setw(15) << ::std::left << "    X1__dd: " << data->getX1_raw__dd() << std::endl;
+						std::cout << std::setw(15) << ::std::left << "    X2__dd: " << data->getX2_raw__dd() << std::endl;
+						std::cout << std::setw(15) << ::std::left << "    Y1__dd: " << data->getY1_raw__dd() << std::endl;
+						std::cout << std::setw(15) << ::std::left << "    Y2__dd: " << data->getY2_raw__dd() << std::endl;
+						std::cout << std::setw(15) << ::std::left << "    Phi1__dd: " << data->getPhi1_raw__d() << std::endl;
+						std::cout << std::setw(15) << ::std::left << "    Phi2__dd: " << data->getPhi2_raw__d() << std::endl << std::endl;
+					}
+
 					if(false == mServer.transmitMessage(msg))
 					{
 						//Connection was shutdown by Matlab, notify the Control-Component and terminate the process

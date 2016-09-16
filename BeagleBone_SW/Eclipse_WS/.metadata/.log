@@ -7731,3 +7731,94 @@ org.eclipse.rse.services.files.RemoteFileIOException: Operation failed. File sys
 	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
 	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2016-09-16 08:06:37.017 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.rse.core 1 0 2016-09-16 08:08:50.523
+!MESSAGE Saved passwords are not available for migration to secure storage. Deprecated authorization classes (org.eclipse.core.runtime.compatibility.auth) are not installed.
+
+!ENTRY org.eclipse.cdt.launch.remote 4 150 2016-09-16 08:09:24.240
+!MESSAGE Error during file upload.
+!STACK 0
+org.eclipse.rse.services.files.RemoteFileIOException: Operation failed. File system input or output error
+	at org.eclipse.rse.internal.services.ssh.files.SftpFileService.makeSystemMessageException(SftpFileService.java:596)
+	at org.eclipse.rse.internal.services.ssh.files.SftpFileService.upload(SftpFileService.java:894)
+	at org.eclipse.cdt.launch.remote.RSEHelper.remoteFileDownload(RSEHelper.java:198)
+	at org.eclipse.cdt.launch.remote.launching.RemoteGdbLaunchDelegate.launch(RemoteGdbLaunchDelegate.java:74)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.launch.remote 4 150 2016-09-16 08:09:24.241
+!MESSAGE Operation failed. File system input or output error
+!STACK 0
+org.eclipse.rse.services.files.RemoteFileIOException: Operation failed. File system input or output error
+	at org.eclipse.rse.internal.services.ssh.files.SftpFileService.makeSystemMessageException(SftpFileService.java:596)
+	at org.eclipse.rse.internal.services.ssh.files.SftpFileService.upload(SftpFileService.java:894)
+	at org.eclipse.cdt.launch.remote.RSEHelper.remoteFileDownload(RSEHelper.java:198)
+	at org.eclipse.cdt.launch.remote.launching.RemoteGdbLaunchDelegate.launch(RemoteGdbLaunchDelegate.java:74)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.launch.remote 4 150 2016-09-16 08:11:34.391
+!MESSAGE Error during file upload.
+!STACK 0
+org.eclipse.rse.services.files.RemoteFileIOException: Operation failed. File system input or output error
+	at org.eclipse.rse.internal.services.ssh.files.SftpFileService.makeSystemMessageException(SftpFileService.java:596)
+	at org.eclipse.rse.internal.services.ssh.files.SftpFileService.upload(SftpFileService.java:894)
+	at org.eclipse.cdt.launch.remote.RSEHelper.remoteFileDownload(RSEHelper.java:198)
+	at org.eclipse.cdt.launch.remote.launching.RemoteGdbLaunchDelegate.launch(RemoteGdbLaunchDelegate.java:74)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.launch.remote 4 150 2016-09-16 08:11:34.391
+!MESSAGE Operation failed. File system input or output error
+!STACK 0
+org.eclipse.rse.services.files.RemoteFileIOException: Operation failed. File system input or output error
+	at org.eclipse.rse.internal.services.ssh.files.SftpFileService.makeSystemMessageException(SftpFileService.java:596)
+	at org.eclipse.rse.internal.services.ssh.files.SftpFileService.upload(SftpFileService.java:894)
+	at org.eclipse.cdt.launch.remote.RSEHelper.remoteFileDownload(RSEHelper.java:198)
+	at org.eclipse.cdt.launch.remote.launching.RemoteGdbLaunchDelegate.launch(RemoteGdbLaunchDelegate.java:74)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.launch.remote 4 150 2016-09-16 13:35:56.124
+!MESSAGE Error during file upload.
+!STACK 0
+org.eclipse.rse.services.files.RemoteFileIOException: Operation failed. File system input or output error
+	at org.eclipse.rse.internal.services.ssh.files.SftpFileService.makeSystemMessageException(SftpFileService.java:596)
+	at org.eclipse.rse.internal.services.ssh.files.SftpFileService.upload(SftpFileService.java:894)
+	at org.eclipse.cdt.launch.remote.RSEHelper.remoteFileDownload(RSEHelper.java:198)
+	at org.eclipse.cdt.launch.remote.launching.RemoteGdbLaunchDelegate.launch(RemoteGdbLaunchDelegate.java:74)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.launch.remote 4 150 2016-09-16 13:35:56.125
+!MESSAGE Operation failed. File system input or output error
+!STACK 0
+org.eclipse.rse.services.files.RemoteFileIOException: Operation failed. File system input or output error
+	at org.eclipse.rse.internal.services.ssh.files.SftpFileService.makeSystemMessageException(SftpFileService.java:596)
+	at org.eclipse.rse.internal.services.ssh.files.SftpFileService.upload(SftpFileService.java:894)
+	at org.eclipse.cdt.launch.remote.RSEHelper.remoteFileDownload(RSEHelper.java:198)
+	at org.eclipse.cdt.launch.remote.launching.RemoteGdbLaunchDelegate.launch(RemoteGdbLaunchDelegate.java:74)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

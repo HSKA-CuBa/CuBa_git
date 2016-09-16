@@ -1,7 +1,0 @@
-#include "CMPU6050.h"
-#include "CServer.h"
-
-int main()
-{
-	return 0;
-}

@@ -22,14 +22,16 @@ int main(void)
 		commComp.init();
 		//commComp.run_V1_AusgleichsPolynomAccelerometer();
 		//commComp.run_V2_OffsetGyroscope();
-		commComp.run_V4_FilterTest();
+		commComp.run_V3_AusgleichsPolynomMotorADC();
+		//commComp.run_V4_FilterTest();
 	}
 	else
 	{
 		controlComp.init();
 		//controlComp.run_V1_AusgleichsPolynomAccelerometer();
 		//controlComp.run_V2_OffsetGyroscope();
-		controlComp.run_V4_FilterTest();
+		controlComp.run_V3_AusgleichsPolynomMotorADC();
+		//controlComp.run_V4_FilterTest();
 	}
 	return 0;
 }

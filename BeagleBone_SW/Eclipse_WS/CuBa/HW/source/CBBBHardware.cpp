@@ -9,6 +9,8 @@
 #include <cerrno>     // errno
 #include <unistd.h>   // open, close, read, write, access, F_OK
 #include <fcntl.h>    // O_RDONLY
+#include <cstdlib>
+#include <string.h>
 
 #include <linux/i2c.h>
 
@@ -388,21 +390,18 @@ void CBBBHardware::openBrake()
 		fprintf(stderr, "Echo to 'enable' failed! ret: %d\n", ret);
 	}
 }
-
+//20000000
 
 void CBBBHardware::closeBrake()
 {
+	//TODO PWM für Servo
 	// Set PWM duty cycle to 7.3% (value for closed brake)
-	int ret;
-	ret = sysfsEcho(EHRPWM2B "duty_cycle", "1460000");
-	if (ret < 0) {
-		fprintf(stderr, "Echo to 'enable' failed! ret: %d\n", ret);
-	}
-}
 
+}
 
 void CBBBHardware::enableMotor()
 {
+	this->setTorque(0.0F);
 	// Set gpio pin 66 to 0
 	int ret;
 	ret = sysfsEcho("/sys/class/gpio/gpio66/value", "1");
@@ -423,7 +422,7 @@ void CBBBHardware::disableMotor()
 }
 
 
-void CBBBHardware::setTorque(const float torque)
+void CBBBHardware::setTorque(float torque)
 {
 	const char* value = "1";
 	if (torque >= 0.0f) { value = "0"; }
@@ -434,7 +433,15 @@ void CBBBHardware::setTorque(const float torque)
 	if (ret < 0) {
 		fprintf(stderr, "Echo to 'value' failed! ret: %d\n", ret);
 	}
-
+	// Set PWM-DC
+	torque = torque > 0.0F ? torque : -1.0F * torque;
+	float period = 20000000.0F;
+	int dc = static_cast<int>(period*(torque*11.258F+0.1F));
+	std::string dcString = std::to_string(dc);
+	ret = sysfsEcho(EHRPWM2B "duty_cycle", dcString.c_str());
+	if (ret < 0) {
+		fprintf(stderr, "Echo to 'enable' failed! ret: %d\n", ret);
+	}
 	return;
 }
 
