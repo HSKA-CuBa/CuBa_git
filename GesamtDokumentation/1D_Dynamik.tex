@@ -49,38 +49,40 @@ V = g(m_R \cdot l_{AB} + m_K \cdot l_{AC})cos(\varphi)
 L = T - V = \frac{1}{2}[({\theta}^A_K + m_R \cdot {l_{AB}}^2) {\dot{\varphi}}^2 + {\theta}^B_R(\dot{\varphi}+\dot{\psi})^2] - g(m_R \cdot l_{AB} + m_K \cdot l_{AC})cos(\varphi)
 \end{equation}
 
-In dem System wirken unterschiedliche Kräfte. Einerseits erzeugt der Motor ein Drehmoment, welches die virtuelle Arbeite $\delta W_M$ verursacht. Andererseits verrichtet die Gravitation die virtuelle Arbeite $\delta W_G$. Zusätzlich muss die, durch die Reibung entstandene, Verlustleistung berücksichtigt werden. In diesem Fall wird die Reibleistung mit den Rayleigh'schen Dissipationsfunktionen $D_{\varphi}$ und $D_{\psi}$ beschrieben und verrichten die virtuelle Arbeit $\delta W_D$.
-
+In dem System wirken unterschiedliche Kräfte und Momente, welche nach dem Lagrange-Formalismus als generalisierte Kraftkomponenten $Q_i$ dargestellt werden können. Das Ziel hiervon ist es, die Summe der Kräfte, bzw. deren verrichtete Arbeit, in Komponenten zu zerteilen, welche in Richtung der generalisierten Koordinaten wirken. Die generalisierten Kraftkomponenten können nach der folgenden Formel berechnet werden, wobei $F_j$ die verschiedenen Kräfte bzw. Momente und $r_j$ eine Verrückung in ihrer Wirkungsrichtung darstellt.
 \begin{equation}
--\delta W_M = T_M \cdot \delta \psi
+Q_i = \sum F_j \cdot \frac{\partial r_j}{\partial q_i} 
+\end{equation}
+Durch die Gravitation wirkt eine konstante Kraft entgegen der raumfesten y-Koordinate auf den Körper.
+\begin{equation}
+F_1 \cdot r_1 = -g \cdot (m_K \cdot y_K + m_R  \cdot y_R) = -g \cdot(m_K \cdot l_{AC} + m_R \cdot l_{AB}) \cdot cos(\varphi)
+\end{equation}
+Durch den Motor und die Reibung in den beiden Lagern entstehen die Drehmomente $T_M$, $M_{R_{\varpi}}$ und $M_{R_{\psi}}$, welche entlang der generalisierten Koordinaten wirken und somit nicht umgeformt werden müssen. Die Reibmomente werden als linear proportional zu der momentanen Winkelgeschwindigkeit modelliert.
+\begin{equation}
+F_2 \cdot r_2 = T_M \cdot \psi
 \end{equation}
 
 \begin{equation}
--\delta W_G = g(m_K \cdot l_{AC} + m_R \cdot l_{AB})sin(\varphi) \cdot \delta \varphi
+F_3 \cdot r_3 = M_{R_{\varphi}} \cdot \varphi = (-C_{\varphi} \cdot \dot{\varphi}) \cdot \varphi
 \end{equation}
 
 \begin{equation}
-D_{\varphi} = \frac{1}{2}C_{\varphi} \cdot {\dot{\varphi}}^2
+F_4 \cdot r_4 = M_{R_{\psi}} \cdot \psi = (-C_{\psi} \cdot \dot{\psi}) \cdot \psi
 \end{equation}
+Somit können nun die Summe der Kräfte und Momente gebildet werden und daraufhin die generalisierten Kraftkomponenten bestimmt werden.
 \begin{equation}
-D_{\psi} = \frac{1}{2}C_{\psi} \cdot {\dot{\psi}}^2
-\end{equation}
-\begin{equation}
-D = D_{\varphi} + D_{\psi} = \frac{1}{2}C_{\varphi} \cdot {\dot{\varphi}}^2 + \frac{1}{2}C_{\psi} \cdot {\dot{\psi}}^2
-\end{equation}
-\begin{equation}
--\delta W_D = - C_{\varphi} \cdot \dot{\varphi} \cdot \delta \varphi - C_{\psi} \cdot \dot{\psi} \cdot \delta \psi
+\begin{split}
+Q_{\varphi} &= -g \cdot (m_K \cdot l_{AC} + m_R \cdot l_{AB}) \cdot \frac{\partial cos(\varphi)}{\partial \varphi} + T_M \cdot \frac{\partial \psi}{\partial \varphi} + C_{\varphi} \cdot \dot{\varphi} \cdot \frac{\partial \varphi}{\partial \varphi} + C_{\psi} \cdot \dot{\psi} \cdot \frac{\partial \psi}{\partial \varphi} \\
+&= g \cdot (m_K \cdot l_{AC} + m_R \cdot l_{AB})\cdot sin(\varphi) - C_{\varphi} \cdot \dot{\varphi}
+\end{split}
 \end{equation}
 
-Die Summe der virtuellen Arbeiten, welche von den verschiedenen Kräften verrichtet wird, ergibt die virtuelle Arbeit des Gesamtsystems $\delta W$. In dem die verrichtete Arbeit partiell nach den beiden generalisierten Koordinaten $\varphi$ und $\psi$ differenziert wird, können die beiden generalisierten Kraftkomponenten $Q_{\varphi}$ und $Q_{\psi}$ berechnet werden.
-
 \begin{equation}
-Q_{\varphi} = g(m_K \cdot l_{AC} + m_R \cdot l_{AB})sin(\varphi) - C_{\varphi} \cdot \dot{\varphi}
+\begin{split}
+Q_{\psi} &= -g \cdot (m_K \cdot l_{AC} + m_R \cdot l_{AB}) \cdot \frac{\partial cos(\varphi)}{\partial \psi} + T_M \cdot \frac{\partial \psi}{\partial \psi} + C_{\varphi} \cdot \dot{\varphi} \cdot \frac{\partial \varphi}{\partial \psi} + C_{\psi} \cdot \dot{\psi} \cdot \frac{\partial \psi}{\partial \psi} \\
+&= T_M - C_{\psi} \cdot \dot{\psi}
+\end{split}
 \end{equation}
-\begin{equation}
-Q_{\psi} = T_M - C_{\psi} \cdot \dot{\psi}
-\end{equation}
-
 
 Bei dem Prototyp handelt es sich um ein nicht konservatives System, da durch die Reibung mechanische Energie verloren geht und der Motor dem System mechanische Energie zuführt. Da die beiden generalisierten Koordinaten $\varphi$ und $\psi$ voneinander unabhängig sind können aus dem d'Alembert'schen Prinzip zwei Bewegungsgleichungen abgeleitet werden.
 
@@ -101,7 +103,7 @@ Bei dem Prototyp handelt es sich um ein nicht konservatives System, da durch die
 \label{LG_psi_euqation}
 {\theta}^R_B \cdot \ddot{\psi} = T_M - C_{\psi} \cdot \dot{\psi} - {\theta}^B_R \cdot \ddot{\varphi}
 \end{equation}
-
+\newpage
 Durch Einsetzen von (\ref{LG_psi_euqation}) in (\ref{LG_phi_equation}) ergibt sich die folgende Bewegungsgleichung für die Würfelseite.
 
 \begin{equation}

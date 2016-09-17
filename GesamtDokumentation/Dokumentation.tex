@@ -92,19 +92,25 @@
 
 \include{Deckblatt}
 \maketitle
-\include{Einfuehrung}
+\clearpage
+\setcounter{page}{1}
+\pagenumbering{Roman}
+\include{Vorwort}
 
 \tableofcontents
 \newpage
 
 \section*{Abkürzungsverzeichnis}
 \begin{acronym}
+	\acro{CuBa}{Cube-Balancing}
 	\acro{BBB}{BeagleBone Black}
 	\acro{SHM}{Shared Memory}
 \end{acronym}
 
-
-
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\include{Einfuehrung}
 \include{1D_Section}
 \include{1D_AktorikSensorik}
 \include{1D_Dynamik}
