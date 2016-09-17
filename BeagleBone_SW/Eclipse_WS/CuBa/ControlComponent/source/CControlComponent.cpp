@@ -16,6 +16,56 @@ void CControlComponent::init()
 	sAssertion( retVal >= 0, "(CControlComponent::init()): Failed to initialize HW.");
 	std::cout << "[*] Control-Component: Hardware successfully initialized" << std::endl;
 }
+void CControlComponent::run_V5_BestimmungC_psi()
+{
+	CMessage rxMsg;
+	Float32 time;
+	Float32 torque = 0.0F;
+
+	while(true)
+	{
+		if(true == mStandbyState)
+		{
+			if(mRxQueue.getMessage(rxMsg, true))
+			{
+				std::cout << "[*] Control-Component: Switching from STANDBY to RUNNING" << std::endl;
+				mStandbyState = false;
+				mHardware.enableMotor();
+				time = 0.0F;
+			}
+		}
+		else
+		{
+			if(mRxQueue.getMessage(rxMsg, false))
+			{
+				if(rxMsg.mHeader.mEvent == EEvent::EV_REQUEST_STANDBY)
+				{
+					std::cout << "[*] Control-Component: Received STANDBY-Request, terminating the process" << std::endl;
+					mStandbyState = true;
+					mHardware.disableMotor();
+					exit(0);
+				}
+				else if(rxMsg.mHeader.mEvent == EEvent::EV_SET_TORQUE)
+				{
+					std::cout << "[*] Control-Component: Received request to set the motor torque value" << std::endl;
+					torque = *reinterpret_cast<Float32*>(rxMsg.mData);
+					std::cout << "    Torque: " << torque << std::endl;
+				}
+			}
+			mHardware.setTorque(torque);
+			mHardware.fetchValues();
+			UInt16 psi_raw__d = mHardware.getPsi__d_raw();
+			Float32 psi__d = ControlConfig::Psi__d_P1 * static_cast<Float32>(psi_raw__d) +
+						     ControlConfig::Psi__d_P2;
+			CMotorData motorData(time, torque, psi__d, psi_raw__d);
+			CMessage txMsg(EEvent::EV_REQUEST_TX_DATA, EDataType::MOTOR_DATA, motorData);
+			mTxQueue.addMessage(txMsg, false);
+
+			usleep(10000);
+			time += 0.01F;
+		}
+	}
+}
 void CControlComponent::run_V4_FilterTest()
 {
 	CMessage rxMsg;
@@ -100,7 +150,7 @@ void CControlComponent::run_V3_AusgleichsPolynomMotorADC()
 {
 	CMessage rxMsg;
 	Float32 time;
-	Float32 torque = 0.014F;
+	Float32 torque = 0.0F;
 
 	while(true)
 	{
@@ -129,6 +179,7 @@ void CControlComponent::run_V3_AusgleichsPolynomMotorADC()
 				{
 					std::cout << "[*] Control-Component: Received request to set the motor torque value" << std::endl;
 					torque = *reinterpret_cast<Float32*>(rxMsg.mData);
+					std::cout << "    Torque: " << torque << std::endl;
 				}
 			}
 			mHardware.setTorque(torque);
@@ -138,7 +189,8 @@ void CControlComponent::run_V3_AusgleichsPolynomMotorADC()
 			CMessage txMsg(EEvent::EV_REQUEST_TX_DATA, EDataType::MOTOR_DATA, motorData);
 			mTxQueue.addMessage(txMsg, false);
 
-			usleep(20000);
+			usleep(10000);
+			time += 0.01F;
 		}
 	}
 }
@@ -177,7 +229,7 @@ void CControlComponent::run_V1_AusgleichsPolynomAccelerometer()
 					exit(0);
 				}
 			}
-			usleep(20000);
+			usleep(10000);
 			mHardware.fetchValues();
 			CSensorData sensorData(time,
 					mHardware.getX1__dd_raw(),
@@ -189,7 +241,7 @@ void CControlComponent::run_V1_AusgleichsPolynomAccelerometer()
 			CMessage sensorMsg(EEvent::EV_REQUEST_TX_DATA,
 								EDataType::SENSOR_DATA,
 								sensorData);
-			time += 0.02F;
+			time += 0.01F;
 			mTxQueue.addMessage(sensorMsg, false);
 		}
 	}

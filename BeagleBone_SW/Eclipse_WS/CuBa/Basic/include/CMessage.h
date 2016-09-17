@@ -25,7 +25,7 @@ public:
 	CMessage(EEvent event, EDataType datatype, CSensorData& data);
 	CMessage(EEvent event, EDataType datatype, CFilterData& data);
 	CMessage(EEvent event, EDataType datatype, CMotorData& data);
-	CMessage(const CMessage&) = delete;
+	CMessage(const CMessage&) = default;
 	CMessage& operator=(const CMessage&) = default;
 	~CMessage() = default;
 public:

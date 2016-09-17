@@ -7,6 +7,42 @@
 
 extern int errno;
 
+bool CServer::receiveMessage(CMessage& msg, bool waitForever)
+{
+	bool success = false;
+	Int32 retVal = -1;
+	ssize_t bytesReceived = 0;
+	union
+	{
+		UInt8 rawData[sizeof(CMessage)];
+		CMessage rxMsg = msg;
+	};
+	do
+	{
+		retVal = recv(mConnectedSocketFD, rawData, sizeof(CMessage)-bytesReceived, MSG_DONTWAIT);
+		if(false == (errno == EWOULDBLOCK || errno == EAGAIN))
+		{
+			sAssertion(retVal >= 0, "(CServer::receiveMessage()): Failed to read from the socket");
+		}
+
+		if((retVal == 0) && (waitForever == false))
+		{
+			//No bytes available and caller does not want to wait forever
+			break;
+		}
+		else
+		{
+			bytesReceived += retVal;
+		}
+	}while(bytesReceived < sizeof(CMessage));
+
+	if(bytesReceived == sizeof(CMessage))
+	{
+		success = true;
+		msg = rxMsg;
+	}
+	return success;
+}
 bool CServer::transmitMessage(const CMessage& msg)
 {
 	bool success = false;

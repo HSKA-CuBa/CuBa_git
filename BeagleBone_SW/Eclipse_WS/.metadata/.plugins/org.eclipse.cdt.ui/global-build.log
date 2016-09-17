@@ -1,19 +1,4 @@
-15:07:27 **** Incremental Build of configuration Debug for project CuBa ****
-make all 
-Building file: ../CommComponent/source/CCommComponent.cpp
-Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CommComponent/source/CCommComponent.d" -MT"CommComponent/source/CCommComponent.o" -o "CommComponent/source/CCommComponent.o" "../CommComponent/source/CCommComponent.cpp"
-Finished building: ../CommComponent/source/CCommComponent.cpp
- 
-Building target: CuBa
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++  -o "CuBa"  ./HW/source/CBBBHardware.o ./HW/source/CMpu6050.o ./HW/source/bbb_ain.o ./HW/source/bbb_mpu6050.o ./HW/source/gpio.o  ./ControlComponent/source/CComplementaryFilter.o ./ControlComponent/source/CControlComponent.o ./ControlComponent/source/CSensorEvaluation.o  ./CommComponent/source/CCommComponent.o ./CommComponent/source/CServer.o  ./Basic/source/AComponentBase.o ./Basic/source/Assertion.o ./Basic/source/CBinarySemaphore.o ./Basic/source/CCountingSemaphore.o ./Basic/source/CFilterData.o ./Basic/source/CMessage.o ./Basic/source/CMotorData.o ./Basic/source/CMutex.o ./Basic/source/CSensorData.o ./Basic/source/CSharedMemory.o  ./main.o   -lpthread -lrt
-Finished building target: CuBa
- 
-15:13:12 **** Incremental Build of configuration Debug for project CuBa ****
-make all 
-make: Nothing to be done for `all'.
-15:15:13 **** Incremental Build of configuration Debug for project CuBa ****
+17:00:57 **** Incremental Build of configuration Debug for project CuBa ****
 make all 
 Building file: ../main.cpp
 Invoking: Cross G++ Compiler
@@ -25,6 +10,6 @@ Invoking: Cross G++ Linker
 arm-linux-gnueabihf-g++  -o "CuBa"  ./HW/source/CBBBHardware.o ./HW/source/CMpu6050.o ./HW/source/bbb_ain.o ./HW/source/bbb_mpu6050.o ./HW/source/gpio.o  ./ControlComponent/source/CComplementaryFilter.o ./ControlComponent/source/CControlComponent.o ./ControlComponent/source/CSensorEvaluation.o  ./CommComponent/source/CCommComponent.o ./CommComponent/source/CServer.o  ./Basic/source/AComponentBase.o ./Basic/source/Assertion.o ./Basic/source/CBinarySemaphore.o ./Basic/source/CCountingSemaphore.o ./Basic/source/CFilterData.o ./Basic/source/CMessage.o ./Basic/source/CMotorData.o ./Basic/source/CMutex.o ./Basic/source/CSensorData.o ./Basic/source/CSharedMemory.o  ./main.o   -lpthread -lrt
 Finished building target: CuBa
  
-15:17:18 **** Incremental Build of configuration Debug for project CuBa ****
+17:01:05 **** Incremental Build of configuration Debug for project CuBa ****
 make all 
 make: Nothing to be done for `all'.

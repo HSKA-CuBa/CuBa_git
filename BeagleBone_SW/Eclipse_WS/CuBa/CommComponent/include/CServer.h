@@ -14,6 +14,7 @@ public:
 	void init();
 	void waitForClient();
 	bool transmitMessage(const CMessage& msg);	///< Returns ture if the message was transmitted, false represents a connection shutdown.
+	bool receiveMessage(CMessage& msg, bool waitForever);
 public:
 	CServer();
 	CServer(const CServer&) = delete;

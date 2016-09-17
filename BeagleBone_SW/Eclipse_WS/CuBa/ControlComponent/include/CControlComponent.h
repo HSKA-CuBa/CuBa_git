@@ -15,6 +15,7 @@ public:
 	void run_V2_OffsetGyroscope() override;
 	void run_V3_AusgleichsPolynomMotorADC() override;
 	void run_V4_FilterTest() override;
+	void run_V5_BestimmungC_psi() override;
 private:
 	void V1_AusgleichsPolynomAccelerometer();
 	void V2_AusgleichsPolynomGyroscope();
