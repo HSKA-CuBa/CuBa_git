@@ -42,7 +42,6 @@ classdef CClient < handle
             end
             %Shutdown the connection
             this.mClient = [];
-            %Plot the data, requires latex interpreter...cd 
             this.mSensorData.plotX1_raw__dd(phi);
             this.mSensorData.plotX2_raw__dd(phi);
             this.mSensorData.plotY1_raw__dd(phi);
@@ -80,7 +79,6 @@ classdef CClient < handle
             end
             %Shutdown the connection
             this.mClient = [];
-            %Plot the data, requires latex interpreter...cd 
             this.mSensorData.plotPhi1_raw__d();
             this.mSensorData.plotPhi2_raw__d();
             %Save the data

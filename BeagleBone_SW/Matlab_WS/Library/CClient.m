@@ -6,6 +6,9 @@ classdef CClient < handle
         mCompData;
         mKalmanData;
         mMotorData;
+        mPhiPlot;
+        mPhi__dPlot;
+        mPsi__dPlot;
     end
     
     methods
@@ -16,6 +19,9 @@ classdef CClient < handle
             ctor.mCompData          = CFilterData();
             ctor.mKalmanData        = CFilterData();
             ctor.mMotorData         = CMotorData();
+            ctor.mPhiPlot           = [];
+            ctor.mPhi__dPlot        = [];
+            ctor.mPsi__dPlot        = [];
         end
         function run_V1_AusgleichsPolynomAccelerometer(this, nbrOfDatapoints,...
                                                        savepath, phi)
@@ -96,7 +102,7 @@ classdef CClient < handle
             %Connect to the BBB
             this.mClient = tcpclient('192.168.9.1', 40000);
             %Transmit the torque/rpm
-            rpm_factor = -140000;
+            rpm_factor = 140000;
             this.setTorque(rpm/rpm_factor);
             n = 0;
             while(n < nbrOfDatapoints)
