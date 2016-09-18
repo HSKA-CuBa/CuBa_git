@@ -22,12 +22,12 @@ void CSensorEvaluation::calculateValues(const Int16 x1_raw__dd,
 					 ControlConfig::X2__dd_P2;
 	Float32 y1__dd = static_cast<Float32>(y1_raw__dd) * ControlConfig::Y1__dd_P1 +
 					 ControlConfig::Y1__dd_P2;
-	Float32 y2__dd = static_cast<Float32>(y2_raw__dd) * ControlConfig::Y2__dd_P2 +
+	Float32 y2__dd = static_cast<Float32>(y2_raw__dd) * ControlConfig::Y2__dd_P1 +
 					 ControlConfig::Y2__dd_P2;
 	Float32 phi1__d	= (static_cast<Float32>(phi1_raw__dd) + ControlConfig::Phi1__d_P2) *
 					   ControlConfig::Phi1__d_P1;
 	Float32 phi2__d = (static_cast<Float32>(phi2_raw__dd) + ControlConfig::Phi2__d_P2) *
-					   ControlConfig::Phi2__d_P2;
+					   ControlConfig::Phi2__d_P1;
 
 	mPhi		= -atan2f(x1__dd - (ControlConfig::SensorAlpha * x2__dd),
 						  y1__dd - (ControlConfig::SensorAlpha * y2__dd));

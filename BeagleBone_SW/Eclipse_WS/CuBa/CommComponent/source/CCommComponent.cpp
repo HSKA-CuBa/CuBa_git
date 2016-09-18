@@ -14,6 +14,51 @@ void CCommComponent::init()
 	std::cout << "[*] Comm-Component: Initializing the TCP/IP-Server" << std::endl;
 	mServer.init();
 }
+void CCommComponent::run_V7_RegelungTest()
+{
+	while(true)
+	{
+		if(mStandbyState == true)
+		{
+			std::cout << "[*] Comm-Component: Server waiting for connection" << std::endl;
+			mServer.waitForClient();
+			//Send a RUN-Request to the Control-Component
+			CMessage msg(EEvent::EV_REQUEST_RUN);
+			if(mTxQueue.addMessage(msg, true))
+			{
+				std::cout << "[*] Comm-Component: RUN-Request transmitted" << std::endl;
+			}
+			mStandbyState = false;	//Switch to running mode
+		}
+		else
+		{
+			CMessage msg;
+			if(mRxQueue.getMessage(msg, true))
+			{
+				if(msg.mHeader.mEvent == EEvent::EV_REQUEST_TX_DATA)
+				{
+					std::cout << "[*] Comm-Component: Data received" << std::endl;
+					if(false == mServer.transmitMessage(msg))
+					{
+						//Connection was shutdown by Matlab, notify the Control-Component and terminate the process
+						CMessage runMsg(EEvent::EV_REQUEST_STANDBY);
+						if(mTxQueue.addMessage(runMsg, true))
+						{
+							std::cout << "[*] Comm-Component: Sent STANDBY-Request to the Control-Component" << std::endl;
+						}
+						mStandbyState = true;
+						std::cout << "[*] Comm-Component: Client disconnected, terminating" << std::endl;
+						exit(0);
+					}
+				}
+			}
+		}
+	}
+}
+void CCommComponent::run_V6_BestimmungC_phi()
+{
+	this->run_V4_FilterTest();
+}
 void CCommComponent::run_V5_BestimmungC_psi()
 {
 	this->run_V3_AusgleichsPolynomMotorADC();

@@ -7,9 +7,9 @@
 namespace ControlConfig
 {
 	constexpr Float32 T_a				= 0.02F;
-	constexpr Float32 K_phi				= 1.0F;		//TODO: K_phi
-	constexpr Float32 K_phi__d			= 1.0F;		//TODO: K_phi__d
-	constexpr Float32 K_psi__d			= 1.0F; 	//TODO: K_psi__d
+	constexpr Float32 K_phi				= 0.8821F;
+	constexpr Float32 K_phi__d			= 0.1386F;
+	constexpr Float32 K_psi__d			= 0.0002F;
 	constexpr Float32 CompAlpha			= 0.98F;
 	constexpr Float32 X1__dd_P1			= -0.0005992F;
 	constexpr Float32 X1__dd_P2 		= 0.3328F;
@@ -23,8 +23,8 @@ namespace ControlConfig
 	constexpr Float32 Phi1__d_P2		= 441.3160F;
 	constexpr Float32 Phi2__d_P1		= -0.00013265F;
 	constexpr Float32 Phi2__d_P2		= 76.5140F;
-	constexpr Float32 Psi__d_P1			= 0.5086F;
-	constexpr Float32 Psi__d_P2			= -1050.0F;
+	constexpr Float32 Psi__d_P1			= -0.5092F;
+	constexpr Float32 Psi__d_P2			= 1050.0F;
 	constexpr Float32 R_S1				= 0.14F;
 	constexpr Float32 R_S2				= 0.061F;
 	constexpr Float32 SensorAlpha		= R_S1 / R_S2;

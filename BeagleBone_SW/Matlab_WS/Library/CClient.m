@@ -19,9 +19,9 @@ classdef CClient < handle
             ctor.mCompData          = CFilterData();
             ctor.mKalmanData        = CFilterData();
             ctor.mMotorData         = CMotorData();
-            ctor.mPhiPlot           = [];
-            ctor.mPhi__dPlot        = [];
-            ctor.mPsi__dPlot        = [];
+            ctor.mPhiPlot           = CPlot();
+            ctor.mPhi__dPlot        = CPlot();
+            ctor.mPsi__dPlot        = CPlot();
         end
         function run_V1_AusgleichsPolynomAccelerometer(this, nbrOfDatapoints,...
                                                        savepath, phi)
@@ -143,6 +143,12 @@ classdef CClient < handle
             %Connect to the BBB
             this.mClient = tcpclient('192.168.9.1', 40000);
             n = 0;
+            %Create the updateable plots
+            plotTick = 0;
+            this.mPhiPlot.createPlots('Ungefiltert', 'Komplementär', 'Kalman',...
+                                      '$\varphi [^\circ]$', 'Ausfallwinkel $\varphi$');
+            this.mPhi__dPlot.createPlots('Ungefiltert', 'Komplementär', 'Kalman',...
+                                         '$\dot{\varphi} [\frac{^\circ}{s}]$', 'Winkelgeschwindigkeit $\dot{\varphi}$');
             while(n < nbrOfDatapoints)
                 n = n + 1;
                 while(this.mClient.BytesAvailable < 20)
@@ -158,6 +164,23 @@ classdef CClient < handle
                         this.parseDataMessage(dataType);
                     otherwise
                         read(this.mClient, 16, 'uint8');   
+                end
+                %Update the plots once in a while
+                plotTick = plotTick + 1;
+                if(plotTick > 31)
+                    plotTick = 0;
+                    this.mPhiPlot.updateData(this.mUnfilteredData.mTime,...
+                                             radtodeg(this.mUnfilteredData.mPhi),...
+                                             this.mCompData.mTime,...
+                                             radtodeg(this.mCompData.mPhi),...
+                                             this.mKalmanData.mTime,...
+                                             radtodeg(this.mKalmanData.mPhi));
+                    this.mPhi__dPlot.updateData(this.mUnfilteredData.mTime,...
+                                                radtodeg(this.mUnfilteredData.mPhi__d),...
+                                                this.mCompData.mTime,...
+                                                radtodeg(this.mCompData.mPhi__d),...
+                                                this.mKalmanData.mTime,...
+                                                radtodeg(this.mKalmanData.mPhi__d));
                 end
             end
             %Shutdown the connection
@@ -199,6 +222,9 @@ classdef CClient < handle
             saveFilename = strcat(savepath, '/motordata');
             motordata    = this.mMotorData;
             save(saveFilename, 'motordata');     
+        end
+        function run_V6_BestimmungC_phi(this, nbrOfDatapoints)
+            this.run_V4_FilterTest(nbrOfDatapoints); 
         end
         function parseDataMessage(this, dataType)
             switch(dataType)

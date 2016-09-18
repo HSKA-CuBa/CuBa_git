@@ -16,8 +16,8 @@ public:
 	virtual void run_V3_AusgleichsPolynomMotorADC() = 0;		///< Abstract method to run the third measurement setup.
 	virtual void run_V4_FilterTest() = 0;						///< Abstract method to test the different filters.
 	virtual void run_V5_BestimmungC_psi() = 0;					///< Abstract method to determine C_psi.
-//	virtual void run_V6_BestimmungC_phi() = 0;					///< Abstract method to determine C_phi.
-//	virtual void run_V7_RegelungTest() = 0;						///< Abstract method to test and evaluate the control system.
+	virtual void run_V6_BestimmungC_phi() = 0;					///< Abstract method to determine C_phi.
+	virtual void run_V7_RegelungTest() = 0;						///< Abstract method to test and evaluate the control system.
 public:
 	AComponentBase(TQueue<Config::QueueSize>& rxQueue,			//Queues werden in main im SHM angelegt
 				   TQueue<Config::QueueSize>& txQueue,

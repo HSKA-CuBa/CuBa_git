@@ -15,19 +15,7 @@ int main(void)
 	TQueue<Config::QueueSize>* controlQueue = shm.createQueue();
 	TQueue<Config::QueueSize>* commQueue	= shm.createQueue();
 
-	std::cout << "Hello" << "World" << std::endl;
-
 	if(fork() == 0)
-	{
-		CControlComponent controlComp(*controlQueue, *commQueue);
-		controlComp.init();
-		//controlComp.run_V1_AusgleichsPolynomAccelerometer();
-		//controlComp.run_V2_OffsetGyroscope();
-		//controlComp.run_V3_AusgleichsPolynomMotorADC();
-		//controlComp.run_V4_FilterTest();
-		controlComp.run_V5_BestimmungC_psi();
-	}
-	else
 	{
 		CCommComponent commComp(*commQueue, *controlQueue);
 		commComp.init();
@@ -35,7 +23,21 @@ int main(void)
 		//commComp.run_V2_OffsetGyroscope();
 		//commComp.run_V3_AusgleichsPolynomMotorADC();
 		//commComp.run_V4_FilterTest();
-		commComp.run_V5_BestimmungC_psi();
+		//commComp.run_V5_BestimmungC_psi();
+		//commComp.run_V6_BestimmungC_phi();
+		commComp.run_V7_RegelungTest();
+	}
+	else
+	{
+		CControlComponent controlComp(*controlQueue, *commQueue);
+		controlComp.init();
+		//controlComp.run_V1_AusgleichsPolynomAccelerometer();
+		//controlComp.run_V2_OffsetGyroscope();
+		//controlComp.run_V3_AusgleichsPolynomMotorADC();
+		//controlComp.run_V4_FilterTest();
+		//controlComp.run_V5_BestimmungC_psi();
+		//controlComp.run_V6_BestimmungC_phi();
+		controlComp.run_V7_RegelungTest();
 	}
 	return 0;
 }

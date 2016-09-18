@@ -13,6 +13,8 @@ public:
 	void run_V3_AusgleichsPolynomMotorADC() override;
 	void run_V4_FilterTest() override;
 	void run_V5_BestimmungC_psi() override;
+	void run_V6_BestimmungC_phi() override;
+	void run_V7_RegelungTest() override;
 public:
 	CCommComponent(TQueue<Config::QueueSize>& rxQueue,
 				   TQueue<Config::QueueSize>& txQueue);
