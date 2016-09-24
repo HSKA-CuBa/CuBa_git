@@ -1,5 +1,114 @@
-14:43:13 **** Incremental Build of configuration Debug for project CuBa ****
+07:33:08 **** Build of configuration Debug for project CuBa ****
 make all 
+Building file: ../HW/source/CBBBHardware.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"HW/source/CBBBHardware.d" -MT"HW/source/CBBBHardware.o" -o "HW/source/CBBBHardware.o" "../HW/source/CBBBHardware.cpp"
+Finished building: ../HW/source/CBBBHardware.cpp
+ 
+Building file: ../HW/source/CMpu6050.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"HW/source/CMpu6050.d" -MT"HW/source/CMpu6050.o" -o "HW/source/CMpu6050.o" "../HW/source/CMpu6050.cpp"
+Finished building: ../HW/source/CMpu6050.cpp
+ 
+Building file: ../HW/source/bbb_ain.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"HW/source/bbb_ain.d" -MT"HW/source/bbb_ain.o" -o "HW/source/bbb_ain.o" "../HW/source/bbb_ain.c"
+Finished building: ../HW/source/bbb_ain.c
+ 
+Building file: ../HW/source/bbb_mpu6050.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"HW/source/bbb_mpu6050.d" -MT"HW/source/bbb_mpu6050.o" -o "HW/source/bbb_mpu6050.o" "../HW/source/bbb_mpu6050.c"
+Finished building: ../HW/source/bbb_mpu6050.c
+ 
+Building file: ../HW/source/gpio.c
+Invoking: Cross GCC Compiler
+arm-linux-gnueabihf-gcc -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"HW/source/gpio.d" -MT"HW/source/gpio.o" -o "HW/source/gpio.o" "../HW/source/gpio.c"
+Finished building: ../HW/source/gpio.c
+ 
+Building file: ../ControlComponent/source/CComplementaryFilter.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ControlComponent/source/CComplementaryFilter.d" -MT"ControlComponent/source/CComplementaryFilter.o" -o "ControlComponent/source/CComplementaryFilter.o" "../ControlComponent/source/CComplementaryFilter.cpp"
+Finished building: ../ControlComponent/source/CComplementaryFilter.cpp
+ 
+Building file: ../ControlComponent/source/CControlComponent.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ControlComponent/source/CControlComponent.d" -MT"ControlComponent/source/CControlComponent.o" -o "ControlComponent/source/CControlComponent.o" "../ControlComponent/source/CControlComponent.cpp"
+Finished building: ../ControlComponent/source/CControlComponent.cpp
+ 
+Building file: ../ControlComponent/source/CLQR.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ControlComponent/source/CLQR.d" -MT"ControlComponent/source/CLQR.o" -o "ControlComponent/source/CLQR.o" "../ControlComponent/source/CLQR.cpp"
+Finished building: ../ControlComponent/source/CLQR.cpp
+ 
+Building file: ../ControlComponent/source/CSensorEvaluation.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ControlComponent/source/CSensorEvaluation.d" -MT"ControlComponent/source/CSensorEvaluation.o" -o "ControlComponent/source/CSensorEvaluation.o" "../ControlComponent/source/CSensorEvaluation.cpp"
+Finished building: ../ControlComponent/source/CSensorEvaluation.cpp
+ 
+Building file: ../CommComponent/source/CCommComponent.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CommComponent/source/CCommComponent.d" -MT"CommComponent/source/CCommComponent.o" -o "CommComponent/source/CCommComponent.o" "../CommComponent/source/CCommComponent.cpp"
+Finished building: ../CommComponent/source/CCommComponent.cpp
+ 
+Building file: ../CommComponent/source/CServer.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CommComponent/source/CServer.d" -MT"CommComponent/source/CServer.o" -o "CommComponent/source/CServer.o" "../CommComponent/source/CServer.cpp"
+../CommComponent/source/CServer.cpp: In member function ‘bool CServer::receiveMessage(CMessage&, bool)’:
+../CommComponent/source/CServer.cpp:37:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  }while(bytesReceived < sizeof(CMessage));
+                                        ^
+Finished building: ../CommComponent/source/CServer.cpp
+ 
+Building file: ../Basic/source/AComponentBase.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Basic/source/AComponentBase.d" -MT"Basic/source/AComponentBase.o" -o "Basic/source/AComponentBase.o" "../Basic/source/AComponentBase.cpp"
+Finished building: ../Basic/source/AComponentBase.cpp
+ 
+Building file: ../Basic/source/Assertion.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Basic/source/Assertion.d" -MT"Basic/source/Assertion.o" -o "Basic/source/Assertion.o" "../Basic/source/Assertion.cpp"
+Finished building: ../Basic/source/Assertion.cpp
+ 
+Building file: ../Basic/source/CBinarySemaphore.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Basic/source/CBinarySemaphore.d" -MT"Basic/source/CBinarySemaphore.o" -o "Basic/source/CBinarySemaphore.o" "../Basic/source/CBinarySemaphore.cpp"
+Finished building: ../Basic/source/CBinarySemaphore.cpp
+ 
+Building file: ../Basic/source/CCountingSemaphore.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Basic/source/CCountingSemaphore.d" -MT"Basic/source/CCountingSemaphore.o" -o "Basic/source/CCountingSemaphore.o" "../Basic/source/CCountingSemaphore.cpp"
+Finished building: ../Basic/source/CCountingSemaphore.cpp
+ 
+Building file: ../Basic/source/CFilterData.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Basic/source/CFilterData.d" -MT"Basic/source/CFilterData.o" -o "Basic/source/CFilterData.o" "../Basic/source/CFilterData.cpp"
+Finished building: ../Basic/source/CFilterData.cpp
+ 
+Building file: ../Basic/source/CMessage.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Basic/source/CMessage.d" -MT"Basic/source/CMessage.o" -o "Basic/source/CMessage.o" "../Basic/source/CMessage.cpp"
+Finished building: ../Basic/source/CMessage.cpp
+ 
+Building file: ../Basic/source/CMotorData.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Basic/source/CMotorData.d" -MT"Basic/source/CMotorData.o" -o "Basic/source/CMotorData.o" "../Basic/source/CMotorData.cpp"
+Finished building: ../Basic/source/CMotorData.cpp
+ 
+Building file: ../Basic/source/CMutex.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Basic/source/CMutex.d" -MT"Basic/source/CMutex.o" -o "Basic/source/CMutex.o" "../Basic/source/CMutex.cpp"
+Finished building: ../Basic/source/CMutex.cpp
+ 
+Building file: ../Basic/source/CSensorData.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Basic/source/CSensorData.d" -MT"Basic/source/CSensorData.o" -o "Basic/source/CSensorData.o" "../Basic/source/CSensorData.cpp"
+Finished building: ../Basic/source/CSensorData.cpp
+ 
+Building file: ../Basic/source/CSharedMemory.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Basic/source/CSharedMemory.d" -MT"Basic/source/CSharedMemory.o" -o "Basic/source/CSharedMemory.o" "../Basic/source/CSharedMemory.cpp"
+Finished building: ../Basic/source/CSharedMemory.cpp
+ 
 Building file: ../main.cpp
 Invoking: Cross G++ Compiler
 arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
@@ -10,60 +119,90 @@ Invoking: Cross G++ Linker
 arm-linux-gnueabihf-g++  -o "CuBa"  ./HW/source/CBBBHardware.o ./HW/source/CMpu6050.o ./HW/source/bbb_ain.o ./HW/source/bbb_mpu6050.o ./HW/source/gpio.o  ./ControlComponent/source/CComplementaryFilter.o ./ControlComponent/source/CControlComponent.o ./ControlComponent/source/CLQR.o ./ControlComponent/source/CSensorEvaluation.o  ./CommComponent/source/CCommComponent.o ./CommComponent/source/CServer.o  ./Basic/source/AComponentBase.o ./Basic/source/Assertion.o ./Basic/source/CBinarySemaphore.o ./Basic/source/CCountingSemaphore.o ./Basic/source/CFilterData.o ./Basic/source/CMessage.o ./Basic/source/CMotorData.o ./Basic/source/CMutex.o ./Basic/source/CSensorData.o ./Basic/source/CSharedMemory.o  ./main.o   -lpthread -lrt
 Finished building target: CuBa
  
-14:43:34 **** Incremental Build of configuration Debug for project CuBa ****
+07:33:24 **** Incremental Build of configuration Debug for project CuBa ****
 make all 
 make: Nothing to be done for `all'.
-14:48:08 **** Incremental Build of configuration Debug for project CuBa ****
+07:34:54 **** Incremental Build of configuration Debug for project CuBa ****
 make all 
 Building file: ../ControlComponent/source/CControlComponent.cpp
 Invoking: Cross G++ Compiler
 arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ControlComponent/source/CControlComponent.d" -MT"ControlComponent/source/CControlComponent.o" -o "ControlComponent/source/CControlComponent.o" "../ControlComponent/source/CControlComponent.cpp"
 Finished building: ../ControlComponent/source/CControlComponent.cpp
  
+Building file: ../main.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
 Building target: CuBa
 Invoking: Cross G++ Linker
 arm-linux-gnueabihf-g++  -o "CuBa"  ./HW/source/CBBBHardware.o ./HW/source/CMpu6050.o ./HW/source/bbb_ain.o ./HW/source/bbb_mpu6050.o ./HW/source/gpio.o  ./ControlComponent/source/CComplementaryFilter.o ./ControlComponent/source/CControlComponent.o ./ControlComponent/source/CLQR.o ./ControlComponent/source/CSensorEvaluation.o  ./CommComponent/source/CCommComponent.o ./CommComponent/source/CServer.o  ./Basic/source/AComponentBase.o ./Basic/source/Assertion.o ./Basic/source/CBinarySemaphore.o ./Basic/source/CCountingSemaphore.o ./Basic/source/CFilterData.o ./Basic/source/CMessage.o ./Basic/source/CMotorData.o ./Basic/source/CMutex.o ./Basic/source/CSensorData.o ./Basic/source/CSharedMemory.o  ./main.o   -lpthread -lrt
 Finished building target: CuBa
  
-14:48:22 **** Incremental Build of configuration Debug for project CuBa ****
+07:44:39 **** Incremental Build of configuration Debug for project CuBa ****
 make all 
-make: Nothing to be done for `all'.
-14:49:31 **** Incremental Build of configuration Debug for project CuBa ****
-make all 
+Building file: ../ControlComponent/source/CComplementaryFilter.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ControlComponent/source/CComplementaryFilter.d" -MT"ControlComponent/source/CComplementaryFilter.o" -o "ControlComponent/source/CComplementaryFilter.o" "../ControlComponent/source/CComplementaryFilter.cpp"
+Finished building: ../ControlComponent/source/CComplementaryFilter.cpp
+ 
 Building file: ../ControlComponent/source/CControlComponent.cpp
 Invoking: Cross G++ Compiler
 arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ControlComponent/source/CControlComponent.d" -MT"ControlComponent/source/CControlComponent.o" -o "ControlComponent/source/CControlComponent.o" "../ControlComponent/source/CControlComponent.cpp"
 Finished building: ../ControlComponent/source/CControlComponent.cpp
  
+Building file: ../ControlComponent/source/CLQR.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ControlComponent/source/CLQR.d" -MT"ControlComponent/source/CLQR.o" -o "ControlComponent/source/CLQR.o" "../ControlComponent/source/CLQR.cpp"
+Finished building: ../ControlComponent/source/CLQR.cpp
+ 
+Building file: ../ControlComponent/source/CSensorEvaluation.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ControlComponent/source/CSensorEvaluation.d" -MT"ControlComponent/source/CSensorEvaluation.o" -o "ControlComponent/source/CSensorEvaluation.o" "../ControlComponent/source/CSensorEvaluation.cpp"
+Finished building: ../ControlComponent/source/CSensorEvaluation.cpp
+ 
+Building file: ../main.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
 Building target: CuBa
 Invoking: Cross G++ Linker
 arm-linux-gnueabihf-g++  -o "CuBa"  ./HW/source/CBBBHardware.o ./HW/source/CMpu6050.o ./HW/source/bbb_ain.o ./HW/source/bbb_mpu6050.o ./HW/source/gpio.o  ./ControlComponent/source/CComplementaryFilter.o ./ControlComponent/source/CControlComponent.o ./ControlComponent/source/CLQR.o ./ControlComponent/source/CSensorEvaluation.o  ./CommComponent/source/CCommComponent.o ./CommComponent/source/CServer.o  ./Basic/source/AComponentBase.o ./Basic/source/Assertion.o ./Basic/source/CBinarySemaphore.o ./Basic/source/CCountingSemaphore.o ./Basic/source/CFilterData.o ./Basic/source/CMessage.o ./Basic/source/CMotorData.o ./Basic/source/CMutex.o ./Basic/source/CSensorData.o ./Basic/source/CSharedMemory.o  ./main.o   -lpthread -lrt
 Finished building target: CuBa
  
-14:51:04 **** Incremental Build of configuration Debug for project CuBa ****
+07:45:12 **** Incremental Build of configuration Debug for project CuBa ****
 make all 
+Building file: ../ControlComponent/source/CComplementaryFilter.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ControlComponent/source/CComplementaryFilter.d" -MT"ControlComponent/source/CComplementaryFilter.o" -o "ControlComponent/source/CComplementaryFilter.o" "../ControlComponent/source/CComplementaryFilter.cpp"
+Finished building: ../ControlComponent/source/CComplementaryFilter.cpp
+ 
 Building file: ../ControlComponent/source/CControlComponent.cpp
 Invoking: Cross G++ Compiler
 arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ControlComponent/source/CControlComponent.d" -MT"ControlComponent/source/CControlComponent.o" -o "ControlComponent/source/CControlComponent.o" "../ControlComponent/source/CControlComponent.cpp"
 Finished building: ../ControlComponent/source/CControlComponent.cpp
  
-Building target: CuBa
-Invoking: Cross G++ Linker
-arm-linux-gnueabihf-g++  -o "CuBa"  ./HW/source/CBBBHardware.o ./HW/source/CMpu6050.o ./HW/source/bbb_ain.o ./HW/source/bbb_mpu6050.o ./HW/source/gpio.o  ./ControlComponent/source/CComplementaryFilter.o ./ControlComponent/source/CControlComponent.o ./ControlComponent/source/CLQR.o ./ControlComponent/source/CSensorEvaluation.o  ./CommComponent/source/CCommComponent.o ./CommComponent/source/CServer.o  ./Basic/source/AComponentBase.o ./Basic/source/Assertion.o ./Basic/source/CBinarySemaphore.o ./Basic/source/CCountingSemaphore.o ./Basic/source/CFilterData.o ./Basic/source/CMessage.o ./Basic/source/CMotorData.o ./Basic/source/CMutex.o ./Basic/source/CSensorData.o ./Basic/source/CSharedMemory.o  ./main.o   -lpthread -lrt
-Finished building target: CuBa
- 
-14:53:29 **** Incremental Build of configuration Debug for project CuBa ****
-make all 
-Building file: ../ControlComponent/source/CControlComponent.cpp
+Building file: ../ControlComponent/source/CLQR.cpp
 Invoking: Cross G++ Compiler
-arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ControlComponent/source/CControlComponent.d" -MT"ControlComponent/source/CControlComponent.o" -o "ControlComponent/source/CControlComponent.o" "../ControlComponent/source/CControlComponent.cpp"
-Finished building: ../ControlComponent/source/CControlComponent.cpp
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ControlComponent/source/CLQR.d" -MT"ControlComponent/source/CLQR.o" -o "ControlComponent/source/CLQR.o" "../ControlComponent/source/CLQR.cpp"
+Finished building: ../ControlComponent/source/CLQR.cpp
+ 
+Building file: ../ControlComponent/source/CSensorEvaluation.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ControlComponent/source/CSensorEvaluation.d" -MT"ControlComponent/source/CSensorEvaluation.o" -o "ControlComponent/source/CSensorEvaluation.o" "../ControlComponent/source/CSensorEvaluation.cpp"
+Finished building: ../ControlComponent/source/CSensorEvaluation.cpp
+ 
+Building file: ../main.cpp
+Invoking: Cross G++ Compiler
+arm-linux-gnueabihf-g++ -std=c++0x -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/Basic/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/CommComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/ControlComponent/include" -I"/home/michael/Desktop/CuBa_git/BeagleBone_SW/Eclipse_WS/CuBa/HW/include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
  
 Building target: CuBa
 Invoking: Cross G++ Linker
 arm-linux-gnueabihf-g++  -o "CuBa"  ./HW/source/CBBBHardware.o ./HW/source/CMpu6050.o ./HW/source/bbb_ain.o ./HW/source/bbb_mpu6050.o ./HW/source/gpio.o  ./ControlComponent/source/CComplementaryFilter.o ./ControlComponent/source/CControlComponent.o ./ControlComponent/source/CLQR.o ./ControlComponent/source/CSensorEvaluation.o  ./CommComponent/source/CCommComponent.o ./CommComponent/source/CServer.o  ./Basic/source/AComponentBase.o ./Basic/source/Assertion.o ./Basic/source/CBinarySemaphore.o ./Basic/source/CCountingSemaphore.o ./Basic/source/CFilterData.o ./Basic/source/CMessage.o ./Basic/source/CMotorData.o ./Basic/source/CMutex.o ./Basic/source/CSensorData.o ./Basic/source/CSharedMemory.o  ./main.o   -lpthread -lrt
 Finished building target: CuBa
  
-14:54:06 **** Incremental Build of configuration Debug for project CuBa ****
+07:48:00 **** Incremental Build of configuration Debug for project CuBa ****
 make all 
 make: Nothing to be done for `all'.

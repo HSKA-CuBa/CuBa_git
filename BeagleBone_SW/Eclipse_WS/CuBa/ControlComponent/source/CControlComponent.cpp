@@ -20,6 +20,7 @@ void CControlComponent::run_V7_RegelungTest()
 {
 	CMessage rxMsg;
 	Float32 time = 0.0F;
+	mStandbyState = false;
 
 	while(true)
 	{
@@ -37,7 +38,6 @@ void CControlComponent::run_V7_RegelungTest()
 		}
 		else
 		{
-			mHardware.enableMotor();
 			mHardware.fetchValues();
 			//Get the raw values
 			Int16 x1_raw__dd 	= mHardware.getX1__dd_raw();
@@ -78,14 +78,17 @@ void CControlComponent::run_V7_RegelungTest()
 			Float32 psi__d = ControlConfig::Psi__d_P1 * adcRaw + ControlConfig::Psi__d_P2;
 			Float32 torque = mLQR.controlIteration(phi_comp, phi__d, psi__d);
 			CMotorData motorData(time, torque, psi__d, adcRaw);
+			CMessage motorMsg(EEvent::EV_REQUEST_TX_DATA, EDataType::MOTOR_DATA, motorData);
 
 			bool motorState = false;
-			if(abs(phi_comp) < ControlConfig::PhiBalanceMax)
+			Float32 absPhi = phi_comp > 0.0F ? phi_comp : -1.0F * phi_comp;
+			if(absPhi < ControlConfig::PhiBalanceMax)
 			{
 				if(motorState == false)
 				{
 					motorState = true;
 				}
+				mHardware.enableMotor();
 				mHardware.setTorque(torque);
 			}
 			else
@@ -94,14 +97,16 @@ void CControlComponent::run_V7_RegelungTest()
 				{
 					motorState = false;
 				}
+				mHardware.disableMotor();
 			}
 
 			mTxQueue.addMessage(unfilteredMsg, false);
 			mTxQueue.addMessage(compMsg, false);
 			mTxQueue.addMessage(kalmanMsg, false);
+			mTxQueue.addMessage(motorMsg, false);
 			time += 0.02F;
 
-			usleep(20000);
+			usleep(18000);
 		}
 	}
 }

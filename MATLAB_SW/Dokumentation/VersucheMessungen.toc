@@ -1,0 +1,15 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Versuch 1 - Ausgleichspolynom der Beschleunigungssensoren}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Rohwerte}{2}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}Rohwerte bei $\varphi = -45^{\circ }$}{2}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}Rohwerte bei $\varphi = -30^{\circ }$}{3}{subsubsection.1.1.2}
+\contentsline {subsubsection}{\numberline {1.1.3}Rohwerte bei $\varphi = -15^{\circ }$}{4}{subsubsection.1.1.3}
+\contentsline {subsubsection}{\numberline {1.1.4}Rohwerte bei $\varphi = 0^{\circ }$}{5}{subsubsection.1.1.4}
+\contentsline {subsubsection}{\numberline {1.1.5}Rohwerte bei $\varphi = 15^{\circ }$}{6}{subsubsection.1.1.5}
+\contentsline {subsubsection}{\numberline {1.1.6}Rohwerte bei $\varphi = 30^{\circ }$}{7}{subsubsection.1.1.6}
+\contentsline {subsubsection}{\numberline {1.1.7}Rohwerte bei $\varphi = 45^{\circ }$}{8}{subsubsection.1.1.7}
+\contentsline {subsection}{\numberline {1.2}Mittelwertverlauf und Ausgleichspolynom}{9}{subsection.1.2}
+\contentsline {section}{\numberline {2}Versuch 2 - Offsetbestimmung der Winkelgeschwindigkeiten}{10}{section.2}
+\contentsline {section}{\numberline {3}Versuch 3 - Auswertung der Motorgeschwindigkeit}{11}{section.3}
+\contentsline {section}{\numberline {4}Versuch 4 - Ermittlung des Reibwertes $C_{\varphi }$}{13}{section.4}
+\contentsline {section}{\numberline {5}Versuch 5 - Ermittlung des Reibwertes $C_{\psi }$}{14}{section.5}
