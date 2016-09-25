@@ -1,0 +1,31 @@
+/**
+ * @file AComponentBase.h
+ * @author Michael Meindl
+ * @date 25.9.2016
+ * @brief Abstract base class for the different components.
+ */
+#ifndef ACOMPONENTBASE_H
+#define ACOMPONENTBASE_H
+#include "IRunnable.h"
+#include "TQueue.h"
+#include "CDoubleBuffer.h"
+#include "Config.h"
+
+
+class AComponentBase : public IRunnable
+{
+public:
+	virtual void run() override = 0;
+	virtual void init(CProxy& proxy) = 0;	/// Pure virtual method to initialize the component
+public:
+	AComponentBase();
+	AComponentBase(const AComponentBase&) = delete;
+	AComponentBase& operator=(const AComponentBase&) = delete;
+	virtual ~AComponentBase() = default;
+protected:
+	friend CProxy;
+	TQueue<Config::queueSize> mQueue;
+	CProxy* mProxyPtr;
+};
+
+#endif

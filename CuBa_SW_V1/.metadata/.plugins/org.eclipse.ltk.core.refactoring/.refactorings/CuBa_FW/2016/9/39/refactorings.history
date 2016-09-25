@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;CuBa_FW/CTest.cpp&apos; to &apos;CTest.h&apos;" description="Rename resource &apos;CTest.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="CTest.cpp" name="CTest.h" stamp="1474744829350" updateReferences="true"/>
+</session>

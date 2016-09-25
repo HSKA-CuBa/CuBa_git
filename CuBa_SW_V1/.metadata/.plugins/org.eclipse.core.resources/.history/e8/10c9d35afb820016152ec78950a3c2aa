@@ -1,0 +1,26 @@
+/**
+ * @file 	SControlComponent.cpp
+ * @author	Michael Meindl
+ * @date	25.9.2016
+ * @brief	Method definitions for SControlComponent.
+ */
+#include "SControlComponent.h"
+#include <new>
+
+SControlComponent* SControlComponent::sInstance = nullptr;
+CMutex SControlComponent::sAccessMutex(false, true);
+static UInt8 sMemory[cMakeAlignmentSize(sizeof(SControlComponent))] = {0U};
+SControlComponent::SControlComponent() : AComponentBase()
+{
+
+}
+SControlComponent& SControlComponent::getInstance()
+{
+	sAccessMutex.take(true);
+	if(sInstance == nullptr)
+	{
+		sInstance = reinterpret_cast<SControlComponent*>(new(sMemory)SControlComponent);
+	}
+	sAccessMutex.give();
+	return *sInstance;
+}

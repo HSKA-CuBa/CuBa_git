@@ -1,0 +1,9 @@
+/**
+ * @file 	CContainer.cpp
+ * @author	Michael Meindl
+ * @date	25.9.2016
+ * @brief	Class definitions for CContainer.
+ */
+#include "CContainer.h"
+
+

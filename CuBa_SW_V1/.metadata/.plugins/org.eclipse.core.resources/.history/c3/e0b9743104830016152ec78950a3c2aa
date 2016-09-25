@@ -1,0 +1,29 @@
+/**
+ * @file	CDoublePuffer.h
+ * @author	Michael Meindl
+ * @date	25.9.2016
+ * @brief	Class definition for a double puffer.
+ */
+#ifndef CDOUBLEPUFFER_H
+#define CDOUBLEPUFFER_H
+#include "CContainer.h"
+
+/**
+ * Class holding two containers.
+ */
+class CDoublePuffer
+{
+public:
+	bool setData(bool waitForever,
+				 CContainer::CPhiValues& phiValues,
+				 CContainer::CPhi__dValues& phi__dValues,
+				 CContainer::CPsi__dValues& psi__dValues);
+	bool getData(bool waitForever,
+				 CContainer::CPhiValues& phiValues,
+				 CContainer::CPhi__dValues& phi__dValues,
+				 CContainer::CPsi__dValues& psi__dValues);
+public:
+	CDoublePuffer();
+};
+
+#endif

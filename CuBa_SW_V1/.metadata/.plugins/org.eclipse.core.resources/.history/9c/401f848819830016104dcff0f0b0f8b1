@@ -1,0 +1,12 @@
+/**
+ * @file AComponentBase.cpp
+ * @author Michael Meindl
+ * @date 25.9.2016
+ * @brief Method definitions for AComponentBase.
+ */
+#include "AComponentBase.h"
+
+AComponentBase::AComponentBase() : mQueue()
+{
+
+}

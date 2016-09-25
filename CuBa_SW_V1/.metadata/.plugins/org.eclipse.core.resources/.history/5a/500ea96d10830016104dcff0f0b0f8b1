@@ -1,0 +1,11 @@
+/**
+ * @file 	SCommComponent.cpp
+ * @author 	Michael Meindl
+ * @date	25.9.2016
+ * @brief	Class definitions of SCommComponent.
+ */
+#include "SCommComponent.h"
+
+static UInt8 sMemory[cMakeAlignmentSize(sizeof(SCommComponent))] = {0U};
+SCommComponent* SCommComponent::sInstance = nullptr;
+CMutex SCommComponent::sAcessMutex(true, true);

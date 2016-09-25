@@ -1,0 +1,10 @@
+/**
+ * @file	SProxy.cpp
+ * @author	Michael Meindl
+ * @date	25.9.2016
+ * @brief	Method definitions for SProxy.
+ */
+#include "SProxy.h"
+#include "SControlComponent.h"
+
+SProxy* SProxy::sInstance = nullptr;

@@ -1,0 +1,42 @@
+/**
+ * @file 	CCommComponent.cpp
+ * @author 	Michael Meindl
+ * @date	25.9.2016
+ * @brief	Class definitions of CCommComponent.
+ */
+#include <CCommComponent.h>
+#include "CDoubleBuffer.h"
+#include <iostream>
+#include <new>
+
+void CCommComponent::init()
+{
+	std::cout << "[*] Comm-Component: Initializing" << std::endl;
+}
+void CCommComponent::onStateRunning(CMessage& msg)
+{
+
+}
+void CCommComponent::run()
+{
+	std::cout << "[*] Comm-Component: Running" << std::endl;
+
+	CContainer::CPhiValues phiValues;
+	CContainer::CPhi__dValues phi__dValues;
+	CContainer::CPsi__dValues psi__dValues;
+	while(true)
+	{
+		if(mBufferPtr->getData(true, phiValues, phi__dValues, psi__dValues))
+		{
+			std::cout << "[*] Comm-Component: Received values" << std::endl;
+			std::cout << " Phi-Raw: " << phiValues.mRaw <<
+					" Phi-Comp: " << phiValues.mComp <<
+					" Phi-Kalman: " << phiValues.mKalman << std::endl;
+		}
+	}
+}
+CCommComponent::CCommComponent()
+{
+
+}
+

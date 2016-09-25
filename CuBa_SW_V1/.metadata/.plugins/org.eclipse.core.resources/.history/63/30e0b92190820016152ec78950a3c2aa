@@ -1,0 +1,50 @@
+/**
+ * @file CBinarySemaphore.cpp
+ * @author Michael Meindl
+ * @date 24.9.2016
+ * @brief Method definitions for a mutex.
+ */
+#include "CMutex.h"
+#include "Assertion.h"
+#include <pthread.h>
+#include <iostream>
+
+
+CMutex::CMutex(bool isFull, bool isProcessShared)
+{
+	pthread_mutexattr_t attr;
+	Int32 retVal = pthread_mutexattr_init(&attr);
+	myAssertion(0 == retVal);
+	pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE);
+	retVal = pthread_mutexattr_setpshared(&attr,
+										  isProcessShared ? PTHREAD_PROCESS_SHARED : PTHREAD_PROCESS_PRIVATE);
+	myAssertion(0 == retVal);
+
+	retVal = pthread_mutex_init(&mMutex, &attr);
+	myAssertion(0 == retVal);
+
+	if(false == isFull)
+	{
+		pthread_mutex_lock(&mMutex);
+	}
+	pthread_mutexattr_destroy(&attr);
+}
+bool CMutex::take(bool waitForever)
+{
+	//Versuche zu locken
+	bool haveSem = (0 == pthread_mutex_trylock(&mMutex));
+
+	if((false == haveSem) && (true == waitForever))
+	{
+		haveSem = (0 == pthread_mutex_lock(&mMutex));
+	}
+	return haveSem;
+}
+void CMutex::give()
+{
+	sAssertion(0 == pthread_mutex_unlock(&mMutex), "(CMutex::give()): Failed to give Mutex!");
+}
+CMutex::~CMutex()
+{
+	pthread_mutex_destroy(&mMutex);
+}

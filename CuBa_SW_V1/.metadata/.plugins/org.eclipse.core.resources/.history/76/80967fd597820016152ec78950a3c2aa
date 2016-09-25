@@ -1,0 +1,28 @@
+/**
+ * @file STimer.cpp
+ * @author Michael Meindl
+ * @date 24.9.2016
+ * @brief Class definitions for the timer class, which is implemented as singleton.
+ */
+#include "STimer.h"
+
+STimer* STimer::sInstance = nullptr;
+/**
+ * Static memory to store the singleton instance, prevents the usage of dynamic memory allocation.
+ */
+static UInt8 sMemory[cMakeAlignmentSize(sizeof(STimer))];
+STimer::STimer() : mAccessMutex(false, true)
+{
+
+}
+STimer& STimer::getInstance()
+{
+	mAccessMutex.take(true);
+	if(nullptr == sInstance)
+	{
+		sInstance = reinterpret_cast<STimer*>(sMemory);
+		sInstance = reinterpret_cast<STimer*>(new(sMemory)STimer);
+	}
+	mAccessMutex.give();
+	return *sInstance;
+}

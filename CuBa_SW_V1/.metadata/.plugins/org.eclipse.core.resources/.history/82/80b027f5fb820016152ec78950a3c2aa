@@ -1,0 +1,17 @@
+/**
+ * @file 	main.cpp
+ * @author  Michael Meindl
+ * @date 	25.9.2016
+ * @brief 	Contains main function, creates the different tasks and runs them.
+ */
+#include "SControlComponent.h"
+#include "STimer.h"
+#include <pthread.h>
+
+void* controlTask(void*);
+void* timerTask(void*);
+
+int main()
+{
+	return 0;
+}

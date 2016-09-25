@@ -1,0 +1,7 @@
+/**
+ * @file 	CDoubleBuffer.cpp
+ * @author	Michael Meindl
+ * @date	25.9.2016
+ * @brief 	Method definitions for CDoublePuffer.
+ */
+#include "CDoubleBuffer.h"

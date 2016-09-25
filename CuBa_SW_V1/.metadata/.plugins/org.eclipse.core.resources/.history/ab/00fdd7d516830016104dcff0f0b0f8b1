@@ -1,0 +1,37 @@
+/**
+ * @file	SProxy.h
+ * @author	Michael Meindl
+ * @date	25.9.2016
+ * @brief	Class definition for the proxy.
+ */
+#ifndef SPROXY_H
+#define SPROXY_H
+#include "Global.h"
+#include "CMutex.h"
+
+/**
+ * Class to handle the creation and transmission of messages.
+ * The class is implemented as a singleton and is a friend of AComponentBase.
+ */
+class SProxy
+{
+public:
+	static SProxy& getInstance();
+	/**
+	 * Method to notify the control component, that a sampling intervall has passed.
+	 * @param[in] waitForever	Specifies whether the caller wants to wait forever.
+	 * @return					Specifies whether the message was transmitted.
+	 */
+	bool timerTick(bool waitForever);
+public:
+	SProxy(const SProxy&) = delete;
+	SProxy& operator=(const SProxy&) = delete;
+	~SProxy() = default;
+private:
+	SProxy();
+private:
+	static SProxy* sInstance;
+	static CMutex sAccessMutex;
+};
+
+#endif

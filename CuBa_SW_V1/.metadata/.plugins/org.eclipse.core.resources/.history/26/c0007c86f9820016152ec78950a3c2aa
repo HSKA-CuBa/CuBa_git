@@ -1,0 +1,26 @@
+/**
+ * @file AComponentBase.h
+ * @author Michael Meindl
+ * @date 25.9.2016
+ * @brief Abstract base class for the different components.
+ */
+#ifndef ACOMPONENTBASE_H
+#define ACOMPONENTBASE_H
+#include "IRunnable.h"
+#include "TQueue.h"
+#include "Config.h"
+
+class AComponentBase : public IRunnable
+{
+public:
+	void run() override;
+	void init() override;
+public:
+	AComponentBase();
+	AComponentBase(const AComponentBase&) = delete;
+	AComponentBase& operator=(const AComponentBase&) = delete;
+	virtual ~AComponentBase() = default;
+
+};
+
+#endif

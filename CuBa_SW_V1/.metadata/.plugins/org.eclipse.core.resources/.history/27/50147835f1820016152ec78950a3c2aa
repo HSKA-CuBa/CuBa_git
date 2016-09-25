@@ -1,0 +1,8 @@
+/**
+ * @file CMessage.cpp
+ * @author Michael Meindl
+ * @date 25.9.2016
+ * @brief Method definitions for CMessage.
+ */
+#include "CMessage.h"
+

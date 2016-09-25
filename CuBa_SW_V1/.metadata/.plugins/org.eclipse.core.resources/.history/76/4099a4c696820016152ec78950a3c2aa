@@ -1,0 +1,9 @@
+/**
+ * @file STimer.cpp
+ * @author Michael Meindl
+ * @date 24.9.2016
+ * @brief Class definitions for the timer class, which is implemented as singleton.
+ */
+#include "STimer.h"
+
+

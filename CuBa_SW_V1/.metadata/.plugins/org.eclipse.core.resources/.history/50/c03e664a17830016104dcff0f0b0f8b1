@@ -1,0 +1,44 @@
+/**
+ * @file 	SControlComponent.h
+ * @author 	Michael Meindl
+ * @date	25.9.2016
+ * @brief 	Class definition for the control component.
+ */
+#ifndef SCONTROLCOMPONENT_H
+#define SCONTROLCOMPONENT_H
+#include <CProxy.h>
+#include "AComponentBase.h"
+#include "CMutex.h"
+
+/**
+ * Class to represent the control task.
+ * Inherits from AComponentBase and and implements the init() and run() method.
+ * The class is implemented as a singleton using a static puffer to avoid the usage of dynamic memory allocation.
+ */
+class SControlComponent : public AComponentBase
+{
+public:
+	/**
+	 * Initialize the hardware.
+	 */
+	void init() override;
+	/**
+	 * Run the task, this call never returns.
+	 */
+	void run() override;
+	/**
+	 * Static method to get the singleton instance.
+	 */
+	static SControlComponent& getInstance();
+public:
+	SControlComponent(const SControlComponent&) = delete;
+	SControlComponent& operator=(const SControlComponent&) = delete;
+	~SControlComponent() = default;
+private:
+	SControlComponent();
+private:
+	static SControlComponent* sInstance;
+	static CMutex sAccessMutex;
+	SProxy* mProxyPtr;
+};
+#endif

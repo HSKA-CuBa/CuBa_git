@@ -1,0 +1,57 @@
+/**
+ * @file 	main.cpp
+ * @author  Michael Meindl
+ * @date 	25.9.2016
+ * @brief 	Contains main function, creates the different tasks and runs them.
+ */
+#include "SControlComponent.h"
+#include "SCommComponent.h"
+#include "CDoubleBuffer.h"
+#include "STimer.h"
+#include <pthread.h>
+
+CDoubleBuffer gBuffer;
+
+void* controlTask(void*);
+void* timerTask(void*);
+void* commTask(void*);d
+
+int main()
+{
+	pthread_t timerID;
+	pthread_create(&timerID, NULL, timerTask, NULL);
+
+	pthread_t controlID;
+	pthread_create(&controlID, NULL, controlTask, NULL);
+
+	pthread_t commID;
+	pthread_create(&commID, NULL, commTask, NULL);
+
+	pthread_join(timerID, NULL);
+	pthread_join(controlID, NULL);
+	pthread_join(commID, NULL);
+
+	return 0;
+}
+
+void* timerTask(void*)
+{
+	STimer& timer = STimer::getInstance();
+	timer.init();
+	timer.run();
+	return nullptr;
+}
+void* controlTask(void*)
+{
+	SControlComponent& controlComponent = SControlComponent::getInstance();
+	controlComponent.init();
+	controlComponent.run();
+	return nullptr;
+}
+void* commTask(void*)
+{
+	SCommComponent& commComponent = SCommComponent::getInstance();
+	commComponent.init();
+	commComponent.run();
+	return nullptr;
+}

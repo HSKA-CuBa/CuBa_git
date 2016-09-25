@@ -1,0 +1,18 @@
+/**
+ * @file CMessage.cpp
+ * @author Michael Meindl
+ * @date 25.9.2016
+ * @brief Method definitions for CMessage.
+ */
+#include "CMessage.h"
+
+bool CMessage::getEvent(EEvent& event)
+{
+	event = mHeader.mEvent;
+	return event != EEvent::EV_DEFAULT_IGNORE;
+}
+bool CMessage::getDataType(EDataType& datatype)
+{
+	datatype = mHeader.mDataType;
+	return mEvent == EEvent::EV_TRANSMIT_DATA;
+}

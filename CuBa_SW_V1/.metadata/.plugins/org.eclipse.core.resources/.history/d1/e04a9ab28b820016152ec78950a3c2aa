@@ -1,0 +1,17 @@
+#include "IRunnable.h"
+#include <iostream>
+
+class CTest: public IRunnable
+{
+public:
+	void run() override;
+	void init() override;
+public:
+	CTest();
+};
+
+void CTest::run()
+{
+	std::cout << "Hello Task" << std::endl;
+	return;
+}

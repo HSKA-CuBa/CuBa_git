@@ -1,0 +1,22 @@
+/**
+ * @file 	CDoubleBuffer.cpp
+ * @author	Michael Meindl
+ * @date	25.9.2016
+ * @brief 	Method definitions for CDoublePuffer.
+ */
+#include "CDoubleBuffer.h"
+
+CDoubleBuffer::CDoubleBuffer() : mReadContainer(),
+								 mWriteContainer(),
+								 mReadSemaphore(false, true),
+								 mSwitchSemaphore(true, true)
+{
+
+}
+bool CDoubleBuffer::setData(bool waitForever,
+							CContainer::CPhiValues& phiValues,
+							CContainer::CPhi__dValues& phi__dValues,
+							CContainer::CPsi__dValues& psi__dValues)
+{
+	mWriteContainer.setData(phiValues, phi__dValues, psi__dValues);
+}

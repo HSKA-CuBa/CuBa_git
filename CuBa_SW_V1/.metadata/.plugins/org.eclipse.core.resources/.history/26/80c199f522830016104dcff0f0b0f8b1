@@ -1,0 +1,43 @@
+/**
+ * @file 	CControlComponent.cpp
+ * @author	Michael Meindl
+ * @date	25.9.2016
+ * @brief	Method definitions for CControlComponent.
+ */
+#include <CControlComponent.h>
+#include "CDoubleBuffer.h"
+#include <new>
+#include <iostream>
+
+void CControlComponent::init()
+{
+	std::cout << "[*] Control-Component: Initializing" << std::endl;
+}
+void CControlComponent::run()
+{
+	std::cout << "[*] Control-Component: Running" << std::endl;
+	CContainer::CPhiValues phiValues{0.0F, 0.0F, 0.0F};
+	CContainer::CPhi__dValues phi__dValues;
+	CContainer::CPsi__dValues psi__dValues;
+
+	CMessage rxMsg;
+	while(mQueue.popFront(rxMsg, true))
+	{
+		EEvent event = rxMsg.getEvent();
+		if(EEvent::EV_TIMER_TICK == event)
+		{
+			std::cout << "[*] Control-Component: Sampling intervall" << std::endl;
+			phiValues.mRaw 	  += 1.0F;
+			phiValues.mComp   += 2.0F;
+			phiValues.mKalman += 3.0F;
+			if(mBufferPtr->setData(false, phiValues, phi__dValues, psi__dValues))
+			{
+				std::cout << "[*] Control-Component: Transmitted data" << std::endl;
+			}
+		}
+	}
+}
+CControlComponent::CControlComponent() : AComponentBase()
+{
+
+}

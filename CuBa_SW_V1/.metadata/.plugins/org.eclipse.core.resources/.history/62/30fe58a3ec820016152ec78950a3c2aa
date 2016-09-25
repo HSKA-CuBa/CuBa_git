@@ -1,0 +1,54 @@
+/**
+ * @file CMessage.h
+ * @author Michael Meindl
+ * @date 25.9.2016
+ * @brief Class definition for a communication message.
+ */
+#ifndef CMESSAGE_H
+#define CMESSAGE_H
+#include "EEvent.h"
+#include "EDataType.h"
+#include "Global.h"
+
+class CMessage
+{
+public:
+	bool getPhiValues(Float32& time,
+					  Float32& unfiltered,
+					  Float32& complementary,
+					  Float32& kalman);
+	bool getPhi__dValues(Float32& time,
+						 Float32& unfiltered,
+						 Float32& complementary);
+	bool getPsi__dValues(Float32& time,
+						 Float32& unfiltered,
+						 Float32& mean4,
+						 Float32& mean8,
+						 Float32& mean16);
+	bool setPhiValues(Float32& time,
+					  Float32& unfiltered,
+					  Float32& complementary,
+					  Float32& kalman);
+	bool setPhi__dValues(Float32& time,
+						 Float32& unfiltered,
+						 Float32& kalman);
+	bool setPsi__dValues(Float32& time,
+						 Float32& mean4,
+						 Float32& mean8,
+						 Float32& mean16);
+public:
+	/**
+	 * Required to create create empty messages in the queues.
+	 */
+	CMessage();
+	CMessage(const CMessage&) = delete;
+	/**
+	 * Required to copy messages into the queue.
+	 */
+	CMessage& operator=(const CMessage&) = default;
+	~CMessage() = default;
+private:
+
+};
+
+#endif

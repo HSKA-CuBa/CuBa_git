@@ -1,0 +1,28 @@
+/**
+ * @file main.cpp
+ * @author Michael Meindl
+ * @date 24.9.2016
+ * @brief This file contains the main-function. Here the components are initialize and started as seperate threads.
+ *
+ *
+ */
+#include <iostream>
+#include <pthread.h>
+
+class CTest;
+
+void* testRun()
+{
+	CTest test;
+	test.init();
+	test.run();
+}
+
+int main()
+{
+	CTest test;
+	pthread_t testID;
+	pthread_create(&testID, NULL, test.run, NULL);
+	std::cout << "Hello World" << std::endl;
+	return 0;
+}
