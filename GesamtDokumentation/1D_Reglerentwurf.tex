@@ -10,7 +10,7 @@ Mit Hilfe der Zustandsraumdarstellung kann über die Rückführung des Zustandve
 \caption{Blockschaltbild Regelkreis, Quelle: eigene Darstellung, Inhalt aus \cite{RT2}}
 \end{figure}
 
-Die Stellgröße $u$ wird von einem Mikrokontroller mit einer Abtatsperiod $T_a = 20ms$ berechnet. Folglich handelt es sich um eine digitale Regelung. Um das Verhalten des diskreten Systems zu beschreiben müssen die diskreten Systemmatrizen $\textbf{A}_d$, $\textbf{B}_d$, $\textbf{C}_d$ und $\textbf{D}_d$ berechnet werden. Hierfür gilt nach \cite{RT2}:
+Die Stellgröße $u$ wird von einem Mikrokontroller mit einer Abtastperiod $T_a = 20ms$ berechnet. Folglich handelt es sich um eine digitale Regelung. Um das Verhalten des diskreten Systems zu beschreiben müssen die diskreten Systemmatrizen $\textbf{A}_d$, $\textbf{B}_d$, $\textbf{C}_d$ und $\textbf{D}_d$ berechnet werden. Hierfür gilt nach \cite{RT2}:
 
 \begin{equation}
 \textbf{S} = T_a \sum_{v=0}^{\infty} \textbf{A}^v \frac{T^v}{(v+1)!}
@@ -91,7 +91,7 @@ Die folgenden Abbildungen zeigen den Verlauf der Winkelgeschwindigkeiten $\dot{\
 \centering
 %\includegraphics[scale=0.5]{img/phi__d_regelung}
 %\includegraphics[scale=0.5]{img/psi__d_regelung}
-\caption{Verluaf von $\dot{\varphi}$ und $\dot{\psi}$, Quelle: eigene Darstellung}
+\caption{Verlauf von $\dot{\varphi}$ und $\dot{\psi}$, Quelle: eigene Darstellung}
 \end{figure}
 
 \newpage

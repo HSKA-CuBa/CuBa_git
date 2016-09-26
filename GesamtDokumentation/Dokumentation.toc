@@ -2,41 +2,44 @@
 \contentsline {section}{\numberline {1}Cube-Balance (CuBa) - Der selbstbalancierende W\IeC {\"u}rfel}{1}{section.1}
 \contentsline {section}{\numberline {2}1D-Prototyp}{2}{section.2}
 \contentsline {subsection}{\numberline {2.1}Aktorik und Sensorik}{3}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Modellierung der Systemdynamik}{4}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Sensorik}{7}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Winkelsch\IeC {\"a}tzung}{7}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Kalibrierung und Justierung}{8}{subsubsection.2.3.2}
-\contentsline {subsubsubsection}{\numberline {2.3.2.1}Umrechnung der Beschleunigungswerte}{8}{subsubsubsection.2.3.2.1}
-\contentsline {subsubsubsection}{\numberline {2.3.2.2}Umrechnung der Winkelgeschwindigkeiten}{9}{subsubsubsection.2.3.2.2}
-\contentsline {subsubsection}{\numberline {2.3.3}Auswertung der Radgeschwindigkeit $\mathaccentV {dot}05F{\psi }$}{9}{subsubsection.2.3.3}
-\contentsline {subsection}{\numberline {2.4}Filterung der Zustandsgr\IeC {\"o}\IeC {\ss }en}{10}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Ans\IeC {\"a}tze zur Filterung von $\varphi $}{10}{subsubsection.2.4.1}
-\contentsline {subsubsubsection}{\numberline {2.4.1.1}Komplement\IeC {\"a}rfilter f\IeC {\"u}r $\varphi $}{10}{subsubsubsection.2.4.1.1}
-\contentsline {subsubsubsection}{\numberline {2.4.1.2}Kalmanfilter f\IeC {\"u}r $\varphi $}{11}{subsubsubsection.2.4.1.2}
-\contentsline {subsubsubsection}{\numberline {2.4.1.3}Vergleich der Filter}{13}{subsubsubsection.2.4.1.3}
-\contentsline {subsubsection}{\numberline {2.4.2}Ans\IeC {\"a}tze zur Filterung von $\mathaccentV {dot}05F{\varphi }$}{14}{subsubsection.2.4.2}
-\contentsline {subsubsection}{\numberline {2.4.3}Ans\IeC {\"a}tze zur Filterung von $\mathaccentV {dot}05F{\psi }$}{15}{subsubsection.2.4.3}
-\contentsline {subsection}{\numberline {2.5}Modellbildung und Bestimmung der Systemgr\IeC {\"o}\IeC {\ss }en}{16}{subsection.2.5}
-\contentsline {subsubsection}{\numberline {2.5.1}Identifikation der Parameter}{16}{subsubsection.2.5.1}
-\contentsline {subsubsubsection}{\numberline {2.5.1.1}Ermittlung des Reibwertes $C_{\varphi }$}{16}{subsubsubsection.2.5.1.1}
-\contentsline {subsubsubsection}{\numberline {2.5.1.2}Ermittlung des Reibwertes $C_{\psi }$}{17}{subsubsubsection.2.5.1.2}
-\contentsline {subsubsubsection}{\numberline {2.5.1.3}Resultate der Systemidentifikation}{18}{subsubsubsection.2.5.1.3}
-\contentsline {subsubsection}{\numberline {2.5.2}Entwurf des Simulink-Modelles}{19}{subsubsection.2.5.2}
-\contentsline {subsubsubsection}{\numberline {2.5.2.1}Simulation des Motors}{19}{subsubsubsection.2.5.2.1}
-\contentsline {subsubsubsection}{\numberline {2.5.2.2}Simulation der W\IeC {\"u}rfelseite}{19}{subsubsubsection.2.5.2.2}
-\contentsline {subsubsubsection}{\numberline {2.5.2.3}Simulation der Schwungmasse}{20}{subsubsubsection.2.5.2.3}
-\contentsline {subsection}{\numberline {2.6}Reglerentwurf}{21}{subsection.2.6}
-\contentsline {subsubsection}{\numberline {2.6.1}Analytische Bestimmung der Reglerparameter}{21}{subsubsection.2.6.1}
-\contentsline {subsubsection}{\numberline {2.6.2}Verifizierung des Reglers an dem 1D-Prototyp}{22}{subsubsection.2.6.2}
-\contentsline {subsection}{\numberline {2.7}Aufspringen}{24}{subsection.2.7}
-\contentsline {subsection}{\numberline {2.8}Software}{25}{subsection.2.8}
-\contentsline {subsubsection}{\numberline {2.8.1}Hardware-Schnittstelle}{25}{subsubsection.2.8.1}
-\contentsline {subsubsection}{\numberline {2.8.2}TCP/IP-Verbindung}{26}{subsubsection.2.8.2}
-\contentsline {subsubsection}{\numberline {2.8.3}Komponentenarchitektur}{26}{subsubsection.2.8.3}
-\contentsline {subsubsection}{\numberline {2.8.4}Allgemeiner Ablauf der Versuchsapplikationen}{27}{subsubsection.2.8.4}
-\contentsline {section}{\numberline {3}3D-Modell}{28}{section.3}
-\contentsline {subsection}{\numberline {3.1}Modellierung der Systemdynamik}{29}{subsection.3.1}
-\contentsline {subsubsection}{\numberline {3.1.1}Potential des Systems}{30}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}Kinetische Energie des Systems}{30}{subsubsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.3}Generalisierte Kraftkomponenten}{31}{subsubsection.3.1.3}
-\contentsline {subsubsubsection}{\numberline {3.1.3.1}Test}{32}{subsubsubsection.3.1.3.1}
+\contentsline {subsection}{\numberline {2.2}Konstruktion 1D}{4}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Bauteile}{4}{subsubsection.2.2.1}
+\contentsline {subsection}{\numberline {2.3}Modellierung der Systemdynamik}{8}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Sensorik}{11}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Winkelsch\IeC {\"a}tzung}{11}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Kalibrierung und Justierung}{12}{subsubsection.2.4.2}
+\contentsline {subsubsubsection}{\numberline {2.4.2.1}Umrechnung der Beschleunigungswerte}{12}{subsubsubsection.2.4.2.1}
+\contentsline {subsubsubsection}{\numberline {2.4.2.2}Umrechnung der Winkelgeschwindigkeiten}{13}{subsubsubsection.2.4.2.2}
+\contentsline {subsubsection}{\numberline {2.4.3}Auswertung der Radgeschwindigkeit $\mathaccentV {dot}05F{\psi }$}{13}{subsubsection.2.4.3}
+\contentsline {subsection}{\numberline {2.5}Filterung der Zustandsgr\IeC {\"o}\IeC {\ss }en}{14}{subsection.2.5}
+\contentsline {subsubsection}{\numberline {2.5.1}Ans\IeC {\"a}tze zur Filterung von $\varphi $}{14}{subsubsection.2.5.1}
+\contentsline {subsubsubsection}{\numberline {2.5.1.1}Komplement\IeC {\"a}r-Filter f\IeC {\"u}r $\varphi $}{14}{subsubsubsection.2.5.1.1}
+\contentsline {subsubsubsection}{\numberline {2.5.1.2}Kalman-Filter f\IeC {\"u}r $\varphi $}{15}{subsubsubsection.2.5.1.2}
+\contentsline {subsubsubsection}{\numberline {2.5.1.3}Vergleich der Filter}{17}{subsubsubsection.2.5.1.3}
+\contentsline {subsubsection}{\numberline {2.5.2}Ans\IeC {\"a}tze zur Filterung von $\mathaccentV {dot}05F{\varphi }$}{18}{subsubsection.2.5.2}
+\contentsline {subsubsection}{\numberline {2.5.3}Ans\IeC {\"a}tze zur Filterung von $\mathaccentV {dot}05F{\psi }$}{19}{subsubsection.2.5.3}
+\contentsline {subsection}{\numberline {2.6}Modellbildung und Bestimmung der Systemgr\IeC {\"o}\IeC {\ss }en}{20}{subsection.2.6}
+\contentsline {subsubsection}{\numberline {2.6.1}Identifikation der Parameter}{20}{subsubsection.2.6.1}
+\contentsline {subsubsubsection}{\numberline {2.6.1.1}Ermittlung des Reibwertes $C_{\varphi }$}{20}{subsubsubsection.2.6.1.1}
+\contentsline {subsubsubsection}{\numberline {2.6.1.2}Ermittlung des Reibwertes $C_{\psi }$}{21}{subsubsubsection.2.6.1.2}
+\contentsline {subsubsubsection}{\numberline {2.6.1.3}Resultate der Systemidentifikation}{22}{subsubsubsection.2.6.1.3}
+\contentsline {subsubsection}{\numberline {2.6.2}Entwurf des Simulink-Modelles}{23}{subsubsection.2.6.2}
+\contentsline {subsubsubsection}{\numberline {2.6.2.1}Simulation des Motors}{23}{subsubsubsection.2.6.2.1}
+\contentsline {subsubsubsection}{\numberline {2.6.2.2}Simulation der W\IeC {\"u}rfelseite}{23}{subsubsubsection.2.6.2.2}
+\contentsline {subsubsubsection}{\numberline {2.6.2.3}Simulation der Schwungmasse}{24}{subsubsubsection.2.6.2.3}
+\contentsline {subsection}{\numberline {2.7}Reglerentwurf}{25}{subsection.2.7}
+\contentsline {subsubsection}{\numberline {2.7.1}Analytische Bestimmung der Reglerparameter}{25}{subsubsection.2.7.1}
+\contentsline {subsubsection}{\numberline {2.7.2}Verifizierung des Reglers an dem 1D-Prototyp}{26}{subsubsection.2.7.2}
+\contentsline {subsection}{\numberline {2.8}Aufspringen}{28}{subsection.2.8}
+\contentsline {subsection}{\numberline {2.9}Software}{29}{subsection.2.9}
+\contentsline {subsubsection}{\numberline {2.9.1}Hardware-Schnittstelle}{29}{subsubsection.2.9.1}
+\contentsline {subsubsection}{\numberline {2.9.2}TCP/IP-Verbindung}{30}{subsubsection.2.9.2}
+\contentsline {subsubsection}{\numberline {2.9.3}Komponentenarchitektur}{30}{subsubsection.2.9.3}
+\contentsline {subsubsection}{\numberline {2.9.4}Allgemeiner Ablauf der Versuchsapplikationen}{31}{subsubsection.2.9.4}
+\contentsline {section}{\numberline {3}3D-Modell}{32}{section.3}
+\contentsline {subsection}{\numberline {3.1}Modellierung der Systemdynamik}{33}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Potential des Systems}{34}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Kinetische Energie des Systems}{34}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Generalisierte Kraftkomponenten}{35}{subsubsection.3.1.3}
+\contentsline {subsubsubsection}{\numberline {3.1.3.1}Test}{36}{subsubsubsection.3.1.3.1}
+\contentsline {section}{\numberline {4}Anhang}{38}{section.4}

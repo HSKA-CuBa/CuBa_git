@@ -1,6 +1,75 @@
-15:22:15 **** Incremental Build of configuration Debug for project DoublePuffer ****
+12:34:29 **** Incremental Build of configuration Debug for project DoublePuffer ****
 make all 
-make: Nothing to be done for `all'.
+Building file: ../lib/AComponentBase.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/lib" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/CommComponent" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/TimerTask" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/ControlComponent" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/AComponentBase.d" -MT"lib/AComponentBase.o" -o "lib/AComponentBase.o" "../lib/AComponentBase.cpp"
+Finished building: ../lib/AComponentBase.cpp
+ 
+Building file: ../lib/Assertion.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/lib" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/CommComponent" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/TimerTask" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/ControlComponent" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/Assertion.d" -MT"lib/Assertion.o" -o "lib/Assertion.o" "../lib/Assertion.cpp"
+Finished building: ../lib/Assertion.cpp
+ 
+Building file: ../lib/CBinarySemaphore.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/lib" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/CommComponent" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/TimerTask" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/ControlComponent" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/CBinarySemaphore.d" -MT"lib/CBinarySemaphore.o" -o "lib/CBinarySemaphore.o" "../lib/CBinarySemaphore.cpp"
+Finished building: ../lib/CBinarySemaphore.cpp
+ 
+Building file: ../lib/CContainer.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/lib" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/CommComponent" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/TimerTask" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/ControlComponent" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/CContainer.d" -MT"lib/CContainer.o" -o "lib/CContainer.o" "../lib/CContainer.cpp"
+Finished building: ../lib/CContainer.cpp
+ 
+Building file: ../lib/CCountingSemaphore.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/lib" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/CommComponent" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/TimerTask" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/ControlComponent" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/CCountingSemaphore.d" -MT"lib/CCountingSemaphore.o" -o "lib/CCountingSemaphore.o" "../lib/CCountingSemaphore.cpp"
+Finished building: ../lib/CCountingSemaphore.cpp
+ 
+Building file: ../lib/CDoubleBuffer.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/lib" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/CommComponent" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/TimerTask" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/ControlComponent" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/CDoubleBuffer.d" -MT"lib/CDoubleBuffer.o" -o "lib/CDoubleBuffer.o" "../lib/CDoubleBuffer.cpp"
+Finished building: ../lib/CDoubleBuffer.cpp
+ 
+Building file: ../lib/CMessage.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/lib" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/CommComponent" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/TimerTask" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/ControlComponent" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/CMessage.d" -MT"lib/CMessage.o" -o "lib/CMessage.o" "../lib/CMessage.cpp"
+Finished building: ../lib/CMessage.cpp
+ 
+Building file: ../lib/CMutex.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/lib" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/CommComponent" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/TimerTask" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/ControlComponent" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/CMutex.d" -MT"lib/CMutex.o" -o "lib/CMutex.o" "../lib/CMutex.cpp"
+Finished building: ../lib/CMutex.cpp
+ 
+Building file: ../lib/CProxy.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/lib" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/CommComponent" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/TimerTask" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/ControlComponent" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/CProxy.d" -MT"lib/CProxy.o" -o "lib/CProxy.o" "../lib/CProxy.cpp"
+Finished building: ../lib/CProxy.cpp
+ 
+Building file: ../TimerTask/CTimer.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/lib" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/CommComponent" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/TimerTask" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/ControlComponent" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TimerTask/CTimer.d" -MT"TimerTask/CTimer.o" -o "TimerTask/CTimer.o" "../TimerTask/CTimer.cpp"
+Finished building: ../TimerTask/CTimer.cpp
+ 
+Building file: ../ControlComponent/CControlComponent.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/lib" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/CommComponent" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/TimerTask" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/ControlComponent" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ControlComponent/CControlComponent.d" -MT"ControlComponent/CControlComponent.o" -o "ControlComponent/CControlComponent.o" "../ControlComponent/CControlComponent.cpp"
+Finished building: ../ControlComponent/CControlComponent.cpp
+ 
+Building file: ../CommComponent/CCommComponent.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/lib" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/CommComponent" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/TimerTask" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/ControlComponent" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CommComponent/CCommComponent.d" -MT"CommComponent/CCommComponent.o" -o "CommComponent/CCommComponent.o" "../CommComponent/CCommComponent.cpp"
+Finished building: ../CommComponent/CCommComponent.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/lib" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/CommComponent" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/TimerTask" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/DoublePuffer/ControlComponent" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: DoublePuffer
+Invoking: GCC C++ Linker
+g++  -o "DoublePuffer"  ./lib/AComponentBase.o ./lib/Assertion.o ./lib/CBinarySemaphore.o ./lib/CContainer.o ./lib/CCountingSemaphore.o ./lib/CDoubleBuffer.o ./lib/CMessage.o ./lib/CMutex.o ./lib/CProxy.o  ./TimerTask/CTimer.o  ./ControlComponent/CControlComponent.o  ./CommComponent/CCommComponent.o  ./main.o   -lpthread
+Finished building target: DoublePuffer
+ 
 
-15:22:15 Build Finished (took 60ms)
+12:34:32 Build Finished (took 3s.689ms)
 

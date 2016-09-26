@@ -1,5 +1,5 @@
 \subsection{Modellbildung und Bestimmung der Systemgrößen}
-Mit Hilfe der Bewegungsgleichungen aus Abschnitt \ref{Dynamik_sec} kann nun eine Zustandsraumdarstellung aufgestellt werden. Hierfür werden die nichtlinearen Terme entsprechend linearisiert. Mit Hilfe der Bewegungsgleichungen bzw. Zustandsraumdarstellung kann ein Simulink-Modell implementiert werden um das Systemverhalten zu simulieren. Mit Hilfe der Zustandsraumdarstellung wird ein Zustandsregler entworfen, welcher an dem Modell erprobt werden kann. Zusätzlich über die Simulation der Einfluss der einzelnen Parameter, Sensorrauschen und Störungen untersucht werden.
+Mit Hilfe der Bewegungsgleichungen aus Abschnitt \ref{Dynamik_sec} kann nun eine Zustandsraumdarstellung aufgestellt werden. Hierfür werden die nichtlinearen Terme entsprechend linearisiert. Mit Hilfe der Bewegungsgleichungen bzw. Zustandsraumdarstellung kann ein Simulink-Modell implementiert werden um das Systemverhalten zu simulieren. Mit Hilfe der Zustandsraumdarstellung wird ein Zustandsregler entworfen, welcher an dem Modell erprobt werden kann. Zusätzlich wird über die Simulation der Einfluss der einzelnen Parameter, des Sensorrauschen und zusätzlicher Störungen untersucht.
 
 \begin{equation}
 \textbf{x} = \begin{pmatrix}
@@ -160,7 +160,7 @@ Dieser Abschnitt erklärt den Aufbau des Simulink-Modelles zur Simulation des Sy
 \end{figure}
 
 \subsubsubsection{Simulation des Motors}
-Der Motor wird als zwei in Reihe geschaltete PT1-Glieder simuliert. Da der Regler als Stellgröße ein Motormoment berechnet, beträgt die Verstärkung des Motor $K_M$ in der Simulation den Wert eins. Die Zeitkonstanten der PT1-Glieder sind einerseits die elektrische Zeitkonstante $T_e$ und die mechanische Zeitkonstante $T_m$, wessen Werte dem Datenblatt des Herstellers entnommen werden.
+Der Motor wird als zwei in Reihe geschaltete PT1-Glieder simuliert. Da der Regler als Stellgröße ein Motormoment berechnet, beträgt die Verstärkung des Motor $K_M$ in der Simulation den Wert eins. Die Zeitkonstanten der PT1-Glieder sind einerseits die elektrische Zeitkonstante $T_e$ und die mechanische Zeitkonstante $T_m$, deren Werte dem Datenblatt des Herstellers entnommen werden.
 
 \begin{equation}
 K_M = 1 \hspace{35pt} T_e = 0.55ms \hspace{35pt} T_m = 12.4ms
@@ -182,7 +182,7 @@ Somit ist die Winkelbeschleunigung gleich der Summe der Drehmomente geteilt durc
 \end{figure}
 
 \subsubsubsection{Simulation der Schwungmasse}
-Die Dynamik der Schwungmasse wird von \ref{BG_psi_equation} beschrieben, allerdings wird das Modell vereinfacht indem $\ddot{phi}$ nicht substituiert wird.
+Die Dynamik der Schwungmasse wird von \ref{BG_psi_equation} beschrieben, allerdings wird das Modell vereinfacht indem $\ddot{\varphi}$ nicht substituiert wird.
 
 \begin{equation}
 {\theta}^R_B \cdot \ddot{\psi} = T_M - C_{\psi} \cdot \dot{\psi} - {\theta}^B_R \cdot \ddot{\varphi}\tag{\ref{BG_psi_equation}}

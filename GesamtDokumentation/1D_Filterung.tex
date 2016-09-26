@@ -3,10 +3,10 @@ In der Regel werden Sensoren von Störungen unterschiedlichster Art beeinflusst.
 
 \subsubsection{Ansätze zur Filterung von $\varphi$}
 Der Ausfallwinkel $\varphi$ kann wie bereits vorgestellt aus den Beschleunigungswerten geschätzt werden. Alternativ kann die aktuelle Winkelgeschwindigkeit $\dot{\varphi}$, welche mit Hilfe der Gyroscope gemessen wird, integriert werden. Beide Ansätze werden von unterschiedlichen Rauschsignale beeinflusst. Die Beschleunigungssensoren reagieren empfindlich auf hochfrequente Signale und verstärken diese. Dadurch sind die Winkelschätzungen, welche auf diesen Messwerten beruhen, von hochfrequenten Rauschsignalen betroffen. 
-Die Gyroscope-Werte sind trotz der Justierung mit einem Offset behaftet. Durch die Integration dieses konstant Signales ensteht ein tieffrequentes Rauschsignale, welches oftmals als Drift bezeichnet wird. 
+Die Gyroscope-Werte sind trotz der Justierung mit einem Offset behaftet. Durch die Integration dieses konstanten Signales ensteht ein tieffrequentes Rauschsignale, welches oftmals als Drift bezeichnet wird. 
 Deshalb werden im Anschluss das Komplementär- und Kalman-Filter vorgestellt, wobei es sich um Methoden der Datenfusion handelt.
 
-\subsubsubsection{Komplementärfilter für $\varphi$}
+\subsubsubsection{Komplementär-Filter für $\varphi$}
 Wie bereits erläutert liefert die Winkelschätzung aus den Beschleunigungswerten das verrauschte Signal $\varphi^A$ und die Integration der Gyroscopewerte $\varphi^G$.
 \begin{equation}
 \begin{split}
@@ -91,7 +91,7 @@ Durch die Substitution $\alpha = \frac{\tau}{\tau + T}$ kann weiter vereinfacht 
 \varphi^C_n = \alpha(\varphi^C_{n-1}  + T \cdot \dot{\varphi}^G_n) + (1 - \alpha) \varphi^A_n
 \end{equation}
 
-\subsubsubsection{Kalmanfilter für $\varphi$}
+\subsubsubsection{Kalman-Filter für $\varphi$}
 Das Kalman-Filter beruht auf dem Prinzip der Zustandsschätzung. Diese Schätzung erfolgt mittels der Messwerte aus Gyroskopen, Beschleunigungssensoren und der darauf folgenden Winkelschätzung. Hierbei greift der Algorithmus auf Methoden der Wahrscheinlichkeitsrechnung zurück. Ist die Varianz eines Messfehlers gegeben, so kann eine Schätzung des tatsächlichen Zustandes vorgenommen werden.
 In diesem Fall wird mit den linearisierten Bewegungsgleichungen gearbeitet. Dadurch kann das gewöhnliche Kalman-Filter verwendet werden. Für nichtlineare Systeme müssen unterschiedliche Filteralgorithmen, wie beispielsweise das Extended-Kalman-Filter, verwendet werden.
 
@@ -143,7 +143,7 @@ Im zweiten Abschnitt, der s.g. Korrektur- bzw. Filterschritt, wird die Vorhersag
 	\boldsymbol{\hat{x}}_{n+1} = \boldsymbol{x}^*_{n+1} + \boldsymbol{K}_{n+1}(\boldsymbol{y}_{n+1} - \boldsymbol{C} \cdot \boldsymbol{x}^*_{n+1})
 	\end{equation}
 	\item \textbf{Filterkovarianzmatrix}
-	Im letzten Schritt wird die Varianz des geschätzten Systemzustandes berechnet.
+	Im letzten Schritt wird die Varianz des geschätzten Systemzustandes berechnet, welche die Gewichtung der Messwerte im weiteren Verlauf der Berechnung beschreibt.
 	\begin{equation}
 	\boldsymbol{\hat{P}}_{n+1} = \boldsymbol{P}^*_{n+1} - \boldsymbol{K}_{n+1} \cdot \boldsymbol{C} \cdot \boldsymbol{P}^*_{n+1}
 	\end{equation}
