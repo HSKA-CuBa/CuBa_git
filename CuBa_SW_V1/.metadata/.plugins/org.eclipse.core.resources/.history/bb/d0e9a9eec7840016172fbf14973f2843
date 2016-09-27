@@ -1,0 +1,11 @@
+#include "CServer.h"
+
+CServer::CServer() : mSocketFD(-1),
+					 mConnectionFD(-1)
+{
+
+}
+bool CServer::waitForClient()
+{
+
+}

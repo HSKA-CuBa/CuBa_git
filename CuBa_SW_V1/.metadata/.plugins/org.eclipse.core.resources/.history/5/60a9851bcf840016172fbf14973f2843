@@ -1,0 +1,37 @@
+/**
+ * @file	CSocket.h
+ * @author	Michael Meindl
+ * @date	27.9.2016
+ * @brief	Class definition for a TCP/IP-Server
+ */
+#ifndef CSOCKET_H
+#define CSOCKET_H
+#include "Global.h"
+#include <errno.h>
+#include <iostream>
+#include <cstdlib>
+#include <unistd.h>
+#include <netinet/in.h>
+#include <sys/socket.h>
+
+class CServer
+{
+public:
+	bool waitForClient();
+	bool transmitMessage(const Float32& msg);
+	bool receiveMessage(const Float32& msg);
+public:
+	CServer();
+	CServer(const CServer&) = delete;
+	CServer& operator=(const CServer&) = delete;
+	~CServer() = default;
+private:
+	Int32 mSocketFD;
+	Int32 mConnectionFD;
+	struct sockaddr_in mSocketAddr;
+	struct sockaddr_in mClientAddr;
+	socklen_t mClientLen;
+};
+
+
+#endif

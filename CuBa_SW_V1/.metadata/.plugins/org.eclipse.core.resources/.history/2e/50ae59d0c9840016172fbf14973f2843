@@ -1,0 +1,52 @@
+#include "CServer.h"
+
+
+CServer::CServer() : mSocketFD(-1),
+					 mConnectionFD(-1)
+{
+	mSocketFD = socket(AF_INET, SOCK_STREAM, 0);
+	sAssertion(mSocketFD >= 0, "CServer::waitForClient(): Failed to create socket", true);
+
+	mSocketAddr.sin_family		= AF_INET;
+	mSocketAddr.sin_port		= htons(40000);
+	mSocketAddr.sin_addr.s_addr	= INADDR_ANY;
+	Int32 retVal = bind(mSocketFD,
+						reinterpret_cast<struct sockaddr*>(&mSocketAddr),
+						sizeof(mSocketAddr));
+	sAssertion(retVal >= 0, "CServer::CServer(): Failed to bind the socket", true);
+
+	retVal = listen(mSocketFD, 1);
+	sAssertion(retVal >= 0, "CServer::CServer(): Failed to listen", true);
+}
+bool CServer::waitForClient()
+{
+	mConnectionFD = accept(mSocketFD,
+						   reinterpret_cast<struct sockaddr*>(&mClientAddr),
+						   &mClientLen);
+	sAssertion(mConnectionFD >= 0, "CServer::CServer(): FAiled to accep the client connection", true);
+	return true;
+}
+bool CServer::transmitMessage(const Float32& msg)
+{
+	bool success 		= false;
+	Int32 retVal 		= -1;
+	ssize_t writtenByte = 0;
+	const UInt8* buffer = reinterpret_cast<const UInt8*>(&msg);
+	do
+	{
+		retVal = send(mConnectedSocketFD, (buffer+writtenByte), (sizeof(Float32) - writtenByte), MSG_NOSIGNAL);
+		if(errno == EPIPE)
+		{
+			std::cout << "Connection was shutdown by client" << std::endl;
+			success = false;
+			break;
+		}
+		else
+		{
+			sAssertion(retVal >= 0, "CServer::transmitMessage(): Failed to send data", true);
+		}
+		success = true;
+		writtenByte += retVal;
+	}while(writtenByte < sizeof(msg));
+	return success;
+}

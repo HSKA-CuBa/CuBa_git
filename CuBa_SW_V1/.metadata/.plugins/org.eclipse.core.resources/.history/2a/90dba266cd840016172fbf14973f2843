@@ -1,0 +1,15 @@
+#include "CServer.h"
+
+int main()
+{
+	CServer server;
+	server.waitForClient();
+	Float32 msg = 1.0F;
+	while(true)
+	{
+		sleep(1);
+		server.transmitMessage(msg);
+		msg += 1.0F;
+	}
+	return 0;
+}
