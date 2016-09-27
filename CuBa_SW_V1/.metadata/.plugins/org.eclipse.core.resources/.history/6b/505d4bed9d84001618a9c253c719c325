@@ -1,0 +1,26 @@
+#include "CRxTask.h"
+
+CRxTask::CRxTask() : mRunningSem(false, true)
+{
+
+}
+void CRxTask::pause()
+{
+	mRunningSem.take(true);
+}
+void CRxTask::resume()
+{
+	mRunningSem.give();
+}
+void CRxTask::init()
+{
+	std::cout << "[RxTask] Init" << std::endl;
+}
+void CRxTask::run()
+{
+	while(true)
+	{
+		std::cout << "[RxTask] Run-Iteration" << std::endl;
+		sleep(1);
+	}
+}

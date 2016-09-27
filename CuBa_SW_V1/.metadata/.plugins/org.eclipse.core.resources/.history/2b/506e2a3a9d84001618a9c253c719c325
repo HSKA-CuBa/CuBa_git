@@ -1,0 +1,12 @@
+#include <iostream>
+#include "CComponent.h"
+
+CComponent::CComponent() : mRxTask(),
+						   mRxThread(&mRxTask)
+{
+
+}
+void CComponent::init()
+{
+	std::cout << "[Component] Init" << std::endl;
+}

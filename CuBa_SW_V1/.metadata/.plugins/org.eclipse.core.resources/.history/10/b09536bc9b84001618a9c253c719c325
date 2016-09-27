@@ -1,0 +1,9 @@
+#include "CThread.h"
+#include "CRxTask.h"
+
+int main()
+{
+	CRxTask rxTask();
+	CThread(rxTask);
+
+}

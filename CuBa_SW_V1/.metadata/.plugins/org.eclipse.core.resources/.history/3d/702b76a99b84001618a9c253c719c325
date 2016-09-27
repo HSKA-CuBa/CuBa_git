@@ -1,0 +1,6 @@
+#include "CThread.h"
+
+int main()
+{
+
+}

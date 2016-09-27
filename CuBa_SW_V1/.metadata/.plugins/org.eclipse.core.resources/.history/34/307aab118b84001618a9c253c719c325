@@ -1,0 +1,17 @@
+/**
+ * @file	CThread.h
+ * @author	Michael Meindl
+ * @date	27.9.2016
+ * @brief	Class to create a thread-carrier.
+ */
+#ifndef CTHREAD_H
+#define CTHREAD_H
+#include "IRunnable.h"
+
+class CThread
+{
+public:
+	void start();
+};
+
+#endif

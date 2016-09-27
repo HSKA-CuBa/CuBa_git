@@ -1,0 +1,11 @@
+/**
+ * @file 	IRunnable.h
+ * @author	Michael Meindl
+ * @date 	27.9.2016
+ * @brief	Interface for objects which can be run as a thread.
+ */
+#ifndef IRUNNABLE_H
+#define IRUNNABLE_H
+#include "Global.h"
+
+#endif

@@ -1,0 +1,14 @@
+#include "CThread.h"
+#include "CRxTask.h"
+#include "CComponent.h"
+
+int main()
+{
+	CComponent comp;
+	CThread compThred(&comp);
+	compThread.start();
+
+	compThread.join();
+
+	return 0;
+}

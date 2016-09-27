@@ -1,0 +1,12 @@
+#include "CThread.h"
+#include "CRxTask.h"
+
+int main()
+{
+	CRxTask rxTask();
+	CThread rxThread(reinterpret_cast<IRunnable*>(&rxTask));
+	rxThread.start();
+
+	rxThread.join();
+
+}

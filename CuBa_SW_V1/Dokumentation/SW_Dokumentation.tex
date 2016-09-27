@@ -123,7 +123,7 @@ private:
 };
 \end{lstlisting}
 
-Um Nachrichten zu empfangen verfügen die Komponenten über Eingangspuffer, welche als Queues implementiert werden. Das Grundgerüst der Komponenten wird in einer abstrakten Basisklasse festgelegt, welche rein virtuelle Methoden zur Initialisierung und Ausführung deklariert.
+Um Nachrichten zu empfangen verfügen die Komponenten über Eingangspuffer, welche als Queues implementiert werden. Das Grundgerüst der Komponenten wird in einer abstrakten Basisklasse festgelegt, welche rein virtuelle Methoden zur Initialisierung und Ausführung deklariert. Die \textit{dispatch}-Methode ist für die Verarbeitung von Nachrichten zuständig.
 
 \begin{lstlisting}
 class AComponentBase
@@ -131,6 +131,7 @@ class AComponentBase
 public:
 	virtual void init() = 0;
 	virtual void run() = 0;
+	virtual bool dispatch(CMessage& msg) = 0;
 protected:
 	TQueue<Config::QueueSize> mQueue;
 }
@@ -142,6 +143,8 @@ Die Erzeugung und Zustellung von Nachrichten übernimmt ein Proxy, welcher Metho
 class CProxy
 {
 public:
+	bool clientConnected();
+	bool clientDisconnected();
 	bool transmitSensorValues(const CSensorData& data, bool waitForever);
 	bool transmitPhi(const CPhi& data, bool waitForever);
 	bool transmitPhi__d(const CPhi__d& data, bool waitForever);
@@ -168,4 +171,22 @@ Bei Betreten des Running-Zustandes wird der Softtimer gestartet, welcher zyklisc
 Die ersten drei Versuche sind aus Sicht des Kontrollflusses identisch, aus Gründen der Einheitlichkeit werden dennoch drei explizite Zustände implementiert. In diesen Zuständen werden bei Eintreffen eines Timer-Events die aktuellen Sensorwerte abgefragt und and die MATLAB-Applikation gesendet. Für die Versuche 4 und 5 müssen die Sensorauswertung und die Filter implementiert werden. Deren Ausgangswerte werden wiederum zyklisch berechnet und mit Hilfe des Proxys an MATLAB übertragen. Versuch 6 besteht in der Umsetzung des Reglers. Der entsprechende Zustand muss einerseits den vollständigen Regelkreis berechnen, als auch die Filter- und Reglerwerte an MATLAB übertragen. Zusätzlich muss der Zustand die Befehle zur Auswahl der Filter und zum Setzen der Offsets annehmen und umsetzen.
 
 \subsubsection{Aufbau der Kommunikationskomponente}
+Die Hauptaufgabe der Kommunikationseinheit besteht in dem Betrieb des TCP/IP-Server und der Weiterleitung von Nachrichten. Der Server wird in form einer Klasse implementiert, welche Methode zum Empfangen und Versendet von Nachrichten bereitstellt. Im Ausgangszustand wartet die Komponente auf die Verbindungsanfrage eines Client, welcher die MATLAB-Anwendung ist. 
+
+\begin{lstlisting}
+class CServer
+{
+	public:
+	void init();
+	void waitForConnection();
+	bool transmitMessage(CMessage& msg, bool waitForever);
+	bool receiveMessage(CMessage& msg, bool waitForever);
+	...
+	private:
+		Int32 mSocketFD;
+		Int32 mConnectionFD;
+}
+\end{lstlisting}
+
+
 \end{document}
