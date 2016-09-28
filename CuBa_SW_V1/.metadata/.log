@@ -2272,3 +2272,13 @@ org.eclipse.core.internal.resources.ResourceException: Resource '/CuBa_V2/Debug/
 
 !ENTRY org.eclipse.cdt.core 1 0 2016-09-28 17:03:48.932
 !MESSAGE Indexed 'CuBa_V2' (15 sources, 189 headers) in 2.92 sec: 13,183 declarations; 20,039 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2016-09-28 21:22:41.994 -----------------------------------------------
+eclipse.buildId=4.7.0.I20160915-0230
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-09-28 21:23:05.284
+!MESSAGE Indexed 'CuBa_V2' (31 sources, 249 headers) in 4.17 sec: 14,678 declarations; 23,548 references; 0 unresolved inclusions; 0 syntax errors; 6 unresolved names (0.016%)
