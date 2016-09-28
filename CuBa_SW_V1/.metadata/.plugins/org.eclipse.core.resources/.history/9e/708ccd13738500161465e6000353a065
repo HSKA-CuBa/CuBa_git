@@ -1,0 +1,20 @@
+/**
+ * @file	CReceiveTask.h
+ * @author	Michael Meindl
+ * @date	28.9.2016
+ * @file	CReceiveTask.h
+ */
+#ifndef CRECEIVETASK_H
+#define CRECEIVETASK_H
+#include "IRunnable.h"
+
+class CReceiveTask : public IRunnable
+{
+public:
+	void init() override;
+	void run() override;
+	bool pause(bool waitForever);
+	bool resume(bool waitForever);
+};
+
+#endif

@@ -1,0 +1,54 @@
+/**
+ * @file	CCommComponent.cpp
+ * @author	Michael Meindl
+ * @date	28.9.2016
+ * @brief	Method definitions for CCommComponent.
+ */
+#include "CCommComponent.h"
+#include <iostream>
+
+CCommComponent::CCommComponent() : mConnectedFlag(false),
+								   mServer(),
+								   mReceiveTask(mServer),
+								   mReceiveThread(mReceiveTask)
+{
+
+}
+void CCommComponent::init()
+{
+	std::cout << "[CommComponent] Initializing" << std::endl;
+	mServer.init();
+	mReceiveThread.start();
+}
+void CCommComponent::run()
+{
+	while(true)
+	{
+		if(false == mConnectedFlag)
+		{
+			mServer.waitForClient();
+			mConnectedFlag = true;
+			mReceiveTask.resume(true);
+		}
+		else
+		{
+			CMessage msg;
+			if(mQueue.popFront(msg, true))
+			{
+				this->dispatch(msg);
+			}
+		}
+	}
+}
+bool CCommComponent::dispatch(CMessage& msg)
+{
+	Float32 stubMsg = 0.0F;
+	if(mServer.transmitMessage(stubMsg))
+	{
+		return true;
+	}
+	else
+	{
+
+	}
+}

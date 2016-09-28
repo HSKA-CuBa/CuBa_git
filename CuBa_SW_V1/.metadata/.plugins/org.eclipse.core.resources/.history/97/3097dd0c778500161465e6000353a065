@@ -1,0 +1,17 @@
+/**
+ * @file	CCommFSM.h
+ * @author	Michael Meindl
+ * @date	28.9.2016
+ * @brief	Class definition for the communication FSM.
+ */
+#ifndef CCOMMFSM_H
+#define CCOMMFSM_H
+#include "CMessage.h"
+
+class CCommFSM
+{
+public:
+	enum { STATE_DISCONNECTED, STATE_CONNECTED };
+};
+
+#endif

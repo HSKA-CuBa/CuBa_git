@@ -1,44 +1,18 @@
-20:10:14 **** Incremental Build of configuration Debug for project Sockets ****
+17:45:48 **** Incremental Build of configuration Debug for project CuBa_V2 ****
 make all 
-Building file: ../main.cpp
+Building file: ../CommComponent/CCommComponent.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++11 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
-Finished building: ../main.cpp
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/CommComponent" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/ControlComponent" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CommComponent/CCommComponent.d" -MT"CommComponent/CCommComponent.o" -o "CommComponent/CCommComponent.o" "../CommComponent/CCommComponent.cpp"
+Finished building: ../CommComponent/CCommComponent.cpp
  
-Building target: Sockets
+Building target: CuBa_V2
 Invoking: GCC C++ Linker
-g++  -o "Sockets"  ./Assertion.o ./CBinarySemaphore.o ./CMutex.o ./CServer.o ./main.o   -lpthread
-Finished building target: Sockets
+g++  -o "CuBa_V2"  ./lib/AComponentBase.o ./lib/Assertion.o ./lib/CBinarySemaphore.o ./lib/CCountingSemaphore.o ./lib/CMessage.o ./lib/CMutex.o ./lib/CProxy.o ./lib/CThread.o  ./ControlComponent/CControlAction.o ./ControlComponent/CControlComponent.o ./ControlComponent/CControlFSM.o ./ControlComponent/CTimerTask.o  ./CommComponent/CCommComponent.o ./CommComponent/CReceiveTask.o ./CommComponent/CServer.o  ./main.o   -lpthread
+Finished building target: CuBa_V2
  
-20:10:22 **** Incremental Build of configuration Debug for project Sockets ****
+17:45:49 **** Incremental Build of configuration Debug for project CuBa_V2 ****
 make all 
 make: Nothing to be done for `all'.
-20:12:52 **** Incremental Build of configuration Debug for project Sockets ****
-make all 
-make: Nothing to be done for `all'.
-20:27:06 **** Incremental Build of configuration Debug for project Sockets ****
-make all 
-make: Nothing to be done for `all'.
-20:38:19 **** Incremental Build of configuration Debug for project Sockets ****
-make all 
-Building file: ../CServer.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++11 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CServer.d" -MT"CServer.o" -o "CServer.o" "../CServer.cpp"
-../CServer.cpp: In member function ‘bool CServer::receiveMessage(Float32&, bool)’:
-../CServer.cpp:31:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  }while(bytesReceived < sizeof(msg));
-                       ^
-../CServer.cpp: In member function ‘bool CServer::transmitMessage(Float32&)’:
-../CServer.cpp:60:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  }while(writtenByte < sizeof(msg));
-                     ^
-Finished building: ../CServer.cpp
- 
-Building target: Sockets
-Invoking: GCC C++ Linker
-g++  -o "Sockets"  ./Assertion.o ./CBinarySemaphore.o ./CMutex.o ./CServer.o ./main.o   -lpthread
-Finished building target: Sockets
- 
-20:49:34 **** Incremental Build of configuration Debug for project Sockets ****
+17:46:05 **** Incremental Build of configuration Debug for project CuBa_V2 ****
 make all 
 make: Nothing to be done for `all'.

@@ -1,0 +1,8 @@
+/**
+ * @file	CTread.cpp
+ * @author	Michael Meindl
+ * @date	28.9.2016
+ * @brief	Method definitions for CThread.
+ */
+#include "CThread.h"
+

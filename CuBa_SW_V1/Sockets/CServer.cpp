@@ -11,7 +11,7 @@ bool CServer::receiveMessage(Float32& msg, bool waitForever)
 {
 	bool success = false;
 	Int32 retVal = -1;
-	ssize_t bytesReceived = 0;
+	size_t bytesReceived = 0;
 
 	do
 	{
@@ -40,7 +40,7 @@ bool CServer::transmitMessage(Float32& msg)
 {
 	bool success = false;
 	Int32 retVal = -1;
-	ssize_t writtenByte = 0;
+	size_t writtenByte = 0;
 	UInt8* buffer = reinterpret_cast<UInt8*>(&msg);
 	do
 	{
@@ -65,12 +65,12 @@ void CServer::init()
 	mSocketFD = socket(AF_INET, SOCK_STREAM, 0);
 	sAssertion(mSocketFD >= 0, "(CServer::CServer()): Failed to open socket.", true);
 
-	//Biund the socket to an address
+	//Bind the socket to an address
 	struct sockaddr_in server_addr;
 	bzero(reinterpret_cast<Int8*>(&server_addr), sizeof(server_addr));
 	server_addr.sin_family		= AF_INET;
 	server_addr.sin_port		= htons(sPort);
-	server_addr.sin_addr.s_addr = INADDR_ANY;		//Host-Addr aka this machins addr
+	server_addr.sin_addr.s_addr = INADDR_ANY;
 	Int32 retVal = bind(mSocketFD,
 						reinterpret_cast<struct sockaddr*>(&server_addr),
 						sizeof(server_addr));
@@ -87,7 +87,8 @@ void CServer::waitForClient()
 	sAssertion(mConnectedSocketFD >= 0, "(CServer::CServer()): Failed to accept the client connection.", true);
 }
 CServer::CServer() : mSocketFD(-1),
-					 mConnectedSocketFD(-1)
+					 mConnectedSocketFD(-1),
+					 mClientLen{0}
 {
 
 }

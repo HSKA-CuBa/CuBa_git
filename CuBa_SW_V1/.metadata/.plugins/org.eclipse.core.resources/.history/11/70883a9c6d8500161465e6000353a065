@@ -1,0 +1,27 @@
+/**
+ * @file	CTimerTask.cpp
+ * @author	Michael Meindl
+ * @date 28.9.2016
+ * @brief	Method definitions for CTimerTask.
+ */
+#include "CTimerTask.h"
+#include <iostream>
+
+CTimerTask::CTimerTask(CProxy& proxy) : mRunningSem(true, true),
+										mProxy(proxy)
+{
+
+}
+void CTimerTask::init()
+{
+	std::cout << "[TimerTask] Initializing" << std::endl;
+}
+void CTimerTask::run()
+{
+	while(true)
+	{
+		mRunningSem.take(true);
+		mRunningSem.give();
+		usleep(20*1000);
+	}
+}

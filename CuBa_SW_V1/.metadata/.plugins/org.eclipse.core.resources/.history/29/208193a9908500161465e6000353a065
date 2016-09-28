@@ -1,0 +1,24 @@
+/**
+ * @file	AComponentBase.cpp
+ * @author	Michael Meindl
+ * @date	28.9.2016
+ * @brief	Method definitions for AComponentBase.
+ */
+#include "AComponentBase.h"
+#include "CProxy.h"
+
+AComponentBase::AComponentBase() : mQueue(),
+								 mProxyPtr(nullptr)
+{
+
+}
+bool AComponentBase::setProxyPtr(CProxy& proxy)
+{
+	bool success = false;
+	if(mProxyPtr == nullptr)
+	{
+		mProxyPtr = &proxy;
+		success   = true;
+	}
+	return success;
+}

@@ -1,0 +1,74 @@
+/**
+ * @file	CControlAction.cpp
+ * @author	Michael Meindl
+ * @date	28.9.2016
+ * @brief	Class definition for the control action handler.
+ */
+#include "CControlAction.h"
+
+CControlAction::CControlAction(CProxy& proxy) :
+								   mProxy(proxy),
+								   mSensorData{0.0F},
+								   mPhi{0.0F},
+								   mPhi__d{0.0F},
+								   mPsi__d{0.0F}
+{
+
+}
+void CControlAction::onEntryStandby()
+{
+
+}
+void CControlAction::onExitStandby()
+{
+
+}
+void CControlAction::sampleE1()
+{
+	mSensorData.mTime 		+= 1.0F;
+	mSensorData.mX1__dd 	+= 1;
+	mSensorData.mX2__dd		+= 2;
+	mSensorData.mY1__dd		+= 3;
+	mSensorData.mY2__dd		+= 4;
+	mSensorData.mPhi1__d	+= 5;
+	mSensorData.mPhi2__d	+= 6;
+	mSensorData.mPsi__d		+= 7;
+	mProxy.transmitSensorData(mSensorData, false);
+}
+void CControlAction::sampleE2()
+{
+	mSensorData.mTime 		+= 1.0F;
+	mSensorData.mX1__dd 	+= 1;
+	mSensorData.mX2__dd		+= 2;
+	mSensorData.mY1__dd		+= 3;
+	mSensorData.mY2__dd		+= 4;
+	mSensorData.mPhi1__d	+= 5;
+	mSensorData.mPhi2__d	+= 6;
+	mSensorData.mPsi__d		+= 7;
+	mProxy.transmitSensorData(mSensorData, false);
+}
+void CControlAction::sampleE3()
+{
+	mSensorData.mTime 		+= 1.0F;
+	mSensorData.mX1__dd 	+= 1;
+	mSensorData.mX2__dd		+= 2;
+	mSensorData.mY1__dd		+= 3;
+	mSensorData.mY2__dd		+= 4;
+	mSensorData.mPhi1__d	+= 5;
+	mSensorData.mPhi2__d	+= 6;
+	mSensorData.mPsi__d		+= 7;
+	mProxy.transmitSensorData(mSensorData, false);
+}
+void CControlAction::sampleE4()
+{
+	mPhi.mTime			+= 1.0F;
+	mPhi.mEstimation	+= 2.0F;
+	mPhi.mComplementary += 0.5F;
+	mPhi.mKalman		+= 3.0F;
+	mProxy.transmitPhi(mPhi, false);
+
+	mPhi__d.mTime		+= 1.0F;
+	mPhi__d.mEstimation	+= 0.4F;
+	mPhi__d.mKalman		+= 0.8F;
+	mProxy.transmitPhi__d(mPhi__d, false);
+}

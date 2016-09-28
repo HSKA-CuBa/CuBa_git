@@ -1,0 +1,73 @@
+CommComponent/CCommComponent.o: ../CommComponent/CCommComponent.cpp \
+ ../CommComponent/CCommComponent.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/AComponentBase.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/IRunnable.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/TQueue.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/Global.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/FWMemory.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/Assertion.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/CCountingSemaphore.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/CMutex.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/CMessage.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/ControlComponent/CSensorData.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/Global.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/ControlComponent/CPhi.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/ControlComponent/CPhi__d.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/ControlComponent/CPsi__d.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/EEvent.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/EDataType.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/ECommand.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/Config.h \
+ ../CommComponent/CServer.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/CThread.h \
+ ../CommComponent/CReceiveTask.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/IRunnable.h \
+ /home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/CBinarySemaphore.h
+
+../CommComponent/CCommComponent.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/AComponentBase.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/IRunnable.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/TQueue.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/Global.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/FWMemory.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/Assertion.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/CCountingSemaphore.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/CMutex.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/CMessage.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/ControlComponent/CSensorData.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/Global.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/ControlComponent/CPhi.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/ControlComponent/CPhi__d.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/ControlComponent/CPsi__d.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/EEvent.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/EDataType.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/ECommand.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/Config.h:
+
+../CommComponent/CServer.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/CThread.h:
+
+../CommComponent/CReceiveTask.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/IRunnable.h:
+
+/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib/CBinarySemaphore.h:

@@ -1,0 +1,50 @@
+/**
+ * @file	CControlFSM.cpp
+ * @author	Michael Meindl
+ * @date	28.9.2016
+ * @brief	Method definitions for CControlFSM.
+ */
+#include "CControlFSM.h"
+
+CControlFSM::CControlFSM(CProxy& proxy) : mAction(proxy),
+										  mState(STANDBY)
+{
+
+}
+bool CControlFSM::dispatch(CMessage& msg)
+{
+	bool consumed = false;
+	switch(mState)
+	{
+	case STANDBY:
+		consumed = this->onStandby(msg);
+		break;
+	case EXPERIMENT1:
+		consumed = this->onExperiment1(msg);
+		break;
+	case EXPERIMENT2:
+		consumed = this->onExperiment2(msg);
+		break;
+	case EXPERIMENT3:
+		consumed = this->onExperiment3(msg);
+		break;
+	case EXPERIMENT4:
+		consumed = this->onExperiment4(msg);
+		break;
+	case EXPERIMENT5:
+		consumed = this->onExperiment5(msg);
+		break;
+	case EXPERIMENT6:
+		consumed = this->onExperiment6(msg);
+		break;
+	}
+	return consumed;
+}
+bool CControlFSM::onStandby(CMessage& msg)
+{
+	EEvent event = msg.getEvent();
+	if(EEvent::EV_CMD)
+	{
+		ECommand cmd = msg.getCommand();
+	}
+}

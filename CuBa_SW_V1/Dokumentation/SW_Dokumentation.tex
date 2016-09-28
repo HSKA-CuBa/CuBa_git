@@ -118,7 +118,7 @@ public:
 	...
 private:
 	CHeader mHeader;
-	static constexpr Int32 sSize = 32;
+	static constexpr Int32 sSize = 20;
 	UInt8 mData[sSize];
 };
 \end{lstlisting}
@@ -131,7 +131,6 @@ class AComponentBase
 public:
 	virtual void init() = 0;
 	virtual void run() = 0;
-	virtual bool dispatch(CMessage& msg) = 0;
 protected:
 	TQueue<Config::QueueSize> mQueue;
 }
@@ -143,15 +142,13 @@ Die Erzeugung und Zustellung von Nachrichten übernimmt ein Proxy, welcher Metho
 class CProxy
 {
 public:
-	bool clientConnected();
-	bool clientDisconnected();
-	bool transmitSensorValues(const CSensorData& data, bool waitForever);
+	bool clientDisconnect(bool waitForever);
+	bool transmitSensorData(const CSensorData& data, bool waitForever);
 	bool transmitPhi(const CPhi& data, bool waitForever);
 	bool transmitPhi__d(const CPhi__d& data, bool waitForever);
 	bool transmitPsi__d(const CPsi__d& data, bool waitForever);
-	bool transmitTorque(const Float32& torque, bool waitForever);
-	bool executeCommand(const CMessage& cmdMsg, bool waitForever);
 	bool timerTick(bool waitForever);
+	bool routeMATLABMessage(bool waitForever);
 	...
 private:
 	TQueue& mControlQueue;

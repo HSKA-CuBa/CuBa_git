@@ -1,0 +1,30 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CPP_SRCS += \
+../ControlComponent/CControlAction.cpp \
+../ControlComponent/CControlFSM.cpp \
+../ControlComponent/CTimerTask.cpp 
+
+OBJS += \
+./ControlComponent/CControlAction.o \
+./ControlComponent/CControlFSM.o \
+./ControlComponent/CTimerTask.o 
+
+CPP_DEPS += \
+./ControlComponent/CControlAction.d \
+./ControlComponent/CControlFSM.d \
+./ControlComponent/CTimerTask.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+ControlComponent/%.o: ../ControlComponent/%.cpp
+	@echo 'Building file: $<'
+	@echo 'Invoking: GCC C++ Compiler'
+	g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/lib" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/CommComponent" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_V2/ControlComponent" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

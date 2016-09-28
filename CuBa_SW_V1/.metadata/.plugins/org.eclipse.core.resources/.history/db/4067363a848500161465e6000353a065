@@ -1,0 +1,27 @@
+/**
+ * @file	CControlAction.cpp
+ * @author	Michael Meindl
+ * @date	28.9.2016
+ * @brief	Class definition for the control action handler.
+ */
+#include "CControlAction.h"
+
+CControlAction::CControlAction() : mSensorData{0.0F},
+								   mPhi{0.0F},
+								   mPhi__d{0.0F},
+								   mPsi__d{0.0F}
+{
+
+}
+void CControlAction::onEntryStandby()
+{
+
+}
+void CControlAction::onExitStandby()
+{
+
+}
+void CControlAction::sampleE1()
+{
+	CSensorData data {
+}

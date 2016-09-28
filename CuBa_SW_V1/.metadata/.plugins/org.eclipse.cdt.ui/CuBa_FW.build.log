@@ -1,45 +1,10 @@
-09:38:46 **** Incremental Build of configuration Debug for project CuBa_FW ****
+12:49:48 **** Incremental Build of configuration Debug for project CuBa_FW ****
 make all 
 Building file: ../lib/Assertion.cpp
 Invoking: GCC C++ Compiler
-g++ -std=c++14 -I"/home/michael/Desktop/CuBa_SW_V1/CuBa_FW/lib" -I"/home/michael/Desktop/CuBa_SW_V1/CuBa_FW/TimerTask" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/Assertion.d" -MT"lib/Assertion.o" -o "lib/Assertion.o" "../lib/Assertion.cpp"
-Finished building: ../lib/Assertion.cpp
- 
-Building file: ../lib/CBinarySemaphore.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++14 -I"/home/michael/Desktop/CuBa_SW_V1/CuBa_FW/lib" -I"/home/michael/Desktop/CuBa_SW_V1/CuBa_FW/TimerTask" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/CBinarySemaphore.d" -MT"lib/CBinarySemaphore.o" -o "lib/CBinarySemaphore.o" "../lib/CBinarySemaphore.cpp"
-Finished building: ../lib/CBinarySemaphore.cpp
- 
-Building file: ../lib/CCountingSemaphore.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++14 -I"/home/michael/Desktop/CuBa_SW_V1/CuBa_FW/lib" -I"/home/michael/Desktop/CuBa_SW_V1/CuBa_FW/TimerTask" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/CCountingSemaphore.d" -MT"lib/CCountingSemaphore.o" -o "lib/CCountingSemaphore.o" "../lib/CCountingSemaphore.cpp"
-Finished building: ../lib/CCountingSemaphore.cpp
- 
-Building file: ../lib/CMessage.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++14 -I"/home/michael/Desktop/CuBa_SW_V1/CuBa_FW/lib" -I"/home/michael/Desktop/CuBa_SW_V1/CuBa_FW/TimerTask" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/CMessage.d" -MT"lib/CMessage.o" -o "lib/CMessage.o" "../lib/CMessage.cpp"
-Finished building: ../lib/CMessage.cpp
- 
-Building file: ../lib/CMutex.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++14 -I"/home/michael/Desktop/CuBa_SW_V1/CuBa_FW/lib" -I"/home/michael/Desktop/CuBa_SW_V1/CuBa_FW/TimerTask" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/CMutex.d" -MT"lib/CMutex.o" -o "lib/CMutex.o" "../lib/CMutex.cpp"
-Finished building: ../lib/CMutex.cpp
- 
-Building file: ../TimerTask/STimer.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++14 -I"/home/michael/Desktop/CuBa_SW_V1/CuBa_FW/lib" -I"/home/michael/Desktop/CuBa_SW_V1/CuBa_FW/TimerTask" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TimerTask/STimer.d" -MT"TimerTask/STimer.o" -o "TimerTask/STimer.o" "../TimerTask/STimer.cpp"
-Finished building: ../TimerTask/STimer.cpp
- 
-Building file: ../main.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++14 -I"/home/michael/Desktop/CuBa_SW_V1/CuBa_FW/lib" -I"/home/michael/Desktop/CuBa_SW_V1/CuBa_FW/TimerTask" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
-Finished building: ../main.cpp
- 
-Building target: CuBa_FW
-Invoking: GCC C++ Linker
-g++  -o "CuBa_FW"  ./lib/Assertion.o ./lib/CBinarySemaphore.o ./lib/CCountingSemaphore.o ./lib/CMessage.o ./lib/CMutex.o  ./TimerTask/STimer.o  ./main.o   -lpthread
-Finished building target: CuBa_FW
- 
+g++ -std=c++14 -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_FW/lib" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CuBa_FW/TimerTask" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/Assertion.d" -MT"lib/Assertion.o" -o "lib/Assertion.o" "../lib/Assertion.cpp"
+g++: error: unrecognized command line option ‘-std=c++14’
+make: *** [lib/Assertion.o] Error 1
 
-09:38:47 Build Finished (took 963ms)
+12:49:48 Build Finished (took 76ms)
 

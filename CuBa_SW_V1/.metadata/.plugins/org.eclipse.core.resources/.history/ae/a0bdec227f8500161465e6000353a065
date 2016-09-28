@@ -1,0 +1,9 @@
+/**
+ * @file	CProxy.cpp
+ * @author	Michael Meindl
+ * @date	28.9.2016
+ * @brief	Class definition for the proxy.
+ */
+#include "CProyx.h"
+#include "CControlComponent.h"
+#include "CCommComponent.h"

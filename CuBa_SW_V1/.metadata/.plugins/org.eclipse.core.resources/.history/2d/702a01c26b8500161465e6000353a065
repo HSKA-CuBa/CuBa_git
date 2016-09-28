@@ -1,0 +1,23 @@
+/**
+ * @file	AComponentBase.h
+ * @author	Michael Meindl
+ * @date	28.9.2016
+ * @brief	Abstract class definition for the different components.
+ */
+#ifndef ACOMPONENTBASE_H
+#define ACOMPONENTBASE_H
+#include "IRunnable.h"
+#include "TQueue.h"
+#include "Config.h"
+
+class AComponentBase : public IRunnable
+{
+public:
+	void init() override;
+	void run() override;
+
+private:
+	TQueue<Config::sQueueSize> mQueue;
+};
+
+#endif

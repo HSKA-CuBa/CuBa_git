@@ -1,0 +1,13 @@
+/**
+ * @file	CControlComponent.cpp
+ * @author	Michael Meindl
+ * @date	28.9.2016
+ * @brief	Method definitions for CControlComponent.
+ */
+#include "CControlComponent.h"
+
+CControlComponent::CControlComponent(CProxy& proxy) : AComponentBase(proxy),
+													  mFSM(proxy)
+{
+
+}

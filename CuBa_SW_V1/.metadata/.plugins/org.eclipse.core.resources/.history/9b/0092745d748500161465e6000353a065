@@ -1,0 +1,26 @@
+/**
+ * @file	CReceiveTask.cpp
+ * @author	Michael Meindl
+ * @date	28.9.2016
+ * @brief	Method definitions for CReceiveTask.
+ */
+#include "CReceiveTask.h"
+
+CReceiveTask::CReceiveTask(CServer& server) : mServer(server),
+											  mRunningSem(false, true)
+{
+
+}
+void CReceiveTask::init()
+{
+	;
+}
+void CReceiveTask::run()
+{
+	while(true)
+	{
+		mRunningSem.take(true);
+		mRunningSem.give();
+
+	}
+}

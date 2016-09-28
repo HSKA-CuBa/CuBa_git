@@ -1,0 +1,23 @@
+/**
+ * @file	CThread.h
+ * @author	Michael Meindl
+ * @date	28.9.2016
+ * @brief	Class definition for a thread-carrier.
+ */
+#ifndef CTHREAD_H
+#define CTHREAD_H
+#include "IRunnable.h"
+#include <pthread.h>
+
+class CThread
+{
+public:
+	void start();
+	void pause();
+	void resume();
+private:
+	friend void* threadProc(void*);
+	void run();
+};
+
+#endif

@@ -1,0 +1,19 @@
+/**
+ * @file	CControlComponent.h
+ * @author	Michael Meindl
+ * @date	28.9.2016
+ * @brief	Class definition for the control component.
+ */
+#ifndef CCONTROLCOMPONENT_H
+#define CCONTROLCOMPONENT_H
+#include "AComponentBase.h"
+
+class CControlComponent : public AComponentBase
+{
+public:
+	void init() override;
+	void run() override;
+
+};
+
+#endif
