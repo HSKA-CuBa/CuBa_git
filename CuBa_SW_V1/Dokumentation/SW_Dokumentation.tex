@@ -98,7 +98,7 @@ Der Datenaustausch zwischen den Tasks wird mit Hilfe von Nachrichten implementie
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.8\linewidth, trim={0cm 0cm 2.5cm 9.5cm},clip]{img/SW_kommunikation}
+\includegraphics[width=0.8\linewidth, trim={0cm 0cm 2cm 9cm},clip]{img/SW_kommunikation}
 \caption{SW-Kommunikation, Quelle: eigene Darstellung}
 \label{img_kommunikation_sw}
 \end{figure}
@@ -138,6 +138,7 @@ protected:
 
 Die Erzeugung und Zustellung von Nachrichten übernimmt ein Proxy, welcher Methoden für die verschiedenen Ereignisse zur Verfügung stellt. Dadurch wird die Kommunikationsstruktur gekapselt, wodurch eine übersichtliche Applikation entsteht. Der Proxy kennt die Eingangsqueues der Komponenten und reicht die Nachrichten nach Typ an die Empfänger weiter.
 
+\newpage
 \begin{lstlisting}
 class CProxy
 {
@@ -157,18 +158,18 @@ private:
 \end{lstlisting}
 
 \subsubsection{Aufbau der Regelungskomponente}
-Die Aufgaben der Regelungskomponente bestehen einerseits in der Interaktion mit der HW und der Berechnung des Regelkreises. Diese Teilsysteme werden als Klassen implementiert, welche Methoden bereitstellen um die Sensorwerte auszulesen, die Motoren zu steuern und die Filterwerte bzw. den Regler zu berechnen.
+Die Aufgaben der Regelungskomponente bestehen einerseits in der Interaktion mit der HW und der Berechnung des Regelkreises. Diese Teilsysteme werden als Klassen implementiert, welche Methoden bereitstellen um die Sensorwerte auszulesen, die Motoren zu steuern und die Filterwerte bzw. den Regler zu berechnen. Zusätzlich gehört der Timer-Task zu der Regelungskomponente und wird als eigenständiger Thread ausgeführt. 
 
 %Bild mit Klassendiagramm
 
-Für die verschiedenen Versuche ist eine zusätzliche Kontrolllogik erforderlich, welche in Form eines Zustandsautomaten implementiert wird. Die FSM verarbeitet die empfangenen Nachrichten und passt den aktuellen Zustand und somit das Verhalten entsprechend an. Auf der obersten Schicht verfügt das Statechart über die beiden Zustände \textit{STANDBY} und \textit{RUNNING}, wodurch ein an- bzw. abschalten der Komponente ermöglicht wird. Der Running-Oberzustand enthält weitere Zustände um die verschiedenen Versuche durchzuführen. Dadurch kann dieselbe Applikation flexibel eingesetzt und während des Entwicklungsprozesses erweitert werden.
+Für die verschiedenen Versuche ist eine zusätzliche Kontrolllogik erforderlich, welche in Form eines Zustandsautomaten implementiert wird. Die FSM verarbeitet die empfangenen Nachrichten und passt den aktuellen Zustand und somit das Verhalten entsprechend an. Auf der obersten Schicht verfügt das Statechart über den Zustand \textit{STANDBY} und Zustände für die verschiedenen Versuche. Hierdurch wird das An- bzw. Abschalten der Komponente ermöglicht. Dadurch kann dieselbe Applikation flexibel eingesetzt und während des Entwicklungsprozesses erweitert werden. Die letztendlichen Aktionen werden in der Klasse \textit{CControlAciton} gekapselt um eine klare Trennung von Kontroll- und Signalfluss zu gewährleisten.
 
 
-Bei Betreten des Running-Zustandes wird der Softtimer gestartet, welcher zyklisch Timer-Events an die Regelungskomponente sendet. Bei Erhalten einer solchen Nachricht führt die FSM die, dem aktuellen Zustand entsprechende, Logik aus. 
+Bei Betreten der Versuch-Zustände wird der Softtimer gestartet, welcher zyklisch Timer-Events an die Regelungskomponente sendet. Bei Erhalten einer solchen Nachricht führt die FSM die, dem aktuellen Zustand entsprechende, Logik aus. 
 Die ersten drei Versuche sind aus Sicht des Kontrollflusses identisch, aus Gründen der Einheitlichkeit werden dennoch drei explizite Zustände implementiert. In diesen Zuständen werden bei Eintreffen eines Timer-Events die aktuellen Sensorwerte abgefragt und and die MATLAB-Applikation gesendet. Für die Versuche 4 und 5 müssen die Sensorauswertung und die Filter implementiert werden. Deren Ausgangswerte werden wiederum zyklisch berechnet und mit Hilfe des Proxys an MATLAB übertragen. Versuch 6 besteht in der Umsetzung des Reglers. Der entsprechende Zustand muss einerseits den vollständigen Regelkreis berechnen, als auch die Filter- und Reglerwerte an MATLAB übertragen. Zusätzlich muss der Zustand die Befehle zur Auswahl der Filter und zum Setzen der Offsets annehmen und umsetzen.
 
 \subsubsection{Aufbau der Kommunikationskomponente}
-Die Hauptaufgabe der Kommunikationseinheit besteht in dem Betrieb des TCP/IP-Server und der Weiterleitung von Nachrichten. Der Server wird in form einer Klasse implementiert, welche Methode zum Empfangen und Versendet von Nachrichten bereitstellt. Im Ausgangszustand wartet die Komponente auf die Verbindungsanfrage eines Client, welcher die MATLAB-Anwendung ist. 
+Die Hauptaufgabe der Kommunikationseinheit besteht in dem Betrieb des TCP/IP-Server und der Weiterleitung von Nachrichten. Der Server wird in Form einer Klasse implementiert, welche Methode zum Empfangen und Versendet von Nachrichten bereitstellt. 
 
 \begin{lstlisting}
 class CServer
@@ -184,6 +185,10 @@ class CServer
 		Int32 mConnectionFD;
 }
 \end{lstlisting}
+
+Hierfür wird ein zweiter Thread gestartet, welcher auf Nachrichten der MATLAB-Anwendung wartet und diese an den Proxy weiterleitet. Die Kontrolllogik der Komponente wird ebenfalls in Form einer Zustandsmaschine implementiert. Hierbei wird lediglich zwischen den Zuständen \textit{STANDBY} und \textit{RUNNING} unterschiedn. Im Ausgangszustand wartet die Komponente auf die Verbindungsanfrage eines Client, welcher die MATLAB-Anwendung ist. Der Haupt-Thread der Komponente wartet auf eingehende Kommunikationsnachrichten und verarbeitet diese entsprechend. Der zweite Thread wartet zuerst auf die Verbindungsanfrage des Client, diese signalisiert er mittels einer Nachricht. Daraufhin wechselt die Komponente in den \textit{RUNNING}-Zustand, in welchem empfangene Nachrichten mit Regelungsdaten an MATLAB weitergeleitet werden. Der zweite Thread wartet nun auf eingehende TCP/IP-Daten von MATLAB. Sowohl beim senden als auch empfangen von Daten kann ein Verbindungsabbruch des Clients erkennt werden. In diesem Fall wechselt die Komponente in den \textit{STANDBY}-Zustand und der zweite Thread wartet auf eine neue Verbindungsanfrage.
+
+
 
 
 \end{document}
