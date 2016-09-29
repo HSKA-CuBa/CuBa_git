@@ -31,7 +31,66 @@ classdef CSensorData < handle
             this.mPhi2__d = [this.mPhi2__d, phi2];
             this.mPsi__d  = [this.mPsi__d, psi];
         end
-    end
-    
+        function plotX1_raw__dd(this, titleStr, savePath)
+            figure;
+            plot(this.mTime, this.mX1_raw__dd,...
+                 this.mTime, mean(this.mX1_raw__dd)*ones(size(this.mTime)));
+            grid; xlabel('$\boldmath t \big[s \big]$', 'interpreter', 'latex', 'fontsize', 13); 
+            ylabel('$\boldmath \ddot{x} \big[\ \big]$', 'interpreter', 'latex', 'fontsize', 13);
+            title(titleStr, 'interpreter', 'latex', 'fontsize', 14);
+            legend('Rohwert', 'Mittelwert');
+            print(savePath, '-depsc');
+        end
+        function plotX2_raw__dd(this, titleStr, savePath)
+            figure;
+            plot(this.mTime, this.mX2_raw__dd,...
+                 this.mTime, mean(this.mX2_raw__dd)*ones(size(this.mTime)));
+            grid; xlabel('$\boldmath t \big[s \big]$', 'interpreter', 'latex', 'fontsize', 13); 
+            ylabel('$\boldmath \ddot{x} \big[\ \big]$', 'interpreter', 'latex', 'fontsize', 13);
+            title(titleStr, 'interpreter', 'latex', 'fontsize', 14);
+            legend('Rohwert', 'Mittelwert');
+            print(savePath, '-depsc');
+        end
+        function plotY1_raw__dd(this, titleStr, savePath)
+            figure;
+            plot(this.mTime, this.mY1_raw__dd,...
+                 this.mTime, mean(this.mY1_raw__dd)*ones(size(this.mTime)));
+            grid; xlabel('$\boldmath t \big[s \big]$', 'interpreter', 'latex', 'fontsize', 13); 
+            ylabel('$\boldmath \ddot{y} \big[\ \big]$', 'interpreter', 'latex', 'fontsize', 13);
+            title(titleStr, 'interpreter', 'latex', 'fontsize', 14);
+            legend('Rohwert', 'Mittelwert');
+            print(savePath, '-depsc');
+        end
+        function plotY2_raw__dd(this, titleStr, savePath)
+            figure;
+            plot(this.mTime, this.mY2_raw__dd,...
+                 this.mTime, mean(this.mY2_raw__dd)*ones(size(this.mTime)));
+            grid; xlabel('$\boldmath t \big[s \big]$', 'interpreter', 'latex', 'fontsize', 13);
+            ylabel('$\boldmath \ddot{y} \big[\ \big]$', 'interpreter', 'latex', 'fontsize', 13);
+            title(titleStr, 'interpreter', 'latex', 'fontsize', 14);
+            legend('Rohwert', 'Mittelwert');
+            print(savePath, '-depsc');
+        end
+        function plotPhi1_raw__d(this, titleStr, savePath)
+            figure;
+            plot(this.mTime, this.mPhi1_raw__d,...
+                this.mTime, mean(this.mPhi1_raw__d)*ones(size(this.mTime)));
+            grid; xlabel('$\boldmath t \big[s \big]$', 'interpreter', 'latex', 'fontsize', 13);
+            ylabel('$\boldmath \dot{\varphi} \big[\ \big]$', 'interpreter', 'latex', 'fontsize', 13);
+            title(titleStr, 'interpreter', 'latex', 'fontsize', 14);
+            legend('Rohwert', 'Mittelwert');
+            print(savePath, '-depsc');
+        end
+        function plotPhi2_raw__d(this, titleStr, savePath)
+            figure;
+            plot(this.mTime, this.mPhi2_raw__d,...
+                this.mTime, mean(this.mPhi2_raw__d)*ones(size(this.mTime)));
+            grid; xlabel('$\boldmath t \big[s \big]$', 'interpreter', 'latex', 'fontsize', 13);
+            ylabel('$\boldmath \dot{\varphi} \big[\ \big]$', 'interpreter', 'latex', 'fontsize', 13);
+            title(titleStr, 'interpreter', 'latex', 'fontsize', 14);
+            legend('Rohwert', 'Mittelwert');
+            print(savePath, '-depsc');
+        end
+    end   
 end
 

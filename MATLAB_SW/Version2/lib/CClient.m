@@ -9,11 +9,12 @@ classdef CClient < handle
     
     methods
         function this = CClient()
-            this.mClient = tcpip('localhost', 40000,...
+            this.mClient = tcpip('192.168.9.1', 40000,...
                                  'NetworkRole', 'Client',...
                                  'Terminator', '');
+            this.mClient.ByteOrder              = 'littleEndian';
             this.mClient.BytesAvailableFcnCount = 24;
-            this.mClient.BytesAvailableFcn      = @callback;
+            this.mClient.BytesAvailableFcn      = @rxCallback;
             this.mClient.BytesAvailableFcnMode  = 'byte';
             this.mClient.UserData               = this;
             this.mSensorData = CSensorData();
@@ -21,11 +22,53 @@ classdef CClient < handle
             this.mPhi__d     = CPhi__d();
             this.mPsi__d     = CPsi__d();
         end
+        function resetData(this)
+            close all;
+            this.mSensorData = CSensorData();
+            this.mPhi        = CPhi();
+            this.mPhi__d     = CPhi__d();
+            this.mPsi__d     = CPsi__d();
+        end
+        function setTorque(this, torque)
+            header = [uint8(EEvent.EV_CMD), uint8(EDataType.DEFAULT_IGNORE),...
+                      uint8(ECommand.CMD_SET_TORQUE), uint8(0)];
+            data   = [single(torque), single(0), single(0), single(0), single(0)];
+            fwrite(this.mClient, header, 'uint8');
+            fwrite(this.mClient, data, 'float32');
+        end
+        function selectFilter(this, filter)
+            header = [uint8(EEvent.EV_CMD), uint8(EDataType.DEFAULT_IGNORE),...
+                      uint8(ECommand.CMD_SET_FILTER), uint8(0)];
+            data   = [uint32(filter), uint32(0), uint32(0), uint32(0), uint32(0)];
+            fwrite(this.mClient, header, 'uint8');
+            fwrite(this.mClient, data, 'uint32');
+        end
+        function setPhiOffset(this, offset)
+            header = [uint8(EEvent.EV_CMD), uint8(EDataType.DEFAULT_IGNORE),...
+                      uint8(ECommand.CMD_SET_PHI_OFFSET), uint8(0)];
+            data   = [single(offset), single(0), single(0), single(0), single(0)];
+            fwrite(this.mClient, header, 'uint8');
+            fwrite(this.mClient, data, 'float32');
+        end
+        function setPhi__dOffset(this, offset)
+            header = [uint8(EEvent.EV_CMD), uint8(EDataType.DEFAULT_IGNORE),...
+                      uint8(ECommand.CMD_SET_PHI__D_OFFSET), uint8(0)];
+            data   = [single(offset), single(0), single(0), single(0), single(0)];
+            fwrite(this.mClient, header, 'uint8');
+            fwrite(this.mClient, data, 'float32');
+        end
+        function setPsi__dOffset(this, offset)
+            header = [uint8(EEvent.EV_CMD), uint8(EDataType.DEFAULT_IGNORE),...
+                      uint8(ECommand.CMD_SET_PSI__D_OFFSET), uint8(0)];
+            data   = [single(offset), single(0), single(0), single(0), single(0)];
+            fwrite(this.mClient, header, 'uint8');
+            fwrite(this.mClient, data, 'float32');
+        end
         function sendCommand(this, cmd)
             header = [uint8(EEvent.EV_CMD), uint8(EDataType.DEFAULT_IGNORE), uint8(cmd), 0];
             data   = uint8(zeros(1,20));
             msg    = [header, data];
-            fwrite(this.mClient, 24, msg);
+            fwrite(this.mClient, msg, 'uint8');
         end
         function receiveCallback(this)
             event    = EEvent(fread(this.mClient, 1, 'uint8'));
@@ -37,7 +80,7 @@ classdef CClient < handle
         function parseMessage(this, event, datatype, cmd)
             if(EEvent.EV_TRANSMIT_DATA == event)
                 switch datatype
-                    case EDataType.SENSOR_DATA
+                    case EDataType.SENSORDATA
                         time    = double(fread(this.mClient, 1, 'float32'));
                         x1      = double(fread(this.mClient, 1, 'int16'));
                         x2      = double(fread(this.mClient, 1, 'int16'));
@@ -53,12 +96,12 @@ classdef CClient < handle
                         estimate = double(fread(this.mClient, 1, 'float32'));
                         comp     = double(fread(this.mClient, 1, 'float32'));
                         kalman   = double(fread(this.mClient, 1, 'float32'));
-                        fread(this.mClient, 1, 'flaot32');
+                        fread(this.mClient, 1, 'float32');
                         this.mPhi.addData(time, estimate, comp, kalman);
                     case EDataType.PHI__D
                         time     = double(fread(this.mClient, 1, 'float32'));
                         estimate = double(fread(this.mClient, 1, 'float32'));
-                        kalman   = double(fread(this.mClient, 1, 'flaot32'));
+                        kalman   = double(fread(this.mClient, 1, 'float32'));
                         fread(this.mClient, 2, 'float32');
                         this.mPhi__d.addData(time, estimate, kalman);
                     case EDataType.PSI__D

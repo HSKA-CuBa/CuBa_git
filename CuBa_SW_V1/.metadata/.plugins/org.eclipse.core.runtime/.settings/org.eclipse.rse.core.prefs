@@ -1,4 +1,4 @@
 activeuserprofiles=Team;babo;michael-Aspire-E5-771G
 eclipse.preferences.version=1
 org.eclipse.rse.systemtype.local.systemType.defaultUserId=michael
-useridperkey=babo.Local\=michael;
+useridperkey=babo.Local\=michael;babo.BBB\=root;

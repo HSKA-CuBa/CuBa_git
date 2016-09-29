@@ -15,9 +15,9 @@ classdef CPhi__d < handle
             this.mPlot       = [];
             this.mFigure     = [];
         end
-        function addDat(this, time, estimate, kalman)
+        function addData(this, time, estimate, kalman)
             this.mTime       = [this.mTime, time];
-            this.mEstimation = [this.Estimation, radtodeg(estimate)];
+            this.mEstimation = [this.mEstimation, radtodeg(estimate)];
             this.mKalman     = [this.mKalman, radtodeg(kalman)];
             if(isempty(this.mPlot) == 0)
                 refreshdata(this.mPlot, 'caller');

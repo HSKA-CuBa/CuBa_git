@@ -1,0 +1,15 @@
+14:00:50 **** Incremental Build of configuration Debug for project CommTest ****
+make all 
+Building file: ../CommComponent/CServer.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CommTest/CommComponent" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CommTest/ControlComponent" -I"/home/michael/Desktop/CuBa_git/CuBa_SW_V1/CommTest/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CommComponent/CServer.d" -MT"CommComponent/CServer.o" -o "CommComponent/CServer.o" "../CommComponent/CServer.cpp"
+Finished building: ../CommComponent/CServer.cpp
+ 
+Building target: CommTest
+Invoking: GCC C++ Linker
+g++  -o "CommTest"  ./lib/AComponentBase.o ./lib/Assertion.o ./lib/CBinarySemaphore.o ./lib/CCountingSemaphore.o ./lib/CMessage.o ./lib/CMutex.o ./lib/CProxy.o ./lib/CThread.o  ./ControlComponent/CControlAction.o ./ControlComponent/CControlComponent.o ./ControlComponent/CControlFSM.o ./ControlComponent/CTimerTask.o  ./CommComponent/CCommAction.o ./CommComponent/CCommComponent.o ./CommComponent/CCommFSM.o ./CommComponent/CReceiveTask.o ./CommComponent/CServer.o  ./main.o   -lpthread
+Finished building target: CommTest
+ 
+
+14:00:50 Build Finished (took 414ms)
+

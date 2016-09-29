@@ -5,6 +5,7 @@
  * @brief	Class definition for the control action handler.
  */
 #include "CControlAction.h"
+#include <iostream>
 
 CControlAction::CControlAction(CProxy& proxy) :
 								   mTimerTask(proxy),
@@ -17,8 +18,34 @@ CControlAction::CControlAction(CProxy& proxy) :
 {
 	mTimerThread.start();
 }
+void CControlAction::setFixTorque(const Float32& torque)
+{
+	//TODO Implement set torque
+	std::cout << "[Control-Comp] Setting torque: " << torque << std::endl;
+}
+void CControlAction::selectFilter(EFilter& filter)
+{
+	std::cout << "[Control-Comp] Selecting filter: " << static_cast<UInt32>(filter) << std::endl;
+	//TODO Implement Filter selection logic
+}
+void CControlAction::setPhiOffset(Float32& offset)
+{
+	std::cout << "[Control-Comp] Setting phi-offset: " << offset << std::endl;
+	//TODO Implement phi offset
+}
+void CControlAction::setPhi__dOffset(Float32& offset)
+{
+	std::cout << "[Control-Comp] Setting phi__d-offset: " << offset << std::endl;
+	//TODO Implement phi__d offset
+}
+void CControlAction::setPsi__dOffset(Float32& offset)
+{
+	std::cout << "[Control-Comp] Setting psi__d-offset: " << offset << std::endl;
+	//TODO Implement psi__d offset
+}
 void CControlAction::onEntryStandby()
 {
+	std::cout << "[Control-Comp] Entering STANDBY" << std::endl;
 	mTimerTask.pause(true);
 	mSensorData.mTime 		= 0.0F;
 	mSensorData.mX1__dd 	= 0;
@@ -46,6 +73,7 @@ void CControlAction::onEntryStandby()
 }
 void CControlAction::onExitStandby()
 {
+	std::cout << "[Control-Comp] Exiting STANDBY" << std::endl;
 	mTimerTask.resume(true);
 }
 void CControlAction::sampleE1()

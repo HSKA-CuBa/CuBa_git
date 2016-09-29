@@ -1,0 +1,1 @@
+fclose(cuba.mClient); delete(cuba); clear cuba;
