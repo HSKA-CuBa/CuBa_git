@@ -85,21 +85,3 @@ T_{M,n} = \boldsymbol{F} \cdot \begin{pmatrix}
 
 Da die Winkelgeschwindigkeit der Schwungmasse $\dot{\psi}$ nur dann verschwindet wenn das Motormoment gleich null ist, kann der Wert von $\varphi_{cog}$ empirisch ermittelt werden.
 
-Die folgenden Abbildungen zeigen den Verlauf der Winkelgeschwindigkeiten $\dot{\varphi}$ und $\dot{\psi}$. Hier zeigt sich, dass die Radgeschwindigkeit $\dot{\psi}$ nicht gegen null konvergiert. Mögliche Ursachen für dieses Verhalten sind neben der unsymmetrischen Konstruktion, die ungefilterten Werte von $\dot{\varphi}$ und $\dot{\psi}$, da deren Rauschsignale die Regelung negativ beeinflussen. Weiter können systematische Messabweichungen der Zustandsgrößen zu einer nicht verschwindenden Winkelgeschwindigkeit $\dot{\psi}$ führen.
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.5]{img/phi__d_regelung}
-\includegraphics[scale=0.5]{img/psi__d_regelung}
-\caption{Verlauf von $\dot{\varphi}$ und $\dot{\psi}$, Quelle: eigene Darstellung}
-\end{figure}
-
-\newpage
-Die nächste Abbildung zeigt den Verlauf des Winkels $\varphi$, wobei die Werte der Winkelschätzung, des Komplementärfilters und des Kalman-Filters aufgezeigt sind. Hier lässt sich deutlich erkennen wie stark das rauschbehaftetes Signal der Winkelschätzung durch die jeweiligen Filter geglättet wird. Ein direkter Vergleich der beiden Filter ist ohne ein absolutes Referenzsignal nur schwer möglich.
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.5\linewidth]{img/phi_regelung}
-\caption{Verlauf von $\varphi$, Quelle: eigene Darstellung}
-\end{figure}
-
