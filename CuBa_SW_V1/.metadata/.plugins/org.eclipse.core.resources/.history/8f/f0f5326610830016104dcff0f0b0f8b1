@@ -1,8 +1,0 @@
-/**
- * @file 	SCommComponent.cpp
- * @author 	Michael Meindl
- * @date	25.9.2016
- * @brief	Class definitions of SCommComponent.
- */
-#include "SCommComponent.h"
-

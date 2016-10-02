@@ -1,9 +1,0 @@
-/*
- * @file TQueue.hpp
- * @author Michael Meindl
- * @date 24.9.2016
- * @brief General definitions of the template methods.
- */
-
-template<const Int32 size>
-TQueue<size>::TQueue() : mReadSem()

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Sockets/CSocket.cpp&apos; to &apos;CServer.cpp&apos;" description="Rename resource &apos;CSocket.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="CSocket.cpp" name="CServer.cpp" stamp="1474990432257" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Sockets/CSocket.h&apos; to &apos;CServer.h&apos;" description="Rename resource &apos;CSocket.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="CSocket.h" name="CServer.h" stamp="1474990444413" updateReferences="true"/>
-</session>

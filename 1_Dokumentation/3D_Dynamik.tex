@@ -1,0 +1,272 @@
+\subsection{Modellierung der Systemdynamik}
+In diesem Abschnitt werden die Bewegungsgleichungen des 3D-Modells mit Hilfe des Lagrange-Formalismus hergeleitet. Der Würfelkörper besitzt drei rotatorische Freiheitsgrade, die drei Schwungmassen verfügen über jeweils einen Freiheitsgrad. Somit ergeben sich insgesamt sechs Freiheitsgrade für das Gesamtsystem. Dadurch steigt die Komplexität der Systemdynamik stark an, allerdings bestehen nach wie vor Parallelen zu der Dynamik des 1D-Modells.
+\newline
+
+Um die Position des Würfels zu beschreiben wird ein raumfestes Bezugssystem $\{I\}$ eingeführt, welches von den drei Einheitsvektoren $\inI e_x$, $\inI e_y$ und $\inI e_z$ beschrieben wird. Das zweite Bezugssystem $\{W\}$ ist körperfest und rotiert somit mit dem Würfel. Es wird von den Einheitsvektoren $\inW e_x$, $\inW e_y$ und $\inW e_z$ beschrieben.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{MechZeichnung3D}
+\caption{Mechanischer Aufbau, Quelle: eigene Darstellung}
+\end{figure}
+
+Die aktuelle Position des Würfels kann somit eindeutig durch die Verschiebung des körperfesten Bezugssystems $\{W\}$ zu dem raumfesten Bezugssystem $\{I\}$ bestimmt werden. Um diese Rotation zu beschreiben werden die drei Euler-Winkel $\varphi_1$, $\varphi_2$ und $\varphi_3$ eingeführt. Die Drehreihenfolge und Drehachsen werden im folgenden beschrieben.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Winkel} & \textbf{Beschreibung} \\ \hline
+$\varphi_1$ & Drehung um $\inI e_z$ \\ \hline
+$\varphi_2$ & Drehung um $\inW e_y$  \\ \hline
+$\varphi_3$ & Drehung um $\inW e_x$ \\ \hline
+\end{tabular}
+\end{table}
+
+Die erste Ableitung gewöhnliche Ableitung der Euler-Winkel entspricht den Winkelgeschwindigkeiten des Würfels um die oben genannten Achsen.
+
+Mit Hilfe der Euler-Winkel können Drehmatrizen definiert werden um Koordinaten in dem raumfesten Bezugssystem $\{I\}$ in das körperfeste Bezugssystem $\{W\}$ zu projizieren. Hier zeigt sich wieder die Bedeutung der Reihenfolge der einzelnen Drehungen, da auch die Matrizenmultiplikation im Allgemeinen nicht kommutativ ist.
+
+\begin{equation}
+\inW{}\boldsymbol{r} = \inW{}\bS{D}_{\varphi_3} \cdot ( \inW{}\bS{D}_{\varphi_2} \cdot ( \inW{}\bS{D}_{\varphi_1} \cdot \inI{}\bS{r} )) = \inW{}\bS{D} \cdot \BinI{r}
+\end{equation}
+
+\begin{equation}
+\inW{}\bS{D}_{\varphi_1} = \begin{pmatrix}
+c_{\varphi_1} & s_{\varphi_1} & 0 \\
+-s_{\varphi_1} & c_{\varphi_1} & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+\hspace{5pt}
+\inW{}\bS{D}_{\varphi_2} = \begin{pmatrix}
+c_{\varphi_2} & 0 & -s_{\varphi_2} \\
+0 & 1 & 0 \\
+s_{\varphi_2} & 0 & c_{\varphi_2}
+\end{pmatrix}
+\hspace{5pt}
+\inW{}\bS{D}_{\varphi_3} = \begin{pmatrix}
+1 & 0 & 0  \\
+0 & c_{\varphi_3} & s_{\varphi_3} \\
+0 & -s_{\varphi_3} & c_{\varphi_3}
+\end{pmatrix}
+\end{equation}
+
+\begin{equation}
+\BinW{D} = \begin{pmatrix}
+c_{\varphi_1}c_{\varphi_2} & 
+s_{\varphi_1}c_{\varphi_2} &
+-s_{\varphi_2} 
+\\
+c_{\varphi_1} s_{\varphi_2} s_{\varphi_3} - s_{\varphi_1}c_{\varphi_3}&
+c_{\varphi_1}c_{\varphi_3} + s_{\varphi_1}s_{\varphi_2}s_{\varphi_3}&
+c_{\varphi_2} s_{\varphi_3}
+\\
+s_{\varphi_1}s_{\varphi_3}+c_{\varphi_1}s_{\varphi_2}c_{\varphi_3} &
+s_{\varphi_1}s_{\varphi_2}c_{\varphi_3} - c_{\varphi_1}s_{\varphi_3}&
+c_{\varphi_2}c_{\varphi_3}
+\end{pmatrix}
+\end{equation}
+
+Die Projizierung einer Koordinate aus dem körperfesten in das raumfeste Bezugssystem erfolgt durch die transponierte der Matrix $\BinW{D}$.
+
+\begin{equation}
+\BinI{r} = \BinI{D} \cdot \BinW{r} = \BinW{D}^T \cdot  \BinW{r}
+\end{equation} 
+
+Die Bewegung der Schwungmassen relativ zu dem Würfelkörper wird von den drei Winkeln $\psi_1$, $\psi_2$ und $\psi_3$ beschrieben. Deren zeitliche Ableitungen stellen die Winkelgeschwindigkeiten der Schwungräder dar. 
+
+\begin{equation}
+\bS{\psi} = \begin{pmatrix}
+{\psi}_1 \\
+{\psi}_2  \\
+{\psi}_3 
+\end{pmatrix}
+\hspace{35pt}
+\bS{\dot{\psi}} = \begin{pmatrix}
+\dot{\psi}_1 \\
+\dot{\psi}_2  \\
+\dot{\psi}_3 
+\end{pmatrix}
+\end{equation}
+
+Die Euler-Winkel $\bS{\varphi}$ und die Ausfallwinkel der Schwungmassen $\bS{\psi}$ werden als generalisierte Koordinaten verwendet.
+
+\begin{equation}
+\bS{q} = \begin{pmatrix}
+q_1 \\ q_2 \\ q_3 \\ q_4 \\ q_5 \\ q_6
+\end{pmatrix} =
+\begin{pmatrix}
+\varphi_1 \\ \varphi_2 \\ \varphi_3 \\ \psi_1 \\ \psi_2 \\ \psi_3
+\end{pmatrix}
+\end{equation}
+
+\subsubsection{Potential des Systems}
+Um die Lagrange-Funktion $L$ des Systems zu bestimmen muss einerseits die kinetische Energie $T$ und die potentielle Energie $V$ ermittelt werden. Das Potential des Würfels wird durch die aktuelle Lage seines Schwerpunktes $\bS{r}$ bestimmt, hierbei ist lediglich die z-Komponente des raumfesten Bezugssystem von Bedeutung.
+
+\begin{equation}
+V = m_G \cdot g \cdot \inI z_{cog}
+\end{equation}
+
+Die Position des Schwerpunktes im körperfesten Bezugssystem ist fix. Durch die Projektion dieses Vektors $\BinW{r}_{cog}$ in das raumfeste Bezugssystem $\{I\}$ wird die Abhängigkeit von der aktuellen Verschiebung berücksichtigt.
+
+\begin{equation}
+\BinI{r}_C = \BinI{D} \cdot \BinW{r}_{C} = \BinI{D} \cdot \begin{pmatrix}
+\inW x_C \\ \inW y_C \\ \inW z_C
+\end{pmatrix}
+\end{equation}
+
+Folglich ergibt sich der folgende Zusammenhang für das Potential $V$ und die aktuelle Ausrichtung des Würfels.
+
+\begin{equation}
+V = m_G \cdot g \cdot \inI z_{cog} = m_G \cdot g \cdot (s_{\varphi_2}s_{\varphi3} \cdot \inW x_C + s_{\varphi_2}c_{\varphi_3} \cdot \inW y_C  + c_{\varphi_2} \cdot \inW z_C)
+\end{equation}
+
+\subsubsection{Kinetische Energie des Systems}
+Die kinetische Energie setzt sich aus der Winkelgeschwindigkeit des Würfels $\bS{\omega}_K$ und der Geschwindigkeiten der drei Schwungmassen $\bS{\omega}_R$ zusammen. Hierbei ist zu beachten, dass die Winkelgeschwindigkeiten in verschiedenen Bezugssystemen darstellbar sind und die kinetische Energie von der Darstellungsform unabhängig ist. Um dies zu gewährleisten müssen allerdings auch die Trägheitstensoren in das jeweilige Bezugssystem projiziert werden.
+
+\begin{equation}
+\BinW{\omega}_K = \begin{pmatrix}
+\inW \omega_x \\
+\inW \omega_y \\
+\inW \omega_z
+\end{pmatrix}
+\hspace{35pt}
+\BinW{\omega}_R = \dot{\bS{\psi}}
+\end{equation}
+
+\begin{equation}
+T = \frac{1}{2} \BinW{\omega}^T_K \cdot (\BinW{\Theta}_G - \BinW{\Theta}_R) \cdot \BinW{\omega}_K + \frac{1}{2} (\BinW{\omega}_K + \BinW{\omega}_R)^T \cdot \BinW{\Theta}_R \cdot (\BinW{\omega}_K + \BinW{\omega}_R)
+\end{equation}
+
+Um das die kinetische Energie $T$ mit Hilfe der generalisierten Koordinaten darzustellen muss die Winkelgeschwindigkeit $\BinW{\omega}_W$ als die erste Ableitung der Euler-Winkel $\bS{\varphi}$ darstellen.
+Um die Projektion der Euler-Geschwindigkeiten $\dot{\bS{\varphi}}$ zu veranschaulichen kann die Rotationsgeschwindigkeit des Würfels $\BinW{\omega}_W$ als Summe der Euler-Komponenten dargestellt werden.
+
+\begin{equation}
+\BinW{\omega}_W = \BinW{\dot{\varphi}_1} + \BinW{\dot{\varphi}_2} + \BinW{\dot{\varphi}_3}
+\end{equation}
+
+Um die Euler-Geschwindigkeit in dem körperfesten Bezugssystem darzustellen werden Rotationsachsen um die entsprechenden Euler-Winkel rotiert. Die Winkelgeschwindigkeit $\dot{\varphi}_3$ ist ist gleich der Rotation um die körperfeste $\inW e_z$ und muss somit nicht über eine Drehmatrix projiziert werden. 
+
+\begin{equation}
+\BinW{\dot{\varphi}}_3 =
+\begin{pmatrix}
+\dot{\varphi}_3 \\ 0 \\ 0
+\end{pmatrix} 
+\end{equation}
+
+Die Winkelgeschwindigkeit $\dot{\varphi}_2$ entsprecht der Rotation um die körperfeste Achse $\inW e_x$ vor der Rotation um den Winkel $\varphi_3$. Somit muss mit Hilfe der  Matrix $\BinW{D}_{\varphi_3}$ der Geschwindigkeitsvektor in das endgültige körperfeste Bezugssystem projiziert werden.
+
+\begin{equation}
+\BinW{\dot{\varphi}}_2 = \BinW{D}_{\varphi_3} \cdot
+\begin{pmatrix}
+0 \\ \dot{\varphi}_2 \\ 0
+\end{pmatrix} = 
+\begin{pmatrix}
+0 \\
+\dot{\varphi}_2 \cdot c_{\varphi_3} \\
+\dot{\varphi}_2 \cdot s_{\varphi_3}
+\end{pmatrix}
+\end{equation}
+
+Die dritte Komponente ist die Winkelgeschwindigkeit $\dot{\varphi}_1$, welche der Rotation um die raumfeste Achse $\inI e_z$ entspricht. Folglich muss zu einer Projektion in das körperfeste Bezugsystem der Geschwindigkeitsvektor mit den Matrizen $\BinW{D}_{\varphi_3}$ und $\BinW{D}_{\varphi_2}$ multipliziert werden. 
+
+\begin{equation}
+\BinW{\dot{\varphi}_1} = 
+\BinW{D}_{\varphi_3} (
+\BinW{D}_{\varphi_2} \cdot \begin{pmatrix}
+ 0 \\ 0 \\ \dot{\varphi}_1
+\end{pmatrix} ) 
+=
+\begin{pmatrix}
+-\dot{\varphi}_1 \cdot s_{\varphi_2}  \\
+\dot{\varphi}_1 \cdot c_{\varphi_2} s_{\varphi_3} \\
+\dot{\varphi}_1 \cdot c_{\varphi_2} c_{\varphi_3}
+\end{pmatrix}
+\end{equation}
+
+Die gesamte Winkelgeschwindigkeit des Würfels $\BinW{\omega}_K$ ergibt sich wie bereits beschrieben aus der Summe der einzelnen Komponenten.
+
+\begin{equation}
+\BinW{\omega}_W = \BinW{\dot{\varphi}_1} + \BinW{\dot{\varphi}_2} + \BinW{\dot{\varphi}_3} =
+\begin{pmatrix}
+\dot{\varphi}_3 - \dot{\varphi}_1 \cdot s_{\varphi_2} \\
+\dot{\varphi}_2 \cdot c_{\varphi_3} + \dot{\varphi}_1 \cdot c_{\varphi_2}s_{\varphi_3} \\
+\dot{\varphi}_1 \cdot c_{\varphi_2}c_{\varphi_3} - \dot{\varphi}_2 \cdot{\varphi_3}
+\end{pmatrix}
+\end{equation}
+
+
+
+\subsubsection{Generalisierte Kraftkomponenten}
+In der Untersuchung des 1D-Modelles wurde bereits gezeigt, dass der Würfel ein nicht konservatives System ist, da einerseits über die Motoren mechanische Energie zugeführt wird und andererseits durch Reibung mechanische Energie verloren geht. Deshalb müssen die generalisierten Kraftkomponenten bestimmt werden um mit Hilfe des d'Alembert'schen Prinzip die Bewegungsgleichungen zu ermitteln.
+\newline
+
+Wie bereits angesprochen erzeugen die Motoren Momente, welche die Schwungmassen antreiben. Gleichermaßen entsteht in den Lagern der Räder ein Reibmoment welches als linear abhängig von der Winkelgeschwindigkeit modelliert wird. Somit ergibt sich das folgende Moment.
+
+\begin{equation}
+\BinW{M}_M = \BinW{T}_M - \bS{C}_{\psi} \cdot \BinW{\dot {\psi}} \hspace{35pt} \bS{C}_{\psi} = \begin{pmatrix}
+C_{\psi_1} & 0 & 0 \\
+0 & C_{\psi_2} & 0 \\
+0 & 0 & C_{\psi_3}
+\end{pmatrix}
+\end{equation}
+
+Die Komponenten dieses Momentvektors sind gleichermaßen die generalisierten Kraftkomponenten der Koordinaten $\psi_1$, $\psi_2$ und $\psi_3$.
+
+\begin{equation}
+Q_{\psi_1} = Q_4 = T_{M1} - C_{\psi_1} \cdot \dot{\psi}_1
+\end{equation}
+\begin{equation}
+Q_{\psi_2} = Q_5 = T_{M2} - C_{\psi_2} \cdot \dot{\psi}_2
+\end{equation}
+\begin{equation}
+Q_{\psi_3} = Q_6 = T_{M3} - C_{\psi_3} \cdot \dot{\psi}_3
+\end{equation}
+
+Die Kraftkomponenten, welche den generalisierten Koordinaten $\varphi_1$, $\varphi_2$ und $\varphi_3$ zugeordnet sind lassen sich aus dem Potential $V$ herleiten.
+
+\begin{align}
+Q_{\varphi_1} &= \frac{\partial V}{\partial \varphi_1} = 0 
+\\
+Q_{\varphi_2} &= \frac{\partial V}{\partial \varphi_2} = m_G \cdot g \cdot (c_{\varphi_2} s_{\varphi_3} \cdot \inW{y}_C + c_{\varphi_2}c_{\varphi_3} \cdot \inW{y}_C - s_{\varphi_2} \cdot \inW{z}_C)
+\\
+Q_{\varphi_3} &= \frac{\partial V}{\partial \varphi_3} = m_G \cdot g \cdot (s_{\varphi_2} c_{\varphi_3} \cdot \inW{x}_C - s_{\varphi_2} c_{\varphi_3} \cdot \inW{y}_C)
+\end{align}
+
+Theoretisch können nun mit Hilfe des d'Alembert'schen Prinzips die Bewegungsgleichungen ermittelt werden. Allerdings führt dieser Ansatz zu einer kaum darstellbar geschweige denn nachvollziehbaren Darstellung des Differentialgleichungssystems. Deshalb werden zunächst die verallgemeinerten Impulse $p_{q_j}$ berechnet, welche wie folgt definiert sind.
+
+\begin{equation}
+p_{q_j} = \frac{\partial L}{\partial \dot{q}_j} = \frac{\partial T}{\partial \dot{q}_j} - \frac{\partial V}{\partial \dot{q}} = \frac{\partial T}{\partial \dot{q}_j}
+\footnote{In diesem System beeinflusst das Potential V keinen der generalisierten Impulse, deshalb kann die Definition des verallgemeinerten Impulses auf die partielle Ableitung von T reduziert werden. Grundsätzlich ist die, aus der Literatur bekannte, Definition von $p_q = \frac{\partial L}{\partial \dot{q}}$ diskussionwürdig, da das Potential V in der Regel nicht von Geschwindigkeiten abhängt und auch der gewöhnliche Impuls der klassischen Mechanik nicht über ein Potential definiert ist.} 
+\end{equation}
+
+Folglich lassen sich die generalisierten Impulse, welche die Bewegung der Schwungmassen beschreiben, wie folgt darstellen.
+
+\begin{align}
+p_{\psi_1} & = \frac{\partial T}{\partial \dot{\psi}_1} = \Theta_{R1} \cdot (\dot{\psi}_1 - \dot{\varphi}_ \cdot s_{\varphi_2} + \dot{\varphi}_3)
+\\
+p_{\psi_2} & = \frac{\partial T}{\partial \dot{\psi}_2} = \Theta_{R2} \cdot (\dot{\psi}_2 + \dot{\varphi}_2 \cdot c_{\varphi_3} + \dot{\varphi}_1 \cdot c_{\varphi_2}s_{\varphi_3})
+\\
+p_{\psi_3} & = \frac{\partial T}{\partial \dot{\psi}_3} = \Theta_{R3} \cdot (\dot{\psi}_3 + \dot{\varphi}_1 \cdot c_{\varphi_2}c_{\varphi_3} - \dot{\varphi}_2 \cdot s_{\varphi_3}
+\end{align}
+
+Bei der Darstellung der generalisierten Impulse für die Bewegung des Würfels wird zur Berechnung der partiellen Ableitungen auf die Produktregel zurückgegriffen um eine nachvollziehbar Darstellung zu erreichen.
+
+\begin{equation}
+\Theta_1 \equiv \Theta_G - \Theta_R \hspace{35pt} \omega_{\widehat{R}} \equiv \omega_K  + \omega_R
+\end{equation}
+
+\begin{align}
+\frac{\partial T}{\partial \dot{q}_j} &= \frac{1}{2} \bigg[ \frac{\partial \omega^T_K}{\partial \dot{q}_j} \cdot \Theta_1 \cdot \omega_K + \omega^T_K \cdot \Theta_1 \cdot \frac{\partial \omega_K}{\partial \dot{q}_j}  + \frac{\partial \omega_{\widehat{R}}^T}{\partial \dot{q}_j} \cdot \Theta_R \cdot \omega_{\widehat{R}} + \omega_{\widehat{R}}^T \cdot \Theta_R \cdot \frac{\partial \omega_{\widehat{R}}}{\partial \dot{q}_j} \bigg] 
+\\
+p_{\varphi_1} &= \frac{1}{2}\Bigg[
+\begin{pmatrix}-s_{\varphi_2} \\ c_{\varphi_2}s_{\varphi_3} \\ c_{\varphi_2}c_{\varphi_3}
+\end{pmatrix}^T  \Theta_1 \omega_K + \omega^T_K \Theta_1 \begin{pmatrix}-s_{\varphi_2} \\ c_{\varphi_2}s_{\varphi_3} \\ c_{\varphi_2}c_{\varphi_3}
+\end{pmatrix} + \begin{pmatrix}-s_{\varphi_2} \\ c_{\varphi_2}s_{\varphi_3} \\ c_{\varphi_2}c_{\varphi_3}
+\end{pmatrix} \Theta_R \omega_{\widehat{R}} + \omega_{\widehat{R}} \Theta_R  \begin{pmatrix}-s_{\varphi_2} \\ c_{\varphi_2}s_{\varphi_3} \\ c_{\varphi_2}c_{\varphi_3}
+\end{pmatrix} \Bigg]
+\\
+p_{\varphi_2} &= \frac{1}{2} \Bigg[ \begin{pmatrix}0 \\ c_{\varphi_3} \\ -s_{\varphi_3}\end{pmatrix}^T \Theta_1 \omega_K + \omega^T_K \Theta_1 \begin{pmatrix}0 \\ c_{\varphi_3} \\ -s_{\varphi_3}\end{pmatrix} + \begin{pmatrix}0 \\ c_{\varphi_3} \\ -s_{\varphi_3}\end{pmatrix}^T \Theta_R \omega_{\widehat{R}} + \omega_{\widehat{R}} \Theta_R \begin{pmatrix}0 \\ c_{\varphi_3} \\ -s_{\varphi_3}\end{pmatrix} \Bigg]
+\\
+p_{\varphi_3} &= \frac{1}{2} \Bigg[ \begin{pmatrix}1\\0\\0\end{pmatrix}^T\Theta_1\omega_K + \omega^T_K \Theta_1 \begin{pmatrix}1\\0\\0\end{pmatrix} + \begin{pmatrix}1\\0\\0\end{pmatrix}^T \Theta_R \omega_{\widehat{R}} + \omega^T_{\widehat{R}} \Theta_R \begin{pmatrix}1\\0\\0\end{pmatrix} \Bigg]
+\end{align}

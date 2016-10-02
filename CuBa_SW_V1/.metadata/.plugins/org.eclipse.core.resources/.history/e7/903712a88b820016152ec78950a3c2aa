@@ -1,8 +1,0 @@
-#include "IRunnable.h"
-
-class CTest: public IRunnable
-{
-public:
-	override void run();
-	override void init();
-};
