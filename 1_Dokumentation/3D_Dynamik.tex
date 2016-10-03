@@ -233,7 +233,7 @@ Q_{\varphi_2} &= \frac{\partial V}{\partial \varphi_2} = m_G \cdot g \cdot (c_{\
 Q_{\varphi_3} &= \frac{\partial V}{\partial \varphi_3} = m_G \cdot g \cdot (s_{\varphi_2} c_{\varphi_3} \cdot \inW{x}_C - s_{\varphi_2} c_{\varphi_3} \cdot \inW{y}_C)
 \end{align}
 
-Theoretisch können nun mit Hilfe des d'Alembert'schen Prinzips die Bewegungsgleichungen ermittelt werden. Allerdings führt dieser Ansatz zu einer kaum darstellbar geschweige denn nachvollziehbaren Darstellung des Differentialgleichungssystems. Deshalb werden zunächst die verallgemeinerten Impulse $p_{q_j}$ berechnet, welche wie folgt definiert sind.
+Theoretisch können nun mit Hilfe des d'Alembert'schen Prinzips die Bewegungsgleichungen ermittelt werden. Allerdings führt dieser Ansatz zu einer kaum darstellbar geschweige denn nachvollziehbaren Darstellung des Differentialgleichungssystems. Deshalb werden zunächst die verallgemeinerten Impulse $p_{q_j}$ berechnet, welche später als Zustände des Regelkreises verwendet werden.
 
 \begin{equation}
 p_{q_j} = \frac{\partial L}{\partial \dot{q}_j} = \frac{\partial T}{\partial \dot{q}_j} - \frac{\partial V}{\partial \dot{q}} = \frac{\partial T}{\partial \dot{q}_j}
@@ -255,18 +255,54 @@ Bei der Darstellung der generalisierten Impulse für die Bewegung des Würfels w
 \begin{equation}
 \Theta_1 \equiv \Theta_G - \Theta_R \hspace{35pt} \omega_{\widehat{R}} \equiv \omega_K  + \omega_R
 \end{equation}
-
-\begin{align}
-\frac{\partial T}{\partial \dot{q}_j} &= \frac{1}{2} \bigg[ \frac{\partial \omega^T_K}{\partial \dot{q}_j} \cdot \Theta_1 \cdot \omega_K + \omega^T_K \cdot \Theta_1 \cdot \frac{\partial \omega_K}{\partial \dot{q}_j}  + \frac{\partial \omega_{\widehat{R}}^T}{\partial \dot{q}_j} \cdot \Theta_R \cdot \omega_{\widehat{R}} + \omega_{\widehat{R}}^T \cdot \Theta_R \cdot \frac{\partial \omega_{\widehat{R}}}{\partial \dot{q}_j} \bigg] 
+\begin{alignat}{5}
+\frac{\partial T}{\partial \dot{q}_j} &= \frac{1}{2} \bigg[ \frac{\partial \omega^T_K}{\partial \dot{q}_j} \cdot \Theta_1 \cdot \omega_K &&+ \omega^T_K \cdot \Theta_1 \cdot \frac{\partial \omega_K}{\partial \dot{q}_j}  &&+ \frac{\partial \omega_{\widehat{R}}^T}{\partial \dot{q}_j} \cdot \Theta_R \cdot \omega_{\widehat{R}} &&+ \omega_{\widehat{R}}^T \cdot \Theta_R \cdot \frac{\partial \omega_{\widehat{R}}}{\partial \dot{q}_j} &&\bigg] 
 \\
 p_{\varphi_1} &= \frac{1}{2}\Bigg[
 \begin{pmatrix}-s_{\varphi_2} \\ c_{\varphi_2}s_{\varphi_3} \\ c_{\varphi_2}c_{\varphi_3}
-\end{pmatrix}^T  \Theta_1 \omega_K + \omega^T_K \Theta_1 \begin{pmatrix}-s_{\varphi_2} \\ c_{\varphi_2}s_{\varphi_3} \\ c_{\varphi_2}c_{\varphi_3}
-\end{pmatrix} + \begin{pmatrix}-s_{\varphi_2} \\ c_{\varphi_2}s_{\varphi_3} \\ c_{\varphi_2}c_{\varphi_3}
-\end{pmatrix} \Theta_R \omega_{\widehat{R}} + \omega_{\widehat{R}} \Theta_R  \begin{pmatrix}-s_{\varphi_2} \\ c_{\varphi_2}s_{\varphi_3} \\ c_{\varphi_2}c_{\varphi_3}
-\end{pmatrix} \Bigg]
+\end{pmatrix}^T  \Theta_1 \omega_K &&+ \omega^T_K \Theta_1 \begin{pmatrix}-s_{\varphi_2} \\ c_{\varphi_2}s_{\varphi_3} \\ c_{\varphi_2}c_{\varphi_3}
+\end{pmatrix} &&+ \begin{pmatrix}-s_{\varphi_2} \\ c_{\varphi_2}s_{\varphi_3} \\ c_{\varphi_2}c_{\varphi_3}
+\end{pmatrix} \Theta_R \omega_{\widehat{R}} &&+ \omega_{\widehat{R}} \Theta_R  \begin{pmatrix}-s_{\varphi_2} \\ c_{\varphi_2}s_{\varphi_3} \\ c_{\varphi_2}c_{\varphi_3}
+\end{pmatrix} &&\Bigg]
 \\
-p_{\varphi_2} &= \frac{1}{2} \Bigg[ \begin{pmatrix}0 \\ c_{\varphi_3} \\ -s_{\varphi_3}\end{pmatrix}^T \Theta_1 \omega_K + \omega^T_K \Theta_1 \begin{pmatrix}0 \\ c_{\varphi_3} \\ -s_{\varphi_3}\end{pmatrix} + \begin{pmatrix}0 \\ c_{\varphi_3} \\ -s_{\varphi_3}\end{pmatrix}^T \Theta_R \omega_{\widehat{R}} + \omega_{\widehat{R}} \Theta_R \begin{pmatrix}0 \\ c_{\varphi_3} \\ -s_{\varphi_3}\end{pmatrix} \Bigg]
+p_{\varphi_2} &= \frac{1}{2} \Bigg[ \begin{pmatrix}0 \\ c_{\varphi_3} \\ -s_{\varphi_3}\end{pmatrix}^T \Theta_1 \omega_K &&+ \omega^T_K \Theta_1 \begin{pmatrix}0 \\ c_{\varphi_3} \\ -s_{\varphi_3}\end{pmatrix} &&+ \begin{pmatrix}0 \\ c_{\varphi_3} \\ -s_{\varphi_3}\end{pmatrix}^T \Theta_R \omega_{\widehat{R}} &&+ \omega_{\widehat{R}} \Theta_R \begin{pmatrix}0 \\ c_{\varphi_3} \\ -s_{\varphi_3}\end{pmatrix} &&\Bigg]
 \\
-p_{\varphi_3} &= \frac{1}{2} \Bigg[ \begin{pmatrix}1\\0\\0\end{pmatrix}^T\Theta_1\omega_K + \omega^T_K \Theta_1 \begin{pmatrix}1\\0\\0\end{pmatrix} + \begin{pmatrix}1\\0\\0\end{pmatrix}^T \Theta_R \omega_{\widehat{R}} + \omega^T_{\widehat{R}} \Theta_R \begin{pmatrix}1\\0\\0\end{pmatrix} \Bigg]
+p_{\varphi_3} &= \frac{1}{2} \Bigg[ \begin{pmatrix}1\\0\\0\end{pmatrix}^T\Theta_1\omega_K &&+ \omega^T_K \Theta_1 \begin{pmatrix}1\\0\\0\end{pmatrix} &&+ \begin{pmatrix}1\\0\\0\end{pmatrix}^T \Theta_R \omega_{\widehat{R}} &&+ \omega^T_{\widehat{R}} \Theta_R \begin{pmatrix}1\\0\\0\end{pmatrix} &&\Bigg]
+\end{alignat}
+
+Mit Hilfe des d'Alembert'schen Prinzip können die im nächsten Schritt die gewöhnlichen Ableitungen der verallgemeinerten Impulse bestimmt werden.
+
+\begin{equation}
+\begin{split}
+\frac{d}{d t} \frac{\partial T}{\partial \dot{q}_j} - \frac{\partial T}{\partial q_j} = Q_j 
+\\
+\dot{p}_j = \frac{\partial T}{\partial q_j} + Q_j
+\end{split}
+\end{equation}
+
+Auf Grund des symmetrischen Aufbaus der Schwungmassen beeinflussen die Winkel $\bS{\psi}$ das Verhalten des Systems nicht, es handelt sich somit um sogenannte zyklische Koordinaten. Folglich verschwindet der Ausdruck $\frac{\partial T}{\partial \psi_i}$.
+
+\begin{align}
+\dot{p}_{\psi_1} &= T_{M1} - C_{\psi_1} \cdot \dot{\psi}_1 \\
+\dot{p}_{\psi_2} &= T_{M2} - C_{\psi_2} \cdot \dot{\psi}_2 \\
+\dot{p}_{\psi_3} &= T_{M3} - C_{\psi_3} \cdot \dot{\psi}_3 
 \end{align}
+
+Die generalisierte Koordinate $\varphi_1$ ist ebenfalls zyklisch, da die Rotation um die raumfeste Achse $I^e_z$ die Systemdynamik nicht beeinflusst. Lediglich die Winkel $\varphi_2$ und $\varphi_3$ wirken sich auf das Systemverhalten aus.
+
+\begin{alignat}{6}
+\dot{p}_{\varphi_1} &= 0  && && &&
+\\
+\dot{p}_{\varphi_2} &= \frac{1}{2} &&\Bigg[ \frac{\partial \omega^T_K}{\partial \varphi_2} \Theta_1 \omega_K &&+ \omega^T_K \Theta_1 \frac{\partial \omega_K}{\partial \varphi_2} &&+ \frac{\partial \omega^T_{\widehat{R}}}{\partial \varphi_2} \Theta_R \omega_{\widehat{R}} &&+ \omega^T_{\widehat{R}}  \Theta_R \frac{\partial \omega_{\widehat{R}}}{\partial \varphi_2} &&\Bigg] + Q_{\varphi_2}
+\\
+\dot{p}_{\varphi_3} &= \frac{1}{2} &&\Bigg[ \frac{\partial \omega^T_K}{\partial \varphi_3} \Theta_1 \omega_K &&+ \omega^T_K \Theta_1 \frac{\partial \omega_K}{\partial \varphi_3} &&+ 
+\frac{\partial \omega^T_{\widehat{R}}}{\partial \varphi_3}\Theta_R \omega_{\widehat{R}} &&+ \omega^T_{\widehat{R}} \Theta_R \frac{\partial \omega_{\widehat{R}}}{\partial \varphi_3} 
+&&\Bigg] + Q_{\varphi_3}
+\end{alignat}
+\begin{equation}
+\frac{\partial \omega_K}{\partial \varphi_2} = \frac{\partial \omega_{\widehat{R}}}{\partial \varphi_2} = \begin{pmatrix} \dot{\varphi}_1 c_{\varphi_2} \\ \dot{\varphi}_1 s_{\varphi_2}s_{\varphi_3} \\ \dot{\varphi}_1 s_{\varphi_2} c_{\varphi_3}\end{pmatrix} \hspace{35pt}
+\frac{\partial \omega_K}{\partial \varphi_3} = \frac{\partial \omega_{\widehat{R}}}{\partial \varphi_3} = \begin{pmatrix}
+0 \\ \dot{\varphi}_1  c_{\varphi_2} c_{\varphi_3} - \dot{\varphi}_2  s_{\varphi_3} \\
+-\dot{\varphi}_2 c_{\varphi_3} - \dot{\varphi}_1 c_{\varphi_2} s_{\varphi_3}
+\end{pmatrix}
+\end{equation}

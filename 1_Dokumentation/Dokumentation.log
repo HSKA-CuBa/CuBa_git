@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.17)  2 OCT 2016 11:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.17)  3 OCT 2016 09:09
 entering extended mode
 **./Dokumentation.tex
 (Dokumentation.tex
@@ -2661,7 +2661,16 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 234.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 234.
-[36])
+[36]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 289.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 289.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 289.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 289.
+ [37])
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 129.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2670,7 +2679,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 129.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 129.
- [37]
+ [38]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 155.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2679,7 +2688,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 155.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 155.
- [38
+ [39
 
 ]
 \openout2 = `Anhang.aux'.
@@ -2697,13 +2706,13 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
- [39
+ [40
 
 ]
 
 pdfTeX warning: pdflatex (file ./img/3d_schwungmasse.pdf): PDF inclusion: found
  PDF version <1.6>, but at most version <1.5> allowed
-<img/3d_schwungmasse.pdf, id=1344, 1195.01462pt x 845.0471pt>
+<img/3d_schwungmasse.pdf, id=1356, 1195.01462pt x 845.0471pt>
 File: img/3d_schwungmasse.pdf Graphic file (type pdf)
 
 <use img/3d_schwungmasse.pdf>
@@ -2717,7 +2726,7 @@ LaTeX Warning: Float too large for page by 58.7769pt on input line 10.
 
 pdfTeX warning: pdflatex (file ./img/3d_flansch_motorseite_v2.pdf): PDF inclusi
 on: found PDF version <1.6>, but at most version <1.5> allowed
-<img/3d_flansch_motorseite_v2.pdf, id=1345, 1195.01462pt x 845.0471pt>
+<img/3d_flansch_motorseite_v2.pdf, id=1357, 1195.01462pt x 845.0471pt>
 File: img/3d_flansch_motorseite_v2.pdf Graphic file (type pdf)
 
 <use img/3d_flansch_motorseite_v2.pdf>
@@ -2732,7 +2741,7 @@ LaTeX Warning: Float too large for page by 58.7769pt on input line 17.
 
 pdfTeX warning: pdflatex (file ./img/3d_flansch_wuerfelseite.pdf): PDF inclusio
 n: found PDF version <1.6>, but at most version <1.5> allowed
-<img/3d_flansch_wuerfelseite.pdf, id=1346, 1195.01462pt x 845.0471pt>
+<img/3d_flansch_wuerfelseite.pdf, id=1358, 1195.01462pt x 845.0471pt>
 File: img/3d_flansch_wuerfelseite.pdf Graphic file (type pdf)
 
 <use img/3d_flansch_wuerfelseite.pdf>
@@ -2747,7 +2756,7 @@ LaTeX Warning: Float too large for page by 58.7769pt on input line 24.
 
 pdfTeX warning: pdflatex (file ./img/3d_motorhalter.pdf): PDF inclusion: found 
 PDF version <1.6>, but at most version <1.5> allowed
-<img/3d_motorhalter.pdf, id=1347, 1195.01462pt x 845.0471pt>
+<img/3d_motorhalter.pdf, id=1359, 1195.01462pt x 845.0471pt>
 File: img/3d_motorhalter.pdf Graphic file (type pdf)
 
 <use img/3d_motorhalter.pdf>
@@ -2761,7 +2770,7 @@ LaTeX Warning: Float too large for page by 58.7769pt on input line 31.
 
 pdfTeX warning: pdflatex (file ./img/3d_halteplatte.pdf): PDF inclusion: found 
 PDF version <1.6>, but at most version <1.5> allowed
-<img/3d_halteplatte.pdf, id=1348, 1195.01462pt x 845.0471pt>
+<img/3d_halteplatte.pdf, id=1360, 1195.01462pt x 845.0471pt>
 File: img/3d_halteplatte.pdf Graphic file (type pdf)
 
 <use img/3d_halteplatte.pdf>
@@ -2775,7 +2784,7 @@ LaTeX Warning: Float too large for page by 58.7769pt on input line 38.
 
 pdfTeX warning: pdflatex (file ./img/3d_servohalter1.pdf): PDF inclusion: found
  PDF version <1.6>, but at most version <1.5> allowed
-<img/3d_servohalter1.pdf, id=1349, 1195.01462pt x 845.0471pt>
+<img/3d_servohalter1.pdf, id=1361, 1195.01462pt x 845.0471pt>
 File: img/3d_servohalter1.pdf Graphic file (type pdf)
 
 <use img/3d_servohalter1.pdf>
@@ -2789,7 +2798,7 @@ LaTeX Warning: Float too large for page by 58.7769pt on input line 45.
 
 pdfTeX warning: pdflatex (file ./img/3d_servohalter2.pdf): PDF inclusion: found
  PDF version <1.6>, but at most version <1.5> allowed
-<img/3d_servohalter2.pdf, id=1350, 1195.01462pt x 845.0471pt>
+<img/3d_servohalter2.pdf, id=1362, 1195.01462pt x 845.0471pt>
 File: img/3d_servohalter2.pdf Graphic file (type pdf)
 
 <use img/3d_servohalter2.pdf>
@@ -2803,7 +2812,7 @@ LaTeX Warning: Float too large for page by 58.7769pt on input line 52.
 
 pdfTeX warning: pdflatex (file ./img/3d_bremshebel.pdf): PDF inclusion: found P
 DF version <1.6>, but at most version <1.5> allowed
-<img/3d_bremshebel.pdf, id=1351, 1195.01462pt x 845.0471pt>
+<img/3d_bremshebel.pdf, id=1363, 1195.01462pt x 845.0471pt>
 File: img/3d_bremshebel.pdf Graphic file (type pdf)
 
 <use img/3d_bremshebel.pdf>
@@ -2817,7 +2826,7 @@ LaTeX Warning: Float too large for page by 58.7769pt on input line 59.
 
 pdfTeX warning: pdflatex (file ./img/1d_wuerfelseite.pdf): PDF inclusion: found
  PDF version <1.6>, but at most version <1.5> allowed
-<img/1d_wuerfelseite.pdf, id=1352, 1195.01462pt x 845.0471pt>
+<img/1d_wuerfelseite.pdf, id=1364, 1195.01462pt x 845.0471pt>
 File: img/1d_wuerfelseite.pdf Graphic file (type pdf)
 
 <use img/1d_wuerfelseite.pdf>
@@ -2835,7 +2844,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 69.
-[40 <./img/3d_schwungmasse.pdf>]
+[41 <./img/3d_schwungmasse.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2844,26 +2853,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 69.
- [41 <./img/3d_flansch_motorseite_v2.pdf>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 69.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 69.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 69.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 69.
-
-[42 <./img/3d_flansch_wuerfelseite.pdf>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 69.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 69.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 69.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 69.
- [43 <./img/3d_motorhalter.pdf>]
+ [42 <./img/3d_flansch_motorseite_v2.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2873,7 +2863,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 69.
 
-[44 <./img/3d_halteplatte.pdf>]
+[43 <./img/3d_flansch_wuerfelseite.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2882,7 +2872,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 69.
- [45 <./img/3d_servohalter1.pdf>]
+ [44 <./img/3d_motorhalter.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2891,7 +2881,8 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 69.
- [46 <./img/3d_servohalter2.pdf>]
+
+[45 <./img/3d_halteplatte.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2900,7 +2891,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 69.
- [47 <./img/3d_bremshebel.pdf>]
+ [46 <./img/3d_servohalter1.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2909,7 +2900,25 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 69.
- [48 <./img/1d_wuerfelseite.pdf>])
+ [47 <./img/3d_servohalter2.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 69.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 69.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 69.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 69.
+ [48 <./img/3d_bremshebel.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 69.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 69.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 69.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 69.
+ [49 <./img/1d_wuerfelseite.pdf>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 157.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
  (Dokumentation.aux (Deckblatt.aux) (Vorwort.aux) (Einfuehrung.aux)
@@ -2928,9 +2937,9 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 157.
  ) 
 Here is how much of TeX's memory you used:
- 22925 strings out of 493634
- 410601 string characters out of 3136055
- 504934 words of memory out of 3000000
+ 22934 strings out of 493634
+ 410720 string characters out of 3136055
+ 506934 words of memory out of 3000000
  25317 multiletter control sequences out of 15000+200000
  23374 words of font info for 53 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -2973,9 +2982,9 @@ MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ich/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/ich/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Us
 ers/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrb8a.pfb>
-Output written on Dokumentation.pdf (52 pages, 14437127 bytes).
+Output written on Dokumentation.pdf (53 pages, 14441815 bytes).
 PDF statistics:
- 2082 PDF objects out of 2487 (max. 8388607)
- 365 named destinations out of 1000 (max. 500000)
+ 2096 PDF objects out of 2487 (max. 8388607)
+ 374 named destinations out of 1000 (max. 500000)
  644 words of extra memory for PDF output out of 10000 (max. 10000000)
 

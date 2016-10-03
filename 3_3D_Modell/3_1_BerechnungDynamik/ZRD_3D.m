@@ -13,9 +13,18 @@ D_phi3  = [1          , 0           , 0;
            0          , cos(phi(3)) , sin(phi(3));
            0          , -sin(phi(3)), cos(phi(3))];
        
+D_w     = D_phi3 * (D_phi2 * D_phi1);
+
+i_g     = [0;0;sym('g', 'real')];
+w_cog   = sym('w_cog', [3 1], 'real');
+V       = dot(i_g, (D_i * w_cog));
+
+       
 w_phi_3__d = [phi__d(3);0;0];
 w_phi_2__d = D_phi3 * [0; phi__d(2); 0];
 w_phi_1__d = D_phi3 * (D_phi2 * [0;0;phi__d(1)]);
+
+
 
 w_K        = w_phi_3__d + w_phi_2__d + w_phi_1__d;
 w_R        = psi__d;
