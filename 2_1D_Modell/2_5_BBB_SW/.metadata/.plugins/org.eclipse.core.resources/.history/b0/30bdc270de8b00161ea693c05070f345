@@ -1,0 +1,23 @@
+/**
+ * @file	CControlAction.h
+ * @author	Michael Meindl
+ * @date	5.10.2016
+ */
+#ifndef CCONTROLACTION_H
+#define CCONTROLACTION_H
+
+class CControlAction
+{
+public:
+
+public:
+	CControlAction();
+	CControlAction(const CControlAction&) = delete;
+	CControlAction& operator=(const CControlAction&) = delete;
+	~CControlAction() = default;
+private:
+
+};
+
+
+#endif

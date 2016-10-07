@@ -1,0 +1,399 @@
+22:06:03 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../Control/CControlAction.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Control/CControlAction.d" -MT"Control/CControlAction.o" -o "Control/CControlAction.o" "../Control/CControlAction.cpp"
+Finished building: ../Control/CControlAction.cpp
+ 
+Building target: CuBa_Desktop
+Invoking: GCC C++ Linker
+g++  -o "CuBa_Desktop"  ./lib/AComponentBase.o ./lib/Assertion.o ./lib/CBinarySemaphore.o ./lib/CCountingSemaphore.o ./lib/CMessage.o ./lib/CMutex.o ./lib/CProxy.o ./lib/CThread.o  ./Control/CControlAction.o ./Control/CControlComponent.o ./Control/CControlFSM.o ./Control/CFSMControlTest.o ./Control/CFSMJump.o ./Control/CTimerTask.o  ./main.o   -lpthread
+Finished building target: CuBa_Desktop
+ 
+22:08:48 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../lib/AComponentBase.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/AComponentBase.d" -MT"lib/AComponentBase.o" -o "lib/AComponentBase.o" "../lib/AComponentBase.cpp"
+Finished building: ../lib/AComponentBase.cpp
+ 
+Building file: ../lib/CProxy.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/CProxy.d" -MT"lib/CProxy.o" -o "lib/CProxy.o" "../lib/CProxy.cpp"
+Finished building: ../lib/CProxy.cpp
+ 
+Building file: ../Control/CControlAction.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Control/CControlAction.d" -MT"Control/CControlAction.o" -o "Control/CControlAction.o" "../Control/CControlAction.cpp"
+Finished building: ../Control/CControlAction.cpp
+ 
+Building file: ../Control/CControlComponent.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Control/CControlComponent.d" -MT"Control/CControlComponent.o" -o "Control/CControlComponent.o" "../Control/CControlComponent.cpp"
+Finished building: ../Control/CControlComponent.cpp
+ 
+Building file: ../Control/CControlFSM.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Control/CControlFSM.d" -MT"Control/CControlFSM.o" -o "Control/CControlFSM.o" "../Control/CControlFSM.cpp"
+Finished building: ../Control/CControlFSM.cpp
+ 
+Building file: ../Control/CFSMControlTest.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Control/CFSMControlTest.d" -MT"Control/CFSMControlTest.o" -o "Control/CFSMControlTest.o" "../Control/CFSMControlTest.cpp"
+Finished building: ../Control/CFSMControlTest.cpp
+ 
+Building file: ../Control/CFSMJump.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Control/CFSMJump.d" -MT"Control/CFSMJump.o" -o "Control/CFSMJump.o" "../Control/CFSMJump.cpp"
+Finished building: ../Control/CFSMJump.cpp
+ 
+Building file: ../Control/CTimerTask.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Control/CTimerTask.d" -MT"Control/CTimerTask.o" -o "Control/CTimerTask.o" "../Control/CTimerTask.cpp"
+Finished building: ../Control/CTimerTask.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: CuBa_Desktop
+Invoking: GCC C++ Linker
+g++  -o "CuBa_Desktop"  ./lib/AComponentBase.o ./lib/Assertion.o ./lib/CBinarySemaphore.o ./lib/CCountingSemaphore.o ./lib/CMessage.o ./lib/CMutex.o ./lib/CProxy.o ./lib/CThread.o  ./Control/CControlAction.o ./Control/CControlComponent.o ./Control/CControlFSM.o ./Control/CFSMControlTest.o ./Control/CFSMJump.o ./Control/CTimerTask.o  ./main.o   -lpthread
+Finished building target: CuBa_Desktop
+ 
+22:10:28 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+../main.cpp: In function ‘void testJump()’:
+../main.cpp:22:37: error: expected primary-expression before ‘)’ token
+  CThread myThread(&CControlComponent);
+                                     ^
+../main.cpp:32:10: error: ‘sleep’ was not declared in this scope
+  sleep(10);
+          ^
+make: *** [main.o] Error 1
+22:10:44 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+../main.cpp: In function ‘void testJump()’:
+../main.cpp:32:9: error: ‘sleep’ was not declared in this scope
+  sleep(3);
+         ^
+make: *** [main.o] Error 1
+22:10:51 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+../main.cpp: In function ‘void testJump()’:
+../main.cpp:33:9: error: ‘sleep’ was not declared in this scope
+  sleep(3);
+         ^
+make: *** [main.o] Error 1
+22:10:57 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: CuBa_Desktop
+Invoking: GCC C++ Linker
+g++  -o "CuBa_Desktop"  ./lib/AComponentBase.o ./lib/Assertion.o ./lib/CBinarySemaphore.o ./lib/CCountingSemaphore.o ./lib/CMessage.o ./lib/CMutex.o ./lib/CProxy.o ./lib/CThread.o  ./Control/CControlAction.o ./Control/CControlComponent.o ./Control/CControlFSM.o ./Control/CFSMControlTest.o ./Control/CFSMJump.o ./Control/CTimerTask.o  ./main.o   -lpthread
+Finished building target: CuBa_Desktop
+ 
+22:11:00 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: CuBa_Desktop
+Invoking: GCC C++ Linker
+g++  -o "CuBa_Desktop"  ./lib/AComponentBase.o ./lib/Assertion.o ./lib/CBinarySemaphore.o ./lib/CCountingSemaphore.o ./lib/CMessage.o ./lib/CMutex.o ./lib/CProxy.o ./lib/CThread.o  ./Control/CControlAction.o ./Control/CControlComponent.o ./Control/CControlFSM.o ./Control/CFSMControlTest.o ./Control/CFSMJump.o ./Control/CTimerTask.o  ./main.o   -lpthread
+Finished building target: CuBa_Desktop
+ 
+22:11:02 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+make: Nothing to be done for `all'.
+22:11:28 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+make: Nothing to be done for `all'.
+22:12:34 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+make: Nothing to be done for `all'.
+22:12:51 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+make: Nothing to be done for `all'.
+22:13:00 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+make: Nothing to be done for `all'.
+22:13:28 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: CuBa_Desktop
+Invoking: GCC C++ Linker
+g++  -o "CuBa_Desktop"  ./lib/AComponentBase.o ./lib/Assertion.o ./lib/CBinarySemaphore.o ./lib/CCountingSemaphore.o ./lib/CMessage.o ./lib/CMutex.o ./lib/CProxy.o ./lib/CThread.o  ./Control/CControlAction.o ./Control/CControlComponent.o ./Control/CControlFSM.o ./Control/CFSMControlTest.o ./Control/CFSMJump.o ./Control/CTimerTask.o  ./main.o   -lpthread
+Finished building target: CuBa_Desktop
+ 
+22:13:32 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+make: Nothing to be done for `all'.
+22:14:06 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: CuBa_Desktop
+Invoking: GCC C++ Linker
+g++  -o "CuBa_Desktop"  ./lib/AComponentBase.o ./lib/Assertion.o ./lib/CBinarySemaphore.o ./lib/CCountingSemaphore.o ./lib/CMessage.o ./lib/CMutex.o ./lib/CProxy.o ./lib/CThread.o  ./Control/CControlAction.o ./Control/CControlComponent.o ./Control/CControlFSM.o ./Control/CFSMControlTest.o ./Control/CFSMJump.o ./Control/CTimerTask.o  ./main.o   -lpthread
+Finished building target: CuBa_Desktop
+ 
+22:14:32 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+make: Nothing to be done for `all'.
+22:15:12 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+make: Nothing to be done for `all'.
+22:15:29 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+make: Nothing to be done for `all'.
+22:15:38 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+make: Nothing to be done for `all'.
+22:16:25 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+make: Nothing to be done for `all'.
+22:17:26 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: CuBa_Desktop
+Invoking: GCC C++ Linker
+g++  -o "CuBa_Desktop"  ./lib/AComponentBase.o ./lib/Assertion.o ./lib/CBinarySemaphore.o ./lib/CCountingSemaphore.o ./lib/CMessage.o ./lib/CMutex.o ./lib/CProxy.o ./lib/CThread.o  ./Control/CControlAction.o ./Control/CControlComponent.o ./Control/CControlFSM.o ./Control/CFSMControlTest.o ./Control/CFSMJump.o ./Control/CTimerTask.o  ./main.o   -lpthread
+Finished building target: CuBa_Desktop
+ 
+22:18:22 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../Control/CTimerTask.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Control/CTimerTask.d" -MT"Control/CTimerTask.o" -o "Control/CTimerTask.o" "../Control/CTimerTask.cpp"
+Finished building: ../Control/CTimerTask.cpp
+ 
+Building target: CuBa_Desktop
+Invoking: GCC C++ Linker
+g++  -o "CuBa_Desktop"  ./lib/AComponentBase.o ./lib/Assertion.o ./lib/CBinarySemaphore.o ./lib/CCountingSemaphore.o ./lib/CMessage.o ./lib/CMutex.o ./lib/CProxy.o ./lib/CThread.o  ./Control/CControlAction.o ./Control/CControlComponent.o ./Control/CControlFSM.o ./Control/CFSMControlTest.o ./Control/CFSMJump.o ./Control/CTimerTask.o  ./main.o   -lpthread
+Finished building target: CuBa_Desktop
+ 
+22:18:33 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+make: Nothing to be done for `all'.
+22:19:36 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: CuBa_Desktop
+Invoking: GCC C++ Linker
+g++  -o "CuBa_Desktop"  ./lib/AComponentBase.o ./lib/Assertion.o ./lib/CBinarySemaphore.o ./lib/CCountingSemaphore.o ./lib/CMessage.o ./lib/CMutex.o ./lib/CProxy.o ./lib/CThread.o  ./Control/CControlAction.o ./Control/CControlComponent.o ./Control/CControlFSM.o ./Control/CFSMControlTest.o ./Control/CFSMJump.o ./Control/CTimerTask.o  ./main.o   -lpthread
+Finished building target: CuBa_Desktop
+ 
+22:19:40 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+../main.cpp: In function ‘void testJump()’:
+../main.cpp:24:2: error: ‘proxy’ was not declared in this scope
+  proxy.routeMATLABMessage(msg, true);
+  ^
+../main.cpp:24:27: error: ‘msg’ was not declared in this scope
+  proxy.routeMATLABMessage(msg, true);
+                           ^
+make: *** [main.o] Error 1
+22:19:52 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: CuBa_Desktop
+Invoking: GCC C++ Linker
+g++  -o "CuBa_Desktop"  ./lib/AComponentBase.o ./lib/Assertion.o ./lib/CBinarySemaphore.o ./lib/CCountingSemaphore.o ./lib/CMessage.o ./lib/CMutex.o ./lib/CProxy.o ./lib/CThread.o  ./Control/CControlAction.o ./Control/CControlComponent.o ./Control/CControlFSM.o ./Control/CFSMControlTest.o ./Control/CFSMJump.o ./Control/CTimerTask.o  ./main.o   -lpthread
+Finished building target: CuBa_Desktop
+ 
+22:19:54 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+make: Nothing to be done for `all'.
+08:27:16 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../Communication/CCommAction.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Communication/CCommAction.d" -MT"Communication/CCommAction.o" -o "Communication/CCommAction.o" "../Communication/CCommAction.cpp"
+Finished building: ../Communication/CCommAction.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: CuBa_Desktop
+Invoking: GCC C++ Linker
+g++  -o "CuBa_Desktop"  ./lib/AComponentBase.o ./lib/Assertion.o ./lib/CBinarySemaphore.o ./lib/CCountingSemaphore.o ./lib/CMessage.o ./lib/CMutex.o ./lib/CProxy.o ./lib/CThread.o  ./Control/CControlAction.o ./Control/CControlComponent.o ./Control/CControlFSM.o ./Control/CFSMControlTest.o ./Control/CFSMJump.o ./Control/CTimerTask.o  ./Communication/CCommAction.o  ./main.o   -lpthread
+Finished building target: CuBa_Desktop
+ 
+08:35:44 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../Communication/CCommFSM.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Communication/CCommFSM.d" -MT"Communication/CCommFSM.o" -o "Communication/CCommFSM.o" "../Communication/CCommFSM.cpp"
+../Communication/CCommFSM.cpp: In member function ‘virtual bool CCommFSM::onInitial(CMessage&)’:
+../Communication/CCommFSM.cpp:30:11: error: ‘class CCommAction’ has no member named ‘entryStandby’
+   sAction.entryStandby();
+           ^
+../Communication/CCommFSM.cpp: In member function ‘bool CCommFSM::onStandby(CMessage&)’:
+../Communication/CCommFSM.cpp:40:11: error: ‘class CCommAction’ has no member named ‘exitStandby’
+   sAction.exitStandby();
+           ^
+../Communication/CCommFSM.cpp:46:11: error: ‘class CCommAction’ has no member named ‘exitStandby’
+   sAction.exitStandby();
+           ^
+../Communication/CCommFSM.cpp:48:11: error: ‘class CCommAction’ has no member named ‘entryRunning’
+   sAction.entryRunning();
+           ^
+../Communication/CCommFSM.cpp: In member function ‘bool CCommFSM::onRunning(CMessage&)’:
+../Communication/CCommFSM.cpp:58:11: error: ‘class CCommAction’ has no member named ‘exitRunning’
+   sAction.exitRunning();
+           ^
+../Communication/CCommFSM.cpp:64:11: error: ‘class CCommAction’ has no member named ‘exitRunning’
+   sAction.exitRunning();
+           ^
+../Communication/CCommFSM.cpp:66:11: error: ‘class CCommAction’ has no member named ‘entryStandby’
+   sAction.entryStandby();
+           ^
+make: *** [Communication/CCommFSM.o] Error 1
+08:37:27 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../lib/AComponentBase.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/AComponentBase.d" -MT"lib/AComponentBase.o" -o "lib/AComponentBase.o" "../lib/AComponentBase.cpp"
+Finished building: ../lib/AComponentBase.cpp
+ 
+Building file: ../lib/CMessage.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/CMessage.d" -MT"lib/CMessage.o" -o "lib/CMessage.o" "../lib/CMessage.cpp"
+Finished building: ../lib/CMessage.cpp
+ 
+Building file: ../lib/CProxy.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lib/CProxy.d" -MT"lib/CProxy.o" -o "lib/CProxy.o" "../lib/CProxy.cpp"
+Finished building: ../lib/CProxy.cpp
+ 
+Building file: ../Control/CControlAction.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Control/CControlAction.d" -MT"Control/CControlAction.o" -o "Control/CControlAction.o" "../Control/CControlAction.cpp"
+Finished building: ../Control/CControlAction.cpp
+ 
+Building file: ../Control/CControlComponent.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Control/CControlComponent.d" -MT"Control/CControlComponent.o" -o "Control/CControlComponent.o" "../Control/CControlComponent.cpp"
+Finished building: ../Control/CControlComponent.cpp
+ 
+Building file: ../Control/CControlFSM.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Control/CControlFSM.d" -MT"Control/CControlFSM.o" -o "Control/CControlFSM.o" "../Control/CControlFSM.cpp"
+Finished building: ../Control/CControlFSM.cpp
+ 
+Building file: ../Control/CFSMControlTest.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Control/CFSMControlTest.d" -MT"Control/CFSMControlTest.o" -o "Control/CFSMControlTest.o" "../Control/CFSMControlTest.cpp"
+Finished building: ../Control/CFSMControlTest.cpp
+ 
+Building file: ../Control/CFSMJump.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Control/CFSMJump.d" -MT"Control/CFSMJump.o" -o "Control/CFSMJump.o" "../Control/CFSMJump.cpp"
+Finished building: ../Control/CFSMJump.cpp
+ 
+Building file: ../Control/CTimerTask.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Control/CTimerTask.d" -MT"Control/CTimerTask.o" -o "Control/CTimerTask.o" "../Control/CTimerTask.cpp"
+Finished building: ../Control/CTimerTask.cpp
+ 
+Building file: ../Communication/CCommFSM.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Communication/CCommFSM.d" -MT"Communication/CCommFSM.o" -o "Communication/CCommFSM.o" "../Communication/CCommFSM.cpp"
+../Communication/CCommFSM.cpp: In member function ‘virtual bool CCommFSM::onInitial(CMessage&)’:
+../Communication/CCommFSM.cpp:30:11: error: ‘class CCommAction’ has no member named ‘entryStandby’
+   sAction.entryStandby();
+           ^
+../Communication/CCommFSM.cpp: In member function ‘bool CCommFSM::onStandby(CMessage&)’:
+../Communication/CCommFSM.cpp:40:11: error: ‘class CCommAction’ has no member named ‘exitStandby’
+   sAction.exitStandby();
+           ^
+../Communication/CCommFSM.cpp:46:11: error: ‘class CCommAction’ has no member named ‘exitStandby’
+   sAction.exitStandby();
+           ^
+../Communication/CCommFSM.cpp:48:11: error: ‘class CCommAction’ has no member named ‘entryRunning’
+   sAction.entryRunning();
+           ^
+../Communication/CCommFSM.cpp: In member function ‘bool CCommFSM::onRunning(CMessage&)’:
+../Communication/CCommFSM.cpp:58:11: error: ‘class CCommAction’ has no member named ‘exitRunning’
+   sAction.exitRunning();
+           ^
+../Communication/CCommFSM.cpp:64:11: error: ‘class CCommAction’ has no member named ‘exitRunning’
+   sAction.exitRunning();
+           ^
+../Communication/CCommFSM.cpp:66:11: error: ‘class CCommAction’ has no member named ‘entryStandby’
+   sAction.entryStandby();
+           ^
+make: *** [Communication/CCommFSM.o] Error 1
+08:38:56 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../Communication/CCommAction.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Communication/CCommAction.d" -MT"Communication/CCommAction.o" -o "Communication/CCommAction.o" "../Communication/CCommAction.cpp"
+In file included from ../Communication/CCommAction.cpp:6:0:
+../Communication/CCommAction.h:18:23: error: ‘CMessage’ has not been declared
+  void transmitMessage(CMessage& msg);
+                       ^
+make: *** [Communication/CCommAction.o] Error 1
+08:40:55 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+make all 
+Building file: ../Communication/CCommAction.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Communication/CCommAction.d" -MT"Communication/CCommAction.o" -o "Communication/CCommAction.o" "../Communication/CCommAction.cpp"
+Finished building: ../Communication/CCommAction.cpp
+ 
+Building file: ../Communication/CCommFSM.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Communication/CCommFSM.d" -MT"Communication/CCommFSM.o" -o "Communication/CCommFSM.o" "../Communication/CCommFSM.cpp"
+Finished building: ../Communication/CCommFSM.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: CuBa_Desktop
+Invoking: GCC C++ Linker
+g++  -o "CuBa_Desktop"  ./lib/AComponentBase.o ./lib/Assertion.o ./lib/CBinarySemaphore.o ./lib/CCountingSemaphore.o ./lib/CMessage.o ./lib/CMutex.o ./lib/CProxy.o ./lib/CThread.o  ./Control/CControlAction.o ./Control/CControlComponent.o ./Control/CControlFSM.o ./Control/CFSMControlTest.o ./Control/CFSMJump.o ./Control/CTimerTask.o  ./Communication/CCommAction.o ./Communication/CCommFSM.o  ./main.o   -lpthread
+Finished building target: CuBa_Desktop
+ 

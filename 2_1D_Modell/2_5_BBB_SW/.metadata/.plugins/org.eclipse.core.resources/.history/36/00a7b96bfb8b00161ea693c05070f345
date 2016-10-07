@@ -1,0 +1,13 @@
+/**
+ * @file	AComponentBase.cpp
+ * @author	Michael Meindl
+ * @date	5.10.2016
+ */
+#include "AComponentBase.h"
+
+CProxy AComponentBase::sProxy{};
+
+AComponentBase::AComponentBase()
+{
+
+}

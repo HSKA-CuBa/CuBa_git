@@ -1,0 +1,11 @@
+/**
+ * @file	CControlFSM.cpp
+ * @author	Michael Meindl
+ * @date	5.10.2016
+ */
+#include "CControlFSM.h"
+
+bool CControlFSM::onInitial(CMessage& msg)
+{
+
+}

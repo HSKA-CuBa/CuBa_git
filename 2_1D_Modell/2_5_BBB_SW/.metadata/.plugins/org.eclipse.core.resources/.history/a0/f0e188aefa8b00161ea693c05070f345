@@ -1,0 +1,21 @@
+/**
+ * @file	CProxy.h
+ * @author	Michael Meindl
+ * @date	5.10.2016
+ */
+#ifndef CPROXY_H
+#define CPROXY_H
+#include "CMessage.h"
+
+class CProxy
+{
+public:
+
+public:
+	CProxy();
+	CProxy(const CProxy&) = delete;
+	CProxy& operator=(const CProxy&) = delete;
+	~CProxy();
+};
+
+#endif

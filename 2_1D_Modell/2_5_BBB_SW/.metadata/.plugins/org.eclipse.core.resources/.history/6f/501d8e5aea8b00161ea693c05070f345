@@ -1,0 +1,67 @@
+/**
+ * @file	CFSMControlTest.cpp
+ * @author	Michael Meindl
+ * @date	5.10.2016
+ */
+#include "CFSMControlTest.h"
+
+bool CFSMControlTest::onInitial(CMessage& msg)
+{
+	EEvent event = msg.getEvent();
+	if(EEvent::INIT == event)
+	{
+		mState = sIdle;
+		sAction.onEntryIdle();
+		return true;
+	}
+	return false;
+}
+bool CFSMControlTest::onIdle(CMessage& msg)
+{
+	EEvent event = msg.getEvent();
+	if(EEvent::EXIT == event)
+	{
+		sAction.onExitIdle();
+		mState = sInitial;
+		return true;
+	}
+	if(EEvent::TIMER_TICK == event)
+	{
+		if(sAction.inBalanceArea() == true)
+		{
+			sInternalQueue = CMessage(EEvent::IN_BALANCE_AREA);
+			sQueueSize     = 1;
+		}
+		return true;
+	}
+	if(EEvent::IN_BALANCE_AREA == true)
+	{
+		sAction.onExitIdle();
+		mState = sBalancing;
+		sAction.onEntryBalancing();
+		return true;
+	}
+	return false;
+}
+bool CFSMControlTest::onBalancing(CMessage& msg)
+{
+	EEvent event = msg.getEvent();
+	if(EEvent::EXIT == event)
+	{
+		sAction.onExitBalancing();
+		mState = sInitial;
+		return true;
+	}
+	if(EEvent::TIMER_TICK == event)
+	{
+		if(sAction.inBalanceArea() == false)
+		{
+			sInternalQueue = CMessage(EEvent::IN_IDLE_AREA);
+			sQueueSize 	   = 1;
+		}
+		else
+		{
+			sAction.controlIteration();
+		}
+	}
+}

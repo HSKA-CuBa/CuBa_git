@@ -1,0 +1,32 @@
+/**
+ * @file	CBasicFSM.h
+ * @author	Michael Meindl
+ * @date	5.10.2016
+ */
+#ifndef CBASICFSM_H
+#define CBASICFSM_H
+#include "Global.h"
+
+class CMessage;
+class CAction;
+
+class CBasicFSM
+{
+public:
+	bool dispatch(CMessage& msg);
+protected:
+	using StatePtr = bool(CBasicFSM::*)(CMessage&);
+	virtual bool onInitial(CMessage& msg) = 0;
+public:
+	CBasicFSM();
+	CBasicFSM(const CBasicFSM&) = delete;
+	CBasicFSM& operator=(const CBasicFSM&) = delete;
+	virtual ~CBasicFSM() = default;
+protected:
+	static constexpr StatePtr sInitial = static_cast<StatePtr>(&CBasicFSM::onInitial);
+	static CMessage sInternalQueue;
+	static Int32 sQueueSize;
+	StatePtr mState;
+};
+
+#endif

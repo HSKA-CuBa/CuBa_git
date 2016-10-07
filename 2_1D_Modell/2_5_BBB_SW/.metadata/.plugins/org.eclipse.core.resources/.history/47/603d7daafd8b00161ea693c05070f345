@@ -1,0 +1,28 @@
+/**
+ * @file	CProxy.h
+ * @author	Michael Meindl
+ * @date	5.10.2016
+ */
+#ifndef CPROXY_H
+#define CPROXY_H
+#include "CMessage.h"
+
+class AComponentBase;
+
+class CProxy
+{
+public:
+	void timerTick(bool waitForever);
+	void registerCommComponent(AComponentBase* commComponent);
+	void registerControlComponent(AComponentBase* controlComponent);
+public:
+	CProxy();
+	CProxy(const CProxy&) = delete;
+	CProxy& operator=(const CProxy&) = delete;
+	~CProxy() = default;
+private:
+	AComponentBase* mCommPtr;
+	AComponentBase* mControlPtr;
+};
+
+#endif

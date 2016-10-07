@@ -1,0 +1,20 @@
+/**
+ * @file	TFSMBase.h
+ * @author	Michael Meindl
+ * @date	4.10.2016
+ */
+#ifndef TFSMBASE_H
+#define TFSMBASE_H
+#include "Global.h"
+
+class CMessage;
+
+template<typename actionType>
+class TFSMBase
+{
+public:
+	bool dispatch(CMessage& msg);
+};
+
+
+#endif

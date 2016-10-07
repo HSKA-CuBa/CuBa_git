@@ -1,0 +1,34 @@
+/**
+ * @file	TFSMBase.h
+ * @author	Michael Meindl
+ * @date	4.10.2016
+ */
+#ifndef TFSMBASE_H
+#define TFSMBASE_H
+#include "Global.h"
+
+class CMessage;
+
+template<typename ActionType>
+class TFSMBase
+{
+public:
+	bool dispatch(CMessage& msg);
+protected:
+	virtual bool onInitial(CMessage& msg) = 0;
+	using StatePtr = bool (TFSMBase::*)(CMessage&);
+public:
+	TFSMBase();
+	TFSMBase(const TFSMBase&) = delete;
+	TFSMBase& operator=(const TFSMBase&) = delete;
+	virtual ~TFSMBase() = default;
+protected:
+	static constexpr StatePtr sInitial = static_cast<StatePtr>(&TFSMBase<ActionType>::onInitial);
+	static ActionType sAction;
+	static CMessage sInternalQueue;
+	static Int32 sQueueSize;
+};
+
+
+
+#endif

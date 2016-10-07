@@ -1,0 +1,24 @@
+/**
+ * @file	CCommAction.h
+ * @author	Michael Meindl
+ * @date	6.10.2016
+ */
+#ifndef CCOMMACTION_H
+#define CCOMMACTION_H
+#include "Global.h"
+
+class CCommAction
+{
+public:
+
+public:
+	CCommAction();
+	CCommAction(const CCommAction&) = delete;
+	CCommAction& operator=(const CCommAction&) = delete;
+	~CCommAction() = default;
+private:
+
+};
+
+
+#endif

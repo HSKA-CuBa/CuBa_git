@@ -1,0 +1,37 @@
+#include "CControlFSM.h"
+#include "CMessage.h"
+#include <iostream>
+
+#define LINE std::cout<<"---------------------------------------"<<std::endl;
+
+int main()
+{
+	CControlFSM myFSM;
+
+	CMessage msg(EEvent::INIT);
+	CMessage timer(EEvent::TIMER_TICK);
+	myFSM.dispatch(msg);
+	msg = CMessage(EEvent::RUN_SENSOR_MEASUREMENT);
+	myFSM.dispatch(msg);
+	myFSM.dispatch(timer);
+	CMessage clientDC = CMessage(EEvent::CLIENT_DISCONNECT);
+	LINE;
+	myFSM.dispatch(clientDC);
+	msg = CMessage(EEvent::RUN_ADC_MEASUREMENT);
+	myFSM.dispatch(msg);
+	msg = CMessage(EEvent::SET_TORQUE);
+	myFSM.dispatch(msg);
+	myFSM.dispatch(timer);
+	myFSM.dispatch(clientDC);
+	msg = CMessage(EEvent::RUN_CPSI_IDENTIFICATION);
+	myFSM.dispatch(msg);
+	msg = CMessage(EEvent::SET_TORQUE);
+	myFSM.dispatch(msg);
+	myFSM.dispatch(timer);
+	myFSM.dispatch(clientDC);
+	msg = CMessage(EEvent::RUN_CPHI_IDENTIFICATION);
+	myFSM.dispatch(msg);
+	myFSM.dispatch(timer);
+	myFSM.dispatch(clientDC);
+	return 0;
+}

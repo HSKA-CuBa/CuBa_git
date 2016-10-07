@@ -1,0 +1,23 @@
+/**
+ * @file	CCommFSM.cpp
+ * @author	Michael Meindl
+ * @date	6.10.2016
+ */
+#include "CCommFSM.h"
+
+CCommFSM::CCommFSM()
+{
+
+}
+bool CCommFSM::dispatch(CMessage& msg)
+{
+	bool consumed = CCommFSMBase::dispatch(msg);
+
+	while(sQueueSize != 0)
+	{
+		CMessage internalMsg = sInternalQueue;
+		sQueueSize 			 = 0;
+		consumed = CCommFSMBase::dispatch(internalMsg);
+	}
+	return consumed;
+}

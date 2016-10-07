@@ -1,0 +1,25 @@
+/**
+ * @file	CProxy.cpp
+ * @date	5.10.2016
+ * @author	Michael Meindl
+ */
+#include "CProxy.h"
+#include "AComponentBase.h"
+
+CProxy::CProxy() : mCommPtr(nullptr),
+				   mControlPtr(nullptr)
+{
+
+}
+bool CProxy::timerTick(bool waitForever)
+{
+
+}
+void CProxy::registerCommComponent(AComponentBase* commComp)
+{
+	mCommPtr = commComp;
+}
+void CProxy::registerControlComponent(AComponentBase* controlComp)
+{
+	mControlPtr = controlComp;
+}
