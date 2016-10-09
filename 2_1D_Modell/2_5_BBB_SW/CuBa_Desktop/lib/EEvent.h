@@ -7,7 +7,7 @@
 #define EEVENT_H
 #include "Global.h"
 
-enum class EEvent
+enum class EEvent : UInt32
 {
 	INGORE 					= 0,
     INIT 					= 1,

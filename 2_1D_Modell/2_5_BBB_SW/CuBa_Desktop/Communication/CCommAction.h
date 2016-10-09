@@ -7,6 +7,9 @@
 #define CCOMMACTION_H
 #include "Global.h"
 #include "CMessage.h"
+#include "CReceiveTask.h"
+#include "CServer.h"
+#include "CThread.h"
 
 class CCommAction
 {
@@ -23,7 +26,9 @@ public:
 	CCommAction& operator=(const CCommAction&) = delete;
 	~CCommAction() = default;
 private:
-
+	CServer mServer;
+	CReceiveTask mReceiveTask;
+	CThread mReceiveThread;
 };
 
 

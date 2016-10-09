@@ -15,8 +15,8 @@ CControlComponent::CControlComponent()
 void CControlComponent::init()
 {
 	cout << "[*] Control-Component: Initializing" << endl;
-	mProxyPtr = &CProxy::getInstance();
-	mProxyPtr->registerControlComponent(this);
+	CMessage init(EEvent::INIT);
+	mFSM.dispatch(init);
 }
 void CControlComponent::run()
 {

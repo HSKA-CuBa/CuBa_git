@@ -26,6 +26,17 @@ CProxy::CProxy() : mCommPtr(nullptr),
 {
 
 }
+bool CProxy::clientConnect(bool waitForever)
+{
+	CMessage msg(EEvent::CLIENT_CONNECT);
+	return mCommPtr->mQueue.pushBack(msg, waitForever);
+}
+bool CProxy::clientDisconnect(bool waitForever)
+{
+	CMessage msg(EEvent::CLIENT_DISCONNECT);
+	bool retVal = mControlPtr->mQueue.pushBack(msg, waitForever);
+	return retVal && mCommPtr->mQueue.pushBack(msg, waitForever);
+}
 bool CProxy::routeMATLABMessage(CMessage& msg, bool waitForever)
 {
 	return mControlPtr->mQueue.pushBack(msg, waitForever);

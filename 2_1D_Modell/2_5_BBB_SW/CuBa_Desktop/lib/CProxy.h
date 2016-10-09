@@ -14,11 +14,13 @@ class CProxy
 {
 public:
 	static CProxy& getInstance();
-
-	bool routeMATLABMessage(CMessage& msg, bool waitForever);
-	bool timerTick(bool waitForever);
 	void registerCommComponent(AComponentBase* commComponent);
 	void registerControlComponent(AComponentBase* controlComponent);
+
+	bool clientConnect(bool waitForever);
+	bool clientDisconnect(bool waitForever);
+	bool routeMATLABMessage(CMessage& msg, bool waitForever);
+	bool timerTick(bool waitForever);
 private:
 	CProxy();
 	CProxy(const CProxy&) = delete;

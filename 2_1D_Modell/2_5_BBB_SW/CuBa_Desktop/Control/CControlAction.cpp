@@ -129,7 +129,7 @@ void CControlAction::exitStandby()
 void CControlAction::entrySensorMeasurement()
 {
 	cout << "[*] Control-FSM: Entering Sensor-Measurement" << endl;
-	mTimerTask.pause(true);
+	mTimerTask.resume(true);
 }
 void CControlAction::exitSensorMeasurement()
 {

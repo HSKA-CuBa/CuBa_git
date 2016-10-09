@@ -1,25 +1,6 @@
-08:40:55 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
+11:55:29 **** Incremental Build of configuration Debug for project CuBa_Desktop ****
 make all 
-Building file: ../Communication/CCommAction.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Communication/CCommAction.d" -MT"Communication/CCommAction.o" -o "Communication/CCommAction.o" "../Communication/CCommAction.cpp"
-Finished building: ../Communication/CCommAction.cpp
- 
-Building file: ../Communication/CCommFSM.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Communication/CCommFSM.d" -MT"Communication/CCommFSM.o" -o "Communication/CCommFSM.o" "../Communication/CCommFSM.cpp"
-Finished building: ../Communication/CCommFSM.cpp
- 
-Building file: ../main.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++11 -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/Control" -I"/home/michael/Desktop/CuBa_git/2_1D_Modell/2_5_BBB_SW/CuBa_Desktop/lib" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
-Finished building: ../main.cpp
- 
-Building target: CuBa_Desktop
-Invoking: GCC C++ Linker
-g++  -o "CuBa_Desktop"  ./lib/AComponentBase.o ./lib/Assertion.o ./lib/CBinarySemaphore.o ./lib/CCountingSemaphore.o ./lib/CMessage.o ./lib/CMutex.o ./lib/CProxy.o ./lib/CThread.o  ./Control/CControlAction.o ./Control/CControlComponent.o ./Control/CControlFSM.o ./Control/CFSMControlTest.o ./Control/CFSMJump.o ./Control/CTimerTask.o  ./Communication/CCommAction.o ./Communication/CCommFSM.o  ./main.o   -lpthread
-Finished building target: CuBa_Desktop
- 
+make: Nothing to be done for `all'.
 
-08:40:55 Build Finished (took 512ms)
+11:55:29 Build Finished (took 59ms)
 

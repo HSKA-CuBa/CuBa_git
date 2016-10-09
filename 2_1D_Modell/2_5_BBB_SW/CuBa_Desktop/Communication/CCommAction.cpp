@@ -7,9 +7,11 @@
 #include <iostream>
 using namespace std;
 
-CCommAction::CCommAction()
+CCommAction::CCommAction() : mServer(),
+						     mReceiveTask(mServer),
+							 mReceiveThread(&mReceiveTask)
 {
-
+	mReceiveThread.start();
 }
 void CCommAction::entryStandby()
 {
@@ -30,4 +32,8 @@ void CCommAction::exitRunning()
 void CCommAction::transmitMessage(CMessage& msg)
 {
 	cout << "[*] Comm-FSM: Transmitting Message" << endl;
+	if(mServer.transmitMessage(msg) == false)
+	{
+		cout << "[*] Comm-FSM: Failed to transmit TCP/IP-Message" << endl;
+	}
 }
