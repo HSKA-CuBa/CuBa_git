@@ -15,6 +15,26 @@ CMessage::CMessage(EEvent event) : mEvent(event),
 {
 
 }
+CMessage::CMessage(const CSensorData& data) : mEvent(EEvent::TX_SENSOR_DATA),
+											  mData{0U}
+{
+	*reinterpret_cast<CSensorData*>(mData) = data;
+}
+CMessage::CMessage(const CPhi& data) : mEvent(EEvent::TX_PHI_DATA),
+									   mData{0U}
+{
+	*reinterpret_cast<CPhi*>(mData) = data;
+}
+CMessage::CMessage(const CPhi__d& data) : mEvent(EEvent::TX_PHI__D_DATA),
+										  mData{0U}
+{
+	*reinterpret_cast<CPhi__d*>(mData) = data;
+}
+CMessage::CMessage(const CPsi__d& data) : mEvent(EEvent::TX_PSI__D_DATA),
+										  mData{0U}
+{
+	*reinterpret_cast<CPsi__d*>(mData) = data;
+}
 EEvent CMessage::getEvent() const
 {
 	return mEvent;

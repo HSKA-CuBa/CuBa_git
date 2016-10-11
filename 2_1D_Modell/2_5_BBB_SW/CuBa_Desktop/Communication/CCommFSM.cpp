@@ -66,10 +66,10 @@ bool CCommFSM::onRunning(CMessage& msg)
 		sAction.entryStandby();
 		return true;
 	}
-	if(EEvent::TRANSMIT_PHI_DATA == event ||
-	   EEvent::TRANSMIT_PHI__D_DATA == event ||
-	   EEvent::TRANSMIT_PSI__D_DATA == event ||
-	   EEvent::TRANSMIT_SENSOR_DATA == event)
+	if(EEvent::TX_PHI_DATA == event ||
+	   EEvent::TX_PHI__D_DATA == event ||
+	   EEvent::TX_PSI__D_DATA == event ||
+	   EEvent::TX_SENSOR_DATA == event)
 	{
 		sAction.transmitMessage(msg);
 		return true;

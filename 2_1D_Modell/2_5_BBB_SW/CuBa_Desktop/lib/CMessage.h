@@ -7,6 +7,10 @@
 #define CMESSAGE_H
 #include "Global.h"
 #include "EEvent.h"
+#include "CSensorData.h"
+#include "CPhi.h"
+#include "CPhi__d.h"
+#include "CPsi__d.h"
 
 class CMessage
 {
@@ -15,6 +19,10 @@ public:
 	Float32 getTorque() const;
 public:
 	CMessage();
+	CMessage(const CSensorData& data);
+	CMessage(const CPhi& data);
+	CMessage(const CPhi__d& data);
+	CMessage(const CPsi__d& data);
 	CMessage(EEvent event);
 	CMessage(const CMessage&) = default;
 	CMessage& operator=(const CMessage&) = default;

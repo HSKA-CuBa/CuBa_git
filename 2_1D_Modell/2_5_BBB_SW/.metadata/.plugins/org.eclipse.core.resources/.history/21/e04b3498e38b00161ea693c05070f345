@@ -1,9 +1,0 @@
-#include "CControlFSM.h"
-
-int main()
-{
-	CControlFSM myFSM;
-
-	CMessage msg(EEvent::INIT);
-	return 0;
-}

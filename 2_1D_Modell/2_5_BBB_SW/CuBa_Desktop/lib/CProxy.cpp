@@ -26,6 +26,26 @@ CProxy::CProxy() : mCommPtr(nullptr),
 {
 
 }
+bool CProxy::transmitSensorData(const CSensorData& data, bool waitForever)
+{
+	CMessage msg(data);
+	return mCommPtr->mQueue.pushBack(msg, waitForever);
+}
+bool CProxy::transmitPhi(const CPhi& data, bool waitForever)
+{
+	CMessage msg(data);
+	return mCommPtr->mQueue.pushBack(msg, waitForever);
+}
+bool CProxy::transmitPhi__d(const CPhi__d& data, bool waitForever)
+{
+	CMessage msg(data);
+	return mCommPtr->mQueue.pushBack(msg, waitForever);
+}
+bool CProxy::transmitPsi__d(const CPsi__d& data, bool waitForever)
+{
+	CMessage msg(data);
+	return mCommPtr->mQueue.pushBack(msg, waitForever);
+}
 bool CProxy::clientConnect(bool waitForever)
 {
 	CMessage msg(EEvent::CLIENT_CONNECT);

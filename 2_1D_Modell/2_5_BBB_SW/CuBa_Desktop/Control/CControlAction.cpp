@@ -7,7 +7,8 @@
 #include <iostream>
 using namespace std;
 
-CControlAction::CControlAction() : mTimerTask(),
+CControlAction::CControlAction() : mProxy(CProxy::getInstance()),
+								   mTimerTask(),
 								   mTimerThread(&mTimerTask)
 {
 	mTimerThread.start();
@@ -61,18 +62,36 @@ void CControlAction::controlIteration()
 void CControlAction::sampleSensors()
 {
 	cout << "[*] Control-FSM: Sampling Sensors" << endl;
+	const CSensorData& data = mSensorEval.getSensorData();
+	mProxy.transmitSensorData(data, false);
 }
 void CControlAction::sampleADC()
 {
 	cout << "[*] Control-FSM: Sampling ADC" << endl;
+	const CSensorData& data = mSensorEval.getSensorData();
+	mProxy.transmitSensorData(data, false);
 }
 void CControlAction::sampleCPsiIdentification()
 {
 	cout << "[*] Control-FSM: Sampling CPsi-Identification" << endl;
+	mFilter.calculateValues(mSensorEval.getPhi(),
+							mSensorEval.getPhi__d(),
+							mSensorEval.getPhi__dd(),
+							mSensorEval.getPsi__d());
+	mProxy.transmitPhi(mFilter.getPhiValues(), false);
+	mProxy.transmitPhi__d(mFilter.getPhi__dValues(), false);
+	mProxy.transmitPsi__d(mFilter.getPsi__dValues(), false);
 }
 void CControlAction::sampleCPhiIdentification()
 {
 	cout << "[*] Control-FSM: Sampling CPhi-Identification" << endl;
+	mFilter.calculateValues(mSensorEval.getPhi(),
+							mSensorEval.getPhi__d(),
+							mSensorEval.getPhi__dd(),
+							mSensorEval.getPsi__d());
+	mProxy.transmitPhi(mFilter.getPhiValues(), false);
+	mProxy.transmitPhi__d(mFilter.getPhi__dValues(), false);
+	mProxy.transmitPsi__d(mFilter.getPsi__dValues(), false);
 }
 void CControlAction::setTorque(Float32 torque)
 {

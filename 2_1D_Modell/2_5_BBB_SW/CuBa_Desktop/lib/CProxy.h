@@ -7,6 +7,10 @@
 #define CPROXY_H
 #include "CMessage.h"
 #include "CMutex.h"
+#include "CSensorData.h"
+#include "CPhi.h"
+#include "CPhi__d.h"
+#include "CPsi__d.h"
 
 class AComponentBase;
 
@@ -17,6 +21,10 @@ public:
 	void registerCommComponent(AComponentBase* commComponent);
 	void registerControlComponent(AComponentBase* controlComponent);
 
+	bool transmitSensorData(const CSensorData& data, bool waitForever);
+	bool transmitPhi(const CPhi& data, bool waitForever);
+	bool transmitPhi__d(const CPhi__d& data, bool waitForever);
+	bool transmitPsi__d(const CPsi__d& data, bool waitForever);
 	bool clientConnect(bool waitForever);
 	bool clientDisconnect(bool waitForever);
 	bool routeMATLABMessage(CMessage& msg, bool waitForever);

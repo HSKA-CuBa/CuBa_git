@@ -1,7 +1,0 @@
-#include "CControlFSM.h"
-
-int main()
-{
-	CControlFSM myFSM;
-	return 0;
-}

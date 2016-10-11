@@ -8,6 +8,8 @@
 #include "Global.h"
 #include "CTimerTask.h"
 #include "CThread.h"
+#include "CSensorEvaluation.h"
+#include "CFilterSystem.h"
 
 class CControlAction
 {
@@ -54,8 +56,11 @@ public:
 	CControlAction& operator=(const CControlAction&) = delete;
 	~CControlAction() = default;
 private:
+	CProxy& mProxy;
 	CTimerTask mTimerTask;
 	CThread mTimerThread;
+	CSensorEvaluation mSensorEval;
+	CFilterSystem mFilter;
 };
 
 
