@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.17)  3 OCT 2016 09:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.17)  12 OCT 2016 07:16
 entering extended mode
 **./Dokumentation.tex
 (Dokumentation.tex
@@ -1185,7 +1185,7 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 (1D_Konstruktion.aux) (1D_Dynamik.aux) (1D_SensorAuswertung.aux)
 (1D_Filterung.aux) (1D_Modellbildung.aux) (1D_Reglerentwurf.aux)
 (1D_Aufspringen.aux) (1D_Software.aux) (1D_Ausblick.aux) (3D_Section.aux)
-(3D_Dynamik.aux) (Anhang.aux))
+(3D_AktorikSensorik.aux) (3D_Dynamik.aux) (Anhang.aux))
 \openout1 = `Dokumentation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
@@ -1296,7 +1296,7 @@ Package scrpage2 Warning: seems you are using a constant headheight.
 \c@lstlisting=\count186
 \openout2 = `Deckblatt.aux'.
 
-(Deckblatt.tex <img/3D_Modell_img.JPG, id=182, 4288.02pt x 2858.68pt>
+(Deckblatt.tex <img/3D_Modell_img.JPG, id=186, 4288.02pt x 2858.68pt>
 File: img/3D_Modell_img.JPG Graphic file (type jpg)
 
 <use img/3D_Modell_img.JPG>
@@ -1323,6 +1323,13 @@ ll_img.JPG>])
 Package acronym Info: Label `acro:CuBa' newly defined as it shall be overridden
 
 although it is yet undefined on input line 2.
+
+
+Package acronym Warning: Acronym `CuBa' is not defined on input line 2.
+
+
+Package acronym Warning: Acronym `CuBa' is not defined on input line 2.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
@@ -1361,15 +1368,6 @@ Package babel Info: Redefining ngerman shorthand "~
  [2
 
 ]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 112.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 112.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 112.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 112.
- [3]
 \openout2 = `Einfuehrung.aux'.
 
  (Einfuehrung.tex
@@ -1396,18 +1394,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
 Overfull \vbox (0.51453pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 107.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 107.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 107.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 107.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.115 \include{Einfuehrung}
+l.107 \include{Einfuehrung}
                             [1
 
 ]
@@ -1423,7 +1421,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
  []
 
-<img/1D_Model_pic.JPG, id=307, 4288.02pt x 2858.68pt>
+<img/1D_Model_pic.JPG, id=305, 4288.02pt x 2858.68pt>
 File: img/1D_Model_pic.JPG Graphic file (type jpg)
 
 <use img/1D_Model_pic.JPG>
@@ -1431,13 +1429,13 @@ Package pdftex.def Info: img/1D_Model_pic.JPG used on input line 7.
 (pdftex.def)             Requested size: 441.01773pt x 293.99805pt.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 108.
  [2
 
 
@@ -1473,7 +1471,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--13
 
  []
 
-<img/ElekAufbau_Bauteile.pdf, id=314, 963.6pt x 542.025pt>
+<img/ElekAufbau_Bauteile.pdf, id=312, 963.6pt x 542.025pt>
 File: img/ElekAufbau_Bauteile.pdf Graphic file (type pdf)
 
 <use img/ElekAufbau_Bauteile.pdf>
@@ -1481,13 +1479,13 @@ Package pdftex.def Info: img/ElekAufbau_Bauteile.pdf used on input line 19.
 (pdftex.def)             Requested size: 308.71106pt x 178.28076pt.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 117.
+(babel)             in language  on input line 109.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 117.
+(babel)             in language  on input line 109.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 117.
+(babel)             in language  on input line 109.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 117.
+(babel)             in language  on input line 109.
  [3
 
 
@@ -1505,7 +1503,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 5.
 
-<img/Explosionszeichnung_Schwungscheibe.png, id=336, 711.0314pt x 501.37312pt>
+<img/Explosionszeichnung_Schwungscheibe.png, id=333, 711.0314pt x 501.37312pt>
 File: img/Explosionszeichnung_Schwungscheibe.png Graphic file (type png)
 
 <use img/Explosionszeichnung_Schwungscheibe.png>
@@ -1513,7 +1511,7 @@ Package pdftex.def Info: img/Explosionszeichnung_Schwungscheibe.png used on inp
 ut line 11.
 (pdftex.def)             Requested size: 330.76329pt x 233.23553pt.
 
-<img/Schwungmasse_mit_Flanschen_Schnitt.png, id=338, 464.86172pt x 126.0961pt>
+<img/Schwungmasse_mit_Flanschen_Schnitt.png, id=335, 464.86172pt x 126.0961pt>
 File: img/Schwungmasse_mit_Flanschen_Schnitt.png Graphic file (type png)
 
 <use img/Schwungmasse_mit_Flanschen_Schnitt.png>
@@ -1521,7 +1519,7 @@ Package pdftex.def Info: img/Schwungmasse_mit_Flanschen_Schnitt.png used on inp
 ut line 19.
 (pdftex.def)             Requested size: 330.76329pt x 89.72318pt.
 
-<img/Explosionszeichnung_Motor_Motorhalter.png, id=339, 534.87328pt x 395.60297
+<img/Explosionszeichnung_Motor_Motorhalter.png, id=336, 534.87328pt x 395.60297
 pt>
 File: img/Explosionszeichnung_Motor_Motorhalter.png Graphic file (type png)
  <use img/Explosionszeichnung_Motor_Motorhalter.png>
@@ -1541,7 +1539,7 @@ Package babel Info: Redefining ngerman shorthand "~
 
  <./img/Explosionszeichnung_Schwungscheibe.png> <./img/Schwungmasse_mit_Flansch
 en_Schnitt.png>]
-<img/Bremse_detail.png, id=347, 496.47984pt x 441.14813pt>
+<img/Bremse_detail.png, id=345, 496.47984pt x 441.14813pt>
 File: img/Bremse_detail.png Graphic file (type png)
 
 <use img/Bremse_detail.png>
@@ -1557,28 +1555,28 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 44.
  [5 <./img/Explosionszeichnung_Motor_Motorhalter.png> <./img/Bremse_detail.png>
 ]
-<img/1d_assembled_top.png, id=355, 502.87875pt x 504.76079pt>
+<img/1d_assembled_top.png, id=353, 502.87875pt x 504.76079pt>
 File: img/1d_assembled_top.png Graphic file (type png)
 
 <use img/1d_assembled_top.png>
 Package pdftex.def Info: img/1d_assembled_top.png used on input line 49.
 (pdftex.def)             Requested size: 216.1011pt x 216.90427pt.
 
-<img/1d_assembled_bottom.png, id=356, 508.14844pt x 505.89pt>
+<img/1d_assembled_bottom.png, id=354, 508.14844pt x 505.89pt>
 File: img/1d_assembled_bottom.png Graphic file (type png)
 
 <use img/1d_assembled_bottom.png>
 Package pdftex.def Info: img/1d_assembled_bottom.png used on input line 49.
 (pdftex.def)             Requested size: 216.1011pt x 215.1432pt.
 
-<img/1d_assembled_side.png, id=357, 444.53578pt x 513.79453pt>
+<img/1d_assembled_side.png, id=355, 444.53578pt x 513.79453pt>
 File: img/1d_assembled_side.png Graphic file (type png)
 
 <use img/1d_assembled_side.png>
 Package pdftex.def Info: img/1d_assembled_side.png used on input line 53.
 (pdftex.def)             Requested size: 216.1011pt x 249.77019pt.
 
-<img/1d_assembled_front_back.png, id=358, 505.13719pt x 426.84468pt>
+<img/1d_assembled_front_back.png, id=356, 505.13719pt x 426.84468pt>
 File: img/1d_assembled_front_back.png Graphic file (type png)
 
 <use img/1d_assembled_front_back.png>
@@ -1586,7 +1584,7 @@ Package pdftex.def Info: img/1d_assembled_front_back.png used on input line 54.
 
 (pdftex.def)             Requested size: 216.1011pt x 182.60826pt.
 
-<img/1d_assembled_schnitt.png, id=359, 188.95593pt x 499.49109pt>
+<img/1d_assembled_schnitt.png, id=357, 188.95593pt x 499.49109pt>
 File: img/1d_assembled_schnitt.png Graphic file (type png)
 
 <use img/1d_assembled_schnitt.png>
@@ -1602,23 +1600,23 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 110.
  [6 <./img/1d_assembled_top.png> <./img/1d_assembled_bottom.png> <./img/1d_asse
 mbled_side.png> <./img/1d_assembled_front_back.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 110.
  [7 <./img/1d_assembled_schnitt.png>]
 \openout2 = `1D_Dynamik.aux'.
 
@@ -1628,7 +1626,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 
-<img/MechZeichnung1D.pdf, id=371, 963.6pt x 542.025pt>
+<img/MechZeichnung1D.pdf, id=369, 963.6pt x 542.025pt>
 File: img/MechZeichnung1D.pdf Graphic file (type pdf)
 
 <use img/MechZeichnung1D.pdf>
@@ -1666,13 +1664,13 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 106.
 [9])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 111.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 111.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 111.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 111.
  [10]
 \openout2 = `1D_SensorAuswertung.aux'.
 
@@ -1682,7 +1680,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 
-<img/SensorZeichnung1D.pdf, id=426, 963.6pt x 542.025pt>
+<img/SensorZeichnung1D.pdf, id=424, 963.6pt x 542.025pt>
 File: img/SensorZeichnung1D.pdf Graphic file (type pdf)
 
 <use img/SensorZeichnung1D.pdf>
@@ -1723,7 +1721,7 @@ verted-to.pdf img/X1__dd___fitted.eps>
 (epstopdf)             \includegraphics on input line 91.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/X1__dd___fitted-eps-converted-to.pdf, id=455, 379.4175pt x 312.16624pt>
+<img/X1__dd___fitted-eps-converted-to.pdf, id=453, 379.4175pt x 312.16624pt>
 File: img/X1__dd___fitted-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/X1__dd___fitted-eps-converted-to.pdf>
@@ -1741,7 +1739,7 @@ verted-to.pdf img/X2__dd___fitted.eps>
 (epstopdf)             \includegraphics on input line 92.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/X2__dd___fitted-eps-converted-to.pdf, id=456, 379.4175pt x 312.16624pt>
+<img/X2__dd___fitted-eps-converted-to.pdf, id=454, 379.4175pt x 312.16624pt>
 File: img/X2__dd___fitted-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/X2__dd___fitted-eps-converted-to.pdf>
@@ -1763,7 +1761,7 @@ Package epstopdf Info: Source file: <img/Y1__dd___fitted.eps>
 verted-to.pdf img/Y1__dd___fitted.eps>
 (epstopdf)             \includegraphics on input line 97.
 Package epstopdf Info: Output file is already uptodate.
-<img/Y1__dd___fitted-eps-converted-to.pdf, id=457, 386.44376pt x 312.16624pt>
+<img/Y1__dd___fitted-eps-converted-to.pdf, id=455, 386.44376pt x 312.16624pt>
 File: img/Y1__dd___fitted-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/Y1__dd___fitted-eps-converted-to.pdf>
@@ -1781,7 +1779,7 @@ verted-to.pdf img/Y2__dd___fitted.eps>
 (epstopdf)             \includegraphics on input line 98.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/Y2__dd___fitted-eps-converted-to.pdf, id=458, 386.44376pt x 310.15875pt>
+<img/Y2__dd___fitted-eps-converted-to.pdf, id=456, 386.44376pt x 310.15875pt>
 File: img/Y2__dd___fitted-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/Y2__dd___fitted-eps-converted-to.pdf>
@@ -1807,7 +1805,7 @@ Package epstopdf Info: Source file: <img/phi1__d.eps>
 o.pdf img/phi1__d.eps>
 (epstopdf)             \includegraphics on input line 104.
 Package epstopdf Info: Output file is already uptodate.
-<img/phi1__d-eps-converted-to.pdf, id=459, 380.42125pt x 311.1625pt>
+<img/phi1__d-eps-converted-to.pdf, id=457, 380.42125pt x 311.1625pt>
 File: img/phi1__d-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/phi1__d-eps-converted-to.pdf>
@@ -1825,7 +1823,7 @@ o.pdf img/phi2__d.eps>
 (epstopdf)             \includegraphics on input line 105.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/phi2__d-eps-converted-to.pdf, id=460, 380.42125pt x 311.1625pt>
+<img/phi2__d-eps-converted-to.pdf, id=458, 380.42125pt x 311.1625pt>
 File: img/phi2__d-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/phi2__d-eps-converted-to.pdf>
@@ -1873,7 +1871,7 @@ eps-converted-to.pdf img/ADC_mittelwert_polynom.eps>
 (epstopdf)             \includegraphics on input line 142.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/ADC_mittelwert_polynom-eps-converted-to.pdf, id=601, 395.4775pt x 315.1775
+<img/ADC_mittelwert_polynom-eps-converted-to.pdf, id=599, 395.4775pt x 315.1775
 pt>
 File: img/ADC_mittelwert_polynom-eps-converted-to.pdf Graphic file (type pdf)
  <use img/ADC_mittelwert_polynom-eps-converted-to.pdf>
@@ -1882,13 +1880,13 @@ n input line 142.
 (pdftex.def)             Requested size: 220.50887pt x 175.73833pt.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 112.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 112.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 112.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 120.
+(babel)             in language  on input line 112.
  [13 <./img/phi1__d-eps-converted-to.pdf> <./img/phi2__d-eps-converted-to.pdf> 
 <./img/ADC_mittelwert_polynom-eps-converted-to.pdf>]
 \openout2 = `1D_Filterung.aux'.
@@ -1931,7 +1929,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 9.
 
-<img/Komp_CuBa_1D.pdf, id=681, 963.6pt x 542.025pt>
+<img/Komp_CuBa_1D.pdf, id=679, 963.6pt x 542.025pt>
 File: img/Komp_CuBa_1D.pdf Graphic file (type pdf)
  <use img/Komp_CuBa_1D.pdf>
 Package pdftex.def Info: img/Komp_CuBa_1D.pdf used on input line 21.
@@ -1994,7 +1992,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 129.
 
-[15] <img/kalman_phi_overview.pdf, id=739, 963.6pt x 542.025pt>
+[15] <img/kalman_phi_overview.pdf, id=736, 963.6pt x 542.025pt>
 File: img/kalman_phi_overview.pdf Graphic file (type pdf)
 
 <use img/kalman_phi_overview.pdf>
@@ -2033,7 +2031,7 @@ df>
 (epstopdf)             \includegraphics on input line 202.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/filtervergleich_phi-eps-converted-to.pdf, id=759, 378.41376pt x 311.1625pt
+<img/filtervergleich_phi-eps-converted-to.pdf, id=757, 378.41376pt x 311.1625pt
 >
 File: img/filtervergleich_phi-eps-converted-to.pdf Graphic file (type pdf)
  <use img/filtervergleich_phi-eps-converted-to.pdf>
@@ -2053,7 +2051,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 208.
 
-<img/kalman_phi__d_overview.pdf, id=760, 963.6pt x 542.025pt>
+<img/kalman_phi__d_overview.pdf, id=758, 963.6pt x 542.025pt>
 File: img/kalman_phi__d_overview.pdf Graphic file (type pdf)
 
 <use img/kalman_phi__d_overview.pdf>
@@ -2086,7 +2084,7 @@ eps-converted-to.pdf img/filtervergleich_phi__d.eps>
 (epstopdf)             \includegraphics on input line 250.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/filtervergleich_phi__d-eps-converted-to.pdf, id=818, 384.43625pt x 311.162
+<img/filtervergleich_phi__d-eps-converted-to.pdf, id=816, 384.43625pt x 311.162
 5pt>
 File: img/filtervergleich_phi__d-eps-converted-to.pdf Graphic file (type pdf)
  <use img/filtervergleich_phi__d-eps-converted-to.pdf>
@@ -2132,7 +2130,7 @@ eps-converted-to.pdf img/filtervergleich_psi__d.eps>
 (epstopdf)             \includegraphics on input line 267.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/filtervergleich_psi__d-eps-converted-to.pdf, id=877, 385.44pt x 314.17375p
+<img/filtervergleich_psi__d-eps-converted-to.pdf, id=875, 385.44pt x 314.17375p
 t>
 File: img/filtervergleich_psi__d-eps-converted-to.pdf Graphic file (type pdf)
  <use img/filtervergleich_psi__d-eps-converted-to.pdf>
@@ -2143,13 +2141,13 @@ n input line 267.
 Overfull \vbox (0.51453pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 121.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 121.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 121.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 121.
+(babel)             in language  on input line 113.
 
 [19 <./img/filtervergleich_psi__d-eps-converted-to.pdf>]
 \openout2 = `1D_Modellbildung.aux'.
@@ -2194,7 +2192,7 @@ Package epstopdf Info: Source file: <img/C_phi.eps>
 pdf img/C_phi.eps>
 (epstopdf)             \includegraphics on input line 66.
 Package epstopdf Info: Output file is already uptodate.
-<img/C_phi-eps-converted-to.pdf, id=921, 377.41pt x 311.1625pt>
+<img/C_phi-eps-converted-to.pdf, id=919, 377.41pt x 311.1625pt>
 File: img/C_phi-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/C_phi-eps-converted-to.pdf>
@@ -2250,7 +2248,7 @@ Package epstopdf Info: Source file: <img/C_psi.eps>
 pdf img/C_psi.eps>
 (epstopdf)             \includegraphics on input line 100.
 Package epstopdf Info: Output file is already uptodate.
- <img/C_psi-eps-converted-to.pdf, id=935, 385.44pt x 311.1625pt>
+ <img/C_psi-eps-converted-to.pdf, id=933, 385.44pt x 311.1625pt>
 File: img/C_psi-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/C_psi-eps-converted-to.pdf>
@@ -2291,7 +2289,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 153.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 153.
- <img/model_1D_overview.pdf, id=1016, 794.97pt x 614.295pt>
+ <img/model_1D_overview.pdf, id=1014, 794.97pt x 614.295pt>
 File: img/model_1D_overview.pdf Graphic file (type pdf)
 
 <use img/model_1D_overview.pdf>
@@ -2306,7 +2304,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 169.
 
-<img/model_1D_cubebody.pdf, id=1020, 845.1575pt x 597.23125pt>
+<img/model_1D_cubebody.pdf, id=1018, 845.1575pt x 597.23125pt>
 File: img/model_1D_cubebody.pdf Graphic file (type pdf)
 
 <use img/model_1D_cubebody.pdf>
@@ -2350,7 +2348,7 @@ er (name{equation.2.75}) has been already used, duplicate ignored
                    \relax 
 l.187 \begin{equation}
                       
-<img/model_1D_wheel.pdf, id=1053, 845.1575pt x 597.23125pt>
+<img/model_1D_wheel.pdf, id=1051, 845.1575pt x 597.23125pt>
 File: img/model_1D_wheel.pdf Graphic file (type pdf)
 
 <use img/model_1D_wheel.pdf>
@@ -2360,13 +2358,13 @@ Package pdftex.def Info: img/model_1D_wheel.pdf used on input line 195.
 Overfull \vbox (0.51453pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 114.
 
 [24 <./img/model_1D_wheel.pdf>]
 \openout2 = `1D_Reglerentwurf.aux'.
@@ -2381,7 +2379,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 4.
 
-<img/Bilder_RT.pdf, id=1071, 963.6pt x 542.025pt>
+<img/Bilder_RT.pdf, id=1069, 963.6pt x 542.025pt>
 File: img/Bilder_RT.pdf Graphic file (type pdf)
  <use img/Bilder_RT.pdf>
 Package pdftex.def Info: img/Bilder_RT.pdf used on input line 9.
@@ -2424,13 +2422,13 @@ Package babel Info: Redefining ngerman shorthand "~
 
  <./img/Bilder_RT.pdf>])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 123.
+(babel)             in language  on input line 115.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 123.
+(babel)             in language  on input line 115.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 123.
+(babel)             in language  on input line 115.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 123.
+(babel)             in language  on input line 115.
  [26]
 \openout2 = `1D_Aufspringen.aux'.
 
@@ -2441,13 +2439,13 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 116.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 116.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 116.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 116.
 
 [27
 
@@ -2461,7 +2459,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 
-<img/SW_signalfluss_regelkreis.pdf, id=1136, 963.6pt x 542.025pt>
+<img/SW_signalfluss_regelkreis.pdf, id=1133, 963.6pt x 542.025pt>
 File: img/SW_signalfluss_regelkreis.pdf Graphic file (type pdf)
 
 <use img/SW_signalfluss_regelkreis.pdf>
@@ -2496,7 +2494,7 @@ Package babel Info: Redefining ngerman shorthand "~
 
 
  <./img/SW_signalfluss_regelkreis.pdf>]
-<img/SW_kommunikation.pdf, id=1157, 963.6pt x 542.025pt>
+<img/SW_kommunikation.pdf, id=1155, 963.6pt x 542.025pt>
 File: img/SW_kommunikation.pdf Graphic file (type pdf)
 
 <use img/SW_kommunikation.pdf>
@@ -2523,53 +2521,71 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 98.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 98.
+
+<img/SW_KontrollKlassen.pdf, id=1197, 963.6pt x 542.025pt>
+File: img/SW_KontrollKlassen.pdf Graphic file (type pdf)
+
+<use img/SW_KontrollKlassen.pdf>
+Package pdftex.def Info: img/SW_KontrollKlassen.pdf used on input line 103.
+(pdftex.def)             Requested size: 441.01773pt x 230.63559pt.
+
+<img/SW_KontrollFSM.pdf, id=1199, 963.6pt x 542.025pt>
+File: img/SW_KontrollFSM.pdf Graphic file (type pdf)
+
+<use img/SW_KontrollFSM.pdf>
+Package pdftex.def Info: img/SW_KontrollFSM.pdf used on input line 111.
+(pdftex.def)             Requested size: 441.01773pt x 250.3829pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 118.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 118.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 118.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 118.
+[30 <./img/SW_KontrollKlassen.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 119.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 119.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 125.
+(babel)             in language  on input line 117.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 125.
+(babel)             in language  on input line 117.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 125.
+(babel)             in language  on input line 117.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 125.
- [30]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 125.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 125.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 125.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 125.
- [31]
+(babel)             in language  on input line 117.
+ [31 <./img/SW_KontrollFSM.pdf>]
 \openout2 = `1D_Ausblick.aux'.
 
- (1D_Ausblick.tex
+
+(1D_Ausblick.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 118.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 118.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 118.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 118.
  [32
 
 
 ]
 \openout2 = `3D_Section.aux'.
 
-
-(3D_Section.tex
+ (3D_Section.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2580,17 +2596,51 @@ Package pdftex.def Info: img/3D_Modell_img.JPG used on input line 7.
 (pdftex.def)             Requested size: 441.01773pt x 293.99805pt.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 120.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 120.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 120.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 128.
+(babel)             in language  on input line 120.
  [33
 
 
 ]
+\openout2 = `3D_AktorikSensorik.aux'.
+
+
+(3D_AktorikSensorik.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+ <img/3D_AktorikBSB.pdf, id=1271, 963.6pt x 542.025pt>
+File: img/3D_AktorikBSB.pdf Graphic file (type pdf)
+
+<use img/3D_AktorikBSB.pdf>
+Package pdftex.def Info: img/3D_AktorikBSB.pdf used on input line 6.
+(pdftex.def)             Requested size: 352.81552pt x 241.52788pt.
+
+<img/3D_SensorikBSB.pdf, id=1273, 963.6pt x 542.025pt>
+File: img/3D_SensorikBSB.pdf Graphic file (type pdf)
+
+<use img/3D_SensorikBSB.pdf>
+Package pdftex.def Info: img/3D_SensorikBSB.pdf used on input line 14.
+(pdftex.def)             Requested size: 352.81552pt x 177.9994pt.
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 121.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 121.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 121.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 121.
+ [34
+
+
+ <./img/3D_AktorikBSB.pdf> <./img/3D_SensorikBSB.pdf>]
 \openout2 = `3D_Dynamik.aux'.
 
  (3D_Dynamik.tex
@@ -2609,7 +2659,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
  []
 
-<img/MechZeichnung3D.pdf, id=1246, 963.6pt x 542.025pt>
+<img/MechZeichnung3D.pdf, id=1305, 963.6pt x 542.025pt>
 File: img/MechZeichnung3D.pdf Graphic file (type pdf)
 
 <use img/MechZeichnung3D.pdf>
@@ -2623,7 +2673,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 68.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 68.
- [34
+ [35
 
 
  <./img/MechZeichnung3D.pdf>]
@@ -2643,7 +2693,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 143.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 143.
- [35]
+ [36]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 200.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2661,7 +2711,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 234.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 234.
-[36]
+[37]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 289.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2670,25 +2720,25 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 289.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 289.
- [37])
+ [38])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 129.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 129.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 129.
+(babel)             in language  on input line 122.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 129.
- [38]
+(babel)             in language  on input line 122.
+ [39]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 155.
+(babel)             in language  on input line 148.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 155.
+(babel)             in language  on input line 148.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 155.
+(babel)             in language  on input line 148.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 155.
- [39
+(babel)             in language  on input line 148.
+ [40
 
 ]
 \openout2 = `Anhang.aux'.
@@ -2706,13 +2756,13 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
- [40
+ [41
 
 ]
 
 pdfTeX warning: pdflatex (file ./img/3d_schwungmasse.pdf): PDF inclusion: found
  PDF version <1.6>, but at most version <1.5> allowed
-<img/3d_schwungmasse.pdf, id=1356, 1195.01462pt x 845.0471pt>
+<img/3d_schwungmasse.pdf, id=1415, 1195.01462pt x 845.0471pt>
 File: img/3d_schwungmasse.pdf Graphic file (type pdf)
 
 <use img/3d_schwungmasse.pdf>
@@ -2726,7 +2776,7 @@ LaTeX Warning: Float too large for page by 58.7769pt on input line 10.
 
 pdfTeX warning: pdflatex (file ./img/3d_flansch_motorseite_v2.pdf): PDF inclusi
 on: found PDF version <1.6>, but at most version <1.5> allowed
-<img/3d_flansch_motorseite_v2.pdf, id=1357, 1195.01462pt x 845.0471pt>
+<img/3d_flansch_motorseite_v2.pdf, id=1416, 1195.01462pt x 845.0471pt>
 File: img/3d_flansch_motorseite_v2.pdf Graphic file (type pdf)
 
 <use img/3d_flansch_motorseite_v2.pdf>
@@ -2741,7 +2791,7 @@ LaTeX Warning: Float too large for page by 58.7769pt on input line 17.
 
 pdfTeX warning: pdflatex (file ./img/3d_flansch_wuerfelseite.pdf): PDF inclusio
 n: found PDF version <1.6>, but at most version <1.5> allowed
-<img/3d_flansch_wuerfelseite.pdf, id=1358, 1195.01462pt x 845.0471pt>
+<img/3d_flansch_wuerfelseite.pdf, id=1417, 1195.01462pt x 845.0471pt>
 File: img/3d_flansch_wuerfelseite.pdf Graphic file (type pdf)
 
 <use img/3d_flansch_wuerfelseite.pdf>
@@ -2756,7 +2806,7 @@ LaTeX Warning: Float too large for page by 58.7769pt on input line 24.
 
 pdfTeX warning: pdflatex (file ./img/3d_motorhalter.pdf): PDF inclusion: found 
 PDF version <1.6>, but at most version <1.5> allowed
-<img/3d_motorhalter.pdf, id=1359, 1195.01462pt x 845.0471pt>
+<img/3d_motorhalter.pdf, id=1418, 1195.01462pt x 845.0471pt>
 File: img/3d_motorhalter.pdf Graphic file (type pdf)
 
 <use img/3d_motorhalter.pdf>
@@ -2770,7 +2820,7 @@ LaTeX Warning: Float too large for page by 58.7769pt on input line 31.
 
 pdfTeX warning: pdflatex (file ./img/3d_halteplatte.pdf): PDF inclusion: found 
 PDF version <1.6>, but at most version <1.5> allowed
-<img/3d_halteplatte.pdf, id=1360, 1195.01462pt x 845.0471pt>
+<img/3d_halteplatte.pdf, id=1419, 1195.01462pt x 845.0471pt>
 File: img/3d_halteplatte.pdf Graphic file (type pdf)
 
 <use img/3d_halteplatte.pdf>
@@ -2784,7 +2834,7 @@ LaTeX Warning: Float too large for page by 58.7769pt on input line 38.
 
 pdfTeX warning: pdflatex (file ./img/3d_servohalter1.pdf): PDF inclusion: found
  PDF version <1.6>, but at most version <1.5> allowed
-<img/3d_servohalter1.pdf, id=1361, 1195.01462pt x 845.0471pt>
+<img/3d_servohalter1.pdf, id=1420, 1195.01462pt x 845.0471pt>
 File: img/3d_servohalter1.pdf Graphic file (type pdf)
 
 <use img/3d_servohalter1.pdf>
@@ -2798,7 +2848,7 @@ LaTeX Warning: Float too large for page by 58.7769pt on input line 45.
 
 pdfTeX warning: pdflatex (file ./img/3d_servohalter2.pdf): PDF inclusion: found
  PDF version <1.6>, but at most version <1.5> allowed
-<img/3d_servohalter2.pdf, id=1362, 1195.01462pt x 845.0471pt>
+<img/3d_servohalter2.pdf, id=1421, 1195.01462pt x 845.0471pt>
 File: img/3d_servohalter2.pdf Graphic file (type pdf)
 
 <use img/3d_servohalter2.pdf>
@@ -2812,7 +2862,7 @@ LaTeX Warning: Float too large for page by 58.7769pt on input line 52.
 
 pdfTeX warning: pdflatex (file ./img/3d_bremshebel.pdf): PDF inclusion: found P
 DF version <1.6>, but at most version <1.5> allowed
-<img/3d_bremshebel.pdf, id=1363, 1195.01462pt x 845.0471pt>
+<img/3d_bremshebel.pdf, id=1422, 1195.01462pt x 845.0471pt>
 File: img/3d_bremshebel.pdf Graphic file (type pdf)
 
 <use img/3d_bremshebel.pdf>
@@ -2826,7 +2876,7 @@ LaTeX Warning: Float too large for page by 58.7769pt on input line 59.
 
 pdfTeX warning: pdflatex (file ./img/1d_wuerfelseite.pdf): PDF inclusion: found
  PDF version <1.6>, but at most version <1.5> allowed
-<img/1d_wuerfelseite.pdf, id=1364, 1195.01462pt x 845.0471pt>
+<img/1d_wuerfelseite.pdf, id=1423, 1195.01462pt x 845.0471pt>
 File: img/1d_wuerfelseite.pdf Graphic file (type pdf)
 
 <use img/1d_wuerfelseite.pdf>
@@ -2844,7 +2894,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 69.
-[41 <./img/3d_schwungmasse.pdf>]
+[42 <./img/3d_schwungmasse.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2853,26 +2903,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 69.
- [42 <./img/3d_flansch_motorseite_v2.pdf>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 69.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 69.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 69.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 69.
-
-[43 <./img/3d_flansch_wuerfelseite.pdf>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 69.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 69.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 69.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 69.
- [44 <./img/3d_motorhalter.pdf>]
+ [43 <./img/3d_flansch_motorseite_v2.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2882,7 +2913,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 69.
 
-[45 <./img/3d_halteplatte.pdf>]
+[44 <./img/3d_flansch_wuerfelseite.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2891,7 +2922,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 69.
- [46 <./img/3d_servohalter1.pdf>]
+ [45 <./img/3d_motorhalter.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2900,7 +2931,8 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 69.
- [47 <./img/3d_servohalter2.pdf>]
+
+[46 <./img/3d_halteplatte.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2909,7 +2941,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 69.
- [48 <./img/3d_bremshebel.pdf>]
+ [47 <./img/3d_servohalter1.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2918,29 +2950,47 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 69.
- [49 <./img/1d_wuerfelseite.pdf>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 157.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
+ [48 <./img/3d_servohalter2.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 69.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 69.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 69.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 69.
+ [49 <./img/3d_bremshebel.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 69.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 69.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 69.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 69.
+ [50 <./img/1d_wuerfelseite.pdf>])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 150.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 150.
  (Dokumentation.aux (Deckblatt.aux) (Vorwort.aux) (Einfuehrung.aux)
 (1D_Section.aux) (1D_AktorikSensorik.aux) (1D_Konstruktion.aux) (1D_Dynamik.aux
 ) (1D_SensorAuswertung.aux) (1D_Filterung.aux) (1D_Modellbildung.aux)
 (1D_Reglerentwurf.aux) (1D_Aufspringen.aux) (1D_Software.aux) (1D_Ausblick.aux)
-(3D_Section.aux) (3D_Dynamik.aux) (Anhang.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 157.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 157.
+(3D_Section.aux) (3D_AktorikSensorik.aux) (3D_Dynamik.aux) (Anhang.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 150.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 150.
 Package rerunfilecheck Info: File `Dokumentation.out' has not changed.
-(rerunfilecheck)             Checksum: 0228B0AC1AB42ACA81771D6B226F103D;3726.
+(rerunfilecheck)             Checksum: FC2B9AF96E8142A34BA9F10A33FFF122;3797.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 157.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 150.
  ) 
 Here is how much of TeX's memory you used:
- 22934 strings out of 493634
- 410720 string characters out of 3136055
- 506934 words of memory out of 3000000
- 25317 multiletter control sequences out of 15000+200000
+ 22962 strings out of 493634
+ 411470 string characters out of 3136055
+ 506429 words of memory out of 3000000
+ 25332 multiletter control sequences out of 15000+200000
  23374 words of font info for 53 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  68i,22n,98p,1436b,1081s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2982,9 +3032,9 @@ MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ich/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/ich/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Us
 ers/ich/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrb8a.pfb>
-Output written on Dokumentation.pdf (53 pages, 14441815 bytes).
+Output written on Dokumentation.pdf (53 pages, 15237312 bytes).
 PDF statistics:
- 2096 PDF objects out of 2487 (max. 8388607)
- 374 named destinations out of 1000 (max. 500000)
- 644 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2154 PDF objects out of 2487 (max. 8388607)
+ 376 named destinations out of 1000 (max. 500000)
+ 696 words of extra memory for PDF output out of 10000 (max. 10000000)
 

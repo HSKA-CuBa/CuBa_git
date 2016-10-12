@@ -98,9 +98,19 @@ private:
 \subsubsection{Aufbau der Regelungskomponente}
 Die Aufgaben der Regelungskomponente bestehen einerseits in der Interaktion mit der HW und der Berechnung des Regelkreises. Diese Teilsysteme werden als Klassen implementiert, welche Methoden bereitstellen um die Sensorwerte auszulesen, die Motoren zu steuern und die Filterwerte bzw. den Regler zu berechnen. Zusätzlich gehört der Timer-Task zu der Regelungskomponente und wird als eigenständiger Thread ausgeführt. 
 
-%Bild mit Klassendiagramm
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\linewidth, trim={0cm 0cm 7cm 5cm}, clip]{img/SW_KontrollKlassen}
+\caption{Klassendiagramm Regelkreis, Quelle: eigene Darstellung}
+\end{figure}
 
-Für die verschiedenen Versuche ist eine zusätzliche Kontrolllogik erforderlich, welche in Form eines Zustandsautomaten implementiert wird. Die FSM verarbeitet die empfangenen Nachrichten und passt den aktuellen Zustand und somit das Verhalten entsprechend an. Auf der obersten Schicht verfügt das Statechart über den Zustand \textit{STANDBY} und Zustände für die verschiedenen Versuche. Hierdurch wird das An- bzw. Abschalten der Komponente ermöglicht. Dadurch kann dieselbe Applikation flexibel eingesetzt und während des Entwicklungsprozesses erweitert werden. Die letztendlichen Aktionen werden in der Klasse \textit{CControlAciton} gekapselt um eine klare Trennung von Kontroll- und Signalfluss zu gewährleisten.
+Für die verschiedenen Versuche ist eine zusätzliche Kontrolllogik erforderlich, welche in Form eines Zustandsautomaten implementiert wird. Die FSM verarbeitet die empfangenen Nachrichten und passt den aktuellen Zustand und somit das Verhalten entsprechend an. Auf der obersten Schicht verfügt das Statechart über den Zustand \textit{STANDBY} und Zustände um die verschiedenen Versuche durchzuführen. Dadurch kann dieselbe Applikation flexibel eingesetzt und während des Entwicklungsprozesses erweitert werden. Die letztendlichen Aufgaben der Komponente, wie z.B. die Auswertung der Sensorik und Signalverarbeitung, werden in der Klasse \textit{CControlAction} gekapselt um eine klare Trennung von Kontroll- und Signalfluss zu gewährleisten.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=1\linewidth, trim={0cm 0cm 10cm 5.5cm}, clip]{img/SW_KontrollFSM}
+\caption{Kontroll-FSM, Quelle: eigene Darstellung}
+\end{figure}
 
 
 Bei Betreten der Versuch-Zustände wird der Softtimer gestartet, welcher zyklisch Timer-Events an die Regelungskomponente sendet. Bei Erhalten einer solchen Nachricht führt die FSM die, dem aktuellen Zustand entsprechende, Logik aus. 
@@ -124,4 +134,4 @@ class CServer
 }
 \end{lstlisting}
 
-Hierfür wird ein zweiter Thread gestartet, welcher auf Nachrichten der MATLAB-Anwendung wartet und diese an den Proxy weiterleitet. Die Kontrolllogik der Komponente wird ebenfalls in Form einer Zustandsmaschine implementiert. Hierbei wird lediglich zwischen den Zuständen \textit{STANDBY} und \textit{RUNNING} unterschiedn. Im Ausgangszustand wartet die Komponente auf die Verbindungsanfrage eines Client, welcher die MATLAB-Anwendung ist. Der Haupt-Thread der Komponente wartet auf eingehende Kommunikationsnachrichten und verarbeitet diese entsprechend. Der zweite Thread wartet zuerst auf die Verbindungsanfrage des Client, diese signalisiert er mittels einer Nachricht. Daraufhin wechselt die Komponente in den \textit{RUNNING}-Zustand, in welchem empfangene Nachrichten mit Regelungsdaten an MATLAB weitergeleitet werden. Der zweite Thread wartet nun auf eingehende TCP/IP-Daten von MATLAB. Sowohl beim senden als auch empfangen von Daten kann ein Verbindungsabbruch des Clients erkennt werden. In diesem Fall wechselt die Komponente in den \textit{STANDBY}-Zustand und der zweite Thread wartet auf eine neue Verbindungsanfrage.
+Hierfür wird ein zweiter Thread gestartet, welcher auf Nachrichten der MATLAB-Anwendung wartet und diese an den Proxy weiterleitet. Die Kontrolllogik der Komponente wird ebenfalls in Form einer Zustandsmaschine implementiert. Hierbei wird lediglich zwischen den Zuständen \textit{STANDBY} und \textit{RUNNING} unterschieden. Im Ausgangszustand wartet die Komponente auf die Verbindungsanfrage eines Client, welcher die MATLAB-Anwendung ist. Der Haupt-Thread der Komponente wartet auf eingehende Ereignisse und verarbeitet diese. Der zweite Thread wartet zuerst auf die Verbindungsanfrage des Client, diese signalisiert er mittels einer Nachricht. Daraufhin wechselt die Komponente in den \textit{RUNNING}-Zustand, in welchem empfangene Nachrichten mit Regelungsdaten an MATLAB weitergeleitet werden. Der zweite Thread wartet nun auf eingehende TCP/IP-Daten von MATLAB. Sowohl beim senden als auch empfangen von Daten kann ein Verbindungsabbruch des Clients erkannt werden. In diesem Fall wechselt die Komponente in den \textit{STANDBY}-Zustand und der zweite Thread wartet auf eine neue Verbindungsanfrage.
