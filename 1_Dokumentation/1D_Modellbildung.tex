@@ -39,7 +39,7 @@ u = T_M
 \end{pmatrix}
 \hspace{35 pt}
 \textbf{C} = \begin{pmatrix}
-1 & 1 & 1
+1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1
 \end{pmatrix}
 \hspace{35pt}
 \textbf{D} = \begin{pmatrix}
@@ -170,7 +170,7 @@ K_M = 1 \hspace{35pt} T_e = 0.55ms \hspace{35pt} T_m = 12.4ms
 Die Dynamik der Würfelseite wird von \ref{BG_phi_quation} beschrieben.
 
 \begin{equation}
-\ddot{\varphi} = \frac{g(m_R \cdot l_{AB}^2 + m_K \cdot l_{AC})sin(\varphi) - C_{\varphi} \cdot \dot{\varphi} + C_{\psi} \cdot \dot{\psi} - T_M}{{\theta}^A_K + m_R \cdot l_{AB}^2} \tag{\ref{BG_phi_quation}}
+\ddot{\varphi} = \frac{g(m_R \cdot l_{AB} + m_K \cdot l_{AC})sin(\varphi) - C_{\varphi} \cdot \dot{\varphi} + C_{\psi} \cdot \dot{\psi} - T_M}{{\theta}^A_K + m_R \cdot l_{AB}^2} \tag{\ref{BG_phi_quation}}
 \end{equation}
 
 Somit ist die Winkelbeschleunigung gleich der Summe der Drehmomente geteilt durch die betroffenen Massenträgheitsmomente. Durch Integration und Rückführung können die einzelnen Drehmomente berechnet werden. Das folgende Modell zeigt die Umsetzung dieser Berechnungsvorschrift in Simulink.
@@ -185,7 +185,7 @@ Somit ist die Winkelbeschleunigung gleich der Summe der Drehmomente geteilt durc
 Die Dynamik der Schwungmasse wird von \ref{BG_psi_equation} beschrieben, allerdings wird das Modell vereinfacht indem $\ddot{\varphi}$ nicht substituiert wird.
 
 \begin{equation}
-{\theta}^R_B \cdot \ddot{\psi} = T_M - C_{\psi} \cdot \dot{\psi} - {\theta}^B_R \cdot \ddot{\varphi}\tag{\ref{BG_psi_equation}}
+{\theta}^B_R \cdot \ddot{\psi} = T_M - C_{\psi} \cdot \dot{\psi} - {\theta}^B_R \cdot \ddot{\varphi}\tag{\ref{BG_psi_equation}}
 \end{equation}
 
 Das Simulink-Modell folgt dem selben Schema wie das Subsystem zur Simulation der Bewegung des Würfelkörpers.

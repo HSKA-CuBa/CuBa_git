@@ -72,14 +72,14 @@ F_4 \cdot r_4 = M_{R_{\psi}} \cdot \psi = (-C_{\psi} \cdot \dot{\psi}) \cdot \ps
 Somit können nun die Summe der Kräfte und Momente gebildet werden und daraufhin die generalisierten Kraftkomponenten bestimmt werden.
 \begin{equation}
 \begin{split}
-Q_{\varphi} &= -g \cdot (m_K \cdot l_{AC} + m_R \cdot l_{AB}) \cdot \frac{\partial cos(\varphi)}{\partial \varphi} + T_M \cdot \frac{\partial \psi}{\partial \varphi} + C_{\varphi} \cdot \dot{\varphi} \cdot \frac{\partial \varphi}{\partial \varphi} + C_{\psi} \cdot \dot{\psi} \cdot \frac{\partial \psi}{\partial \varphi} \\
+Q_{\varphi} &= g \cdot (m_K \cdot l_{AC} + m_R \cdot l_{AB}) \cdot \frac{\partial cos(\varphi)}{\partial \varphi} + T_M \cdot \frac{\partial \psi}{\partial \varphi} - C_{\varphi} \cdot \dot{\varphi} \cdot \frac{\partial \varphi}{\partial \varphi} - C_{\psi} \cdot \dot{\psi} \cdot \frac{\partial \psi}{\partial \varphi} \\
 &= g \cdot (m_K \cdot l_{AC} + m_R \cdot l_{AB})\cdot sin(\varphi) - C_{\varphi} \cdot \dot{\varphi}
 \end{split}
 \end{equation}
 
 \begin{equation}
 \begin{split}
-Q_{\psi} &= -g \cdot (m_K \cdot l_{AC} + m_R \cdot l_{AB}) \cdot \frac{\partial cos(\varphi)}{\partial \psi} + T_M \cdot \frac{\partial \psi}{\partial \psi} + C_{\varphi} \cdot \dot{\varphi} \cdot \frac{\partial \varphi}{\partial \psi} + C_{\psi} \cdot \dot{\psi} \cdot \frac{\partial \psi}{\partial \psi} \\
+Q_{\psi} &= g \cdot (m_K \cdot l_{AC} + m_R \cdot l_{AB}) \cdot \frac{\partial cos(\varphi)}{\partial \psi} + T_M \cdot \frac{\partial \psi}{\partial \psi} - C_{\varphi} \cdot \dot{\varphi} \cdot \frac{\partial \varphi}{\partial \psi} - C_{\psi} \cdot \dot{\psi} \cdot \frac{\partial \psi}{\partial \psi} \\
 &= T_M - C_{\psi} \cdot \dot{\psi}
 \end{split}
 \end{equation}
@@ -101,7 +101,7 @@ Bei dem Prototyp handelt es sich um ein nicht konservatives System, da durch die
 \end{equation}
 \begin{equation}
 \label{LG_psi_euqation}
-{\theta}^R_B \cdot \ddot{\psi} = T_M - C_{\psi} \cdot \dot{\psi} - {\theta}^B_R \cdot \ddot{\varphi}
+{\theta}^B_R \cdot \ddot{\psi} = T_M - C_{\psi} \cdot \dot{\psi} - {\theta}^B_R \cdot \ddot{\varphi}
 \end{equation}
 \newpage
 Durch Einsetzen von (\ref{LG_psi_euqation}) in (\ref{LG_phi_equation}) ergibt sich die folgende Bewegungsgleichung für die Würfelseite.

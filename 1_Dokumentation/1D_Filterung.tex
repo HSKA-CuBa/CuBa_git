@@ -11,7 +11,7 @@ Wie bereits erläutert liefert die Winkelschätzung aus den Beschleunigungswerte
 \begin{equation}
 \begin{split}
 \varphi^A(s) &= \varphi(s) + x^A(s) \\
-\varphi^G(s) &= \frac{1}{s} \cdot (\dot{\varphi} + \dot{x^G}) 
+\varphi^G(s) &= \frac{1}{s} \cdot (\dot{\varphi}(s) + \dot{x}^G(s)) 
 \end{split}
 \end{equation}
 
@@ -254,17 +254,17 @@ Hier sind nur marginale Unterschiede zwischen den Amplituden zu erkennen. Ebenso
 
 \newpage
 \subsubsection{Ansätze zur Filterung von $\dot{\psi}$}
-Die Winkelgeschwindigkeit $\dot{\psi}$ des Motors wird als analoges Signal von einem 12-Bit AD-Wandler ausgewertet. Diese Messwerte sind ebenfalls von hochfrequenten Störeinflüssen betroffen und müssen somit geglättet werden. Hierfür werden digitale Tiefpassfilter verwendet, welche in Form eines gleitenden Mittelwertes implementiert. Dieser Mittelwet wird über die letzen $N$ Messwerte gebildet. 
+Die Winkelgeschwindigkeit $\dot{\psi}$ des Motors wird als analoges Signal von einem 12-Bit AD-Wandler ausgewertet. Diese Messwerte sind ebenfalls von hochfrequenten Störeinflüssen betroffen und müssen somit geglättet werden. Hierfür werden digitale Tiefpassfilter verwendet, welche in Form eines gleitenden Mittelwertes implementiert. Dieser Mittelwert wird über die letzten $N$ Messwerte gebildet. 
 
 \begin{equation}
 y_n = \frac{1}{N}\sum^{N-1}_{k=0} x_{n-k}
 \end{equation}
 
-Die Glättung des Filters nimmt mit der Anazhl der verwendeten Werte $N$ zu, allerdings wird das Filter damit auch träger. Somit muss ein Kompromis zwischen Verzögerung und Glättung gefunden werden. Die folgende Abbildung zeigt den Vergleich der nicht gefilterten Werte aus dem Versuch zur Bestimmung des Reibwertes $C_{\psi}$ und verschiedenen Mittelwert-Filtern. 
+Die Glättung des Filters nimmt mit der Anzahl der verwendeten Werte $N$ zu, allerdings wird das Filter damit auch träger. Somit muss ein Kompromiss zwischen Verzögerung und Glättung gefunden werden. Die folgende Abbildung zeigt den Vergleich der nicht gefilterten Werte aus dem Versuch zur Bestimmung des Reibwertes $C_{\psi}$ und verschiedenen Mittelwert-Filtern. 
 
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.6\linewidth]{img/filtervergleich_psi__d}
 \end{figure}
 
-Der Verlauf zeigt deutlich die Glättung des Signales. Außerdem ist keine signifikante Verzögerung durch die verschiedenen Filter ersichtlich. Allerdings ist zu erwarten, dass der Motor ein Eingangssignal mit höheren Frequenzanteilen erzeugt, sobald der Regelkreis geschlossen wird. Somit entsteht auch eine stärkere Verzögerung durch die Tiefpassfilter. Deshalb kann die optimale Konfiguration des Mittelwert-Filters erst an der realen Regelstrecke ermittelt werden.
+Der Verlauf zeigt deutlich die Glättung des Signales. Außerdem ist keine signifikante Verzögerung durch die verschiedenen Filter ersichtlich. Allerdings ist zu erwarten, dass der Motor ein Eingangssignal mit höheren Frequenzanteilen erzeugt, sobald der Regelkreis geschlossen wird. Die hochfrequenten Signalanteile werden durch die Tiefpassfilter entfernt, wodurch ggf. eine Verfälschung des Eingangssignales entsteht. Deshalb kann die optimale Konfiguration des Mittelwert-Filters erst an der realen Regelstrecke ermittelt werden.
